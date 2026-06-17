@@ -3,7 +3,7 @@ import type { Material, Oxide } from './types'
 import { analysisToFormula, formulaToAnalysis, formulaWeight, analysisTotal } from './chem'
 
 const inputCls =
-  'w-full rounded border border-neutral-700 bg-neutral-900 px-2 py-2 text-sm text-neutral-100 placeholder-neutral-500 focus:border-neutral-500 focus:outline-none'
+  'w-full rounded border border-neutral-300 bg-neutral-50 px-2 py-2 text-sm text-neutral-900 placeholder-neutral-500 focus:border-neutral-500 focus:outline-none'
 
 interface Props {
   initial?: Material
@@ -101,9 +101,9 @@ export function MaterialForm({ initial, oxides, onSave, onCancel }: Props) {
   return (
     <div className="space-y-5">
       <div className="flex items-center justify-between">
-        <h1 className="text-xl font-semibold text-neutral-100">{initial ? 'Edit material' : 'New material'}</h1>
+        <h1 className="text-xl font-semibold text-neutral-900">{initial ? 'Edit material' : 'New material'}</h1>
         <div className="flex gap-2">
-          <button onClick={onCancel} className="rounded px-3 py-1.5 text-sm text-neutral-400 hover:text-neutral-200">
+          <button onClick={onCancel} className="rounded px-3 py-1.5 text-sm text-neutral-500 hover:text-neutral-800">
             Cancel
           </button>
           <button
@@ -118,27 +118,27 @@ export function MaterialForm({ initial, oxides, onSave, onCancel }: Props) {
 
       <div className="grid gap-3 sm:grid-cols-2">
         <label className="block">
-          <span className="mb-1 block text-xs uppercase tracking-wide text-neutral-400">Name</span>
+          <span className="mb-1 block text-xs uppercase tracking-wide text-neutral-500">Name</span>
           <input className={inputCls} value={name} onChange={(e) => setName(e.target.value)} placeholder="e.g. Custer Feldspar" />
         </label>
         <label className="block">
-          <span className="mb-1 block text-xs uppercase tracking-wide text-neutral-400">Alternate names</span>
+          <span className="mb-1 block text-xs uppercase tracking-wide text-neutral-500">Alternate names</span>
           <input className={inputCls} value={alt} onChange={(e) => setAlt(e.target.value)} placeholder="comma separated" />
         </label>
         <label className="block sm:col-span-2">
-          <span className="mb-1 block text-xs uppercase tracking-wide text-neutral-400">Description</span>
+          <span className="mb-1 block text-xs uppercase tracking-wide text-neutral-500">Description</span>
           <input className={inputCls} value={desc} onChange={(e) => setDesc(e.target.value)} />
         </label>
       </div>
 
-      <div className="rounded border border-neutral-800 p-4">
+      <div className="rounded border border-neutral-200 p-4">
         <div className="mb-3 flex flex-wrap items-center gap-2">
-          <h2 className="text-sm uppercase tracking-wide text-neutral-400">Oxide analysis</h2>
+          <h2 className="text-sm uppercase tracking-wide text-neutral-500">Oxide analysis</h2>
           <div className="flex-1" />
-          <button onClick={calcFormula} className="rounded border border-neutral-700 px-2 py-1 text-xs text-neutral-300 hover:bg-neutral-800">
+          <button onClick={calcFormula} className="rounded border border-neutral-300 px-2 py-1 text-xs text-neutral-700 hover:bg-neutral-200">
             ↻ Formula from %
           </button>
-          <button onClick={calcAnalysis} className="rounded border border-neutral-700 px-2 py-1 text-xs text-neutral-300 hover:bg-neutral-800">
+          <button onClick={calcAnalysis} className="rounded border border-neutral-300 px-2 py-1 text-xs text-neutral-700 hover:bg-neutral-200">
             ↻ % from formula
           </button>
         </div>
@@ -163,7 +163,7 @@ export function MaterialForm({ initial, oxides, onSave, onCancel }: Props) {
               <input className={`${inputCls} text-right`} value={r.analysis_pct} onChange={(e) => setRow(i, { analysis_pct: e.target.value })} inputMode="decimal" />
               <input className={`${inputCls} text-right`} value={r.formula} onChange={(e) => setRow(i, { formula: e.target.value })} inputMode="decimal" />
               <input className={inputCls} value={r.tolerance} onChange={(e) => setRow(i, { tolerance: e.target.value })} />
-              <button onClick={() => setRows((rs) => rs.filter((_, j) => j !== i))} className="text-neutral-600 hover:text-neutral-300" title="Remove">
+              <button onClick={() => setRows((rs) => rs.filter((_, j) => j !== i))} className="text-neutral-400 hover:text-neutral-700" title="Remove">
                 ×
               </button>
             </div>
@@ -171,25 +171,25 @@ export function MaterialForm({ initial, oxides, onSave, onCancel }: Props) {
         </div>
 
         <div className="mt-3 flex items-center gap-4 text-xs">
-          <button onClick={() => setRows((rs) => [...rs, emptyRow()])} className="rounded border border-neutral-700 px-2 py-1 text-neutral-300 hover:bg-neutral-800">
+          <button onClick={() => setRows((rs) => [...rs, emptyRow()])} className="rounded border border-neutral-300 px-2 py-1 text-neutral-700 hover:bg-neutral-200">
             + Add oxide
           </button>
           <div className="flex-1" />
           <span className={sumColor}>Σ {sumPct}%</span>
-          <span className="text-neutral-400">formula wt {fw ?? '—'}</span>
+          <span className="text-neutral-500">formula wt {fw ?? '—'}</span>
         </div>
       </div>
 
-      <div className="rounded border border-neutral-800 p-4">
+      <div className="rounded border border-neutral-200 p-4">
         <div className="mb-3 flex items-center gap-3">
-          <h2 className="text-sm uppercase tracking-wide text-neutral-400">Properties</h2>
+          <h2 className="text-sm uppercase tracking-wide text-neutral-500">Properties</h2>
           <div className="flex-1" />
-          <button onClick={() => setProps((p) => [...p, { key: '', value: '' }])} className="rounded border border-neutral-700 px-2 py-1 text-xs text-neutral-300 hover:bg-neutral-800">
+          <button onClick={() => setProps((p) => [...p, { key: '', value: '' }])} className="rounded border border-neutral-300 px-2 py-1 text-xs text-neutral-700 hover:bg-neutral-200">
             + Add property
           </button>
         </div>
         {props.length === 0 && (
-          <p className="text-xs text-neutral-600">None yet — e.g. “Co-efficient of Linear Expansion” → 8.18</p>
+          <p className="text-xs text-neutral-400">None yet — e.g. “Co-efficient of Linear Expansion” → 8.18</p>
         )}
         <div className="space-y-2">
           {props.map((p, i) => (
@@ -206,7 +206,7 @@ export function MaterialForm({ initial, oxides, onSave, onCancel }: Props) {
                 onChange={(e) => setProps((ps) => ps.map((x, j) => (j === i ? { ...x, value: e.target.value } : x)))}
                 placeholder="Value"
               />
-              <button onClick={() => setProps((ps) => ps.filter((_, j) => j !== i))} className="text-neutral-600 hover:text-neutral-300">
+              <button onClick={() => setProps((ps) => ps.filter((_, j) => j !== i))} className="text-neutral-400 hover:text-neutral-700">
                 ×
               </button>
             </div>

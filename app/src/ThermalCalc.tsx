@@ -83,11 +83,11 @@ export function ThermalCalc(_props: { oxides: Oxide[] }) {
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">
-        <h1 className="text-lg font-semibold text-neutral-100">Thermal Expansion Calculator</h1>
+        <h1 className="text-lg font-semibold text-neutral-900">Thermal Expansion Calculator</h1>
         <span className="text-xs text-neutral-500">Glaze fit screening · Appen method</span>
       </div>
 
-      <p className="text-sm text-neutral-400">
+      <p className="text-sm text-neutral-500">
         Enter glaze oxide weight percentages to estimate the coefficient of thermal expansion (COE ×10⁻⁶/°C)
         and check fit against common clay bodies.
       </p>
@@ -103,7 +103,7 @@ export function ThermalCalc(_props: { oxides: Oxide[] }) {
             <select
               value={row.oxide}
               onChange={(e) => setRow(i, 'oxide', e.target.value)}
-              className="rounded border border-neutral-700 bg-neutral-900 px-2 py-1.5 text-sm text-neutral-100 focus:border-neutral-500 focus:outline-none"
+              className="rounded border border-neutral-300 bg-neutral-50 px-2 py-1.5 text-sm text-neutral-900 focus:border-neutral-500 focus:outline-none"
             >
               {allOxides.map((o) => (
                 <option key={o} value={o}>{o}</option>
@@ -117,13 +117,13 @@ export function ThermalCalc(_props: { oxides: Oxide[] }) {
               value={row.pct}
               onChange={(e) => setRow(i, 'pct', e.target.value)}
               placeholder="0"
-              className="rounded border border-neutral-700 bg-neutral-900 px-2 py-1.5 text-right text-sm text-neutral-100 focus:border-neutral-500 focus:outline-none"
+              className="rounded border border-neutral-300 bg-neutral-50 px-2 py-1.5 text-right text-sm text-neutral-900 focus:border-neutral-500 focus:outline-none"
             />
           </div>
         ))}
         <button
           onClick={() => setRows((prev) => [...prev, { oxide: 'SiO2', pct: '' }])}
-          className="text-sm text-neutral-500 hover:text-neutral-300"
+          className="text-sm text-neutral-500 hover:text-neutral-700"
         >
           + Add oxide
         </button>
@@ -132,9 +132,9 @@ export function ThermalCalc(_props: { oxides: Oxide[] }) {
       {/* Result */}
       {glazeCOE != null && (
         <div className="space-y-4">
-          <div className="rounded border border-neutral-700 bg-neutral-900 px-4 py-3">
+          <div className="rounded border border-neutral-300 bg-neutral-50 px-4 py-3">
             <div className="text-xs text-neutral-500">Estimated glaze COE</div>
-            <div className="text-3xl font-mono font-semibold text-neutral-100">
+            <div className="text-3xl font-mono font-semibold text-neutral-900">
               {glazeCOE.toFixed(3)}
               <span className="ml-2 text-sm font-normal text-neutral-500">×10⁻⁶/°C</span>
             </div>
@@ -142,21 +142,21 @@ export function ThermalCalc(_props: { oxides: Oxide[] }) {
 
           {/* Clay body comparison */}
           <div>
-            <h2 className="mb-2 text-sm uppercase tracking-wide text-neutral-400">Clay Body Fit</h2>
+            <h2 className="mb-2 text-sm uppercase tracking-wide text-neutral-500">Clay Body Fit</h2>
             <div className="space-y-2">
               {CLAY_BODIES.map((body) => {
                 const diff = glazeCOE - (body.lo + body.hi) / 2
                 const fits = glazeCOE >= body.lo - 0.3 && glazeCOE <= body.hi + 0.3
                 const crazes = glazeCOE < body.lo - 0.3
                 return (
-                  <div key={body.name} className="flex items-center gap-3 rounded border border-neutral-800 px-3 py-2">
-                    <div className="w-48 shrink-0 text-sm text-neutral-300">{body.name}</div>
+                  <div key={body.name} className="flex items-center gap-3 rounded border border-neutral-200 px-3 py-2">
+                    <div className="w-48 shrink-0 text-sm text-neutral-700">{body.name}</div>
                     <div className="text-xs text-neutral-500">{body.lo}–{body.hi}</div>
                     <div className="flex-1" />
                     <div className={`text-xs font-medium ${fits ? 'text-green-400' : crazes ? 'text-blue-400' : 'text-red-400'}`}>
                       {fits ? '✓ Good fit' : crazes ? '↓ May craze' : '↑ May shiver'}
                     </div>
-                    <div className="text-xs text-neutral-600">
+                    <div className="text-xs text-neutral-400">
                       {diff > 0 ? '+' : ''}{diff.toFixed(3)}
                     </div>
                   </div>
@@ -167,14 +167,14 @@ export function ThermalCalc(_props: { oxides: Oxide[] }) {
 
           {/* Custom clay */}
           <div className="flex items-center gap-3">
-            <label className="text-sm text-neutral-400 shrink-0">My clay body COE:</label>
+            <label className="text-sm text-neutral-500 shrink-0">My clay body COE:</label>
             <input
               type="number"
               step="0.1"
               value={customClay}
               onChange={(e) => setCustomClay(e.target.value)}
               placeholder="e.g. 6.2"
-              className="w-32 rounded border border-neutral-700 bg-neutral-900 px-2 py-1 text-sm text-neutral-100 focus:border-neutral-500 focus:outline-none"
+              className="w-32 rounded border border-neutral-300 bg-neutral-50 px-2 py-1 text-sm text-neutral-900 focus:border-neutral-500 focus:outline-none"
             />
             {customClay && !isNaN(parseFloat(customClay)) && (
               <span className={`text-sm font-medium ${
@@ -193,7 +193,7 @@ export function ThermalCalc(_props: { oxides: Oxide[] }) {
             )}
           </div>
 
-          <p className="text-xs text-neutral-600">
+          <p className="text-xs text-neutral-400">
             Rule of thumb: glaze COE should be slightly lower than the clay body (compression fit).
             A difference of ±0.3 is generally acceptable. This calculator uses the Appen additive
             method — actual fit depends on firing schedule and clay body composition.

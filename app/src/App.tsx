@@ -57,7 +57,7 @@ export default function App() {
           <Routed hash={hash} ds={ds} onSaveMaterial={onSaveMaterial} />
         )}
       </main>
-      <footer className="border-t border-neutral-800 px-4 py-3 text-center text-xs text-neutral-500">
+      <footer className="border-t border-neutral-200 px-4 py-3 text-center text-xs text-neutral-500">
         {ds.materials.length} materials · {ds.oxides.length} oxides · {ds.recipes.length} recipes · {ds.minerals.length} minerals · {ds.temperatures.length} temps ·{' '}
         factual data from digitalfire.com (Tony Hansen) — local archive
       </footer>
@@ -66,11 +66,11 @@ export default function App() {
 }
 
 function Centered({ children }: { children: ReactNode }) {
-  return <div className="grid min-h-full place-items-center text-neutral-400">{children}</div>
+  return <div className="grid min-h-full place-items-center text-neutral-500">{children}</div>
 }
 
 function Card({ children }: { children: ReactNode }) {
-  return <div className="rounded border border-neutral-800 p-4">{children}</div>
+  return <div className="rounded border border-neutral-200 p-4">{children}</div>
 }
 
 function Header({
@@ -95,11 +95,11 @@ function Header({
     ['thermal', 'Thermal Exp'],
   ]
   return (
-    <header className="sticky top-0 z-10 border-b border-neutral-800 bg-neutral-950/90 backdrop-blur">
+    <header className="sticky top-0 z-10 border-b border-neutral-200 bg-white/90 backdrop-blur">
       <div className="mx-auto flex max-w-5xl flex-wrap items-center gap-3 px-4 py-3">
         <button
           onClick={() => { go('#/materials'); setQuery('') }}
-          className="font-semibold tracking-tight text-neutral-100"
+          className="font-semibold tracking-tight text-neutral-900"
         >
           Ceramic Reference <span className="font-normal text-neutral-500">· local</span>
         </button>
@@ -110,8 +110,8 @@ function Header({
               onClick={() => { go(`#/${key}`); setQuery('') }}
               className={`rounded px-2 py-1 ${
                 view === key && !query.trim()
-                  ? 'bg-neutral-800 text-neutral-100'
-                  : 'text-neutral-400 hover:text-neutral-200'
+                  ? 'bg-neutral-200 text-neutral-900'
+                  : 'text-neutral-500 hover:text-neutral-800'
               }`}
             >
               {label}
@@ -121,7 +121,7 @@ function Header({
         <div className="flex-1" />
         <button
           onClick={() => downloadJSON(ds)}
-          className="rounded border border-neutral-700 px-2 py-1 text-sm text-neutral-300 hover:bg-neutral-800"
+          className="rounded border border-neutral-300 px-2 py-1 text-sm text-neutral-700 hover:bg-neutral-200"
           title="Export the full dataset (including your edits) as JSON"
         >
           Export
@@ -130,7 +130,7 @@ function Header({
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Search materials, oxides, recipes…"
-          className="w-full rounded border border-neutral-700 bg-neutral-900 px-3 py-1.5 text-sm text-neutral-100 placeholder-neutral-500 focus:border-neutral-500 focus:outline-none sm:w-64"
+          className="w-full rounded border border-neutral-300 bg-neutral-50 px-3 py-1.5 text-sm text-neutral-900 placeholder-neutral-500 focus:border-neutral-500 focus:outline-none sm:w-64"
         />
       </div>
     </header>
@@ -149,15 +149,15 @@ function SearchView({
   const results = search.search(query).slice(0, 50)
   if (!results.length) return <p className="text-neutral-500">No matches for “{query}”.</p>
   return (
-    <ul className="divide-y divide-neutral-800 overflow-hidden rounded border border-neutral-800">
+    <ul className="divide-y divide-neutral-800 overflow-hidden rounded border border-neutral-200">
       {results.map((r: any) => (
         <li key={r.id}>
           <button
             onClick={() => { go(`#/${r.type}/${encodeURIComponent(r.ref)}`); onPick() }}
-            className="flex w-full items-center gap-3 px-3 py-2 text-left hover:bg-neutral-900"
+            className="flex w-full items-center gap-3 px-3 py-2 text-left hover:bg-neutral-50"
           >
             <span className="w-16 shrink-0 text-[10px] uppercase tracking-wide text-neutral-500">{r.type}</span>
-            <span className="text-neutral-100">{r.title}</span>
+            <span className="text-neutral-900">{r.title}</span>
             <span className="truncate text-sm text-neutral-500">{r.subtitle}</span>
           </button>
         </li>
@@ -236,11 +236,11 @@ function ListHeader({
 }) {
   return (
     <div className="mb-3 flex items-center gap-3">
-      <h1 className="text-lg font-semibold text-neutral-100">{title}</h1>
+      <h1 className="text-lg font-semibold text-neutral-900">{title}</h1>
       <span className="text-sm text-neutral-500">{count === total ? total : `${count} of ${total}`}</span>
       <div className="flex-1" />
       {onNew && (
-        <button onClick={onNew} className="rounded border border-neutral-700 px-2 py-1.5 text-sm text-neutral-300 hover:bg-neutral-800">
+        <button onClick={onNew} className="rounded border border-neutral-300 px-2 py-1.5 text-sm text-neutral-700 hover:bg-neutral-200">
           + New
         </button>
       )}
@@ -248,7 +248,7 @@ function ListHeader({
         value={filter}
         onChange={(e) => setFilter(e.target.value)}
         placeholder={`Filter ${title.toLowerCase()}…`}
-        className="w-48 rounded border border-neutral-700 bg-neutral-900 px-3 py-1.5 text-sm focus:border-neutral-500 focus:outline-none"
+        className="w-48 rounded border border-neutral-300 bg-neutral-50 px-3 py-1.5 text-sm focus:border-neutral-500 focus:outline-none"
       />
     </div>
   )
@@ -273,14 +273,14 @@ function MaterialList({ items }: { items: Material[] }) {
         setFilter={setFilter}
         onNew={() => go('#/new/material')}
       />
-      <ul className="divide-y divide-neutral-800 overflow-hidden rounded border border-neutral-800">
+      <ul className="divide-y divide-neutral-800 overflow-hidden rounded border border-neutral-200">
         {filtered.slice(0, 400).map((m) => (
           <li key={m.id}>
             <button
               onClick={() => go(`#/material/${encodeURIComponent(m.id)}`)}
-              className="w-full px-3 py-2 text-left hover:bg-neutral-900"
+              className="w-full px-3 py-2 text-left hover:bg-neutral-50"
             >
-              <div className="text-neutral-100">{m.name}</div>
+              <div className="text-neutral-900">{m.name}</div>
               {m.description && <div className="truncate text-sm text-neutral-500">{m.description}</div>}
             </button>
           </li>
@@ -305,9 +305,9 @@ function OxideList({ items }: { items: Oxide[] }) {
           <button
             key={o.id}
             onClick={() => go(`#/oxide/${encodeURIComponent(o.id)}`)}
-            className="rounded border border-neutral-800 px-3 py-2 text-left hover:bg-neutral-900"
+            className="rounded border border-neutral-200 px-3 py-2 text-left hover:bg-neutral-50"
           >
-            <div className="font-mono text-neutral-100">{o.symbol}</div>
+            <div className="font-mono text-neutral-900">{o.symbol}</div>
             <div className="text-xs text-neutral-500">{o.name}</div>
           </button>
         ))}
@@ -323,15 +323,15 @@ function RecipeList({ items }: { items: Recipe[] }) {
   return (
     <div>
       <ListHeader title="Recipes" count={filtered.length} total={items.length} filter={filter} setFilter={setFilter} />
-      <ul className="divide-y divide-neutral-800 overflow-hidden rounded border border-neutral-800">
+      <ul className="divide-y divide-neutral-800 overflow-hidden rounded border border-neutral-200">
         {filtered.map((r) => (
           <li key={r.id}>
             <button
               onClick={() => go(`#/recipe/${encodeURIComponent(r.id)}`)}
-              className="w-full px-3 py-2 text-left hover:bg-neutral-900"
+              className="w-full px-3 py-2 text-left hover:bg-neutral-50"
             >
-              <span className="font-mono text-neutral-300">{r.code}</span>{' '}
-              <span className="text-neutral-100">{r.name}</span>
+              <span className="font-mono text-neutral-700">{r.code}</span>{' '}
+              <span className="text-neutral-900">{r.name}</span>
             </button>
           </li>
         ))}
@@ -353,7 +353,7 @@ function NotFound({ what }: { what: string }) {
 
 function BackLink({ to, label }: { to: string; label: string }) {
   return (
-    <button onClick={() => go(to)} className="text-sm text-neutral-500 hover:text-neutral-300">
+    <button onClick={() => go(to)} className="text-sm text-neutral-500 hover:text-neutral-700">
       ← {label}
     </button>
   )
@@ -367,22 +367,22 @@ function MaterialDetail({ m }: { m: Material | undefined }) {
       <div>
         <BackLink to="#/materials" label="Materials" />
         <div className="mt-1 flex items-start justify-between gap-3">
-          <h1 className="text-2xl font-semibold text-neutral-100">{m.name}</h1>
+          <h1 className="text-2xl font-semibold text-neutral-900">{m.name}</h1>
           <button
             onClick={() => go(`#/edit/material/${encodeURIComponent(m.id)}`)}
-            className="shrink-0 rounded border border-neutral-700 px-3 py-1 text-sm text-neutral-300 hover:bg-neutral-800"
+            className="shrink-0 rounded border border-neutral-300 px-3 py-1 text-sm text-neutral-700 hover:bg-neutral-200"
           >
             Edit
           </button>
         </div>
         {m.alternate_names && <p className="text-sm text-neutral-500">a.k.a. {m.alternate_names}</p>}
-        {m.description && <p className="mt-1 text-neutral-300">{m.description}</p>}
+        {m.description && <p className="mt-1 text-neutral-700">{m.description}</p>}
       </div>
 
       {m.analysis.length > 0 && (
         <Card>
           <div className="mb-3 flex items-baseline justify-between">
-            <h2 className="text-sm uppercase tracking-wide text-neutral-400">Oxide Analysis</h2>
+            <h2 className="text-sm uppercase tracking-wide text-neutral-500">Oxide Analysis</h2>
             <span className="text-xs text-neutral-500">
               Σ {sum.toFixed(1)}% · formula wt {m.formula_weight ?? '—'}
             </span>
@@ -393,19 +393,19 @@ function MaterialDetail({ m }: { m: Material | undefined }) {
 
       {Object.keys(m.properties).length > 0 && (
         <Card>
-          <h2 className="mb-2 text-sm uppercase tracking-wide text-neutral-400">Properties</h2>
+          <h2 className="mb-2 text-sm uppercase tracking-wide text-neutral-500">Properties</h2>
           <dl className="grid grid-cols-1 gap-x-6 gap-y-1 text-sm sm:grid-cols-2">
             {Object.entries(m.properties).map(([k, v]) => (
-              <div key={k} className="flex justify-between gap-4 border-b border-neutral-900 py-1">
-                <dt className="text-neutral-400">{k}</dt>
-                <dd className="text-right text-neutral-200">{v}</dd>
+              <div key={k} className="flex justify-between gap-4 border-b border-neutral-100 py-1">
+                <dt className="text-neutral-500">{k}</dt>
+                <dd className="text-right text-neutral-800">{v}</dd>
               </div>
             ))}
           </dl>
         </Card>
       )}
 
-      <p className="text-xs text-neutral-600">Source: {m.source} · factual data only</p>
+      <p className="text-xs text-neutral-400">Source: {m.source} · factual data only</p>
     </article>
   )
 }
@@ -416,17 +416,17 @@ function OxideDetail({ o }: { o: Oxide | undefined }) {
     <article className="space-y-4">
       <div>
         <BackLink to="#/oxides" label="Oxides" />
-        <h1 className="mt-1 font-mono text-2xl font-semibold text-neutral-100">{o.symbol}</h1>
-        <p className="text-neutral-400">{o.name}</p>
+        <h1 className="mt-1 font-mono text-2xl font-semibold text-neutral-900">{o.symbol}</h1>
+        <p className="text-neutral-500">{o.name}</p>
       </div>
       {Object.keys(o.data).length > 0 ? (
         <Card>
-          <h2 className="mb-2 text-sm uppercase tracking-wide text-neutral-400">Data</h2>
+          <h2 className="mb-2 text-sm uppercase tracking-wide text-neutral-500">Data</h2>
           <dl className="space-y-1 text-sm">
             {Object.entries(o.data).map(([k, v]) => (
-              <div key={k} className="flex justify-between gap-4 border-b border-neutral-900 py-1">
-                <dt className="text-neutral-400">{k}</dt>
-                <dd className="text-right text-neutral-200">{v}</dd>
+              <div key={k} className="flex justify-between gap-4 border-b border-neutral-100 py-1">
+                <dt className="text-neutral-500">{k}</dt>
+                <dd className="text-right text-neutral-800">{v}</dd>
               </div>
             ))}
           </dl>
@@ -434,7 +434,7 @@ function OxideDetail({ o }: { o: Oxide | undefined }) {
       ) : (
         <p className="text-sm text-neutral-500">No tabulated data for this oxide.</p>
       )}
-      <p className="text-xs text-neutral-600">Source: {o.source}</p>
+      <p className="text-xs text-neutral-400">Source: {o.source}</p>
     </article>
   )
 }
@@ -446,13 +446,13 @@ function RecipeDetail({ r, ds }: { r: Recipe | undefined; ds: Dataset }) {
     <article className="space-y-4">
       <div>
         <BackLink to="#/recipes" label="Recipes" />
-        <h1 className="mt-1 text-2xl font-semibold text-neutral-100">
-          <span className="font-mono text-neutral-400">{r.code}</span> {r.name}
+        <h1 className="mt-1 text-2xl font-semibold text-neutral-900">
+          <span className="font-mono text-neutral-500">{r.code}</span> {r.name}
         </h1>
-        {r.description && <p className="mt-1 text-neutral-300">{r.description}</p>}
+        {r.description && <p className="mt-1 text-neutral-700">{r.description}</p>}
       </div>
       <Card>
-        <h2 className="mb-2 text-sm uppercase tracking-wide text-neutral-400">Recipe</h2>
+        <h2 className="mb-2 text-sm uppercase tracking-wide text-neutral-500">Recipe</h2>
         <table className="w-full text-sm">
           <thead>
             <tr className="text-left text-neutral-500">
@@ -465,28 +465,28 @@ function RecipeDetail({ r, ds }: { r: Recipe | undefined; ds: Dataset }) {
             {r.materials.map((x, i) => {
               const mat = findMat(x.material)
               return (
-                <tr key={i} className="border-t border-neutral-900">
+                <tr key={i} className="border-t border-neutral-100">
                   <td className="py-1">
                     {mat ? (
                       <button
-                        className="text-neutral-100 hover:underline"
+                        className="text-neutral-900 hover:underline"
                         onClick={() => go(`#/material/${encodeURIComponent(mat.id)}`)}
                       >
                         {x.material}
                       </button>
                     ) : (
-                      <span className="text-neutral-300">{x.material}</span>
+                      <span className="text-neutral-700">{x.material}</span>
                     )}
                   </td>
-                  <td className="text-right font-mono text-neutral-300">{x.amount ?? ''}</td>
-                  <td className="text-right font-mono text-neutral-400">{x.percent ?? ''}</td>
+                  <td className="text-right font-mono text-neutral-700">{x.amount ?? ''}</td>
+                  <td className="text-right font-mono text-neutral-500">{x.percent ?? ''}</td>
                 </tr>
               )
             })}
           </tbody>
         </table>
       </Card>
-      <p className="text-xs text-neutral-600">Source: {r.source}</p>
+      <p className="text-xs text-neutral-400">Source: {r.source}</p>
     </article>
   )
 }
@@ -498,14 +498,14 @@ function MineralList({ items }: { items: Mineral[] }) {
   return (
     <div>
       <ListHeader title="Minerals" count={filtered.length} total={items.length} filter={filter} setFilter={setFilter} />
-      <ul className="divide-y divide-neutral-800 overflow-hidden rounded border border-neutral-800">
+      <ul className="divide-y divide-neutral-800 overflow-hidden rounded border border-neutral-200">
         {filtered.map((m) => (
           <li key={m.id}>
             <button
               onClick={() => go(`#/mineral/${encodeURIComponent(m.id)}`)}
-              className="w-full px-3 py-2 text-left hover:bg-neutral-900"
+              className="w-full px-3 py-2 text-left hover:bg-neutral-50"
             >
-              <div className="text-neutral-100">{m.name}</div>
+              <div className="text-neutral-900">{m.name}</div>
               <div className="font-mono text-xs text-neutral-500">{m.formula}</div>
             </button>
           </li>
@@ -521,29 +521,29 @@ function MineralDetail({ m }: { m: Mineral | undefined }) {
     <article className="space-y-4">
       <div>
         <BackLink to="#/minerals" label="Minerals" />
-        <h1 className="mt-1 text-2xl font-semibold text-neutral-100">{m.name}</h1>
+        <h1 className="mt-1 text-2xl font-semibold text-neutral-900">{m.name}</h1>
         <p className="font-mono text-sm text-neutral-500">{m.formula}</p>
       </div>
       {m.analysis.length > 0 && (
         <Card>
-          <h2 className="mb-3 text-sm uppercase tracking-wide text-neutral-400">Oxide Analysis</h2>
+          <h2 className="mb-3 text-sm uppercase tracking-wide text-neutral-500">Oxide Analysis</h2>
           <AnalysisChart rows={m.analysis} />
         </Card>
       )}
       {Object.keys(m.data).length > 0 && (
         <Card>
-          <h2 className="mb-2 text-sm uppercase tracking-wide text-neutral-400">Data</h2>
+          <h2 className="mb-2 text-sm uppercase tracking-wide text-neutral-500">Data</h2>
           <dl className="space-y-1 text-sm">
             {Object.entries(m.data).map(([k, v]) => (
-              <div key={k} className="flex justify-between gap-4 border-b border-neutral-900 py-1">
-                <dt className="text-neutral-400">{k}</dt>
-                <dd className="text-right text-neutral-200">{v}</dd>
+              <div key={k} className="flex justify-between gap-4 border-b border-neutral-100 py-1">
+                <dt className="text-neutral-500">{k}</dt>
+                <dd className="text-right text-neutral-800">{v}</dd>
               </div>
             ))}
           </dl>
         </Card>
       )}
-      <p className="text-xs text-neutral-600">Source: {m.source}</p>
+      <p className="text-xs text-neutral-400">Source: {m.source}</p>
     </article>
   )
 }
@@ -555,11 +555,11 @@ function TemperatureList({ items }: { items: Temperature[] }) {
   return (
     <div>
       <ListHeader title="Temperatures" count={filtered.length} total={items.length} filter={filter} setFilter={setFilter} />
-      <ul className="divide-y divide-neutral-800 overflow-hidden rounded border border-neutral-800">
+      <ul className="divide-y divide-neutral-800 overflow-hidden rounded border border-neutral-200">
         {filtered.map((t) => (
           <li key={t.id} className="flex gap-4 px-3 py-2">
             <span className="w-36 shrink-0 font-mono text-sm text-amber-400">{t.value}</span>
-            <span className="text-sm text-neutral-300">{t.event}</span>
+            <span className="text-sm text-neutral-700">{t.event}</span>
           </li>
         ))}
       </ul>

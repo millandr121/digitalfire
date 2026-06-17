@@ -120,7 +120,7 @@ export function GlazeCalc({ materials }: { materials: Material[]; oxides: Oxide[
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">
-        <h1 className="text-lg font-semibold text-neutral-100">Glaze Calculator</h1>
+        <h1 className="text-lg font-semibold text-neutral-900">Glaze Calculator</h1>
         <span className="text-xs text-neutral-500">Unity molecular formula · Cone 6 limits</span>
       </div>
 
@@ -129,7 +129,7 @@ export function GlazeCalc({ materials }: { materials: Material[]; oxides: Oxide[
         value={name}
         onChange={(e) => setName(e.target.value)}
         placeholder="Recipe name (optional)…"
-        className="w-full rounded border border-neutral-700 bg-neutral-900 px-3 py-1.5 text-sm text-neutral-100 placeholder-neutral-500 focus:border-neutral-500 focus:outline-none"
+        className="w-full rounded border border-neutral-300 bg-neutral-50 px-3 py-1.5 text-sm text-neutral-900 placeholder-neutral-500 focus:border-neutral-500 focus:outline-none"
       />
 
       {/* Ingredient lines */}
@@ -144,7 +144,7 @@ export function GlazeCalc({ materials }: { materials: Material[]; oxides: Oxide[
             <select
               value={line.materialId}
               onChange={(e) => setLine(i, 'materialId', e.target.value)}
-              className="rounded border border-neutral-700 bg-neutral-900 px-2 py-1.5 text-sm text-neutral-100 focus:border-neutral-500 focus:outline-none"
+              className="rounded border border-neutral-300 bg-neutral-50 px-2 py-1.5 text-sm text-neutral-900 focus:border-neutral-500 focus:outline-none"
             >
               <option value="">— select material —</option>
               {validMaterials.map((m) => (
@@ -158,11 +158,11 @@ export function GlazeCalc({ materials }: { materials: Material[]; oxides: Oxide[
               value={line.amount}
               onChange={(e) => setLine(i, 'amount', e.target.value)}
               placeholder="0"
-              className="rounded border border-neutral-700 bg-neutral-900 px-2 py-1.5 text-right text-sm text-neutral-100 focus:border-neutral-500 focus:outline-none"
+              className="rounded border border-neutral-300 bg-neutral-50 px-2 py-1.5 text-right text-sm text-neutral-900 focus:border-neutral-500 focus:outline-none"
             />
             <button
               onClick={() => removeLine(i)}
-              className="text-neutral-600 hover:text-neutral-400 text-lg leading-none"
+              className="text-neutral-400 hover:text-neutral-500 text-lg leading-none"
               title="Remove"
             >
               ×
@@ -172,7 +172,7 @@ export function GlazeCalc({ materials }: { materials: Material[]; oxides: Oxide[
         <div className="flex items-center justify-between px-1">
           <button
             onClick={addLine}
-            className="text-sm text-neutral-500 hover:text-neutral-300"
+            className="text-sm text-neutral-500 hover:text-neutral-700"
           >
             + Add material
           </button>
@@ -195,7 +195,7 @@ export function GlazeCalc({ materials }: { materials: Material[]; oxides: Oxide[
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
-                <tr className="text-left text-xs text-neutral-500 border-b border-neutral-800">
+                <tr className="text-left text-xs text-neutral-500 border-b border-neutral-200">
                   <th className="py-1.5 font-normal">Oxide</th>
                   <th className="py-1.5 text-right font-normal">Wt %</th>
                   <th className="py-1.5 text-right font-normal pr-4">Unity</th>
@@ -211,10 +211,10 @@ export function GlazeCalc({ materials }: { materials: Material[]; oxides: Oxide[
                       : null
                   const hasLimit = row.limits != null
                   return (
-                    <tr key={row.oxide} className="border-t border-neutral-900">
-                      <td className="py-1 font-mono text-neutral-200">{row.oxide}</td>
-                      <td className="py-1 text-right font-mono text-neutral-400">{row.analysisPct.toFixed(2)}</td>
-                      <td className="py-1 text-right font-mono text-neutral-100 pr-4">
+                    <tr key={row.oxide} className="border-t border-neutral-100">
+                      <td className="py-1 font-mono text-neutral-800">{row.oxide}</td>
+                      <td className="py-1 text-right font-mono text-neutral-500">{row.analysisPct.toFixed(2)}</td>
+                      <td className="py-1 text-right font-mono text-neutral-900 pr-4">
                         {row.unity != null ? row.unity.toFixed(3) : '—'}
                       </td>
                       <td className="py-1 text-neutral-500 text-xs">
@@ -253,10 +253,10 @@ export function GlazeCalc({ materials }: { materials: Material[]; oxides: Oxide[
 
 function Stat({ label, value, ideal }: { label: string; value: string; ideal: string }) {
   return (
-    <div className="rounded border border-neutral-800 px-3 py-2">
+    <div className="rounded border border-neutral-200 px-3 py-2">
       <div className="text-xs text-neutral-500">{label}</div>
-      <div className="font-mono text-neutral-100">{value}</div>
-      <div className="text-xs text-neutral-600">ideal: {ideal}</div>
+      <div className="font-mono text-neutral-900">{value}</div>
+      <div className="text-xs text-neutral-400">ideal: {ideal}</div>
     </div>
   )
 }
@@ -267,7 +267,7 @@ function LimitBar({ value, limits, inRange }: { value: number; limits: [number, 
   const pct = Math.min(100, Math.max(0, ((value - lo) / range) * 100))
   return (
     <div className="flex items-center gap-1.5">
-      <div className="relative h-2 w-24 rounded-full bg-neutral-800">
+      <div className="relative h-2 w-24 rounded-full bg-neutral-200">
         <div className="absolute inset-0 rounded-full bg-neutral-700 opacity-40" />
         <div
           className={`absolute top-0 h-2 w-1.5 -translate-x-1/2 rounded-full ${inRange ? 'bg-green-500' : 'bg-red-400'}`}

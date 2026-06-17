@@ -9,14 +9,14 @@ export function AnalysisChart({ rows }: { rows: OxideAnalysisRow[] }) {
     <div className="space-y-1">
       {data.map((r, i) => (
         <div key={i} className="flex items-center gap-2 text-sm">
-          <div className="w-20 shrink-0 text-right font-mono text-neutral-400">{r.oxide}</div>
-          <div className="flex-1 rounded bg-neutral-800">
+          <div className="w-20 shrink-0 text-right font-mono text-neutral-500">{r.oxide}</div>
+          <div className="flex-1 rounded bg-neutral-200">
             <div
               className="h-4 rounded bg-neutral-300"
               style={{ width: `${((r.analysis_pct as number) / max) * 100}%` }}
             />
           </div>
-          <div className="w-14 shrink-0 text-right font-mono text-neutral-300">{r.analysis_pct}%</div>
+          <div className="w-14 shrink-0 text-right font-mono text-neutral-700">{r.analysis_pct}%</div>
         </div>
       ))}
     </div>

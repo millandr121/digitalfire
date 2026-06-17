@@ -1,0 +1,1771 @@
+[
+  {
+    "code": "G2896",
+    "name": "Ravenscrag Plum Red Cone 6",
+    "description": "Plainsman Cone 6 Ravenscrag Slip based iron-red glaze. It can be found among others at http://ravenscrag.com.",
+    "materials": [
+      {
+        "material": "Silica",
+        "amount": 12.3,
+        "percent": 14.5
+      },
+      {
+        "material": "Ravenscrag Slip",
+        "amount": 34.9,
+        "percent": 41.1
+      },
+      {
+        "material": "Ferro Frit 3134",
+        "amount": 14.1,
+        "percent": 16.6
+      },
+      {
+        "material": "Talc",
+        "amount": 13.5,
+        "percent": 15.9
+      },
+      {
+        "material": "Ulexite",
+        "amount": 10.2,
+        "percent": 12.0
+      },
+      {
+        "material": "Red Iron Oxide",
+        "amount": 15.0,
+        "percent": 17.65
+      }
+    ],
+    "id": "g2896",
+    "source": "digitalfire.com"
+  },
+  {
+    "code": "G2902D",
+    "name": "Cone 6 Crystalline Development Project",
+    "description": "This was fired first on a body having 38 silica, 28.5 ball clay, 28.5 nepheline and 5 bentonite (L3659B). There is no crazing at all but also no crystallization. The firing was 750F/hr to cone 6, 750F to 1800F and soak for 4 hours.",
+    "materials": [
+      {
+        "material": "Ferro Frit 3110",
+        "amount": 50.0,
+        "percent": null
+      },
+      {
+        "material": "Zinc Oxide",
+        "amount": 22.0,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 25.0,
+        "percent": null
+      },
+      {
+        "material": "Lithium Carbonate",
+        "amount": 3.0,
+        "percent": null
+      },
+      {
+        "material": "Titanium",
+        "amount": 2.0,
+        "percent": null
+      }
+    ],
+    "id": "g2902d",
+    "source": "digitalfire.com"
+  },
+  {
+    "code": "G1216M",
+    "name": "Cone 6 Ultraclear Glaze for Porcelains",
+    "description": "Substitute for low expansion cone 6 G1215U, this sources MgO from talc instead of a frit",
+    "materials": [
+      {
+        "material": "Minspar 200",
+        "amount": 8.6,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3134",
+        "amount": 23.2,
+        "percent": null
+      },
+      {
+        "material": "Wollastonite",
+        "amount": 15.2,
+        "percent": null
+      },
+      {
+        "material": "EPK",
+        "amount": 24.8,
+        "percent": null
+      },
+      {
+        "material": "Talc",
+        "amount": 4.3,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 23.8,
+        "percent": null
+      }
+    ],
+    "id": "g1216m",
+    "source": "digitalfire.com"
+  },
+  {
+    "code": "GA6-G1",
+    "name": "Alberta Slip Lithium Brown Cone 6 Low Expansion",
+    "description": "Plainsman Cone 6 Alberta Slip based glaze. It can be found among others at http://albertaslip.com.",
+    "materials": [
+      {
+        "material": "Alberta Slip",
+        "amount": 40.0,
+        "percent": 41.7
+      },
+      {
+        "material": "Alberta Slip 1000F Roasted",
+        "amount": 35.0,
+        "percent": 36.5
+      },
+      {
+        "material": "Ferro Frit 3249",
+        "amount": 17.0,
+        "percent": 17.7
+      },
+      {
+        "material": "Silica",
+        "amount": 4.0,
+        "percent": 4.2
+      },
+      {
+        "material": "Lithium Carbonate",
+        "amount": 5.0,
+        "percent": 5.21
+      },
+      {
+        "material": "Tin Oxide",
+        "amount": 4.0,
+        "percent": 4.17
+      }
+    ],
+    "id": "ga6-g1",
+    "source": "digitalfire.com"
+  },
+  {
+    "code": "G2916F",
+    "name": "Cone 6 Stoneware/Whiteware transparent glaze",
+    "description": "Crystal clear industrial dinnerware glaze",
+    "materials": [
+      {
+        "material": "Fusion Frit F-524",
+        "amount": 17.8,
+        "percent": 18.2
+      },
+      {
+        "material": "Talc",
+        "amount": 2.9,
+        "percent": 3.0
+      },
+      {
+        "material": "Silica",
+        "amount": 28.4,
+        "percent": 29.0
+      },
+      {
+        "material": "Old Hickory #5 Ball Clay",
+        "amount": 7.7,
+        "percent": 7.9
+      },
+      {
+        "material": "Wollastonite",
+        "amount": 15.4,
+        "percent": 15.7
+      },
+      {
+        "material": "Nepheline Syenite",
+        "amount": 25.7,
+        "percent": 26.3
+      },
+      {
+        "material": "Bentonite",
+        "amount": 1.9,
+        "percent": 1.94
+      }
+    ],
+    "id": "g2916f",
+    "source": "digitalfire.com"
+  },
+  {
+    "code": "G1216L",
+    "name": "Transparent for Cone 6 Porcelains",
+    "description": "Incorporates some MgO (at the expense of CaO, KNaO) to reduce the thermal expansion of G1214M 5x20 glaze.",
+    "materials": [
+      {
+        "material": "Minspar",
+        "amount": 8.2,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3134",
+        "amount": 10.3,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3124",
+        "amount": 22.7,
+        "percent": null
+      },
+      {
+        "material": "Wollastonite",
+        "amount": 14.4,
+        "percent": null
+      },
+      {
+        "material": "EPK",
+        "amount": 18.6,
+        "percent": null
+      },
+      {
+        "material": "Talc",
+        "amount": 4.1,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 21.6,
+        "percent": null
+      }
+    ],
+    "id": "g1216l",
+    "source": "digitalfire.com"
+  },
+  {
+    "code": "G2926B",
+    "name": "Cone 6 Whiteware/Porcelain transparent glaze",
+    "description": "A base transparent glaze recipe created by Tony Hansen, it fires high gloss and ultra clear with low melt mobility.",
+    "materials": [
+      {
+        "material": "Nepheline Syenite",
+        "amount": 18.3,
+        "percent": 16.6
+      },
+      {
+        "material": "Ferro Frit 3134",
+        "amount": 25.4,
+        "percent": 23.1
+      },
+      {
+        "material": "EPK",
+        "amount": 19.6,
+        "percent": 17.8
+      },
+      {
+        "material": "Wollastonite",
+        "amount": 6.9,
+        "percent": 6.3
+      },
+      {
+        "material": "Silica 325 mesh",
+        "amount": 37.6,
+        "percent": 34.2
+      },
+      {
+        "material": "Talc",
+        "amount": 2.3,
+        "percent": 2.1
+      }
+    ],
+    "id": "g2926b",
+    "source": "digitalfire.com"
+  },
+  {
+    "code": "G2928C",
+    "name": "Ravenscrag Silky Matte for Cone 6",
+    "description": "Plainsman Cone 6 Ravenscrag Slip based glaze. It can be found among others at http://ravenscrag.com.",
+    "materials": [
+      {
+        "material": "Ferro Frit 3134",
+        "amount": 11.0,
+        "percent": 10.4
+      },
+      {
+        "material": "Talc",
+        "amount": 8.0,
+        "percent": 7.6
+      },
+      {
+        "material": "Ravenscrag Slip",
+        "amount": 60.0,
+        "percent": 56.9
+      },
+      {
+        "material": "Nepheline Syenite",
+        "amount": 13.0,
+        "percent": 12.3
+      },
+      {
+        "material": "Wollastonite",
+        "amount": 1.5,
+        "percent": 1.4
+      },
+      {
+        "material": "Calcined Kaolin",
+        "amount": 12.0,
+        "percent": 11.4
+      },
+      {
+        "material": "Tin Oxide",
+        "amount": 5.0,
+        "percent": 4.74
+      }
+    ],
+    "id": "g2928c",
+    "source": "digitalfire.com"
+  },
+  {
+    "code": "G2000",
+    "name": "LA Matte Cone 6 Matte White",
+    "description": "A silky zinc-fluxed matte used historically across North America",
+    "materials": [
+      {
+        "material": "Custer Feldspar",
+        "amount": 51.7,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 5.6,
+        "percent": null
+      },
+      {
+        "material": "Calcium Carbonate",
+        "amount": 18.8,
+        "percent": null
+      },
+      {
+        "material": "Zinc Oxide",
+        "amount": 8.6,
+        "percent": null
+      },
+      {
+        "material": "EPK",
+        "amount": 15.4,
+        "percent": null
+      }
+    ],
+    "id": "g2000",
+    "source": "digitalfire.com"
+  },
+  {
+    "code": "G2934",
+    "name": "Matte Glaze Base for Cone 6",
+    "description": "A base MgO matte glaze recipe fires to a hard utilitarian surface and has very good working properties. Blend in the glossy if it is too matte.",
+    "materials": [
+      {
+        "material": "Ferro Frit 3124",
+        "amount": 17.4,
+        "percent": null
+      },
+      {
+        "material": "Dolomite",
+        "amount": 23.5,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 26.9,
+        "percent": null
+      },
+      {
+        "material": "EP Kaolin",
+        "amount": 18.3,
+        "percent": null
+      },
+      {
+        "material": "Calcined Kaolin",
+        "amount": 13.9,
+        "percent": null
+      }
+    ],
+    "id": "g2934",
+    "source": "digitalfire.com"
+  },
+  {
+    "code": "G1916Q",
+    "name": "Low Fire Highly-Expansion-Adjustable Transparent",
+    "description": "An expansion-adjustable cone 04 transparent glaze made using three common Ferro frits (low and high expansion), it produces an easy-to-use slurry.",
+    "materials": [
+      {
+        "material": "Ferro Frit 3195",
+        "amount": 65.0,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3110",
+        "amount": 10.0,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3249",
+        "amount": 10.0,
+        "percent": null
+      },
+      {
+        "material": "No. 5 Ball Clay",
+        "amount": 15.0,
+        "percent": null
+      }
+    ],
+    "id": "g1916q",
+    "source": "digitalfire.com"
+  },
+  {
+    "code": "G3806C",
+    "name": "Panama Cone 6 Adjustment 2015",
+    "description": "High fluid melt glaze for reactive effects and super gloss colors",
+    "materials": [
+      {
+        "material": "Silica",
+        "amount": 26.3,
+        "percent": null
+      },
+      {
+        "material": "Kaolin",
+        "amount": 19.7,
+        "percent": null
+      },
+      {
+        "material": "Dolomite",
+        "amount": 8.7,
+        "percent": null
+      },
+      {
+        "material": "Strontium Carbonate",
+        "amount": 4.4,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3110",
+        "amount": 31.1,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3134",
+        "amount": 6.6,
+        "percent": null
+      },
+      {
+        "material": "Zinc Oxide",
+        "amount": 3.3,
+        "percent": null
+      },
+      {
+        "material": "Copper Oxide",
+        "amount": 2.0,
+        "percent": null
+      },
+      {
+        "material": "Tin Oxide",
+        "amount": 2.5,
+        "percent": null
+      }
+    ],
+    "id": "g3806c",
+    "source": "digitalfire.com"
+  },
+  {
+    "code": "G2926J",
+    "name": "G2926B Reduced COE (Li2O)",
+    "description": "A very low thermal expansion version of the G2926B base recipe. Use this if the B versions crazes on your clay body.",
+    "materials": [
+      {
+        "material": "Spodumene",
+        "amount": 11.0,
+        "percent": null
+      },
+      {
+        "material": "Fusion Frit F-524",
+        "amount": 15.0,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3134",
+        "amount": 15.0,
+        "percent": null
+      },
+      {
+        "material": "EPK",
+        "amount": 18.0,
+        "percent": null
+      },
+      {
+        "material": "Wollastonite",
+        "amount": 6.0,
+        "percent": null
+      },
+      {
+        "material": "Silica 325 mesh",
+        "amount": 32.0,
+        "percent": null
+      },
+      {
+        "material": "Silverline 303 Talc",
+        "amount": 3.0,
+        "percent": null
+      }
+    ],
+    "id": "g2926j",
+    "source": "digitalfire.com"
+  },
+  {
+    "code": "G2931L",
+    "name": "Zero3 L Low Expansion Variant",
+    "description": "A cone 03-02 low expansion clear ceramic glaze developed from Worthington Clear.",
+    "materials": [
+      {
+        "material": "Ferro Frit 3195",
+        "amount": 19.0,
+        "percent": null
+      },
+      {
+        "material": "EPK",
+        "amount": 10.0,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3249",
+        "amount": 19.0,
+        "percent": null
+      },
+      {
+        "material": "Fusion Frit F-524",
+        "amount": 49.0,
+        "percent": null
+      },
+      {
+        "material": "Zinc Oxide",
+        "amount": 2.5,
+        "percent": null
+      }
+    ],
+    "id": "g2931l",
+    "source": "digitalfire.com"
+  },
+  {
+    "code": "G3838A",
+    "name": "Low Expansion Transparent for P300 Porcelain",
+    "description": "A low expansion transparent cone 6 glaze for Plainsman P300 (and other kaolin only porcelains difficult to fit glazes to)",
+    "materials": [
+      {
+        "material": "Ferro Frit 3134",
+        "amount": 37.0,
+        "percent": null
+      },
+      {
+        "material": "EPK",
+        "amount": 20.0,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 38.0,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3249",
+        "amount": 5.0,
+        "percent": null
+      }
+    ],
+    "id": "g3838a",
+    "source": "digitalfire.com"
+  },
+  {
+    "code": "G2931H",
+    "name": "Zero3 H High Expansion Variant",
+    "description": "A cone 03-02 higher expansion fritted clear glaze developed from Worthington Clear.",
+    "materials": [
+      {
+        "material": "Ferro Frit 3195",
+        "amount": 30.0,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3134",
+        "amount": 33.0,
+        "percent": null
+      },
+      {
+        "material": "EPK",
+        "amount": 20.0,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3110",
+        "amount": 17.0,
+        "percent": null
+      }
+    ],
+    "id": "g2931h",
+    "source": "digitalfire.com"
+  },
+  {
+    "code": "G2931K",
+    "name": "Zero3 K Cone 03 Transparent Glaze",
+    "description": "A cone 03-02 clear medium-expansio glaze developed from Worthington Clear.",
+    "materials": [
+      {
+        "material": "Ferro Frit 3195",
+        "amount": 25.0,
+        "percent": 26.3
+      },
+      {
+        "material": "Ferro Frit 3134",
+        "amount": 33.0,
+        "percent": 34.7
+      },
+      {
+        "material": "EPK",
+        "amount": 20.0,
+        "percent": 21.1
+      },
+      {
+        "material": "Ferro Frit 3249",
+        "amount": 10.0,
+        "percent": 10.5
+      },
+      {
+        "material": "Ferro Frit 3110",
+        "amount": 7.0,
+        "percent": 7.4
+      }
+    ],
+    "id": "g2931k",
+    "source": "digitalfire.com"
+  },
+  {
+    "code": "L3954B",
+    "name": "Cone 6 White Engobe Recipe",
+    "description": "Drying and firing shrinkage fitted to Plainsman M390, M340",
+    "materials": [
+      {
+        "material": "Nepheline Syenite",
+        "amount": 18.0,
+        "percent": 20.7
+      },
+      {
+        "material": "Silica",
+        "amount": 15.0,
+        "percent": 17.2
+      },
+      {
+        "material": "OM #4 Ball Clay",
+        "amount": 54.0,
+        "percent": 62.1
+      },
+      {
+        "material": "Zircopax",
+        "amount": 10.0,
+        "percent": 11.49
+      },
+      {
+        "material": "Bentonite",
+        "amount": 3.0,
+        "percent": 3.45
+      }
+    ],
+    "id": "l3954b",
+    "source": "digitalfire.com"
+  },
+  {
+    "code": "G2934Y",
+    "name": "G2934 (lower-LOI)",
+    "description": "The same chemistry as the widely used G2934 but the MgO is sourced from a frit and talc instead of dolomite. It has a finer surface, less cutlery marking and staining.",
+    "materials": [
+      {
+        "material": "Ferro Frit 3249",
+        "amount": 10.0,
+        "percent": null
+      },
+      {
+        "material": "EPK",
+        "amount": 20.5,
+        "percent": null
+      },
+      {
+        "material": "Wollastonite",
+        "amount": 21.5,
+        "percent": null
+      },
+      {
+        "material": "Talc",
+        "amount": 14.0,
+        "percent": null
+      },
+      {
+        "material": "Nepheline Syenite",
+        "amount": 10.5,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 13.0,
+        "percent": null
+      },
+      {
+        "material": "Calcined Kaolin",
+        "amount": 10.5,
+        "percent": null
+      }
+    ],
+    "id": "g2934y",
+    "source": "digitalfire.com"
+  },
+  {
+    "code": "L3500",
+    "name": "Alberta Slip Original cone 6 base glaze",
+    "description": "An amber-colored glaze that produces a clean, micro-bubble-free transparent glass at cone 5-6. Works well on brown and red burning stonewares.",
+    "materials": [
+      {
+        "material": "Alberta Slip 1000F Roasted",
+        "amount": 40.0,
+        "percent": null
+      },
+      {
+        "material": "Alberta Slip",
+        "amount": 40.0,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3195",
+        "amount": 20.0,
+        "percent": null
+      },
+      {
+        "material": "Red Iron Oxide",
+        "amount": 2.0,
+        "percent": null
+      }
+    ],
+    "id": "ga6-b",
+    "source": "digitalfire.com"
+  },
+  {
+    "code": "G3879",
+    "name": "Cone 04+ UltraClear Glossy Base",
+    "description": "A super transparent low fire base clear glaze created by reverse engineering a commercial product.",
+    "materials": [
+      {
+        "material": "Fusion Frit F-524",
+        "amount": 850.0,
+        "percent": 82.9
+      },
+      {
+        "material": "Fusion Frit F-69",
+        "amount": 40.0,
+        "percent": 3.9
+      },
+      {
+        "material": "EPK",
+        "amount": 90.0,
+        "percent": 8.8
+      },
+      {
+        "material": "Silica",
+        "amount": 45.0,
+        "percent": 4.4
+      }
+    ],
+    "id": "g3879",
+    "source": "digitalfire.com"
+  },
+  {
+    "code": "G1214Z1",
+    "name": "Cone 6 Calcium Matte v2",
+    "description": "This glaze was born as a demonstration of how to use chemistry to convert a glossy cone 6 glaze into a matte.",
+    "materials": [
+      {
+        "material": "Wollastonite",
+        "amount": 27.0,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3124",
+        "amount": 36.0,
+        "percent": null
+      },
+      {
+        "material": "EPK",
+        "amount": 20.0,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 5.0,
+        "percent": null
+      },
+      {
+        "material": "Calcined Kaolin",
+        "amount": 13.0,
+        "percent": null
+      }
+    ],
+    "id": "g1214z1",
+    "source": "digitalfire.com"
+  },
+  {
+    "code": "GA6-A",
+    "name": "Oringal Alberta Slip Amber/Honey base",
+    "description": "An amber-colored glaze that produces a clean, micro bubble free transparent glass on brown and red burning stonewares.",
+    "materials": [
+      {
+        "material": "Alberta Slip 1000F Roasted",
+        "amount": 40.0,
+        "percent": null
+      },
+      {
+        "material": "Alberta Slip",
+        "amount": 40.0,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3134",
+        "amount": 20.0,
+        "percent": null
+      }
+    ],
+    "id": "ga6-a",
+    "source": "digitalfire.com"
+  },
+  {
+    "code": "GA10-B",
+    "name": "Alberta Slip Tenmoku Cone 10R",
+    "description": "You can make a tenmoku from Alberta Slip by adding only 2% iron oxide and 5% calcium carbonate",
+    "materials": [
+      {
+        "material": "Alberta Slip 1000F Roasted",
+        "amount": 50.0,
+        "percent": null
+      },
+      {
+        "material": "Alberta Slip",
+        "amount": 50.0,
+        "percent": null
+      },
+      {
+        "material": "Calcium Carbonate",
+        "amount": 5.0,
+        "percent": null
+      },
+      {
+        "material": "Red Iron Oxide",
+        "amount": 2.0,
+        "percent": null
+      }
+    ],
+    "id": "ga10-b",
+    "source": "digitalfire.com"
+  },
+  {
+    "code": "GA10-D",
+    "name": "Alberta Slip Black Cone 10R",
+    "description": "You can make a black glaze at cone 10R using only 1% black stain in a 100% calcine:raw mix of Alberta Slip",
+    "materials": [
+      {
+        "material": "Alberta Slip",
+        "amount": 50.0,
+        "percent": null
+      },
+      {
+        "material": "Alberta Slip 1000F Roasted",
+        "amount": 50.0,
+        "percent": null
+      },
+      {
+        "material": "Mason 6666 or 6600",
+        "amount": 1.0,
+        "percent": null
+      }
+    ],
+    "id": "ga10-d",
+    "source": "digitalfire.com"
+  },
+  {
+    "code": "GA6-G",
+    "name": "Alberta Slip Lithium Brown Cone 6",
+    "description": "Plainsman Cone 6 Alberta Slip based glaze.",
+    "materials": [
+      {
+        "material": "Alberta Slip",
+        "amount": 40.0,
+        "percent": 37.7
+      },
+      {
+        "material": "Alberta Slip 1000F Roasted",
+        "amount": 35.0,
+        "percent": 33.0
+      },
+      {
+        "material": "Ferro Frit 3195",
+        "amount": 21.0,
+        "percent": 19.8
+      },
+      {
+        "material": "Lithium Carbonate",
+        "amount": 5.0,
+        "percent": 4.7
+      },
+      {
+        "material": "Alumina Calcined",
+        "amount": 5.0,
+        "percent": 4.7
+      },
+      {
+        "material": "Tin Oxide",
+        "amount": 4.0,
+        "percent": 3.77
+      }
+    ],
+    "id": "ga6-g",
+    "source": "digitalfire.com"
+  },
+  {
+    "code": "GA6-H",
+    "name": "Alberta Slip Cone 6 Black",
+    "description": "Pure Alberta Slip can be made into a black adding only 20% frit and 3% black stain",
+    "materials": [
+      {
+        "material": "Alberta Slip 1000F Roasted",
+        "amount": 33.0,
+        "percent": 35.5
+      },
+      {
+        "material": "Alberta Slip",
+        "amount": 40.0,
+        "percent": 43.0
+      },
+      {
+        "material": "Ferro Frit 3134",
+        "amount": 20.0,
+        "percent": 21.5
+      },
+      {
+        "material": "Zircopax",
+        "amount": 4.0,
+        "percent": 4.3
+      },
+      {
+        "material": "Mason 6666 Black Stain",
+        "amount": 3.0,
+        "percent": 3.23
+      }
+    ],
+    "id": "ga6-h",
+    "source": "digitalfire.com"
+  },
+  {
+    "code": "G1214M",
+    "name": "20x5 Cone 6 Base Glossy Glaze",
+    "description": "Developed by Tony Hansen in the 1980s. Its was popular for the simplicity and how well it worked with chrome-tin stains.",
+    "materials": [
+      {
+        "material": "Wollastonite",
+        "amount": 20.0,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3134",
+        "amount": 20.0,
+        "percent": null
+      },
+      {
+        "material": "Custer Feldspar",
+        "amount": 20.0,
+        "percent": null
+      },
+      {
+        "material": "EPK",
+        "amount": 20.0,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 20.0,
+        "percent": null
+      }
+    ],
+    "id": "g1214m",
+    "source": "digitalfire.com"
+  },
+  {
+    "code": "G2571A",
+    "name": "Cone 10 Silky Dolomite Matte glaze",
+    "description": "A cone 10R dolomite matte having a pleasant silky surface, it does not cutlery mark, stain or craze on common bodies",
+    "materials": [
+      {
+        "material": "Wollastonite",
+        "amount": 5.5,
+        "percent": null
+      },
+      {
+        "material": "Custer Feldspar",
+        "amount": 28.5,
+        "percent": null
+      },
+      {
+        "material": "EPK",
+        "amount": 28.0,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 15.0,
+        "percent": null
+      },
+      {
+        "material": "Dolomite",
+        "amount": 19.0,
+        "percent": null
+      },
+      {
+        "material": "Gerstley Borate",
+        "amount": 4.0,
+        "percent": null
+      }
+    ],
+    "id": "g2571a",
+    "source": "digitalfire.com"
+  },
+  {
+    "code": "G1214W",
+    "name": "Cone 6 Transparent Base",
+    "description": "A cone 6 base clear glaze recipe developed by deriving a recipe from a formula taken as an average of limit formulas",
+    "materials": [
+      {
+        "material": "Wollastonite",
+        "amount": 10.0,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3134",
+        "amount": 25.0,
+        "percent": null
+      },
+      {
+        "material": "EP Kaolin",
+        "amount": 25.0,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 25.0,
+        "percent": null
+      },
+      {
+        "material": "F-4 Feldspar",
+        "amount": 15.0,
+        "percent": null
+      }
+    ],
+    "id": "g1214w",
+    "source": "digitalfire.com"
+  },
+  {
+    "code": "G1947U",
+    "name": "Cone 10 Glossy transparent glaze",
+    "description": "Reliable widely used glaze for cone 10 porcelains and whitewares. The original recipe was developed from a glaze used for porcelain insulators.",
+    "materials": [
+      {
+        "material": "Custer Feldspar",
+        "amount": 27.0,
+        "percent": null
+      },
+      {
+        "material": "EPK",
+        "amount": 20.5,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 26.5,
+        "percent": null
+      },
+      {
+        "material": "Wollastonite",
+        "amount": 23.5,
+        "percent": null
+      },
+      {
+        "material": "Zinc Oxide",
+        "amount": 2.5,
+        "percent": null
+      }
+    ],
+    "id": "g1947u",
+    "source": "digitalfire.com"
+  },
+  {
+    "code": "MGBase3",
+    "name": "General Purpose Glossy Base 1 (Mastering Glazes)",
+    "description": "From page 92 in Mastering Glazes book",
+    "materials": [
+      {
+        "material": "G-200 Felspar",
+        "amount": 20.0,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3134",
+        "amount": 20.0,
+        "percent": null
+      },
+      {
+        "material": "Wollastonite",
+        "amount": 10.0,
+        "percent": null
+      },
+      {
+        "material": "EPK",
+        "amount": 20.0,
+        "percent": null
+      },
+      {
+        "material": "Talc",
+        "amount": 11.5,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 18.5,
+        "percent": null
+      }
+    ],
+    "id": "mgbase3",
+    "source": "digitalfire.com"
+  },
+  {
+    "code": "G1215U",
+    "name": "Low Expansion Glossy Clear Cone 6",
+    "description": "A recipe sourcing high MgO (from Ferro Frit 3249) to produce a low expansion glass resistant to crazing on lower silica porcelains.",
+    "materials": [
+      {
+        "material": "EPK",
+        "amount": 14.0,
+        "percent": 14.2
+      },
+      {
+        "material": "Silica",
+        "amount": 26.0,
+        "percent": 26.4
+      },
+      {
+        "material": "Wollastonite",
+        "amount": 14.5,
+        "percent": 14.7
+      },
+      {
+        "material": "F-4 Feldspar",
+        "amount": 24.0,
+        "percent": 24.4
+      },
+      {
+        "material": "Ferro Frit 3249",
+        "amount": 20.0,
+        "percent": 20.3
+      }
+    ],
+    "id": "g1215u",
+    "source": "digitalfire.com"
+  },
+  {
+    "code": "g2851H",
+    "name": "Ravenscrag Cone 6 High Calcium Matte Blue",
+    "description": "Plainsman Cone 6 Ravenscrag Slip based glaze. It can be found among others at http://ravenscrag.com.",
+    "materials": [
+      {
+        "material": "Ravenscrag Slip",
+        "amount": 55.0,
+        "percent": null
+      },
+      {
+        "material": "Whiting",
+        "amount": 10.0,
+        "percent": null
+      },
+      {
+        "material": "Dolomite",
+        "amount": 15.0,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3134",
+        "amount": 10.0,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 10.0,
+        "percent": null
+      },
+      {
+        "material": "Cobalt Carbonate",
+        "amount": 2.0,
+        "percent": null
+      },
+      {
+        "material": "Rutile Ceramic",
+        "amount": 5.0,
+        "percent": null
+      }
+    ],
+    "id": "g2851h",
+    "source": "digitalfire.com"
+  },
+  {
+    "code": "GR10-A",
+    "name": "Pure Ravenscrag Slip",
+    "description": "Ravenscrag all by itself makes a great cone 10 reduction semi-gloss glaze. It also has great working properties.",
+    "materials": [
+      {
+        "material": "Ravenscrag Slip 1000F Roast",
+        "amount": 50.0,
+        "percent": null
+      },
+      {
+        "material": "Ravenscrag Slip",
+        "amount": 50.0,
+        "percent": null
+      }
+    ],
+    "id": "gr10-a",
+    "source": "digitalfire.com"
+  },
+  {
+    "code": "G2853B",
+    "name": "Cone 04 Clear Ravenscrag School Glaze",
+    "description": "A Ravenscrag Slip base made by simply mixing it 50:50 with a frit",
+    "materials": [
+      {
+        "material": "Ferro Frit 3195",
+        "amount": 50.0,
+        "percent": 25.0
+      },
+      {
+        "material": "Ravenscrag Slip",
+        "amount": 50.0,
+        "percent": 25.0
+      },
+      {
+        "material": "Water",
+        "amount": 100.0,
+        "percent": 50.0
+      }
+    ],
+    "id": "g2853b",
+    "source": "digitalfire.com"
+  },
+  {
+    "code": "G2240",
+    "name": "Cone 10R Classic Spodumene Matte",
+    "description": "This glaze can be used to create classic matte oatmeal effects at cone 10 reduction. The shade of color varies with thickness, especially on high iron bodies where thinner sections are darker. Many of glazes of this type have micro-dimples in the surface and cutlery marking problems, likely from too much lithia (from spodumene), however this one has been reliable for us.",
+    "materials": [
+      {
+        "material": "Dolomite",
+        "amount": 25.0,
+        "percent": null
+      },
+      {
+        "material": "Custer Feldspar",
+        "amount": 27.5,
+        "percent": null
+      },
+      {
+        "material": "Ball Clay",
+        "amount": 10.0,
+        "percent": null
+      },
+      {
+        "material": "Spodumene",
+        "amount": 8.5,
+        "percent": null
+      },
+      {
+        "material": "Kaolin",
+        "amount": 17.5,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 7.5,
+        "percent": null
+      },
+      {
+        "material": "Zircopax",
+        "amount": 4.0,
+        "percent": null
+      }
+    ],
+    "id": "g2240",
+    "source": "digitalfire.com"
+  },
+  {
+    "code": "G2826R",
+    "name": "Floating Blue Cone 5-6 Original Glaze Recipe",
+    "description": "Floating Blue is a classic cone 6 pottery glaze recipe from David Shaner. Because of the high Gerstley Borate content it is troublesome, difficult. But there are alternatives.",
+    "materials": [
+      {
+        "material": "Nepheline Syenite",
+        "amount": 47.9,
+        "percent": null
+      },
+      {
+        "material": "Gerstley Borate",
+        "amount": 27.0,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 20.3,
+        "percent": null
+      },
+      {
+        "material": "EPK",
+        "amount": 5.5,
+        "percent": null
+      },
+      {
+        "material": "Iron Oxide Red",
+        "amount": 2.0,
+        "percent": null
+      },
+      {
+        "material": "Cobalt Oxide",
+        "amount": 1.0,
+        "percent": null
+      },
+      {
+        "material": "Rutile",
+        "amount": 4.0,
+        "percent": null
+      }
+    ],
+    "id": "g2826r",
+    "source": "digitalfire.com"
+  },
+  {
+    "code": "G2826X",
+    "name": "Randy's Red Cone 5",
+    "description": "A popular Gerstley Borate based iron-red glaze.",
+    "materials": [
+      {
+        "material": "Silica",
+        "amount": 29.7,
+        "percent": null
+      },
+      {
+        "material": "Kaolin",
+        "amount": 5.0,
+        "percent": null
+      },
+      {
+        "material": "F-4 Feldspar",
+        "amount": 19.8,
+        "percent": null
+      },
+      {
+        "material": "Talc",
+        "amount": 13.9,
+        "percent": null
+      },
+      {
+        "material": "Gerstley Borate",
+        "amount": 31.7,
+        "percent": null
+      },
+      {
+        "material": "Red Iron Oxide",
+        "amount": 15.0,
+        "percent": null
+      },
+      {
+        "material": "Bentonite",
+        "amount": 2.0,
+        "percent": null
+      }
+    ],
+    "id": "g2826x",
+    "source": "digitalfire.com"
+  },
+  {
+    "code": "CELECG",
+    "name": "Celestite Crystalline Glaze",
+    "description": "Cone 9-10 - Spodumene, talc variant",
+    "materials": [
+      {
+        "material": "Ferro Frit 3110",
+        "amount": 50.0,
+        "percent": null
+      },
+      {
+        "material": "Zinc Oxide",
+        "amount": 25.0,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 15.0,
+        "percent": null
+      },
+      {
+        "material": "Spodumene",
+        "amount": 5.0,
+        "percent": null
+      },
+      {
+        "material": "Talc",
+        "amount": 4.0,
+        "percent": null
+      },
+      {
+        "material": "Titanium Dioxide",
+        "amount": 1.0,
+        "percent": null
+      }
+    ],
+    "id": "celecg",
+    "source": "digitalfire.com"
+  },
+  {
+    "code": "FAC5",
+    "name": "Crystal Number Five Glaze",
+    "description": "Cone 8-9 - Spodumene, talc variant",
+    "materials": [
+      {
+        "material": "Ferro Frit 3110",
+        "amount": 50.0,
+        "percent": null
+      },
+      {
+        "material": "Zinc Oxide",
+        "amount": 27.0,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 14.0,
+        "percent": null
+      },
+      {
+        "material": "Spodumene",
+        "amount": 4.0,
+        "percent": null
+      },
+      {
+        "material": "Talc",
+        "amount": 4.0,
+        "percent": null
+      },
+      {
+        "material": "Titanium Dioxide",
+        "amount": 1.0,
+        "percent": null
+      }
+    ],
+    "id": "fac5",
+    "source": "digitalfire.com"
+  },
+  {
+    "code": "FO",
+    "name": "Octal Crystalline Glaze",
+    "description": "Cone 6-9 - Fast-growing crystals variant with dolomite and spodumene",
+    "materials": [
+      {
+        "material": "Ferro Frit 3110",
+        "amount": 51.0,
+        "percent": null
+      },
+      {
+        "material": "Zinc Oxide",
+        "amount": 24.0,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 15.4,
+        "percent": null
+      },
+      {
+        "material": "Spodumene",
+        "amount": 1.9,
+        "percent": null
+      },
+      {
+        "material": "Titanium Dioxide",
+        "amount": 2.9,
+        "percent": null
+      },
+      {
+        "material": "Dolomite",
+        "amount": 4.8,
+        "percent": null
+      }
+    ],
+    "id": "fo",
+    "source": "digitalfire.com"
+  },
+  {
+    "code": "FAAO",
+    "name": "Fa's All-Opaque Crystalline Glaze",
+    "description": "Cone 8-10 - Opaque surface (crystals and ground), high dolomite and titanium.",
+    "materials": [
+      {
+        "material": "Ferro Frit 3110",
+        "amount": 46.0,
+        "percent": null
+      },
+      {
+        "material": "Zinc Oxide",
+        "amount": 18.0,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 20.0,
+        "percent": null
+      },
+      {
+        "material": "Dolomite",
+        "amount": 9.0,
+        "percent": null
+      },
+      {
+        "material": "Titanium Dioxide",
+        "amount": 6.0,
+        "percent": null
+      },
+      {
+        "material": "Talc",
+        "amount": 1.0,
+        "percent": null
+      }
+    ],
+    "id": "faao",
+    "source": "digitalfire.com"
+  },
+  {
+    "code": "BORY1",
+    "name": "Bory 1 Crystalline Glaze",
+    "description": "Cone 6-10 - Added Gerstley Borate lowers temperature to cone 6, titanium to seed crystals",
+    "materials": [
+      {
+        "material": "Ferro Frit 3110",
+        "amount": 50.0,
+        "percent": null
+      },
+      {
+        "material": "Zinc Oxide",
+        "amount": 27.0,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 16.0,
+        "percent": null
+      },
+      {
+        "material": "Titanium Dioxide",
+        "amount": 4.0,
+        "percent": null
+      },
+      {
+        "material": "Gerstley Borate",
+        "amount": 3.0,
+        "percent": null
+      }
+    ],
+    "id": "bory1",
+    "source": "digitalfire.com"
+  },
+  {
+    "code": "GC106",
+    "name": "GC106 Base Crystalline Glaze",
+    "description": "Cone 8-10 - Most other GC106 recipes are based on this.",
+    "materials": [
+      {
+        "material": "Frit GF 106",
+        "amount": 70.0,
+        "percent": 71.4
+      },
+      {
+        "material": "Zinc Oxide",
+        "amount": 25.0,
+        "percent": 25.5
+      },
+      {
+        "material": "Silica",
+        "amount": 3.0,
+        "percent": 3.1
+      }
+    ],
+    "id": "gc106",
+    "source": "digitalfire.com"
+  },
+  {
+    "code": "GA6-D",
+    "name": "Alberta Slip Glossy Brown Cone 6",
+    "description": "Plainsman Cone 6 Alberta Slip based glaze. It can be found among others at http://albertaslip.com.",
+    "materials": [
+      {
+        "material": "Alberta Slip 1000F Roasted",
+        "amount": 40.0,
+        "percent": null
+      },
+      {
+        "material": "Alberta Slip",
+        "amount": 40.0,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3134",
+        "amount": 20.0,
+        "percent": null
+      },
+      {
+        "material": "Tin Oxide",
+        "amount": 4.0,
+        "percent": null
+      },
+      {
+        "material": "Rutile",
+        "amount": 4.0,
+        "percent": null
+      }
+    ],
+    "id": "ga6-d",
+    "source": "digitalfire.com"
+  },
+  {
+    "code": "GR10-E",
+    "name": "Alberta Slip:Ravenscrag Cone 10R Celadon",
+    "description": "A celadon recipe affording slurry and fired properties control (because proportions of raw and calcined materials and frit can be adjusted)",
+    "materials": [
+      {
+        "material": "Alberta Slip 1000F Roast",
+        "amount": 47.5,
+        "percent": null
+      },
+      {
+        "material": "Ravenscrag Slip",
+        "amount": 47.5,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3134",
+        "amount": 5.0,
+        "percent": null
+      }
+    ],
+    "id": "gr10-e",
+    "source": "digitalfire.com"
+  },
+  {
+    "code": "GA10-A",
+    "name": "Alberta Slip Base Cone 10R",
+    "description": "Alberta Slip at 60:40 calcine:raw makes a great tenmoku-like glaze at cone 10R",
+    "materials": [
+      {
+        "material": "Alberta Slip 1000F Roasted",
+        "amount": 60.0,
+        "percent": null
+      },
+      {
+        "material": "Alberta Slip",
+        "amount": 40.0,
+        "percent": null
+      }
+    ],
+    "id": "ga10-a",
+    "source": "digitalfire.com"
+  },
+  {
+    "code": "GA10x-A",
+    "name": "Alberta Slip Base for cone 10 oxidation",
+    "description": "Alberta Slip creates a glossy transparent brown at cone 10 with the simple addition of 10% frit.",
+    "materials": [
+      {
+        "material": "Alberta Slip 1000F Roasted",
+        "amount": 45.0,
+        "percent": null
+      },
+      {
+        "material": "Alberta Slip",
+        "amount": 45.0,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3134",
+        "amount": 10.0,
+        "percent": null
+      }
+    ],
+    "id": "ga10x-a",
+    "source": "digitalfire.com"
+  },
+  {
+    "code": "GA6-F",
+    "name": "Alberta Slip Cone 6 Oatmeal",
+    "description": "Plainsman Cone 6 Alberta Slip based glaze. It can be found among others at http://albertaslip.com.",
+    "materials": [
+      {
+        "material": "Alberta Slip 1000F Roasted",
+        "amount": 40.0,
+        "percent": null
+      },
+      {
+        "material": "Alberta Slip",
+        "amount": 40.0,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3134",
+        "amount": 20.0,
+        "percent": null
+      },
+      {
+        "material": "Rutile",
+        "amount": 5.0,
+        "percent": null
+      },
+      {
+        "material": "Titanium Dioxide",
+        "amount": 3.0,
+        "percent": null
+      }
+    ],
+    "id": "ga6-f",
+    "source": "digitalfire.com"
+  },
+  {
+    "code": "GBCG",
+    "name": "Generic Base Crystalline Glaze",
+    "description": "Cone 6-10 - Almost all other Frit 3110 recipes are based on additions to this",
+    "materials": [
+      {
+        "material": "Zinc Oxide",
+        "amount": 25.0,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 25.0,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3110",
+        "amount": 50.0,
+        "percent": null
+      }
+    ],
+    "id": "gbcg",
+    "source": "digitalfire.com"
+  }
+]

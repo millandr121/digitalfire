@@ -80,7 +80,7 @@ function blendMaterials(lines: Line[], materials: Material[]): BlendRow[] {
     }))
 }
 
-export function GlazeCalc({ materials, oxides }: { materials: Material[]; oxides: Oxide[] }) {
+export function GlazeCalc({ materials }: { materials: Material[]; oxides: Oxide[] }) {
   const [lines, setLines] = useState<Line[]>([
     { materialId: '', amount: '' },
     { materialId: '', amount: '' },

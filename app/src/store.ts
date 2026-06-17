@@ -1,11 +1,13 @@
 import MiniSearch from 'minisearch'
 import { openDB, type IDBPDatabase } from 'idb'
-import type { Material, Oxide, Recipe } from './types'
+import type { Material, Mineral, Oxide, Recipe, Temperature } from './types'
 
 export interface Dataset {
   materials: Material[]
   oxides: Oxide[]
   recipes: Recipe[]
+  minerals: Mineral[]
+  temperatures: Temperature[]
 }
 
 const STORES = ['materials', 'oxides', 'recipes'] as const
@@ -38,10 +40,12 @@ async function fetchJson<T>(name: string): Promise<T> {
 
 /** Base JSON merged with the user's local IndexedDB edits/additions. */
 export async function loadDataset(): Promise<Dataset> {
-  const [materials, oxides, recipes] = await Promise.all([
+  const [materials, oxides, recipes, minerals, temperatures] = await Promise.all([
     fetchJson<Material[]>('materials'),
     fetchJson<Oxide[]>('oxides'),
     fetchJson<Recipe[]>('recipes'),
+    fetchJson<Mineral[]>('minerals'),
+    fetchJson<Temperature[]>('temperatures'),
   ])
   const d = await db()
   const [mEdits, oEdits, rEdits] = await Promise.all([
@@ -53,6 +57,8 @@ export async function loadDataset(): Promise<Dataset> {
     materials: merge(materials, mEdits as Material[]),
     oxides: merge(oxides, oEdits as Oxide[]),
     recipes: merge(recipes, rEdits as Recipe[]),
+    minerals,
+    temperatures,
   }
 }
 

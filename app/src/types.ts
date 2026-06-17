@@ -39,3 +39,21 @@ export interface Recipe {
   materials: RecipeMaterial[]
   source: string
 }
+
+export interface Mineral {
+  id: string
+  name: string
+  formula: string
+  analysis: OxideAnalysisRow[]
+  oxide_weight: number | null
+  formula_weight: number | null
+  data: Record<string, string>
+  source: string
+}
+
+export interface Temperature {
+  id: string
+  value: string
+  event: string
+  source: string
+}

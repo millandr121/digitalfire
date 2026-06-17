@@ -4,6 +4,7 @@ import { buildSearch, downloadJSON, loadDataset, saveMaterial, type Dataset, typ
 import type { Material, Oxide, Recipe } from './types'
 import { AnalysisChart } from './components/AnalysisChart'
 import { MaterialForm } from './MaterialForm'
+import { GlazeCalc } from './GlazeCalc'
 
 function useHash() {
   const [hash, setHash] = useState(() => window.location.hash || '#/')
@@ -87,6 +88,7 @@ function Header({
     ['materials', 'Materials'],
     ['oxides', 'Oxides'],
     ['recipes', 'Recipes'],
+    ['calc', 'Glaze Calc'],
   ]
   return (
     <header className="sticky top-0 z-10 border-b border-neutral-800 bg-neutral-950/90 backdrop-blur">
@@ -181,6 +183,8 @@ function Routed({
       return <OxideList items={ds.oxides} />
     case 'recipes':
       return <RecipeList items={ds.recipes} />
+    case 'calc':
+      return <GlazeCalc materials={ds.materials} oxides={ds.oxides} />
     case 'new':
       if (a === 'material')
         return <MaterialForm oxides={ds.oxides} onSave={onSaveMaterial} onCancel={() => go('#/materials')} />

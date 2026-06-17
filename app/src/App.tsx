@@ -1,10 +1,11 @@
 import { useEffect, useMemo, useState, type ReactNode } from 'react'
 import type MiniSearch from 'minisearch'
 import { buildSearch, downloadJSON, loadDataset, saveMaterial, type Dataset, type SearchDoc } from './store'
-import type { Material, Oxide, Recipe } from './types'
+import type { Material, Mineral, Oxide, Recipe, Temperature } from './types'
 import { AnalysisChart } from './components/AnalysisChart'
 import { MaterialForm } from './MaterialForm'
 import { GlazeCalc } from './GlazeCalc'
+import { ThermalCalc } from './ThermalCalc'
 
 function useHash() {
   const [hash, setHash] = useState(() => window.location.hash || '#/')
@@ -57,7 +58,7 @@ export default function App() {
         )}
       </main>
       <footer className="border-t border-neutral-800 px-4 py-3 text-center text-xs text-neutral-500">
-        {ds.materials.length} materials · {ds.oxides.length} oxides · {ds.recipes.length} recipes ·{' '}
+        {ds.materials.length} materials · {ds.oxides.length} oxides · {ds.recipes.length} recipes · {ds.minerals.length} minerals · {ds.temperatures.length} temps ·{' '}
         factual data from digitalfire.com (Tony Hansen) — local archive
       </footer>
     </div>
@@ -88,7 +89,10 @@ function Header({
     ['materials', 'Materials'],
     ['oxides', 'Oxides'],
     ['recipes', 'Recipes'],
+    ['minerals', 'Minerals'],
+    ['temperatures', 'Temperatures'],
     ['calc', 'Glaze Calc'],
+    ['thermal', 'Thermal Exp'],
   ]
   return (
     <header className="sticky top-0 z-10 border-b border-neutral-800 bg-neutral-950/90 backdrop-blur">
@@ -185,6 +189,14 @@ function Routed({
       return <RecipeList items={ds.recipes} />
     case 'calc':
       return <GlazeCalc materials={ds.materials} oxides={ds.oxides} />
+    case 'thermal':
+      return <ThermalCalc oxides={ds.oxides} />
+    case 'minerals':
+      return <MineralList items={ds.minerals} />
+    case 'mineral':
+      return <MineralDetail m={ds.minerals.find((x) => x.id === a)} />
+    case 'temperatures':
+      return <TemperatureList items={ds.temperatures} />
     case 'new':
       if (a === 'material')
         return <MaterialForm oxides={ds.oxides} onSave={onSaveMaterial} onCancel={() => go('#/materials')} />
@@ -476,5 +488,84 @@ function RecipeDetail({ r, ds }: { r: Recipe | undefined; ds: Dataset }) {
       </Card>
       <p className="text-xs text-neutral-600">Source: {r.source}</p>
     </article>
+  )
+}
+
+function MineralList({ items }: { items: Mineral[] }) {
+  const [filter, setFilter] = useState('')
+  const q = filter.trim().toLowerCase()
+  const filtered = q ? items.filter((m) => `${m.name} ${m.formula}`.toLowerCase().includes(q)) : items
+  return (
+    <div>
+      <ListHeader title="Minerals" count={filtered.length} total={items.length} filter={filter} setFilter={setFilter} />
+      <ul className="divide-y divide-neutral-800 overflow-hidden rounded border border-neutral-800">
+        {filtered.map((m) => (
+          <li key={m.id}>
+            <button
+              onClick={() => go(`#/mineral/${encodeURIComponent(m.id)}`)}
+              className="w-full px-3 py-2 text-left hover:bg-neutral-900"
+            >
+              <div className="text-neutral-100">{m.name}</div>
+              <div className="font-mono text-xs text-neutral-500">{m.formula}</div>
+            </button>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
+}
+
+function MineralDetail({ m }: { m: Mineral | undefined }) {
+  if (!m) return <NotFound what="Mineral" />
+  return (
+    <article className="space-y-4">
+      <div>
+        <BackLink to="#/minerals" label="Minerals" />
+        <h1 className="mt-1 text-2xl font-semibold text-neutral-100">{m.name}</h1>
+        <p className="font-mono text-sm text-neutral-500">{m.formula}</p>
+      </div>
+      {m.analysis.length > 0 && (
+        <Card>
+          <h2 className="mb-3 text-sm uppercase tracking-wide text-neutral-400">Oxide Analysis</h2>
+          <AnalysisChart rows={m.analysis} />
+        </Card>
+      )}
+      {Object.keys(m.data).length > 0 && (
+        <Card>
+          <h2 className="mb-2 text-sm uppercase tracking-wide text-neutral-400">Data</h2>
+          <dl className="space-y-1 text-sm">
+            {Object.entries(m.data).map(([k, v]) => (
+              <div key={k} className="flex justify-between gap-4 border-b border-neutral-900 py-1">
+                <dt className="text-neutral-400">{k}</dt>
+                <dd className="text-right text-neutral-200">{v}</dd>
+              </div>
+            ))}
+          </dl>
+        </Card>
+      )}
+      <p className="text-xs text-neutral-600">Source: {m.source}</p>
+    </article>
+  )
+}
+
+function TemperatureList({ items }: { items: Temperature[] }) {
+  const [filter, setFilter] = useState('')
+  const q = filter.trim().toLowerCase()
+  const filtered = q ? items.filter((t) => `${t.value} ${t.event}`.toLowerCase().includes(q)) : items
+  return (
+    <div>
+      <ListHeader title="Temperatures" count={filtered.length} total={items.length} filter={filter} setFilter={setFilter} />
+      <ul className="divide-y divide-neutral-800 overflow-hidden rounded border border-neutral-800">
+        {filtered.map((t) => (
+          <li key={t.id} className="flex gap-4 px-3 py-2">
+            <span className="w-36 shrink-0 font-mono text-sm text-amber-400">{t.value}</span>
+            <span className="text-sm text-neutral-300">{t.event}</span>
+          </li>
+        ))}
+      </ul>
+      {filtered.length === 0 && (
+        <p className="mt-4 text-sm text-neutral-500">No temperature events found.</p>
+      )}
+    </div>
   )
 }

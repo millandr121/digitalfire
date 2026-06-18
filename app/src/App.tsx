@@ -755,7 +755,7 @@ function RecipeDetail({ r, ds }: { r: Recipe | undefined; ds: Dataset }) {
           <div>
             <h2 className="text-sm uppercase tracking-wide text-neutral-500">Recipe</h2>
             <p className="mt-0.5 text-xs text-neutral-400">
-              Parts are unitless ratios — weigh each ingredient proportionally.
+              Amounts are unitless ratios — weigh each ingredient proportionally.
               Percentages are normalised to 100. Use the batch calculator to get gram amounts.
             </p>
           </div>
@@ -802,7 +802,7 @@ function RecipeDetail({ r, ds }: { r: Recipe | undefined; ds: Dataset }) {
           <thead>
             <tr className="text-left text-neutral-500">
               <th className="py-1 font-normal">Material</th>
-              <th className="py-1 text-right font-normal" title="Unitless ratio — proportional weight">Parts</th>
+              <th className="py-1 text-right font-normal" title="Unitless ratio — proportional weight">Amount</th>
               <th className="py-1 text-right font-normal">%</th>
               {batchG && <th className="py-1 text-right font-normal text-blue-600">Batch (g)</th>}
             </tr>

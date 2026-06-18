@@ -692,9 +692,19 @@ function recipeToStullPoint(r: Recipe, materials: Material[]): StullPoint | null
   return { id: r.id, label: r.code || r.name, sio2, al2o3 }
 }
 
+const BATCH_PRESETS = [
+  { label: '100 g', value: 100 },
+  { label: '500 g', value: 500 },
+  { label: '1 kg', value: 1000 },
+  { label: '5 kg', value: 5000 },
+  { label: '10 kg', value: 10000 },
+]
+
 function RecipeDetail({ r, ds }: { r: Recipe | undefined; ds: Dataset }) {
   if (!r) return <NotFound what="Recipe" />
   const findMat = (name: string) => findMaterial(name, ds.materials)
+  const [batchG, setBatchG] = useState<number | null>(null)
+  const [customBatch, setCustomBatch] = useState('')
   const blend = useMemo(() => blendRecipe(r, ds.materials), [r, ds.materials])
 
   // All recipe Stull points for context (computed lazily, only when blend is available)
@@ -740,38 +750,111 @@ function RecipeDetail({ r, ds }: { r: Recipe | undefined; ds: Dataset }) {
         )}
       </div>
       <Card>
-        <h2 className="mb-2 text-sm uppercase tracking-wide text-neutral-500">Recipe</h2>
+        {/* Header row */}
+        <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
+          <div>
+            <h2 className="text-sm uppercase tracking-wide text-neutral-500">Recipe</h2>
+            <p className="mt-0.5 text-xs text-neutral-400">
+              Parts are unitless ratios — weigh each ingredient proportionally.
+              Percentages are normalised to 100. Use the batch calculator to get gram amounts.
+            </p>
+          </div>
+        </div>
+
+        {/* Batch calculator */}
+        <div className="mb-4 rounded border border-neutral-200 bg-neutral-50 px-3 py-2.5 space-y-2">
+          <div className="text-xs font-medium text-neutral-500 uppercase tracking-wide">Batch Calculator</div>
+          <div className="flex flex-wrap gap-2 items-center">
+            {BATCH_PRESETS.map((p) => (
+              <button
+                key={p.value}
+                onClick={() => { setBatchG(p.value); setCustomBatch('') }}
+                className={`rounded px-2.5 py-1 text-xs font-medium border transition-colors ${
+                  batchG === p.value && !customBatch
+                    ? 'bg-neutral-900 text-white border-neutral-900'
+                    : 'border-neutral-300 text-neutral-600 hover:bg-neutral-100'
+                }`}
+              >
+                {p.label}
+              </button>
+            ))}
+            <input
+              type="number"
+              min="1"
+              value={customBatch}
+              onChange={(e) => { setCustomBatch(e.target.value); setBatchG(parseFloat(e.target.value) || null) }}
+              placeholder="Custom g…"
+              className="w-24 rounded border border-neutral-300 bg-white px-2 py-1 text-xs text-neutral-700 focus:border-neutral-500 focus:outline-none"
+            />
+            {batchG && (
+              <button onClick={() => { setBatchG(null); setCustomBatch('') }} className="text-xs text-neutral-400 hover:text-neutral-600">Clear</button>
+            )}
+          </div>
+          {batchG && (
+            <p className="text-xs text-neutral-400">
+              Showing gram amounts for a <strong className="text-neutral-600">{batchG >= 1000 ? `${batchG/1000} kg` : `${batchG} g`}</strong> batch.
+              Scale up or down as needed.
+            </p>
+          )}
+        </div>
+
         <table className="w-full text-sm">
           <thead>
             <tr className="text-left text-neutral-500">
               <th className="py-1 font-normal">Material</th>
-              <th className="py-1 text-right font-normal">Amount</th>
+              <th className="py-1 text-right font-normal" title="Unitless ratio — proportional weight">Parts</th>
               <th className="py-1 text-right font-normal">%</th>
+              {batchG && <th className="py-1 text-right font-normal text-blue-600">Batch (g)</th>}
             </tr>
           </thead>
           <tbody>
-            {r.materials.map((x, i) => {
-              const mat = findMat(x.material)
-              return (
-                <tr key={i} className="border-t border-neutral-100">
-                  <td className="py-1">
-                    {mat ? (
-                      <button
-                        className="text-neutral-900 hover:underline"
-                        onClick={() => go(`#/material/${encodeURIComponent(mat.id)}`)}
-                      >
-                        {x.material}
-                      </button>
-                    ) : (
-                      <span className="text-neutral-700">{x.material}</span>
+            {(() => {
+              const totalParts = r.materials.reduce((s, x) => s + (x.amount ?? 0), 0)
+              return r.materials.map((x, i) => {
+                const mat = findMat(x.material)
+                const batchAmt = batchG && x.amount != null && totalParts > 0
+                  ? Math.round((x.amount / totalParts) * batchG * 10) / 10
+                  : null
+                return (
+                  <tr key={i} className="border-t border-neutral-100">
+                    <td className="py-1">
+                      {mat ? (
+                        <button
+                          className="text-neutral-900 hover:underline"
+                          onClick={() => go(`#/material/${encodeURIComponent(mat.id)}`)}
+                        >
+                          {x.material}
+                        </button>
+                      ) : (
+                        <span className="text-neutral-700">{x.material}</span>
+                      )}
+                    </td>
+                    <td className="text-right font-mono text-neutral-700">{x.amount ?? '—'}</td>
+                    <td className="text-right font-mono text-neutral-500">{x.percent != null ? `${x.percent}%` : '—'}</td>
+                    {batchG && (
+                      <td className="text-right font-mono font-medium text-blue-700">
+                        {batchAmt != null ? `${batchAmt} g` : '—'}
+                      </td>
                     )}
-                  </td>
-                  <td className="text-right font-mono text-neutral-700">{x.amount ?? ''}</td>
-                  <td className="text-right font-mono text-neutral-500">{x.percent ?? ''}</td>
-                </tr>
-              )
-            })}
+                  </tr>
+                )
+              })
+            })()}
           </tbody>
+          {batchG && (
+            <tfoot>
+              <tr className="border-t-2 border-neutral-300">
+                <td className="py-1 text-xs text-neutral-500">Total</td>
+                <td className="text-right font-mono text-xs text-neutral-400">
+                  {Math.round(r.materials.reduce((s, x) => s + (x.amount ?? 0), 0) * 10) / 10}
+                </td>
+                <td className="text-right font-mono text-xs text-neutral-400">100%</td>
+                <td className="text-right font-mono text-sm font-semibold text-blue-700">
+                  {batchG >= 1000 ? `${batchG/1000} kg` : `${batchG} g`}
+                </td>
+              </tr>
+            </tfoot>
+          )}
         </table>
       </Card>
 

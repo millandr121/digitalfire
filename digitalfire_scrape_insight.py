@@ -140,15 +140,6 @@ def parse_insight_share(html: str, meta: dict) -> dict | None:
     z_match = re.search(r"[?&]z=([^&]+)", meta.get("share_url", ""))
     slug = f"il-{z_match.group(1)}" if z_match else re.sub(r"[^a-z0-9]", "-", (code or name).lower())[:40]
 
-    # Description: first <p> after h1 with meaningful text
-    description = None
-    if h1:
-        for p in h1.find_all_next("p"):
-            t = clean(p.get_text())
-            if len(t) > 20 and not t.lower().startswith("material"):
-                description = t
-                break
-
     # Materials table: look for table rows with material name + amount columns
     materials = []
     for table in soup.find_all("table"):
@@ -196,9 +187,8 @@ def parse_insight_share(html: str, meta: dict) -> dict | None:
         "id": slug,
         "code": code,
         "name": name,
-        "description": description,
         "materials": materials,
-        "source": f"insight-live.com (public share) via digitalfire.com",
+        "source": "insight-live.com (public share) via digitalfire.com",
     }
 
 

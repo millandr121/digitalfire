@@ -1,0 +1,28 @@
+---
+import Base from '../../layouts/Base.astro'
+import glossary from '../../../../app/public/data/glossary.json'
+
+export function getStaticPaths() {
+  return glossary.map(g => ({ params: { id: g.id }, props: { entry: g } }))
+}
+
+const { entry } = Astro.props
+---
+<Base title={`${entry.term} — Digitalfire Glossary`}>
+  <div class="max-w-3xl mx-auto">
+    <a href="/glossary" class="text-sm text-neutral-400 hover:text-neutral-600 mb-6 inline-block">← Glossary</a>
+    {entry.plainsman && (
+      <div class="mb-4 rounded border border-amber-200 bg-amber-50 px-4 py-2 text-sm text-amber-700">
+        This entry contains Plainsman-specific content.
+      </div>
+    )}
+    <h1 class="text-2xl font-semibold text-neutral-900 mb-6">{entry.term}</h1>
+    {entry.body
+      ? <div class="prose" set:html={entry.body} />
+      : <p class="text-neutral-500 italic">No detailed definition available for this term.</p>
+    }
+    <div class="mt-10 border-t border-neutral-100 pt-4 text-xs text-neutral-400">
+      Content by Tony Hansen · Originally published on Digitalfire.com
+    </div>
+  </div>
+</Base>

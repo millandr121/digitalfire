@@ -1,0 +1,60 @@
+---
+import '../styles/global.css'
+
+interface Props {
+  title?: string
+  description?: string
+}
+
+const { title = 'Digitalfire Reference Library', description = 'Ceramic science reference by Tony Hansen' } = Astro.props
+const SHOW_PLAINSMAN = import.meta.env.SHOW_PLAINSMAN !== 'false'
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content={description} />
+  <title>{title} — Digitalfire</title>
+  <link rel="icon" href="/favicon.svg" />
+</head>
+<body class="min-h-screen flex flex-col">
+
+  <!-- Nav -->
+  <header class="border-b border-neutral-200 bg-white sticky top-0 z-50">
+    <div class="mx-auto max-w-6xl px-4 flex items-center justify-between h-14">
+      <a href="/" class="flex items-center gap-2">
+        <span class="text-lg font-semibold tracking-tight text-neutral-900">Digitalfire</span>
+        <span class="text-xs text-neutral-400 hidden sm:block">Reference Library</span>
+      </a>
+      <nav class="flex items-center gap-1 text-sm">
+        <a href="/articles" class="px-3 py-1.5 rounded text-neutral-600 hover:text-neutral-900 hover:bg-neutral-100 transition-colors">Articles</a>
+        <a href="/glossary" class="px-3 py-1.5 rounded text-neutral-600 hover:text-neutral-900 hover:bg-neutral-100 transition-colors">Glossary</a>
+        <a href="https://digitalfire.pages.dev" class="px-3 py-1.5 rounded text-neutral-600 hover:text-neutral-900 hover:bg-neutral-100 transition-colors">Database ↗</a>
+        {SHOW_PLAINSMAN && (
+          <a href="/plainsman" class="px-3 py-1.5 rounded text-neutral-600 hover:text-neutral-900 hover:bg-neutral-100 transition-colors">Plainsman</a>
+        )}
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page content -->
+  <main class="flex-1 mx-auto w-full max-w-6xl px-4 py-8">
+    <slot />
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-neutral-200 bg-white mt-12">
+    <div class="mx-auto max-w-6xl px-4 py-6 flex flex-wrap items-center justify-between gap-4 text-xs text-neutral-400">
+      <span>Content by Tony Hansen · Digitalfire.com (1990–2026)</span>
+      <div class="flex gap-4">
+        <a href="/articles" class="hover:text-neutral-600">Articles</a>
+        <a href="/glossary" class="hover:text-neutral-600">Glossary</a>
+        <a href="https://digitalfire.pages.dev" class="hover:text-neutral-600">Database</a>
+        <a href="/privacy" class="hover:text-neutral-600">Privacy</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

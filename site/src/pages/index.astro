@@ -1,0 +1,87 @@
+---
+import Base from '../layouts/Base.astro'
+import articles from '../../../app/public/data/articles.json'
+import glossary from '../../../app/public/data/glossary.json'
+
+const SHOW_PLAINSMAN = import.meta.env.SHOW_PLAINSMAN !== 'false'
+const recentArticles = articles.filter(a => SHOW_PLAINSMAN || !a.plainsman).slice(0, 6)
+const featuredGlossary = glossary.filter(g => SHOW_PLAINSMAN || !g.plainsman).filter(g => g.body && g.body.length > 50).slice(0, 12)
+---
+<Base title="Digitalfire — Ceramic Science Reference">
+
+  <section class="py-12 text-center max-w-2xl mx-auto">
+    <h1 class="text-4xl font-semibold text-neutral-900 mb-4">Ceramic Science Reference</h1>
+    <p class="text-lg text-neutral-500 mb-8 leading-relaxed">
+      35 years of ceramic science by Tony Hansen. Materials, glazes, oxides, firing schedules, and technical articles.
+    </p>
+    <div class="flex flex-wrap justify-center gap-3">
+      <a href="https://digitalfire.pages.dev" class="rounded bg-neutral-900 px-5 py-2.5 text-sm font-medium text-white hover:bg-neutral-700 transition-colors">Open Database ↗</a>
+      <a href="/articles" class="rounded border border-neutral-300 px-5 py-2.5 text-sm font-medium text-neutral-700 hover:bg-neutral-50 transition-colors">Browse Articles</a>
+      <a href="/glossary" class="rounded border border-neutral-300 px-5 py-2.5 text-sm font-medium text-neutral-700 hover:bg-neutral-50 transition-colors">Glossary</a>
+    </div>
+  </section>
+
+  <section class="border-y border-neutral-200 bg-white py-4 -mx-4 px-4 mb-12">
+    <div class="max-w-3xl mx-auto grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+      <div><div class="text-2xl font-semibold text-neutral-900">5,200+</div><div class="text-xs text-neutral-500 mt-0.5">Materials</div></div>
+      <div><div class="text-2xl font-semibold text-neutral-900">212</div><div class="text-xs text-neutral-500 mt-0.5">Articles</div></div>
+      <div><div class="text-2xl font-semibold text-neutral-900">438</div><div class="text-xs text-neutral-500 mt-0.5">Glossary terms</div></div>
+      <div><div class="text-2xl font-semibold text-neutral-900">35+</div><div class="text-xs text-neutral-500 mt-0.5">Years of research</div></div>
+    </div>
+  </section>
+
+  <section class="mb-12">
+    <h2 class="text-sm uppercase tracking-wide text-neutral-400 mb-4">Reference Database</h2>
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+      {[
+        { href: 'https://digitalfire.pages.dev/#/materials', label: 'Materials', desc: '5,200+ ceramic materials' },
+        { href: 'https://digitalfire.pages.dev/#/oxides', label: 'Oxides', desc: 'Oxide chemistry data' },
+        { href: 'https://digitalfire.pages.dev/#/recipes', label: 'Recipes', desc: 'Glaze & clay recipes' },
+        { href: 'https://digitalfire.pages.dev/#/minerals', label: 'Minerals', desc: 'Mineral families' },
+        { href: 'https://digitalfire.pages.dev/#/temperatures', label: 'Temperatures', desc: 'Firing events timeline' },
+        { href: 'https://digitalfire.pages.dev/#/calc', label: 'Glaze Calc', desc: 'Unity formula calculator' },
+        { href: 'https://digitalfire.pages.dev/#/thermal', label: 'Thermal Exp', desc: 'COE calculator' },
+        { href: 'https://digitalfire.pages.dev/#/shelf', label: 'Recipe Matcher', desc: "What's on your shelf?" },
+      ].map(({ href, label, desc }) => (
+        <a href={href} class="rounded border border-neutral-200 bg-white px-4 py-3 hover:border-neutral-400 hover:shadow-sm transition-all">
+          <div class="font-medium text-neutral-900 text-sm">{label}</div>
+          <div class="text-xs text-neutral-400 mt-0.5">{desc}</div>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="mb-12">
+    <div class="flex items-center justify-between mb-4">
+      <h2 class="text-sm uppercase tracking-wide text-neutral-400">Technical Articles</h2>
+      <a href="/articles" class="text-xs text-neutral-500 hover:text-neutral-700">View all →</a>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {recentArticles.map((a) => (
+        <a href={`/articles/${a.id}`} class="rounded border border-neutral-200 bg-white px-4 py-3 hover:border-neutral-400 hover:shadow-sm transition-all">
+          <div class="font-medium text-neutral-900 text-sm leading-snug">{a.title}</div>
+          {a.plainsman && <span class="mt-1 inline-block text-[10px] bg-amber-100 text-amber-700 px-1.5 py-0.5 rounded">Plainsman</span>}
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="mb-12">
+    <div class="flex items-center justify-between mb-4">
+      <h2 class="text-sm uppercase tracking-wide text-neutral-400">Glossary</h2>
+      <a href="/glossary" class="text-xs text-neutral-500 hover:text-neutral-700">View all →</a>
+    </div>
+    <div class="flex flex-wrap gap-2">
+      {featuredGlossary.map((g) => (
+        <a href={`/glossary/${g.id}`} class="rounded-full border border-neutral-200 bg-white px-3 py-1 text-sm text-neutral-700 hover:border-neutral-400 hover:bg-neutral-50 transition-colors">{g.term}</a>
+      ))}
+      <a href="/glossary" class="rounded-full border border-neutral-200 bg-neutral-50 px-3 py-1 text-sm text-neutral-400 hover:text-neutral-600">+{glossary.length - 12} more →</a>
+    </div>
+  </section>
+
+  <section class="rounded border border-neutral-200 bg-white px-6 py-4 text-sm text-neutral-500">
+    <strong class="text-neutral-700">About this archive:</strong> This site preserves the ceramic science work of Tony Hansen from Digitalfire.com (1990–2026).
+    All technical content, research, and data is Tony's original work, archived to keep this invaluable resource accessible to the ceramics community.
+  </section>
+
+</Base>

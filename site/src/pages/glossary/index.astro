@@ -1,0 +1,46 @@
+---
+import Base from '../../layouts/Base.astro'
+import glossary from '../../../../app/public/data/glossary.json'
+
+const SHOW_PLAINSMAN = import.meta.env.SHOW_PLAINSMAN !== 'false'
+const filtered = glossary.filter(g => SHOW_PLAINSMAN || !g.plainsman)
+
+// Group alphabetically
+const groups: Record<string, typeof filtered> = {}
+for (const g of filtered) {
+  const letter = g.term[0].toUpperCase()
+  if (!groups[letter]) groups[letter] = []
+  groups[letter].push(g)
+}
+const letters = Object.keys(groups).sort()
+---
+<Base title="Glossary — Digitalfire">
+  <div class="max-w-3xl mx-auto">
+    <div class="mb-6">
+      <h1 class="text-2xl font-semibold text-neutral-900">Glossary</h1>
+      <p class="mt-1 text-neutral-500">{filtered.length} ceramic terms defined by Tony Hansen</p>
+    </div>
+    <!-- Alphabet nav -->
+    <div class="flex flex-wrap gap-1 mb-8">
+      {letters.map(l => (
+        <a href={`#${l}`} class="px-2 py-0.5 rounded text-sm text-neutral-500 hover:bg-neutral-100 hover:text-neutral-900">{l}</a>
+      ))}
+    </div>
+    <!-- Terms -->
+    <div class="space-y-8">
+      {letters.map(letter => (
+        <div id={letter}>
+          <h2 class="text-xs font-semibold uppercase tracking-widest text-neutral-300 mb-2 border-b border-neutral-100 pb-1">{letter}</h2>
+          <div class="space-y-1">
+            {groups[letter].map(g => (
+              <a href={`/glossary/${g.id}`} class="flex items-center justify-between rounded px-3 py-2 hover:bg-neutral-100 transition-colors">
+                <span class="text-sm text-neutral-800">{g.term}</span>
+                <span class="text-neutral-300 text-xs">→</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</Base>

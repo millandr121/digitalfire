@@ -1,0 +1,26 @@
+---
+import Base from '../../layouts/Base.astro'
+import articles from '../../../../app/public/data/articles.json'
+
+const SHOW_PLAINSMAN = import.meta.env.SHOW_PLAINSMAN !== 'false'
+const filtered = articles.filter(a => SHOW_PLAINSMAN || !a.plainsman)
+---
+<Base title="Technical Articles — Digitalfire">
+  <div class="max-w-3xl mx-auto">
+    <div class="mb-8">
+      <h1 class="text-2xl font-semibold text-neutral-900">Technical Articles</h1>
+      <p class="mt-1 text-neutral-500">{filtered.length} articles by Tony Hansen</p>
+    </div>
+    <div class="space-y-3">
+      {filtered.map((a) => (
+        <a href={`/articles/${a.id}`} class="flex items-start justify-between gap-4 rounded border border-neutral-200 bg-white px-4 py-3 hover:border-neutral-400 hover:shadow-sm transition-all">
+          <div>
+            <div class="font-medium text-neutral-900 text-sm leading-snug">{a.title}</div>
+            {a.plainsman && <span class="mt-1 inline-block text-[10px] bg-amber-100 text-amber-700 px-1.5 py-0.5 rounded">Plainsman</span>}
+          </div>
+          <span class="text-neutral-300 shrink-0">→</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</Base>

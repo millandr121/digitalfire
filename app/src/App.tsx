@@ -548,13 +548,36 @@ function OxideDetail({ o }: { o: Oxide | undefined }) {
   )
 }
 
+function findMaterial(name: string, materials: Material[]): Material | undefined {
+  const q = name.replace(/^\*/, '').trim().toLowerCase()
+  // 1. Exact match
+  let m = materials.find((x) => x.name.toLowerCase() === q)
+  if (m) return m
+  // 2. Alternate names match
+  m = materials.find((x) => (x.alternate_names || '').toLowerCase().split(/[;,]+/).map((s) => s.trim()).includes(q))
+  if (m) return m
+  // 3. Content in parentheses as canonical: "Silica 325 mesh (Silica)" → try "Silica"
+  const paren = q.match(/\(([^)]+)\)/)
+  if (paren) {
+    const inner = paren[1].trim()
+    m = materials.find((x) => x.name.toLowerCase() === inner)
+    if (m) return m
+  }
+  // 4. Prefix match: query contains material name or vice versa (short names only, min 4 chars)
+  m = materials.find((x) => {
+    const n = x.name.toLowerCase()
+    return n.length >= 4 && (q.startsWith(n) || n.startsWith(q))
+  })
+  return m
+}
+
 function blendRecipe(r: Recipe, materials: Material[]) {
   const oxideTotals: Record<string, number> = {}
   let totalWeight = 0
   for (const line of r.materials) {
     const amt = line.amount ?? line.percent
     if (!amt || amt <= 0) continue
-    const mat = materials.find((m) => m.name.toLowerCase() === line.material.toLowerCase())
+    const mat = findMaterial(line.material, materials)
     if (!mat) continue
     totalWeight += amt
     for (const row of mat.analysis) {
@@ -597,7 +620,7 @@ function recipeToStullPoint(r: Recipe, materials: Material[]): StullPoint | null
 
 function RecipeDetail({ r, ds }: { r: Recipe | undefined; ds: Dataset }) {
   if (!r) return <NotFound what="Recipe" />
-  const findMat = (name: string) => ds.materials.find((m) => m.name.toLowerCase() === name.toLowerCase())
+  const findMat = (name: string) => findMaterial(name, ds.materials)
   const blend = useMemo(() => blendRecipe(r, ds.materials), [r, ds.materials])
 
   // All recipe Stull points for context (computed lazily, only when blend is available)

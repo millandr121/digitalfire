@@ -4225,21 +4225,6 @@
         "material": "Silica",
         "amount": 14.98,
         "percent": null
-      },
-      {
-        "material": "11",
-        "amount": 94.64,
-        "percent": 87.94
-      },
-      {
-        "material": "10",
-        "amount": 94.66,
-        "percent": 88.03
-      },
-      {
-        "material": "12",
-        "amount": 94.71,
-        "percent": 87.92
       }
     ],
     "source": "insight-live.com (public share) via digitalfire.com",
@@ -4637,11 +4622,6 @@
         "percent": null
       },
       {
-        "material": "10",
-        "amount": 93.83,
-        "percent": 93.54
-      },
-      {
         "material": "KT #1-4 Ball Clay",
         "amount": 50.0,
         "percent": null
@@ -4655,16 +4635,6 @@
         "material": "Nepheline Syenite",
         "amount": 10.0,
         "percent": null
-      },
-      {
-        "material": "12",
-        "amount": 94.57,
-        "percent": null
-      },
-      {
-        "material": "10",
-        "amount": 94.69,
-        "percent": 94.85
       },
       {
         "material": "Ferro Frit 3195",
@@ -4930,16 +4900,6 @@
       {
         "material": "Custer Feldspar",
         "amount": 10.0,
-        "percent": null
-      },
-      {
-        "material": "12",
-        "amount": 92.86,
-        "percent": 88.99
-      },
-      {
-        "material": "10",
-        "amount": 92.59,
         "percent": null
       },
       {
@@ -7314,16 +7274,6 @@
         "percent": null
       },
       {
-        "material": "12",
-        "amount": 93.14,
-        "percent": 84.58
-      },
-      {
-        "material": "10",
-        "amount": 92.1,
-        "percent": 84.77
-      },
-      {
         "material": "Nepheline Syenite",
         "amount": 50.0,
         "percent": null
@@ -8377,16 +8327,6 @@
         "percent": 24.75
       },
       {
-        "material": "12",
-        "amount": 95.27,
-        "percent": 88.41
-      },
-      {
-        "material": "10",
-        "amount": 95.26,
-        "percent": 88.74
-      },
-      {
         "material": "M-23 Ball Clay",
         "amount": 25.0,
         "percent": 24.81
@@ -8405,16 +8345,6 @@
         "material": "Pioneer Kaolin",
         "amount": 23.0,
         "percent": 22.83
-      },
-      {
-        "material": "12",
-        "amount": 95.7,
-        "percent": 88.03
-      },
-      {
-        "material": "10",
-        "amount": 95.35,
-        "percent": 88.82
       },
       {
         "material": "KT #1-4 Ball Clay",
@@ -8460,16 +8390,6 @@
         "material": "C-Red Clay",
         "amount": 2.0,
         "percent": 1.96
-      },
-      {
-        "material": "12",
-        "amount": 96.84,
-        "percent": 89.12
-      },
-      {
-        "material": "10",
-        "amount": 96.47,
-        "percent": 89.09
       }
     ],
     "source": "insight-live.com (public share) via digitalfire.com",
@@ -8634,16 +8554,6 @@
         "percent": null
       },
       {
-        "material": "12",
-        "amount": 93.9,
-        "percent": 86.48
-      },
-      {
-        "material": "10",
-        "amount": 93.17,
-        "percent": 86.61
-      },
-      {
         "material": "New Foundry Hill Creme",
         "amount": 65.0,
         "percent": null
@@ -8669,11 +8579,6 @@
         "percent": 13.04
       },
       {
-        "material": "10",
-        "amount": 94.32,
-        "percent": 87.82
-      },
-      {
         "material": "Foundry Hill Creme",
         "amount": 65.0,
         "percent": 56.52
@@ -8687,11 +8592,6 @@
         "material": "Kyanite",
         "amount": 15.0,
         "percent": 13.04
-      },
-      {
-        "material": "10",
-        "amount": 94.83,
-        "percent": 89.32
       }
     ],
     "source": "insight-live.com (public share) via digitalfire.com",
@@ -8741,16 +8641,6 @@
         "material": "*Mulcoa Grog",
         "amount": 10.0,
         "percent": 8.77
-      },
-      {
-        "material": "10",
-        "amount": 93.8,
-        "percent": 88.34
-      },
-      {
-        "material": "12",
-        "amount": 93.91,
-        "percent": 88.62
       },
       {
         "material": "Pyrax",
@@ -8958,11 +8848,6 @@
         "material": "Dolomite",
         "amount": 2.5,
         "percent": null
-      },
-      {
-        "material": "10",
-        "amount": 95.81,
-        "percent": 94.1
       }
     ],
     "source": "insight-live.com (public share) via digitalfire.com",
@@ -9137,11 +9022,6 @@
         "percent": null
       },
       {
-        "material": "10",
-        "amount": 95.79,
-        "percent": 93.78
-      },
-      {
         "material": "Nepheline Syenite",
         "amount": 20.0,
         "percent": null
@@ -9190,26 +9070,6 @@
         "material": "Zircopax",
         "amount": 20.0,
         "percent": 19.05
-      },
-      {
-        "material": "10",
-        "amount": 93.36,
-        "percent": 88.21
-      },
-      {
-        "material": "11",
-        "amount": 93.4,
-        "percent": 89.07
-      },
-      {
-        "material": "12",
-        "amount": 93.32,
-        "percent": 89.67
-      },
-      {
-        "material": "13",
-        "amount": 93.57,
-        "percent": 90.81
       }
     ],
     "source": "insight-live.com (public share) via digitalfire.com",
@@ -9289,16 +9149,6 @@
         "material": "Nepheline Syenite",
         "amount": 10.0,
         "percent": null
-      },
-      {
-        "material": "12",
-        "amount": 94.57,
-        "percent": null
-      },
-      {
-        "material": "10",
-        "amount": 94.69,
-        "percent": 94.85
       }
     ],
     "source": "insight-live.com (public share) via digitalfire.com",
@@ -9323,11 +9173,6 @@
         "material": "Silica",
         "amount": 30.0,
         "percent": 21.09
-      },
-      {
-        "material": "Water",
-        "amount": 41.58,
-        "percent": 29.24
       },
       {
         "material": "Calcined Alumina",
@@ -9367,16 +9212,6 @@
         "material": "Kyanite",
         "amount": 25.0,
         "percent": 20.16
-      },
-      {
-        "material": "10",
-        "amount": 94.75,
-        "percent": 90.3
-      },
-      {
-        "material": "12",
-        "amount": 95.05,
-        "percent": 91.35
       },
       {
         "material": "Kaopaque Kaolin",
@@ -9427,11 +9262,6 @@
         "material": "Silica",
         "amount": 30.0,
         "percent": 21.09
-      },
-      {
-        "material": "Water",
-        "amount": 41.58,
-        "percent": 29.24
       }
     ],
     "source": "insight-live.com (public share) via digitalfire.com",
@@ -9478,11 +9308,6 @@
         "percent": 22.6
       },
       {
-        "material": "Water",
-        "amount": 200.0,
-        "percent": 40.0
-      },
-      {
         "material": "Dettol",
         "amount": 1.0,
         "percent": 0.2
@@ -9508,16 +9333,6 @@
         "percent": 16.81
       },
       {
-        "material": "12",
-        "amount": 94.02,
-        "percent": 89.13
-      },
-      {
-        "material": "10",
-        "amount": 94.04,
-        "percent": 89.29
-      },
-      {
         "material": "Pioneer Kaolin",
         "amount": 35.0,
         "percent": 24.61
@@ -9533,11 +9348,6 @@
         "percent": 21.09
       },
       {
-        "material": "Water",
-        "amount": 41.58,
-        "percent": 29.24
-      },
-      {
         "material": "Calcined Alumina",
         "amount": 50.0,
         "percent": null
@@ -9546,16 +9356,6 @@
         "material": "EPK",
         "amount": 50.0,
         "percent": null
-      },
-      {
-        "material": "10",
-        "amount": 94.91,
-        "percent": 91.95
-      },
-      {
-        "material": "12",
-        "amount": 94.83,
-        "percent": 91.06
       }
     ],
     "source": "insight-live.com (public share) via digitalfire.com",
@@ -10113,26 +9913,6 @@
     "name": "What is the Secret Behind the Magic Performance of Craft Crank Sculpture Body",
     "materials": [
       {
-        "material": "10",
-        "amount": 94.81,
-        "percent": 91.61
-      },
-      {
-        "material": "12",
-        "amount": 95.05,
-        "percent": 92.09
-      },
-      {
-        "material": "10",
-        "amount": 95.01,
-        "percent": 91.89
-      },
-      {
-        "material": "12",
-        "amount": 95.12,
-        "percent": 92.49
-      },
-      {
         "material": "OM4 Ball Clay",
         "amount": 42.0,
         "percent": null
@@ -10151,11 +9931,6 @@
         "material": "*F-65 Silica Sand",
         "amount": 20.0,
         "percent": null
-      },
-      {
-        "material": "10",
-        "amount": 94.77,
-        "percent": 90.78
       }
     ],
     "source": "insight-live.com (public share) via digitalfire.com",
@@ -10197,16 +9972,6 @@
         "percent": null
       },
       {
-        "material": "10",
-        "amount": 93.23,
-        "percent": 85.7
-      },
-      {
-        "material": "12",
-        "amount": 93.29,
-        "percent": 85.3
-      },
-      {
         "material": "Nepheline Syenite",
         "amount": 15.0,
         "percent": 16.76
@@ -10232,16 +9997,6 @@
         "percent": 11.17
       },
       {
-        "material": "10",
-        "amount": 94.16,
-        "percent": 87.71
-      },
-      {
-        "material": "12",
-        "amount": 94.18,
-        "percent": 86.36
-      },
-      {
         "material": "Nepheline Syenite",
         "amount": 10.0,
         "percent": null
@@ -10265,11 +10020,6 @@
         "material": "Mason 6600",
         "amount": 10.0,
         "percent": null
-      },
-      {
-        "material": "12",
-        "amount": 92.77,
-        "percent": 85.43
       }
     ],
     "source": "insight-live.com (public share) via digitalfire.com",
@@ -10284,21 +10034,6 @@
         "material": "M2 ST Code # P6385 Batch # -2 Notes M2 is a mid temperature moderate plasticity smooth clay mined in Montana. It is used pure by a number of customers. Fired bars show it from cone 04 to 6 (bottom upward). Produced March 14/16 240 boxes pugged PRA stiffness for J.B.K. in Calgary, plus 250 boxes pugged ST stiffness for a customer of Ceramics Canada. Production has recorded a moisture content of 18.10% for the PRA portion of this run. Bar specimen #6 (fired to cone 6.0), has tiny bubbles beginning to form on surface of bar, beginning signs of bloating. Pictures M2 6385 vs M350 6396 M2 cylinder at cone 6 with AlbertaSlip base Overfired, on the edge of bloating. But still firing very red. Alternate Code Number:4056 Testdata SHAB - Shrinkage/Absorption DLEN FLEN FWT BWT CONE TEMP DSHR FSHR ABS 693.3588.9041.5442.446.0bloat6.7%4.8%2.2% 493.4088.4342.6043.294.06.6%5.3%1.6% 293.4189.0842.3843.721.96.6%4.6%3.2% 993.2790.341.544.14-2.06.7%3.2%6.4% 893.2990.7342.0645.17-4.06.7%2.7%7.4% SOLU - Soluble Salts FIRE 1vlight DFAC - Drying Factor DFAC SOLD 1D531-Nil CLWC - Clay Water Content - Powder, Plastic WPOW WPUG POW% PUG% 11.219.68 SIEV - Sieve Analysis 35-325 Wet TOT 48M 65M 100M 1100.626.487.7 LDW - LOI/Density/Water Content WWGT DWGT H2O LOI DENS 120.4716.4019.9% XML (to paste into Insight) Born: 2016-03-24, Modified: 2017-10-16 12:06:23",
         "amount": 6385.0,
         "percent": -2.0
-      },
-      {
-        "material": "11",
-        "amount": 93.5,
-        "percent": 90.18
-      },
-      {
-        "material": "10",
-        "amount": 93.42,
-        "percent": 90.69
-      },
-      {
-        "material": "12",
-        "amount": 93.36,
-        "percent": null
       },
       {
         "material": "*BGP",
@@ -10344,16 +10079,6 @@
     "name": "H440 body development",
     "materials": [
       {
-        "material": "11",
-        "amount": 93.09,
-        "percent": 88.76
-      },
-      {
-        "material": "10",
-        "amount": 93.16,
-        "percent": 88.82
-      },
-      {
         "material": "Saint Rose Red",
         "amount": 2.0,
         "percent": null
@@ -10372,16 +10097,6 @@
         "material": "Bentonite",
         "amount": 2.0,
         "percent": 50.0
-      },
-      {
-        "material": "12",
-        "amount": 92.77,
-        "percent": 89.08
-      },
-      {
-        "material": "10",
-        "amount": 92.67,
-        "percent": 88.25
       },
       {
         "material": "C-Red Clay",
@@ -10627,16 +10342,6 @@
         "percent": null
       },
       {
-        "material": "12",
-        "amount": 93.09,
-        "percent": 86.73
-      },
-      {
-        "material": "10",
-        "amount": 93.65,
-        "percent": 87.42
-      },
-      {
         "material": "*3D 325",
         "amount": 100.0,
         "percent": null
@@ -10734,11 +10439,6 @@
         "percent": null
       },
       {
-        "material": "Water",
-        "amount": 44.0,
-        "percent": null
-      },
-      {
         "material": "Redart",
         "amount": 90.0,
         "percent": null
@@ -10747,31 +10447,6 @@
         "material": "KT #1-4 Ball Clay",
         "amount": 10.0,
         "percent": null
-      },
-      {
-        "material": "Water",
-        "amount": 44.0,
-        "percent": null
-      },
-      {
-        "material": "12",
-        "amount": 94.33,
-        "percent": 88.51
-      },
-      {
-        "material": "10",
-        "amount": 94.23,
-        "percent": 87.97
-      },
-      {
-        "material": "11",
-        "amount": 94.15,
-        "percent": 90.72
-      },
-      {
-        "material": "13",
-        "amount": 94.42,
-        "percent": 93.89
       },
       {
         "material": "Redart",
@@ -10836,58 +10511,7 @@
     "id": "il-RNXr3diRJt",
     "code": "L4208D",
     "name": "Comparison of various Plainsman clay materials with +200mesh contaminants removed",
-    "materials": [
-      {
-        "material": "12",
-        "amount": 93.77,
-        "percent": 87.83
-      },
-      {
-        "material": "10",
-        "amount": 93.65,
-        "percent": 87.95
-      },
-      {
-        "material": "12",
-        "amount": 93.44,
-        "percent": 87.39
-      },
-      {
-        "material": "10",
-        "amount": 93.26,
-        "percent": 87.31
-      },
-      {
-        "material": "10",
-        "amount": 94.53,
-        "percent": 88.81
-      },
-      {
-        "material": "12",
-        "amount": 94.33,
-        "percent": 89.12
-      },
-      {
-        "material": "12",
-        "amount": 91.74,
-        "percent": 87.58
-      },
-      {
-        "material": "10",
-        "amount": 91.63,
-        "percent": 86.32
-      },
-      {
-        "material": "12",
-        "amount": 93.71,
-        "percent": 84.83
-      },
-      {
-        "material": "10",
-        "amount": 93.66,
-        "percent": 84.96
-      }
-    ],
+    "materials": [],
     "source": "insight-live.com (public share) via digitalfire.com",
     "source_url": "https://digitalfire.com/recipe/l4208d"
   },
@@ -11099,16 +10723,6 @@
         "percent": null
       },
       {
-        "material": "55",
-        "amount": 94.25,
-        "percent": 91.33
-      },
-      {
-        "material": "44",
-        "amount": 94.35,
-        "percent": 91.15
-      },
-      {
         "material": "New Zealand Kaolin",
         "amount": 40.0,
         "percent": null
@@ -11262,16 +10876,6 @@
         "percent": 1.96
       },
       {
-        "material": "10",
-        "amount": 95.4,
-        "percent": 87.7
-      },
-      {
-        "material": "12",
-        "amount": 95.3,
-        "percent": 87.9
-      },
-      {
         "material": "Pioneer kaolin",
         "amount": 72.0,
         "percent": 72.36
@@ -11285,16 +10889,6 @@
         "material": "Bentonite",
         "amount": 3.5,
         "percent": 3.52
-      },
-      {
-        "material": "10",
-        "amount": 95.5,
-        "percent": 88.64
-      },
-      {
-        "material": "11",
-        "amount": 95.5,
-        "percent": 88.64
       },
       {
         "material": "Pioneer kaolin",
@@ -11315,16 +10909,6 @@
         "material": "Dolomite",
         "amount": 20.0,
         "percent": 19.42
-      },
-      {
-        "material": "10",
-        "amount": 94.65,
-        "percent": 92.2
-      },
-      {
-        "material": "12",
-        "amount": 94.9,
-        "percent": 93.0
       }
     ],
     "source": "insight-live.com (public share) via digitalfire.com",
@@ -11436,26 +11020,6 @@
         "material": "OM4 BALL CLAY (OM #4 Ball Clay)",
         "amount": 8.0,
         "percent": 50.0
-      },
-      {
-        "material": "11",
-        "amount": 93.89,
-        "percent": 88.82
-      },
-      {
-        "material": "12",
-        "amount": 93.93,
-        "percent": 88.9
-      },
-      {
-        "material": "10",
-        "amount": 93.88,
-        "percent": 88.85
-      },
-      {
-        "material": "88",
-        "amount": 93.81,
-        "percent": 92.6
       }
     ],
     "source": "insight-live.com (public share) via digitalfire.com",

@@ -93512,5 +93512,302 @@
       "Type": "Flux / Calcium source"
     },
     "source": "Published standard analysis (multiple sources)"
+  },
+  {
+    "id": "red-iron-oxide",
+    "name": "Red Iron Oxide",
+    "alternate_names": "Iron Oxide Red; Fe2O3",
+    "description": null,
+    "analysis": [
+      {
+        "oxide": "Fe2O3",
+        "analysis_pct": 95.0,
+        "formula": null,
+        "tolerance": null
+      }
+    ],
+    "oxide_weight": null,
+    "formula_weight": null,
+    "properties": {
+      "Type": "Colorant"
+    },
+    "source": "Published standard analysis"
+  },
+  {
+    "id": "om4-ball-clay",
+    "name": "OM4 Ball Clay",
+    "alternate_names": "OM-4 Ball Clay; OM #4 Ball Clay; Old Mines #4",
+    "description": null,
+    "analysis": [
+      {
+        "oxide": "SiO2",
+        "analysis_pct": 51.7,
+        "formula": null,
+        "tolerance": null
+      },
+      {
+        "oxide": "Al2O3",
+        "analysis_pct": 30.1,
+        "formula": null,
+        "tolerance": null
+      },
+      {
+        "oxide": "TiO2",
+        "analysis_pct": 1.7,
+        "formula": null,
+        "tolerance": null
+      },
+      {
+        "oxide": "Fe2O3",
+        "analysis_pct": 0.9,
+        "formula": null,
+        "tolerance": null
+      },
+      {
+        "oxide": "CaO",
+        "analysis_pct": 0.2,
+        "formula": null,
+        "tolerance": null
+      },
+      {
+        "oxide": "MgO",
+        "analysis_pct": 0.3,
+        "formula": null,
+        "tolerance": null
+      },
+      {
+        "oxide": "K2O",
+        "analysis_pct": 0.7,
+        "formula": null,
+        "tolerance": null
+      },
+      {
+        "oxide": "Na2O",
+        "analysis_pct": 0.2,
+        "formula": null,
+        "tolerance": null
+      }
+    ],
+    "oxide_weight": null,
+    "formula_weight": null,
+    "properties": {
+      "Type": "Ball Clay",
+      "Plasticity": "High"
+    },
+    "source": "Published standard analysis (Old Hickory Clay)"
+  },
+  {
+    "id": "soda-ash",
+    "name": "Soda Ash",
+    "alternate_names": "Sodium Carbonate; Na2CO3",
+    "description": null,
+    "analysis": [
+      {
+        "oxide": "Na2O",
+        "analysis_pct": 58.5,
+        "formula": null,
+        "tolerance": null
+      }
+    ],
+    "oxide_weight": null,
+    "formula_weight": null,
+    "properties": {
+      "Type": "Flux / Sodium source"
+    },
+    "source": "Published standard analysis"
+  },
+  {
+    "id": "magnesium-carbonate",
+    "name": "Magnesium Carbonate",
+    "alternate_names": "MgCO3; Magnesite",
+    "description": null,
+    "analysis": [
+      {
+        "oxide": "MgO",
+        "analysis_pct": 47.6,
+        "formula": null,
+        "tolerance": null
+      }
+    ],
+    "oxide_weight": null,
+    "formula_weight": null,
+    "properties": {
+      "Type": "Flux / Magnesium source"
+    },
+    "source": "Published standard analysis"
+  },
+  {
+    "id": "new-zealand-kaolin",
+    "name": "New Zealand Kaolin",
+    "alternate_names": "NZ Kaolin; New Zealand Halloysite Kaolin",
+    "description": null,
+    "analysis": [
+      {
+        "oxide": "SiO2",
+        "analysis_pct": 47.5,
+        "formula": null,
+        "tolerance": null
+      },
+      {
+        "oxide": "Al2O3",
+        "analysis_pct": 37.5,
+        "formula": null,
+        "tolerance": null
+      },
+      {
+        "oxide": "TiO2",
+        "analysis_pct": 0.1,
+        "formula": null,
+        "tolerance": null
+      },
+      {
+        "oxide": "Fe2O3",
+        "analysis_pct": 0.2,
+        "formula": null,
+        "tolerance": null
+      },
+      {
+        "oxide": "CaO",
+        "analysis_pct": 0.1,
+        "formula": null,
+        "tolerance": null
+      },
+      {
+        "oxide": "MgO",
+        "analysis_pct": 0.1,
+        "formula": null,
+        "tolerance": null
+      },
+      {
+        "oxide": "K2O",
+        "analysis_pct": 0.2,
+        "formula": null,
+        "tolerance": null
+      },
+      {
+        "oxide": "Na2O",
+        "analysis_pct": 0.1,
+        "formula": null,
+        "tolerance": null
+      }
+    ],
+    "oxide_weight": null,
+    "formula_weight": null,
+    "properties": {
+      "Type": "Kaolin / Primary Clay"
+    },
+    "source": "Published standard analysis"
+  },
+  {
+    "id": "veegum-t",
+    "name": "VeeGum T",
+    "alternate_names": "VeeGum; Veegum T",
+    "description": null,
+    "analysis": [
+      {
+        "oxide": "SiO2",
+        "analysis_pct": 60.0,
+        "formula": null,
+        "tolerance": null
+      },
+      {
+        "oxide": "Al2O3",
+        "analysis_pct": 4.0,
+        "formula": null,
+        "tolerance": null
+      },
+      {
+        "oxide": "MgO",
+        "analysis_pct": 23.0,
+        "formula": null,
+        "tolerance": null
+      },
+      {
+        "oxide": "Na2O",
+        "analysis_pct": 3.0,
+        "formula": null,
+        "tolerance": null
+      },
+      {
+        "oxide": "CaO",
+        "analysis_pct": 1.0,
+        "formula": null,
+        "tolerance": null
+      },
+      {
+        "oxide": "Fe2O3",
+        "analysis_pct": 1.5,
+        "formula": null,
+        "tolerance": null
+      }
+    ],
+    "oxide_weight": null,
+    "formula_weight": null,
+    "properties": {
+      "Type": "Hectorite / Binder"
+    },
+    "source": "Published approximate analysis (Vanderbilt Minerals)"
+  },
+  {
+    "id": "calcined-ravenscrag-slip",
+    "name": "Calcined Ravenscrag Slip",
+    "alternate_names": "Ravenscrag Slip Calcined",
+    "description": null,
+    "analysis": [
+      {
+        "oxide": "SiO2",
+        "analysis_pct": 67.3,
+        "formula": null,
+        "tolerance": null
+      },
+      {
+        "oxide": "Al2O3",
+        "analysis_pct": 14.7,
+        "formula": null,
+        "tolerance": null
+      },
+      {
+        "oxide": "TiO2",
+        "analysis_pct": 0.4,
+        "formula": null,
+        "tolerance": null
+      },
+      {
+        "oxide": "Fe2O3",
+        "analysis_pct": 0.8,
+        "formula": null,
+        "tolerance": null
+      },
+      {
+        "oxide": "CaO",
+        "analysis_pct": 4.6,
+        "formula": null,
+        "tolerance": null
+      },
+      {
+        "oxide": "MgO",
+        "analysis_pct": 3.6,
+        "formula": null,
+        "tolerance": null
+      },
+      {
+        "oxide": "K2O",
+        "analysis_pct": 4.2,
+        "formula": null,
+        "tolerance": null
+      },
+      {
+        "oxide": "Na2O",
+        "analysis_pct": 1.2,
+        "formula": null,
+        "tolerance": null
+      }
+    ],
+    "oxide_weight": null,
+    "formula_weight": null,
+    "properties": {
+      "Type": "Calcined Slip Clay"
+    },
+    "source": "Published standard analysis (Plainsman Clays)"
   }
 ]

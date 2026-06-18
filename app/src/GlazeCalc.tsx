@@ -222,6 +222,26 @@ export function GlazeCalc({ materials, recipes }: { materials: Material[]; oxide
           blend.find((r) => r.oxide === 'Al2O3')!.unity!).toFixed(2)
       : null
 
+  function clearCalc() {
+    setLines([
+      { materialId: '', amount: '' },
+      { materialId: '', amount: '' },
+      { materialId: '', amount: '' },
+    ])
+    setName('')
+  }
+
+  function saveToNotebook() {
+    addToNotebook({
+      id: `calc-${Date.now()}`,
+      type: 'calc',
+      label: name || 'Unnamed Calculation',
+      note: '',
+      data: { blend, fluxSum, name, lines },
+    })
+    clearCalc()
+  }
+
   function setLine(i: number, field: keyof Line, value: string) {
     setLines((prev) => prev.map((l, j) => (j === i ? { ...l, [field]: value } : l)))
   }
@@ -299,17 +319,17 @@ export function GlazeCalc({ materials, recipes }: { materials: Material[]; oxide
       {/* Results */}
       {blend.length > 0 && (
         <div className="space-y-4">
-          {/* Save to notebook */}
-          <div className="flex justify-end">
+          {/* Save / Clear */}
+          <div className="flex items-center justify-between">
             <button
-              onClick={() => addToNotebook({
-                id: `calc-${Date.now()}`,
-                type: 'calc',
-                label: name || 'Unnamed Recipe',
-                note: '',
-                data: { blend, fluxSum, name, lines },
-              })}
-              className="rounded border border-neutral-300 bg-white px-3 py-1.5 text-xs font-medium text-neutral-600 hover:border-neutral-500 hover:text-neutral-800"
+              onClick={clearCalc}
+              className="text-xs text-neutral-400 hover:text-neutral-600"
+            >
+              Clear
+            </button>
+            <button
+              onClick={saveToNotebook}
+              className="rounded bg-neutral-900 px-3 py-1.5 text-xs font-medium text-white hover:bg-neutral-700"
             >
               + Save to notebook
             </button>

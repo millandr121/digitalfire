@@ -1,12 +1,11 @@
 import { useEffect, useMemo, useState, type ReactNode } from 'react'
 import type MiniSearch from 'minisearch'
-import { buildSearch, downloadJSON, loadDataset, saveMaterial, type Dataset, type SearchDoc } from './store'
+import { buildSearch, downloadJSON, loadDataset, type Dataset, type SearchDoc } from './store'
 import type { Material, Mineral, Oxide, Recipe, Temperature } from './types'
 import { AnalysisChart } from './components/AnalysisChart'
 import { StullChart, type StullPoint } from './components/StullChart'
 import { UnityFormulaViz } from './components/UnityFormulaViz'
 import { FiringTimeline, parseTempEvents } from './components/FiringTimeline'
-import { MaterialForm } from './MaterialForm'
 import { GlazeCalc } from './GlazeCalc'
 import { ThermalCalc } from './ThermalCalc'
 import { Admin } from './Admin'
@@ -55,12 +54,6 @@ export default function App() {
 
   const search = useMemo(() => (ds ? buildSearch(ds) : null), [ds])
 
-  const onSaveMaterial = async (m: Material) => {
-    await saveMaterial(m)
-    setDs(await loadDataset())
-    go(`#/material/${encodeURIComponent(m.id)}`)
-  }
-
   if (error) return <Centered>Failed to load data: {error}</Centered>
   if (!ds) return <Centered>Loading the archive…</Centered>
 
@@ -73,7 +66,7 @@ export default function App() {
           {query.trim() && search ? (
             <SearchView search={search} query={query} onPick={() => setQuery('')} />
           ) : (
-            <Routed hash={hash} ds={ds} onSaveMaterial={onSaveMaterial} />
+            <Routed hash={hash} ds={ds} />
           )}
         </main>
         <footer className="border-t border-neutral-200 px-4 py-3 text-center text-xs text-neutral-500">
@@ -243,13 +236,11 @@ function SearchView({
 function Routed({
   hash,
   ds,
-  onSaveMaterial,
 }: {
   hash: string
   ds: Dataset
-  onSaveMaterial: (m: Material) => void
 }) {
-  const [view, a, b] = parseHash(hash)
+  const [view, a] = parseHash(hash)
   if (view === 'admin') return <Admin />
   switch (view || 'materials') {
     case 'material':
@@ -275,21 +266,7 @@ function Routed({
     case 'temperature':
       return <TemperatureDetail t={ds.temperatures.find((x) => x.id === a)} />
     case 'new':
-      if (a === 'material')
-        return <MaterialForm oxides={ds.oxides} onSave={onSaveMaterial} onCancel={() => go('#/materials')} />
-      return <MaterialList items={ds.materials} />
     case 'edit':
-      if (a === 'material') {
-        const m = ds.materials.find((x) => x.id === b)
-        return (
-          <MaterialForm
-            initial={m}
-            oxides={ds.oxides}
-            onSave={onSaveMaterial}
-            onCancel={() => go(m ? `#/material/${encodeURIComponent(m.id)}` : '#/materials')}
-          />
-        )
-      }
       return <MaterialList items={ds.materials} />
     default:
       return <MaterialList items={ds.materials} />
@@ -348,7 +325,6 @@ function MaterialList({ items }: { items: Material[] }) {
         total={items.length}
         filter={filter}
         setFilter={setFilter}
-        onNew={() => go('#/new/material')}
       />
       <ul className="divide-y divide-neutral-100 overflow-hidden rounded border border-neutral-200">
         {filtered.slice(0, 400).map((m) => (
@@ -496,12 +472,6 @@ function MaterialDetail({ m, ds }: { m: Material | undefined; ds: Dataset }) {
               label={m.name}
               data={{ analysis: m.analysis, alternate_names: m.alternate_names }}
             />
-            <button
-              onClick={() => go(`#/edit/material/${encodeURIComponent(m.id)}`)}
-              className="shrink-0 rounded border border-neutral-300 px-3 py-1 text-sm text-neutral-700 hover:bg-neutral-200"
-            >
-              Edit
-            </button>
           </div>
         </div>
         {m.alternate_names && <p className="text-sm text-neutral-500">a.k.a. {m.alternate_names}</p>}

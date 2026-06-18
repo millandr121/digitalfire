@@ -3,6 +3,7 @@ import type { Material, Oxide, Recipe } from './types'
 import { analysisToFormula, FLUX_OXIDES, molecularWeight } from './chem'
 import { StullChart } from './components/StullChart'
 import { UnityFormulaViz } from './components/UnityFormulaViz'
+import { addToNotebook } from './notebook'
 
 // Typical Cone 6 limit ranges for reference (Digitalfire-style guidance)
 const CONE6_LIMITS: Record<string, [number, number]> = {
@@ -298,6 +299,21 @@ export function GlazeCalc({ materials, recipes }: { materials: Material[]; oxide
       {/* Results */}
       {blend.length > 0 && (
         <div className="space-y-4">
+          {/* Save to notebook */}
+          <div className="flex justify-end">
+            <button
+              onClick={() => addToNotebook({
+                id: `calc-${Date.now()}`,
+                type: 'calc',
+                label: name || 'Unnamed Recipe',
+                note: '',
+                data: { blend, fluxSum, name, lines },
+              })}
+              className="rounded border border-neutral-300 bg-white px-3 py-1.5 text-xs font-medium text-neutral-600 hover:border-neutral-500 hover:text-neutral-800"
+            >
+              + Save to notebook
+            </button>
+          </div>
           {/* Summary stats */}
           <div className="flex flex-wrap gap-4 text-sm">
             <Stat label="Flux sum" value={fluxSum.toFixed(3)} ideal="1.000" />

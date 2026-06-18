@@ -10,6 +10,10 @@ import { MaterialForm } from './MaterialForm'
 import { GlazeCalc } from './GlazeCalc'
 import { ThermalCalc } from './ThermalCalc'
 import { analysisToFormula, FLUX_OXIDES } from './chem'
+import { NotebookPanel } from './components/NotebookPanel'
+import { PrintReport } from './components/PrintReport'
+import { AddToNotebook } from './components/AddToNotebook'
+import { loadNotebook } from './notebook'
 
 function useHash() {
   const [hash, setHash] = useState(() => window.location.hash || '#/')
@@ -35,6 +39,14 @@ export default function App() {
   const [error, setError] = useState<string | null>(null)
   const [query, setQuery] = useState('')
   const hash = useHash()
+  const [notebookOpen, setNotebookOpen] = useState(false)
+  const [notebookCount, setNotebookCount] = useState(() => loadNotebook().length)
+
+  useEffect(() => {
+    const handler = () => setNotebookCount(loadNotebook().length)
+    window.addEventListener('notebook-changed', handler)
+    return () => window.removeEventListener('notebook-changed', handler)
+  }, [])
 
   useEffect(() => {
     loadDataset().then(setDs).catch((e) => setError(String(e)))
@@ -52,20 +64,36 @@ export default function App() {
   if (!ds) return <Centered>Loading the archive…</Centered>
 
   return (
-    <div className="flex min-h-full flex-col">
-      <Header hash={hash} query={query} setQuery={setQuery} ds={ds} />
-      <main className="mx-auto w-full max-w-5xl flex-1 px-4 py-6">
-        {query.trim() && search ? (
-          <SearchView search={search} query={query} onPick={() => setQuery('')} />
-        ) : (
-          <Routed hash={hash} ds={ds} onSaveMaterial={onSaveMaterial} />
+    <>
+      <PrintReport />
+      <div className="flex min-h-full flex-col">
+        <Header hash={hash} query={query} setQuery={setQuery} ds={ds} />
+        <main className="mx-auto w-full max-w-5xl flex-1 px-4 py-6">
+          {query.trim() && search ? (
+            <SearchView search={search} query={query} onPick={() => setQuery('')} />
+          ) : (
+            <Routed hash={hash} ds={ds} onSaveMaterial={onSaveMaterial} />
+          )}
+        </main>
+        <footer className="border-t border-neutral-200 px-4 py-3 text-center text-xs text-neutral-500">
+          {ds.materials.length} materials · {ds.oxides.length} oxides · {ds.recipes.length} recipes · {ds.minerals.length} minerals · {ds.temperatures.length} temps ·{' '}
+          factual data from digitalfire.com (Tony Hansen) — local archive
+        </footer>
+      </div>
+      <button
+        onClick={() => setNotebookOpen(true)}
+        className="fixed bottom-6 right-6 z-40 flex items-center gap-2 rounded-full bg-neutral-900 px-4 py-2.5 text-sm font-medium text-white shadow-lg hover:bg-neutral-700 print:hidden"
+      >
+        <span>📋</span>
+        <span>Notebook</span>
+        {notebookCount > 0 && (
+          <span className="rounded-full bg-white px-1.5 py-0.5 text-xs font-semibold text-neutral-900">
+            {notebookCount}
+          </span>
         )}
-      </main>
-      <footer className="border-t border-neutral-200 px-4 py-3 text-center text-xs text-neutral-500">
-        {ds.materials.length} materials · {ds.oxides.length} oxides · {ds.recipes.length} recipes · {ds.minerals.length} minerals · {ds.temperatures.length} temps ·{' '}
-        factual data from digitalfire.com (Tony Hansen) — local archive
-      </footer>
-    </div>
+      </button>
+      {notebookOpen && <NotebookPanel onClose={() => setNotebookOpen(false)} />}
+    </>
   )
 }
 
@@ -459,12 +487,20 @@ function MaterialDetail({ m, ds }: { m: Material | undefined; ds: Dataset }) {
         <BackLink to="#/materials" label="Materials" />
         <div className="mt-1 flex items-start justify-between gap-3">
           <h1 className="text-2xl font-semibold text-neutral-900">{m.name}</h1>
-          <button
-            onClick={() => go(`#/edit/material/${encodeURIComponent(m.id)}`)}
-            className="shrink-0 rounded border border-neutral-300 px-3 py-1 text-sm text-neutral-700 hover:bg-neutral-200"
-          >
-            Edit
-          </button>
+          <div className="flex items-center gap-2">
+            <AddToNotebook
+              id={m.id}
+              type="material"
+              label={m.name}
+              data={{ analysis: m.analysis, alternate_names: m.alternate_names }}
+            />
+            <button
+              onClick={() => go(`#/edit/material/${encodeURIComponent(m.id)}`)}
+              className="shrink-0 rounded border border-neutral-300 px-3 py-1 text-sm text-neutral-700 hover:bg-neutral-200"
+            >
+              Edit
+            </button>
+          </div>
         </div>
         {m.alternate_names && <p className="text-sm text-neutral-500">a.k.a. {m.alternate_names}</p>}
         {m.description && <p className="mt-1 text-neutral-700">{m.description}</p>}
@@ -576,8 +612,18 @@ function OxideDetail({ o }: { o: Oxide | undefined }) {
     <article className="space-y-4">
       <div>
         <BackLink to="#/oxides" label="Oxides" />
-        <h1 className="mt-1 font-mono text-2xl font-semibold text-neutral-900">{o.symbol}</h1>
-        <p className="text-neutral-500">{o.name}</p>
+        <div className="mt-1 flex items-start justify-between gap-3">
+          <div>
+            <h1 className="font-mono text-2xl font-semibold text-neutral-900">{o.symbol}</h1>
+            <p className="text-neutral-500">{o.name}</p>
+          </div>
+          <AddToNotebook
+            id={o.id}
+            type="oxide"
+            label={`${o.symbol} — ${o.name}`}
+            data={{ symbol: o.symbol, name: o.name }}
+          />
+        </div>
       </div>
       {Object.keys(o.data).length > 0 ? (
         <Card>
@@ -695,9 +741,17 @@ function RecipeDetail({ r, ds }: { r: Recipe | undefined; ds: Dataset }) {
     <article className="space-y-4">
       <div>
         <BackLink to="#/recipes" label="Recipes" />
-        <h1 className="mt-1 text-2xl font-semibold text-neutral-900">
-          <span className="font-mono text-neutral-500">{r.code}</span> {r.name}
-        </h1>
+        <div className="mt-1 flex items-start justify-between gap-3">
+          <h1 className="text-2xl font-semibold text-neutral-900">
+            <span className="font-mono text-neutral-500">{r.code}</span> {r.name}
+          </h1>
+          <AddToNotebook
+            id={r.id}
+            type="recipe"
+            label={`${r.code} ${r.name}`.trim()}
+            data={{ code: r.code, name: r.name, materials: r.materials, source_url: r.source_url }}
+          />
+        </div>
         {r.source_url && (
           <a
             href={r.source_url}

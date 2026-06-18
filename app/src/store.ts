@@ -120,7 +120,7 @@ export function buildSearch(ds: Dataset): MiniSearch<SearchDoc> {
       ref: r.id,
       type: 'recipe' as const,
       title: `${r.code} — ${r.name}`,
-      subtitle: r.description || '',
+      subtitle: r.name || '',
     })),
     ...ds.minerals.map((m) => ({
       id: `mineral:${m.id}`,
@@ -140,7 +140,7 @@ export function buildSearch(ds: Dataset): MiniSearch<SearchDoc> {
   const mini = new MiniSearch<SearchDoc>({
     fields: ['title', 'subtitle'],
     storeFields: ['ref', 'type', 'title', 'subtitle'],
-    searchOptions: { prefix: true, fuzzy: 0.2, boost: { title: 2 } },
+    searchOptions: { prefix: true, fuzzy: 0.1, boost: { title: 3 } },
   })
   mini.addAll(docs)
   return mini

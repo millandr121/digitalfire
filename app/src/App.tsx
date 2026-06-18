@@ -147,23 +147,64 @@ function SearchView({
   query: string
   onPick: () => void
 }) {
-  const results = search.search(query).slice(0, 50)
-  if (!results.length) return <p className="text-neutral-500">No matches for “{query}”.</p>
+  const [typeFilter, setTypeFilter] = useState<string>('all')
+  const q = query.trim()
+
+  const raw = search.search(q)
+  // Exact-title matches float to the top
+  const exact = q.toLowerCase()
+  const sorted = [...raw].sort((a: any, b: any) => {
+    const aExact = a.title.toLowerCase().startsWith(exact) ? 0 : 1
+    const bExact = b.title.toLowerCase().startsWith(exact) ? 0 : 1
+    if (aExact !== bExact) return aExact - bExact
+    return b.score - a.score
+  })
+  const filtered = typeFilter === 'all' ? sorted : sorted.filter((r: any) => r.type === typeFilter)
+  const results = filtered.slice(0, 60)
+
+  const TYPES = ['all', 'material', 'recipe', 'oxide', 'mineral', 'temperature'] as const
+
+  if (!sorted.length) return <p className="text-neutral-500">No matches for &quot;{q}&quot;.</p>
   return (
-    <ul className="divide-y divide-neutral-100 overflow-hidden rounded border border-neutral-200">
-      {results.map((r: any) => (
-        <li key={r.id}>
-          <button
-            onClick={() => { go(`#/${r.type}/${encodeURIComponent(r.ref)}`); onPick() }}
-            className="flex w-full items-center gap-3 px-3 py-2 text-left hover:bg-neutral-50"
-          >
-            <span className="w-16 shrink-0 text-[10px] uppercase tracking-wide text-neutral-500">{r.type}</span>
-            <span className="text-neutral-900">{r.title}</span>
-            <span className="truncate text-sm text-neutral-500">{r.subtitle}</span>
-          </button>
-        </li>
-      ))}
-    </ul>
+    <div className="space-y-3">
+      <div className="flex flex-wrap gap-1.5">
+        {TYPES.map((t) => {
+          const count = t === 'all' ? sorted.length : sorted.filter((r: any) => r.type === t).length
+          return (
+            <button
+              key={t}
+              onClick={() => setTypeFilter(t)}
+              className={`rounded-full px-3 py-0.5 text-xs font-medium transition-colors ${
+                typeFilter === t
+                  ? 'bg-neutral-800 text-white'
+                  : 'bg-neutral-100 text-neutral-600 hover:bg-neutral-200'
+              }`}
+            >
+              {t} <span className="opacity-70">({count})</span>
+            </button>
+          )
+        })}
+      </div>
+      <ul className="divide-y divide-neutral-100 overflow-hidden rounded border border-neutral-200">
+        {results.map((r: any) => (
+          <li key={r.id}>
+            <button
+              onClick={() => { go(`#/${r.type}/${encodeURIComponent(r.ref)}`); onPick() }}
+              className="flex w-full items-center gap-3 px-3 py-2 text-left hover:bg-neutral-50"
+            >
+              <span className="w-20 shrink-0 text-[10px] uppercase tracking-wide text-neutral-400">{r.type}</span>
+              <span className="font-medium text-neutral-900">{r.title}</span>
+              {r.subtitle && r.subtitle !== r.title && (
+                <span className="truncate text-sm text-neutral-400">{r.subtitle}</span>
+              )}
+            </button>
+          </li>
+        ))}
+      </ul>
+      {filtered.length > 60 && (
+        <p className="text-center text-xs text-neutral-400">Showing 60 of {filtered.length} — narrow your search</p>
+      )}
+    </div>
   )
 }
 
@@ -513,7 +554,16 @@ function RecipeDetail({ r, ds }: { r: Recipe | undefined; ds: Dataset }) {
         <h1 className="mt-1 text-2xl font-semibold text-neutral-900">
           <span className="font-mono text-neutral-500">{r.code}</span> {r.name}
         </h1>
-        {r.description && <p className="mt-1 text-neutral-700">{r.description}</p>}
+        {r.source_url && (
+          <a
+            href={r.source_url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-1 inline-block text-sm text-blue-600 hover:underline"
+          >
+            Original on digitalfire.com ↗
+          </a>
+        )}
       </div>
       <Card>
         <h2 className="mb-2 text-sm uppercase tracking-wide text-neutral-500">Recipe</h2>

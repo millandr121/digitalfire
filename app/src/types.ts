@@ -35,9 +35,9 @@ export interface Recipe {
   id: string
   code: string
   name: string
-  description: string | null
   materials: RecipeMaterial[]
   source: string
+  source_url?: string
 }
 
 export interface Mineral {

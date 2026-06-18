@@ -93423,5 +93423,94 @@
     "oxide_weight": null,
     "formula_weight": null,
     "properties": {}
+  },
+  {
+    "id": "epk",
+    "name": "EPK",
+    "alternate_names": "Edgar Plastic Kaolin",
+    "description": "A highly plastic kaolin mined in Edgar, Florida. Standard reference kaolin in ceramic recipes.",
+    "analysis": [
+      {
+        "oxide": "SiO2",
+        "analysis_pct": 45.6,
+        "formula": null,
+        "tolerance": null
+      },
+      {
+        "oxide": "Al2O3",
+        "analysis_pct": 37.6,
+        "formula": null,
+        "tolerance": null
+      },
+      {
+        "oxide": "TiO2",
+        "analysis_pct": 1.3,
+        "formula": null,
+        "tolerance": null
+      },
+      {
+        "oxide": "Fe2O3",
+        "analysis_pct": 0.8,
+        "formula": null,
+        "tolerance": null
+      },
+      {
+        "oxide": "CaO",
+        "analysis_pct": 0.1,
+        "formula": null,
+        "tolerance": null
+      },
+      {
+        "oxide": "MgO",
+        "analysis_pct": 0.1,
+        "formula": null,
+        "tolerance": null
+      },
+      {
+        "oxide": "K2O",
+        "analysis_pct": 0.5,
+        "formula": null,
+        "tolerance": null
+      },
+      {
+        "oxide": "Na2O",
+        "analysis_pct": 0.2,
+        "formula": null,
+        "tolerance": null
+      }
+    ],
+    "oxide_weight": null,
+    "formula_weight": null,
+    "properties": {
+      "Plasticity": "High",
+      "Type": "Kaolin / Primary Clay"
+    },
+    "source": "Published standard analysis (multiple sources)"
+  },
+  {
+    "id": "whiting",
+    "name": "Whiting",
+    "alternate_names": "Calcium Carbonate; CaCO3",
+    "description": "Calcium carbonate, a primary flux in high-fire glazes. Supplies CaO after CO2 is driven off during firing.",
+    "analysis": [
+      {
+        "oxide": "CaO",
+        "analysis_pct": 56.1,
+        "formula": null,
+        "tolerance": null
+      },
+      {
+        "oxide": "MgO",
+        "analysis_pct": 0.3,
+        "formula": null,
+        "tolerance": null
+      }
+    ],
+    "oxide_weight": null,
+    "formula_weight": null,
+    "properties": {
+      "Type": "Flux / Calcium source"
+    },
+    "source": "Published standard analysis (multiple sources)"
   }
 ]

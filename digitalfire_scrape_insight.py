@@ -140,7 +140,15 @@ def parse_insight_share(html: str, meta: dict) -> dict | None:
     z_match = re.search(r"[?&]z=([^&]+)", meta.get("share_url", ""))
     slug = f"il-{z_match.group(1)}" if z_match else re.sub(r"[^a-z0-9]", "-", (code or name).lower())[:40]
 
+    # Pure oxide formula patterns (e.g. CaO, Al2O3, SiO2, K2O, Na2O, Fe2O3)
+    # These appear in unity formula tables on insight-live — not ceramic material names
+    _OXIDE_RE = re.compile(r"^[A-Z][a-z]?\d*[A-Z]?[a-z]?\d*$")
+
+    def _is_oxide_symbol(name: str) -> bool:
+        return bool(_OXIDE_RE.match(name.replace("₂", "2").replace("₃", "3")))
+
     # Materials table: look for table rows with material name + amount columns
+    # Prefer the first table where amounts are > 1 (gram weights, not unity values)
     materials = []
     for table in soup.find_all("table"):
         rows = table.find_all("tr")
@@ -153,11 +161,18 @@ def parse_insight_share(html: str, meta: dict) -> dict | None:
             # skip header rows
             if any(h in cell_text[0].lower() for h in ("material", "ingredient", "oxide", "name")):
                 continue
+            mat_name = cell_text[0]
+            # skip oxide symbols (unity formula rows) and empty/code rows
+            if not mat_name or len(mat_name) < 2 or _is_oxide_symbol(mat_name):
+                continue
+            if mat_name.startswith("Code #") or mat_name.startswith("("):
+                continue
             amt = num(cell_text[1]) if len(cell_text) > 1 else None
-            if amt is not None and cell_text[0] and len(cell_text[0]) > 1:
+            # unity formula values are all < 10; recipe gram amounts are typically >= 1
+            if amt is not None and amt >= 1.0:
                 pct = num(cell_text[2]) if len(cell_text) > 2 else None
                 candidate.append({
-                    "material": cell_text[0],
+                    "material": mat_name,
                     "amount": amt,
                     "percent": pct,
                 })

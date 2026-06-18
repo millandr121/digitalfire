@@ -4,5 +4,431 @@
     "event": "Epsom salts decompose to lose water",
     "id": "31",
     "source": "digitalfire.com"
+  },
+  {
+    "id": "1",
+    "source": "digitalfire.com (wayback)",
+    "value": "1082C",
+    "event": "Spodumene converts to beta phase"
+  },
+  {
+    "id": "10",
+    "source": "digitalfire.com (wayback)",
+    "value": "290C",
+    "event": "Copper Carbonate decomposes to CuO"
+  },
+  {
+    "id": "17",
+    "source": "digitalfire.com (wayback)",
+    "value": "1360C",
+    "event": "Barium carbonate melts"
+  },
+  {
+    "id": "18",
+    "source": "digitalfire.com (wayback)",
+    "value": "750C-1000C",
+    "event": "Calcium carbonate decomposition"
+  },
+  {
+    "id": "2",
+    "source": "digitalfire.com (wayback)",
+    "value": "1418C-1428C",
+    "event": "Spodumene melts"
+  },
+  {
+    "id": "20",
+    "source": "digitalfire.com (wayback)",
+    "value": "1990C",
+    "event": "Chrome oxide melts"
+  },
+  {
+    "id": "21",
+    "source": "digitalfire.com (wayback)",
+    "value": "990C",
+    "event": "Chrome oxide decomposes"
+  },
+  {
+    "id": "22",
+    "source": "digitalfire.com (wayback)",
+    "value": "1325C",
+    "event": "Copper oxide melts"
+  },
+  {
+    "id": "23",
+    "source": "digitalfire.com (wayback)",
+    "value": "1565C",
+    "event": "Iron oxide red decomposes"
+  },
+  {
+    "id": "24",
+    "source": "digitalfire.com (wayback)",
+    "value": "1785C",
+    "event": "Manganese oxide melts"
+  },
+  {
+    "id": "25",
+    "source": "digitalfire.com (wayback)",
+    "value": "2320C",
+    "event": "Neodymium oxide melts"
+  },
+  {
+    "id": "26",
+    "source": "digitalfire.com (wayback)",
+    "value": "2300C",
+    "event": "Praseodymium oxide decomposes"
+  },
+  {
+    "id": "27",
+    "source": "digitalfire.com (wayback)",
+    "value": "800C-1100C",
+    "event": "Strontium carbonate decomposition"
+  },
+  {
+    "id": "28",
+    "source": "digitalfire.com (wayback)",
+    "value": "1100C",
+    "event": "Strontium carbonate melts"
+  },
+  {
+    "id": "29",
+    "source": "digitalfire.com (wayback)",
+    "value": "1420C",
+    "event": "Talc melts"
+  },
+  {
+    "id": "30",
+    "source": "digitalfire.com (wayback)",
+    "value": "540C-600C",
+    "event": "Quartz inversion (alpha-beta)"
+  },
+  {
+    "id": "32",
+    "source": "digitalfire.com (wayback)",
+    "value": "185C",
+    "event": "Copper hydroxide decomposes to CuO"
+  },
+  {
+    "id": "34",
+    "source": "digitalfire.com (wayback)",
+    "value": "1330C",
+    "event": "Fluorspar melts"
+  },
+  {
+    "id": "35",
+    "source": "digitalfire.com (wayback)",
+    "value": "50-250C",
+    "event": "Hygroscopic water removed in clay bodies"
+  },
+  {
+    "id": "36",
+    "source": "digitalfire.com (wayback)",
+    "value": "250C-370C",
+    "event": "Organic burnout"
+  },
+  {
+    "id": "37",
+    "source": "digitalfire.com (wayback)",
+    "value": "370-950C",
+    "event": "Carbon / iron oxidation"
+  },
+  {
+    "id": "38",
+    "source": "digitalfire.com (wayback)",
+    "value": "480C-600C",
+    "event": "Dehydroxylation in clays"
+  },
+  {
+    "id": "41",
+    "source": "digitalfire.com (wayback)",
+    "value": "850C+",
+    "event": "Sintering and densification"
+  },
+  {
+    "id": "42",
+    "source": "digitalfire.com (wayback)",
+    "value": "425C-650C",
+    "event": "Sulfur evolution"
+  },
+  {
+    "id": "43",
+    "source": "digitalfire.com (wayback)",
+    "value": "210C-280C",
+    "event": "Cristobalite inversion (alpha/beta)"
+  },
+  {
+    "id": "45",
+    "source": "digitalfire.com (wayback)",
+    "value": "200C",
+    "event": "Manganese Carbonate decomposes to MnO"
+  },
+  {
+    "id": "46",
+    "source": "digitalfire.com (wayback)",
+    "value": "2750F",
+    "event": "Kyanite decomposes to Mullite and Silica"
+  },
+  {
+    "id": "47",
+    "source": "digitalfire.com (wayback)",
+    "value": "512C",
+    "event": "Hydrated lime decomposes (25% H2O)"
+  },
+  {
+    "id": "48",
+    "source": "digitalfire.com (wayback)",
+    "value": "850-950",
+    "event": "Zinc oxide boils and volatilizes"
+  },
+  {
+    "id": "49",
+    "source": "digitalfire.com (wayback)",
+    "value": "1025-1325",
+    "event": "Copper Oxide breakdown"
+  },
+  {
+    "id": "5",
+    "source": "digitalfire.com (wayback)",
+    "value": "535C",
+    "event": "Manganese dioxide decomposes to MnO"
+  },
+  {
+    "id": "50",
+    "source": "digitalfire.com (wayback)",
+    "value": "1100C+",
+    "event": "Antimony volatilizes"
+  },
+  {
+    "id": "51",
+    "source": "digitalfire.com (wayback)",
+    "value": "260C",
+    "event": "Bismuth Subnitrate decomposes"
+  },
+  {
+    "id": "52",
+    "source": "digitalfire.com (wayback)",
+    "value": "1300C",
+    "event": "Li2O Decomposes"
+  },
+  {
+    "id": "54",
+    "source": "digitalfire.com (wayback)",
+    "value": "1025C+",
+    "event": "Decomposition of Barium Carbonate"
+  },
+  {
+    "id": "55",
+    "source": "digitalfire.com (wayback)",
+    "value": "850C",
+    "event": "Sodium Carbonate decomposes"
+  },
+  {
+    "id": "56",
+    "source": "digitalfire.com (wayback)",
+    "value": "180C",
+    "event": "Boric Acid expels water"
+  },
+  {
+    "id": "57",
+    "source": "digitalfire.com (wayback)",
+    "value": "300C",
+    "event": "Boron from Boric Acid melts"
+  },
+  {
+    "id": "58",
+    "source": "digitalfire.com (wayback)",
+    "value": "120C",
+    "event": "Borax"
+  },
+  {
+    "id": "59",
+    "source": "digitalfire.com (wayback)",
+    "value": "400C",
+    "event": "Colemanite reacts to water loss"
+  },
+  {
+    "id": "60",
+    "source": "digitalfire.com (wayback)",
+    "value": "1550C",
+    "event": "Zircon melts, slowly dissolves"
+  },
+  {
+    "id": "61",
+    "source": "digitalfire.com (wayback)",
+    "value": "650C-900C",
+    "event": "Dolomite decomposition"
+  },
+  {
+    "id": "62",
+    "source": "digitalfire.com (wayback)",
+    "value": "900C",
+    "event": "Co3O4 decomposes"
+  },
+  {
+    "id": "63",
+    "source": "digitalfire.com (wayback)",
+    "value": "80C-250C",
+    "event": "Calcium Sulphate decomposition"
+  },
+  {
+    "id": "64",
+    "source": "digitalfire.com (wayback)",
+    "value": "750-850",
+    "event": "Amorphous cargon burns from Texas Talc"
+  },
+  {
+    "id": "65",
+    "source": "digitalfire.com (wayback)",
+    "value": "900-1000",
+    "event": "Talc crystalline water vaporizes"
+  },
+  {
+    "id": "66",
+    "source": "digitalfire.com (wayback)",
+    "value": "1600F-1650F",
+    "event": "Gerstley Borate Melts Suddenly"
+  },
+  {
+    "id": "67",
+    "source": "digitalfire.com (wayback)",
+    "value": "1400F",
+    "event": "Common frits begin melting"
+  },
+  {
+    "id": "68",
+    "source": "digitalfire.com (wayback)",
+    "value": "1400F",
+    "event": "Gerstley Borate stops gassing"
+  },
+  {
+    "id": "69",
+    "source": "digitalfire.com (wayback)",
+    "value": "1500F",
+    "event": "Calcium carbonate, talc finished gassing"
+  },
+  {
+    "id": "7",
+    "source": "digitalfire.com (wayback)",
+    "value": "300C-330C",
+    "event": "Copper carbonate basic decomposes"
+  },
+  {
+    "id": "70",
+    "source": "digitalfire.com (wayback)",
+    "value": "1650F",
+    "event": "Talc has finished gassing"
+  },
+  {
+    "id": "71",
+    "source": "digitalfire.com (wayback)",
+    "value": "1950F-2050F",
+    "event": "Body decomposition causes glaze bubbles"
+  },
+  {
+    "id": "72",
+    "source": "digitalfire.com (wayback)",
+    "value": "200C-1000C",
+    "event": "Decarbonation"
+  },
+  {
+    "id": "73",
+    "source": "digitalfire.com (wayback)",
+    "value": "1800F",
+    "event": "Densification"
+  },
+  {
+    "id": "74",
+    "source": "digitalfire.com (wayback)",
+    "value": "200C-450C",
+    "event": "Alumina Hydrate Decomposition"
+  },
+  {
+    "id": "75",
+    "source": "digitalfire.com (wayback)",
+    "value": "700F",
+    "event": "Sodium Carbonate Dehydrates"
+  },
+  {
+    "id": "76",
+    "source": "digitalfire.com (wayback)",
+    "value": "787C (1448F)",
+    "event": "Comparison of frit melts at 1450F"
+  },
+  {
+    "id": "77",
+    "source": "digitalfire.com (wayback)",
+    "value": "815C (1499F)",
+    "event": "Comparison of frit melts at 1500F"
+  },
+  {
+    "id": "78",
+    "source": "digitalfire.com (wayback)",
+    "value": "843C (1549F)",
+    "event": "Comparison of frit melts at 1550F"
+  },
+  {
+    "id": "79",
+    "source": "digitalfire.com (wayback)",
+    "value": "871C (1599F)",
+    "event": "Comparison of frit melts at 1600F"
+  },
+  {
+    "id": "8",
+    "source": "digitalfire.com (wayback)",
+    "value": "1050C",
+    "event": "Copper carbonate basic breakdown"
+  },
+  {
+    "id": "80",
+    "source": "digitalfire.com (wayback)",
+    "value": "1650C (3002F)",
+    "event": "Comparison of frit melts at 1650F (900C)"
+  },
+  {
+    "id": "81",
+    "source": "digitalfire.com (wayback)",
+    "value": "926C (1698F)",
+    "event": "Comparison of frit melts at 1700F"
+  },
+  {
+    "id": "82",
+    "source": "digitalfire.com (wayback)",
+    "value": "954C (1749F)",
+    "event": "Comparison of frit melts at 1750F"
+  },
+  {
+    "id": "83",
+    "source": "digitalfire.com (wayback)",
+    "value": "982C (1799F)",
+    "event": "Comparison of frit melts at 1800F"
+  },
+  {
+    "id": "84",
+    "source": "digitalfire.com (wayback)",
+    "value": "400C-600C",
+    "event": "Dehydroxylation of Kaolin"
+  },
+  {
+    "id": "85",
+    "source": "digitalfire.com (wayback)",
+    "value": "1050C",
+    "event": "Metakaolin converts to mullite"
+  },
+  {
+    "id": "86",
+    "source": "digitalfire.com (wayback)",
+    "value": "1100C",
+    "event": "Mullite converts to cristobalite"
+  },
+  {
+    "id": "87",
+    "source": "digitalfire.com (wayback)",
+    "value": "932C (1709F)",
+    "event": "Manganese compounds may begin to fume"
+  },
+  {
+    "id": "88",
+    "source": "digitalfire.com (wayback)",
+    "value": "1100C (2012F)",
+    "event": "Feldspar starts to react"
   }
 ]

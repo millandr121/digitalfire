@@ -24,7 +24,7 @@ jobs:
       - run: pip install requests beautifulsoup4 lxml
 
       - name: Audit missing pages
-        run: python digitalfire_wayback.py --audit
+        run: python digitalfire_wayback.py --audit --section "${{ github.event.inputs.section }}"
 
       - name: Show audit results
         run: |

@@ -45,23 +45,45 @@ SESSION.headers.update({"User-Agent": "Mozilla/5.0 (compatible; digitalfire-pres
 # ── CDX helpers ───────────────────────────────────────────────────────────────
 
 def cdx_list_section(section: str) -> list[dict]:
-    """Query Wayback CDX for all archived URLs under a section."""
+    """Query Wayback CDX for all archived URLs under a section (paginated)."""
     print(f"  Querying CDX for digitalfire.com/{section}/...")
-    params = {
+    all_rows: list[dict] = []
+    offset = 0
+    page_size = 500  # small pages to avoid timeout
+    base_params = {
         "url": f"digitalfire.com/{section}/*",
         "output": "json",
         "fl": "original,timestamp,statuscode",
-        "collapse": "urlkey",       # one entry per unique URL
-        "filter": "statuscode:200", # only successful captures
-        "limit": 5000,
+        "collapse": "urlkey",
+        "filter": "statuscode:200",
+        "limit": page_size,
     }
-    r = SESSION.get(CDX_API, params=params, timeout=60)
-    r.raise_for_status()
-    rows = r.json()
-    if not rows:
-        return []
-    headers = rows[0]
-    return [dict(zip(headers, row)) for row in rows[1:]]
+    while True:
+        params = {**base_params, "offset": offset}
+        for attempt in range(4):
+            try:
+                r = SESSION.get(CDX_API, params=params, timeout=90)
+                r.raise_for_status()
+                break
+            except Exception as e:
+                wait = 5 * (attempt + 1)
+                print(f"    CDX attempt {attempt+1} failed ({e}), retrying in {wait}s...")
+                time.sleep(wait)
+        else:
+            print(f"  CDX gave up for {section} at offset {offset}")
+            break
+        rows = r.json()
+        if not rows or len(rows) <= 1:
+            break
+        headers = rows[0]
+        page = [dict(zip(headers, row)) for row in rows[1:]]
+        all_rows.extend(page)
+        if len(page) < page_size:
+            break
+        offset += page_size
+        time.sleep(1)  # be polite between pages
+    print(f"    → {len(all_rows)} URLs found")
+    return all_rows
 
 
 def wayback_url(original: str, timestamp: str) -> str:
@@ -210,10 +232,18 @@ def parse_for_section(section: str, soup: BeautifulSoup, slug: str) -> dict | No
 
 # ── audit mode ────────────────────────────────────────────────────────────────
 
-def audit():
+def audit(sections: list[str] | None = None):
     """Compare what we have vs what Wayback has. Log missing slugs."""
-    missing = {}
-    for section in SECTIONS:
+    # load existing log so partial runs accumulate
+    existing_log: dict = {}
+    if MISSING_LOG.exists():
+        try:
+            existing_log = json.loads(MISSING_LOG.read_text(encoding="utf-8"))
+        except Exception:
+            pass
+
+    missing = dict(existing_log)
+    for section in (sections or SECTIONS):
         plural = section + "s"
         json_path = OUT / f"{plural}.json"
         have_ids = set()
@@ -221,14 +251,18 @@ def audit():
             data = json.loads(json_path.read_text(encoding="utf-8"))
             have_ids = {r["id"] for r in data}
 
-        cdx = cdx_list_section(section)
+        try:
+            cdx = cdx_list_section(section)
+        except Exception as e:
+            print(f"  {section}: CDX query failed ({e}), skipping")
+            continue
+
         wayback_slugs = {}
         for row in cdx:
             url = row["original"]
-            # extract slug: last path component, strip .html
             slug = url.rstrip("/").split("/")[-1].replace(".html", "")
             if slug and slug not in ("index", "list", ""):
-                wayback_slugs[slug] = row  # keep latest timestamp
+                wayback_slugs[slug] = row
 
         missing_slugs = {s: r for s, r in wayback_slugs.items() if s not in have_ids}
         print(f"{section:12}: have {len(have_ids):4} | wayback {len(wayback_slugs):4} | missing {len(missing_slugs):4}")
@@ -236,9 +270,10 @@ def audit():
             {"slug": s, "original": r["original"], "timestamp": r["timestamp"]}
             for s, r in missing_slugs.items()
         ]
-        time.sleep(1)  # be polite to CDX API
+        # save after each section so partial runs aren't lost
+        MISSING_LOG.write_text(json.dumps(missing, indent=2, ensure_ascii=False), encoding="utf-8")
+        time.sleep(2)
 
-    MISSING_LOG.write_text(json.dumps(missing, indent=2, ensure_ascii=False), encoding="utf-8")
     total = sum(len(v) for v in missing.values())
     print(f"\nTotal missing: {total} pages logged to {MISSING_LOG}")
     return missing
@@ -301,17 +336,16 @@ def main():
                         help="Section(s) for --fill: all, material, mineral, recipe, temperature, oxide")
     args = parser.parse_args()
 
+    secs = SECTIONS if args.section == "all" else [s.strip() for s in args.section.split(",")]
     if args.audit:
-        audit()
+        audit(None if args.section == "all" else secs)
     elif args.fill:
-        secs = SECTIONS if args.section == "all" else [s.strip() for s in args.section.split(",")]
         fill(secs)
     else:
         print("Run with --audit (find gaps) or --fill (fetch from Wayback)")
         print("Typical workflow:")
-        print("  python digitalfire_wayback.py --audit")
-        print("  python digitalfire_wayback.py --fill --section minerals")
-        print("  python digitalfire_wayback.py --fill --section all")
+        print("  python digitalfire_wayback.py --audit --section mineral,temperature")
+        print("  python digitalfire_wayback.py --fill --section mineral,temperature")
 
 
 if __name__ == "__main__":

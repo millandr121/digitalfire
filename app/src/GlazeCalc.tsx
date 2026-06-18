@@ -1,6 +1,9 @@
-import { useMemo, useState } from 'react'
-import type { Material, Oxide } from './types'
+import { useMemo, useRef, useState } from 'react'
+import type { Material, Oxide, Recipe } from './types'
 import { analysisToFormula, FLUX_OXIDES, molecularWeight } from './chem'
+import { StullChart } from './components/StullChart'
+import { UnityFormulaViz } from './components/UnityFormulaViz'
+import { addToNotebook } from './notebook'
 
 // Typical Cone 6 limit ranges for reference (Digitalfire-style guidance)
 const CONE6_LIMITS: Record<string, [number, number]> = {
@@ -18,6 +21,76 @@ const CONE6_LIMITS: Record<string, [number, number]> = {
   'TiO2':  [0.0, 0.15],
   'Fe2O3': [0.0, 0.35],
   'MnO':   [0.0, 0.2],
+}
+
+function MaterialPicker({
+  value,
+  onChange,
+  materials,
+}: {
+  value: string
+  onChange: (id: string) => void
+  materials: Material[]
+}) {
+  const [query, setQuery] = useState(() => {
+    const m = materials.find((x) => x.id === value)
+    return m ? m.name : ''
+  })
+  const [open, setOpen] = useState(false)
+  const ref = useRef<HTMLDivElement>(null)
+
+  const q = query.trim().toLowerCase()
+  const hits = q.length >= 1
+    ? materials.filter((m) => m.name.toLowerCase().includes(q)).slice(0, 12)
+    : []
+
+  function select(m: Material) {
+    setQuery(m.name)
+    onChange(m.id)
+    setOpen(false)
+  }
+
+  function handleBlur() {
+    setTimeout(() => {
+      if (!ref.current?.contains(document.activeElement)) {
+        setOpen(false)
+        // If no valid match, clear
+        if (!materials.find((m) => m.id === value)) {
+          setQuery('')
+          onChange('')
+        }
+      }
+    }, 150)
+  }
+
+  return (
+    <div ref={ref} className="relative">
+      <input
+        type="text"
+        value={query}
+        onChange={(e) => { setQuery(e.target.value); setOpen(true); onChange('') }}
+        onFocus={() => setOpen(true)}
+        onBlur={handleBlur}
+        placeholder="Search material…"
+        className="w-full rounded border border-neutral-300 bg-neutral-50 px-2 py-1.5 text-sm text-neutral-900 placeholder-neutral-400 focus:border-neutral-500 focus:outline-none"
+      />
+      {open && hits.length > 0 && (
+        <ul className="absolute left-0 right-0 top-full z-20 mt-0.5 max-h-48 overflow-y-auto rounded border border-neutral-200 bg-white shadow-lg">
+          {hits.map((m) => (
+            <li key={m.id}>
+              <button
+                type="button"
+                onMouseDown={() => select(m)}
+                className="w-full px-3 py-1.5 text-left text-sm text-neutral-800 hover:bg-neutral-50"
+              >
+                {m.name}
+              </button>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  )
 }
 
 interface Line {
@@ -80,7 +153,25 @@ function blendMaterials(lines: Line[], materials: Material[]): BlendRow[] {
     }))
 }
 
-export function GlazeCalc({ materials }: { materials: Material[]; oxides: Oxide[] }) {
+function findMat(name: string, materials: Material[]): Material | undefined {
+  const q = name.replace(/^\*/, '').trim().toLowerCase()
+  let m = materials.find((x) => x.name.toLowerCase() === q)
+  if (m) return m
+  m = materials.find((x) => (x.alternate_names || '').toLowerCase().split(/[;,]+/).map((s) => s.trim()).includes(q))
+  if (m) return m
+  const paren = q.match(/\(([^)]+)\)/)
+  if (paren) {
+    const inner = paren[1].trim()
+    m = materials.find((x) => x.name.toLowerCase() === inner)
+    if (m) return m
+  }
+  return materials.find((x) => {
+    const n = x.name.toLowerCase()
+    return n.length >= 4 && (q.startsWith(n) || n.startsWith(q))
+  })
+}
+
+export function GlazeCalc({ materials, recipes }: { materials: Material[]; oxides: Oxide[]; recipes: Recipe[] }) {
   const [lines, setLines] = useState<Line[]>([
     { materialId: '', amount: '' },
     { materialId: '', amount: '' },
@@ -92,6 +183,34 @@ export function GlazeCalc({ materials }: { materials: Material[]; oxides: Oxide[
 
   const blend = useMemo(() => blendMaterials(lines, materials), [lines, materials])
 
+  const contextPoints = useMemo(() => {
+    return recipes.flatMap((r) => {
+      const oxideTotals: Record<string, number> = {}
+      let totalWeight = 0
+      for (const line of r.materials) {
+        const amt = line.amount ?? line.percent
+        if (!amt || amt <= 0) continue
+        const mat = findMat(line.material, materials)
+        if (!mat) continue
+        totalWeight += amt
+        for (const row of mat.analysis) {
+          if (row.analysis_pct == null) continue
+          oxideTotals[row.oxide] = (oxideTotals[row.oxide] || 0) + (row.analysis_pct / 100) * amt
+        }
+      }
+      if (totalWeight === 0) return []
+      const analysisRows = Object.entries(oxideTotals).map(([oxide, total]) => ({
+        oxide, analysis_pct: (total / totalWeight) * 100,
+      }))
+      const { formula } = analysisToFormula(analysisRows)
+      const fmap = new Map(formula.map((x) => [x.oxide, x.amount]))
+      const sio2 = fmap.get('SiO2')
+      const al2o3 = fmap.get('Al2O3')
+      if (sio2 == null || al2o3 == null) return []
+      return [{ id: r.id, label: r.code || r.name, sio2, al2o3 }]
+    })
+  }, [recipes, materials])
+
   const fluxSum = blend
     .filter((r) => FLUX_OXIDES.has(r.oxide))
     .reduce((a, r) => a + (r.unity ?? 0), 0)
@@ -102,6 +221,26 @@ export function GlazeCalc({ materials }: { materials: Material[]; oxides: Oxide[
       ? (blend.find((r) => r.oxide === 'SiO2')!.unity! /
           blend.find((r) => r.oxide === 'Al2O3')!.unity!).toFixed(2)
       : null
+
+  function clearCalc() {
+    setLines([
+      { materialId: '', amount: '' },
+      { materialId: '', amount: '' },
+      { materialId: '', amount: '' },
+    ])
+    setName('')
+  }
+
+  function saveToNotebook() {
+    addToNotebook({
+      id: `calc-${Date.now()}`,
+      type: 'calc',
+      label: name || 'Unnamed Calculation',
+      note: '',
+      data: { blend, fluxSum, name, lines },
+    })
+    clearCalc()
+  }
 
   function setLine(i: number, field: keyof Line, value: string) {
     setLines((prev) => prev.map((l, j) => (j === i ? { ...l, [field]: value } : l)))
@@ -141,16 +280,11 @@ export function GlazeCalc({ materials }: { materials: Material[]; oxides: Oxide[
         </div>
         {lines.map((line, i) => (
           <div key={i} className="grid grid-cols-[1fr_100px_32px] gap-2 items-center">
-            <select
+            <MaterialPicker
               value={line.materialId}
-              onChange={(e) => setLine(i, 'materialId', e.target.value)}
-              className="rounded border border-neutral-300 bg-neutral-50 px-2 py-1.5 text-sm text-neutral-900 focus:border-neutral-500 focus:outline-none"
-            >
-              <option value="">— select material —</option>
-              {validMaterials.map((m) => (
-                <option key={m.id} value={m.id}>{m.name}</option>
-              ))}
-            </select>
+              onChange={(id) => setLine(i, 'materialId', id)}
+              materials={validMaterials}
+            />
             <input
               type="number"
               min="0"
@@ -185,6 +319,21 @@ export function GlazeCalc({ materials }: { materials: Material[]; oxides: Oxide[
       {/* Results */}
       {blend.length > 0 && (
         <div className="space-y-4">
+          {/* Save / Clear */}
+          <div className="flex items-center justify-between">
+            <button
+              onClick={clearCalc}
+              className="text-xs text-neutral-400 hover:text-neutral-600"
+            >
+              Clear
+            </button>
+            <button
+              onClick={saveToNotebook}
+              className="rounded bg-neutral-900 px-3 py-1.5 text-xs font-medium text-white hover:bg-neutral-700"
+            >
+              + Save to notebook
+            </button>
+          </div>
           {/* Summary stats */}
           <div className="flex flex-wrap gap-4 text-sm">
             <Stat label="Flux sum" value={fluxSum.toFixed(3)} ideal="1.000" />
@@ -231,6 +380,42 @@ export function GlazeCalc({ materials }: { materials: Material[]; oxides: Oxide[
               </tbody>
             </table>
           </div>
+
+          {/* Unity formula visualization */}
+          {(() => {
+            const unityRows = blend
+              .filter((r) => r.unity != null && r.unity > 0)
+              .map((r) => ({ oxide: r.oxide, amount: r.unity as number }))
+            return unityRows.length > 0 ? (
+              <div>
+                <div className="mb-2 text-xs font-medium uppercase tracking-wide text-neutral-500">Seger Groups</div>
+                <UnityFormulaViz formula={unityRows} />
+              </div>
+            ) : null
+          })()}
+
+          {/* Stull chart position */}
+          {(() => {
+            const sio2 = blend.find((r) => r.oxide === 'SiO2')?.unity
+            const al2o3 = blend.find((r) => r.oxide === 'Al2O3')?.unity
+            if (!sio2 || !al2o3) return null
+            return (
+              <div>
+                <div className="mb-1 text-xs font-medium uppercase tracking-wide text-neutral-500">Stull Chart Position</div>
+                <p className="mb-2 text-xs text-neutral-400">
+                  SiO₂ {sio2.toFixed(3)} · Al₂O₃ {al2o3.toFixed(3)}
+                </p>
+                <StullChart
+                  points={[
+                    ...contextPoints.map((p) => ({ ...p, highlighted: false })),
+                    { id: 'calc', label: name || 'Recipe', sio2, al2o3, highlighted: true },
+                  ]}
+                  width={480}
+                  height={320}
+                />
+              </div>
+            )
+          })()}
 
           {/* Flux normalization note */}
           {Math.abs(fluxSum - 1.0) > 0.01 && (

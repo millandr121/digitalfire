@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react'
 import type { Oxide } from './types'
+import { addToNotebook } from './notebook'
 
 // Coefficient of thermal expansion (×10⁻⁶/°C) per oxide
 // Values from digitalfire.com oxide data + standard ceramic references
@@ -61,12 +62,92 @@ function calcCOE(rows: AnalysisRow[]): number | null {
   return total > 0 ? Math.round((sum / total) * 1000) / 1000 : null
 }
 
+const GAUGE_MIN = 3.0
+const GAUGE_MAX = 9.5
+
+function COEGauge({
+  coe,
+  bodies,
+}: {
+  coe: number
+  bodies: { name: string; lo: number; hi: number }[]
+}) {
+  const W = 400
+  const H = 56
+  const LABEL_H = 18
+  const BAR_Y = LABEL_H + 4
+  const BAR_H = 14
+
+  const px = (v: number) => ((v - GAUGE_MIN) / (GAUGE_MAX - GAUGE_MIN)) * W
+
+  // Palette for clay body bands — deterministic order
+  const BAND_COLORS = ['#bfdbfe', '#a5f3fc', '#bbf7d0', '#fef08a', '#fed7aa', '#fecaca']
+
+  const ticks = [3, 4, 5, 6, 7, 8, 9]
+
+  return (
+    <div>
+      <h2 className="mb-2 text-sm uppercase tracking-wide text-neutral-500">COE Gauge</h2>
+      <svg viewBox={`0 0 ${W} ${H}`} width="100%" style={{ maxWidth: W }} className="block overflow-visible">
+        {/* Clay body bands */}
+        {bodies.map((b, i) => (
+          <rect
+            key={b.name}
+            x={px(b.lo)} y={BAR_Y}
+            width={px(b.hi) - px(b.lo)} height={BAR_H}
+            fill={BAND_COLORS[i % BAND_COLORS.length]}
+            opacity="0.85"
+          >
+            <title>{b.name}: {b.lo}–{b.hi}</title>
+          </rect>
+        ))}
+
+        {/* Gauge track background */}
+        <rect x={0} y={BAR_Y} width={W} height={BAR_H} fill="none" stroke="#d1d5db" strokeWidth="1" rx="2" />
+
+        {/* Tick marks */}
+        {ticks.map((v) => (
+          <g key={v}>
+            <line x1={px(v)} x2={px(v)} y1={BAR_Y + BAR_H} y2={BAR_Y + BAR_H + 4} stroke="#9ca3af" strokeWidth="1" />
+            <text x={px(v)} y={BAR_Y + BAR_H + 14} fontSize="9" fill="#9ca3af" textAnchor="middle">{v}</text>
+          </g>
+        ))}
+
+        {/* Axis label */}
+        <text x={W / 2} y={H} fontSize="9" fill="#9ca3af" textAnchor="middle">COE (×10⁻⁶/°C)</text>
+
+        {/* Glaze COE marker */}
+        {coe >= GAUGE_MIN && coe <= GAUGE_MAX && (
+          <g>
+            <line
+              x1={px(coe)} x2={px(coe)} y1={BAR_Y - 2} y2={BAR_Y + BAR_H + 2}
+              stroke="#1d4ed8" strokeWidth="2"
+            />
+            <polygon
+              points={`${px(coe)},${BAR_Y - 2} ${px(coe) - 5},${BAR_Y - 10} ${px(coe) + 5},${BAR_Y - 10}`}
+              fill="#1d4ed8"
+            />
+            <text x={px(coe)} y={BAR_Y - 12} fontSize="10" fill="#1d4ed8" textAnchor="middle" fontWeight="bold">
+              {coe.toFixed(3)}
+            </text>
+          </g>
+        )}
+      </svg>
+      <p className="mt-1 text-[10px] text-neutral-400">
+        Coloured bands show typical clay body COE ranges. Blue marker = computed glaze COE.
+        Glaze should sit slightly below the clay body band (compression fit prevents crazing).
+      </p>
+    </div>
+  )
+}
+
 export function ThermalCalc(_props: { oxides: Oxide[] }) {
   // Manual oxide entry mode — user enters unity formula values directly
   const [rows, setRows] = useState<{ oxide: string; pct: string }[]>(
     Object.keys(COE_DATA).slice(0, 8).map((o) => ({ oxide: o, pct: '' }))
   )
   const [customClay, setCustomClay] = useState('')
+  const [label, setLabel] = useState('')
 
   const analysisRows: AnalysisRow[] = rows
     .map((r) => ({ oxide: r.oxide, analysisPct: parseFloat(r.pct) || 0 }))
@@ -79,6 +160,24 @@ export function ThermalCalc(_props: { oxides: Oxide[] }) {
   }
 
   const allOxides = Object.keys(COE_DATA)
+
+  function clearCalc() {
+    setRows(Object.keys(COE_DATA).slice(0, 8).map((o) => ({ oxide: o, pct: '' })))
+    setCustomClay('')
+    setLabel('')
+  }
+
+  function saveToNotebook() {
+    if (glazeCOE == null) return
+    addToNotebook({
+      id: `thermal-${Date.now()}`,
+      type: 'calc',
+      label: label || `COE ${glazeCOE.toFixed(3)}`,
+      note: '',
+      data: { coe: glazeCOE, analysisRows, customClay },
+    })
+    clearCalc()
+  }
 
   return (
     <div className="space-y-6">
@@ -132,6 +231,23 @@ export function ThermalCalc(_props: { oxides: Oxide[] }) {
       {/* Result */}
       {glazeCOE != null && (
         <div className="space-y-4">
+          <div className="flex items-center justify-between">
+            <input
+              value={label}
+              onChange={(e) => setLabel(e.target.value)}
+              placeholder="Label this calculation (optional)…"
+              className="w-64 rounded border border-neutral-300 bg-neutral-50 px-2 py-1.5 text-sm text-neutral-900 placeholder-neutral-400 focus:border-neutral-500 focus:outline-none"
+            />
+            <div className="flex items-center gap-3">
+              <button onClick={clearCalc} className="text-xs text-neutral-400 hover:text-neutral-600">Clear</button>
+              <button
+                onClick={saveToNotebook}
+                className="rounded bg-neutral-900 px-3 py-1.5 text-xs font-medium text-white hover:bg-neutral-700"
+              >
+                + Save to notebook
+              </button>
+            </div>
+          </div>
           <div className="rounded border border-neutral-300 bg-neutral-50 px-4 py-3">
             <div className="text-xs text-neutral-500">Estimated glaze COE</div>
             <div className="text-3xl font-mono font-semibold text-neutral-900">
@@ -139,6 +255,9 @@ export function ThermalCalc(_props: { oxides: Oxide[] }) {
               <span className="ml-2 text-sm font-normal text-neutral-500">×10⁻⁶/°C</span>
             </div>
           </div>
+
+          {/* COE Gauge */}
+          <COEGauge coe={glazeCOE} bodies={CLAY_BODIES} />
 
           {/* Clay body comparison */}
           <div>
@@ -153,7 +272,7 @@ export function ThermalCalc(_props: { oxides: Oxide[] }) {
                     <div className="w-48 shrink-0 text-sm text-neutral-700">{body.name}</div>
                     <div className="text-xs text-neutral-500">{body.lo}–{body.hi}</div>
                     <div className="flex-1" />
-                    <div className={`text-xs font-medium ${fits ? 'text-green-400' : crazes ? 'text-blue-400' : 'text-red-400'}`}>
+                    <div className={`text-xs font-medium ${fits ? 'text-green-600' : crazes ? 'text-blue-500' : 'text-red-500'}`}>
                       {fits ? '✓ Good fit' : crazes ? '↓ May craze' : '↑ May shiver'}
                     </div>
                     <div className="text-xs text-neutral-400">

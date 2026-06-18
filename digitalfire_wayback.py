@@ -202,7 +202,6 @@ def parse_for_section(section: str, soup: BeautifulSoup, slug: str) -> dict | No
     if section == "recipe":
         heading = name_raw
         code, rname = (heading.split(" - ", 1) + [""])[:2] if " - " in heading else (heading, "")
-        desc = first_next_p(h1, lambda t: bool(t) and not t.lower().startswith("modified"))
         materials = []
         for table in soup.find_all("table", class_="table-sm"):
             for tr in table.find_all("tr"):
@@ -220,7 +219,8 @@ def parse_for_section(section: str, soup: BeautifulSoup, slug: str) -> dict | No
             if materials:
                 break
         return {**base, "code": clean(code), "name": clean(rname),
-                "description": desc, "materials": materials}
+                "source_url": f"https://digitalfire.com/recipe/{slug}",
+                "materials": materials}
 
     if section == "temperature":
         h4 = soup.find("h4", class_="text-muted")

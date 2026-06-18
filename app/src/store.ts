@@ -38,14 +38,43 @@ async function fetchJson<T>(name: string): Promise<T> {
   return r.json()
 }
 
-/** Base JSON merged with the user's local IndexedDB edits/additions. */
+/** Fetch D1 admin overrides (silently returns empty on error or local dev). */
+async function fetchOverrides(): Promise<Record<string, Record<string, unknown | null>>> {
+  try {
+    const r = await fetch('/api/overrides')
+    if (!r.ok) return {}
+    return r.json()
+  } catch {
+    return {}
+  }
+}
+
+function applyOverrides<T extends { id: string }>(base: T[], overrides: Record<string, unknown | null>): T[] {
+  if (!overrides || Object.keys(overrides).length === 0) return base
+  const result: T[] = []
+  for (const item of base) {
+    const ov = overrides[item.id]
+    if (ov === null) continue  // admin-deleted
+    if (ov !== undefined) result.push(ov as T)
+    else result.push(item)
+  }
+  // Append admin-created records (not in base)
+  const baseIds = new Set(base.map(x => x.id))
+  for (const [id, ov] of Object.entries(overrides)) {
+    if (!baseIds.has(id) && ov !== null) result.push(ov as T)
+  }
+  return result
+}
+
+/** Base JSON merged with admin D1 overrides, then user's local IndexedDB edits. */
 export async function loadDataset(): Promise<Dataset> {
-  const [materials, oxides, recipes, minerals, temperatures] = await Promise.all([
+  const [materials, oxides, recipes, minerals, temperatures, adminOverrides] = await Promise.all([
     fetchJson<Material[]>('materials'),
     fetchJson<Oxide[]>('oxides'),
     fetchJson<Recipe[]>('recipes'),
     fetchJson<Mineral[]>('minerals'),
     fetchJson<Temperature[]>('temperatures'),
+    fetchOverrides(),
   ])
   const d = await db()
   const [mEdits, oEdits, rEdits] = await Promise.all([
@@ -54,9 +83,9 @@ export async function loadDataset(): Promise<Dataset> {
     d.getAll('recipes'),
   ])
   return {
-    materials: merge(materials, mEdits as Material[]),
-    oxides: merge(oxides, oEdits as Oxide[]),
-    recipes: merge(recipes, rEdits as Recipe[]),
+    materials: merge(applyOverrides(materials, adminOverrides.materials ?? {}), mEdits as Material[]),
+    oxides: merge(applyOverrides(oxides, adminOverrides.oxides ?? {}), oEdits as Oxide[]),
+    recipes: merge(applyOverrides(recipes, adminOverrides.recipes ?? {}), rEdits as Recipe[]),
     minerals,
     temperatures,
   }
@@ -120,7 +149,7 @@ export function buildSearch(ds: Dataset): MiniSearch<SearchDoc> {
       ref: r.id,
       type: 'recipe' as const,
       title: `${r.code} — ${r.name}`,
-      subtitle: r.description || '',
+      subtitle: r.name || '',
     })),
     ...ds.minerals.map((m) => ({
       id: `mineral:${m.id}`,
@@ -140,7 +169,7 @@ export function buildSearch(ds: Dataset): MiniSearch<SearchDoc> {
   const mini = new MiniSearch<SearchDoc>({
     fields: ['title', 'subtitle'],
     storeFields: ['ref', 'type', 'title', 'subtitle'],
-    searchOptions: { prefix: true, fuzzy: 0.2, boost: { title: 2 } },
+    searchOptions: { prefix: true, fuzzy: 0.1, boost: { title: 3 } },
   })
   mini.addAll(docs)
   return mini

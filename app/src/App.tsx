@@ -9,6 +9,7 @@ import { FiringTimeline, parseTempEvents } from './components/FiringTimeline'
 import { MaterialForm } from './MaterialForm'
 import { GlazeCalc } from './GlazeCalc'
 import { ThermalCalc } from './ThermalCalc'
+import { Admin } from './Admin'
 import { analysisToFormula, FLUX_OXIDES } from './chem'
 import { NotebookPanel } from './components/NotebookPanel'
 import { PrintReport } from './components/PrintReport'
@@ -249,6 +250,7 @@ function Routed({
   onSaveMaterial: (m: Material) => void
 }) {
   const [view, a, b] = parseHash(hash)
+  if (view === 'admin') return <Admin />
   switch (view || 'materials') {
     case 'material':
       return <MaterialDetail m={ds.materials.find((x) => x.id === a)} ds={ds} />

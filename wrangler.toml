@@ -1,0 +1,8 @@
+name = "digitalfire"
+compatibility_date = "2024-09-23"
+pages_build_output_dir = "app/dist"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "digitalfire"
+database_id = "b6aaeb47-d516-42fd-81ac-0fd45809374c"

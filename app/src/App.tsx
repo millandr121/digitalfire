@@ -239,7 +239,7 @@ function Routed({
     case 'minerals':
       return <MineralList items={ds.minerals} />
     case 'mineral':
-      return <MineralDetail m={ds.minerals.find((x) => x.id === a)} />
+      return <MineralDetail m={ds.minerals.find((x) => x.id === a)} ds={ds} />
     case 'temperatures':
       return <TemperatureList items={ds.temperatures} />
     case 'temperature':
@@ -798,56 +798,227 @@ function RecipeDetail({ r, ds }: { r: Recipe | undefined; ds: Dataset }) {
   )
 }
 
+const MINERAL_INFO: Record<string, { formula?: string; family: string; note?: string }> = {
+  'Kaolinite':                  { formula: 'Al₂Si₂O₅(OH)₄',        family: 'Clay Minerals', note: 'Primary mineral in kaolin/china clay; fires to mullite above 980°C' },
+  'Halloysite':                 { formula: 'Al₂Si₂O₅(OH)₄·2H₂O',   family: 'Clay Minerals', note: 'Tubular form of kaolinite; higher plasticity' },
+  'Montmorillonite, Bentonite': { formula: '(Na,Ca)₀.₃(Al,Mg)₂Si₄O₁₀(OH)₂·nH₂O', family: 'Clay Minerals', note: 'Highly plastic smectite; main component of bentonite; used as plasticizer' },
+  'Smectite':    { formula: '(Na,Ca)₀.₃(Al,Mg)₂Si₄O₁₀(OH)₂·nH₂O', family: 'Clay Minerals', note: 'Swelling clay group; includes bentonite and montmorillonite' },
+  'Illite':      { formula: '(K,H₃O)(Al,Mg,Fe)₂(Si,Al)₄O₁₀(OH)₂', family: 'Clay Minerals', note: 'Common in fireclays and shales; non-swelling' },
+  'Dickite':     { formula: 'Al₂Si₂O₅(OH)₄',  family: 'Clay Minerals', note: 'Polymorph of kaolinite' },
+  'Nacrite':     { formula: 'Al₂Si₂O₅(OH)₄',  family: 'Clay Minerals', note: 'Polymorph of kaolinite' },
+  'Nontronite':  { formula: 'Na₀.₃Fe₂³⁺Si₃AlO₁₀(OH)₂·4H₂O', family: 'Clay Minerals', note: 'Iron-rich smectite; contributes color' },
+  'Hectorite':   { formula: 'Na₀.₃(Mg,Li)₃Si₄O₁₀(OH)₂', family: 'Clay Minerals', note: 'Magnesium lithium smectite; used in specialty ceramics' },
+  'Saponite':    { formula: 'Ca₀.₂₅(Mg,Fe)₃(Si,Al)₄O₁₀(OH)₂·4H₂O', family: 'Clay Minerals' },
+  'Attapulgite, Palygorskite': { formula: '(Mg,Al)₂Si₄O₁₀(OH)·4H₂O', family: 'Clay Minerals', note: 'Fibrous clay; used as binder and plasticizer' },
+  'Sepiolite':   { formula: 'Mg₄Si₆O₁₅(OH)₂·6H₂O', family: 'Clay Minerals', note: 'Fibrous magnesium silicate; high surface area' },
+  'Chlorite':    { formula: '(Mg,Fe)₃(Si,Al)₄O₁₀(OH)₂·(Mg,Fe)₃(OH)₆', family: 'Clay Minerals' },
+  'Allophane':   { formula: 'Al₂O₃·SiO₂·2.5H₂O', family: 'Clay Minerals', note: 'Amorphous aluminosilicate; common in volcanic soils' },
+  'Pyrophyllite':{ formula: 'Al₂Si₄O₁₀(OH)₂', family: 'Clay Minerals', note: 'Similar to talc; used in high-temperature refractory ceramics' },
+  'Ball Clay':   { formula: '(Al-Si mixture)', family: 'Clay Minerals', note: 'Highly plastic secondary kaolin; contains illite, kaolinite, quartz; key body ingredient' },
+  'Feldspar':    { formula: 'KAlSi₃O₈ / NaAlSi₃O₈ / CaAl₂Si₂O₈', family: 'Feldspars', note: 'Most important glaze flux mineral group; melts around cone 8–10' },
+  'K-Feldspar':  { formula: 'KAlSi₃O₈', family: 'Feldspars', note: 'Orthoclase/microcline; major source of K₂O flux in glazes' },
+  'Na-Feldspar': { formula: 'NaAlSi₃O₈', family: 'Feldspars', note: 'Albite end-member; source of Na₂O flux; lower melting than K-spar' },
+  'Albite':      { formula: 'NaAlSi₃O₈', family: 'Feldspars', note: 'Sodium feldspar end-member; melts ~1100°C' },
+  'Anorthite':   { formula: 'CaAl₂Si₂O₈', family: 'Feldspars', note: 'Calcium feldspar end-member; very refractory' },
+  'Microcline, Anorthoclase': { formula: 'KAlSi₃O₈', family: 'Feldspars', note: 'Low-temperature triclinic K-feldspar polymorph' },
+  'Sanidine':    { formula: '(K,Na)AlSi₃O₈', family: 'Feldspars', note: 'High-temperature monoclinic K-feldspar; volcanic origin' },
+  'Plagioclase': { formula: 'NaAlSi₃O₈ → CaAl₂Si₂O₈', family: 'Feldspars', note: 'Continuous solid solution series from albite to anorthite' },
+  'Oligoclase':  { formula: '(Na,Ca)(Al,Si)AlSi₂O₈', family: 'Feldspars', note: 'Plagioclase ~10–30% anorthite content' },
+  'Celsian':     { formula: 'BaAl₂Si₂O₈', family: 'Feldspars', note: 'Barium feldspar; very refractory; low thermal expansion' },
+  'Quartz':      { formula: 'SiO₂', family: 'Silica', note: 'Stable crystalline silica; undergoes inversion at 573°C — critical in body/glaze fit' },
+  'Amorphous Silica': { formula: 'SiO₂', family: 'Silica', note: 'Non-crystalline; lower inversion risk than quartz' },
+  'Chalcedony':  { formula: 'SiO₂', family: 'Silica', note: 'Microcrystalline quartz; cryptocrystalline texture' },
+  'Quartzite':   { formula: 'SiO₂', family: 'Silica', note: 'Metamorphic rock composed almost entirely of quartz' },
+  'Calcite':     { formula: 'CaCO₃', family: 'Carbonates', note: 'Main component of whiting; decomposes ~800°C releasing CO₂ to give CaO flux' },
+  'Dolomite':    { formula: 'CaMg(CO₃)₂', family: 'Carbonates', note: 'Dual source of CaO + MgO flux; decomposes 750–900°C' },
+  'Dolomitic Limestone, Dolostone': { formula: 'CaMg(CO₃)₂ + CaCO₃', family: 'Carbonates' },
+  'Magnesite':   { formula: 'MgCO₃', family: 'Carbonates', note: 'Source of MgO; decomposes ~400°C' },
+  'Aragonite':   { formula: 'CaCO₃', family: 'Carbonates', note: 'Metastable CaCO₃ polymorph; converts to calcite at ~400°C' },
+  'Trona':       { formula: 'Na₃H(CO₃)₂·2H₂O', family: 'Carbonates', note: 'Natural soda ash; source of Na₂O flux' },
+  'Azurite':     { formula: 'Cu₃(CO₃)₂(OH)₂', family: 'Carbonates', note: 'Blue copper carbonate; colorant mineral' },
+  'Malachite':   { formula: 'Cu₂CO₃(OH)₂', family: 'Carbonates', note: 'Green copper carbonate; colorant mineral' },
+  'Cerussite':   { formula: 'PbCO₃', family: 'Carbonates', note: 'Lead carbonate; historic glaze source — toxic' },
+  'Witherite':   { formula: 'BaCO₃', family: 'Carbonates', note: 'Barium carbonate; source of BaO flux; toxic if soluble' },
+  'Limestone':   { formula: 'CaCO₃', family: 'Carbonates', note: 'Sedimentary rock; raw calcium source; used in slips and bodies' },
+  'Corundum':    { formula: 'Al₂O₃', family: 'Oxides', note: 'Pure alumina; extremely refractory (mp 2072°C); kiln furniture' },
+  'Hematite':    { formula: 'Fe₂O₃', family: 'Oxides', note: 'Red iron oxide; strong red-brown colorant; fluxes at high temp' },
+  'Magnetite':   { formula: 'Fe₃O₄', family: 'Oxides', note: 'Black iron oxide; fluxes at lower temps; speckle in reduction' },
+  'Rutile':      { formula: 'TiO₂', family: 'Oxides', note: 'Titanium dioxide; opacifier and variegation agent in glazes' },
+  'Anatase':     { formula: 'TiO₂', family: 'Oxides', note: 'Metastable TiO₂; converts irreversibly to rutile on firing' },
+  'Brookite':    { formula: 'TiO₂', family: 'Oxides', note: 'Rare TiO₂ polymorph' },
+  'Illmenite':   { formula: 'FeTiO₃', family: 'Oxides', note: 'Iron titanate; source of both Fe and Ti; used for texture/speckle' },
+  'Cassiterite': { formula: 'SnO₂', family: 'Oxides', note: 'Tin oxide; traditional opacifier for majolica and tin-glazed earthenware' },
+  'Baddeleyite': { formula: 'ZrO₂', family: 'Oxides', note: 'Natural zirconia; refractory opacifier; high chemical resistance' },
+  'Brucite':     { formula: 'Mg(OH)₂', family: 'Oxides', note: 'Magnesium hydroxide; converts to MgO on firing' },
+  'Gibbsite':    { formula: 'Al(OH)₃', family: 'Oxides', note: 'Aluminium hydroxide; found in bauxite; calcines to Al₂O₃' },
+  'Bauxite':     { formula: 'Al(OH)₃ + AlO(OH) + Al₂O₃', family: 'Oxides', note: 'Main aluminium ore; contains gibbsite, boehmite, diaspore' },
+  'Manganite':   { formula: 'MnO(OH)', family: 'Oxides', note: 'Manganese oxyhydroxide; colorant' },
+  'Limonite':    { formula: 'FeO(OH)·nH₂O', family: 'Oxides', note: 'Hydrated iron oxide; yellow-brown colorant in natural clays' },
+  'Talc':        { formula: 'Mg₃Si₄O₁₀(OH)₂', family: 'Sheet Silicates', note: 'Key MgO source; reduces crazing; important in low-fire bodies' },
+  'Steatite':    { formula: 'Mg₃Si₄O₁₀(OH)₂', family: 'Sheet Silicates', note: 'Massive talc rock; excellent electrical insulator ceramics' },
+  'Muscovite':   { formula: 'KAl₂(AlSi₃O₁₀)(OH)₂', family: 'Sheet Silicates', note: 'Potash mica; contributes K₂O + Al₂O₃; common in granites' },
+  'Biotite':     { formula: 'K(Mg,Fe)₃(AlSi₃O₁₀)(OH)₂', family: 'Sheet Silicates', note: 'Iron-magnesium mica; decomposes before feldspars on firing' },
+  'Lepidolite':  { formula: 'K(Li,Al)₃(AlSi)₄O₁₀(OH,F)₂', family: 'Sheet Silicates', note: 'Lithium mica; source of Li₂O flux; powerful melter' },
+  'Phlogopite Mica': { formula: 'KMg₃(AlSi₃O₁₀)(OH)₂', family: 'Sheet Silicates', note: 'Magnesium mica; refractory' },
+  'Potash Mica': { formula: 'KAl₂(AlSi₃O₁₀)(OH)₂', family: 'Sheet Silicates', note: 'Muscovite-type mica' },
+  'Soda Mica':   { formula: 'NaAl₂(AlSi₃O₁₀)(OH)₂', family: 'Sheet Silicates', note: 'Paragonite; sodium analogue of muscovite' },
+  'Sericite':    { formula: 'KAl₂(AlSi₃O₁₀)(OH)₂', family: 'Sheet Silicates', note: 'Fine-grained muscovite; contributes flux and Al₂O₃' },
+  'Mica':        { formula: '(K,Na,Ca)(Al,Mg,Fe)₂(Si,Al)₄O₁₀(OH)₂', family: 'Sheet Silicates', note: 'Platy silicate group; common in granites and metamorphic rocks' },
+  'Tremolite':   { formula: 'Ca₂Mg₅Si₈O₂₂(OH)₂', family: 'Sheet Silicates', note: 'Calcium magnesium amphibole; refractory; asbestiform variety hazardous' },
+  'Serpentine':  { formula: 'Mg₃Si₂O₅(OH)₄', family: 'Sheet Silicates', note: 'Hydrated magnesium silicate group; source of MgO' },
+  'Chrysotile':  { formula: 'Mg₃Si₂O₅(OH)₄', family: 'Sheet Silicates', note: 'Fibrous serpentine (white asbestos) — hazardous' },
+  'Asbestos':    { formula: '(Mg,Fe)₇Si₈O₂₂(OH)₂', family: 'Sheet Silicates', note: 'Fibrous silicate minerals — carcinogenic, regulated' },
+  'Nepheline':   { formula: '(Na,K)AlSiO₄', family: 'Framework Silicates', note: 'Feldspathoid; active flux with no free silica — used in nepheline syenite' },
+  'Leucite':     { formula: 'KAlSi₂O₆', family: 'Framework Silicates', note: 'Potassium feldspathoid; very low thermal expansion' },
+  'Sodalite':    { formula: 'Na₈(AlSiO₄)₆Cl₂', family: 'Framework Silicates', note: 'Blue feldspathoid; chlorine-bearing' },
+  'Zeolite':     { formula: '(Na,K,Ca)(AlSi)₂O₄·nH₂O', family: 'Framework Silicates', note: 'Porous aluminosilicates; used for ion exchange and catalysis' },
+  'Anorthosite': { formula: '(Na,Ca)(Al,Si)AlSi₂O₈', family: 'Framework Silicates', note: 'Igneous rock dominated by plagioclase feldspar' },
+  'Aplite':      { formula: '(K-Na-Al-Si)', family: 'Framework Silicates', note: 'Fine-grained granitic rock; feldspars + quartz; used as feldspar substitute' },
+  'Granite':     { formula: '(K-Na-Al-Si-Ca)', family: 'Framework Silicates', note: 'Igneous rock; quartz + feldspar + mica; ground granite used in bodies' },
+  'Pegmatite':   { formula: '(K-Na-Al-Si)', family: 'Framework Silicates', note: 'Coarse igneous rock; major source of potash feldspar and lithium minerals' },
+  'Olivine':     { formula: '(Mg,Fe)₂SiO₄', family: 'Nesosilicates', note: 'Magnesium iron silicate; converts to forsterite + enstatite on firing' },
+  'Fayalite':    { formula: 'Fe₂SiO₄', family: 'Nesosilicates', note: 'Iron olivine end-member; fluxes at lower temperatures' },
+  'Kyanite':     { formula: 'Al₂SiO₅', family: 'Nesosilicates', note: 'Converts to mullite + silica above 1300°C; used in refractories' },
+  'Andalusite':  { formula: 'Al₂SiO₅', family: 'Nesosilicates', note: 'Converts to mullite on firing; used in kiln furniture and refractories' },
+  'Sillimanite': { formula: 'Al₂SiO₅', family: 'Nesosilicates', note: 'High-temperature Al₂SiO₅ polymorph; refractory' },
+  'Mullite':     { formula: '3Al₂O₃·2SiO₂', family: 'Nesosilicates', note: 'Primary fired ceramic phase; forms from kaolin above 980°C; gives strength and whiteness' },
+  'Willemite':   { formula: 'Zn₂SiO₄', family: 'Nesosilicates', note: 'Zinc silicate; crystallizes in zinc matte glazes at cone 6' },
+  'Beryl':       { formula: 'Be₃Al₂Si₆O₁₈', family: 'Nesosilicates', note: 'Beryllium aluminosilicate; gem varieties include emerald and aquamarine' },
+  'Wollastonite': { formula: 'CaSiO₃', family: 'Chain Silicates', note: 'Calcium metasilicate; promotes whiteness, reduces shrinkage; used in tile bodies' },
+  'Diopside':    { formula: 'CaMgSi₂O₆', family: 'Chain Silicates', note: 'Calcium magnesium pyroxene; crystallizes in some high-fire glazes' },
+  'Gypsum':      { formula: 'CaSO₄·2H₂O', family: 'Sulfates', note: 'Calcium sulfate dihydrate; primary material for plaster molds and bats' },
+  'Gypsum, Calcium sulphate': { formula: 'CaSO₄·2H₂O', family: 'Sulfates' },
+  'Selenite':    { formula: 'CaSO₄·2H₂O', family: 'Sulfates', note: 'Transparent crystalline gypsum form' },
+  'Barytes, Barite': { formula: 'BaSO₄', family: 'Sulfates', note: 'Barium sulfate; dense, chemically inert; used as filler' },
+  'Alunite':     { formula: 'KAl₃(SO₄)₂(OH)₆', family: 'Sulfates', note: 'Potassium aluminum sulfate mineral' },
+  'Sylvite':     { formula: 'KCl', family: 'Halides', note: 'Potassium chloride; water soluble; minor K source' },
+  'Kernite':     { formula: 'Na₂B₄O₆(OH)₂·3H₂O', family: 'Borates', note: 'Sodium borate mineral; key source of B₂O₃ for glazes' },
+  'Boracite':    { formula: 'Mg₃B₇O₁₃Cl', family: 'Borates', note: 'Magnesium borate chloride; less common borate mineral' },
+  'Hydroboracite': { formula: 'CaMgB₆O₁₁·6H₂O', family: 'Borates', note: 'Calcium magnesium borate' },
+  'Borate Minerals': { formula: 'various Na/Ca/Mg borates', family: 'Borates', note: 'Group of boron-bearing minerals; essential for low-fire glazes' },
+  'Iron Pyrite': { formula: 'FeS₂', family: 'Sulfides', note: "Fool's gold; causes bloating if present in clay body" },
+  'Galena':      { formula: 'PbS', family: 'Sulfides', note: 'Lead sulfide ore; historic glaze source — highly toxic' },
+  'Sphalerite':  { formula: 'ZnS', family: 'Sulfides', note: 'Zinc sulfide; zinc ore mineral' },
+  'Bornite':     { formula: 'Cu₅FeS₄', family: 'Sulfides', note: 'Copper iron sulfide; copper ore' },
+  'Berthierite': { formula: 'FeSb₂S₄', family: 'Sulfides' },
+  'Stibnite':    { formula: 'Sb₂S₃', family: 'Sulfides', note: 'Antimony sulfide; toxic' },
+  'Amblygonite': { formula: 'LiAlPO₄F', family: 'Phosphates', note: 'Lithium aluminium fluorophosphate; source of Li₂O flux' },
+  'Monazite':    { formula: '(Ce,La,Nd,Th)PO₄', family: 'Phosphates', note: 'Rare earth phosphate; slightly radioactive' },
+  'Vanadinite':  { formula: 'Pb₅(VO₄)₃Cl', family: 'Other', note: 'Lead vanadate chloride; orange-red mineral specimen' },
+  'Organics':    { formula: '(variable)', family: 'Other', note: 'Organic matter in clays; burns out below 600°C; causes carbon coring if too fast' },
+  'Shale':       { formula: '(Al-Si-Fe-Ca)', family: 'Other', note: 'Finely laminated clay-rich sedimentary rock; fired for brick and structural tile' },
+  'Slate':       { formula: '(Al-Si-Fe)', family: 'Other', note: 'Low-grade metamorphic rock from shale; contains illite and chlorite' },
+  'Laterite':    { formula: '(Fe,Al hydrous oxides)', family: 'Other', note: 'Tropical weathering product; rich in iron and aluminium oxides' },
+}
+
+const FAMILY_ORDER = [
+  'Clay Minerals', 'Silica', 'Feldspars', 'Sheet Silicates', 'Framework Silicates',
+  'Carbonates', 'Oxides', 'Nesosilicates', 'Chain Silicates',
+  'Borates', 'Sulfates', 'Halides', 'Sulfides', 'Phosphates', 'Other',
+]
+
 function MineralList({ items }: { items: Mineral[] }) {
   const [filter, setFilter] = useState('')
   const q = filter.trim().toLowerCase()
-  const filtered = q ? items.filter((m) => `${m.name} ${m.formula}`.toLowerCase().includes(q)) : items
+
+  const enriched = items.map((m) => ({ ...m, info: MINERAL_INFO[m.name] }))
+
+  if (q) {
+    const hits = enriched.filter((m) =>
+      `${m.name} ${m.info?.formula ?? m.formula ?? ''} ${m.info?.note ?? ''}`.toLowerCase().includes(q)
+    )
+    return (
+      <div className="space-y-3">
+        <ListHeader title="Minerals" count={hits.length} total={items.length} filter={filter} setFilter={setFilter} />
+        <div className="divide-y divide-neutral-100 rounded border border-neutral-200">
+          {hits.map((m) => <MineralRow key={m.id} m={m} info={m.info} />)}
+        </div>
+      </div>
+    )
+  }
+
+  const byFamily = new Map<string, typeof enriched>()
+  for (const m of enriched) {
+    const fam = m.info?.family ?? 'Other'
+    if (!byFamily.has(fam)) byFamily.set(fam, [])
+    byFamily.get(fam)!.push(m)
+  }
+
+  const families = FAMILY_ORDER.filter((f) => byFamily.has(f))
+
   return (
-    <div>
-      <ListHeader title="Minerals" count={filtered.length} total={items.length} filter={filter} setFilter={setFilter} />
-      <ul className="divide-y divide-neutral-100 overflow-hidden rounded border border-neutral-200">
-        {filtered.map((m) => (
-          <li key={m.id}>
-            <button
-              onClick={() => go(`#/mineral/${encodeURIComponent(m.id)}`)}
-              className="w-full px-3 py-2 text-left hover:bg-neutral-50"
-            >
-              <div className="text-neutral-900">{m.name}</div>
-              <div className="font-mono text-xs text-neutral-500">{m.formula}</div>
-            </button>
-          </li>
+    <div className="space-y-3">
+      <ListHeader title="Minerals" count={items.length} total={items.length} filter={filter} setFilter={setFilter} />
+      <div className="space-y-2">
+        {families.map((fam) => (
+          <details key={fam} open={['Clay Minerals', 'Feldspars', 'Silica', 'Carbonates', 'Oxides'].includes(fam)}>
+            <summary className="cursor-pointer select-none rounded bg-neutral-100 px-3 py-1.5 text-xs font-semibold uppercase tracking-wide text-neutral-600 hover:bg-neutral-200">
+              {fam} <span className="font-normal text-neutral-400">({byFamily.get(fam)!.length})</span>
+            </summary>
+            <div className="mt-1 divide-y divide-neutral-100 rounded border border-neutral-200">
+              {byFamily.get(fam)!.map((m) => <MineralRow key={m.id} m={m} info={m.info} />)}
+            </div>
+          </details>
         ))}
-      </ul>
+      </div>
     </div>
   )
 }
 
-function MineralDetail({ m }: { m: Mineral | undefined }) {
+function MineralRow({ m, info }: { m: Mineral; info: typeof MINERAL_INFO[string] | undefined }) {
+  const formula = info?.formula ?? m.formula
+  return (
+    <div className="px-3 py-2">
+      <div className="flex items-baseline gap-2">
+        <span className="font-medium text-neutral-900">{m.name}</span>
+        {formula && <span className="font-mono text-xs text-neutral-400">{formula}</span>}
+      </div>
+      {info?.note && <p className="mt-0.5 text-xs text-neutral-500">{info.note}</p>}
+    </div>
+  )
+}
+
+function MineralDetail({ m, ds }: { m: Mineral | undefined; ds: Dataset }) {
   if (!m) return <NotFound what="Mineral" />
+  const info = MINERAL_INFO[m.name]
+  const formula = info?.formula ?? m.formula
+  const mq = m.name.toLowerCase()
+  const related = ds.materials.filter((mat) => {
+    const mn = mat.name.toLowerCase()
+    return mn.includes(mq) || mq.includes(mn.replace(/\s*\(.*\)/, '').trim())
+  }).slice(0, 8)
+
   return (
     <article className="space-y-4">
       <div>
         <BackLink to="#/minerals" label="Minerals" />
         <h1 className="mt-1 text-2xl font-semibold text-neutral-900">{m.name}</h1>
-        <p className="font-mono text-sm text-neutral-500">{m.formula}</p>
+        {formula && <p className="font-mono text-sm text-neutral-500">{formula}</p>}
+        {info?.family && <p className="text-xs text-neutral-400">{info.family}</p>}
       </div>
+      {info?.note && (
+        <Card>
+          <p className="text-sm text-neutral-700">{info.note}</p>
+        </Card>
+      )}
       {m.analysis.length > 0 && (
         <Card>
           <h2 className="mb-3 text-sm uppercase tracking-wide text-neutral-500">Oxide Analysis</h2>
           <AnalysisChart rows={m.analysis} />
         </Card>
       )}
-      {Object.keys(m.data).length > 0 && (
+      {related.length > 0 && (
         <Card>
-          <h2 className="mb-2 text-sm uppercase tracking-wide text-neutral-500">Data</h2>
-          <dl className="space-y-1 text-sm">
-            {Object.entries(m.data).map(([k, v]) => (
-              <div key={k} className="flex justify-between gap-4 border-b border-neutral-100 py-1">
-                <dt className="text-neutral-500">{k}</dt>
-                <dd className="text-right text-neutral-800">{v}</dd>
-              </div>
+          <h2 className="mb-2 text-sm uppercase tracking-wide text-neutral-500">Related Materials in Database</h2>
+          <ul className="space-y-1">
+            {related.map((mat) => (
+              <li key={mat.id}>
+                <button onClick={() => go(`#/material/${mat.id}`)} className="text-sm text-neutral-700 hover:text-neutral-900 hover:underline">
+                  {mat.name}
+                </button>
+              </li>
             ))}
-          </dl>
+          </ul>
         </Card>
       )}
       <p className="text-xs text-neutral-400">Source: {m.source}</p>

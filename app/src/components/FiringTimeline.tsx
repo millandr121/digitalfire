@@ -26,7 +26,7 @@ interface Props {
 
 const MIN_C = 0
 const MAX_C = 1400
-const PAD = { top: 16, right: 16, bottom: 40, left: 16 }
+const PAD = { top: 16, right: 16, bottom: 72, left: 16 }
 
 // Approximate cone reference points for context marks
 const CONE_MARKS: { label: string; temp: number; color: string }[] = [
@@ -54,10 +54,12 @@ export function FiringTimeline({ events }: Props) {
   const [hovered, setHovered] = useState<string | null>(null)
 
   const W = 700
-  const H = 120
+  const H = 180
   const trackW = W - PAD.left - PAD.right
   const trackY = PAD.top + 28
   const trackH = 12
+  const LANE_SPACING = 18
+  const LANE_BASE = trackY + trackH + 10
 
   const px = (c: number) => PAD.left + ((c - MIN_C) / (MAX_C - MIN_C)) * trackW
 
@@ -113,11 +115,13 @@ export function FiringTimeline({ events }: Props) {
             </g>
           ))}
 
-          {/* Event markers */}
-          {inRange.map((e) => {
+          {/* Event markers — staggered across 3 lanes to reduce overlap */}
+          {inRange.map((e, i) => {
             const x = px(e.tempC!)
             const isHov = hovered === e.id
             const hasRange = e.tempHi != null && e.tempHi <= MAX_C
+            const lane = i % 3
+            const cy = LANE_BASE + lane * LANE_SPACING
             return (
               <g key={e.id}
                 onMouseEnter={() => setHovered(e.id)}
@@ -133,13 +137,15 @@ export function FiringTimeline({ events }: Props) {
                 )}
                 <line
                   x1={x} x2={x}
-                  y1={trackY - 1} y2={trackY + trackH + 1}
-                  stroke={isHov ? '#4f46e5' : '#6366f1'}
-                  strokeWidth={isHov ? 2 : 1.5}
+                  y1={trackY + trackH} y2={cy - (isHov ? 4 : 3)}
+                  stroke={isHov ? '#4f46e5' : '#c7d2fe'}
+                  strokeWidth={isHov ? 1.5 : 1}
                 />
                 <circle
-                  cx={x} cy={trackY + trackH + 6} r={isHov ? 4 : 3}
+                  cx={x} cy={cy} r={isHov ? 5 : 4}
                   fill={isHov ? '#4f46e5' : '#818cf8'}
+                  stroke={isHov ? '#3730a3' : 'none'}
+                  strokeWidth="1"
                 />
               </g>
             )
@@ -150,11 +156,11 @@ export function FiringTimeline({ events }: Props) {
             <g key={t}>
               <line
                 x1={px(t)} x2={px(t)}
-                y1={trackY + trackH + 14} y2={trackY + trackH + 18}
+                y1={LANE_BASE + 2 * LANE_SPACING + 10} y2={LANE_BASE + 2 * LANE_SPACING + 14}
                 stroke="#9ca3af" strokeWidth="1"
               />
               <text
-                x={px(t)} y={trackY + trackH + 27}
+                x={px(t)} y={LANE_BASE + 2 * LANE_SPACING + 23}
                 fontSize="9" fill="#9ca3af" textAnchor="middle"
               >
                 {t}°C

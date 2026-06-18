@@ -27,14 +27,14 @@ jobs:
         run: python digitalfire_wayback.py --audit
 
       - name: Show audit results
-        run: cat missing_pages.json | python3 -c "
-import json, sys
-d = json.load(sys.stdin)
-total = sum(len(v) for v in d.values())
-for k, v in d.items():
-    print(f'{k:12}: {len(v)} missing')
-print(f'Total: {total}')
-"
+        run: |
+          python3 -c "
+          import json, sys
+          d = json.load(open('missing_pages.json'))
+          total = sum(len(v) for v in d.values())
+          [print(f'{k:12}: {len(v)} missing') for k, v in d.items()]
+          print(f'Total: {total}')
+          "
 
       - name: Fill missing pages
         run: |
@@ -46,10 +46,11 @@ print(f'Total: {total}')
 
       - name: Show results
         run: |
-          for f in app/public/data/*.json; do
-            count=$(python3 -c "import json; print(len(json.load(open('$f'))))")
-            echo "$f: $count records"
-          done
+          python3 -c "
+          import json, pathlib
+          for f in sorted(pathlib.Path('app/public/data').glob('*.json')):
+              print(f'{f.name}: {len(json.loads(f.read_text()))} records')
+          "
 
       - name: Commit updated data
         run: |

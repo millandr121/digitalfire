@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="../favicon.svg">
+<link rel="mask-icon" href="../mask-icon.svg" color="#000000">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<title>Clays for Ovens and Heaters</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<meta name="author" content="Tony Hansen">
+<style>
+.flexinline { width: 50%; height: auto; clear:left; margin: 10px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexinline { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexright50 { width: 50%; height: auto; float: right; margin: 5px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexright50 { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexright33 { width: 33%; height: auto; float: right; margin: 5px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexright33 { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexright25 { width: 25%; height: auto; float: right; margin: 5px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexright25 { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexleft50 { width: 50%; height: auto; float: left; margin: 5px 15px 10px 0px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexleft50 { width: 100%; height: auto; margin: 5px 10px 10px 0px; border: none; padding: none; } }
+.flexleft33 { width: 33%; height: auto; float: left; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexleft33 { width: 100%; height: auto; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; } }
+.flexleft25 { width: 25%; height: auto; float: left; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexleft25 { width: 100%; height: auto; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; } }
+.pictureseries { overflow:scroll; width:auto; height:200px; float:left; margin: 5px 10px 10px 0px; padding: 5px; font-size:60%; font-style:italic;}
+@media (max-width: 640px) { .pictureseries { overflow:scroll; width:auto; height:200px; float:left; margin: 5px 10px 10px 0px; border: padding: 5px; font-size:60%; font-style:italic;} }
+.L2 { margin-left:0px; }
+.L3 { margin-left:20px; color:#222222; }
+.L4 { margin-left:40px; color:#444444; }
+.L5 { margin-left:60px; color:#666666; }
+.L6 { margin-left:60px; color:#888888; }
+h2 { color:#222222; }
+h3 { color:#444444; }
+h4 { color:#666666; }
+h5 { color:#888888; }
+
+</style>
+
+<meta name="google-site-verification" content="wquYW_n-3QEfIzDfV--8ElUewf7TIt04RGo55GfZySU" />
+<meta name="have-i-been-pwned-verification" value="9223dcee7de5c9622c2a2abcff4adc81">
+<script>
+function validateForm() {
+	var x = document.forms["emailform1"]["name1"].value;
+	var r = true;
+	if (x == "") { // alert("A name is required."); 
+		document.getElementById("name1").textContent="Name Required";
+		document.getElementById("name1").style.color="red";
+		// document.emailform1.name1.focus() ; # does not work, should be getelementbyid
+		r = false; 
+	} else {
+		document.getElementById("name1").textContent="Name";
+		document.getElementById("name1").style.color="black";
+	}
+	if (document.forms["emailform1"]["subject1"].value == "") { 
+		document.getElementById("subject1").textContent="Subject Required";
+		document.getElementById("subject1").style.color="red";
+		r = false; 
+	} else {
+		document.getElementById("subject1").textContent="Subject";
+		document.getElementById("subject1").style.color="black";
+	}			
+	if (document.forms["emailform1"]["msg1"].value == "") { 
+		document.getElementById("msg1").textContent="Message Required";
+		document.getElementById("msg1").style.color="red";
+		// alert("A message is required."); 
+		r = false; 
+	} else {
+		document.getElementById("msg1").textContent="Message";
+		document.getElementById("msg1").style.color="black";
+	}
+	var emailID = document.emailform1.email1.value;
+	atpos = emailID.indexOf("@");
+	dotpos = emailID.lastIndexOf(".");
+	if (atpos < 1 || ( dotpos - atpos < 2 )) {
+		document.getElementById("email1").textContent="Email Address Appears Invalid!";
+		document.getElementById("email1").style.color="red";
+		// alert("Your email address appears invalid.")
+		r = false;
+	} else {
+		document.getElementById("email1").textContent="Email Address";
+		document.getElementById("email1").style.color="black";
+	}
+	// Send the form
+	if (r == false) return false;
+	document.forms["emailform1"].submit();
+}
+</script>
+</head>
+<body>
+<p style="background-color:#ff9933; border-width:1px; padding:3px 10px 3px 10px; margin:0px 0px 3px 0px; font-size:80%; text-align:center;">
+Digitalfire will shut down on June 26. I no longer have the authority to grant exemption to a section in the Terms and Conditions of using material in the Insight-Live account from which I built the source material. While there are ways to comply with the take-down order, they are beyond my means because of how complex and large the site has become in the past 35+ years. It has been a wild ride for a shy prairie boy, thanks to everyone for your support. Insight-live.com is not affected by this.</p>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<a name="pagetop" class="navbar-brand" href="../home.html"><img src="../4sight/images/ReferenceLibrary.svg" height="40" alt=""></a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item"><a class="nav-link" href="../home.html">Home</a></li>
+			<li class="nav-item"><a class="nav-link" href="../oxide/list.html">Oxides</a></li>
+			<li class="nav-item"><a class="nav-link" href="../material/list.html">Materials</a></li>
+			<li class="nav-item"><a class="nav-link" href="../recipe/list.html">Recipes</a></li>
+			<li class="nav-item active"><a class="nav-link" href="list.html">Glossary <span class="sr-only">(current)</span></a></li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="clays+for+ovens+and+heaters.html#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Others</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" href="../article/list.html">Articles</a>
+					<a class="dropdown-item" href="../hazard/list.html">Hazards</a>
+					<a class="dropdown-item" href="../mineral/list.html">Minerals</a>
+					<a class="dropdown-item" href="../property/list.html">Properties</a>
+					<a class="dropdown-item" href="../schedule/list.html">Firing Schedules</a>
+					<a class="dropdown-item" href="../temperature/list.html">Temperatures</a>
+					<a class="dropdown-item" href="../trouble/list.html">Troubles</a>
+					<a class="dropdown-item" href="../test/list.html">Tests</a>
+					<a class="dropdown-item" href="../video/list.html">Media</a>
+					<a class="dropdown-item" href="../picture/list.html">Pictures</a>
+					<a class="dropdown-item" href="../typecode/list.html">Typecodes</a>
+					<a class="dropdown-item" href="../project/list.html">Projects</a>
+					<a class="dropdown-item" href="../consultants/list.html">Consultants</a>
+					<a class="dropdown-item" href="../schools/list.html">Schools</a>
+					<a class="dropdown-item" href="../stores/list.html">Stores</a>
+					<a class="dropdown-item" href="../potterytony/list.html">Don't Buy-A-Mug</a>
+					<div class="dropdown-divider"></div>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="../index.html">https://digitalfire.com</a>
+					<a class="dropdown-item" href="https://insight-live.com">Insight-Live.com</a>
+					<a class="dropdown-item" href="../index.html">Sign-Up</a>
+				</div>
+			</li>
+		</ul>
+		<form class="form-inline my-2 my-lg-0" action="https://digitalfire.com/index.php?searcharea=glossary" accept-charset="UTF-8" method="post">
+		<input name="searchfor" title="Search from home to search in all areas" maxlength="20" class="form-control mr-sm-2" aria-label="Search" placeholder="Search" autocorrect="off" autocapitalize="off" type="search" value=""><button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="searchbutton">Search</button>
+		</form>
+	</div>
+</nav>
+<div class="container"><p>Operation timed out after 2000 milliseconds with 0 bytes received</p>Error: API server returned an invalid response for glossary<p style="clear:left"></p><h1>Clays for Ovens and Heaters</h1>
+<p>Thermal mass heating ovens (such as Rocket Mass ovens or heaters, Cob ovens, pizza or baking ovens) employ heat sinking <a  href="mechanism.html">mechanisms</a> to store energy. Their construction often involves the use of heavy blocks (purchased or made) and raw clay mixed with sand and/or straw or other fibre to cement the whole thing together. Dried clay mix is obviously not as strong as cement, but it is quite practical for this application (e.g. much less expensive, adequate strength coupled with easy construction, disassembly and adjustments).</p>
+
+<p>Some sources recommend using a <a  href="fireclay.html">Fireclay</a> because these can withstand the temperatures in the oven. However, this is not really correct. Red hot coals in a campfire are only about 1000-1200F, even the lowest duty clay (e.g. <a  href="terra+cotta.html">terra cotta</a>) is capable of easily withstanding temperatures to 1800F+. Fireclays (or clays in general) come in a wide range of plasticities, water permeabilities, drying performances, etc (these properties are an important practical issue to constructing the oven). <a  href="plainsman+clays.html">Plainsman</a> Clays, for example, most often recommends their <a  href="https://plainsmanclays.ca/data/index.php?product=12933">98Mix</a> (a very plastic greenish-colored terra cotta raw quarry clay). It dries hard and strong and maintains <a  href="plasticity.html">plasticity</a> even when blended with significant sand.</p>
+
+<p>Some sources advise simply digging clay out of the ground and mixing it in a certain proportion with sand. This might have worked for the author with his clay and sand, but will it work for you? Sands and clays vary widely in grain size and shape (that variation can multiply to orders of magnitude difference in grain <a  href="surface+area.html">surface area</a>). Clays vary widely in plasticity (ability to form a shape), stickiness, drying hardness, <a  href="permeability.html">permeability</a>, drying speed and <a  href="drying+shrinkage.html">drying shrinkage</a>. The most plastic clays (e.g. <a  href="https://plainsmanclays.ca/data/index.php?product=12933">98Mix</a> mentioned above) are the stickiest and shrink and crack the most. They can host higher percentages of sand, which cuts the shrinkage, yet still dries hard and strong. While pottery clays might be plastic for building pottery most dry fairly fragile. Most pottery clays dry shrink about 6.5% whereas a superplastic terra cotta or <a  href="../material/80.html">ball clay</a> might shrink 8-10%. And dry like concrete! Of course, you must experiment with varying proportions of sand (plus fiber) to find a compromise between something that will dry with minimal cracking and still be hard and strong enough.</p>
+
+<p>To withstand the rain a roof is often needed to shed water and protect from direct rain (a dried clay might seem hard, but it will <a  href="slaking.html">slake</a> and turn back into mud when it comes into contact with water). Alternatively, a <a  href="../material/1124.html">plaster</a> or stucco finish can be employed. Or apply a sealant layer or add a hardener/sealant to your clay mix (e.g. silicone, corn starch, polymers, gums). If you choose to use an in-mix hardener, do plenty of testing to make sure it will work, hardeners can reduce plasticity significantly.</p><p style="clear:left"></p>
+<h2 style="font-style:italic;">Related Information</h2>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">A Thermal Mass Pizza or Baking Oven</h3>
+<br /><a href="../picture/2679.html"><img class="flexleft50" loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/psqgrx5hj4.jpg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/2679.html">click here</a> to see it.</p>
+<p>Lower section is metal construction, dome is clay and brick with stucco surfacing. Door is cement and brick. Fire is started inside to heat it up, then ash is removed for baking. <i>By Bruce Fochler, Prince George, B.C.</i></p>
+<p style="clear:left"></p>
+<h3>Inbound Photo Links</h3><table><tr>
+<td style="vertical-align:top; font-size:80%;">
+<br /><a alt="Uzume thermal mass oven in operation" href="../picture/2678.html"><img style="margin:0px 10px 10px 0px; height:100px;" alt="Uzume thermal mass oven in operation"  loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/yo7cxhabch-100H.jpg" /></a><br />Mass-Wood stove project at Wooly Ewe yarn shop in Smithers, BC
+</td>
+</tr></table><br />
+<h3>Links</h3><table>
+<table class="table table-bordered"><tbody>
+<tr>
+<td scope="row">URLs</td>
+<td>
+<a href="../url/2625.html">https://en.wikipedia.org/wiki/Rocket_mass_heater</a>
+<br /><i>Rocket Mass Heater on Wikipedia</i>
+<br /><i style="color:#888888;">A form of slow-release radiant heating system, designed to primarily heat people and secondary to warm areas in line of sight around it.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">URLs</td>
+<td>
+<a href="../url/2626.html">http://buildnaturally.blogspot.ca/2013/06/build-clay-cob-oven-in-your-yard.html</a>
+<br /><i>Build a <a  href="clays+for+ovens+and+heaters.html">Clay Oven</a> in Your Backyard</i>
+<br /><i style="color:#888888;">Lots of pictures and text with plenty of viewer comments at the bottom.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">URLs</td>
+<td>
+<a href="../url/2627.html">https://www.fornobravo.com</a>
+<br /><i>US manufacturer of pizza ovens and fireplaces</i>
+<br /><i style="color:#888888;">They make modular and assembled pizza ovens, wood and gas fired brick ovens for homes, outdoor kitchens, restaurants, and mobile businesses. They have an impressive gallery with many pictures of completed ovens. Lots of technical resources and accessories.</i>
+</td>
+</tr>
+</tbody></table><table style="margin:30px 0px 30px 0px;"><tr><td style="vertical-align:middle; text-align:center; font-size:80%;"><img src="../images/PayPalDonate.png" style="height:66px; padding-right:20px;"><br /><a href="https://www.paypal.com/donate/?hosted_button_id=F8L3JX4BCCXJ6">PayPal</a></td><td style="background-color:#ddffdd; padding:10px; border:thin solid grey; font-size:90%;"><b>No</b> tracking, <b>No</b> ads, <b>No</b> paywall, <b>No</b> transient content!<br />Just organized, concise information constantly updated and improved.<br />Was this helpful? Consider supporting me.</td><tr></table><table style="margin-top:30px; padding-top:10px; padding-bottom:20px; border-top:thin solid grey; border-bottom:thin solid grey;"><tr><td style="padding-right:10px">By <i>Tony Hansen</i><br /><span style="font-size:80%; color:#888888;">Follow me on<br /><a title="Threads" href="https://www.threads.net/@tonyatdigitalfire" target="_blank"><img src="../images/threads.jpg" style="width:20px;" border="0"></a> <a title="Facebook Insight-Live" href="https://www.facebook.com/insightlive" target="_blank"><img src="../images/facebook.jpg" style="width:20px;" border="0"></a> <a title="LinkedIn" href="https://www.linkedin.com/in/tonywhansen/" target="_blank"><img src="../images/linkedin.jpg" style="width:20px;" border="0"></a> <a title="Pinterest" href="https://www.pinterest.ca/tonywhansen" target="_blank"><img src="../images/pinterest.jpg" style="width:20px;" border="0"></a> <a title="Instagram" href="https://instagram.com/tonyatdigitalfire" target="_blank"><img src="../images/instagram.jpg" style="width:20px;" border="0"></a> <a title="Ko-Fi" href="https://ko-fi.com/tonyhansen#" target="_blank"><img src="../images/ko-fi.jpg" style="width:20px;" border="0"></a> <a title="Twitter" href="https://x.com/digitalfiretony" target="_blank"><img src="../images/twitter.jpg" style="width:20px;" border="0"></a></td><td><a href="https://tonyhansen.com/about"><img src="../images/SignaturePhotoSmall.jpg" height="80"></a></td></tr></table><h3>Got a Question?</h3><p style="margin-bottom:30px;"><a name="kofi">Buy me a coffee and we can talk</a> <a target="_blank" href="https://ko-fi.com/tonyhansen"><img style="width:40px" src="../images/ko-fi.svg"></a></p><p style="margin-bottom:30px;">&nbsp;</p>
+<p></p><p></p><hr>
+<img style="width:250px" src="../4sight/images/ReferenceLibrary.svg">
+<br />
+<a href="../index.html">https://digitalfire.com</a>, All Rights Reserved
+<br /><a href="../w3c/privacypolicy.php.html">Privacy Policy</a>
+</div>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+</body>
+</html>

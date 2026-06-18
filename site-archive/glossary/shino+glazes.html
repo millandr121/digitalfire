@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="../favicon.svg">
+<link rel="mask-icon" href="../mask-icon.svg" color="#000000">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<title>Shino Glazes</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<meta name="author" content="Tony Hansen">
+<meta name="description" content="Traditional Japanese high feldspar glazes having cream to orange color flashing or blushing. Potters today seek to emulate the Shino appearance using a wide range of recipes.">
+<style>
+.flexinline { width: 50%; height: auto; clear:left; margin: 10px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexinline { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexright50 { width: 50%; height: auto; float: right; margin: 5px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexright50 { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexright33 { width: 33%; height: auto; float: right; margin: 5px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexright33 { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexright25 { width: 25%; height: auto; float: right; margin: 5px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexright25 { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexleft50 { width: 50%; height: auto; float: left; margin: 5px 15px 10px 0px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexleft50 { width: 100%; height: auto; margin: 5px 10px 10px 0px; border: none; padding: none; } }
+.flexleft33 { width: 33%; height: auto; float: left; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexleft33 { width: 100%; height: auto; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; } }
+.flexleft25 { width: 25%; height: auto; float: left; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexleft25 { width: 100%; height: auto; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; } }
+.pictureseries { overflow:scroll; width:auto; height:200px; float:left; margin: 5px 10px 10px 0px; padding: 5px; font-size:60%; font-style:italic;}
+@media (max-width: 640px) { .pictureseries { overflow:scroll; width:auto; height:200px; float:left; margin: 5px 10px 10px 0px; border: padding: 5px; font-size:60%; font-style:italic;} }
+.L2 { margin-left:0px; }
+.L3 { margin-left:20px; color:#222222; }
+.L4 { margin-left:40px; color:#444444; }
+.L5 { margin-left:60px; color:#666666; }
+.L6 { margin-left:60px; color:#888888; }
+h2 { color:#222222; }
+h3 { color:#444444; }
+h4 { color:#666666; }
+h5 { color:#888888; }
+
+</style>
+
+<meta name="google-site-verification" content="wquYW_n-3QEfIzDfV--8ElUewf7TIt04RGo55GfZySU" />
+<meta name="have-i-been-pwned-verification" value="9223dcee7de5c9622c2a2abcff4adc81">
+<script>
+function validateForm() {
+	var x = document.forms["emailform1"]["name1"].value;
+	var r = true;
+	if (x == "") { // alert("A name is required."); 
+		document.getElementById("name1").textContent="Name Required";
+		document.getElementById("name1").style.color="red";
+		// document.emailform1.name1.focus() ; # does not work, should be getelementbyid
+		r = false; 
+	} else {
+		document.getElementById("name1").textContent="Name";
+		document.getElementById("name1").style.color="black";
+	}
+	if (document.forms["emailform1"]["subject1"].value == "") { 
+		document.getElementById("subject1").textContent="Subject Required";
+		document.getElementById("subject1").style.color="red";
+		r = false; 
+	} else {
+		document.getElementById("subject1").textContent="Subject";
+		document.getElementById("subject1").style.color="black";
+	}			
+	if (document.forms["emailform1"]["msg1"].value == "") { 
+		document.getElementById("msg1").textContent="Message Required";
+		document.getElementById("msg1").style.color="red";
+		// alert("A message is required."); 
+		r = false; 
+	} else {
+		document.getElementById("msg1").textContent="Message";
+		document.getElementById("msg1").style.color="black";
+	}
+	var emailID = document.emailform1.email1.value;
+	atpos = emailID.indexOf("@");
+	dotpos = emailID.lastIndexOf(".");
+	if (atpos < 1 || ( dotpos - atpos < 2 )) {
+		document.getElementById("email1").textContent="Email Address Appears Invalid!";
+		document.getElementById("email1").style.color="red";
+		// alert("Your email address appears invalid.")
+		r = false;
+	} else {
+		document.getElementById("email1").textContent="Email Address";
+		document.getElementById("email1").style.color="black";
+	}
+	// Send the form
+	if (r == false) return false;
+	document.forms["emailform1"].submit();
+}
+</script>
+</head>
+<body>
+<p style="background-color:#ff9933; border-width:1px; padding:3px 10px 3px 10px; margin:0px 0px 3px 0px; font-size:80%; text-align:center;">
+Digitalfire will shut down on June 26. I no longer have the authority to grant exemption to a section in the Terms and Conditions of using material in the Insight-Live account from which I built the source material. While there are ways to comply with the take-down order, they are beyond my means because of how complex and large the site has become in the past 35+ years. It has been a wild ride for a shy prairie boy, thanks to everyone for your support. Insight-live.com is not affected by this.</p>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<a name="pagetop" class="navbar-brand" href="../home.html"><img src="../4sight/images/ReferenceLibrary.svg" height="40" alt=""></a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item"><a class="nav-link" href="../home.html">Home</a></li>
+			<li class="nav-item"><a class="nav-link" href="../oxide/list.html">Oxides</a></li>
+			<li class="nav-item"><a class="nav-link" href="../material/list.html">Materials</a></li>
+			<li class="nav-item"><a class="nav-link" href="../recipe/list.html">Recipes</a></li>
+			<li class="nav-item active"><a class="nav-link" href="list.html">Glossary <span class="sr-only">(current)</span></a></li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="shino+glazes.html#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Others</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" href="../article/list.html">Articles</a>
+					<a class="dropdown-item" href="../hazard/list.html">Hazards</a>
+					<a class="dropdown-item" href="../mineral/list.html">Minerals</a>
+					<a class="dropdown-item" href="../property/list.html">Properties</a>
+					<a class="dropdown-item" href="../schedule/list.html">Firing Schedules</a>
+					<a class="dropdown-item" href="../temperature/list.html">Temperatures</a>
+					<a class="dropdown-item" href="../trouble/list.html">Troubles</a>
+					<a class="dropdown-item" href="../test/list.html">Tests</a>
+					<a class="dropdown-item" href="../video/list.html">Media</a>
+					<a class="dropdown-item" href="../picture/list.html">Pictures</a>
+					<a class="dropdown-item" href="../typecode/list.html">Typecodes</a>
+					<a class="dropdown-item" href="../project/list.html">Projects</a>
+					<a class="dropdown-item" href="../consultants/list.html">Consultants</a>
+					<a class="dropdown-item" href="../schools/list.html">Schools</a>
+					<a class="dropdown-item" href="../stores/list.html">Stores</a>
+					<a class="dropdown-item" href="../potterytony/list.html">Don't Buy-A-Mug</a>
+					<div class="dropdown-divider"></div>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="../index.html">https://digitalfire.com</a>
+					<a class="dropdown-item" href="https://insight-live.com">Insight-Live.com</a>
+					<a class="dropdown-item" href="../index.html">Sign-Up</a>
+				</div>
+			</li>
+		</ul>
+		<form class="form-inline my-2 my-lg-0" action="https://digitalfire.com/index.php?searcharea=glossary" accept-charset="UTF-8" method="post">
+		<input name="searchfor" title="Search from home to search in all areas" maxlength="20" class="form-control mr-sm-2" aria-label="Search" placeholder="Search" autocorrect="off" autocapitalize="off" type="search" value=""><button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="searchbutton">Search</button>
+		</form>
+	</div>
+</nav>
+<div class="container"><p>Operation timed out after 2000 milliseconds with 0 bytes received</p>Error: API server returned an invalid response for glossary<p style="clear:left"></p><p style="clear:left"></p><p style="clear:left"></p><p style="clear:left"></p><p style="clear:left"></p><p style="clear:left"></p><p style="clear:left"></p><h1>Shino Glazes</h1>
+<p class="text-muted" style="margin-left:20px">Traditional Japanese high feldspar glazes having cream to orange color flashing or blushing. Potters today seek to emulate the Shino appearance using a wide range of recipes.
+<p class="text-muted" style="margin-left:20px; font-style:italic; font-size:90%;"><b>Key phrases linking here:</b> shino glazes, shino
+ - <a href="../home/linkmaker.html">Learn more</a></p>
+</h4>
+<h2>Details</h2>
+<p><div class="flexright33"><img style="width:100%;" src="../4sight/images/pictures/5qfxxhaqon.jpeg"><p style="color:#888888; font-style:italic; font-size:80%; margin:4px 0px 5px 0px;">Shino glazed small bowl from Japan</p></div><br />
+<br />
+<a  href="shino+glazes.html">Shino glazes</a> were developed in Japan and their aesthetics are covered on many other websites and books. But they are art pieces, described by artists, using the language of art. Although the term <a  href="shino+glazes.html">Shino</a> has become very broad in recent years let us restrict this to the visuals of the "pearly white breaking to orange" and the carbon trapping  (which leaves random dark, shadowy areas in the glaze). Of course, there is also a mystique surrounding the <a  href="glaze+bubbles.html">bubbling</a> and <a  href="../trouble/crawling.html">crawling</a> effects of many of the most loved pieces. While we might consider these as defects, traditionally they were considered decorative and pleasing. However, this page is about understanding the <a  href="glaze+chemistry.html">chemistry</a> and the other <a  href="mechanism.html">mechanisms</a> of color and surface development with the objective of making consistent and <a  href="functional.html">functional</a> pieces. <br />
+<br />
+Originally Shinos were a two-part mix of about 70-80% high-alumina, high-sodium <a  href="../material/310.html">feldspar</a> and 20-30% clay. They were used on <a  href="stoneware.html">stoneware</a> and wood-fired in reduction. Applied thickly they gave a pearly white, when thinner a red or orange. While it is claimed that the combination of high sodium and alumina produce that orange color, it seems that would not be possible without iron. In fact, it is the chemistry of the glaze that hosts the color, amplifying the color of small amounts of iron in the clay (within the glaze or in the body itself) to produce the orange color.<br />
+<br />
+Potters doing utilitarian pieces with the Shino effect today often need a more glossy, functional finish (instead of the traditional <a  href="../trouble/crawling.html">crawled</a> matte with <a  href="../trouble/glaze+blisters.html">blisters</a> and <a  href="pinholing.html">pinholes</a>!). They also want something that can be put into an existing firing with other ware (e.g. <a  href="reduction+firing.html">cone 10 reduction</a>). Recipes found online can have up to a dozen ingredients. However given the simplicity of the original, it would appear that needlessly complex recipes are unnecessary (likely a product of the blending of other multiple recipes). It is best to approach your search armed with a little background knowledge. In fact, you might find a better approach is to simply propose a recipe, based on the conclusions drawn below, and try it (albeit without a wood kiln and all the firing magic it did to create the original effects). Let's do that.<br />
+<br />
+Recipes trying to stay true to the original Shino spirit seem to follow these general guidelines:<br />
+<br />
+-A high percentage of <a  href="../material/1070.html">nepheline syenite</a> producing a very high <a  href="../oxide/al2o3.html">Al<sub>2</sub>O<sub>3</sub></a> level in the <a  href="flux.html">flux</a> <a  href="unity+formula.html">unity formula</a>, usually higher than 1.0 going even to 2.0 (you will see this number calculated by entering the recipe into your account at <a  href="digitalfire+insight-live.html">insight-live</a>.com). No other type of common glaze recipe used in <a  href="ceramics.html">ceramics</a> has even close to this amount of Al<sub>2</sub>O<sub>3</sub>.<br />
+<br />
+-No added <a  href="../material/1245.html">silica</a> (and an Al<sub>2</sub>O<sub>3</sub>:SiO<sub>2</sub> ratio usually well below 5:1).<br />
+<br />
+-Enough clay to suspend the glaze (these add even more Al<sub>2</sub>O<sub>3</sub> than what is in the Nepheline). Kaolins and ball clays are used. The more alumina that can be sourced from the feldspar the more feasible it is to employ <a  href="../material/80.html">ball clay</a> rather than <a  href="../material/925.html">kaolin</a> (ball clay has lower Al<sub>2</sub>O<sub>3</sub>).<br />
+<br />
+-Low <a  href="../oxide/cao.html">CaO</a> (it inhibits the orange color).<br />
+<br />
+-Soluble sources of sodium (e.g. soda ash, salt) are often employed. These are thus not being added to simply boost the <a  href="../oxide/na2o.html">Na<sub>2</sub>O</a> content, since they will migrate and concentrate at the surface during drying. However that is likely the whole point, given another practice: Mixing up a super-saturated solution of soda ash and hot water and spraying it onto a glaze, carbon trapping occurs in the sprayed area (assuming the firing promotes carbon trapping).<br />
+<br />
+-A small amount of iron-bearing clay.<br />
+<br />
+-Often small to significant amounts of <a  href="../material/1642.html">tin oxide</a> (up to 10%, exceptionally expensive!). Why? Maybe it is there as a catalyst to develop the color of the iron. There is also a possibility the tin is opacifying to crow-bar the opaque cream effect in <a  href="oxidation+firing.html">oxidation firing</a> (especially where more powerful melters are being employed, ones which will make the glaze more transparent).<br />
+<br />
+-Super melters that source <a  href="borate.html">boron</a> (from <a  href="frit.html">frits</a> or <a  href="../material/806.html">Gerstley Borate</a>), lithium (from <a  href="../material/1287.html">Spodumene</a> and <a  href="../material/975.html">lithium carbonate</a>) and even zinc are employed in some recipes. These could be there to melt early and seal the surface. However some control is needed or the thick, opaque and pearly nature of the surface would be lost. These alternate fluxes also have another key effect: low <a  href="co-efficient+of+thermal+expansion.html">thermal expansion</a>. If they are employed at the cost of sodium, significant reductions in thermal expansion of the glaze would result (reducing <a  href="../trouble/glaze+crazing.html">crazing</a>).<br />
+<br />
+There are recipes claiming to be Shino that deviate completely from every guideline already given: having high silica:alumina ratios, low sodium, high iron or high CaO. As noted, some employ ridiculous percentages of tin oxide. If you are new to Shinos it might be better to stick with the simpler recipes and focus more on the techniques and the firing to achieve the effect. If you enter the recipes in your account at insight-live.com you can see the chemistry (and compare many side-by-side, especially on a widescreen monitor). As noted, look for the low Al<sub>2</sub>O<sub>3</sub>:SiO<sub>2</sub> ratio, Al<sub>2</sub>O<sub>3</sub> above 1.0, low CaO, high Na<sub>2</sub>O. Optionally some iron-bearing clay and maybe some tin oxide.<br />
+<br />
+Some authors discuss the "orange <a  href="flashing.html">flashing</a>" effect of Shinos (as if the orange effect is on the surface, overlaying the cream background). However, I have not seen this. The Shino visual seems much more basic: Orange where thin, cream where thick. However, given the absence of an iron wash below the Shino (which would obviously produce color where the glaze is thin), there is some mystery to how the color appears to develop at the body:glaze <a  href="body+glaze+interface.html">interface</a> (showing through where the glaze is thinner). This happens even when the body is white. How?<br />
+<br />
+As noted, Shinos traditionally <a  href="../trouble/crawling.html">crawl</a>, <a  href="../trouble/glaze+crazing.html">craze</a>, <a  href="pinholing.html">pinhole</a> and carbon trap. These are natural products of the chemistry and firing: <a  href="pinholing.html">pinholing</a> and crawling because <a  href="melt+fluidity.html">the melt</a> is viscous, crazing because of the high sodium and carbon trapping because of early melting and heavy reduction. Carbon trapping will obviously happen more if reduction is started earlier (e.g. cone 012), of course, other ware in the kiln needs to be able to tolerate this. And trapping will be better if the reduction is heavier. Some claim that lower amounts of Al<sub>2</sub>O<sub>3</sub> in the formula (below 1.0) better trap the carbon. Yet carbon trap recipes are out there with much more alumina. Of course, using low-carbon bodies or bisquing hot will eliminate this problem (if you want to).<br />
+<br />
+<div class="flexright33"><img style="width:100%;" src="../4sight/images/pictures/wz69sgesrh.jpg"><p style="color:#888888; font-style:italic; font-size:80%; margin:4px 0px 5px 0px;">One of my efforts at Shino (see below)</p></div><br />
+<br />
+Crawling can be minimized if you want to. Glazes with 30% clay, especially if that clay is ball clay, will shrink excessively during drying. The crack lines will then crawl during firing (especially since the Shino chemistry is high in alumina and therefore has a low melt <a  href="viscosity.html">viscosity</a>). Simply calcining part of the clay will reduce the problem. Aim for about 15-25% raw clay (the rest <a  href="calcination.html">calcined</a>).<br />
+<br />
+Pinholing can be reduced by using a finer quality body (that does not generate as many gases) or by applying the glaze thinner. Or by compromising the chemistry a little to get better <a  href="melt+fluidity.html">melt fluidity</a>. Or, as noted above, bisquing hotter.<br />
+<br />
+Crazing is the most difficult issue (crazing is not desirable or even acceptable in functional ware being sold to the public). Shino glazes have high thermal expansion (although some recipes certainly are lower than others). Insight-live displays the <a  href="calculated+thermal+expansion.html">calculated thermal expansion</a> (these will likely calculate to the highest numbers you have ever seen!). As already noted above, a strategy to lower the expansion is to trade some of the sodium for <a  href="co-efficient+of+thermal+expansion.html">low-expansion</a> fluxes like lithia, zinc or boron. Another option is to use a high-silica body. It is possible to make <a  href="vitreous.html">vitreous</a> bodies with up to 40% silica at cone 10. Such bodies are also useful for <a  href="crystalline+glazes.html">crystalline glazes</a> (which also craze badly).<br />
+<br />
+So what glaze should we propose for a cone 10 reduction recipe, given the above? Here is my idea (code <a  href="https://insight-live.com/insight/share.php?z=Lt1ZK6wGyE">G3840</a> in my Insight-Live account):<br />
+<br />
+Nepheline Syenite  50<br />
+Spodumene  15<br />
+Kaolin  20<br />
+Soda Ash   10<br />
+<a  href="../material/1191.html">Redart</a>  5<p style="clear:left"></p></p>
+<h2 style="font-style:italic;">Related Information</h2>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">Closeup of Shino glazed small bowl from Japan</h3>
+<br /><a href="../picture/1860.html"><img class="flexleft50" loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/5qfxxhaqon.jpeg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/1860.html">click here</a> to see it.</p>
+<p>Clay is <a  href="vitreous.html">vitreous</a> and heavily <a  href="grog.html">grogged</a>. But it is white burning. Notice the orange color is developing at the glaze/body <a  href="body+glaze+interface.html">interface</a> and shows where the glaze is thin. This is glossier than what one would normally expect a <a  href="shino+glazes.html">Shino</a> to be.</p>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">Heavily speckled reduction fired porcelain Shino bowl by Glenn Lewis</h3>
+<br /><a href="../picture/2088.html"><img class="flexleft50" loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/j9bydsomeq.png" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/2088.html">click here</a> to see it.</p>
+<p>This effect was created by <a  href="kneading+clay.html">wedging</a> 10 mesh <a  href="../picture/692.html">ironstone concretions</a> into the soft <a  href="porcelain.html">porcelain</a>.</p>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">Shino bowl made by Joshua Miller</h3>
+<br /><a href="../picture/2782.html"><img class="flexleft50" loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/421weybyn3.jpg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/2782.html">click here</a> to see it.</p>
+<p>White body. Double fired, first to cone 11 (reduced from 1800F up as for copper reds). A thin second layer of the <a  href="shino+glazes.html">Shino</a> glaze was applied and a second slow-climb firing was done to cone 05, this produced the metallic effect. This is a Malcom Davis glaze (with <a  href="../material/1191.html">Redart</a>). Joshua Miller, the creator of this piece, mentors under his father, Victor Miller.</p>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">Closeup of unglazed surface of small Shigaraki bowl</h3>
+<br /><a href="../picture/1858.html"><img class="flexleft50" loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/lhtj8ot11n.jpeg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/1858.html">click here</a> to see it.</p>
+<p>This is the unglazed surface. Very heavily <a  href="grog.html">grogged</a>, very large <a  href="grog.html">grog</a> particles.</p>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">Closeup of unglazed surface of small Bizen bowl</h3>
+<br /><a href="../picture/1859.html"><img class="flexleft50" loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/ddskci67pz.jpeg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/1859.html">click here</a> to see it.</p>
+<p>The fired clay is <a  href="vitreous.html">vitreous</a> and lightly <a  href="grog.html">grogged</a> (large particles).</p>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">G3840 Shino on Grolleg/New Zealand kaolin porcelain at cone 10R</h3>
+<br /><a href="../picture/1911.html"><img class="flexleft50" loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/wz69sgesrh.jpg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/1911.html">click here</a> to see it.</p>
+<p>The color is developing despite the fact that very little iron is available from the body. I have glazed the inside of this mug with a durable <a  href="liner+glaze.html">liner glaze</a> to make it <a  href="functional.html">functional</a>. The <a  href="porcelain.html">porcelain</a> contains more than 30% <a  href="../material/1245.html">silica</a> but the <a  href="shino+glazes.html">Shino</a> is still <a  href="../trouble/glaze+crazing.html">crazing</a> on it.</p>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">Calculating the recipe of a cone 10R Shino glaze</h3>
+<br /><a alt="Two small brown, matte shino bowls" href="../picture/1910.html"><img class="flexleft50" alt="Two small brown, matte shino bowls"  loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/k99lkbxvdx.jpg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/1910.html">click here</a> to see it.</p>
+<p>The wax resist brushstrokes (done right after glazing) are clearly defined indicating that soda migration to the surface during drying is an important <a  href="mechanism.html">mechanism</a> of the effect. Some carbon trapping is also visible on the lower section of the larger bowl (and other pieces in other places in the kiln). The glaze has been applied fairly thinly so no whiter areas are visible. This was part of a project I did to understand, not what <a  href="shino+glazes.html">Shino glazes</a> look like, but what they are. Chemically. The code for the project was <a  href="https://insight-live.com/insight/share.php?z=Lt1ZK6wGyE">G3840</a>.</p>
+<p style="clear:left"></p>
+<h3>Links</h3><table>
+<table class="table table-bordered"><tbody>
+<tr>
+<td scope="row">Glossary</td>
+<td>
+<a href="carbon+trap+glazes.html">Carbon trap glazes</a>
+<br /><i>A type of ceramc glaze.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Glossary</td>
+<td>
+<a href="carbon+burnout.html">Carbon Burnout</a>
+<br /><i>Ceramic materials, especially clays, often contain carbon and organic compounds. When they are fired in a kiln, these must burn out, often producing complications.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Glossary</td>
+<td>
+<a href="calcination.html">Calcination</a>
+<br /><i>Calcining is simply firing a <a  href="ceramic+material.html">ceramic material</a> to create a powder of new <a  href="physical+testing.html">physical properties</a>. Often it is done to kill the <a  href="plasticity.html">plasticity</a> or burn away the hydrates, carbonates, <a  href="sulfates.html">sulfates</a> of a clay or <a  href="refractory.html">refractory</a> material.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Glossary</td>
+<td>
+<a href="ceramic+glaze.html">Ceramic Glaze</a>
+<br /><i>Ceramic glazes are glasses that have been adjusted to work on and with the <a  href="clay+body.html">clay body</a> they are applied to.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">URLs</td>
+<td>
+<a href="../url/1520.html">https://insight-live.com/insight/share.php?z=Lt1ZK6wGyE</a>
+<br /><i>Shino/Bizen Formulation Project at <a  href="plainsman+clays.html">Plainsman</a> Clays</i>
+<br /><i style="color:#888888;"></i>
+</td>
+</tr>
+</tbody></table><table style="margin:30px 0px 30px 0px;"><tr><td style="vertical-align:middle; text-align:center; font-size:80%;"><img src="../images/PayPalDonate.png" style="height:66px; padding-right:20px;"><br /><a href="https://www.paypal.com/donate/?hosted_button_id=F8L3JX4BCCXJ6">PayPal</a></td><td style="background-color:#ddffdd; padding:10px; border:thin solid grey; font-size:90%;"><b>No</b> tracking, <b>No</b> ads, <b>No</b> paywall, <b>No</b> transient content!<br />Just organized, concise information constantly updated and improved.<br />Was this helpful? Consider supporting me.</td><tr></table><table style="margin-top:30px; padding-top:10px; padding-bottom:20px; border-top:thin solid grey; border-bottom:thin solid grey;"><tr><td style="padding-right:10px">By <i>Tony Hansen</i><br /><span style="font-size:80%; color:#888888;">Follow me on<br /><a title="Threads" href="https://www.threads.net/@tonyatdigitalfire" target="_blank"><img src="../images/threads.jpg" style="width:20px;" border="0"></a> <a title="Facebook Insight-Live" href="https://www.facebook.com/insightlive" target="_blank"><img src="../images/facebook.jpg" style="width:20px;" border="0"></a> <a title="LinkedIn" href="https://www.linkedin.com/in/tonywhansen/" target="_blank"><img src="../images/linkedin.jpg" style="width:20px;" border="0"></a> <a title="Pinterest" href="https://www.pinterest.ca/tonywhansen" target="_blank"><img src="../images/pinterest.jpg" style="width:20px;" border="0"></a> <a title="Instagram" href="https://instagram.com/tonyatdigitalfire" target="_blank"><img src="../images/instagram.jpg" style="width:20px;" border="0"></a> <a title="Ko-Fi" href="https://ko-fi.com/tonyhansen#" target="_blank"><img src="../images/ko-fi.jpg" style="width:20px;" border="0"></a> <a title="Twitter" href="https://x.com/digitalfiretony" target="_blank"><img src="../images/twitter.jpg" style="width:20px;" border="0"></a></td><td><a href="https://tonyhansen.com/about"><img src="../images/SignaturePhotoSmall.jpg" height="80"></a></td></tr></table><h3>Got a Question?</h3><p style="margin-bottom:30px;"><a name="kofi">Buy me a coffee and we can talk</a> <a target="_blank" href="https://ko-fi.com/tonyhansen"><img style="width:40px" src="../images/ko-fi.svg"></a></p><p style="margin-bottom:30px;">&nbsp;</p>
+<p></p><p></p><hr>
+<img style="width:250px" src="../4sight/images/ReferenceLibrary.svg">
+<br />
+<a href="../index.html">https://digitalfire.com</a>, All Rights Reserved
+<br /><a href="../w3c/privacypolicy.php.html">Privacy Policy</a>
+</div>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+</body>
+</html>

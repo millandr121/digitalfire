@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="../favicon.svg">
+<link rel="mask-icon" href="../mask-icon.svg" color="#000000">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<title>Paraffin Toxicology</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<meta name="author" content="Tony Hansen">
+<meta name="description" content="Paraffin is used in the decoration of ceramics. What hazards do potters and workers face in using it?">
+<style>
+.flexinline { width: 50%; height: auto; clear:left; margin: 10px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexinline { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexright50 { width: 50%; height: auto; float: right; margin: 5px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexright50 { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexright33 { width: 33%; height: auto; float: right; margin: 5px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexright33 { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexright25 { width: 25%; height: auto; float: right; margin: 5px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexright25 { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexleft50 { width: 50%; height: auto; float: left; margin: 5px 15px 10px 0px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexleft50 { width: 100%; height: auto; margin: 5px 10px 10px 0px; border: none; padding: none; } }
+.flexleft33 { width: 33%; height: auto; float: left; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexleft33 { width: 100%; height: auto; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; } }
+.flexleft25 { width: 25%; height: auto; float: left; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexleft25 { width: 100%; height: auto; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; } }
+.pictureseries { overflow:scroll; width:auto; height:200px; float:left; margin: 5px 10px 10px 0px; padding: 5px; font-size:60%; font-style:italic;}
+@media (max-width: 640px) { .pictureseries { overflow:scroll; width:auto; height:200px; float:left; margin: 5px 10px 10px 0px; border: padding: 5px; font-size:60%; font-style:italic;} }
+.L2 { margin-left:0px; }
+.L3 { margin-left:20px; color:#222222; }
+.L4 { margin-left:40px; color:#444444; }
+.L5 { margin-left:60px; color:#666666; }
+.L6 { margin-left:60px; color:#888888; }
+h2 { color:#222222; }
+h3 { color:#444444; }
+h4 { color:#666666; }
+h5 { color:#888888; }
+
+</style>
+
+<meta name="google-site-verification" content="wquYW_n-3QEfIzDfV--8ElUewf7TIt04RGo55GfZySU" />
+<meta name="have-i-been-pwned-verification" value="9223dcee7de5c9622c2a2abcff4adc81">
+<script>
+function validateForm() {
+	var x = document.forms["emailform1"]["name1"].value;
+	var r = true;
+	if (x == "") { // alert("A name is required."); 
+		document.getElementById("name1").textContent="Name Required";
+		document.getElementById("name1").style.color="red";
+		// document.emailform1.name1.focus() ; # does not work, should be getelementbyid
+		r = false; 
+	} else {
+		document.getElementById("name1").textContent="Name";
+		document.getElementById("name1").style.color="black";
+	}
+	if (document.forms["emailform1"]["subject1"].value == "") { 
+		document.getElementById("subject1").textContent="Subject Required";
+		document.getElementById("subject1").style.color="red";
+		r = false; 
+	} else {
+		document.getElementById("subject1").textContent="Subject";
+		document.getElementById("subject1").style.color="black";
+	}			
+	if (document.forms["emailform1"]["msg1"].value == "") { 
+		document.getElementById("msg1").textContent="Message Required";
+		document.getElementById("msg1").style.color="red";
+		// alert("A message is required."); 
+		r = false; 
+	} else {
+		document.getElementById("msg1").textContent="Message";
+		document.getElementById("msg1").style.color="black";
+	}
+	var emailID = document.emailform1.email1.value;
+	atpos = emailID.indexOf("@");
+	dotpos = emailID.lastIndexOf(".");
+	if (atpos < 1 || ( dotpos - atpos < 2 )) {
+		document.getElementById("email1").textContent="Email Address Appears Invalid!";
+		document.getElementById("email1").style.color="red";
+		// alert("Your email address appears invalid.")
+		r = false;
+	} else {
+		document.getElementById("email1").textContent="Email Address";
+		document.getElementById("email1").style.color="black";
+	}
+	// Send the form
+	if (r == false) return false;
+	document.forms["emailform1"].submit();
+}
+</script>
+</head>
+<body>
+<p style="background-color:#ff9933; border-width:1px; padding:3px 10px 3px 10px; margin:0px 0px 3px 0px; font-size:80%; text-align:center;">
+Digitalfire will shut down on June 26. I no longer have the authority to grant exemption to a section in the Terms and Conditions of using material in the Insight-Live account from which I built the source material. While there are ways to comply with the take-down order, they are beyond my means because of how complex and large the site has become in the past 35+ years. It has been a wild ride for a shy prairie boy, thanks to everyone for your support. Insight-live.com is not affected by this.</p>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<a name="pagetop" class="navbar-brand" href="../home.html"><img src="../4sight/images/ReferenceLibrary.svg" height="40" alt=""></a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item"><a class="nav-link" href="../home.html">Home</a></li>
+			<li class="nav-item"><a class="nav-link" href="../oxide/list.html">Oxides</a></li>
+			<li class="nav-item"><a class="nav-link" href="../material/list.html">Materials</a></li>
+			<li class="nav-item"><a class="nav-link" href="../recipe/list.html">Recipes</a></li>
+			<li class="nav-item"><a class="nav-link" href="../glossary/list.html">Glossary</a></li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="paraffin+toxicology.html#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Others</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" href="../article/list.html">Articles</a>
+					<a class="dropdown-item active" href="list.html">Hazards</a>
+					<a class="dropdown-item" href="../mineral/list.html">Minerals</a>
+					<a class="dropdown-item" href="../property/list.html">Properties</a>
+					<a class="dropdown-item" href="../schedule/list.html">Firing Schedules</a>
+					<a class="dropdown-item" href="../temperature/list.html">Temperatures</a>
+					<a class="dropdown-item" href="../trouble/list.html">Troubles</a>
+					<a class="dropdown-item" href="../test/list.html">Tests</a>
+					<a class="dropdown-item" href="../video/list.html">Media</a>
+					<a class="dropdown-item" href="../picture/list.html">Pictures</a>
+					<a class="dropdown-item" href="../typecode/list.html">Typecodes</a>
+					<a class="dropdown-item" href="../project/list.html">Projects</a>
+					<a class="dropdown-item" href="../consultants/list.html">Consultants</a>
+					<a class="dropdown-item" href="../schools/list.html">Schools</a>
+					<a class="dropdown-item" href="../stores/list.html">Stores</a>
+					<a class="dropdown-item" href="../potterytony/list.html">Don't Buy-A-Mug</a>
+					<div class="dropdown-divider"></div>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="../index.html">https://digitalfire.com</a>
+					<a class="dropdown-item" href="https://insight-live.com">Insight-Live.com</a>
+					<a class="dropdown-item" href="../index.html">Sign-Up</a>
+				</div>
+			</li>
+		</ul>
+		<form class="form-inline my-2 my-lg-0" action="https://digitalfire.com/index.php?searcharea=hazard" accept-charset="UTF-8" method="post">
+		<input name="searchfor" title="Search from home to search in all areas" maxlength="20" class="form-control mr-sm-2" aria-label="Search" placeholder="Search" autocorrect="off" autocapitalize="off" type="search" value=""><button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="searchbutton">Search</button>
+		</form>
+	</div>
+</nav>
+<div class="container"><p><a class="btn btn-primary" data-toggle="collapse" href="paraffin+toxicology.html#collapse1" role="button" aria-expanded="false" aria-controls="collapse1">All Hazards</a></p>
+<div class="collapse" id="collapse1" style="margin-bottom:15px;"><nobr><a title="341" href="341.html">Alumina Toxicology</a> |</nobr> <nobr><a title="333" href="333.html">Ammonia and Latex Toxicity</a> |</nobr> <nobr><a title="16" href="16.html">Antimony Oxide</a> |</nobr> <nobr><a title="412" href="412.html">Are colored porcelains hazardous?</a> |</nobr> <nobr><a title="18" href="18.html">Arsenic Oxide</a> |</nobr> <nobr><a title="19" href="19.html">Asbestos Toxicity</a> |</nobr> <nobr><a title="22" href="22.html">Ball Clay</a> |</nobr> <nobr><a title="321" href="321.html">BARIUM and COMPOUNDS Toxicology</a> |</nobr> <nobr><a title="367" href="367.html">Barium Carbonate in Clay Bodies</a> |</nobr> <nobr><a title="26" href="26.html">Barium Carbonate in Glazes</a> |</nobr> <nobr><a title="31" href="31.html">Bentonite Toxicity</a> |</nobr> <nobr><a title="33" href="33.html">Beryllium Monoxide Toxicology</a> |</nobr> <nobr><a title="352" href="352.html">Bismuth Trioxide Toxicology</a> |</nobr> <nobr><a title="326" href="326.html">Boron Compounds and Their Toxicity</a> |</nobr> <nobr><a title="1" href="1.html">Brown Stain</a> |</nobr> <nobr><a title="335" href="335.html">Cadmium Toxicity</a> |</nobr> <nobr><a title="343" href="343.html">Calcium Carbonate Toxicology</a> |</nobr> <nobr><a title="334" href="334.html">Carbon Monoxide Toxicity</a> |</nobr> <nobr><a title="353" href="353.html">Cesium Toxicology</a> |</nobr> <nobr><a title="330" href="330.html">Chromium Compounds Toxicology</a> |</nobr> <nobr><a title="146" href="146.html">Clay Toxicity</a> |</nobr> <nobr><a title="73" href="73.html">Cobalt Oxide and Carbonate</a> |</nobr> <nobr><a title="331" href="331.html">Cobalt Toxicology</a> |</nobr> <nobr><a title="329" href="329.html">Copper Compounds Toxicology</a> |</nobr> <nobr><a title="78" href="78.html">Copper Oxide and Carbonate</a> |</nobr> <nobr><a title="84" href="84.html">Cristobalite Toxicity</a> |</nobr> <nobr><a title="337" href="337.html">Cryolite and Ceramics</a> |</nobr> <nobr><a title="372" href="372.html">Dealing With Dust in Ceramics</a> |</nobr> <nobr><a title="351" href="351.html">Diatomaceous Earth Toxicology</a> |</nobr> <nobr><a title="323" href="323.html">Dioxins in Clays</a> |</nobr> <nobr><a title="95" href="95.html">Epsom Salts</a> |</nobr> <nobr><a title="348" href="348.html">Eye Injuries Due to Radiation</a> |</nobr> <nobr><a title="222" href="222.html">Feldspar</a> |</nobr> <nobr><a title="320" href="320.html">Fighting Micro-Organisms in Ceramics</a> |</nobr> <nobr><a title="108" href="108.html">Fluorine Gas</a> |</nobr> <nobr><a title="413" href="413.html">Fumes from gas kilns</a> |</nobr> <nobr><a title="354" href="354.html">Gallium Oxide Toxicology</a> |</nobr> <nobr><a title="342" href="342.html">Hafnium Oxide Toxicty</a> |</nobr> <nobr><a title="345" href="345.html">Hydrofluoric Acid Toxicity</a> |</nobr> <nobr><a title="350" href="350.html">Iron oxide and Hematite</a> |</nobr> <nobr><a title="169" href="169.html">Lead Chromate</a> |</nobr> <nobr><a title="368" href="368.html">Lead in Ceramic Glazes</a> |</nobr> <nobr><a title="328" href="328.html">Lead Toxicology</a> |</nobr> <nobr><a title="174" href="174.html">Lithium Carbonate Toxicity</a> |</nobr> <nobr><a title="349" href="349.html">Lithium Toxicology</a> |</nobr> <nobr><a title="322" href="322.html">Man-Made Vitreous Fibers (MMVF) Toxicology</a> |</nobr> <nobr><a title="410" href="410.html">Man-Made Vitreous Fibers Safety Update</a> |</nobr> <nobr><a title="406" href="406.html">Manganese and Parkinsons by Jane Watkins</a> |</nobr> <nobr><a title="187" href="187.html">Manganese in Clay Bodies</a> |</nobr> <nobr><a title="317" href="317.html">Manganese Inorganic Compounds Toxicology</a> |</nobr> <nobr><a title="409" href="409.html">Manganese Toxicity by Elke Blodgett</a> |</nobr> <nobr><a title="407" href="407.html">Manganese: Creativity and Illness by Dierdre O'Reilly</a> |</nobr> <nobr><a title="332" href="332.html">Molybdenum Compounds Toxicology</a> |</nobr> <nobr><a title="327" href="327.html">Nickel Compounds Toxicity</a> |</nobr> <nobr><a title="314" href="314.html">Niobium Oxide Toxicity</a> |</nobr> <nobr><a title="318" href="318.html">Occupational Dermatoses</a> |</nobr> <nobr><a title="370" href="370.html">Overview of Material Safety by Gavin Stairs</a> |</nobr> <nobr><a title="364" href="364.html">Paraffin Toxicology</a> |</nobr> <nobr><a title="216" href="216.html">Perlite Toxicity</a> |</nobr> <nobr><a title="238" href="238.html">Plant Ash Toxicity</a> |</nobr> <nobr><a title="346" href="346.html">Potassium Carbonate Toxicity</a> |</nobr> <nobr><a title="365" href="365.html">Pregnancy and Ceramics</a> |</nobr> <nobr><a title="355" href="355.html">Propane Toxicology</a> |</nobr> <nobr><a title="251" href="251.html">Quartz Toxicity</a> |</nobr> <nobr><a title="369" href="369.html">Quartz Toxicity on Clayart</a> |</nobr> <nobr><a title="336" href="336.html">Rare Earth Compounds Toxicity</a> |</nobr> <nobr><a title="366" href="366.html">Rubidium and Cesium Toxicology</a> |</nobr> <nobr><a title="356" href="356.html">Rutile Toxicology</a> |</nobr> <nobr><a title="324" href="324.html">Silicosis and Screening</a> |</nobr> <nobr><a title="357" href="357.html">Silver Compounds Toxicology</a> |</nobr> <nobr><a title="358" href="358.html">Sodium Azide Toxicology</a> |</nobr> <nobr><a title="359" href="359.html">Sodium Carbonate Toxicology</a> |</nobr> <nobr><a title="360" href="360.html">Sodium Silicate Powder Toxicology</a> |</nobr> <nobr><a title="315" href="315.html">Stannous Chloride Toxicity</a> |</nobr> <nobr><a title="316" href="316.html">Strontium Carbonate Toxicity Note</a> |</nobr> <nobr><a title="347" href="347.html">Sulfur Dioxide Toxicity</a> |</nobr> <nobr><a title="3" href="3.html">Talc Hazards Overview</a> |</nobr> <nobr><a title="361" href="361.html">Talc Toxicology</a> |</nobr> <nobr><a title="362" href="362.html">Thallium Oxide Toxicology</a> |</nobr> <nobr><a title="344" href="344.html">Thorium Dioxide Toxicity</a> |</nobr> <nobr><a title="338" href="338.html">Tin Inorganic Compounds</a> |</nobr> <nobr><a title="339" href="339.html">Titanium Dioxide Toxicology</a> |</nobr> <nobr><a title="313" href="313.html">Toxicological Assessment of Zeolites</a> |</nobr> <nobr><a title="363" href="363.html">Tungsten Compounds Toxicology</a> |</nobr> <nobr><a title="371" href="371.html">Understanding Acronyms on MSDS's</a> |</nobr> <nobr><a title="325" href="325.html">Uranium and Ceramics</a> |</nobr> <nobr><a title="319" href="319.html">Vanadium and Compounds Toxicology</a> |</nobr> <nobr><a title="411" href="411.html">Vermiculite</a> |</nobr> <nobr><a title="340" href="340.html">Zinc Compounds Toxicology</a> |</nobr> <nobr><a title="373" href="373.html">Zirconium Compounds Toxicity</a> |</nobr> <nobr><a title="234" href="234.html">Zirconium Encapsulated Stains Toxicity</a></nobr></div><h1>Paraffin Toxicology</h1>
+<DT><B><FONT COLOR="#004080">INDENTIFICATION :</FONT></B>
+   
+<p>
+   
+<DT><FONT COLOR="#004080">CAS number : 8002-74-2</FONT>
+   
+<p>
+   
+<DT><B><FONT COLOR="#004080">MAIN SYNONYMS :</FONT></B>
+   
+<p>
+   
+<DT><I><FONT COLOR="#004080">French names :</FONT></I><FONT COLOR="#004080"> </FONT>
+   
+<DT><FONT COLOR="#004080">Paraffine, cire de (fum&eacute;es) </FONT>
+   
+<DT><FONT COLOR="#004080">CIRE DE PARAFFINE </FONT>
+   
+<DT><FONT COLOR="#004080">FUMEE DE PARAFFINE</FONT>
+   
+<DT><I><FONT COLOR="#004080">English names :</FONT></I>
+   
+<DT><FONT COLOR="#004080">Paraffin wax, fume </FONT>
+   
+<DT><FONT COLOR="#004080">HARD PARAFFIN</FONT>
+   
+<p>
+   
+<DT><B><FONT COLOR="#004080">USES AND SOURCES OF EMISSION :</FONT></B>
+   
+<p>
+   
+<DT><FONT COLOR="#004080">Manufacture of cosmetics, as a sealing agent, in ceramics</FONT>
+   
+<p>
+   
+<DT><B><U><FONT SIZE="+1" COLOR="#004080">HYGIENE ET SAFETY :</FONT></U></B>
+   
+<p>
+   
+<DT><B><U><FONT COLOR="#004080">I. Appearance :</FONT></U></B>
+   
+<p>
+   
+<DT><FONT COLOR="#004080">Solid, colourless to white, odourless</FONT>
+   
+<p>
+   
+<DT><B><U><FONT COLOR="#004080">II. Physical and Chemical Properties :</FONT></U></B>
+   
+<p>
+   
+<DT><B><FONT COLOR="#004080">Odor :</FONT></B><FONT COLOR="#004080"> None </FONT>
+   
+<DT><B><FONT COLOR="#004080">Physical state :</FONT></B><FONT COLOR="#004080"> Solid at 25 &#176;C </FONT>
+   
+<DT><B><FONT COLOR="#004080">Vapor pressure :</FONT></B><FONT COLOR="#004080"> &lt; 0.01 at 25 &#176;C </FONT>
+   
+<DT><B><FONT COLOR="#004080">Vapor density  (air =1) :</FONT></B><FONT COLOR="#004080"> &gt; 5 </FONT>
+   
+<DT><B><FONT COLOR="#004080">Boiling point : </FONT></B><FONT COLOR="#004080">&gt; 300 &#176;C </FONT>
+   
+<DT><B><FONT COLOR="#004080">Solubility in water (20&#176;C) :</FONT></B><FONT COLOR="#004080"> &lt; 0.1% </FONT>
+   
+<DT><B><FONT COLOR="#004080">Evaporation rate (Butyl Acetate =1) : </FONT></B><FONT COLOR="#004080">&lt; 0.01 </FONT>
+   
+<DT><B><FONT COLOR="#004080">Freezing point : </FONT></B><FONT COLOR="#004080">Not applicable </FONT>
+   
+<DT><B><FONT COLOR="#004080">Volatiles (By volume) :</FONT></B><FONT COLOR="#004080"> &lt; 1.0% </FONT>
+   
+<DT><B><FONT COLOR="#004080">Specific density (25&#176;C) : </FONT></B><FONT COLOR="#004080">0.90-0.93 </FONT>
+   
+<DT><B><FONT COLOR="#004080">Melting point : </FONT></B><FONT COLOR="#004080">45-100 &#176;C</FONT>
+   
+<DT><FONT COLOR="#004080">	</FONT>
+   
+<DT><B><U><FONT COLOR="#004080">III. Inflammability and Explosiveness : </FONT></U></B>
+   
+<DT><FONT COLOR="#004080"> </FONT>
+   
+<DT><B><FONT COLOR="#004080">A. Inflammability : </FONT></B>
+   
+<DT><FONT COLOR="#004080">This product is flammable under the following conditions : it can ignite if it is strongly heated and in the presence of a source of ignition. </FONT>
+   
+<DT><B><FONT COLOR="#004080">B. Data on fire hazards : </FONT></B>
+   
+<DT><B><FONT COLOR="#004080">Flash point :</FONT></B><FONT COLOR="#004080"> 199,00 &#176;C, closed cup </FONT>
+   
+<DT><B><FONT COLOR="#004080">T&#176; of auto-ignition :</FONT></B><FONT COLOR="#004080"> 245 &#176;C. </FONT>
+   
+<DT><B><FONT COLOR="#004080">C Sensitivity to shocks : </FONT></B>
+   
+<DT><FONT COLOR="#004080">This product is not sensitive to shocks. </FONT>
+   
+<DT><B><FONT COLOR="#004080">D. Techniques and means of extinction :</FONT></B><FONT COLOR="#004080"> </FONT>
+   
+<DT><FONT COLOR="#004080">Means of extinction: </FONT>
+   
+<DT><FONT COLOR="#004080">- carbon dioxide </FONT>
+   
+<DT><FONT COLOR="#004080">- foam </FONT>
+   
+<DT><FONT COLOR="#004080">- dry chemical powder</FONT>
+   
+<DT><FONT COLOR="#004080">- sprayed water </FONT>
+   
+<DT><FONT COLOR="#004080">- alcohol foam</FONT>
+   
+<DT><B><FONT COLOR="#004080">E. Additional information : </FONT></B>
+   
+<DT><FONT COLOR="#004080">Cool the containers exposed to fire with water. </FONT>
+   
+<DT><B><FONT COLOR="#004080">F. Special techniques : </FONT></B>
+   
+<DT><FONT COLOR="#004080">Wear an autonomous respiratory apparatus. </FONT>
+   
+<DT><B><FONT COLOR="#004080">G. Products of dangerous <a  href="../glossary/decomposition.html">decomposition</a> : </FONT></B>
+   
+<DT><FONT COLOR="#004080">Carbon monoxide, carbon dioxide and other products such as aldehydes and ketones according to the oxidation state, </FONT><B><FONT COLOR="#004080">aldehydes being able to be very irritating.</FONT></B>
+   
+<p>
+   
+<p>
+   
+<DT><B><U><FONT SIZE="+1" COLOR="#004080">PREVENTION :</FONT></U></B>
+   
+<p>
+   
+<DT><B><U><FONT COLOR="#004080">I. Storage : </FONT></U></B>
+   
+<DT><FONT COLOR="#004080">Store in a cool place, away from any source of ignition, sheltered from oxidizing materials, acids and bases. </FONT>
+   
+<p>
+   
+<DT><B><U><FONT COLOR="#004080">II. Exposure Control/Personal Protection : </FONT></U></B>
+   
+<DT><FONT COLOR="#004080">This material will be used in the molten form. Protective clothing against splashes, thermal gloves, and ocular protection must be worn to prevent wounds. </FONT>
+   
+<DT><B><FONT COLOR="#004080">Use the melted material in well ventilated sectors</FONT></B><FONT COLOR="#004080">. While working in confined areas, use suitable respiratory protection.</FONT>
+   
+<p>
+   
+<DT><B><U><FONT COLOR="#004080">III. Leaks : </FONT></U></B>
+   
+<DT><FONT COLOR="#004080">Handle as a thermoplastic product. At the time of leaking of the melted material, allow the product to solidify and cool. Keep the material out of sewers and rivers by diking. Recover and place in suitable containers for re-use
+or disposal, according to local laws.</FONT>
+   
+<p>
+   
+<DT><B><U><FONT COLOR="#004080">IV. Waste Disposal : </FONT></U></B>
+   
+<DT><FONT COLOR="#004080">Consult local authorities.</FONT>
+   
+<p>
+   
+<DT><B><U><FONT SIZE="+1" COLOR="#004080">TOXICOLOGY :</FONT></U></B>
+   
+<p>
+   
+<DT><B><U><FONT COLOR="#004080">I. Experimental Toxicology : </FONT></U></B>
+   
+<DT><FONT COLOR="#004080">In the rat, chronic ingestion showed its accumulation in certain target organs, such as the liver and spleen, associated with nonspecific immune response.</FONT>
+   
+<p>
+   
+<DT><B><U><FONT COLOR="#004080">II. Absorption :</FONT></U></B><FONT COLOR="#004080"> </FONT>
+   
+<DT><FONT COLOR="#004080">This product is absorbed by the respiratory tract.</FONT>
+   
+<p>
+   
+<DT><B><U><FONT COLOR="#004080">III. Acute Effects : </FONT></U></B>
+   
+<p>
+   
+<DT><B><FONT COLOR="#004080">A. Inhalation : </FONT></B>
+   
+<DT><FONT COLOR="#004080">If heated it emits paraffin wax fumes : </FONT>
+   
+<DT><FONT COLOR="#004080">- possible irritation of the eyes and the respiratory tract, more particularly in sensitive</FONT>
+   
+<DT><FONT COLOR="#004080">  individuals </FONT>
+   
+<DT><FONT COLOR="#004080">- nausea. </FONT>
+   
+<DT><B><FONT COLOR="#004080">B. Skin</FONT></B><FONT COLOR="#004080"> : </FONT>
+   
+<DT><FONT COLOR="#004080">Contact with molten wax can cause serious burns. </FONT>
+   
+<DT><B><FONT COLOR="#004080">C. Eyes : </FONT></B>
+   
+<DT><FONT COLOR="#004080">Direct ocular contact of the melted product with the eyes can cause thermal burns and ocular lesions. Fumes and vapors coming from the thermal decomposition of paraffin wax can cause irritation of the eyes. </FONT>
+   
+<DT><B><FONT COLOR="#004080">D. Ingestion : </FONT></B>
+   
+<DT><FONT COLOR="#004080">This product is primarily inert and non poisonous. However, one must handle it carefully, do not ingest or put some in your mouth.</FONT>
+   
+<p>
+   
+<DT><B><U><FONT COLOR="#004080">IV. Chronic Effects : </FONT></U></B>
+   
+<DT><B><FONT COLOR="#004080">Inhalation of aerosols (if heated) : </FONT></B>
+   
+<DT><FONT COLOR="#004080">- cough </FONT>
+   
+<DT><FONT COLOR="#004080">- sputum production </FONT>
+   
+<DT><FONT COLOR="#004080">- exertional shortness of breath </FONT>
+   
+<DT><FONT COLOR="#004080">- possibility of pulmonary damage (lipoidic pneumonia) </FONT>
+   
+<DT><FONT COLOR="#004080">- alveolitis and interstitial fibrosis.</FONT>
+   
+<p>
+   
+<DT><B><U><FONT COLOR="#004080">V. Pregnancy :</FONT></U></B>
+   
+<p>
+   
+<DT><FONT COLOR="#004080">A. Effects on development : </FONT>
+   
+<DT><FONT COLOR="#004080">No data concerning antenatal development was found in the consulted documentary sources. </FONT>
+   
+<DT><B><FONT COLOR="#004080">B Effects on the reproduction :</FONT></B><FONT COLOR="#004080"> </FONT>
+   
+<DT><FONT COLOR="#004080">No data concerning reproduction was found in the consulted documentary sources. </FONT>
+   
+<DT><B><FONT COLOR="#004080">C Data on the mother's milk : </FONT></B>
+   
+<DT><FONT COLOR="#004080">There is no data concerning excretion or detection in mother's milk.</FONT>
+   
+<p>
+   
+<DT><B><U><FONT COLOR="#004080">VI. Carcinogenic Effects :</FONT></U></B><FONT COLOR="#004080"> </FONT>
+   
+<DT><FONT COLOR="#004080">The available data do not make it possible to make an adequate evaluation of the carcinogenic effect. </FONT>
+   
+<p>
+   
+<DT><B><U><FONT COLOR="#004080">VII. Mutagenic Effects : </FONT></U></B>
+   
+<DT><FONT COLOR="#004080">No data concerning a mutagenic in vivo or in vitro effect on cells of mammals was found in the consulted documentary sources.</FONT>
+   
+<p>
+   
+<DT><B><U><FONT SIZE="+1" COLOR="#004080">FIRST AID :</FONT></U></B>
+   
+<p>
+   
+<DT><B><U><FONT COLOR="#004080">I. Inhalation : </FONT></U></B>
+   
+<DT><FONT COLOR="#004080">In the event of inhalation of fumes or vapors, bring the person into a well ventilated place. If he does not breathe, give him artificial respiration. Call a doctor. </FONT>
+   
+<p>
+   
+<DT><B><U><FONT COLOR="#004080">II. Eyes : </FONT></U></B>
+   
+<DT><FONT COLOR="#004080">Exposure to fumes and vapors of overheated paraffin can cause irritation of the eyes. Direct contact with molten paraffin wax can cause ocular damage and burns. At the time of the handling of molten wax, one should carry ocular
+protection at any time. If an accident occurs, wash the eyes with plenty of water during at least 15 minutes, call a doctor to take care of the wound. </FONT>
+   
+<p>
+   
+<DT><B><U><FONT COLOR="#004080">III. Skin : </FONT></U></B>
+   
+<DT><FONT COLOR="#004080">Exposure to fumes and vapors coming from the thermal degradation of the product can cause irritation of the skin. Direct contact with the molten product can cause burns. In the case of burns, wash the affected area with large
+amounts of water for  15 minutes. Do not try to remove the material fixed on the skin. Call a doctor to take care himself of the wound. </FONT>
+   
+<p>
+   
+<DT><B><U><FONT COLOR="#004080">IV. Ingestion : </FONT></U></B>
+   
+<DT><FONT COLOR="#004080">Is not an acute poison by ingestion. In the event of ingestion, do not induce vomiting, call a doctor.</FONT>
+   
+<p>
+   
+<DT><B><U><FONT SIZE="+1" COLOR="#004080">EXPOSURE LIMIT IN QUEBEC :</FONT></U></B>
+   
+<p>
+   
+<DT><B><U><FONT COLOR="#004080">Valeur d'Exposition Moyenne Pond&eacute;r&eacute;e (VEMP) :</FONT></U></B>
+   
+<DT><FONT COLOR="#004080">2 mg/m&#179; (Fumes)	</FONT>
+   
+<p>
+   
+<p>
+   
+<DT><I><FONT COLOR="#004080">References :</FONT></I>
+   
+<DT><I><FONT COLOR="#004080">1. Chemical Hazards of the Workplace, Proctor &amp; Hughes, 4th edition.</FONT></I>
+   
+<DT><I><FONT COLOR="#004080">2. Clinical Environmental Health and Toxic Exposures, Sullivan &amp; Krieger; second edition.</FONT></I>
+   
+<DT><I><FONT COLOR="#004080">3. CSST-Qu&eacute;bec, R&eacute;pertoire Toxicologique. </FONT></I>
+   
+<DT><I><FONT COLOR="#004080">4. Occupational Medicine, Zenz C., third edition.</FONT></I>
+   
+<DT><I><FONT COLOR="#004080">5. Sax's Dangerous Properties of Industrial Materials, Lewis C., 10th  edition.</FONT></I>
+   
+<DT><I><FONT COLOR="#004080">6. The International Group,  <a  href="../glossary/ghs+safety+data+sheets.html">MSDS</a>, Paraffin.</FONT></I>
+   
+<DT><I><FONT COLOR="#004080">7. Toxicologie Industrielle et Intoxications Professionnelles, Lauwerys R.R., 4th edition.</FONT></I>
+<hr><p>By Edouard Bastarache </p>
+<h2 style="font-style:italic; margin-top:40px;">Related Information</h2>
+
+<h3>Links</h3><table>
+<table class="table table-bordered"><tbody>
+<tr>
+<td scope="row">Materials</td>
+<td>
+<a href="../material/paraffin+wax.html">Paraffin Wax</a>
+<br /><i></i>
+</td>
+</tr>
+<tr>
+<td scope="row">Typecodes</td>
+<td>
+<a href="../typecode/eba.html">Article by Edouard Bastarache</a>
+<br /><i>Edouard Bastarache is a well known doctor that has written many articles on the subject of <a  href="../glossary/toxicity.html">toxicity</a> of ceramic materials and books on technical aspects of <a  href="../glossary/ceramics.html">ceramics</a>. He writes in both English and French.</i>
+</td>
+</tr>
+</tbody></table><table style="margin:30px 0px 30px 0px;"><tr><td style="vertical-align:middle; text-align:center; font-size:80%;"><img src="../images/PayPalDonate.png" style="height:66px; padding-right:20px;"><br /><a href="https://www.paypal.com/donate/?hosted_button_id=F8L3JX4BCCXJ6">PayPal</a></td><td style="background-color:#ddffdd; padding:10px; border:thin solid grey; font-size:90%;"><b>No</b> tracking, <b>No</b> ads, <b>No</b> paywall, <b>No</b> transient content!<br />Just organized, concise information constantly updated and improved.<br />Was this helpful? Consider supporting me.</td><tr></table><h3>Got a Question?</h3><p style="margin-bottom:30px;"><a name="kofi">Buy me a coffee and we can talk</a> <a target="_blank" href="https://ko-fi.com/tonyhansen"><img style="width:40px" src="../images/ko-fi.svg"></a></p><p style="margin-bottom:30px;">&nbsp;</p>
+<p></p><p></p><hr>
+<img style="width:250px" src="../4sight/images/ReferenceLibrary.svg">
+<br />
+<a href="../index.html">https://digitalfire.com</a>, All Rights Reserved
+<br /><a href="../w3c/privacypolicy.php.html">Privacy Policy</a>
+</div>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+</body>
+</html>

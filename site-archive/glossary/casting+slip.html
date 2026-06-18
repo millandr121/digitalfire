@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="../favicon.svg">
+<link rel="mask-icon" href="../mask-icon.svg" color="#000000">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<title>Casting Slip</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<meta name="author" content="Tony Hansen">
+<meta name="description" content="Casting slips are among the easiest clay bodies to make yourself. The ability to make and tune your own will open many doors in your production process.">
+<style>
+.flexinline { width: 50%; height: auto; clear:left; margin: 10px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexinline { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexright50 { width: 50%; height: auto; float: right; margin: 5px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexright50 { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexright33 { width: 33%; height: auto; float: right; margin: 5px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexright33 { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexright25 { width: 25%; height: auto; float: right; margin: 5px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexright25 { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexleft50 { width: 50%; height: auto; float: left; margin: 5px 15px 10px 0px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexleft50 { width: 100%; height: auto; margin: 5px 10px 10px 0px; border: none; padding: none; } }
+.flexleft33 { width: 33%; height: auto; float: left; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexleft33 { width: 100%; height: auto; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; } }
+.flexleft25 { width: 25%; height: auto; float: left; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexleft25 { width: 100%; height: auto; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; } }
+.pictureseries { overflow:scroll; width:auto; height:200px; float:left; margin: 5px 10px 10px 0px; padding: 5px; font-size:60%; font-style:italic;}
+@media (max-width: 640px) { .pictureseries { overflow:scroll; width:auto; height:200px; float:left; margin: 5px 10px 10px 0px; border: padding: 5px; font-size:60%; font-style:italic;} }
+.L2 { margin-left:0px; }
+.L3 { margin-left:20px; color:#222222; }
+.L4 { margin-left:40px; color:#444444; }
+.L5 { margin-left:60px; color:#666666; }
+.L6 { margin-left:60px; color:#888888; }
+h2 { color:#222222; }
+h3 { color:#444444; }
+h4 { color:#666666; }
+h5 { color:#888888; }
+
+</style>
+
+<meta name="google-site-verification" content="wquYW_n-3QEfIzDfV--8ElUewf7TIt04RGo55GfZySU" />
+<meta name="have-i-been-pwned-verification" value="9223dcee7de5c9622c2a2abcff4adc81">
+<script>
+function validateForm() {
+	var x = document.forms["emailform1"]["name1"].value;
+	var r = true;
+	if (x == "") { // alert("A name is required."); 
+		document.getElementById("name1").textContent="Name Required";
+		document.getElementById("name1").style.color="red";
+		// document.emailform1.name1.focus() ; # does not work, should be getelementbyid
+		r = false; 
+	} else {
+		document.getElementById("name1").textContent="Name";
+		document.getElementById("name1").style.color="black";
+	}
+	if (document.forms["emailform1"]["subject1"].value == "") { 
+		document.getElementById("subject1").textContent="Subject Required";
+		document.getElementById("subject1").style.color="red";
+		r = false; 
+	} else {
+		document.getElementById("subject1").textContent="Subject";
+		document.getElementById("subject1").style.color="black";
+	}			
+	if (document.forms["emailform1"]["msg1"].value == "") { 
+		document.getElementById("msg1").textContent="Message Required";
+		document.getElementById("msg1").style.color="red";
+		// alert("A message is required."); 
+		r = false; 
+	} else {
+		document.getElementById("msg1").textContent="Message";
+		document.getElementById("msg1").style.color="black";
+	}
+	var emailID = document.emailform1.email1.value;
+	atpos = emailID.indexOf("@");
+	dotpos = emailID.lastIndexOf(".");
+	if (atpos < 1 || ( dotpos - atpos < 2 )) {
+		document.getElementById("email1").textContent="Email Address Appears Invalid!";
+		document.getElementById("email1").style.color="red";
+		// alert("Your email address appears invalid.")
+		r = false;
+	} else {
+		document.getElementById("email1").textContent="Email Address";
+		document.getElementById("email1").style.color="black";
+	}
+	// Send the form
+	if (r == false) return false;
+	document.forms["emailform1"].submit();
+}
+</script>
+</head>
+<body>
+<p style="background-color:#ff9933; border-width:1px; padding:3px 10px 3px 10px; margin:0px 0px 3px 0px; font-size:80%; text-align:center;">
+Digitalfire will shut down on June 26. I no longer have the authority to grant exemption to a section in the Terms and Conditions of using material in the Insight-Live account from which I built the source material. While there are ways to comply with the take-down order, they are beyond my means because of how complex and large the site has become in the past 35+ years. It has been a wild ride for a shy prairie boy, thanks to everyone for your support. Insight-live.com is not affected by this.</p>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<a name="pagetop" class="navbar-brand" href="../home.html"><img src="../4sight/images/ReferenceLibrary.svg" height="40" alt=""></a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item"><a class="nav-link" href="../home.html">Home</a></li>
+			<li class="nav-item"><a class="nav-link" href="../oxide/list.html">Oxides</a></li>
+			<li class="nav-item"><a class="nav-link" href="../material/list.html">Materials</a></li>
+			<li class="nav-item"><a class="nav-link" href="../recipe/list.html">Recipes</a></li>
+			<li class="nav-item active"><a class="nav-link" href="list.html">Glossary <span class="sr-only">(current)</span></a></li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="casting+slip.html#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Others</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" href="../article/list.html">Articles</a>
+					<a class="dropdown-item" href="../hazard/list.html">Hazards</a>
+					<a class="dropdown-item" href="../mineral/list.html">Minerals</a>
+					<a class="dropdown-item" href="../property/list.html">Properties</a>
+					<a class="dropdown-item" href="../schedule/list.html">Firing Schedules</a>
+					<a class="dropdown-item" href="../temperature/list.html">Temperatures</a>
+					<a class="dropdown-item" href="../trouble/list.html">Troubles</a>
+					<a class="dropdown-item" href="../test/list.html">Tests</a>
+					<a class="dropdown-item" href="../video/list.html">Media</a>
+					<a class="dropdown-item" href="../picture/list.html">Pictures</a>
+					<a class="dropdown-item" href="../typecode/list.html">Typecodes</a>
+					<a class="dropdown-item" href="../project/list.html">Projects</a>
+					<a class="dropdown-item" href="../consultants/list.html">Consultants</a>
+					<a class="dropdown-item" href="../schools/list.html">Schools</a>
+					<a class="dropdown-item" href="../stores/list.html">Stores</a>
+					<a class="dropdown-item" href="../potterytony/list.html">Don't Buy-A-Mug</a>
+					<div class="dropdown-divider"></div>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="../index.html">https://digitalfire.com</a>
+					<a class="dropdown-item" href="https://insight-live.com">Insight-Live.com</a>
+					<a class="dropdown-item" href="../index.html">Sign-Up</a>
+				</div>
+			</li>
+		</ul>
+		<form class="form-inline my-2 my-lg-0" action="https://digitalfire.com/index.php?searcharea=glossary" accept-charset="UTF-8" method="post">
+		<input name="searchfor" title="Search from home to search in all areas" maxlength="20" class="form-control mr-sm-2" aria-label="Search" placeholder="Search" autocorrect="off" autocapitalize="off" type="search" value=""><button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="searchbutton">Search</button>
+		</form>
+	</div>
+</nav>
+<div class="container"><p>Operation timed out after 2001 milliseconds with 0 bytes received</p>Error: API server returned an invalid response for glossary<p style="clear:left"></p><h1>Casting Slip</h1>
+<p class="text-muted" style="margin-left:20px">Casting slips are among the easiest clay bodies to make yourself. The ability to make and tune your own will open many doors in your production process.
+<p class="text-muted" style="margin-left:20px; font-style:italic; font-size:90%;"><b>Key phrases linking here:</b> casting body recipes, casting bodies, casting slip, casting body
+ - <a href="../home/linkmaker.html">Learn more</a></p>
+</h4>
+<h2>Details</h2>
+<p>Anyone can make <a  href="casting+slip.html">casting slip</a>. Materials needed are available at any <a  href="../picture/2530.html">ceramic supplier</a>. All you need is a good <a  href="propeller+mixer.html">propeller mixer</a> (with fine-grained speed control, able to run for at least 15 minutes, with enough power and a good propeller) and an understanding of <a  href="deflocculation.html">deflocculation</a>. If you are already buying a premixed powder, then shifting toward your own recipe will be much easier. Commercial <a  href="stoneware.html">stoneware</a> or <a  href="porcelain.html">porcelain</a> casting slips are not magic, they have recipes similar to those discussed below. Learning how to create a <a  href="slurry.html">slurry</a> having good casting properties can be a major step toward <a  href="do-it-yourself.html">DIY</a>, opening many new doors. If you can also learn <a  href="3d+design.html">CAD</a> design and <a  href="3d-printing.html">3D printing</a> there will be nothing you cannot make using the <a  href="slip+casting.html">slip casting</a> process.<br />
+<br />
+Porcelains and White or Buff Stonewares<br />
+<br />
+Typically, these bodies are 95% clay, <a  href="../material/1245.html">silica</a> and <a  href="../material/310.html">feldspar</a> - it is not rocket science. Understanding what each material does enables tuning the recipe to get exactly what you need.<br />
+<br />
+- <a  href="../material/925.html">Kaolin</a>: Most kaolins are non-plastic and so are a natural fit for use in a <a  href="casting+slip.html">casting body</a>. White-burning ones are more expensive. Availability and price will likely determine which you use.<br />
+- <a  href="../material/80.html">Ball clay</a>: All ball clays are highly plastic, they slow down casting and have less fired whiteness. A few larger particle size ones are available and producers target them to casting. Use one of those. White-burning ones are generally less plastic, thus more likely to be suitable.<br />
+- Feldspar: Likely you don't have many available, try the ones you can get.<br />
+- Silica: This should be available everywhere and it fires white, use a <a  href="200+mesh.html">200 mesh</a> version.<br />
+- <a  href="../material/106.html">Bentonite</a>: At most, only 1% is likely needed (if at all). Get one that is processed to at least 200 mesh.<br />
+- <a  href="../material/1620.html">Talc</a>: Fine-tune <a  href="maturity.html">maturity</a> (1-2% additions can markedly increase fired maturity).<br />
+<br />
+<a  href="https://insight-live.com/insight/share.php?z=tgsPMxNsAP">L4807</a> Recipe for <a  href="cone+6.html">Cone 6</a> Whiteware/Porcelain (using the most suitable materials in the US)<br />
+<br />
+<a  href="../material/3115.html">OptiKast</a> Kaolin 	30<br />
+Silica 	25<br />
+<a  href="../material/943.html">KT#1-4</a> Ball Clay 	20<br />
+<a  href="../material/1070.html">Nepheline Syenite</a> 	25<br />
+Talc 	0.5<br />
+<br />
+As a guide, consider using the slip mixing instructions on the <a  href="https://plainsmanclays.ca/data/index.php?product=12880">M370</a> page at <a  href="../url/221.html">PlainsmanClays.com</a>. However, since this uses larger particles clays it will likely require less deflocculant.<br />
+<br />
+Recipe Tuning:<br />
+A good <a  href="digitalfire+insight-live.html">record-keeping</a> system for this is essential (e.g. an account at <a  href="digitalfire+insight-live.html">insight-live</a>.com). Keep a good record of every change you test. The casting process is very sensitive; small changes can produce big benefits in productivity and the types of ware you can make. A few guidelines:<br />
+- Increase ball clay at the expense of kaolin for better <a  href="green+strength.html">green strength</a>, better mold release (but slower casting).<br />
+- Add bentonite when mold release is poor (it increases <a  href="drying+shrinkage.html">drying shrinkage</a>, so shrinking pieces can pull themselves away from the mold surface).<br />
+- Increase Nepheline at the expense of clay for more fired maturity. If feldspar must be used, the body will be less <a  href="maturity.html">mature</a> so more will be needed.<br />
+- Glazes should not <a  href="../trouble/glaze+crazing.html">craze</a> with 25% silica (if the body is mature). Glazes may fit with 20% silica, or even 15%, if so, then increase feldspar if more maturity is needed, otherwise kaolin.<br />
+- Add talc for better maturity (up to 2%, otherwise increase nepheline).<br />
+<br />
+<a  href="terra+cotta.html">Terra Cotta</a> casting body: <a  href="https://insight-live.com/insight/share.php?z=No2m98AEhJ">L4170B</a> (and derivatives).<br />
+Black cone 6 casting body: <a  href="https://insight-live.com/insight/share.php?z=35Tb8CCEe7">L4053B</a>, <a  href="https://insight-live.com/insight/share.php?z=35Tb8CCEe7">L4768E</a>, <a  href="https://insight-live.com/insight/share.php?z=35Tb8CCEe7">L3954F</a>.<br />
+For cone 6 white <a  href="translucency.html">translucent</a> porcelain: <a  href="https://insight-live.com/insight/share.php?z=rEgF5sd2dk">L3778D</a> recipe (with 1% or less bentonite).<br />
+Cone 6 buff stoneware: <a  href="https://insight-live.com/insight/share.php?z=RQqsks3hDe">L3798G</a>.<br />
+Cone 6 red burning body: <a  href="https://insight-live.com/insight/share.php?z=RQqsks3hDe">L4005D</a>.<p style="clear:left"></p></p>
+<h2 style="font-style:italic;">Related Information</h2>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">Why 3D design and printing is a better way to make slip casting molds</h3>
+<br /><a alt="3D printed plaster mold master" href="../picture/3456.html"><img class="flexleft50" alt="3D printed plaster mold master"  loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/azodwpphah.jpg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/3456.html">click here</a> to see it.</p>
+<p>I dread the traditional mold making process, the mess, all the supplies and tools involved. I am a potter, I make <a  href="functional.html">functional</a> <a  href="ceramics.html">ceramics</a>. I am not a mold-maker, but <a  href="3d+design.html">3D design</a> and printing have put it within my reach. This way more fun! There is no stopping this, it’s the future.<br />
+-I spend most time on design, pouring the <a  href="../material/1124.html">plaster</a> or rubber takes minutes.<br />
+-Many fewer tools and supplies are needed, the process is less messy, as easy as downloading a file, printing it and pouring in plaster - this is doable in my kitchen! I don't even need mold soap!<br />
+-Sanding of flat mating faces is possible (for better seams than I've ever had). This is because <a  href="mold+natches.html">natches</a> can be added later (using <a  href="../picture/3483.html">embeds</a>).<br />
+-I can make my own natches and interlock schemes.<br />
+-No spare is needed, the <a  href="3d-printing.html">3D-printed</a> <a  href="pour+spout.html">pour spouts</a> work better.<br />
+-The range of shapes seems limitless. Especially because designs can be split up into pieces, each printed in optimal orientation (and glued together).<br />
+-I make molds through multiple design-print iterations. 3D makes do-overs or changes in design as easy as a reprint and plaster-pour. So, I can make a mold just to test an idea!<br />
+</p>
+<p style="clear:left"></p>
+<h3>Inbound Photo Links</h3><table><tr>
+<td style="vertical-align:top; font-size:80%;">
+<br /><a alt="3D printed mold natches" href="../picture/3483.html"><img style="margin:0px 10px 10px 0px; height:100px;" alt="3D printed mold natches"  loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/qel9nhnv9q-100H.jpg" /></a><br />v1 DIY Four-Part Mold Natch System
+Essential for 3D mold-making in ceramics
+</td>
+</tr></table><br />
+<h3>Links</h3><table>
+<table class="table table-bordered"><tbody>
+<tr>
+<td scope="row">Glossary</td>
+<td>
+<a href="slip+casting.html">Slip Casting</a>
+<br /><i>A method of forming <a  href="ceramics.html">ceramics</a>. A <a  href="deflocculation.html">deflocculated</a> (low <a  href="water+content.html">water content</a>) <a  href="slurry.html">slurry</a> is poured into absorbent <a  href="../material/1124.html">plaster</a> molds. As it sits in the mold, usually 10+ minutes, a layer builds against the mold walls. When thick enough the mold is drained.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Glossary</td>
+<td>
+<a href="casting-jiggering.html">Casting-Jiggering</a>
+<br /><i>A process in ceramic production where items are <a  href="slip+casting.html">slip-cast</a> first and then finished using a <a  href="jiggering.html">jigger</a> wheel.</i>
+</td>
+</tr>
+<tr>
+<td>Video<br /><img src="https://cdn.digitalfire.com/PourBeerBottle.jpg" style="width:200px;" /></td>
+<td>
+<a href="../video/slip+cast+a+stoneware+beer+bottle.html">Slip cast a stoneware beer bottle</a>
+<br /><i>I will mix the <a  href="slurry.html">slurry</a>, assemble the mold, attach the <a  href="3d-printing.html">3D-printed</a> pour spot, pour in the slip, pour it out, remove the spout, trim the lip, split the mold, extract the bottle and drill the holes for the swing-top stoppers.</i>
+</td>
+</tr>
+</tbody></table><table style="margin:30px 0px 30px 0px;"><tr><td style="vertical-align:middle; text-align:center; font-size:80%;"><img src="../images/PayPalDonate.png" style="height:66px; padding-right:20px;"><br /><a href="https://www.paypal.com/donate/?hosted_button_id=F8L3JX4BCCXJ6">PayPal</a></td><td style="background-color:#ddffdd; padding:10px; border:thin solid grey; font-size:90%;"><b>No</b> tracking, <b>No</b> ads, <b>No</b> paywall, <b>No</b> transient content!<br />Just organized, concise information constantly updated and improved.<br />Was this helpful? Consider supporting me.</td><tr></table><table style="margin-top:30px; padding-top:10px; padding-bottom:20px; border-top:thin solid grey; border-bottom:thin solid grey;"><tr><td style="padding-right:10px">By <i>Tony Hansen</i><br /><span style="font-size:80%; color:#888888;">Follow me on<br /><a title="Threads" href="https://www.threads.net/@tonyatdigitalfire" target="_blank"><img src="../images/threads.jpg" style="width:20px;" border="0"></a> <a title="Facebook Insight-Live" href="https://www.facebook.com/insightlive" target="_blank"><img src="../images/facebook.jpg" style="width:20px;" border="0"></a> <a title="LinkedIn" href="https://www.linkedin.com/in/tonywhansen/" target="_blank"><img src="../images/linkedin.jpg" style="width:20px;" border="0"></a> <a title="Pinterest" href="https://www.pinterest.ca/tonywhansen" target="_blank"><img src="../images/pinterest.jpg" style="width:20px;" border="0"></a> <a title="Instagram" href="https://instagram.com/tonyatdigitalfire" target="_blank"><img src="../images/instagram.jpg" style="width:20px;" border="0"></a> <a title="Ko-Fi" href="https://ko-fi.com/tonyhansen#" target="_blank"><img src="../images/ko-fi.jpg" style="width:20px;" border="0"></a> <a title="Twitter" href="https://x.com/digitalfiretony" target="_blank"><img src="../images/twitter.jpg" style="width:20px;" border="0"></a></td><td><a href="https://tonyhansen.com/about"><img src="../images/SignaturePhotoSmall.jpg" height="80"></a></td></tr></table><h3>Got a Question?</h3><p style="margin-bottom:30px;"><a name="kofi">Buy me a coffee and we can talk</a> <a target="_blank" href="https://ko-fi.com/tonyhansen"><img style="width:40px" src="../images/ko-fi.svg"></a></p><p style="margin-bottom:30px;">&nbsp;</p>
+<p></p><p></p><hr>
+<img style="width:250px" src="../4sight/images/ReferenceLibrary.svg">
+<br />
+<a href="../index.html">https://digitalfire.com</a>, All Rights Reserved
+<br /><a href="../w3c/privacypolicy.php.html">Privacy Policy</a>
+</div>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+</body>
+</html>

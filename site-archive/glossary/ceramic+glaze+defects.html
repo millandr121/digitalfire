@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="../favicon.svg">
+<link rel="mask-icon" href="../mask-icon.svg" color="#000000">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<title>Ceramic Glaze Defects</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<meta name="author" content="Tony Hansen">
+<meta name="description" content="Ceramic glaze defects include things like pinholes, blisters, crazing, shivering, leaching, crawling, cutlery marking, clouding and color problems.">
+<style>
+.flexinline { width: 50%; height: auto; clear:left; margin: 10px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexinline { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexright50 { width: 50%; height: auto; float: right; margin: 5px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexright50 { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexright33 { width: 33%; height: auto; float: right; margin: 5px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexright33 { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexright25 { width: 25%; height: auto; float: right; margin: 5px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexright25 { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexleft50 { width: 50%; height: auto; float: left; margin: 5px 15px 10px 0px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexleft50 { width: 100%; height: auto; margin: 5px 10px 10px 0px; border: none; padding: none; } }
+.flexleft33 { width: 33%; height: auto; float: left; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexleft33 { width: 100%; height: auto; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; } }
+.flexleft25 { width: 25%; height: auto; float: left; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexleft25 { width: 100%; height: auto; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; } }
+.pictureseries { overflow:scroll; width:auto; height:200px; float:left; margin: 5px 10px 10px 0px; padding: 5px; font-size:60%; font-style:italic;}
+@media (max-width: 640px) { .pictureseries { overflow:scroll; width:auto; height:200px; float:left; margin: 5px 10px 10px 0px; border: padding: 5px; font-size:60%; font-style:italic;} }
+.L2 { margin-left:0px; }
+.L3 { margin-left:20px; color:#222222; }
+.L4 { margin-left:40px; color:#444444; }
+.L5 { margin-left:60px; color:#666666; }
+.L6 { margin-left:60px; color:#888888; }
+h2 { color:#222222; }
+h3 { color:#444444; }
+h4 { color:#666666; }
+h5 { color:#888888; }
+
+</style>
+
+<meta name="google-site-verification" content="wquYW_n-3QEfIzDfV--8ElUewf7TIt04RGo55GfZySU" />
+<meta name="have-i-been-pwned-verification" value="9223dcee7de5c9622c2a2abcff4adc81">
+<script>
+function validateForm() {
+	var x = document.forms["emailform1"]["name1"].value;
+	var r = true;
+	if (x == "") { // alert("A name is required."); 
+		document.getElementById("name1").textContent="Name Required";
+		document.getElementById("name1").style.color="red";
+		// document.emailform1.name1.focus() ; # does not work, should be getelementbyid
+		r = false; 
+	} else {
+		document.getElementById("name1").textContent="Name";
+		document.getElementById("name1").style.color="black";
+	}
+	if (document.forms["emailform1"]["subject1"].value == "") { 
+		document.getElementById("subject1").textContent="Subject Required";
+		document.getElementById("subject1").style.color="red";
+		r = false; 
+	} else {
+		document.getElementById("subject1").textContent="Subject";
+		document.getElementById("subject1").style.color="black";
+	}			
+	if (document.forms["emailform1"]["msg1"].value == "") { 
+		document.getElementById("msg1").textContent="Message Required";
+		document.getElementById("msg1").style.color="red";
+		// alert("A message is required."); 
+		r = false; 
+	} else {
+		document.getElementById("msg1").textContent="Message";
+		document.getElementById("msg1").style.color="black";
+	}
+	var emailID = document.emailform1.email1.value;
+	atpos = emailID.indexOf("@");
+	dotpos = emailID.lastIndexOf(".");
+	if (atpos < 1 || ( dotpos - atpos < 2 )) {
+		document.getElementById("email1").textContent="Email Address Appears Invalid!";
+		document.getElementById("email1").style.color="red";
+		// alert("Your email address appears invalid.")
+		r = false;
+	} else {
+		document.getElementById("email1").textContent="Email Address";
+		document.getElementById("email1").style.color="black";
+	}
+	// Send the form
+	if (r == false) return false;
+	document.forms["emailform1"].submit();
+}
+</script>
+</head>
+<body>
+<p style="background-color:#ff9933; border-width:1px; padding:3px 10px 3px 10px; margin:0px 0px 3px 0px; font-size:80%; text-align:center;">
+Digitalfire will shut down on June 26. I no longer have the authority to grant exemption to a section in the Terms and Conditions of using material in the Insight-Live account from which I built the source material. While there are ways to comply with the take-down order, they are beyond my means because of how complex and large the site has become in the past 35+ years. It has been a wild ride for a shy prairie boy, thanks to everyone for your support. Insight-live.com is not affected by this.</p>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<a name="pagetop" class="navbar-brand" href="../home.html"><img src="../4sight/images/ReferenceLibrary.svg" height="40" alt=""></a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item"><a class="nav-link" href="../home.html">Home</a></li>
+			<li class="nav-item"><a class="nav-link" href="../oxide/list.html">Oxides</a></li>
+			<li class="nav-item"><a class="nav-link" href="../material/list.html">Materials</a></li>
+			<li class="nav-item"><a class="nav-link" href="../recipe/list.html">Recipes</a></li>
+			<li class="nav-item active"><a class="nav-link" href="list.html">Glossary <span class="sr-only">(current)</span></a></li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="ceramic+glaze+defects.html#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Others</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" href="../article/list.html">Articles</a>
+					<a class="dropdown-item" href="../hazard/list.html">Hazards</a>
+					<a class="dropdown-item" href="../mineral/list.html">Minerals</a>
+					<a class="dropdown-item" href="../property/list.html">Properties</a>
+					<a class="dropdown-item" href="../schedule/list.html">Firing Schedules</a>
+					<a class="dropdown-item" href="../temperature/list.html">Temperatures</a>
+					<a class="dropdown-item" href="../trouble/list.html">Troubles</a>
+					<a class="dropdown-item" href="../test/list.html">Tests</a>
+					<a class="dropdown-item" href="../video/list.html">Media</a>
+					<a class="dropdown-item" href="../picture/list.html">Pictures</a>
+					<a class="dropdown-item" href="../typecode/list.html">Typecodes</a>
+					<a class="dropdown-item" href="../project/list.html">Projects</a>
+					<a class="dropdown-item" href="../consultants/list.html">Consultants</a>
+					<a class="dropdown-item" href="../schools/list.html">Schools</a>
+					<a class="dropdown-item" href="../stores/list.html">Stores</a>
+					<a class="dropdown-item" href="../potterytony/list.html">Don't Buy-A-Mug</a>
+					<div class="dropdown-divider"></div>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="../index.html">https://digitalfire.com</a>
+					<a class="dropdown-item" href="https://insight-live.com">Insight-Live.com</a>
+					<a class="dropdown-item" href="../index.html">Sign-Up</a>
+				</div>
+			</li>
+		</ul>
+		<form class="form-inline my-2 my-lg-0" action="https://digitalfire.com/index.php?searcharea=glossary" accept-charset="UTF-8" method="post">
+		<input name="searchfor" title="Search from home to search in all areas" maxlength="20" class="form-control mr-sm-2" aria-label="Search" placeholder="Search" autocorrect="off" autocapitalize="off" type="search" value=""><button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="searchbutton">Search</button>
+		</form>
+	</div>
+</nav>
+<div class="container"><p>Operation timed out after 2001 milliseconds with 0 bytes received</p>Error: API server returned an invalid response for glossary<p style="clear:left"></p><h1>Ceramic Glaze Defects</h1>
+<p class="text-muted" style="margin-left:20px">Ceramic glaze defects include things like pinholes, blisters, crazing, shivering, leaching, crawling, cutlery marking, clouding and color problems.
+<p class="text-muted" style="margin-left:20px; font-style:italic; font-size:90%;"><b>Key phrases linking here:</b> ceramic glaze defects
+ - <a href="../home/linkmaker.html">Learn more</a></p>
+</h4>
+<h2>Details</h2>
+<p><a  href="ceramic+glaze+defects.html">Ceramic glaze defects</a> include things like <a  href="pinholing.html">pinholes</a>, <a  href="../trouble/glaze+blisters.html">blisters</a>, <a  href="../trouble/glaze+crazing.html">crazing</a>, <a  href="glaze+shivering.html">shivering</a>, <a  href="leaching.html">leaching</a>, <a  href="../trouble/crawling.html">crawling</a>, <a  href="cutlery+marking.html">cutlery marking</a>, <a  href="glaze+bubbles.html">clouding</a> and color problems. So many things can go wrong it can seem amazing at times that it is even possible to successfully fire anything! For hobbyists and potters, a few small pinholes or uneven coverage are not an issue, but in industry one tiny defect can route a piece to the reject pile.<br />
+<br />
+Defects are seen differently depending on who you are. A worker on a production line sees a defect as a maladjustment on one of the machines (e.g. the kiln, the application or decoration equipment). He/she consults trouble-shooting books (made by the equipment manufacturers) to find a sample picture that looks similar to the problem being experienced and then tunes the machine as instructed. When the adjustments don't work the problem is deemed to be caused by an upstream issue.<br />
+<br />
+The technicians in charge of batching and maintaining the <a  href="rheology.html">rheology</a> of the <a  href="slurry.html">slurry</a> have different trouble-shooting books (made by the mixing equipment manufacturers, material and additives suppliers), the text beside the pictures explains how the problem might be related to the batching errors, mixing and milling issues, <a  href="specific+gravity.html">specific gravity</a>, additive balance, <a  href="viscosity.html">viscosity</a>, <a  href="thixotropy.html">thixotropy</a>, etc of the slurry. If none of the suggestions work it goes upstream to the glaze supplier.<br />
+<br />
+The technicians at glaze supply companies use the university textbooks, they understand about <a  href="glaze+chemistry.html">glaze chemistry</a> and the materials that supply it. They understand how to compare, evaluate and use <a  href="frit.html">frits</a>. They know how to balance the tradeoffs between getting the desired visual or physical property in the fired result and what sacrifices and weakness are intrinsic to getting that. They know what changes to make in the recipe to fix the problem.<br />
+<br />
+Often a glaze defect on a production line is a combination of issues at multiple steps.<br />
+<br />
+A potter needs to know all of the above, to be able to decide what stage of production is the issue and fix it there.<br />
+<br />
+A hobbyist just expects everything to work, glaze is like paint. He/she is unlikely to even read the label on the glaze jar. Hobbyists simply buy another jar and try that. If that fails they buy one of a different brand. If that fails they take up painting or weaving! The hobby ceramic supply industry is set up so that glazes are brushed on and are highly likely to work on the <a  href="clay+body.html">clay bodies</a> hobbyists use. So most people can blissfully make ware while seldom encountering glaze defects.<br />
+<br />
+This website is targeted mainly at potters, so it is about knowing every stage of production. Potters use frits much less than industry, so they are open to more glaze defects. However, they also have control of every phase of production and can thus compensate as needed. For example, they fire periodic kilns, which means they have the freedom to fire higher and employ much longer firing cycles, this gives even raw glazes time and temperature to melt and time to heal defects (on a controlled cool).<p style="clear:left"></p></p>
+<h2 style="font-style:italic;">Related Information</h2>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">Glaze defects are more visible with certain glazes</h3>
+<br /><a href="../picture/2927.html"><img class="flexleft50" loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/srxg8sb9pz.jpeg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/2927.html">click here</a> to see it.</p>
+<p><a  href="reactive+glazes.html">Reactive glazes</a>, especially darker colored types like the one on the left, distract the eye with their visual character, this tends to hide defects (like <a  href="pinholing.html">pinholes</a>, <a  href="../trouble/glaze+blisters.html">blisters</a>, bare spots, scratches). But matte glazes, especially whites like the one on the right, make tiny defects in the glaze more visible. Their mixing, application and firing require much more attention to detail to produce a defect-free surface.</p>
+<p style="clear:left"></p>
+<h3>Links</h3><table>
+<table class="table table-bordered"><tbody>
+<tr>
+<td scope="row">Glossary</td>
+<td>
+<a href="crackle+glaze.html">Crackle glaze</a>
+<br /><i>Crackle glazes have a crack pattern that is a product of <a  href="co-efficient+of+thermal+expansion.html">thermal expansion</a> mismatch between body and glaze. They are not suitable on <a  href="functional.html">functional</a> ware.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Glossary</td>
+<td>
+<a href="dimpled+glaze.html">Dimpled glaze</a>
+<br /><i>A ceramic glaze defect characterized by tiny holes in the surface, often too small to see with the naked eye.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Glossary</td>
+<td>
+<a href="glaze+fit.html">Glaze fit</a>
+<br /><i>In <a  href="ceramics.html">ceramics</a>, <a  href="glaze+fit.html">glaze fit</a> refers to the <a  href="co-efficient+of+thermal+expansion.html">thermal expansion</a> compatibility between glaze and <a  href="clay+body.html">clay body</a>. When the fit is not good the glaze forms a crack pattern or flakes off on contours.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Glossary</td>
+<td>
+<a href="surface+tension.html">Surface Tension</a>
+<br /><i>In <a  href="ceramics.html">ceramics</a>, <a  href="surface+tension.html">surface tension</a> is discussed in two contexts: The glaze melt and the glaze <a  href="suspension.html">suspension</a>. In both, the quality of the glaze surface is impacted.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Glossary</td>
+<td>
+<a href="viscosity.html">Viscosity</a>
+<br /><i>In ceramic slurries (especially casting slips, but also glazes) the degree of fluidity of the <a  href="suspension.html">suspension</a> is important to its performance.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Glossary</td>
+<td>
+<a href="volatiles.html">Volatiles</a>
+<br /><i></i>
+</td>
+</tr>
+<tr>
+<td scope="row">Glossary</td>
+<td>
+<a href="glaze+chemistry.html">Glaze Chemistry</a>
+<br /><i><a  href="glaze+chemistry.html">Glaze chemistry</a> is the study of how the oxide <a  href="glaze+chemistry.html">chemistry</a> of glazes relate to the way they fire. It accounts for color, surface, hardness, texture, <a  href="melting+temperature.html">melting temperature</a>, <a  href="co-efficient+of+thermal+expansion.html">thermal expansion</a>, etc.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Glossary</td>
+<td>
+<a href="glaze+bubbles.html">Glaze Bubbles</a>
+<br /><i><a  href="suspension.html">Suspended</a> <a  href="glaze+bubbles.html">micro-bubbles</a> in ceramic glazes affect their transparency and depth. Sometimes they add to to aesthetics. Often not. What causes them and what to do to remove them.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Glossary</td>
+<td>
+<a href="glaze+compression.html">Glaze Compression</a>
+<br /><i>In <a  href="ceramics.html">ceramics</a>, glazes are under compression when they have a lower <a  href="co-efficient+of+thermal+expansion.html">thermal expansion</a> than the body. A little compression strengthens ware, too much can weaken and even fracture it.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Glossary</td>
+<td>
+<a href="glaze+shrinkage.html">Glaze Shrinkage</a>
+<br /><i>Raw ceramic glazes contain clay to harden them on drying and to suspend the <a  href="slurry.html">slurry</a>. The more clay there is the more the glaze shrinks as it dries on the piece.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Glossary</td>
+<td>
+<a href="leaching.html">Leaching</a>
+<br /><i>Ceramic glazes can leach heavy metals into food and drink. This subject is not complex, there are many things anyone can do to deal with this issue</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Glossary</td>
+<td>
+<a href="cutlery+marking.html">Cutlery Marking</a>
+<br /><i>Ceramic glazes that mark from cutlery are either not properly melted (lack <a  href="flux.html">flux</a>), melted too much (lacking <a  href="../oxide/sio2.html">SiO2</a> and <a  href="../oxide/al2o3.html">Al2O3</a>), or have a micro-abrasive surface that abrades metal from cutlery.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Troubles</td>
+<td>
+<a href="../trouble/foaming+of+ceramicd+glaze+slurries.html">Foaming of Ceramicd Glaze Slurries</a>
+<br /><i>Ceramic glaze slurries can sometimes generate enough foam that it becomes difficult to apply an even layer to a surface. What can you do?</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Troubles</td>
+<td>
+<a href="../trouble/crawling.html">Crawling</a>
+<br /><i>Ask yourself the right questions to figure out the real cause of a <a  href="glaze+crawling.html">glaze crawling</a> issue. Deal with the problem, not the symptoms.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Troubles</td>
+<td>
+<a href="../trouble/runny+ceramic+glazes.html">Runny Ceramic Glazes</a>
+<br /><i>Glazes of high <a  href="melt+fluidity.html">melt fluidity</a> are likely to run if applied to thickly or have not catcher glaze</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Troubles</td>
+<td>
+<a href="../trouble/clouding+in+ceramic+glazes.html">Clouding in Ceramic Glazes</a>
+<br /><i>There a many factors to deal with in your ceramic process to achieve <a  href="transparent+glazes.html">transparent glazes</a> that actually fire to a crystal-clear glass</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Troubles</td>
+<td>
+<a href="../trouble/uneven+glaze+coverage.html">Uneven Glaze Coverage</a>
+<br /><i>The secret to getting event glaze coverage lies in understanding how to make <a  href="thixotropy.html">thixotropy</a>, <a  href="specific+gravity.html">specific gravity</a> and <a  href="viscosity.html">viscosity</a> work for you</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Troubles</td>
+<td>
+<a href="../trouble/specking+on+ceramic+ware.html">Specking on Ceramic Ware</a>
+<br /><i>Specking, or speckling, can be both a fault or feature in fired ceramic ware - caused or produced by metal-bearing contaminants to metallic additives</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Troubles</td>
+<td>
+<a href="https://digitalfire.com/trouble/powdering%2c+cracking+and+settling+glazes">Powdering, Cracking and Settling Glazes</a>
+<br /><i>Powdering and dusting glazes are difficult and a dust hazard. Shrinking and cracking glazes fall off and <a  href="../trouble/crawling.html">crawl</a>. The cause is the wrong amount or type of clay.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Troubles</td>
+<td>
+<a href="../trouble/glaze+slurry+is+difficult+to+use+or+settling.html">Glaze Slurry is Difficult to Use or Settling</a>
+<br /><i>Understanding glaze <a  href="slurry.html">slurry</a> <a  href="rheology.html">rheology</a> is the key to solving problems and creating a <a  href="suspension.html">suspension</a> that does not settle out, applies well, dries crack free.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Troubles</td>
+<td>
+<a href="../trouble/staining+of+fired+ceramic+glazes.html">Staining of Fired Ceramic Glazes</a>
+<br /><i>Ceramic glazes are glass. That means they are always easy to clean, right? Wrong - because the surface is not always glassy.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Troubles</td>
+<td>
+<a href="../trouble/bleeding+colors.html">Bleeding Colors</a>
+<br /><i>In <a  href="ceramics.html">ceramics</a>, the edges of <a  href="overglaze.html">overglaze</a> and <a  href="underglaze.html">underglaze</a> color decoration often bleeds into the over or <a  href="underglaze.html">under glaze</a>. How can this be avoided.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Troubles</td>
+<td>
+<a href="../trouble/glaze+blisters.html">Glaze Blisters</a>
+<br /><i>Questions and suggestions to help you reason out the real cause of ceramic glaze <a  href="../trouble/glaze+blisters.html">blistering</a> and <a  href="glaze+bubbles.html">bubbling</a> problems and work out a solution</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Troubles</td>
+<td>
+<a href="https://digitalfire.com/trouble/glaze+pinholes%2c+pitting">Glaze Pinholes, Pitting</a>
+<br /><i>Analyze the causes of ceramic glaze <a  href="pinholing.html">pinholing</a> and pitting so your fix is dealing with the real issues, not a symptom.</i>
+</td>
+</tr>
+</tbody></table><table style="margin:30px 0px 30px 0px;"><tr><td style="vertical-align:middle; text-align:center; font-size:80%;"><img src="../images/PayPalDonate.png" style="height:66px; padding-right:20px;"><br /><a href="https://www.paypal.com/donate/?hosted_button_id=F8L3JX4BCCXJ6">PayPal</a></td><td style="background-color:#ddffdd; padding:10px; border:thin solid grey; font-size:90%;"><b>No</b> tracking, <b>No</b> ads, <b>No</b> paywall, <b>No</b> transient content!<br />Just organized, concise information constantly updated and improved.<br />Was this helpful? Consider supporting me.</td><tr></table><table style="margin-top:30px; padding-top:10px; padding-bottom:20px; border-top:thin solid grey; border-bottom:thin solid grey;"><tr><td style="padding-right:10px">By <i>Tony Hansen</i><br /><span style="font-size:80%; color:#888888;">Follow me on<br /><a title="Threads" href="https://www.threads.net/@tonyatdigitalfire" target="_blank"><img src="../images/threads.jpg" style="width:20px;" border="0"></a> <a title="Facebook Insight-Live" href="https://www.facebook.com/insightlive" target="_blank"><img src="../images/facebook.jpg" style="width:20px;" border="0"></a> <a title="LinkedIn" href="https://www.linkedin.com/in/tonywhansen/" target="_blank"><img src="../images/linkedin.jpg" style="width:20px;" border="0"></a> <a title="Pinterest" href="https://www.pinterest.ca/tonywhansen" target="_blank"><img src="../images/pinterest.jpg" style="width:20px;" border="0"></a> <a title="Instagram" href="https://instagram.com/tonyatdigitalfire" target="_blank"><img src="../images/instagram.jpg" style="width:20px;" border="0"></a> <a title="Ko-Fi" href="https://ko-fi.com/tonyhansen#" target="_blank"><img src="../images/ko-fi.jpg" style="width:20px;" border="0"></a> <a title="Twitter" href="https://x.com/digitalfiretony" target="_blank"><img src="../images/twitter.jpg" style="width:20px;" border="0"></a></td><td><a href="https://tonyhansen.com/about"><img src="../images/SignaturePhotoSmall.jpg" height="80"></a></td></tr></table><h3>Got a Question?</h3><p style="margin-bottom:30px;"><a name="kofi">Buy me a coffee and we can talk</a> <a target="_blank" href="https://ko-fi.com/tonyhansen"><img style="width:40px" src="../images/ko-fi.svg"></a></p><p style="margin-bottom:30px;">&nbsp;</p>
+<p></p><p></p><hr>
+<img style="width:250px" src="../4sight/images/ReferenceLibrary.svg">
+<br />
+<a href="../index.html">https://digitalfire.com</a>, All Rights Reserved
+<br /><a href="../w3c/privacypolicy.php.html">Privacy Policy</a>
+</div>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+</body>
+</html>

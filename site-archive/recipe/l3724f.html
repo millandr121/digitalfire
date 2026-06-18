@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="../favicon.svg">
+<link rel="mask-icon" href="../mask-icon.svg" color="#000000">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<title>L3724F</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<meta name="author" content="Tony Hansen">
+<meta name="description" content="An experimental Zero3 using Plainsman 3D clay">
+<style>
+.flexinline { width: 50%; height: auto; clear:left; margin: 10px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexinline { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexright50 { width: 50%; height: auto; float: right; margin: 5px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexright50 { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexright33 { width: 33%; height: auto; float: right; margin: 5px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexright33 { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexright25 { width: 25%; height: auto; float: right; margin: 5px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexright25 { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexleft50 { width: 50%; height: auto; float: left; margin: 5px 15px 10px 0px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexleft50 { width: 100%; height: auto; margin: 5px 10px 10px 0px; border: none; padding: none; } }
+.flexleft33 { width: 33%; height: auto; float: left; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexleft33 { width: 100%; height: auto; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; } }
+.flexleft25 { width: 25%; height: auto; float: left; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexleft25 { width: 100%; height: auto; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; } }
+.pictureseries { overflow:scroll; width:auto; height:200px; float:left; margin: 5px 10px 10px 0px; padding: 5px; font-size:60%; font-style:italic;}
+@media (max-width: 640px) { .pictureseries { overflow:scroll; width:auto; height:200px; float:left; margin: 5px 10px 10px 0px; border: padding: 5px; font-size:60%; font-style:italic;} }
+.L2 { margin-left:0px; }
+.L3 { margin-left:20px; color:#222222; }
+.L4 { margin-left:40px; color:#444444; }
+.L5 { margin-left:60px; color:#666666; }
+.L6 { margin-left:60px; color:#888888; }
+h2 { color:#222222; }
+h3 { color:#444444; }
+h4 { color:#666666; }
+h5 { color:#888888; }
+
+</style>
+
+<meta name="google-site-verification" content="wquYW_n-3QEfIzDfV--8ElUewf7TIt04RGo55GfZySU" />
+<meta name="have-i-been-pwned-verification" value="9223dcee7de5c9622c2a2abcff4adc81">
+<script>
+		function scrollToID(idName, idNote) { 
+			var elmnt = document.getElementById(idName);
+			var elmnt1 = document.getElementById(idNote); 
+			elmnt.innerHTML = '<img style=\"height:55px; float:left; margin:0px 5px 0px 0px;\" src="%255C%2522https%253A/plainsmanclays.ca/images/skulllogo.svg%255C%2522.html"> Tell me about your use of Plainsman Clays'; 
+			elmnt1.innerHTML = 'What clay do you use? Why? Did you switch recently? Why?<br />What problems have you had?'; 
+			elmnt.scrollIntoView(); 
+		}
+		function copyXml() {
+			const xmlText = document.getElementById("xmlContent").innerText;
+			const btn = document.getElementById("copyBtn");
+
+			navigator.clipboard.writeText(xmlText).then(() => {
+				btn.innerText = "Copied!";
+				btn.style.backgroundColor = "green";
+				btn.style.color = "white";
+				setTimeout(() => {
+					btn.innerText = "Copy XML";
+					btn.style.backgroundColor = "";
+					btn.style.color = "";
+				}, 2000);
+			}).catch(err => {
+				console.error("Failed to copy: ", err);
+				alert("Failed to copy text.");
+			});
+		}
+		</script>
+<script>
+function validateForm() {
+	var x = document.forms["emailform1"]["name1"].value;
+	var r = true;
+	if (x == "") { // alert("A name is required."); 
+		document.getElementById("name1").textContent="Name Required";
+		document.getElementById("name1").style.color="red";
+		// document.emailform1.name1.focus() ; # does not work, should be getelementbyid
+		r = false; 
+	} else {
+		document.getElementById("name1").textContent="Name";
+		document.getElementById("name1").style.color="black";
+	}
+	if (document.forms["emailform1"]["subject1"].value == "") { 
+		document.getElementById("subject1").textContent="Subject Required";
+		document.getElementById("subject1").style.color="red";
+		r = false; 
+	} else {
+		document.getElementById("subject1").textContent="Subject";
+		document.getElementById("subject1").style.color="black";
+	}			
+	if (document.forms["emailform1"]["msg1"].value == "") { 
+		document.getElementById("msg1").textContent="Message Required";
+		document.getElementById("msg1").style.color="red";
+		// alert("A message is required."); 
+		r = false; 
+	} else {
+		document.getElementById("msg1").textContent="Message";
+		document.getElementById("msg1").style.color="black";
+	}
+	var emailID = document.emailform1.email1.value;
+	atpos = emailID.indexOf("@");
+	dotpos = emailID.lastIndexOf(".");
+	if (atpos < 1 || ( dotpos - atpos < 2 )) {
+		document.getElementById("email1").textContent="Email Address Appears Invalid!";
+		document.getElementById("email1").style.color="red";
+		// alert("Your email address appears invalid.")
+		r = false;
+	} else {
+		document.getElementById("email1").textContent="Email Address";
+		document.getElementById("email1").style.color="black";
+	}
+	// Send the form
+	if (r == false) return false;
+	document.forms["emailform1"].submit();
+}
+</script>
+</head>
+<body>
+<p style="background-color:#ff9933; border-width:1px; padding:3px 10px 3px 10px; margin:0px 0px 3px 0px; font-size:80%; text-align:center;">
+Digitalfire will shut down on June 26. I no longer have the authority to grant exemption to a section in the Terms and Conditions of using material in the Insight-Live account from which I built the source material. While there are ways to comply with the take-down order, they are beyond my means because of how complex and large the site has become in the past 35+ years. It has been a wild ride for a shy prairie boy, thanks to everyone for your support. Insight-live.com is not affected by this.</p>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<a name="pagetop" class="navbar-brand" href="../home.html"><img src="../4sight/images/ReferenceLibrary.svg" height="40" alt=""></a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item"><a class="nav-link" href="../home.html">Home</a></li>
+			<li class="nav-item"><a class="nav-link" href="../oxide/list.html">Oxides</a></li>
+			<li class="nav-item"><a class="nav-link" href="../material/list.html">Materials</a></li>
+			<li class="nav-item active"><a class="nav-link" href="list.html">Recipes <span class="sr-only">(current)</span></a></li>
+			<li class="nav-item"><a class="nav-link" href="../glossary/list.html">Glossary</a></li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="l3724f.html#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Others</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" href="../article/list.html">Articles</a>
+					<a class="dropdown-item" href="../hazard/list.html">Hazards</a>
+					<a class="dropdown-item" href="../mineral/list.html">Minerals</a>
+					<a class="dropdown-item" href="../property/list.html">Properties</a>
+					<a class="dropdown-item" href="../schedule/list.html">Firing Schedules</a>
+					<a class="dropdown-item" href="../temperature/list.html">Temperatures</a>
+					<a class="dropdown-item" href="../trouble/list.html">Troubles</a>
+					<a class="dropdown-item" href="../test/list.html">Tests</a>
+					<a class="dropdown-item" href="../video/list.html">Media</a>
+					<a class="dropdown-item" href="../picture/list.html">Pictures</a>
+					<a class="dropdown-item" href="../typecode/list.html">Typecodes</a>
+					<a class="dropdown-item" href="../project/list.html">Projects</a>
+					<a class="dropdown-item" href="../consultants/list.html">Consultants</a>
+					<a class="dropdown-item" href="../schools/list.html">Schools</a>
+					<a class="dropdown-item" href="../stores/list.html">Stores</a>
+					<a class="dropdown-item" href="../potterytony/list.html">Don't Buy-A-Mug</a>
+					<div class="dropdown-divider"></div>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="../index.html">https://digitalfire.com</a>
+					<a class="dropdown-item" href="https://insight-live.com">Insight-Live.com</a>
+					<a class="dropdown-item" href="../index.html">Sign-Up</a>
+				</div>
+			</li>
+		</ul>
+		<form class="form-inline my-2 my-lg-0" action="https://digitalfire.com/index.php?searcharea=recipe" accept-charset="UTF-8" method="post">
+		<input name="searchfor" title="Search from home to search in all areas" maxlength="20" class="form-control mr-sm-2" aria-label="Search" placeholder="Search" autocorrect="off" autocapitalize="off" type="search" value=""><button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="searchbutton">Search</button>
+		</form>
+	</div>
+</nav>
+<div class="container"><p>Operation timed out after 2001 milliseconds with 0 bytes received</p>Error: API server returned an invalid response for recipe<p style="clear:left"></p><p style="clear:left"></p><p style="clear:left"></p><p style="clear:left"></p><p style="clear:left"></p><h1>L3724F - Cone 03 Terra Cotta Stoneware</h1>
+<p><b>Modified</b>: 2020-12-14 12:11:35</p>
+<p>An experimental Zero3 using Plainsman 3D clay</p>
+<table class="table table-bordered table-sm" style="width:auto">
+<thead class="thead-light">
+<tr style="font-weight:bold">
+<th class="text-center" scope="col">Material</th>
+<th class="text-center" scope="col">Amount</th>
+<th class="text-right" scope="col">Percent</th>
+</tr></thead><tbody>
+<tr><td class="label"><a href="../material/plainsman+3d.html">Plainsman 3D</a></td><td class="text-right">45.00</td><td class="text-right">40.4</td></tr>
+<tr><td class="label"><a href="../material/redart.html">Redart</a></td><td class="text-right">50.00</td><td class="text-right">44.9</td></tr>
+<tr><td class="label"><a href="../material/national+standard+bentonite.html">National Standard Bentonite</a></td><td class="text-right">5.00</td><td class="text-right">4.5</td></tr>
+<tr><td class="label"><a href="../material/ferro+frit+3110.html">Ferro Frit 3110</a></td><td class="text-right">10.00</td><td class="text-right">9.0</td></tr>
+<tr><td class="label"><a href="../material/yellow+iron+oxide.html">Yellow Iron Oxide</a></td><td class="text-right">1.00</td><td class="text-right">0.9</td></tr>
+<tr><td class="label"><a href="../material/barium+carbonate.html">Barium Carbonate</a></td><td class="text-right">0.25</td><td class="text-right">0.2</td></tr>
+<tr><td class="text-right" colspan="2">111.25</td>
+<td class="text-right">100</td>
+</tr>
+</tbody></table>
+<h4>Notes</h4><p>This was version 1 of the <a  href="../glossary/zero3.html">Zero3</a> <a  href="../glossary/earthenware.html">low fire</a> red-burning plastic <a  href="../glossary/stoneware.html">stoneware</a> recipe. We were attempting to make use of a <a  href="../glossary/plainsman+clays.html">Plainsman</a> material. While it worked version well we eventually decided to go back to the original concept of using pure <a  href="../material/1191.html">Redart</a> clay, to make it useful in all of North America. That is <a  href="https://insight-live.com/insight/share.php?z=5R9GFgEEYF">L3724N2</a>.<br />
+<br />
+The original goal was a <a  href="../glossary/terra+cotta.html">terra cotta</a> clay with added <a  href="../glossary/frit.html">frit</a> to make it vitrify at cone 03. The previous version to this one, L3724E, had 5 frit. The former has better red color as a slip, this one is better as a body itself. Although the development effort spanned a year, it ended in only partial success. It was found that this body (and many variations of it) was too volatile, there is too narrow a temperature window between too <a  href="../glossary/maturity.html">mature</a> and too porous. When too mature, the <a  href="../glossary/firing+shrinkage.html">fired shrinkage</a> was very high, the color went from red to brown and the glaze was filled with bubbles from <a  href="../glossary/decomposition.html">decomposition</a> occurring within the over-fired body. When too open, the color was good but it was too susceptible to absorption of water into the matrix, this could be seen at sites of glaze imperfections where the water could get through. However, if you carefully watch <a  href="../glossary/glaze+fit.html">glaze fit</a> and make sure there are no imperfections in the glaze surface, this body could be successfully used at <a  href="../glossary/low+temperature+glaze.html">cone 04</a> to make quite strong ware.<br />
+<br />
+The <a  href="https://insight-live.com/insight/share.php?z=5R9GFgEEYF">L3724N2</a> version, which we recommend, also has the possibility of being a <a  href="../glossary/casting+slip.html">casting body</a>.</p>
+<h2 style="font-style:italic;">Related Information</h2>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">A vitreous terra cotta slip over a white low fire stoneware</h3>
+<br /><a href="../picture/1148.html"><img class="flexleft50" loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/recipes/cirwutesut.jpg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/1148.html">click here</a> to see it.</p>
+<p><a  href="l3724f.html">L3724F</a> <a  href="../glossary/flux.html">fluxed</a> <a  href="../glossary/terra+cotta.html">terra cotta</a> slip applied over a white burning <a  href="../glossary/stoneware.html">stoneware</a> (L3685R) fired at cone 03. Most slips in use are not adequately fluxed and do not adhere well to the body below. The <a  href="../glossary/frit.html">frit</a> in this one attaches much better and even enables it to develop a sheen. Also, because of its volatility of color in the cone 03 range, variations in the shade and degree of sheen will impart an appearance like <a  href="../glossary/flashing.html">flashing</a>.</p>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">One small pinhole in a terra cotta mug and we have a problem</h3>
+<br /><a href="../picture/1149.html"><img class="flexleft50" loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/recipes/cunnozagyw.jpg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/1149.html">click here</a> to see it.</p>
+<p>This is L3724E <a  href="../glossary/terra+cotta.html">terra cotta</a> <a  href="../glossary/stoneware.html">stoneware</a>. The inside slip is L3685S, a frit-fluxed <a  href="../glossary/engobe.html">engobe</a> that is hard like the body and attaches well to it (<a  href="../glossary/engobe.html">engobes</a> are often insufficiently <a  href="../glossary/flux.html">fluxed</a>). The glaze (<a  href="g1916q.html">G1916Q</a>) is <a  href="../material/356.html">Frit 3195</a>, <a  href="../material/349.html">Frit 3110</a> and 15% <a  href="../material/80.html">ball clay</a>. The body has about 3% <a  href="../glossary/clay+body+porosity.html">porosity</a>, enough to make very strong pots. However that porosity is still enough to absorb water (and coffee). Although not too visible here, the <a  href="../glossary/pinholing.html">pinhole</a> in the inner surface has enabled absorption and there is a quarter-sized area of discoloration below the glaze. The piece could possibly be fired a cone higher, but testing would be required to see if the slip is still firing-shrinkage and thermal-expansion compatible with the body and that the body would not be over-fired. A better solution is adjust the firing curve to heal the glaze better. High temperature stoneware can easily have a 3% porosity also, so this is not just a <a  href="../glossary/earthenware.html">low fire</a> issue.</p>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">Double-slip layer incised decoration: A challenge in slip-body fitting</h3>
+<br /><a href="../picture/1152.html"><img class="flexleft50" loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/glossary/fadcelycew.jpg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/1152.html">click here</a> to see it.</p>
+<p>An example of a white <a  href="../glossary/engobe.html">engobe</a> (L3685T) applied over a red <a  href="../glossary/clay+body.html">clay body</a> (<a  href="l3724f.html">L3724F</a>), then a red engobe (also L3724F) applied over the white. The <a  href="../glossary/incised+decoration.html">incised</a> design reveals the white inter-layer. This is a tricky procedure, you have to make sure the two slips are well fitted to the body (and each other), having a compatible <a  href="../glossary/drying+shrinkage.html">drying shrinkage</a>, <a  href="../glossary/firing+shrinkage.html">firing shrinkage</a>, <a  href="../glossary/co-efficient+of+thermal+expansion.html">thermal expansion</a> and <a  href="../glossary/quartz+inversion.html">quartz inversion</a> behavior. This is much more complex that for glazes, they have no firing shrinkage and drying shrinkage only needs to be low enough for <a  href="../glossary/bisque.html">bisque</a> application. Glazes also do not have quartz inversion issues.</p>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">What does it take to get a crystal-clear low fire transparent? A lot!</h3>
+<br /><a href="../picture/1205.html"><img class="flexleft50" loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/boblogexow.jpg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/1205.html">click here</a> to see it.</p>
+<p>These three cups are glazed with <a  href="https://insight-live.com/insight/share.php?z=EgMrBcHj4v">G1916S</a> at cone 03. The glaze is the most crystal clear achieved so far because it contains almost no gas producing materials (not even raw <a  href="../material/925.html">kaolin</a>). It contains Ferro <a  href="../glossary/frit.html">frits</a> 3195 and 3110 plus 11 <a  href="../glossary/calcination.html">calcined</a> kaolin and 3 VeeGum. Left is a <a  href="../glossary/earthenware.html">low fire</a> <a  href="../glossary/stoneware.html">stoneware</a> (L3685T), center is <a  href="../glossary/plainsman+clays.html">Plainsman</a> <a  href="https://plainsmanclays.ca/data/index.php?product=12870">L212</a> and right a <a  href="../glossary/vitreous.html">vitreous</a> <a  href="../glossary/terra+cotta.html">terra cotta</a> (<a  href="l3724f.html">L3724F</a>). It is almost crystal clear, it has few bubbles compared to the kaolin-suspended version. These all survived a 300F/icewater <a  href="../test/iwct.html">IWCT test</a> without <a  href="../trouble/glaze+crazing.html">crazing</a>!</p>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">Low fire red burning Zero3 engobe on white low fire stoneware</h3>
+<br /><a href="../picture/1247.html"><img class="flexleft50" loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/cetbopobim.jpg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/1247.html">click here</a> to see it.</p>
+<p>L3724E <a  href="../glossary/ball+milling.html">ball milled</a> flocculated slip has been applied to <a  href="l3685u.html">L3685U</a> <a  href="../glossary/earthenware.html">low fire</a> white <a  href="../glossary/stoneware.html">stoneware</a>. Notice how silky smooth it is. What is the secret of getting a perfectly even layer that does not drip: Thin the slip until it is fairly watery (stays in motion for 10 seconds or more after stirring) and then <a  href="../glossary/flocculation.html">flocculating</a> it using powdered <a  href="../material/292.html">Epsom salts</a> until it gels enough to stay in motion for less than 2 seconds.</p>
+<p style="clear:left"></p>
+<h3>Links</h3><table>
+<table class="table table-bordered"><tbody>
+<tr>
+<td scope="row">Recipes</td>
+<td>
+<a href="g1916q.html">G1916Q - Low Fire Highly-Expansion-Adjustable Transparent</a>
+<br /><i>An expansion-adjustable <a  href="../glossary/low+temperature+glaze.html">cone 04</a> transparent glaze made using three common Ferro <a  href="../glossary/frit.html">frits</a> (low and <a  href="../glossary/co-efficient+of+thermal+expansion.html">high expansion</a>), it produces an easy-to-use <a  href="../glossary/slurry.html">slurry</a>.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Recipes</td>
+<td>
+<a href="l3924c.html">L3924C - Zero3 Porcelain Experimental</a>
+<br /><i></i>
+</td>
+</tr>
+<tr>
+<td scope="row">Recipes</td>
+<td>
+<a href="l3685u.html">L3685U - Cone 03 White Engobe Recipe</a>
+<br /><i>A white burning body with enough added <a  href="../glossary/frit.html">frit</a> to produce a cone 03 <a  href="../glossary/stoneware.html">stoneware</a> or white slip for use on the matching red <a  href="../glossary/zero3.html">Zero3 stoneware</a>.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Glossary</td>
+<td>
+<a href="../glossary/terra+cotta.html">Terra Cotta</a>
+<br /><i>A type of red firing pottery. <a  href="../glossary/terra+cotta.html">Terra cotta</a> clay is available almost everywhere, it is fired at low temperatures. But quality is deceptively difficult to achieve.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Media</td>
+<td>
+<a href="../video/how+to+apply+a+white+slip+to+terra+cotta+ware.html">How to Apply a White Slip to Terra Cotta Ware</a>
+<br /><i>I will show you some secrets of making a base <a  href="../glossary/engobe.html">engobe</a> (or slip) apply to <a  href="../glossary/leather+hard.html">leather hard</a> <a  href="../glossary/terra+cotta.html">terracotta</a> ware in a thick, perfectly even layer.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">URLs</td>
+<td>
+<a href="../url/1524.html">https://insight-live.com/insight/share.php?z=5R9GFgEEYF</a>
+<br /><i><a  href="../glossary/zero3.html">Zero3</a> porcelain/stoneware, <a  href="../glossary/engobe.html">engobe</a>, clear glaze and firing schedule</i>
+<br /><i style="color:#888888;"></i>
+</td>
+</tr>
+</tbody></table><table style="margin:30px 0px 30px 0px;"><tr><td style="vertical-align:middle; text-align:center; font-size:80%;"><img src="../images/PayPalDonate.png" style="height:66px; padding-right:20px;"><br /><a href="https://www.paypal.com/donate/?hosted_button_id=F8L3JX4BCCXJ6">PayPal</a></td><td style="background-color:#ddffdd; padding:10px; border:thin solid grey; font-size:90%;"><b>No</b> tracking, <b>No</b> ads, <b>No</b> paywall, <b>No</b> transient content!<br />Just organized, concise information constantly updated and improved.<br />Was this helpful? Consider supporting me.</td><tr></table>
+
+<h3 style="clear:left;">XML to Paste Into Insight-live</h3><button onclick="copyXml()" id="copyBtn">Copy XML</button><pre id="xmlContent">&lt;?xml version=&quot;1.0&quot;?&gt;
+&lt;recipes version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;&gt;
+&lt;recipe name=&quot;Cone 03 Terra Cotta Stoneware&quot; keywords=&quot;An experimental Zero3 using Plainsman 3D clay&quot; id=&quot;123&quot; date=&quot;2020-12-14&quot; codenum=&quot;L3724F&quot;&gt;
+&lt;recipelines&gt;
+&lt;recipeline material=&quot;Plainsman 3D&quot; amount=&quot;45.000&quot;/&gt;
+&lt;recipeline material=&quot;Redart&quot; amount=&quot;50.000&quot;/&gt;
+&lt;recipeline material=&quot;National Standard Bentonite&quot; amount=&quot;5.000&quot;/&gt;
+&lt;recipeline material=&quot;Ferro Frit 3110&quot; amount=&quot;10.000&quot;/&gt;
+&lt;recipeline material=&quot;Yellow Iron Oxide&quot; amount=&quot;1.000&quot;/&gt;
+&lt;recipeline material=&quot;Barium Carbonate&quot; amount=&quot;0.250&quot;/&gt;
+&lt;url url=&quot;https://digitalfire.com/recipe/123&quot; descrip=&quot;https://digitalfire.com/recipe/123&quot;/&gt;
+&lt;/recipelines&gt;
+&lt;urls/&gt;
+&lt;/recipe&gt;
+&lt;/recipes&gt;
+</pre><table style="margin-top:30px; padding-top:10px; padding-bottom:20px; border-top:thin solid grey; border-bottom:thin solid grey;"><tr><td style="padding-right:10px">By <i>Tony Hansen</i><br /><span style="font-size:80%; color:#888888;">Follow me on<br /><a title="Threads" href="https://www.threads.net/@tonyatdigitalfire" target="_blank"><img src="../images/threads.jpg" style="width:20px;" border="0"></a> <a title="Facebook Insight-Live" href="https://www.facebook.com/insightlive" target="_blank"><img src="../images/facebook.jpg" style="width:20px;" border="0"></a> <a title="LinkedIn" href="https://www.linkedin.com/in/tonywhansen/" target="_blank"><img src="../images/linkedin.jpg" style="width:20px;" border="0"></a> <a title="Pinterest" href="https://www.pinterest.ca/tonywhansen" target="_blank"><img src="../images/pinterest.jpg" style="width:20px;" border="0"></a> <a title="Instagram" href="https://instagram.com/tonyatdigitalfire" target="_blank"><img src="../images/instagram.jpg" style="width:20px;" border="0"></a> <a title="Ko-Fi" href="https://ko-fi.com/tonyhansen#" target="_blank"><img src="../images/ko-fi.jpg" style="width:20px;" border="0"></a> <a title="Twitter" href="https://x.com/digitalfiretony" target="_blank"><img src="../images/twitter.jpg" style="width:20px;" border="0"></a></td><td><a href="https://tonyhansen.com/about"><img src="../images/SignaturePhotoSmall.jpg" height="80"></a></td></tr></table><h3>Got a Question?</h3><p style="margin-bottom:30px;"><a name="kofi">Buy me a coffee and we can talk</a> <a target="_blank" href="https://ko-fi.com/tonyhansen"><img style="width:40px" src="../images/ko-fi.svg"></a></p><p style="margin-bottom:30px;">&nbsp;</p>
+<p></p><p></p><hr>
+<img style="width:250px" src="../4sight/images/ReferenceLibrary.svg">
+<br />
+<a href="../index.html">https://digitalfire.com</a>, All Rights Reserved
+<br /><a href="../w3c/privacypolicy.php.html">Privacy Policy</a>
+</div>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+</body>
+</html>

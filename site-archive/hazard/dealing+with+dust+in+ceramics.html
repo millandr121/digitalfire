@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="../favicon.svg">
+<link rel="mask-icon" href="../mask-icon.svg" color="#000000">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<title>Dealing With Dust in Ceramics</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<meta name="author" content="Tony Hansen">
+<meta name="description" content="A checklist for changes and additions to your tools and equipment and suggestions for habit you need to develop to control dust in your workplace.">
+<style>
+.flexinline { width: 50%; height: auto; clear:left; margin: 10px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexinline { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexright50 { width: 50%; height: auto; float: right; margin: 5px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexright50 { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexright33 { width: 33%; height: auto; float: right; margin: 5px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexright33 { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexright25 { width: 25%; height: auto; float: right; margin: 5px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexright25 { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexleft50 { width: 50%; height: auto; float: left; margin: 5px 15px 10px 0px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexleft50 { width: 100%; height: auto; margin: 5px 10px 10px 0px; border: none; padding: none; } }
+.flexleft33 { width: 33%; height: auto; float: left; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexleft33 { width: 100%; height: auto; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; } }
+.flexleft25 { width: 25%; height: auto; float: left; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexleft25 { width: 100%; height: auto; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; } }
+.pictureseries { overflow:scroll; width:auto; height:200px; float:left; margin: 5px 10px 10px 0px; padding: 5px; font-size:60%; font-style:italic;}
+@media (max-width: 640px) { .pictureseries { overflow:scroll; width:auto; height:200px; float:left; margin: 5px 10px 10px 0px; border: padding: 5px; font-size:60%; font-style:italic;} }
+.L2 { margin-left:0px; }
+.L3 { margin-left:20px; color:#222222; }
+.L4 { margin-left:40px; color:#444444; }
+.L5 { margin-left:60px; color:#666666; }
+.L6 { margin-left:60px; color:#888888; }
+h2 { color:#222222; }
+h3 { color:#444444; }
+h4 { color:#666666; }
+h5 { color:#888888; }
+
+</style>
+
+<meta name="google-site-verification" content="wquYW_n-3QEfIzDfV--8ElUewf7TIt04RGo55GfZySU" />
+<meta name="have-i-been-pwned-verification" value="9223dcee7de5c9622c2a2abcff4adc81">
+<script>
+function validateForm() {
+	var x = document.forms["emailform1"]["name1"].value;
+	var r = true;
+	if (x == "") { // alert("A name is required."); 
+		document.getElementById("name1").textContent="Name Required";
+		document.getElementById("name1").style.color="red";
+		// document.emailform1.name1.focus() ; # does not work, should be getelementbyid
+		r = false; 
+	} else {
+		document.getElementById("name1").textContent="Name";
+		document.getElementById("name1").style.color="black";
+	}
+	if (document.forms["emailform1"]["subject1"].value == "") { 
+		document.getElementById("subject1").textContent="Subject Required";
+		document.getElementById("subject1").style.color="red";
+		r = false; 
+	} else {
+		document.getElementById("subject1").textContent="Subject";
+		document.getElementById("subject1").style.color="black";
+	}			
+	if (document.forms["emailform1"]["msg1"].value == "") { 
+		document.getElementById("msg1").textContent="Message Required";
+		document.getElementById("msg1").style.color="red";
+		// alert("A message is required."); 
+		r = false; 
+	} else {
+		document.getElementById("msg1").textContent="Message";
+		document.getElementById("msg1").style.color="black";
+	}
+	var emailID = document.emailform1.email1.value;
+	atpos = emailID.indexOf("@");
+	dotpos = emailID.lastIndexOf(".");
+	if (atpos < 1 || ( dotpos - atpos < 2 )) {
+		document.getElementById("email1").textContent="Email Address Appears Invalid!";
+		document.getElementById("email1").style.color="red";
+		// alert("Your email address appears invalid.")
+		r = false;
+	} else {
+		document.getElementById("email1").textContent="Email Address";
+		document.getElementById("email1").style.color="black";
+	}
+	// Send the form
+	if (r == false) return false;
+	document.forms["emailform1"].submit();
+}
+</script>
+</head>
+<body>
+<p style="background-color:#ff9933; border-width:1px; padding:3px 10px 3px 10px; margin:0px 0px 3px 0px; font-size:80%; text-align:center;">
+Digitalfire will shut down on June 26. I no longer have the authority to grant exemption to a section in the Terms and Conditions of using material in the Insight-Live account from which I built the source material. While there are ways to comply with the take-down order, they are beyond my means because of how complex and large the site has become in the past 35+ years. It has been a wild ride for a shy prairie boy, thanks to everyone for your support. Insight-live.com is not affected by this.</p>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<a name="pagetop" class="navbar-brand" href="../home.html"><img src="../4sight/images/ReferenceLibrary.svg" height="40" alt=""></a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item"><a class="nav-link" href="../home.html">Home</a></li>
+			<li class="nav-item"><a class="nav-link" href="../oxide/list.html">Oxides</a></li>
+			<li class="nav-item"><a class="nav-link" href="../material/list.html">Materials</a></li>
+			<li class="nav-item"><a class="nav-link" href="../recipe/list.html">Recipes</a></li>
+			<li class="nav-item"><a class="nav-link" href="../glossary/list.html">Glossary</a></li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="dealing+with+dust+in+ceramics.html#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Others</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" href="../article/list.html">Articles</a>
+					<a class="dropdown-item active" href="list.html">Hazards</a>
+					<a class="dropdown-item" href="../mineral/list.html">Minerals</a>
+					<a class="dropdown-item" href="../property/list.html">Properties</a>
+					<a class="dropdown-item" href="../schedule/list.html">Firing Schedules</a>
+					<a class="dropdown-item" href="../temperature/list.html">Temperatures</a>
+					<a class="dropdown-item" href="../trouble/list.html">Troubles</a>
+					<a class="dropdown-item" href="../test/list.html">Tests</a>
+					<a class="dropdown-item" href="../video/list.html">Media</a>
+					<a class="dropdown-item" href="../picture/list.html">Pictures</a>
+					<a class="dropdown-item" href="../typecode/list.html">Typecodes</a>
+					<a class="dropdown-item" href="../project/list.html">Projects</a>
+					<a class="dropdown-item" href="../consultants/list.html">Consultants</a>
+					<a class="dropdown-item" href="../schools/list.html">Schools</a>
+					<a class="dropdown-item" href="../stores/list.html">Stores</a>
+					<a class="dropdown-item" href="../potterytony/list.html">Don't Buy-A-Mug</a>
+					<div class="dropdown-divider"></div>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="../index.html">https://digitalfire.com</a>
+					<a class="dropdown-item" href="https://insight-live.com">Insight-Live.com</a>
+					<a class="dropdown-item" href="../index.html">Sign-Up</a>
+				</div>
+			</li>
+		</ul>
+		<form class="form-inline my-2 my-lg-0" action="https://digitalfire.com/index.php?searcharea=hazard" accept-charset="UTF-8" method="post">
+		<input name="searchfor" title="Search from home to search in all areas" maxlength="20" class="form-control mr-sm-2" aria-label="Search" placeholder="Search" autocorrect="off" autocapitalize="off" type="search" value=""><button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="searchbutton">Search</button>
+		</form>
+	</div>
+</nav>
+<div class="container"><p><a class="btn btn-primary" data-toggle="collapse" href="dealing+with+dust+in+ceramics.html#collapse1" role="button" aria-expanded="false" aria-controls="collapse1">All Hazards</a></p>
+<div class="collapse" id="collapse1" style="margin-bottom:15px;"><nobr><a title="341" href="341.html">Alumina Toxicology</a> |</nobr> <nobr><a title="333" href="333.html">Ammonia and Latex Toxicity</a> |</nobr> <nobr><a title="16" href="16.html">Antimony Oxide</a> |</nobr> <nobr><a title="412" href="412.html">Are colored porcelains hazardous?</a> |</nobr> <nobr><a title="18" href="18.html">Arsenic Oxide</a> |</nobr> <nobr><a title="19" href="19.html">Asbestos Toxicity</a> |</nobr> <nobr><a title="22" href="22.html">Ball Clay</a> |</nobr> <nobr><a title="321" href="321.html">BARIUM and COMPOUNDS Toxicology</a> |</nobr> <nobr><a title="367" href="367.html">Barium Carbonate in Clay Bodies</a> |</nobr> <nobr><a title="26" href="26.html">Barium Carbonate in Glazes</a> |</nobr> <nobr><a title="31" href="31.html">Bentonite Toxicity</a> |</nobr> <nobr><a title="33" href="33.html">Beryllium Monoxide Toxicology</a> |</nobr> <nobr><a title="352" href="352.html">Bismuth Trioxide Toxicology</a> |</nobr> <nobr><a title="326" href="326.html">Boron Compounds and Their Toxicity</a> |</nobr> <nobr><a title="1" href="1.html">Brown Stain</a> |</nobr> <nobr><a title="335" href="335.html">Cadmium Toxicity</a> |</nobr> <nobr><a title="343" href="343.html">Calcium Carbonate Toxicology</a> |</nobr> <nobr><a title="334" href="334.html">Carbon Monoxide Toxicity</a> |</nobr> <nobr><a title="353" href="353.html">Cesium Toxicology</a> |</nobr> <nobr><a title="330" href="330.html">Chromium Compounds Toxicology</a> |</nobr> <nobr><a title="146" href="146.html">Clay Toxicity</a> |</nobr> <nobr><a title="73" href="73.html">Cobalt Oxide and Carbonate</a> |</nobr> <nobr><a title="331" href="331.html">Cobalt Toxicology</a> |</nobr> <nobr><a title="329" href="329.html">Copper Compounds Toxicology</a> |</nobr> <nobr><a title="78" href="78.html">Copper Oxide and Carbonate</a> |</nobr> <nobr><a title="84" href="84.html">Cristobalite Toxicity</a> |</nobr> <nobr><a title="337" href="337.html">Cryolite and Ceramics</a> |</nobr> <nobr><a title="372" href="372.html">Dealing With Dust in Ceramics</a> |</nobr> <nobr><a title="351" href="351.html">Diatomaceous Earth Toxicology</a> |</nobr> <nobr><a title="323" href="323.html">Dioxins in Clays</a> |</nobr> <nobr><a title="95" href="95.html">Epsom Salts</a> |</nobr> <nobr><a title="348" href="348.html">Eye Injuries Due to Radiation</a> |</nobr> <nobr><a title="222" href="222.html">Feldspar</a> |</nobr> <nobr><a title="320" href="320.html">Fighting Micro-Organisms in Ceramics</a> |</nobr> <nobr><a title="108" href="108.html">Fluorine Gas</a> |</nobr> <nobr><a title="413" href="413.html">Fumes from gas kilns</a> |</nobr> <nobr><a title="354" href="354.html">Gallium Oxide Toxicology</a> |</nobr> <nobr><a title="342" href="342.html">Hafnium Oxide Toxicty</a> |</nobr> <nobr><a title="345" href="345.html">Hydrofluoric Acid Toxicity</a> |</nobr> <nobr><a title="350" href="350.html">Iron oxide and Hematite</a> |</nobr> <nobr><a title="169" href="169.html">Lead Chromate</a> |</nobr> <nobr><a title="368" href="368.html">Lead in Ceramic Glazes</a> |</nobr> <nobr><a title="328" href="328.html">Lead Toxicology</a> |</nobr> <nobr><a title="174" href="174.html">Lithium Carbonate Toxicity</a> |</nobr> <nobr><a title="349" href="349.html">Lithium Toxicology</a> |</nobr> <nobr><a title="322" href="322.html">Man-Made Vitreous Fibers (MMVF) Toxicology</a> |</nobr> <nobr><a title="410" href="410.html">Man-Made Vitreous Fibers Safety Update</a> |</nobr> <nobr><a title="406" href="406.html">Manganese and Parkinsons by Jane Watkins</a> |</nobr> <nobr><a title="187" href="187.html">Manganese in Clay Bodies</a> |</nobr> <nobr><a title="317" href="317.html">Manganese Inorganic Compounds Toxicology</a> |</nobr> <nobr><a title="409" href="409.html">Manganese Toxicity by Elke Blodgett</a> |</nobr> <nobr><a title="407" href="407.html">Manganese: Creativity and Illness by Dierdre O'Reilly</a> |</nobr> <nobr><a title="332" href="332.html">Molybdenum Compounds Toxicology</a> |</nobr> <nobr><a title="327" href="327.html">Nickel Compounds Toxicity</a> |</nobr> <nobr><a title="314" href="314.html">Niobium Oxide Toxicity</a> |</nobr> <nobr><a title="318" href="318.html">Occupational Dermatoses</a> |</nobr> <nobr><a title="370" href="370.html">Overview of Material Safety by Gavin Stairs</a> |</nobr> <nobr><a title="364" href="364.html">Paraffin Toxicology</a> |</nobr> <nobr><a title="216" href="216.html">Perlite Toxicity</a> |</nobr> <nobr><a title="238" href="238.html">Plant Ash Toxicity</a> |</nobr> <nobr><a title="346" href="346.html">Potassium Carbonate Toxicity</a> |</nobr> <nobr><a title="365" href="365.html">Pregnancy and Ceramics</a> |</nobr> <nobr><a title="355" href="355.html">Propane Toxicology</a> |</nobr> <nobr><a title="251" href="251.html">Quartz Toxicity</a> |</nobr> <nobr><a title="369" href="369.html">Quartz Toxicity on Clayart</a> |</nobr> <nobr><a title="336" href="336.html">Rare Earth Compounds Toxicity</a> |</nobr> <nobr><a title="366" href="366.html">Rubidium and Cesium Toxicology</a> |</nobr> <nobr><a title="356" href="356.html">Rutile Toxicology</a> |</nobr> <nobr><a title="324" href="324.html">Silicosis and Screening</a> |</nobr> <nobr><a title="357" href="357.html">Silver Compounds Toxicology</a> |</nobr> <nobr><a title="358" href="358.html">Sodium Azide Toxicology</a> |</nobr> <nobr><a title="359" href="359.html">Sodium Carbonate Toxicology</a> |</nobr> <nobr><a title="360" href="360.html">Sodium Silicate Powder Toxicology</a> |</nobr> <nobr><a title="315" href="315.html">Stannous Chloride Toxicity</a> |</nobr> <nobr><a title="316" href="316.html">Strontium Carbonate Toxicity Note</a> |</nobr> <nobr><a title="347" href="347.html">Sulfur Dioxide Toxicity</a> |</nobr> <nobr><a title="3" href="3.html">Talc Hazards Overview</a> |</nobr> <nobr><a title="361" href="361.html">Talc Toxicology</a> |</nobr> <nobr><a title="362" href="362.html">Thallium Oxide Toxicology</a> |</nobr> <nobr><a title="344" href="344.html">Thorium Dioxide Toxicity</a> |</nobr> <nobr><a title="338" href="338.html">Tin Inorganic Compounds</a> |</nobr> <nobr><a title="339" href="339.html">Titanium Dioxide Toxicology</a> |</nobr> <nobr><a title="313" href="313.html">Toxicological Assessment of Zeolites</a> |</nobr> <nobr><a title="363" href="363.html">Tungsten Compounds Toxicology</a> |</nobr> <nobr><a title="371" href="371.html">Understanding Acronyms on MSDS's</a> |</nobr> <nobr><a title="325" href="325.html">Uranium and Ceramics</a> |</nobr> <nobr><a title="319" href="319.html">Vanadium and Compounds Toxicology</a> |</nobr> <nobr><a title="411" href="411.html">Vermiculite</a> |</nobr> <nobr><a title="340" href="340.html">Zinc Compounds Toxicology</a> |</nobr> <nobr><a title="373" href="373.html">Zirconium Compounds Toxicity</a> |</nobr> <nobr><a title="234" href="234.html">Zirconium Encapsulated Stains Toxicity</a></nobr></div><p style="clear:left"></p><p style="clear:left"></p><p style="clear:left"></p><p style="clear:left"></p><p style="clear:left"></p><h1>Dealing With Dust in Ceramics</h1>
+<p>Indoor air pollution of all types is considered one of the most important health hazards of our time. The dramatic rise in the incidence of Asthma is said to be evidence of this. Ceramic arts, crafts, production and lab testing can generate significant dust if it is not managed properly. Ceramic educational programs can come under scrutiny because of dust concerns. Here are suggestions to reduce your exposure and make your workplace safe.</p>
+
+<h2>Common Sense</h2>
+
+<ul>
+<li>Silicosis is not caused by <a  href="../material/1245.html">silica</a> in your studio. <a  href="372.html">Silicosis</a> is caused by unprotected chronic exposure to micron-sized quartz dust without wearing a mask. Silica is the most abundant mineral on Earth. The planet is a quartz-making machine so quartz is the most common mineral particle in silts, sands, clays and soils. Life on Earth depends on the existence of sand. So you cannot get away from quartz.</li>
+<li>Getting an air filter while maintaining bad habits will only marginally improve safety.</li>
+<li>Chronic exposure is easily avoided.</li>
+</ul>
+
+<h2>Did You Know?</h2>
+
+<ul>
+<li>The powdered silica you buy is pure quartz.</li>
+<li>Ceramic materials are mostly 'minerals', not 'chemicals’, most are simply insoluble ground rock. While not hazardous if ingested, many do contain quartz.</li>
+<li>Clays vary widely in their quartz content. Bentonites and ball clays have the most. Kaolins can have almost none.</li>
+<li>Porcelain recipes often contain no <a  href="../material/80.html">ball clay</a> but have 25% pure quartz. <a  href="../glossary/whiteware.html">Whiteware</a> bodies can be 50% or more ball clay plus 25% or more pure quartz.</li>
+<li>Glazes can have up to 35% pure quartz (plus other materials that might also contribute it e.g. <a  href="../material/310.html">feldspar</a>, ball clay).</li>
+<li>Fine dust can stay in the air for extended periods. That is exactly the kind of dust that good ventilation removes.</li>
+<li>Dusting and sweeping puts dangerous fine particles into the air. Silicosis-size dust goes right through vacuum bags. Heating and air conditioning systems can circulate dust to other areas as well.</li>
+<li>Googling "fume and dust control" will showcase an endless variety of products. Searching specific ones on Amazon will often find affordable equivalents for small-scale use.</li>
+</ul>
+
+<h2>Good Habits</h2>
+
+<ul>
+<li>Work cleaner, be dust-smart. Keep scraps off the floor, pick up crumbs before they are walked on, sponge up spills, and do messy jobs away from the main working area. Don't generate as much dust, catch it at the time of generation. </li>
+<li>Handle unloading of dry materials and putting them into lidded containers outdoors.</li>
+<li>Launder clay clothing often. Remove clay shoes and clothes when entering your house. </li>
+<li>Clean or do other dust-generating activities (like mixing) at the end of the day so dust generated during cleaning can settle out overnight. </li>
+<li>Have a supply of appropriate dust masks, make sure they are tight-fitting.</li>
+<li>Avoid rugs at doorways, they become a difficult-to-clean reservoir of dust. Use something that can be washed rather than just vacuumed .</li>
+<li>Have lots of water buckets and sponges around for cleaning work tables, counters, wheels, small floor areas, etc.</li>
+</ul>
+
+<h2>Workarea Improvements</h2>
+
+<ul>
+<li>Create work areas dedicated to specific tasks: clay storage and processing, glazing, testing, <a  href="../glossary/throwing.html">throwing</a>, trimming, slab rolling, clay fabrication, library, etc. Deal with dust as appropriate in each area.</li>
+<li>Storing dry materials in plastic containers with lids generates less dust.</li>
+<li>An air quality monitor will remind you if dust is present, these are specifically made to detect micro-sized dust particles.</li>
+<li>A good sink with hot and cold water draining to a floor or portable sump enables frequent cleanup.</li>
+<li>A smooth easy-to-clean floor can be effectively mopped.  One that can be hosed down to a floor drain is even better. </li>
+<li>Having tables with wheels and nothing under enables moving them for cleaning.</li>
+<li>Ventilation tables and booths (also called downdraft tables, sanding tables, dust tables) or portable fume extractors provide localized air removal.</li>
+<li>A HEPA ("high-efficiency particulate arresting") circulating air filter will help remove micron-sized dust.</li>
+<li>A central vac is better than sweeping.</li>
+<li>A properly configured dust hood or dust box removes dust where it is generated.</li>
+<li>A positive ventilation system provides a way for air to get in at the working area and out at the other end, thus moving dust away from you.</li>
+<li>Use a separate building, not in the same building where you live and sleep. </li>
+</ul>
+
+<h2>Other Suggestions:</h2>
+
+<p>Success? Gauge your progress by turning out the lights and shining a strong flashlight across the room. Or by how many times your air quality monitor triggers.</p>
+<hr><table style="margin-top:30px; padding-top:10px; padding-bottom:20px; border-top:thin solid grey; border-bottom:thin solid grey;"><tr><td style="padding-right:10px">By <i>Tony Hansen</i><br /><span style="font-size:80%; color:#888888;">Follow me on<br /><a title="Threads" href="https://www.threads.net/@tonyatdigitalfire" target="_blank"><img src="../images/threads.jpg" style="width:20px;" border="0"></a> <a title="Facebook Insight-Live" href="https://www.facebook.com/insightlive" target="_blank"><img src="../images/facebook.jpg" style="width:20px;" border="0"></a> <a title="LinkedIn" href="https://www.linkedin.com/in/tonywhansen/" target="_blank"><img src="../images/linkedin.jpg" style="width:20px;" border="0"></a> <a title="Pinterest" href="https://www.pinterest.ca/tonywhansen" target="_blank"><img src="../images/pinterest.jpg" style="width:20px;" border="0"></a> <a title="Instagram" href="https://instagram.com/tonyatdigitalfire" target="_blank"><img src="../images/instagram.jpg" style="width:20px;" border="0"></a> <a title="Ko-Fi" href="https://ko-fi.com/tonyhansen#" target="_blank"><img src="../images/ko-fi.jpg" style="width:20px;" border="0"></a> <a title="Twitter" href="https://x.com/digitalfiretony" target="_blank"><img src="../images/twitter.jpg" style="width:20px;" border="0"></a></td><td><a href="https://tonyhansen.com/about"><img src="../images/SignaturePhotoSmall.jpg" height="80"></a></td></tr></table>
+<h2 style="font-style:italic; margin-top:40px;">Related Information</h2>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">Chronic exposure to this causes silicosis</h3>
+<br /><a href="../picture/3246.html"><img class="flexleft50" loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/4xb46obr6y.jpg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/3246.html">click here</a> to see it.</p>
+<p>It is high-level exposure to this kind of dust for many years without adequate protection that causes <a  href="372.html">silicosis</a>. The levels of dust in a typical well-maintained and clean pottery studio come nowhere close to this.</p>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">A material storage rack</h3>
+<br /><a href="../picture/831.html"><img class="flexleft50" loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/hazards/mankicijum.jpg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/831.html">click here</a> to see it.</p>
+<p>This material storage area employs a rack to keep pails off the floor so the area can be hosed down easily. The materials in each pail are sealed in plastic bags or the pail is covered with a lid.</p>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">A practical dust box may be better than a dust hood</h3>
+<br /><a alt="A dust removal box" href="../picture/830.html"><img class="flexleft50" alt="A dust removal box"  loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/bbebg8jxcj.jpg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/830.html">click here</a> to see it.</p>
+<p>An example of a custom-made dust collection hood in our repackaging and lab recipe mixing area. The slots along the front suck particles into the duct directly away from the operator's face. Suction comes from a centrifugal exhaust fan downstream where the pipe exits the building, it is driven by a 3/4hp motor (these fans are best at sucking, not blowing, so they need to be located at the exit). About 40 feet of 8-inch heating pipe connects from the hood to a fitting that expands to 12 inches going into the fan. The sliding damper above the hood enables stopping all airflow (to prevent heat loss during cold days). Notice it is located above the scale and heat sealer where most dust is generated during weighing and packaging.</p>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">N95 Particulate Respirator mask</h3>
+<br /><a href="../picture/1826.html"><img class="flexleft50" loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/e6kpb2kr6h.jpeg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/1826.html">click here</a> to see it.</p>
+<p>This designation is an international standard for a general purpose respirator to filter out respirable quartz particles (which cause <a  href="372.html">silicosis</a>). Use one of these when working in a area where ventilation is insufficient to remove all of the dust. Use it also in circumstances where there is temporary generation of large quantities of dust. Do not wear this as a substitute for keeping floors and working areas clean.</p>
+<p style="clear:left"></p>
+<h3 style="margin-bottom:0px; margin-top:30px;">Crystalline silica warning on a box of clay:</h3>
+<h4 style="color:#888888; margin-top:0px;">React instead of overreacting.</h4>
+<br /><a alt="Crystalline silica warning on a box of clay" href="../picture/2194.html"><img class="flexleft50" alt="Crystalline silica warning on a box of clay"  loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/fnblgx2yiu.jpg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/2194.html">click here</a> to see it.</p>
+<p>Like any dirt, clays contain quartz. Quartz particles are all around us, the mineral makes up about 12 percent of the land surface and about 20 percent of the Earth's crust. It is impossible to get away from quartz particles (e.g. road and street dust are common sources). Farmers and construction workers are constantly exposed to it. Quartz inhalation is a hazard when:<br />
+1. Inhaled particles are just the right size to block the tiny air passages in the lungs. <br />
+2. Chronic exposure over a long period occurs (or shorter exposure to high concentrations). <br />
+Since you don't know the particle size of any dust, it is only sensible to take precautions against #2. We do know that respirable particles that can get stuck in the lungs are <5 microns. Clay powders used in <a  href="../glossary/ceramics.html">ceramics</a> are typically ground to 75 microns, far larger. However, that processing does produce lots of finer sizes also, so there is good reason to keep dust down. Specifics about the hazards of powders used in ceramics are available on SDSs (Safety Data Sheets).</p>
+<p style="clear:left"></p>
+<h3>Links</h3><table>
+<table class="table table-bordered"><tbody>
+<tr>
+<td scope="row">Materials</td>
+<td>
+<a href="../material/silica.html">Silica</a>
+<br /><i><a  href="../material/1245.html">Silica</a>, sold as a white powder, is pure quartz mineral. Quartz is pure <a  href="../oxide/sio2.html">SiO2</a> silicon dioxide. It is the most abundant mineral on earth and most used in <a  href="../glossary/ceramics.html">ceramics</a>.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Materials</td>
+<td>
+<a href="../material/ball+clay.html">Ball Clay</a>
+<br /><i>A fine particled highly plastic <a  href="../glossary/secondary+clay.html">secondary clay</a> used mainly to impart <a  href="../glossary/plasticity.html">plasticity</a> to clay and <a  href="../glossary/porcelain.html">porcelain</a> bodies and to suspend glaze, slips and <a  href="../glossary/engobe.html">engobe</a> slurries.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Glossary</td>
+<td>
+<a href="../glossary/powder+processing.html">Powder Processing</a>
+<br /><i>An entire industry is dedicated to the science, materials and equipment associated with the creation, processing and handling of powders.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Minerals</td>
+<td>
+<a href="../mineral/quartz.html">Quartz</a>
+<br /><i>Quartz is the most abundant mineral on earth, it is the main <a  href="../glossary/glass+vs.+crystalline.html">crystalline</a> mineral form of <a  href="../material/1245.html">silica</a> (SiO</i>
+</td>
+</tr>
+<tr>
+<td scope="row">URLs</td>
+<td>
+<a href="../url/3433.html">https://www.amazon.ca/ABEST-Portable-Airbrush-Painting-Extension/dp/B01HZ1HDF6</a>
+<br /><i>Portable airbrush spray booth on Amazon</i>
+<br /><i style="color:#888888;">For possible use as a dust box or dust hood in a ceramic studio.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">URLs</td>
+<td>
+<a href="../url/3432.html">https://www.amazon.ca/Quality-Monitor-Detector-Readings-Pollution/dp/B08M6F57PN</a>
+<br /><i>Air quality monitoring device on Amazon</i>
+<br /><i style="color:#888888;">Measures tiny particulate in micron respirable sizes.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">URLs</td>
+<td>
+<a href="../url/3489.html">https://www.consumernotice.org/environmental/silica-dust/</a>
+<br /><i><a  href="../material/1245.html">Silica</a> Dust information from consumernotice.org, a site created by legal professionals, accomplished medical providers, product safety specialists and patient advocates. </i>
+<br /><i style="color:#888888;"></i>
+</td>
+</tr>
+</tbody></table><table style="margin:30px 0px 30px 0px;"><tr><td style="vertical-align:middle; text-align:center; font-size:80%;"><img src="../images/PayPalDonate.png" style="height:66px; padding-right:20px;"><br /><a href="https://www.paypal.com/donate/?hosted_button_id=F8L3JX4BCCXJ6">PayPal</a></td><td style="background-color:#ddffdd; padding:10px; border:thin solid grey; font-size:90%;"><b>No</b> tracking, <b>No</b> ads, <b>No</b> paywall, <b>No</b> transient content!<br />Just organized, concise information constantly updated and improved.<br />Was this helpful? Consider supporting me.</td><tr></table><h3>Got a Question?</h3><p style="margin-bottom:30px;"><a name="kofi">Buy me a coffee and we can talk</a> <a target="_blank" href="https://ko-fi.com/tonyhansen"><img style="width:40px" src="../images/ko-fi.svg"></a></p><p style="margin-bottom:30px;">&nbsp;</p>
+<p></p><p></p><hr>
+<img style="width:250px" src="../4sight/images/ReferenceLibrary.svg">
+<br />
+<a href="../index.html">https://digitalfire.com</a>, All Rights Reserved
+<br /><a href="../w3c/privacypolicy.php.html">Privacy Policy</a>
+</div>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+</body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="../favicon.svg">
+<link rel="mask-icon" href="../mask-icon.svg" color="#000000">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<title>Project: Make your own sieve shaker to process ceramic slurries</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<meta name="author" content="Tony Hansen">
+<meta name="description" content="All you need is an inexpensive vibration motor from Amazon, a five-gallon pail, some metal and welding and 3D-printed collars to hold the sieve in place.">
+<style>
+.flexinline { width: 50%; height: auto; clear:left; margin: 10px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexinline { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexright50 { width: 50%; height: auto; float: right; margin: 5px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexright50 { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexright33 { width: 33%; height: auto; float: right; margin: 5px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexright33 { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexright25 { width: 25%; height: auto; float: right; margin: 5px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexright25 { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexleft50 { width: 50%; height: auto; float: left; margin: 5px 15px 10px 0px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexleft50 { width: 100%; height: auto; margin: 5px 10px 10px 0px; border: none; padding: none; } }
+.flexleft33 { width: 33%; height: auto; float: left; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexleft33 { width: 100%; height: auto; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; } }
+.flexleft25 { width: 25%; height: auto; float: left; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexleft25 { width: 100%; height: auto; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; } }
+.pictureseries { overflow:scroll; width:auto; height:200px; float:left; margin: 5px 10px 10px 0px; padding: 5px; font-size:60%; font-style:italic;}
+@media (max-width: 640px) { .pictureseries { overflow:scroll; width:auto; height:200px; float:left; margin: 5px 10px 10px 0px; border: padding: 5px; font-size:60%; font-style:italic;} }
+.L2 { margin-left:0px; }
+.L3 { margin-left:20px; color:#222222; }
+.L4 { margin-left:40px; color:#444444; }
+.L5 { margin-left:60px; color:#666666; }
+.L6 { margin-left:60px; color:#888888; }
+h2 { color:#222222; }
+h3 { color:#444444; }
+h4 { color:#666666; }
+h5 { color:#888888; }
+
+</style>
+
+<meta name="google-site-verification" content="wquYW_n-3QEfIzDfV--8ElUewf7TIt04RGo55GfZySU" />
+<meta name="have-i-been-pwned-verification" value="9223dcee7de5c9622c2a2abcff4adc81">
+<script>
+function validateForm() {
+	var x = document.forms["emailform1"]["name1"].value;
+	var r = true;
+	if (x == "") { // alert("A name is required."); 
+		document.getElementById("name1").textContent="Name Required";
+		document.getElementById("name1").style.color="red";
+		// document.emailform1.name1.focus() ; # does not work, should be getelementbyid
+		r = false; 
+	} else {
+		document.getElementById("name1").textContent="Name";
+		document.getElementById("name1").style.color="black";
+	}
+	if (document.forms["emailform1"]["subject1"].value == "") { 
+		document.getElementById("subject1").textContent="Subject Required";
+		document.getElementById("subject1").style.color="red";
+		r = false; 
+	} else {
+		document.getElementById("subject1").textContent="Subject";
+		document.getElementById("subject1").style.color="black";
+	}			
+	if (document.forms["emailform1"]["msg1"].value == "") { 
+		document.getElementById("msg1").textContent="Message Required";
+		document.getElementById("msg1").style.color="red";
+		// alert("A message is required."); 
+		r = false; 
+	} else {
+		document.getElementById("msg1").textContent="Message";
+		document.getElementById("msg1").style.color="black";
+	}
+	var emailID = document.emailform1.email1.value;
+	atpos = emailID.indexOf("@");
+	dotpos = emailID.lastIndexOf(".");
+	if (atpos < 1 || ( dotpos - atpos < 2 )) {
+		document.getElementById("email1").textContent="Email Address Appears Invalid!";
+		document.getElementById("email1").style.color="red";
+		// alert("Your email address appears invalid.")
+		r = false;
+	} else {
+		document.getElementById("email1").textContent="Email Address";
+		document.getElementById("email1").style.color="black";
+	}
+	// Send the form
+	if (r == false) return false;
+	document.forms["emailform1"].submit();
+}
+</script>
+</head>
+<body>
+<p style="background-color:#ff9933; border-width:1px; padding:3px 10px 3px 10px; margin:0px 0px 3px 0px; font-size:80%; text-align:center;">
+Digitalfire will shut down on June 26. I no longer have the authority to grant exemption to a section in the Terms and Conditions of using material in the Insight-Live account from which I built the source material. While there are ways to comply with the take-down order, they are beyond my means because of how complex and large the site has become in the past 35+ years. It has been a wild ride for a shy prairie boy, thanks to everyone for your support. Insight-live.com is not affected by this.</p>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<a name="pagetop" class="navbar-brand" href="../home.html"><img src="../4sight/images/ReferenceLibrary.svg" height="40" alt=""></a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item"><a class="nav-link" href="../home.html">Home</a></li>
+			<li class="nav-item"><a class="nav-link" href="../oxide/list.html">Oxides</a></li>
+			<li class="nav-item"><a class="nav-link" href="../material/list.html">Materials</a></li>
+			<li class="nav-item"><a class="nav-link" href="../recipe/list.html">Recipes</a></li>
+			<li class="nav-item"><a class="nav-link" href="../glossary/list.html">Glossary</a></li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="make+your+own+sieve+shaker+to+process+ceramic+slurries.html#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Others</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" href="../article/list.html">Articles</a>
+					<a class="dropdown-item" href="../hazard/list.html">Hazards</a>
+					<a class="dropdown-item" href="../mineral/list.html">Minerals</a>
+					<a class="dropdown-item" href="../property/list.html">Properties</a>
+					<a class="dropdown-item" href="../schedule/list.html">Firing Schedules</a>
+					<a class="dropdown-item" href="../temperature/list.html">Temperatures</a>
+					<a class="dropdown-item" href="../trouble/list.html">Troubles</a>
+					<a class="dropdown-item" href="../test/list.html">Tests</a>
+					<a class="dropdown-item" href="../video/list.html">Media</a>
+					<a class="dropdown-item" href="../picture/list.html">Pictures</a>
+					<a class="dropdown-item" href="../typecode/list.html">Typecodes</a>
+					<a class="dropdown-item active" href="list.html">Projects</a>
+					<a class="dropdown-item" href="../consultants/list.html">Consultants</a>
+					<a class="dropdown-item" href="../schools/list.html">Schools</a>
+					<a class="dropdown-item" href="../stores/list.html">Stores</a>
+					<a class="dropdown-item" href="../potterytony/list.html">Don't Buy-A-Mug</a>
+					<div class="dropdown-divider"></div>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="../index.html">https://digitalfire.com</a>
+					<a class="dropdown-item" href="https://insight-live.com">Insight-Live.com</a>
+					<a class="dropdown-item" href="../index.html">Sign-Up</a>
+				</div>
+			</li>
+		</ul>
+		<form class="form-inline my-2 my-lg-0" action="https://digitalfire.com/index.php?searcharea=project" accept-charset="UTF-8" method="post">
+		<input name="searchfor" title="Search from home to search in all areas" maxlength="20" class="form-control mr-sm-2" aria-label="Search" placeholder="Search" autocorrect="off" autocapitalize="off" type="search" value=""><button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="searchbutton">Search</button>
+		</form>
+	</div>
+</nav>
+<div class="container"><p><a class="btn btn-primary" data-toggle="collapse" href="make+your+own+sieve+shaker+to+process+ceramic+slurries.html#collapse1" role="button" aria-expanded="false" aria-controls="collapse1">All Projects</a></p>
+<div class="collapse" id="collapse1" style="margin-bottom:15px;"><a title="15" href="15.html">2019 Jiggering-Casting Project of Medalta 66 Mug</a><br /><a title="54" href="54.html">A cereal bowl jigger mold made using 3D printing</a><br /><a title="33" href="33.html">Beer Bottle Master Mold via 3D Printing</a><br /><a title="61" href="61.html">Better porosity for Brown Sugar Savers</a><br /><a title="48" href="48.html">Build a kiln monitoring device</a><br /><a title="69" href="69.html">Celebration Project</a><br /><a title="60" href="60.html">Coffee Mug Slip Casting Mold via 3D Printing</a><br /><a title="29" href="29.html">Comparing the Melt Fluidity of 16 Frits</a><br /><a title="52" href="52.html">Cookie Cutting clay with 3D printed cutters</a><br /><a title="41" href="41.html">Evaluating a clay's suitability for use in pottery</a><br /><a title="55" href="55.html">Make a mold for 4-gallon stackable calciners</a><br /><a title="49" href="49.html">Make Your Own Pyrometric Cones</a><br /><a title="47" href="47.html">Make your own sieve shaker to process ceramic slurries</a><br /><a title="40" href="40.html">Making a high quality ceramic tile</a><br /><a title="46" href="46.html">Making a Plaster Table</a><br /><a title="37" href="37.html">Making Bricks</a><br /><a title="50" href="50.html">Making our own kiln posts using a hand extruder</a><br /><a title="59" href="59.html">Medalta Ball Pitcher Slip Casting Mold via 3D Printing</a><br /><a title="34" href="34.html">Medalta Jug Master Mold Development</a><br /><a title="63" href="63.html">Mold Natches</a><br /><a title="32" href="32.html">Mother Nature's Porcelain - Plainsman 3B</a><br /><a title="66" href="66.html">Mug Handle Casting</a><br /><a title="39" href="39.html">Nursery plant pot mold via 3D printing</a><br /><a title="30" href="30.html">Pie-Crust Mug-Making Method</a><br /><a title="35" href="35.html">Plainsman 3D, Mother Nature's Porcelain/Stoneware</a><br /><a title="38" href="38.html">Project to Document a Shimpo Jiggering Attachment</a><br /><a title="36" href="36.html">Roll, Cut, Pull, Attach Handle-making Method</a><br /><a title="23" href="23.html">Slurry Mixing and Dewatering Your Own Clay Body</a><br /><a title="24" href="24.html">Testing a New Load of EP Kaolin</a><br /><a title="44" href="44.html">Using milk as a glaze</a></div><p style="clear:left"></p><p style="clear:left"></p><p style="clear:left"></p><p style="clear:left"></p><p style="clear:left"></p><h1>Make your own sieve shaker to process ceramic slurries</h1>
+<p>When <a  href="../glossary/slurry+up.html">slurrying up</a> a <a  href="../glossary/clay+body.html">clay body</a>, glaze or <a  href="../glossary/engobe.html">engobe</a> it is customary to <a  href="../glossary/sieve.html">sieve</a> it to remove both lump and particulate impurities. <a  href="../glossary/sieve.html">Sieving</a> powders and liquids by hand is time-consuming, especially for finer mesh <a  href="../glossary/sieve.html">sieves</a>. Of course, there are many stainless steel <a  href="47.html">sieve shakers</a> on Amazon, some handle powders and others powders or liquids. And they can cost less than $1000. However, you can also make your own for a fraction of that.<br />
+<br />
+This inexpensive vibrating shaker changes that, doing in seconds what would either be very difficult or impossible by hand. We got the initial idea for this from shower-shelf.com (see links at bottom of this page).<br />
+<br />
+To make the shaker described on this page access to metal fabrication skills and equipment and a <a  href="../glossary/3d+printer.html">3D printer</a> and <a  href="../glossary/3d+design.html">3D design</a> skills are required. But since this entire website promotes independence and understanding of materials, process and equipment in the ceramic process, whether as a potter or manufacturer, we consider these resources to be essential. Even for serious hobbyists.<br />
+<br />
+We made this from an inexpensive 30-watt vibration motor from Amazon (it is of excellent quality). The motor has movable weights on both ends of the shaft, rotating them enables fine control over the amount of vibration (as shipped it vibrated far too much).<br />
+<br />
+We used a 3-inch length of 8 1/4 inch inside-diameter steel pipe (for use on pipelines). The motor mounts to a 1/4 inch plate welded to an upright section of 1-inch angle iron. The flange of a standard <a  href="../picture/1518.html">Tyler sieve</a> measures 8" so we <a  href="../glossary/3d-printing.html">3D-printed</a> a three-piece collar that fit tightly over the end of the pipe, it holds the sieve firmly. The assembly fits into notches on a standard 5-gallon pail, by four bolts threaded into holes in the pipe.<br />
+<br />
+When the vibration is right for us the bucket moves around on the floor a little when empty. If the <a  href="../glossary/slurry.html">slurry</a> is made from <a  href="../glossary/200+mesh.html">200 mesh</a> materials, and the sieve is coarser than that and has plenty of water, it should pour through at speed. If the slurry is a clay having impurity particles and sand, it will go through quickly at first but then slow down as the oversize collects. To deal with this, pour in batches, allow the oversize to coagulate into islands, then stop and remove them before continuing. Using this method we can sieve <a  href="https://plainsmanclays.ca/data/index.php?product=12868">MNP</a>, for example, at 140 mesh very quickly, 2-5% is oversize.<br />
+<br />
+<a  href="../glossary/deflocculation.html">Deflocculated</a> slurries (bodies, glazes and <a  href="../glossary/engobe.html">engobes</a>) are very difficult to sieve because they can be thick and sticky. But vibrating the sieve makes it easy. Flocculated slurries (e.g. engobes) are also much easier this way. A <a  href="../glossary/sieve+shaker.html">sieve shaker</a> also enables processing slurries having a lower <a  href="../glossary/water+content.html">water content</a> than would otherwise be possible.<p style="clear:left"></p></p>
+<h2 style="font-style:italic;">Related Information</h2>
+<p style="clear:left"></p>
+<h3 style="margin-bottom:0px; margin-top:30px;">Make your own vibrating sieve</h3>
+<h4 style="color:#888888; margin-top:0px;">And process your own super-fine clays</h4>
+<br /><a alt="A home made vibrating sieve" href="../picture/2931.html"><img class="flexleft50" alt="A home made vibrating sieve"  loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/wfyjnxp2ac.jpg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/2931.html">click here</a> to see it.</p>
+<p>Being more independent is now cool again. Actually, it is being forced upon us by necessity because of <a  href="../picture/2813.html">supply chain</a> issues and skyrocketing prices of convenience glazes, bodies, <a  href="../glossary/engobe.html">engobes</a>, etc. Independence involves using <a  href="../glossary/sieve.html">sieves</a>. True, it is no problem for a potter or lab tech to manually coax a glaze <a  href="../glossary/slurry.html">slurry</a> through a small 80# <a  href="../glossary/sieve.html">sieve</a>. But real independence is about <a  href="../glossary/sieve.html">sieving</a> in volume - <a  href="../glossary/clay+body.html">clay bodies</a> made from your own native clays. And doing it at up to <a  href="../glossary/325+mesh.html">325 mesh</a>. That requires a <a  href="../picture/2931.html">vibrating sieve</a>. This one cost us less than $100 to make. Of course, a <a  href="../picture/1518.html">Tyler sieve</a> (or similar) is needed, these can be purchased on Ebay or Amazon. And a vibration motor, some metal and hardware and a friend with metal fabrication tools. This demonstrates the utility of a vibrating sieve, the idea can be scaled to any size you need. As an example, oil well drilling sites here have to remove particulates from huge volumes of drilling mud and they do it on giant multi-level units.</p>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">Vibration motor on Amazon</h3>
+<br /><a href="../picture/2932.html"><img class="flexleft50" loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/lwdiqkl9ca.jpg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/2932.html">click here</a> to see it.</p>
+<p>This is the smallest one they have and plenty big enough for this purpose. It arrived within a few days after ordering.</p>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">Drawing for sieve shaker</h3>
+<p style="margin-top:0px;"><b>Available</b> on the <a target="_blank" href="../downloads/index.php@picture=2934.html">Downloads</a> page</p>
+<br /><a alt="Sieve shaker drawing" href="../picture/2934.html"><img class="flexleft50" alt="Sieve shaker drawing"  loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/fr4veeli8d.jpg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/2934.html">click here</a> to see it.</p>
+<p>This is the brainchild Kirk Miller at <a  href="../glossary/plainsman+clays.html">Plainsman</a> Clays. I made the drawing based on one that he made. It sits on top of a 5-gallon pail (the bolts sit into slots cut down from the rim). 3D rings must be printed to slide down onto the metal hoop and they must create an inner diameter that enables the lab <a  href="../glossary/sieve.html">sieve</a> to seat securely.</p>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">Adjusting the amount of vibration is the key to utility</h3>
+<br /><a href="../picture/2929.html"><img class="flexleft50" loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/glossary/5jviyhzqel.jpg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/2929.html">click here</a> to see it.</p>
+<p>The position of the weights on the shaft determines the amount of vibration. The notches in the three plates hold them in place. When adjusting the position of the plates be very careful not to get your hand caught in them when turning the motor on! Experiment with different settings to get as much vibration as your setup will tolerate without shaking the <a  href="../glossary/sieve.html">sieve</a> out of the mount. Reinstall the protective caps as soon as possible.</p>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">3D printed collars to make the sieve fit snuggly</h3>
+<br /><a href="../picture/2933.html"><img class="flexleft50" loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/sypdr7rmya.jpg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/2933.html">click here</a> to see it.</p>
+<p>This is a 140 mesh <a  href="../picture/1518.html">Tyler sieve</a>. It drops into the plastic <a  href="../glossary/3d-printing.html">3D-printed</a> collars and fits tightly. And the collars also need to mount tight on the pipe so everything stays secure during vibration. The collars were printed, upside down, in 110 degree sections. I created the design using <a  href="../picture/2453.html">Fusion 360</a> by drawing a rough outline of the cross-section profile and then dimensioning and revolving it 100 degrees. Typically creating these is a try-adjust-print-again process to get a good fit. Remember never to wash these printed parts in hot water or they will warp.</p>
+<p style="clear:left"></p>
+<h3>Inbound Photo Links</h3><table><tr>
+<td style="vertical-align:top; font-size:80%;">
+<br /><a alt="Small vibrating sieve shakers" href="../picture/3430.html"><img style="margin:0px 10px 10px 0px; height:100px;" alt="Small vibrating sieve shakers"  loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/bejqeqlxc7-100H.jpg" /></a><br />Personal size sieve shakers you can buy on Amazon
+</td>
+<td style="vertical-align:top; font-size:80%;">
+<br /><a alt="Plainsman 3B sieved to 200 mesh" href="../picture/3644.html"><img style="margin:0px 10px 10px 0px; height:100px;" alt="Plainsman 3B sieved to 200 mesh"  loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/t5cd1yvvoy-100H.jpg" /></a><br />Here is What Processing a Clay Can Do
+</td>
+</tr></table><br />
+<h3>Links</h3><table>
+<table class="table table-bordered"><tbody>
+<tr>
+<td scope="row">Glossary</td>
+<td>
+<a href="../glossary/sieve+shaker.html">Sieve Shaker</a>
+<br /><i>A device that can vibrate a <a  href="../glossary/sieve.html">sieve</a> thus greatly increasing the speed at which it can process a <a  href="../glossary/slurry.html">slurry</a> or powder.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Glossary</td>
+<td>
+<a href="../glossary/slurry+up.html">Slurry Up</a>
+<br /><i>The process of <a  href="../glossary/slurry.html">slurrying</a> a <a  href="../glossary/clay+body.html">clay body</a> powder and dewatering it on a plastic slab or table.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">URLs</td>
+<td>
+<a href="../url/3285.html">https://www.youtube.com/watch?v=GUAVem7rJKs&authuser=0</a>
+<br /><i>Video of ingenious <a  href="../picture/2931.html">vibrating sieve</a> system used for <a  href="../glossary/casting+slip.html">casting slip</a> at shower-shelf.com</i>
+<br /><i style="color:#888888;">They built a table with <a  href="../glossary/slurry.html">slurry</a> tank below and a rectangular cutout with a flange. Their <a  href="../glossary/sieve.html">sieves</a> drop in to fit the cutout and a square vibration frame drops down on top of the seive. The setup can process high <a  href="../glossary/specific+gravity.html">specific gravity</a> <a  href="../glossary/casting+slip.html">casting slip</a> quickly. The only part that needs washing is the <a  href="../glossary/sieve.html">sieve</a> itself.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">URLs</td>
+<td>
+<a href="../url/1636.html">https://www.youtube.com/watch?v=0zXfghDNxUg</a>
+<br /><i>ShowerShelf.com vibratory screen that fits the top of a five-gallon bucket</i>
+<br /><i style="color:#888888;">The tank, <a  href="../glossary/sieve.html">sieve</a> and vibration assembly are all in one piece that fits into the top of the bucket. This unit can handle 1.8SG <a  href="../glossary/slurry.html">slurry</a>.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">URLs</td>
+<td>
+<a href="../url/3522.html">https://www.amazon.ca/INTBUYING-Vibrating-Stainless-Machine-Electric/dp/B0CFLRV64K</a>
+<br /><i>110v/220v Inclined-box Linear Sifter Shaker on Amazon (for lump removal, less than $1000)</i>
+<br /><i style="color:#888888;"></i>
+</td>
+</tr>
+<tr>
+<td scope="row">URLs</td>
+<td>
+<a href="../url/3523.html">https://www.amazon.ca/Automatic-Vibrating-Stainless-Screening-Particles/dp/B0C1ZGPMRL</a>
+<br /><i>110v/50w 40/60 mesh 30cm dia <a  href="../glossary/sieve+shaker.html">Sieve Shaker</a> for Powders on Amazon (less than $1000)</i>
+<br /><i style="color:#888888;"></i>
+</td>
+</tr>
+<tr>
+<td scope="row">URLs</td>
+<td>
+<a href="../url/3524.html">https://www.amazon.ca/YUCHENGTECH-Industrial-Vibrating-Particles-Screening/dp/B082KRYCJG</a>
+<br /><i>220V 50W Industrial <a  href="../picture/2931.html">Vibrating Sieve</a> Machine for powders/liquids (to 500 mesh) on Amazon (less than $3000).</i>
+<br /><i style="color:#888888;"></i>
+</td>
+</tr>
+<tr>
+<td scope="row">URLs</td>
+<td>
+<a href="../url/3525.html">https://www.amazon.ca/INTBUYING-Stainless-Ultra-high-Efficiency-Metallurgy/dp/B098SRHQ8P</a>
+<br /><i>208V 60HZ Triphase 1500W Powder/liquid Three-layer Stainless Steel Vibrating <a  href="../glossary/sieve.html">Sieving</a> Machine (less than $5000)</i>
+<br /><i style="color:#888888;"></i>
+</td>
+</tr>
+</tbody></table><table style="margin:30px 0px 30px 0px;"><tr><td style="vertical-align:middle; text-align:center; font-size:80%;"><img src="../images/PayPalDonate.png" style="height:66px; padding-right:20px;"><br /><a href="https://www.paypal.com/donate/?hosted_button_id=F8L3JX4BCCXJ6">PayPal</a></td><td style="background-color:#ddffdd; padding:10px; border:thin solid grey; font-size:90%;"><b>No</b> tracking, <b>No</b> ads, <b>No</b> paywall, <b>No</b> transient content!<br />Just organized, concise information constantly updated and improved.<br />Was this helpful? Consider supporting me.</td><tr></table><table style="margin-top:30px; padding-top:10px; padding-bottom:20px; border-top:thin solid grey; border-bottom:thin solid grey;"><tr><td style="padding-right:10px">By <i>Tony Hansen</i><br /><span style="font-size:80%; color:#888888;">Follow me on<br /><a title="Threads" href="https://www.threads.net/@tonyatdigitalfire" target="_blank"><img src="../images/threads.jpg" style="width:20px;" border="0"></a> <a title="Facebook Insight-Live" href="https://www.facebook.com/insightlive" target="_blank"><img src="../images/facebook.jpg" style="width:20px;" border="0"></a> <a title="LinkedIn" href="https://www.linkedin.com/in/tonywhansen/" target="_blank"><img src="../images/linkedin.jpg" style="width:20px;" border="0"></a> <a title="Pinterest" href="https://www.pinterest.ca/tonywhansen" target="_blank"><img src="../images/pinterest.jpg" style="width:20px;" border="0"></a> <a title="Instagram" href="https://instagram.com/tonyatdigitalfire" target="_blank"><img src="../images/instagram.jpg" style="width:20px;" border="0"></a> <a title="Ko-Fi" href="https://ko-fi.com/tonyhansen#" target="_blank"><img src="../images/ko-fi.jpg" style="width:20px;" border="0"></a> <a title="Twitter" href="https://x.com/digitalfiretony" target="_blank"><img src="../images/twitter.jpg" style="width:20px;" border="0"></a></td><td><a href="https://tonyhansen.com/about"><img src="../images/SignaturePhotoSmall.jpg" height="80"></a></td></tr></table><h3>Got a Question?</h3><p style="margin-bottom:30px;"><a name="kofi">Buy me a coffee and we can talk</a> <a target="_blank" href="https://ko-fi.com/tonyhansen"><img style="width:40px" src="../images/ko-fi.svg"></a></p><p style="margin-bottom:30px;">&nbsp;</p>
+<p></p><p></p><hr>
+<img style="width:250px" src="../4sight/images/ReferenceLibrary.svg">
+<br />
+<a href="../index.html">https://digitalfire.com</a>, All Rights Reserved
+<br /><a href="../w3c/privacypolicy.php.html">Privacy Policy</a>
+</div>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+</body>
+</html>

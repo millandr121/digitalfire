@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="../favicon.svg">
+<link rel="mask-icon" href="../mask-icon.svg" color="#000000">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<title>Ceramic Material Hazards</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<meta name="author" content="Tony Hansen">
+<meta name="description" content="Ceramic materials have a wide range of hazards and toxicities, use them safely in the traditional ceramics industry">
+<style>
+.flexinline { width: 50%; height: auto; clear:left; margin: 10px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexinline { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexright50 { width: 50%; height: auto; float: right; margin: 5px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexright50 { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexright33 { width: 33%; height: auto; float: right; margin: 5px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexright33 { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexright25 { width: 25%; height: auto; float: right; margin: 5px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexright25 { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexleft50 { width: 50%; height: auto; float: left; margin: 5px 15px 10px 0px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexleft50 { width: 100%; height: auto; margin: 5px 10px 10px 0px; border: none; padding: none; } }
+.flexleft33 { width: 33%; height: auto; float: left; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexleft33 { width: 100%; height: auto; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; } }
+.flexleft25 { width: 25%; height: auto; float: left; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexleft25 { width: 100%; height: auto; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; } }
+.pictureseries { overflow:scroll; width:auto; height:200px; float:left; margin: 5px 10px 10px 0px; padding: 5px; font-size:60%; font-style:italic;}
+@media (max-width: 640px) { .pictureseries { overflow:scroll; width:auto; height:200px; float:left; margin: 5px 10px 10px 0px; border: padding: 5px; font-size:60%; font-style:italic;} }
+.L2 { margin-left:0px; }
+.L3 { margin-left:20px; color:#222222; }
+.L4 { margin-left:40px; color:#444444; }
+.L5 { margin-left:60px; color:#666666; }
+.L6 { margin-left:60px; color:#888888; }
+h2 { color:#222222; }
+h3 { color:#444444; }
+h4 { color:#666666; }
+h5 { color:#888888; }
+
+</style>
+
+<meta name="google-site-verification" content="wquYW_n-3QEfIzDfV--8ElUewf7TIt04RGo55GfZySU" />
+<meta name="have-i-been-pwned-verification" value="9223dcee7de5c9622c2a2abcff4adc81">
+<script>
+function validateForm() {
+	var x = document.forms["emailform1"]["name1"].value;
+	var r = true;
+	if (x == "") { // alert("A name is required."); 
+		document.getElementById("name1").textContent="Name Required";
+		document.getElementById("name1").style.color="red";
+		// document.emailform1.name1.focus() ; # does not work, should be getelementbyid
+		r = false; 
+	} else {
+		document.getElementById("name1").textContent="Name";
+		document.getElementById("name1").style.color="black";
+	}
+	if (document.forms["emailform1"]["subject1"].value == "") { 
+		document.getElementById("subject1").textContent="Subject Required";
+		document.getElementById("subject1").style.color="red";
+		r = false; 
+	} else {
+		document.getElementById("subject1").textContent="Subject";
+		document.getElementById("subject1").style.color="black";
+	}			
+	if (document.forms["emailform1"]["msg1"].value == "") { 
+		document.getElementById("msg1").textContent="Message Required";
+		document.getElementById("msg1").style.color="red";
+		// alert("A message is required."); 
+		r = false; 
+	} else {
+		document.getElementById("msg1").textContent="Message";
+		document.getElementById("msg1").style.color="black";
+	}
+	var emailID = document.emailform1.email1.value;
+	atpos = emailID.indexOf("@");
+	dotpos = emailID.lastIndexOf(".");
+	if (atpos < 1 || ( dotpos - atpos < 2 )) {
+		document.getElementById("email1").textContent="Email Address Appears Invalid!";
+		document.getElementById("email1").style.color="red";
+		// alert("Your email address appears invalid.")
+		r = false;
+	} else {
+		document.getElementById("email1").textContent="Email Address";
+		document.getElementById("email1").style.color="black";
+	}
+	// Send the form
+	if (r == false) return false;
+	document.forms["emailform1"].submit();
+}
+</script>
+</head>
+<body>
+<p style="background-color:#ff9933; border-width:1px; padding:3px 10px 3px 10px; margin:0px 0px 3px 0px; font-size:80%; text-align:center;">
+Digitalfire will shut down on June 26. I no longer have the authority to grant exemption to a section in the Terms and Conditions of using material in the Insight-Live account from which I built the source material. While there are ways to comply with the take-down order, they are beyond my means because of how complex and large the site has become in the past 35+ years. It has been a wild ride for a shy prairie boy, thanks to everyone for your support. Insight-live.com is not affected by this.</p>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<a name="pagetop" class="navbar-brand" href="../home.html"><img src="../4sight/images/ReferenceLibrary.svg" height="40" alt=""></a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item"><a class="nav-link" href="../home.html">Home</a></li>
+			<li class="nav-item"><a class="nav-link" href="../oxide/list.html">Oxides</a></li>
+			<li class="nav-item"><a class="nav-link" href="../material/list.html">Materials</a></li>
+			<li class="nav-item"><a class="nav-link" href="../recipe/list.html">Recipes</a></li>
+			<li class="nav-item"><a class="nav-link" href="../glossary/list.html">Glossary</a></li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="list.html#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Others</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" href="../article/list.html">Articles</a>
+					<a class="dropdown-item active" href="list.html">Hazards</a>
+					<a class="dropdown-item" href="../mineral/list.html">Minerals</a>
+					<a class="dropdown-item" href="../property/list.html">Properties</a>
+					<a class="dropdown-item" href="../schedule/list.html">Firing Schedules</a>
+					<a class="dropdown-item" href="../temperature/list.html">Temperatures</a>
+					<a class="dropdown-item" href="../trouble/list.html">Troubles</a>
+					<a class="dropdown-item" href="../test/list.html">Tests</a>
+					<a class="dropdown-item" href="../video/list.html">Media</a>
+					<a class="dropdown-item" href="../picture/list.html">Pictures</a>
+					<a class="dropdown-item" href="../typecode/list.html">Typecodes</a>
+					<a class="dropdown-item" href="../project/list.html">Projects</a>
+					<a class="dropdown-item" href="../consultants/list.html">Consultants</a>
+					<a class="dropdown-item" href="../schools/list.html">Schools</a>
+					<a class="dropdown-item" href="../stores/list.html">Stores</a>
+					<a class="dropdown-item" href="../potterytony/list.html">Don't Buy-A-Mug</a>
+					<div class="dropdown-divider"></div>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="../index.html">https://digitalfire.com</a>
+					<a class="dropdown-item" href="https://insight-live.com">Insight-Live.com</a>
+					<a class="dropdown-item" href="../index.html">Sign-Up</a>
+				</div>
+			</li>
+		</ul>
+		<form class="form-inline my-2 my-lg-0" action="https://digitalfire.com/index.php?searcharea=hazard" accept-charset="UTF-8" method="post">
+		<input name="searchfor" title="Search from home to search in all areas" maxlength="20" class="form-control mr-sm-2" aria-label="Search" placeholder="Search" autocorrect="off" autocapitalize="off" type="search" value=""><button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="searchbutton">Search</button>
+		</form>
+	</div>
+</nav>
+<div class="container"><h1>Hazards</h1><p>Hazards in the making and use of traditional ceramics.</p>
+<p><nobr><a title="341" href="341.html">Alumina Toxicology</a> |</nobr> <nobr><a title="333" href="333.html">Ammonia and Latex Toxicity</a> |</nobr> <nobr><a title="16" href="16.html">Antimony Oxide</a> |</nobr> <nobr><a title="412" href="412.html">Are colored porcelains hazardous?</a> |</nobr> <nobr><a title="18" href="18.html">Arsenic Oxide</a> |</nobr> <nobr><a title="19" href="19.html">Asbestos Toxicity</a> |</nobr> <nobr><a title="22" href="22.html">Ball Clay</a> |</nobr> <nobr><a title="321" href="321.html">BARIUM and COMPOUNDS Toxicology</a> |</nobr> <nobr><a title="367" href="367.html">Barium Carbonate in Clay Bodies</a> |</nobr> <nobr><a title="26" href="26.html">Barium Carbonate in Glazes</a> |</nobr> <nobr><a title="31" href="31.html">Bentonite Toxicity</a> |</nobr> <nobr><a title="33" href="33.html">Beryllium Monoxide Toxicology</a> |</nobr> <nobr><a title="352" href="352.html">Bismuth Trioxide Toxicology</a> |</nobr> <nobr><a title="326" href="326.html">Boron Compounds and Their Toxicity</a> |</nobr> <nobr><a title="1" href="1.html">Brown Stain</a> |</nobr> <nobr><a title="335" href="335.html">Cadmium Toxicity</a> |</nobr> <nobr><a title="343" href="343.html">Calcium Carbonate Toxicology</a> |</nobr> <nobr><a title="334" href="334.html">Carbon Monoxide Toxicity</a> |</nobr> <nobr><a title="353" href="353.html">Cesium Toxicology</a> |</nobr> <nobr><a title="330" href="330.html">Chromium Compounds Toxicology</a> |</nobr> <nobr><a title="146" href="146.html">Clay Toxicity</a> |</nobr> <nobr><a title="73" href="73.html">Cobalt Oxide and Carbonate</a> |</nobr> <nobr><a title="331" href="331.html">Cobalt Toxicology</a> |</nobr> <nobr><a title="329" href="329.html">Copper Compounds Toxicology</a> |</nobr> <nobr><a title="78" href="78.html">Copper Oxide and Carbonate</a> |</nobr> <nobr><a title="84" href="84.html">Cristobalite Toxicity</a> |</nobr> <nobr><a title="337" href="337.html">Cryolite and Ceramics</a> |</nobr> <nobr><a title="372" href="372.html">Dealing With Dust in Ceramics</a> |</nobr> <nobr><a title="351" href="351.html">Diatomaceous Earth Toxicology</a> |</nobr> <nobr><a title="323" href="323.html">Dioxins in Clays</a> |</nobr> <nobr><a title="95" href="95.html">Epsom Salts</a> |</nobr> <nobr><a title="348" href="348.html">Eye Injuries Due to Radiation</a> |</nobr> <nobr><a title="222" href="222.html">Feldspar</a> |</nobr> <nobr><a title="320" href="320.html">Fighting Micro-Organisms in Ceramics</a> |</nobr> <nobr><a title="108" href="108.html">Fluorine Gas</a> |</nobr> <nobr><a title="413" href="413.html">Fumes from gas kilns</a> |</nobr> <nobr><a title="354" href="354.html">Gallium Oxide Toxicology</a> |</nobr> <nobr><a title="342" href="342.html">Hafnium Oxide Toxicty</a> |</nobr> <nobr><a title="345" href="345.html">Hydrofluoric Acid Toxicity</a> |</nobr> <nobr><a title="350" href="350.html">Iron oxide and Hematite</a> |</nobr> <nobr><a title="169" href="169.html">Lead Chromate</a> |</nobr> <nobr><a title="368" href="368.html">Lead in Ceramic Glazes</a> |</nobr> <nobr><a title="328" href="328.html">Lead Toxicology</a> |</nobr> <nobr><a title="174" href="174.html">Lithium Carbonate Toxicity</a> |</nobr> <nobr><a title="349" href="349.html">Lithium Toxicology</a> |</nobr> <nobr><a title="322" href="322.html">Man-Made Vitreous Fibers (MMVF) Toxicology</a> |</nobr> <nobr><a title="410" href="410.html">Man-Made Vitreous Fibers Safety Update</a> |</nobr> <nobr><a title="406" href="406.html">Manganese and Parkinsons by Jane Watkins</a> |</nobr> <nobr><a title="187" href="187.html">Manganese in Clay Bodies</a> |</nobr> <nobr><a title="317" href="317.html">Manganese Inorganic Compounds Toxicology</a> |</nobr> <nobr><a title="409" href="409.html">Manganese Toxicity by Elke Blodgett</a> |</nobr> <nobr><a title="407" href="407.html">Manganese: Creativity and Illness by Dierdre O'Reilly</a> |</nobr> <nobr><a title="332" href="332.html">Molybdenum Compounds Toxicology</a> |</nobr> <nobr><a title="327" href="327.html">Nickel Compounds Toxicity</a> |</nobr> <nobr><a title="314" href="314.html">Niobium Oxide Toxicity</a> |</nobr> <nobr><a title="318" href="318.html">Occupational Dermatoses</a> |</nobr> <nobr><a title="370" href="370.html">Overview of Material Safety by Gavin Stairs</a> |</nobr> <nobr><a title="364" href="364.html">Paraffin Toxicology</a> |</nobr> <nobr><a title="216" href="216.html">Perlite Toxicity</a> |</nobr> <nobr><a title="238" href="238.html">Plant Ash Toxicity</a> |</nobr> <nobr><a title="346" href="346.html">Potassium Carbonate Toxicity</a> |</nobr> <nobr><a title="365" href="365.html">Pregnancy and Ceramics</a> |</nobr> <nobr><a title="355" href="355.html">Propane Toxicology</a> |</nobr> <nobr><a title="251" href="251.html">Quartz Toxicity</a> |</nobr> <nobr><a title="369" href="369.html">Quartz Toxicity on Clayart</a> |</nobr> <nobr><a title="336" href="336.html">Rare Earth Compounds Toxicity</a> |</nobr> <nobr><a title="366" href="366.html">Rubidium and Cesium Toxicology</a> |</nobr> <nobr><a title="356" href="356.html">Rutile Toxicology</a> |</nobr> <nobr><a title="324" href="324.html">Silicosis and Screening</a> |</nobr> <nobr><a title="357" href="357.html">Silver Compounds Toxicology</a> |</nobr> <nobr><a title="358" href="358.html">Sodium Azide Toxicology</a> |</nobr> <nobr><a title="359" href="359.html">Sodium Carbonate Toxicology</a> |</nobr> <nobr><a title="360" href="360.html">Sodium Silicate Powder Toxicology</a> |</nobr> <nobr><a title="315" href="315.html">Stannous Chloride Toxicity</a> |</nobr> <nobr><a title="316" href="316.html">Strontium Carbonate Toxicity Note</a> |</nobr> <nobr><a title="347" href="347.html">Sulfur Dioxide Toxicity</a> |</nobr> <nobr><a title="3" href="3.html">Talc Hazards Overview</a> |</nobr> <nobr><a title="361" href="361.html">Talc Toxicology</a> |</nobr> <nobr><a title="362" href="362.html">Thallium Oxide Toxicology</a> |</nobr> <nobr><a title="344" href="344.html">Thorium Dioxide Toxicity</a> |</nobr> <nobr><a title="338" href="338.html">Tin Inorganic Compounds</a> |</nobr> <nobr><a title="339" href="339.html">Titanium Dioxide Toxicology</a> |</nobr> <nobr><a title="313" href="313.html">Toxicological Assessment of Zeolites</a> |</nobr> <nobr><a title="363" href="363.html">Tungsten Compounds Toxicology</a> |</nobr> <nobr><a title="371" href="371.html">Understanding Acronyms on MSDS's</a> |</nobr> <nobr><a title="325" href="325.html">Uranium and Ceramics</a> |</nobr> <nobr><a title="319" href="319.html">Vanadium and Compounds Toxicology</a> |</nobr> <nobr><a title="411" href="411.html">Vermiculite</a> |</nobr> <nobr><a title="340" href="340.html">Zinc Compounds Toxicology</a> |</nobr> <nobr><a title="373" href="373.html">Zirconium Compounds Toxicity</a> |</nobr> <nobr><a title="234" href="234.html">Zirconium Encapsulated Stains Toxicity</a></nobr></p><p style="clear:left"></p>
+<h2>Introduction</h2>
+<p>A wide range of materials are used in <a  href="../glossary/ceramics.html">ceramics</a>. Many of them are harmless, they can be breathed or eaten with little effect. Hundreds of tons of clays are sold each year for the specific purpose of eating them! And many more for cosmetic and medicinal uses. Most ceramic materials are inert, insoluble and among the most stable of materials. That means that it is not dangerous to, once in a while, touch or handle the vast majority of materials. However, if there is constant exposure, then long-term effects need to be considered. Notwithstanding this, some materials do have specific acute or short-term exposure hazards (by ingestion or inhalation).<br />
+<br />
+Material hazards are most commonly related to dust. But there is a need to be sensible about it. One cigarette, for example, does not kill. Nor do 100. But 100,000 can. Likewise, there may be some asbestos fibres in <a  href="../material/1620.html">talc</a> or vermiculite, but you will not be harmed by sweeping up a little of either. You will be harmed if exposed to the dust daily for years and take no precautions. Consider <a  href="../glossary/frit.html">frits</a> to illustrate the need for common sense: Hundreds are available. They are ground glass powders, which means each particle is a glass shard, potentially with razor-sharp angular edges! It is not easy to find hazard information on frits (likely because there are so many types and each pulverizes to a different particle shape). Yet simple logic tells us to be careful about breathing the dust. And, to illustrate the need for perspective, consider <a  href="372.html">silicosis</a>: It is a much more serious health issue than asbestosis. Yet pretty well all dust in nature contains some quartz. Even gardening, farming or just walking in dry areas exposes one to quartz dust. This is because quartz makes up 20% of the earths crust. So minimizing exposure over the years is the common sense approach.<br />
+<br />
+Some materials produce harmful fumes at certain temperatures during firing. Bodies or glazes with high percentages of manganese dioxide (and other metal oxide raw materials), for example, can fume and should be considered hazardous. Fumes don't settle the same as dust, they can stay in the air for long periods. The obvious precaution is to install a vent on your kiln.<br />
+<br />
+Some materials are poisonous or toxic if eaten. <a  href="../material/86.html">Barium carbonate</a> or <a  href="../material/975.html">lithium carbonate</a> are examples. But this is not common.<br />
+<br />
+There is a special need for caution about material hazards when production is being ramped up from a hobby level to a business. The economic and scheduling pressures often mean that precautions and facility hygiene are put aside temporarily (and never restored). It is thus important that safety and common sense be an integral part of any business plan to produce ceramics.<br />
+</p>
+<h3>Links</h3><table>
+<table class="table table-bordered"><tbody>
+<tr>
+<td scope="row">Articles</td>
+<td>
+<a href="../article/crazing+and+bacteria%253A+is+there+a+hazard%253F.html">Crazing and Bacteria: Is There a Hazard?</a>
+<br /><i>A post to a discussion on the clayart group by Gavin Stairs regarding the <a  href="../glossary/food+safe.html">food safety</a> of <a  href="../trouble/glaze+crazing.html">crazed</a> ware.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Articles</td>
+<td>
+<a href="../article/is+your+fired+ware+safe%253F.html">Is Your Fired Ware Safe?</a>
+<br /><i>Glazed ware can be a safety hazard to end users because it may leach metals into food and drink, it could harbor bacteria and it could flake of in knife-edged pieces.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Articles</td>
+<td>
+<a href="../article/attack+on+glass%253A+corrosion+attack+mechanisms.html">Attack on Glass: Corrosion Attack Mechanisms</a>
+<br /><i>Max Richens outlines the various <a  href="../glossary/mechanism.html">mechanisms</a> by which acids and bases can dissolve glass and glazes. He provides some information on stabilizing glazes against attack.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">URLs</td>
+<td>
+<a href="../url/1128.html">http://www.ilo.org/public/english/protection/safework/cis/products/icsc/dtasht/index.htm</a>
+<br /><i>International Labour Organization Chemical Safety Database</i>
+<br /><i style="color:#888888;"></i>
+</td>
+</tr>
+<tr>
+<td scope="row">URLs</td>
+<td>
+<a href="../url/1424.html">http://www.atsdr.cdc.gov/toxprofiles/index.asp</a>
+<br /><i>CDC <a  href="../glossary/toxicity.html">Toxicity</a> Profiles of many substances</i>
+<br /><i style="color:#888888;"></i>
+</td>
+</tr>
+<tr>
+<td scope="row">URLs</td>
+<td>
+<a href="../url/3258.html">https://www.iloencyclopaedia.org</a>
+<br /><i>The Encyclopedia of Occupational Health & Safety</i>
+<br /><i style="color:#888888;">A comprehensive tool for academia, journalists and the general public – anyone interested in obtaining data and other information about safety, health and good practices at work. User-friendly <a  href="../glossary/body+glaze+interface.html">interface</a> in English, French and Spanish. Written and compiled by world class researchers and industry experts.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">URLs</td>
+<td>
+<a href="../url/1472.html">http://www.ccohs.ca/oshanswers/chemicals/whmis_ghs/sds.html</a>
+<br /><i>Globally Harmonized System of Classification and Labelling of Chemicals (<a  href="../glossary/ghs+safety+data+sheets.html">GHS</a>)</i>
+<br /><i style="color:#888888;"></i>
+</td>
+</tr>
+<tr>
+<td scope="row">URLs</td>
+<td>
+<a href="../url/1488.html">https://www.ccohs.ca/oshanswers/chemicals/whmis_ghs/sds.html</a>
+<br /><i>WHMIS Safety Data Sheet Overview</i>
+<br /><i style="color:#888888;"></i>
+</td>
+</tr>
+<tr>
+<td scope="row">URLs</td>
+<td>
+<a href="../url/3259.html">https://www.osha.gov/annotated-pels/note</a>
+<br /><i>Permissible Exposure Limits to Substances – Annotated Tables from OSHA</i>
+<br /><i style="color:#888888;">The Threshold Limit Values (TLVs®) and Biological Exposure Indices (BEIs®) are developed as guidelines to assist in the control of health hazards. These recommendations or guidelines are intended for use in the practice of industrial hygiene, to be interpreted and applied only by a person trained in this discipline.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">URLs</td>
+<td>
+<a href="../url/3260.html">https://www.wiley.com/en-ca/Patty%27s+Industrial+Hygiene,+4+Volume+Set,+7th+Edition-p-9781119438021</a>
+<br /><i>Patty's Industrial Hygiene, 4 Volume Set, 7th Edition</i>
+<br /><i style="color:#888888;">Currently, industrial hygienists not only have to worry about occupational health and safety concerns of global workforce which is more diverse, they often provide environmental health information for large companies, as well as large and small government agencies.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">URLs</td>
+<td>
+<a href="../url/3261.html">https://pubchem.ncbi.nlm.nih.gov/</a>
+<br /><i>PubChem, the world's largest collection of freely accessible chemical information</i>
+<br /><i style="color:#888888;">Search chemicals by name, molecular formula, structure, and other identifiers. Find chemical and <a  href="../glossary/physical+testing.html">physical properties</a>, biological activities, safety and <a  href="../glossary/toxicity.html">toxicity</a> information, patents, literature citations and more.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">URLs</td>
+<td>
+<a href="../url/3262.html">https://www.lung.org/lung-health-diseases/lung-disease-lookup/occupational-lung-diseases</a>
+<br /><i>Occupational Lung Diseases</i>
+<br /><i style="color:#888888;">Dust particles, chemicals, fungal spores, and certain animal droppings are examples of exposures that may increase your risk of developing occupational lung disease.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">URLs</td>
+<td>
+<a href="../url/3263.html">https://monographs.iarc.who.int</a>
+<br /><i>World Health Organization information of carcinogenic hazards</i>
+<br /><i style="color:#888888;">IARC MONOGRAPHS ON THE IDENTIFICATION OF CARCINOGENIC HAZARDS TO HUMANS</i>
+</td>
+</tr>
+<tr>
+<td scope="row">URLs</td>
+<td>
+<a href="../url/3264.html">https://www.elsevier.com/books/sittigs-handbook-of-toxic-and-hazardous-chemicals-and-carcinogens/pohanish/978-1-4377-7869-4</a>
+<br /><i>Sittig's Handbook of Toxic and Hazardous Chemicals and Carcinogens</i>
+<br /><i style="color:#888888;">Information on the 2,100 most heavily used, transported, and regulated chemical substances of both occupational and environmental concern.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Glossary</td>
+<td>
+<a href="../glossary/leaching.html">Leaching</a>
+<br /><i>Ceramic glazes can leach heavy metals into food and drink. This subject is not complex, there are many things anyone can do to deal with this issue</i>
+</td>
+</tr>
+</tbody></table>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">Flow diagram of a pottery operation</h3>
+<br /><a href="../picture/2917.html"><img class="flexleft50" loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/aaxmbnkbjz.jpeg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/2917.html">click here</a> to see it.</p>
+<p>Each stage presents potential health hazards. Photo courtesy of American Conference of Governmental Industrial Hygienists.</p>
+<p style="clear:left"></p><h3>Got a Question?</h3><p style="margin-bottom:30px;"><a name="kofi">Buy me a coffee and we can talk</a> <a target="_blank" href="https://ko-fi.com/tonyhansen"><img style="width:40px" src="../images/ko-fi.svg"></a></p><p style="margin-bottom:30px;">&nbsp;</p>
+<p></p><p></p><hr>
+<img style="width:250px" src="../4sight/images/ReferenceLibrary.svg">
+<br />
+<a href="../index.html">https://digitalfire.com</a>, All Rights Reserved
+<br /><a href="../w3c/privacypolicy.php.html">Privacy Policy</a>
+</div>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+</body>
+</html>

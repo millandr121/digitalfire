@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="../favicon.svg">
+<link rel="mask-icon" href="../mask-icon.svg" color="#000000">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<title>v6 Beer Bottle Drawing
+Fits standard swing top stoppers.</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<meta name="author" content="Tony Hansen">
+<meta name="description" content="v6 Beer Bottle Drawing
+Fits standard swing top stoppers.">
+<style>
+.flexinline { width: 50%; height: auto; clear:left; margin: 10px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexinline { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexright50 { width: 50%; height: auto; float: right; margin: 5px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexright50 { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexright33 { width: 33%; height: auto; float: right; margin: 5px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexright33 { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexright25 { width: 25%; height: auto; float: right; margin: 5px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexright25 { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexleft50 { width: 50%; height: auto; float: left; margin: 5px 15px 10px 0px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexleft50 { width: 100%; height: auto; margin: 5px 10px 10px 0px; border: none; padding: none; } }
+.flexleft33 { width: 33%; height: auto; float: left; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexleft33 { width: 100%; height: auto; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; } }
+.flexleft25 { width: 25%; height: auto; float: left; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexleft25 { width: 100%; height: auto; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; } }
+.pictureseries { overflow:scroll; width:auto; height:200px; float:left; margin: 5px 10px 10px 0px; padding: 5px; font-size:60%; font-style:italic;}
+@media (max-width: 640px) { .pictureseries { overflow:scroll; width:auto; height:200px; float:left; margin: 5px 10px 10px 0px; border: padding: 5px; font-size:60%; font-style:italic;} }
+.L2 { margin-left:0px; }
+.L3 { margin-left:20px; color:#222222; }
+.L4 { margin-left:40px; color:#444444; }
+.L5 { margin-left:60px; color:#666666; }
+.L6 { margin-left:60px; color:#888888; }
+h2 { color:#222222; }
+h3 { color:#444444; }
+h4 { color:#666666; }
+h5 { color:#888888; }
+
+</style>
+
+<meta name="google-site-verification" content="wquYW_n-3QEfIzDfV--8ElUewf7TIt04RGo55GfZySU" />
+<meta name="have-i-been-pwned-verification" value="9223dcee7de5c9622c2a2abcff4adc81">
+<script>
+function validateForm() {
+	var x = document.forms["emailform1"]["name1"].value;
+	var r = true;
+	if (x == "") { // alert("A name is required."); 
+		document.getElementById("name1").textContent="Name Required";
+		document.getElementById("name1").style.color="red";
+		// document.emailform1.name1.focus() ; # does not work, should be getelementbyid
+		r = false; 
+	} else {
+		document.getElementById("name1").textContent="Name";
+		document.getElementById("name1").style.color="black";
+	}
+	if (document.forms["emailform1"]["subject1"].value == "") { 
+		document.getElementById("subject1").textContent="Subject Required";
+		document.getElementById("subject1").style.color="red";
+		r = false; 
+	} else {
+		document.getElementById("subject1").textContent="Subject";
+		document.getElementById("subject1").style.color="black";
+	}			
+	if (document.forms["emailform1"]["msg1"].value == "") { 
+		document.getElementById("msg1").textContent="Message Required";
+		document.getElementById("msg1").style.color="red";
+		// alert("A message is required."); 
+		r = false; 
+	} else {
+		document.getElementById("msg1").textContent="Message";
+		document.getElementById("msg1").style.color="black";
+	}
+	var emailID = document.emailform1.email1.value;
+	atpos = emailID.indexOf("@");
+	dotpos = emailID.lastIndexOf(".");
+	if (atpos < 1 || ( dotpos - atpos < 2 )) {
+		document.getElementById("email1").textContent="Email Address Appears Invalid!";
+		document.getElementById("email1").style.color="red";
+		// alert("Your email address appears invalid.")
+		r = false;
+	} else {
+		document.getElementById("email1").textContent="Email Address";
+		document.getElementById("email1").style.color="black";
+	}
+	// Send the form
+	if (r == false) return false;
+	document.forms["emailform1"].submit();
+}
+</script>
+</head>
+<body>
+<p style="background-color:#ff9933; border-width:1px; padding:3px 10px 3px 10px; margin:0px 0px 3px 0px; font-size:80%; text-align:center;">
+Digitalfire will shut down on June 26. I no longer have the authority to grant exemption to a section in the Terms and Conditions of using material in the Insight-Live account from which I built the source material. While there are ways to comply with the take-down order, they are beyond my means because of how complex and large the site has become in the past 35+ years. It has been a wild ride for a shy prairie boy, thanks to everyone for your support. Insight-live.com is not affected by this.</p>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<a name="pagetop" class="navbar-brand" href="../home.html"><img src="../4sight/images/ReferenceLibrary.svg" height="40" alt=""></a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item"><a class="nav-link" href="../home.html">Home</a></li>
+			<li class="nav-item"><a class="nav-link" href="../oxide/list.html">Oxides</a></li>
+			<li class="nav-item"><a class="nav-link" href="../material/list.html">Materials</a></li>
+			<li class="nav-item"><a class="nav-link" href="../recipe/list.html">Recipes</a></li>
+			<li class="nav-item"><a class="nav-link" href="../glossary/list.html">Glossary</a></li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="3704.html#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Others</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" href="../article/list.html">Articles</a>
+					<a class="dropdown-item" href="../hazard/list.html">Hazards</a>
+					<a class="dropdown-item" href="../mineral/list.html">Minerals</a>
+					<a class="dropdown-item" href="../property/list.html">Properties</a>
+					<a class="dropdown-item" href="../schedule/list.html">Firing Schedules</a>
+					<a class="dropdown-item" href="../temperature/list.html">Temperatures</a>
+					<a class="dropdown-item" href="../trouble/list.html">Troubles</a>
+					<a class="dropdown-item" href="../test/list.html">Tests</a>
+					<a class="dropdown-item" href="../video/list.html">Media</a>
+					<a class="dropdown-item active" href="list.html">Pictures</a>
+					<a class="dropdown-item" href="../typecode/list.html">Typecodes</a>
+					<a class="dropdown-item" href="../project/list.html">Projects</a>
+					<a class="dropdown-item" href="../consultants/list.html">Consultants</a>
+					<a class="dropdown-item" href="../schools/list.html">Schools</a>
+					<a class="dropdown-item" href="../stores/list.html">Stores</a>
+					<a class="dropdown-item" href="../potterytony/list.html">Don't Buy-A-Mug</a>
+					<div class="dropdown-divider"></div>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="../index.html">https://digitalfire.com</a>
+					<a class="dropdown-item" href="https://insight-live.com">Insight-Live.com</a>
+					<a class="dropdown-item" href="../index.html">Sign-Up</a>
+				</div>
+			</li>
+		</ul>
+		<form class="form-inline my-2 my-lg-0" action="https://digitalfire.com/index.php?searcharea=picture" accept-charset="UTF-8" method="post">
+		<input name="searchfor" title="Search from home to search in all areas" maxlength="20" class="form-control mr-sm-2" aria-label="Search" placeholder="Search" autocorrect="off" autocapitalize="off" type="search" value=""><button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="searchbutton">Search</button>
+		</form>
+	</div>
+</nav>
+<div class="container"><p>Operation timed out after 2000 milliseconds with 0 bytes received</p>Error: API server returned an invalid response for picture<p style="clear:left"></p><p style="clear:left"></p><p style="clear:left"></p><p style="clear:left"></p><p style="clear:left"></p><h1 style="margin-bottom:0px;">v6 Beer Bottle Drawing</h1>
+<h2 style="color:#888888; margin-top:0px;">Fits standard swing top stoppers.</h2>
+<p><b>Available as a Product</b> on the <a target="_blank" href="../downloads/index.php@picture=3704.html">Downloads</a> page</p>
+<p><a  href="../glossary/3d-printing.html">3D print</a> this, pour in <a  href="../material/1124.html">plaster</a> to make a <a  href="../glossary/slip+casting.html">slip casting</a> mold! My previous work on this project assumed a smaller <a  href="../glossary/3d+printer.html">3D printer</a> (making it necessary to print flanged <a  href="3701.html">PLA</a> mold sections that clip together). But larger <a  href="../glossary/3d+printer.html">3D printers</a> are now common, making the <a  href="../glossary/3d+design.html">CAD</a> work much easier. This <a  href="3712.html">OnShape</a> drawing is <a  href="2550.html">parametric</a> for height, body diameter, wall and plaster thickness, and neck height (for the full bottle set body=160mm, neck=96). This uses my standard <a  href="3716.html">natch system</a>. Neck vertices are proportional to height, so resizing works well. The top end is filleted to permit the longest possible mold on the print bed (diagonally). The bottom inside perimeter is chamfered, strengthening the default <a  href="../glossary/0.8mm+thickness.html">0.8mm</a> side wall junction to the base (that being said, be careful not to flex it too much when removing it from the print bed). <br />
+<br />
+Doing this smaller size is for prototyping and testing. Casting plaster on a 3D print creates artifacts; these were not an issue. This PLA mold prints quickly, it has a hollow back side, permitting easy removal with a <a  href="3729.html">heat gun</a>. There is no spare, it employs a <a  href="../glossary/pour+spout.html">pour spout</a>, making the mold shorter and producing a better lip.<br />
+<br />
+Need a <a  href="../glossary/stoneware.html">stoneware</a> slip casting recipe? <a  href="https://insight-live.com/insight/share.php?z=35Tb8CCEe7">L4768E</a> or <a  href="https://insight-live.com/insight/share.php?z=35Tb8CCEe7">L4768H</a> are a good choice. A glaze recipe? How about <a  href="../recipe/ga6-b.html">GA6-B</a> (or similar)? Go full <a  href="../glossary/do-it-yourself.html">DIY</a> with this, you will never turn back.</p>
+<p><a href="https://s3-us-west-2.amazonaws.com/reference/images/pictures/9gjcmmtq4m.jpg"><img class="flexinline" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/9gjcmmtq4m.jpg" alt="3D printed case mold for making ceramic beer bottles"></a></p>
+<p><b>Available as a Product</b> on the <a target="_blank" href="../downloads/index.php@picture=3704.html">Downloads</a> page</p>
+<h2 style="margin-top:15px;">Related Pictures</h2><p style="clear:left"></p>
+<h3 style="margin-bottom:0px; margin-top:30px;">A 3D Printed Mold Spout</h3>
+<h4 style="color:#888888; margin-top:0px;">Better Than a Spare for Slip Casting</h4>
+<p style="margin-top:0px;"><b>Available</b> on the <a target="_blank" href="../downloads/index.php@picture=3694.html">Downloads</a> page</p>
+<br /><a alt="A plaster mold pout spout" href="3694.html"><img class="flexleft50" alt="A plaster mold pout spout"  loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/rewa2m7ijw.jpg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="3694.html">click here</a> to see it.</p>
+<p>Glue one of these on top of your <a  href="../glossary/slip+casting.html">slip casting</a> mold (using slip) and enjoy the many benefits. These are intended for people who make their own molds using the <a  href="../glossary/3d-printing.html">3D printing</a> techniques taught on this website. Among the advantages are the following:<br />
+-Less mess.<br />
+-Smaller, simpler molds (they don't need a spare).<br />
+-Overhung lips, more precise lips.<br />
+-Visible indication of casting progress.<br />
+</p>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">DIY natches, spacers and embeds in a plaster handle mold</h3>
+<br /><a alt="Natches, spacers, embeds in a plaster handle mold" href="3481.html"><img class="flexleft50" alt="Natches, spacers, embeds in a plaster handle mold"  loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/eywkbxftjm.jpeg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="3481.html">click here</a> to see it.</p>
+<p>This is our third-generation alternative to the use of traditional <a  href="../glossary/mold+natches.html">mold natches</a> (like the red ones in the photo). Here is what you are seeing:<br />
+<br />
+Right: A <a  href="../glossary/3d-printing.html">3D-printed</a> <a  href="3728.html">case mold</a> for a mug handle. Clips (retainers) have been inserted from the bottom side. An embed has been pushed down over the one in the rear.<br />
+<br />
+Center: The <a  href="../material/1124.html">plaster</a> mold created from it. The embed at the rear is ready for inserting a spacer (the nipple of the other half will it into that). A <a  href="../glossary/mold+natches.html">natch</a> has also been inserted into the embed in the front. These fit tight enough in the hole that glue was not needed here.<br />
+<br />
+Left: Spacers have been inserted into both <a  href="3483.html">embeds</a>. A standard natch fits into the one in the rear and one of our <a  href="../glossary/mold+natches.html">natches</a> fits into the one in the front.<br />
+<br />
+Soon the <a  href="../glossary/3d+design.html">CAD</a> drawing for these (natches, spacers, embeds, clips) will be available on <a  href="../glossary/digitalfire+reference+library.html">digitalfire</a>.com.</p>
+<p style="clear:left"></p>
+<h3 style="margin-bottom:0px; margin-top:30px;">v7 Classic beer bottle mold in OnShape</h3>
+<h4 style="color:#888888; margin-top:0px;">Make authentic-looking beer bottles that are better than glass</h4>
+<p style="margin-top:0px;"><b>Available</b> on the <a target="_blank" href="../downloads/index.php@picture=3369.html">Downloads</a> page</p>
+<br /><a alt="Beer bottle mold in OnShape" href="3369.html"><img class="flexleft50" alt="Beer bottle mold in OnShape"  loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/vyfxawld99.jpg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="3369.html">click here</a> to see it.</p>
+<p>The <a  href="../glossary/slip+casting.html">slip casting</a> process is so much more accessible than in the past because of <a  href="../glossary/3d-printing.html">3D printing</a>. Why not start with this? This bottle has all the same dimensions as my v6 (done in <a  href="2453.html">Fusion 360</a>). But, because this is done in <a  href="3712.html">OnShape</a>, one click here opens it directly in a browser window with all the power of a professional <a  href="../glossary/3d+design.html">CAD</a> system. If you have a free account there and are logged in, one more right-click can export it in <a  href="3598.html">3MF</a> or <a  href="3598.html">STL</a> format for 3D printing. Or a "Copy Workspace" menu choice will move it to your account to enable editing and setting variables, adjusting the shape, etc. This works in your browser, there is no software to install and OnShape is free for hobbyists. This mold works with my <a  href="../glossary/pour+spout.html">pour spouts</a> (no spare is needed) and <a  href="3716.html">natch system</a> (no registration keys are needed). So just insert the clips and <a  href="3483.html">embeds</a>, pour in <a  href="../material/1124.html">plaster</a>, remove the <a  href="3701.html">PLA</a> plastic with a <a  href="3729.html">heat gun</a> and you have a working mold. When dry, glue in the <a  href="../glossary/mold+natches.html">natches</a>, attach a spout (using slip) and fill the mold with <a  href="../glossary/casting+slip.html">casting slip</a>.<br />
+<br />
+Need a <a  href="../glossary/stoneware.html">stoneware</a> slip casting recipe? <a  href="https://insight-live.com/insight/share.php?z=35Tb8CCEe7">L4768E</a> or <a  href="https://insight-live.com/insight/share.php?z=35Tb8CCEe7">L4768H</a> are a good choice. A glaze recipe? How about <a  href="../recipe/ga6-b.html">GA6-B</a> (or similar)? Go full <a  href="../glossary/do-it-yourself.html">DIY</a> with this, you will never turn back. Need a guided help to make this happen? Sign up for an <a  href="../glossary/digitalfire+insight-live.html">Insight-live</a>.com group account and we can work together to make this happen for you.</p>
+<p style="clear:left"></p>
+<h3 style="margin-bottom:0px; margin-top:30px;">Swing Top Stopper Mechanism:</h3>
+<h4 style="color:#888888; margin-top:0px;">Getting the measurement right</h4>
+<br /><a href="2563.html"><img class="flexleft50" loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/6ekoc2jqk4.jpg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="2563.html">click here</a> to see it.</p>
+<p>Early in the process, I needed to predict bottle neck diameter at the holes. I measured the gap on all of the ones I have and got an average to work from. Then I <a  href="../glossary/3d-printing.html">3D printed</a> several iterations of the neck, fired size, and <a  href="../glossary/suspension.html">settled</a> on one that enabled being able to snap on the metal stopper fitting without stretching it too much. That being said, the wire assembly is bendable and can be adjusted for size.<br />
+<br />
+This 3D printed test was designed to determine positioning in 3D space for the mounting holes. The ceramic bottle won't have this exact design; they need a thickened section on each side of the neck for the hole.</p>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">Here’s my setup for pouring plaster in the kitchen!</h3>
+<br /><a alt="Making plaster molds in my kitchen" href="3705.html"><img class="flexleft50" alt="Making plaster molds in my kitchen"  loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/fgqjweekid.jpeg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="3705.html">click here</a> to see it.</p>
+<p>Because of the ease of <a  href="../glossary/3d-printing.html">3D printing</a> case molds at home I can now pour <a  href="../material/1124.html">plaster</a> in them also. Of course, I am not in production; this is about creating prototype molds. This technique makes it possible to be precise in the amount of plaster used, so there is almost no waste. My tools are simply a good <a  href="../glossary/propeller+mixer.html">propeller mixer</a>, and a scale and a 3-D printer (and a cooperative wife). Here is my procedure:<br />
+-Counterbalance a plastic container.<br />
+-Fill the mold with water and pour into the plastic container to get the weight in grams (and thus cc's).<br />
+-Plug that weight into https://plaster.glazy.org, set it to use centimenters and get the USG recommended weights for plastic and water.<br />
+-Put that amount of water in the flexible plastic container and tare it.<br />
+-Dump in the plaster needed (no need to sprinkle it, I have a good mixer).<br />
+-Set the timer for 4 minutes and let it soak.<br />
+-Put it under the mixer (at an angle as shown), set the speed to create a whirlpool just shy of pulling in any air (thus avoiding adding bubbles). Mix for 4 minutes and then pour it into the molds.<br />
+-Clean the mixer blade and shaft in a container of water (and throw that away outside). Let the plaster harden in the plastic container (it breaks away cleanly later).<br />
+-Let it set overnight and use a <a  href="3729.html">heat gun</a> and pliers to carefully remove the <a  href="3701.html">PLA</a> from the plaster.<br />
+</p>
+<p style="clear:left"></p>
+<h3>Videos</h3><table>
+<table class="table table-bordered"><tbody>
+</tbody></table>
+<h3>Links</h3><table>
+<table class="table table-bordered"><tbody>
+<tr>
+<td scope="row">Projects</td>
+<td>
+<a href="../project/beer+bottle+master+mold+via+3d+printing.html">Beer Bottle Master Mold via 3D Printing</a>
+<br /><i>A project that took several years of failures and blind allies and is finally coming together - so much simpler than expected!</i>
+</td>
+</tr>
+</tbody></table><table style="margin:30px 0px 30px 0px;"><tr><td style="vertical-align:middle; text-align:center; font-size:80%;"><img src="../images/PayPalDonate.png" style="height:66px; padding-right:20px;"><br /><a href="https://www.paypal.com/donate/?hosted_button_id=F8L3JX4BCCXJ6">PayPal</a></td><td style="background-color:#ddffdd; padding:10px; border:thin solid grey; font-size:90%;"><b>No</b> tracking, <b>No</b> ads, <b>No</b> paywall, <b>No</b> transient content!<br />Just organized, concise information constantly updated and improved.<br />Was this helpful? Consider supporting me.</td><tr></table><h3>Got a Question?</h3><p style="margin-bottom:30px;"><a name="kofi">Buy me a coffee and we can talk</a> <a target="_blank" href="https://ko-fi.com/tonyhansen"><img style="width:40px" src="../images/ko-fi.svg"></a></p><p style="margin-bottom:30px;">&nbsp;</p>
+<p></p><p></p><hr>
+<img style="width:250px" src="../4sight/images/ReferenceLibrary.svg">
+<br />
+<a href="../index.html">https://digitalfire.com</a>, All Rights Reserved
+<br /><a href="../w3c/privacypolicy.php.html">Privacy Policy</a>
+</div>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+</body>
+</html>

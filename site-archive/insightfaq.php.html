@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Insight FAQ</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body { font-family:sans-serif; }
+</style>
+</head>
+
+<body>
+<h1>Desktop Insight Fequently Asked Questions</h1><ul><li><a href="insightfaq.php.html#Calculations">Calculations</a></li><li><a href="insightfaq.php.html#Education">Education</a></li><li><a href="insightfaq.php.html#Installation">Installation</a></li><li><a href="insightfaq.php.html#Miscellaneous">Miscellaneous</a></li><li><a href="insightfaq.php.html#Support">Support</a></li><li><a href="insightfaq.php.html#Troubleshooting">Troubleshooting</a></li><li><a href="insightfaq.php.html#User Interface">User Interface</a></li></ul>
+<h2><a name="Calculations">Calculations</h2>
+<p style="font-weight:bold;">Can I calculate clay body expansion?</p>
+<p style="color:#888888; margin-left:10px;">Thermal expansion calculations assume a glass where all oxides can impose their proportionate expansion on the whole. This does not work for crystalline solids. Clay bodies do not melt like glazes, the oxides do not form a homogeneous glass, they undergo complex crystallization while cooling in the kiln. A glass and crystal of the same chemistry usually have wildly different physical properties. Variations in particle size distribution, particle mineralogy and shape, firing speed, atmosphere and duration of firing all affect the progressive stages of decomposition and play out of interactions that  break and build molecular bonds; these variations are evident in the fired product and all beyond the scope of the chemistry. Consider SiO2 oxide content: It may be equal in two bodies, but one may have most of the SiO2 in quartz grains and the other might have it as a molecular component of feldspar and kaolin. These will, of course, have vastly different thermal expansions.</p>
+
+<p style="font-weight:bold;">Will INSIGHT substitute one material for another automatically in my recipe?</p>
+<p style="color:#888888; margin-left:10px;">This is too complex an issue for a machine, and INSIGHT will not attempt to think it through for you. However INSIGHT does give you the tools to juggle recipes to achieve a specific oxide formula. It provides tutorials that specifically deal with this and reference materials to help you develop the skills you need to substitute materials. It is important to note that substitution is usually a matter of mineralogy and physical properties as well as chemistry (INSIGHT considers only chemistry). In INSIGHT you can put two glaze recipes side-by-side (one with the old material and the other with the substitute) and juggle ingredients in the new one until the chemisties match as well as possible. For example, if one recipe needs more Al2O3 and SiO2 you can raise the kaolin and silica to supply the right amount. However oxides like K2O, Na2O, B2O3 are sourced from materials that also supply many other oxides. Thus when you adjust the amounts of these materials the amounts of many oxides in the formula can be affected. As you learn what oxides each material supplies you develop a sense for which oxides to match first how to do this juggling act to get as good an overall match as possible. Many people find this process quite a stimulating challenge.</p>
+
+<p style="font-weight:bold;">How do I compare the chemistry of two materials?</p>
+<p style="color:#888888; margin-left:10px;">Create a one-material-recipe for each and compare them in the formula list using any calculation method desired. You can also compare a material with itself (e.g. its formula with its analysis).</p>
+
+<p style="font-weight:bold;">Why doesn't INSIGHT support Additive Materials?</p>
+<p style="color:#888888; margin-left:10px;">While materials can be classified as additives, we do not support the concept of a main recipe with items added to it in a separate section. You can still order recipes the way you want and you can retotal them excluding the additives. Some materials contribute both chemistry and additive properties that are situation dependent and it is difficult to draw an absolute line making a material one or the other. The same arguments apply to other categories (e.g. colorants, opacifiers, variegators), these are equally difficult to impose labels on since they are often multifunction. In future we will add the ability to default the order of recipes according to the type of material.</p>
+
+<p style="font-weight:bold;">Do existing recipes unlink from material chemistry if material names are changed?</p>
+<p style="color:#888888; margin-left:10px;">Yes and no. INSIGHT has a two-way and multi-string search mechanisms so that links can be maintained. INSIGHT maintains separate Lookup and Labels for each line, you can relabel any line without breaking its link to the materials database.</p>
+
+<p style="font-weight:bold;">I have glazes with expansions of 6.8 and 7.9 and they both fit the same body. Why?</p>
+<p style="color:#888888; margin-left:10px;">Expansion calculations are not absolute, they are relative within a system (material or oxide). For example, if you have a dolomite, whiting, feldspar, kaolin, silica glaze and you try a bunch of minor variations, the calculated expansions will give you a fairly accurate indication of which variations have higher and lower expansions and to what degree. But if you make a major change to the oxide balance (perhaps moving toward a high MgO from a high KNaO content) while still using the same materials, the calculated thermal expansion difference between the two will often not accurately reflect the actual measured differences. Even more significantly, if lithium carbonate, for example, is introduced (or a boron frit, or zinc, for example) it is now a different system and different factors affecting the proximity of calculated and actual thermal expansion come into play.<br />
+<br />
+Likely you are employing many systems (which most people are) so there is good reason to think in relative terms. If a glaze is crazing, for example, reduce its thermal expansion and test rather than worrying so  much about how much its expansion matches an arbitrary absolute target. Often the degree to which a calculated expansion changes when you adjust the recipe is comparable to the degree to which the actual measured numbers would be different (within a system).<br />
+<br />
+There are other factors that affect the accuracy of thermal expansion prediction also:<br />
+-Some oxides, like Li2O do not impose their expansions in a linear fashion or in accordance with their proportion.<br />
+-The degree to which a glaze is completely melted determines the degree to which its expansion calculation is valid.<br />
+-Crystallization: A melt that freezes to a crystalline solid has a very different thermal expansion than when it freezes to a glass.<br />
+-Non melting particles: Zircon imposes its expansion as a non-participant in the glass structure, this is very different than if it were to melt and participate in the glass chemistry. Alumina (calcined or hydrate) is a similar story.<br />
+-Oxides interact: The expansion contribution of one may be different depending on which other oxides are present.</p>
+
+<p style="font-weight:bold;">I have a glaze of 7.5 thermal expansion that fits better than another that is 7.0, why?</p>
+<p style="color:#888888; margin-left:10px;">See the answer to the accompanying question on this same topic.</p>
+
+<p style="font-weight:bold;">Can I look up frit recipes by searching by properties such as CTE, surface tension, melting point? </p>
+<p style="color:#888888; margin-left:10px;">No, but INSIGHT does connect to our reference website and you can look up frits there. Some have melting points listed. Many have CTEs listed, but you cannot search by property value. However, consider that different frit companies have different ways of measuring CTE. The same goes for melting point, frits soften instead of melt and there are many different ways to measure and express this. Surface tension is a similar story. Glaze chemistry is a relative, not absolute science. CTE numbers are absolute. Our philosophy is to adjust existing glazes to get what you want. If a glaze is crazing for example, no matter what any data for the glaze, body or materials says, its thermal expansion needs to be reduced (we provide reference materials, videos, instruction manual, software and support needed to adjust a glaze to reduce its expansion; also to substitute materials, fix problems like blistering or leaching or ajdust melting temperature, surface character, color response). The CTE data from a frit company can be valuable if you are already using one of their frits so you can see if the other frit has a higher or lower property value (like CTE). However consider also that just because you replace one frit for another with a lower thermal expansion, that does not mean the glaze containing that frit is going to have a lower expansion. If the frit being substituted has an entirely different chemistry to interplay with the chemistry of the host glaze, the results of the new interactions are not entirely predictable. It is better to use INSIGHT to adjust the chemistry of the glaze in a measured direction (reduce the KNaO and replace it with another flux in the same amount to fix crazing, for example).<br />
+</p>
+
+<p style="font-weight:bold;">Why are the expansion numbers I assign in the Oxides dialog not used?</p>
+<p style="color:#888888; margin-left:10px;">At first expansion numbers were stored in the MDT. But many years ago we added an override system. Insight still reads the expansion and cost numbers in the MDT, then it looks in the OVERRIDES.XML file and if it finds data there, overrides the numbers from the MDT file. This is done so that these numbers remain constant even if you change MDTs within Insight (as long as the material and oxide names are the same). Anyone using a very old version of Insight may expect that passing their MDT to others automatically gives them the expansion numbers also, but this is no longer true.</p>
+
+<p style="font-weight:bold;">Are INSIGHT's thermal expansion calculations accurate?</p>
+<p style="color:#888888; margin-left:10px;">No, these are not absolute numbers, they are relative. There are many factors that influence thermal expansion that are beyond calculation (e.g. non-linear contributions, oxide interactions, devitrification or incomplete melting). However there is a reasonable enough correspondence between INSIGHT's predictions and actual measured expansions in many systems and in a relative sense (if all other process and material factors are similar). If INSIGHT predicts that one glaze will have a significantly higher expansion than another of the same type and treated in the same way then this is likely true. Thus you can use INSIGHT to move a glaze's expansion in the right direction (then you can test to fine tune it).</p>
+
+<p style="font-weight:bold;">Why are some coloring oxides and opacifiers missing in the INSIGHT MDT?</p>
+<p style="color:#888888; margin-left:10px;">We have found it better to consider colors and opacifiers as add-ons and rationalize their influence on the recipe level (except iron). Opacifiers do not melt into the glaze and are therefore not a part of its chemistry anyway. The contribution of colors to properties like thermal expansion is not well understood. For both of these, you are going to use the amount required to get the needed color and opacity no matter what the chemistry says anyway. INSIGHT enables you to relate the chemistry of a glaze to the way it fires, this is an inexact and relative science, learning these relationships with the base recipe (without colorants and opacifiers) is best, especially at the start. Later you can mentally factor in knowledge about colorant and opacifier effects on specific properties. You can still enter colorants and opacifiers into recipes in INSIGHT, it is happy to accept them (it marks them with an asterisk). Ultimately, if you need to include colorant chemistry in calculation, you can add materials and oxides to the INSIGHT MDT in a variety of ways (including being able to construct and download a custom MDT at digitalfire.com).</p>
+
+<p style="font-weight:bold;">Will INSIGHT automatically convert from unity formula to recipe?</p>
+<p style="color:#888888; margin-left:10px;">No. Since the factors that determine how much of each material to use go far beyond chemistry considerations INSIGHT uses a semi-automatic approach. The recipe-to-formula and formula-to-recipe calculations are tightly interwoven in INSIGHT's interactive environment and proficient users do not miss an automatic converter. You can specify the amount of material you want either by weight or by the molecule requirement for an oxide it supplies.<br />
+</p>
+
+<p style="font-weight:bold;">If an oxide does not appear in the limit formulas does that mean it has no limits?</p>
+<p style="color:#888888; margin-left:10px;">There are never no limits. Even the limits we document are not 'cast-in-stone'. Any limit formulas we publish are an attempt to provide an approximate starting point to create a glaze that forms a durable glass. Information on testing your glaze can be found in the education section of digitalfire.com.<br />
+</p>
+
+<p style="font-weight:bold;">Will INSIGHT tell me how to change a glaze to make it fire lower? or higher?</p>
+<p style="color:#888888; margin-left:10px;">The target formulas available in INSIGHT (and in textbooks) help you to guess melting range of a glaze, but this is not foolproof by any means, there are too many complex variables involved to apply a mathematical process. However INSIGHT comes with tutorials on how existing glazes were adjusted to melt lower and it provides lots of information about how oxides interplay to affect melting temperature. After working with your glazes and relating the chemistry to the melting temperature you will develop the ability to adjust firing temperature within the system of oxides you know. You will also come to appreciate that the chemical changes required to reduce firing temperature have side effects that must be considered (e.g. increased thermal expansion). However any glaze (or collections of similar glazes) has limits on how much existing materials can be juggled to change melting temperature. When these limits are reached new oxides need to be introduced and existing ones reduced or eliminated. For example, fluxes like CaO, MgO that work well at cone 10 are not effective at cone 5, so increasing them is not going to be enough, you need to add a low temperature flux like boron. In many cases it will be best to identify the mechanism of the existing glaze and transplant this into an existing base transparent glaze at the desired temperature.<br />
+</p>
+
+<p style="font-weight:bold;">Can INSIGHT calculate melting temperatures of glazes?</p>
+<p style="color:#888888; margin-left:10px;">The complexities of oxide interactions and firing methods along with the wide range of physical and mineralogical properties of materials supplying oxides make the prediction of absolute values for fired properties an inexact and highly system-specific science at best. This is especially the case with melting temperature prediction.<br />
+<br />
+However ceramic calculations work well as a relative science. INSIGHT's dual recipe functionality makes it a natural for studying one recipe in relation to another with respect to maturing temperature, expansion, etc. Technicians change the chemistry of a recipe according to a knowledge of what direction the change should take the desired property. Then they relate fired results back to the chemical change and build understanding to use for subsequent fine tuning. It is common to develop prediction skills within specific  'oxide systems'. We teach people the interpretation skills they need to do this. Digitalfire is very hesitant to build temperature prediction into INSIGHT for fear it would make us appear in any way naive about this.</p>
+
+<p style="font-weight:bold;">Can INSIGHT do recipe blends?</p>
+<p style="color:#888888; margin-left:10px;">INSIGHT tends adapt better to people who would rather just learn<br />
+how each oxide contributes to the glaze and then formulate or fix a glaze<br />
+by simply adding or removing what is required to move in the desired<br />
+direction. When one relates fired results to the chemistry of the glaze lots of relationships become evident. Add a knowledge of oxides and you can not explain why things happen the way they do in the kiln and you can make them happen. We thus see blending as more of a recipe manipulation task rather than one related to glaze chemistry.</p>
+
+</div>
+<h2><a name="Education">Education</h2>
+<p style="font-weight:bold;">Do I need a site license for my School?</p>
+<p style="color:#888888; margin-left:10px;">You can install so that many people use one copy, or that one person uses many copies, but you need a license if many people use more than one copy. Site licenses are 5 times the price of one with credits for past purchases and educational discounts. Visit the INSIGHT page for more information.</p>
+
+<p style="font-weight:bold;">Do you have discounts for education?</p>
+<p style="color:#888888; margin-left:10px;">Yes. Visit the insight page on our website for more information or click the contact link on our home page and email.</p>
+
+<p style="font-weight:bold;">Do you have any ideas on getting students to use INSIGHT for assignments?</p>
+<p style="color:#888888; margin-left:10px;">One excellent suggestion we had was this:<br />
+Assign beginners to do the calculations necessary to remove whiting from a glaze and replace it with wollastonite while maintaining the glazes chemistry. Tell intermediates to replace talc and dolomite with a frit that sources MgO and ask them why this should be done for porcelain and fine tableware glazes (to remove glaze bubbles). Ask advanced people to analyse a glaze recipe and recommend substitutes for individual situations (e.g. cost reduction, increase reliability, lower melting point by using more fusible oxide sources, employ clays of finer particle size to suspend better). Use the lessons section in the INSIGHT manual for ideas.</p>
+
+<p style="font-weight:bold;">I'm teaching a class on ceramic calculations, where do I get information?</p>
+<p style="color:#888888; margin-left:10px;">We are fighting the 'test-glaze-recipes-until-one-works' philosophy taught in many educational institutions. We cater to people who want to know 'why', who are ready to confront safety and quality issues, who are ready to learn the basic chemistry and adjust and control their own recipes. Try clicking the "Where do I start" link on our home page. You may also find that the lessons section in the INSIGHT manual make an excellent starting point.</p>
+
+</div>
+<h2><a name="Installation">Installation</h2>
+<p style="font-weight:bold;">Template, COE, Recipes are missing after install</p>
+<p style="color:#888888; margin-left:10px;">The Insight Windows installer creates a folder on your computer that contains the application itself and all the starter files and folders it needs (the ZIP installer for Windows, Mac and Linux contains all those same files already in a folder). <br />
+<br />
+When Insight starts for the first time it expects to see a folder named Insight in your documents folder. If that is not there it creates it and copies into it the starting materials, recipe and thermal expansion/cost/typecodes and recipe template files (from the originals in its own application folder). As Insight continues startup it looks for the default materials file (named STANDARD.XML). If not found it looks for one named TEMPLATE.XML and renames it as STANDARD.XML and then reads the data. It then looks for the INSIGHTDATA.DB recipe database file. If that is not there it looks for a folder named RECIPE and creates the INSIGHTDATA.DB database from its contents. Finally, it looks for a file named OVERRIDES.XML and, if found, reads it (it contains the typecodes, thermal expansions and costs). Finally, it copies the report templates folder.<br />
+<br />
+So, if, for some reason, Insight is complaining that it cannot find a recipe template or there are no starter or target recipes when you open the recipe database window, you can assume that Insight was not able to complete the copying process described above (often the problem is related to permissions of your OS). You can manually move the needed folders and files from the Insight application folder to your documents/insight folder. Move OVERRIDES.XML, LESSONS.XML, TEMPLATE.XML, the recipe folder and the templates folders. Erase the INSIGHTDATA.DB file to force Insight to rebuild it from the contents of the recipe folder.</p>
+
+<p style="font-weight:bold;">Can I use Insight with DropBox, Google Drive, SkyDrive, iCloud, etc?</p>
+<p style="color:#888888; margin-left:10px;">Yes, go to this page to find out: http://digitalfire.com/insight/cloudstorage.php</p>
+
+<p style="font-weight:bold;">Where can I download INSIGHT?</p>
+<p style="color:#888888; margin-left:10px;">Login at the digitalfire home page and then click the download link. There are tutorial and video links there if you are not sure how to download.</p>
+
+<p style="font-weight:bold;">Is it difficult to install?</p>
+<p style="color:#888888; margin-left:10px;">In recent years we install fewer and fewer programs as we learn to work online or use apps. It is not unusual to find people now who have never installed a program on a PC. For them, this might be difficult (remember, you do have the alternative of using a private account at insight-live.com, there is nothing to install). If you have installed programs before, then installing Insight is not difficult. In Windows just download, open and click yes a couple of times. For Macintosh, click download and a folder should be waiting on your desktop. Open it and copy the contents into a folder on your desktop. For Linux, unpack the archive into a folder and open the program. <b>However, please read any operating-system-specific notes on the download page</b>.</p>
+
+<p style="font-weight:bold;">How do I move my INSIGHT to another computer?</p>
+<p style="color:#888888; margin-left:10px;">By default INSIGHT keeps its data files in a folder named insight in your personal documents folder. Thus to move Insight data you just need to put this insight folder into your documents folder on your new computer (this should happen automatically if you move your entire documents folder to the new computer). Then download the INSIGHT installer, install it on the new computer and launch it. When it starts it will check in your documents folder for a folder named insight, it will see it and use it normally. This is true for all versions of Windows from 2000 to 8, for Macintosh OSX and Linux.<br />
+<br />
+If you have already installed INSIGHT on the new computer and launched it and do not see your recipe files: Replace the insight folder that Insight will have created with the one from your old computer. Insight needs to see (at startup) your old INSIGHTDATA.DB (the recipe database) and STANDARD.XML and any custom materials files you have downloaded from our website files (named xx-yyy.xml (eg. 45-3456.xml)). They will all be in the insight folder.<br />
+<br />
+If you were using Insight in file system mode, then copy the folders where you were storing the recipes to the new computer.<br />
+<br />
+You might consider using a cloud drive (like Dropbox) so that you do not have to move data from one computer to another in future (there is a page in the Insight section of Digitalfire.com on how to set this up). In addition, multiple computers can share the same data.</p>
+
+<p style="font-weight:bold;">What does the Windows installer do?</p>
+<p style="color:#888888; margin-left:10px;">The installer creates an INSIGHT folder in the Program Files folder of your computer (if it is not already there) and writes the program and data files there. It creates some shortcuts to launch different functions. The first time INSIGHT runs it creates a folder in your documents folder and copies the recipe and materials files there.</p>
+
+<p style="font-weight:bold;">How do I uninstall INSIGHT?</p>
+<p style="color:#888888; margin-left:10px;">In Windows use the Uninstall item in the Start menu and then trash the INSIGHT folder in your Documents folder. For Macintosh and Linux trash the INSIGHT folder and the INSIGHT folder in your documents folder. If you don't want to lose recipe files, move the recipe folder out of the INSIGHT folder (in your documents folder).</p>
+
+<p style="font-weight:bold;">Will INSIGHT clog up my computer or slow it down in any way?</p>
+<p style="color:#888888; margin-left:10px;">It does not affect your computers speed at all, the installer just copies some files into a folder. INSIGHT is small and efficient. The INSIGHT application is self-contained in one folder. It stores its preferences, recipe, materials, index and report files in the appropriate preferences, documents and temporary folders for your username.</p>
+
+<p style="font-weight:bold;">Can I try the new INSIGHT without disturbing my current version?</p>
+<p style="color:#888888; margin-left:10px;">In Windows: If you had an older version of INSIGHT 2006 make a copy of the old INSIGHT folders in the Program Files and your documents folders. To go back to the older version put these folders back to replace the new ones. Older versions of INSIGHT installed into different folders so the new one will not interfere with them. For Macintosh: Run INSIGHT from a different folder to test a newer version.<br />
+Starting at version 2006 INSIGHT can read older format recipe and materials files but it saves them in a new XML format and renames the file with an XML extension. That means the older version will not be able to find the files. The new INSIGHT has a compatibility mode you can use to save files in the old format (see Preferences).</p>
+
+<p style="font-weight:bold;">Do I need to uninstall older Windows INSIGHT to upgrade?</p>
+<p style="color:#888888; margin-left:10px;">Install the new INSIGHT in a different folder to test it first. Then uninstall the old one when you are done testing. Keep in mind that the new version writes XML format files that older ones cannot read. Also, newer versions of INSIGHT store recipe and materials files in a folder in your documents folder, so you may need to move your files to the new location.</p>
+
+<p style="font-weight:bold;">Can INSIGHT be installed on an application server as a site license?</p>
+<p style="color:#888888; margin-left:10px;">It can be put on an applications server but the program would read and write data from each persons documents folder. If multiple copies are configured to read and write files into the same network folder and one person starts the program and changes options, INSIGHT writes these into a configuration file. If someone else is using it as the same time and sets other options these would overwrite those of the first user. The same would go for the recipe and materials data. INSIGHT is thus intended as a single user application.</p>
+
+<p style="font-weight:bold;">What is automatic-login via IP Address range?</p>
+<p style="color:#888888; margin-left:10px;">If you can give us a range of IP addresses from your institution we can set up your account so that any computer at your school that visits the Digitalfire Reference website is automatically logged in. This service is free for INSIGHT site licenses. Your tech support people will be able to provide this information. Most universities have a block of IP addresses but even if you have just one we can use it, provided it is static (the IP address never changes). This refers only to visiting the reference website using your browser, it does not affect INSIGHT itself, INSIGHT knows how to login automatically using your key.</p>
+
+</div>
+<h2><a name="Miscellaneous">Miscellaneous</h2>
+<p style="font-weight:bold;">Is the INSIGHT easy to use?</p>
+<p style="color:#888888; margin-left:10px;">Our job is to bring glaze chemistry within the reach of anyone. We have created the support systems to educate you in the theory of the chemistry, it is not difficult, you can start slowly. INSIGHT itself is considerably easier to use than some of the other products, its main screen has undergone evolution since 1980, much of this relates to the constant search for an elegantly simple layout that still has the power to do what is needed. We are constantly evolving the link between our educational resources and the user interface of INSIGHT.</p>
+
+<p style="font-weight:bold;">What resolution does my video monitor need to be to run INSIGHT?</p>
+<p style="color:#888888; margin-left:10px;">You need 1024x768 dots, this provides plenty of room. You can squeeze by on 800x600 but the ancient 640x480 is too small. Do not set your computer to a lower resolution so you can see it easier. There is a better way. Set it to 1024x768 and tell windows to use a larger font size, this is much easier to read than the chunky letters of low resolution. Also, if you have a flat-panel LCD display make sure you have windows set to the same resolution as the monitor and the characters will be much sharper (this is a common mistake). Right-click on the desktop for the settings dialog.</p>
+
+<p style="font-weight:bold;">How does INSIGHT compare with other programs?</p>
+<p style="color:#888888; margin-left:10px;">You can download the INSIGHT manual, there is a section on the history and design philosophy of INSIGHT. In general, INSIGHT is focused on glaze chemistry calculations as opposed to recipe management, it is very fast and compact, it is highly tuned, it supports side-by-side fully operational recipes, it couples with a powerful materials database website at (digitalfire.com), it has been around the longest (since 1980), it is used extensively in industry, it has many features tuned for demonstrating concepts in education, it stores all files in XML format. There is a link on the INSIGHT page at digitalfire.com about INSIGHTs advantages also.</p>
+
+<p style="font-weight:bold;">Who wrote INSIGHT?</p>
+<p style="color:#888888; margin-left:10px;">24-year-old Tony Hansen, the plant technician at Plainsman Clays in Alberta, Canada, began development of INSIGHT in 1978. This was shortly after the introduction of the first personal computers by companies like Altair, Apple and Tandy. The first commercial version ran on the Tandy Model III and featured separate recipe and formula frames (the term 'window' was not yet concieved). He subsequently ported it to the first commonly available laptop computer, the Tandy Model 100. The IBM PC was introduced in 1982 and INSIGHT was running on it by 1983. Shortly after that he got INSIGHT running on the first Macintosh 128K, albeit in a PC-like fashion. Windows and more Macintosh friendly versions followed in the early nineties. Tony Hansen continues to be the prime developer of INSIGHT. He introduced FORESIGHT in 1990 as the first fully relational recipe, ceramic calculation and physical test record keeping system, it is still used by many companies today (some have hundreds of thousands of tests in their databases). </p>
+
+<p style="font-weight:bold;">Can I add my own materials to the materials database in Insight?</p>
+<p style="color:#888888; margin-left:10px;">Yes. There are several ways to do this.<br />
+-Open the materials dialog and either add a material (using the menu item) or choose a material record you do not need, then just type in the formula and formula weight or LOI and save it.<br />
+-Choose to export your MDT in Excel CSV format (using the menu item in the materials dialog). Then maintain your MDT as percentage analyses outside of Insight using your spreadsheet software (Insight can read that format). These is a video tutorial on this.<br />
+-If you have Level 2 Insight, use the item in the Insight Help menu to go to our website and build your own custom MDT and download it into the Insight folder in your documents folder.<br />
+<br />
+However at times it is better to leave the database as it is and employ Insights ability to reference the chemistry of a another material (for calculations) for individual items in the recipe. Check this page:<br />
+http://digitalfire.com/4sight/education/be_careful_when_altering_the_materials_database_in_insight_355.html</p>
+
+<p style="font-weight:bold;">Is it better to store my recipes as files or in the default SQL database?</p>
+<p style="color:#888888; margin-left:10px;">For many years Insight maintained its recipes as files. But as years passed the reasons why file system storage was better disappeared. Although Insight can still read and write all previous recipe formats for those with less data and who prefer the classify-manually approach, its default is now to store the data in a fully relational SQLite format database for keyword search retrieval. The evolution path of Insight currently centers around its database.<br />
+<br />
+Please also check the answer to the question:  If I choose to administer recipes via the file system, what am I giving up?</p>
+
+<p style="font-weight:bold;">How difficult is it to import and export recipes in INSIGHT?</p>
+<p style="color:#888888; margin-left:10px;">Put INSIGHT format recipe files from others into your INSIGHT recipe folder (it can handle RCP, RCX and XML formats). INSIGHT now uses the XML file format for its recipes, you can open a recipe in any text editor or word processor; writing programs to process them is thus fairly easy. We are working on importers for other formats.</p>
+
+<p style="font-weight:bold;">Is the Macintosh version the poor cousin of the Windows version?</p>
+<p style="color:#888888; margin-left:10px;">No. They are identical except for various user interface conventions for each (e.g. a Quit menu choice instead of Exit to shut down the program).</p>
+
+</div>
+<h2><a name="Support">Support</h2>
+<p style="font-weight:bold;">Can I ask ceramic related questions?</p>
+<p style="color:#888888; margin-left:10px;">Yes, that is how we learn as well as you. If we do not know the answer likely we can point you in the right direction.</p>
+
+<p style="font-weight:bold;">Why does digitalfire.com send password by email and not not encrypt them?</p>
+<p style="color:#888888; margin-left:10px;">If someone has the expertise and motivation to somehow snoop on web traffic to get your password, and logs into digitalfire.com using your credentials, all they will see is your contact info and an Insight key. They cannot get your recipe data, it is on your private computer. However when they start entrusting valuable data to Insight they buy their own keys. However since people do tend to use the same password for many sites, we are aware of our responsibility to minimize their exposure.<br />
+<br />
+At insight-live.com you have to reset your password and they are encrypted, we cannot decode them. There are still people who are not able to handle the password reset process so we have quite a bit of support issues at insight-live, this is one reason we are hesitant to do this at digitalfire.com (because there this is alot more traffic).</p>
+
+<p style="font-weight:bold;">Can I Ask Technical Questions via Email?</p>
+<p style="color:#888888; margin-left:10px;">Yes, fire away. Click the 'Contact' link on our home page or choose Email Digitalfire Support in the help menu of INSIGHT. The download and various other pages on our site have email forms right on the page.<br />
+</p>
+
+</div>
+<h2><a name="Troubleshooting">Troubleshooting</h2>
+<p style="font-weight:bold;">How can I find the preferences and log files?</p>
+<p style="color:#888888; margin-left:10px;">INSIGHT stores its preferences (e.g. INSIGHT_2012_Preferences.XML) and log file (insightlog.txt) in the system preferences folder of your operating system. The Folders panel in the INSIGHT Preferences dialog has a reveal button to display this folder. If you cannot get INSIGHT to launch, then you must find the folder manually. Either use the search facility to look for the files matching the above names or navigate through the folder structure to find it. In Windows XP, for example, it is in the folder C:/Documents and Settings/YourUserName/Application Data (or, for short, user/Application Data). In Windows 7 it is user/AppData/Roaming. For OSX it is :Users:user:Library:Preferences. For Linux: /home/user.</p>
+
+<p style="font-weight:bold;">What is the log file?</p>
+<p style="color:#888888; margin-left:10px;">INSIGHT writes its progress during startup to a file named insightlog.txt. This file is valuable in diagnosing launch issues and we may request that you email a copy to us. At shut down INSIGHT erases this file. It is stored in the preferences folder for your operating system (see the accompanying question about how to find the preferences and log files if needed). If you need to send a copy to us and INSIGHT is starting, then you must launch INSIGHT and take a copy while it is running.</p>
+
+</div>
+<h2><a name="User Interface">User Interface</h2>
+<p style="font-weight:bold;">Why is the main window so complicated?</p>
+<p style="color:#888888; margin-left:10px;">We do not believe it is. Compare is with some of the others. We believe INSIGHT is a good compromise between simplicity of use and power.</p>
+
+<p style="font-weight:bold;">What is the difference between the Materials Lookup and Line Label fields?</p>
+<p style="color:#888888; margin-left:10px;">INSIGHT needs to know the chemistry for each line in a recipe and it needs to know how to label it in recipe reports and dialogs. In some cases you want to be able to label a line differently than the default name in the materials database, this feature enables the override.</p>
+
+<p style="font-weight:bold;">Can I resize the Recipe Window?</p>
+<p style="color:#888888; margin-left:10px;">Yes (since version 5.35 it dynamically resizes controls to refit).</p>
+
+<p style="font-weight:bold;">What is the deal with printing reports in INSIGHT?</p>
+<p style="color:#888888; margin-left:10px;">When INSIGHT prints a report it writes it out to a file and then calls another program to open and display it. That program can then be used to print the report. You can use the Preferences dialog to tell INSIGHT what program to preview and print reports in (i.e. Internet Explorer, Windows Notepad).</p>
+
+<p style="font-weight:bold;">If I choose to administer recipes via the file system, what am I giving up?</p>
+<p style="color:#888888; margin-left:10px;">Many people find a file system approach to storing recipes more intuitive than a search-based system. When you use the file system to manage recipes, you of course have to remember where things are. You thus give up the keyword, category and material name searching that Insight offers if you store your recipes in the default SQL database. You also give up other features in the recipe database dialog (previewing, quick note changing, for example). In addition you lose all the powers of SQL batch processing, certain digitalfire.com web site data interchange abilities and all the future enhancements and insight-live connections we will make to the database system. </p>
+
+</div></body>
+</html>

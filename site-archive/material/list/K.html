@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="../../favicon.svg">
+<link rel="mask-icon" href="../../mask-icon.svg" color="#000000">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<link rel="manifest" href="../../manifest.json">
+<title>Materials in Traditional Ceramics</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<meta name="author" content="Tony Hansen">
+<meta name="description" content="Technical information to help technicians and engineers understand materials used in traditional ceramics">
+<style>
+.flexinline { width: 50%; height: auto; clear:left; margin: 10px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexinline { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexright50 { width: 50%; height: auto; float: right; margin: 5px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexright50 { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexright33 { width: 33%; height: auto; float: right; margin: 5px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexright33 { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexright25 { width: 25%; height: auto; float: right; margin: 5px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexright25 { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexleft50 { width: 50%; height: auto; float: left; margin: 5px 15px 10px 0px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexleft50 { width: 100%; height: auto; margin: 5px 10px 10px 0px; border: none; padding: none; } }
+.flexleft33 { width: 33%; height: auto; float: left; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexleft33 { width: 100%; height: auto; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; } }
+.flexleft25 { width: 25%; height: auto; float: left; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexleft25 { width: 100%; height: auto; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; } }
+.pictureseries { overflow:scroll; width:auto; height:200px; float:left; margin: 5px 10px 10px 0px; padding: 5px; font-size:60%; font-style:italic;}
+@media (max-width: 640px) { .pictureseries { overflow:scroll; width:auto; height:200px; float:left; margin: 5px 10px 10px 0px; border: padding: 5px; font-size:60%; font-style:italic;} }
+.L2 { margin-left:0px; }
+.L3 { margin-left:20px; color:#222222; }
+.L4 { margin-left:40px; color:#444444; }
+.L5 { margin-left:60px; color:#666666; }
+.L6 { margin-left:60px; color:#888888; }
+h2 { color:#222222; }
+h3 { color:#444444; }
+h4 { color:#666666; }
+h5 { color:#888888; }
+
+</style>
+
+<meta name="google-site-verification" content="wquYW_n-3QEfIzDfV--8ElUewf7TIt04RGo55GfZySU" />
+<meta name="have-i-been-pwned-verification" value="9223dcee7de5c9622c2a2abcff4adc81">
+<script>
+function validateForm() {
+	var x = document.forms["emailform1"]["name1"].value;
+	var r = true;
+	if (x == "") { // alert("A name is required."); 
+		document.getElementById("name1").textContent="Name Required";
+		document.getElementById("name1").style.color="red";
+		// document.emailform1.name1.focus() ; # does not work, should be getelementbyid
+		r = false; 
+	} else {
+		document.getElementById("name1").textContent="Name";
+		document.getElementById("name1").style.color="black";
+	}
+	if (document.forms["emailform1"]["subject1"].value == "") { 
+		document.getElementById("subject1").textContent="Subject Required";
+		document.getElementById("subject1").style.color="red";
+		r = false; 
+	} else {
+		document.getElementById("subject1").textContent="Subject";
+		document.getElementById("subject1").style.color="black";
+	}			
+	if (document.forms["emailform1"]["msg1"].value == "") { 
+		document.getElementById("msg1").textContent="Message Required";
+		document.getElementById("msg1").style.color="red";
+		// alert("A message is required."); 
+		r = false; 
+	} else {
+		document.getElementById("msg1").textContent="Message";
+		document.getElementById("msg1").style.color="black";
+	}
+	var emailID = document.emailform1.email1.value;
+	atpos = emailID.indexOf("@");
+	dotpos = emailID.lastIndexOf(".");
+	if (atpos < 1 || ( dotpos - atpos < 2 )) {
+		document.getElementById("email1").textContent="Email Address Appears Invalid!";
+		document.getElementById("email1").style.color="red";
+		// alert("Your email address appears invalid.")
+		r = false;
+	} else {
+		document.getElementById("email1").textContent="Email Address";
+		document.getElementById("email1").style.color="black";
+	}
+	// Send the form
+	if (r == false) return false;
+	document.forms["emailform1"].submit();
+}
+</script>
+</head>
+<body>
+<p style="background-color:#ff9933; border-width:1px; padding:3px 10px 3px 10px; margin:0px 0px 3px 0px; font-size:80%; text-align:center;">
+Digitalfire will shut down on June 26. I no longer have the authority to grant exemption to a section in the Terms and Conditions of using material in the Insight-Live account from which I built the source material. While there are ways to comply with the take-down order, they are beyond my means because of how complex and large the site has become in the past 35+ years. It has been a wild ride for a shy prairie boy, thanks to everyone for your support. Insight-live.com is not affected by this.</p>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<a name="pagetop" class="navbar-brand" href="../../home.html"><img src="../../4sight/images/ReferenceLibrary.svg" height="40" alt=""></a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item"><a class="nav-link" href="../../home.html">Home</a></li>
+			<li class="nav-item"><a class="nav-link" href="../../oxide/list.html">Oxides</a></li>
+			<li class="nav-item active"><a class="nav-link" href="../list.html">Materials <span class="sr-only">(current)</span></a></li>
+			<li class="nav-item"><a class="nav-link" href="../../recipe/list.html">Recipes</a></li>
+			<li class="nav-item"><a class="nav-link" href="../../glossary/list.html">Glossary</a></li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="K.html#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Others</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" href="../../article/list.html">Articles</a>
+					<a class="dropdown-item" href="../../hazard/list.html">Hazards</a>
+					<a class="dropdown-item" href="../../mineral/list.html">Minerals</a>
+					<a class="dropdown-item" href="../../property/list.html">Properties</a>
+					<a class="dropdown-item" href="../../schedule/list.html">Firing Schedules</a>
+					<a class="dropdown-item" href="../../temperature/list.html">Temperatures</a>
+					<a class="dropdown-item" href="../../trouble/list.html">Troubles</a>
+					<a class="dropdown-item" href="../../test/list.html">Tests</a>
+					<a class="dropdown-item" href="../../video/list.html">Media</a>
+					<a class="dropdown-item" href="../../picture/list.html">Pictures</a>
+					<a class="dropdown-item" href="../../typecode/list.html">Typecodes</a>
+					<a class="dropdown-item" href="../../project/list.html">Projects</a>
+					<a class="dropdown-item" href="../../consultants/list.html">Consultants</a>
+					<a class="dropdown-item" href="../../schools/list.html">Schools</a>
+					<a class="dropdown-item" href="../../stores/list.html">Stores</a>
+					<a class="dropdown-item" href="../../potterytony/list.html">Don't Buy-A-Mug</a>
+					<div class="dropdown-divider"></div>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="../../index.html">https://digitalfire.com</a>
+					<a class="dropdown-item" href="https://insight-live.com">Insight-Live.com</a>
+					<a class="dropdown-item" href="../../index.html">Sign-Up</a>
+				</div>
+			</li>
+		</ul>
+		<form class="form-inline my-2 my-lg-0" action="https://digitalfire.com/index.php?searcharea=material" accept-charset="UTF-8" method="post">
+		<input name="searchfor" title="Search from home to search in all areas" maxlength="20" class="form-control mr-sm-2" aria-label="Search" placeholder="Search" autocorrect="off" autocapitalize="off" type="search" value=""><button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="searchbutton">Search</button>
+		</form>
+	</div>
+</nav>
+<div class="container">
+<ul class="nav nav-tabs pt-1" id="myTab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="material-tab" data-toggle="tab" href="K.html#material" role="tab" aria-controls="material" aria-selected="true">Materials for Ceramics</a>
+  </li>
+</ul>
+<div class="tab-content mb-3" id="myTabContent" style="border-right:1px solid #ddd; border-left:1px solid #ddd; border-bottom:1px solid #ddd; padding:10px;">
+  <div class="tab-pane fade show active" id="material" role="tabpanel" aria-labelledby="material-tab">
+<a href="1-9.html">1-9</a> | <a href="A.html">A</a> | <a href="B.html">B</a> | <a href="C.html">C</a> | <a href="D.html">D</a> | <a href="E.html">E</a> | <a href="F.html">F</a> | <a href="Frits.html">Frits</a> | <a href="G.html">G</a> | <a href="H.html">H</a> | <a href="I.html">I</a> | <a href="J.html">J</a> | <a href="K.html">K</a> | <a href="L.html">L</a> | <a href="M.html">M</a> | <a href="N.html">N</a> | <a href="O.html">O</a> | <a href="P.html">P</a> | <a href="Q.html">Q</a> | <a href="R.html">R</a> | <a href="S.html">S</a> | <a href="T.html">T</a> | <a href="U.html">U</a> | <a href="V.html">V</a> | <a href="W.html">W</a> | <a href="X.html">X</a> | <a href="Y.html">Y</a> | <a href="Z.html">Z</a><br />
+<nobr><a title="2786" href="../2786.html">K Metaborate and KBO2.KPO3 Eutectic</a> |</nobr> <nobr><a title="2787" href="../2787.html">K Metaphosphate and KBO2.KPO3 Eutectic</a> |</nobr> <nobr><a title="914" href="../914.html">K-200 Feldspar</a> |</nobr> <nobr><a title="915" href="../915.html">K-40 Feldspar</a> |</nobr> <nobr><a title="2528" href="../2528.html">K. C. M. Ball Clay</a> |</nobr> <nobr><a title="913" href="../913.html">K&T Special</a> |</nobr> <nobr><a title="916" href="../916.html">K1 Kaolin</a> |</nobr> <nobr><a title="917" href="../917.html">K50 Kaolin</a> |</nobr> <nobr><a title="918" href="../918.html">Kaiser Denver Fireclay</a> |</nobr> <nobr><a title="919" href="../919.html">Kaiser Missouri Fireclay</a> |</nobr> <nobr><a title="2557" href="../2557.html">Kali Feldspar</a> |</nobr> <nobr><a title="920" href="../920.html">Kamado Feldspar</a> |</nobr> <nobr><a title="921" href="../921.html">Kamec Kaolin</a> |</nobr> <nobr><a title="922" href="../922.html">Kamogawa Stone</a> |</nobr> <nobr><a title="3086" href="../3086.html">Kamonkoli Ball Clay</a> |</nobr> <nobr><a title="923" href="../923.html">Kampaku Kaolin</a> |</nobr> <nobr><a title="924" href="../924.html">Kanamaru Feldspar</a> |</nobr> <nobr><a title="2450" href="../2450.html">Kanch</a> |</nobr> <nobr><a title="2238" href="../2238.html">Kaolex D-6 Kaolin</a> |</nobr> <nobr><a title="925" href="../925.html">Kaolin</a> |</nobr> <nobr><a title="2337" href="../2337.html">Kaolin 111</a> |</nobr> <nobr><a title="2338" href="../2338.html">Kaolin 113</a> |</nobr> <nobr><a title="2339" href="../2339.html">Kaolin 114</a> |</nobr> <nobr><a title="2340" href="../2340.html">Kaolin 115</a> |</nobr> <nobr><a title="2341" href="../2341.html">Kaolin 143</a> |</nobr> <nobr><a title="2342" href="../2342.html">Kaolin 151</a> |</nobr> <nobr><a title="2343" href="../2343.html">Kaolin 171</a> |</nobr> <nobr><a title="3087" href="../3087.html">Kaolin 233</a> |</nobr> <nobr><a title="3044" href="../3044.html">Kaolin A</a> |</nobr> <nobr><a title="2958" href="../2958.html">Kaolin G1</a> |</nobr> <nobr><a title="2292" href="../2292.html">Kaolin Natural BP</a> |</nobr> <nobr><a title="926" href="../926.html">Kaolin Slurry</a> |</nobr> <nobr><a title="1280" href="../1280.html">Kaolin SP</a> |</nobr> <nobr><a title="1920" href="../1920.html">KAOLIN-SERPENTINE</a> |</nobr> <nobr><a title="928" href="../928.html">Kaopaque 20 Kaolin</a> |</nobr> <nobr><a title="3439" href="../3439.html">KaoPearl CNL30 Kaolin</a> |</nobr> <nobr><a title="929" href="../929.html">Kaopolite K 129</a> |</nobr> <nobr><a title="930" href="../930.html">Kaosand</a> |</nobr> <nobr><a title="2456" href="../2456.html">KARIBIB Dolomite</a> |</nobr> <nobr><a title="2489" href="../2489.html">Kentucky #12</a> |</nobr> <nobr><a title="931" href="../931.html">Kentucky #5 Bond</a> |</nobr> <nobr><a title="2490" href="../2490.html">Kentucky #6</a> |</nobr> <nobr><a title="932" href="../932.html">Kentucky 4&12 Ball</a> |</nobr> <nobr><a title="933" href="../933.html">Kentucky Stone</a> |</nobr> <nobr><a title="2583" href="../2583.html">Kernick Kaolin</a> |</nobr> <nobr><a title="934" href="../934.html">Keystone Feldspar</a> |</nobr> <nobr><a title="935" href="../935.html">Kibushi Clay</a> |</nobr> <nobr><a title="936" href="../936.html">Kiln Bat Wash W5</a> |</nobr> <nobr><a title="937" href="../937.html">Kimachi Stone</a> |</nobr> <nobr><a title="938" href="../938.html">Kingman Feldspar</a> |</nobr> <nobr><a title="939" href="../939.html">Kingsley Kaolin</a> |</nobr> <nobr><a title="2499" href="../2499.html">Klondike Kaolin</a> |</nobr> <nobr><a title="2410" href="../2410.html">KM71 Feldspar</a> |</nobr> <nobr><a title="941" href="../941.html">KMS Kaolin</a> |</nobr> <nobr><a title="3342" href="../3342.html">Kona F-4 Feldspar</a> |</nobr> <nobr><a title="942" href="../942.html">Korean Kaolin</a> |</nobr> <nobr><a title="2959" href="https://digitalfire.com/material/2959">KR-LYK-70 KAOLIN</a> |</nobr> <nobr><a title="2961" href="../2961.html">KRJD 1#</a> |</nobr> <nobr><a title="2960" href="../2960.html">KRSL 6#</a> |</nobr> <nobr><a title="943" href="../943.html">KT #1-4 Ball Clay</a> |</nobr> <nobr><a title="944" href="../944.html">KT-556 Ball Clay</a> |</nobr> <nobr><a title="945" href="../945.html">KT-Cast Kaolin</a> |</nobr> <nobr><a title="946" href="../946.html">KTS-2 Ball Clay</a> |</nobr> <nobr><a title="947" href="../947.html">KTS-Classic</a> |</nobr> <nobr><a title="2191" href="../2191.html">Kuncice Dolomite</a> |</nobr> <nobr><a title="948" href="../948.html">Kurosaka Feldspar</a> |</nobr> <nobr><a title="2364" href="../2364.html">Kurts Corn Stn</a> |</nobr> <nobr><a title="949" href="../949.html">KY Special</a> |</nobr> <nobr><a title="950" href="../950.html">KY-5 Bond Ball Clay</a> |</nobr> <nobr><a title="951" href="../951.html">Kyanite</a></nobr>
+</div>
+</div><p style="clear:left"></p><p style="clear:left"></p><p style="clear:left"></p><p style="clear:left"></p><p style="clear:left"></p>
+<h2>Introduction</h2>
+<p>The study of ceramic materials is at the center of all ceramic technology. While knowing the <a  href="../../glossary/glaze+chemistry.html">chemistry</a> of materials gives you much control of fired the properties of glazes, knowing the physical and fired properties of materials enables control of both fired and unfired properties of bodies (and of course of the physical and working properties of glaze slurries). In education students study theoretical materials, in industry we work directly with real-world materials, we can see them and touch them. These materials normally come in bags, they are powders and we understand their properties from this view (not from the rocks they once were in a quarry). They have plasticities, melting temperatures, particle size distributions, <a  href="../../glossary/vitrification.html">vitrification</a> histories, solubility or solubles contents, impurities, consistency issues, <a  href="../../glossary/rheology.html">rheological</a> properties, bulk densities, particle surface areas, costs, etc.<br />
+<br />
+Materials science needs to be put into context with all the levels of assessment: oxide, mineral, material, recipe and process. For example, consider the problem of ware cracking during drying, a body issue (not likely related to chemistry). The problem could be as simple as ware being dried unevenly, a process level problem. If the cracking is occurring because the body has been formulated with too much <a  href="../80.html">ball clay</a> to make it practical to dry, that is a recipe level issue. If the cracking is occurring because one material has changed or been substituted, perhaps to a much smaller particle size alternative, that is a material level issue. If the cause of the problem is difficult to asses, then the <a  href="../../glossary/mineralogy.html">mineralogy</a> of the ingredient materials and their interactions may need to be studied and understood better to solve the problem. <br />
+<br />
+In many cases the causes of a problem have roots on multiple levels. Amazingly, this affords the opportunity to link apparently separate problems occurring on multiple levels and solve them all at once. Consider the issue of a glaze <a  href="../../glossary/slurry.html">slurry</a> that is <a  href="../../glossary/suspension.html">settling</a> quickly, powdering after drying and failing to adhere well to ware, these are happening because of lack of clay content. This problem is probably directly related to the fact that the glaze is also running off ware during firing (likely due to lack of <a  href="../../oxide/al2o3.html">Al<sub>2</sub>O<sub>3</sub></a> and <a  href="../../oxide/sio2.html">SiO<sub>2</sub></a> in the glaze). Adding <a  href="../925.html">kaolin</a> (which supplies both) will help suspend and harden the glaze and it will help stabilize it during firing, solving all the problems. In addition the glaze will also be more durable and less soluble.<br />
+<br />
+In this materials area of the database we avoid discussing too much about chemistry, this is done in the <a  href="../../glossary/ceramic+oxide.html">oxides</a> area. For example, on the material level we see kaolin as clay powder that contributes <a  href="../../glossary/plasticity.html">plasticity</a> to a body and <a  href="../../glossary/suspension.html">suspension</a> properties to a glaze (while of course contributing Al<sub>2</sub>O<sub>3</sub> and SiO<sub>2</sub> to the chemistry of the glaze and a <a  href="../1054.html">mullite</a> building source to the body). On the mineral level it is kaolinite, its properties compare to other clays in relation to its particle size and shape, surface chemistry on the particles, etc. On the chemistry level it is no longer kaolin, it is Al<sub>2</sub>O<sub>3</sub> and SiO<sub>2</sub>, therefore studying its effects on glazes involves studying these two oxides. However there a limitations to this 'materials as chemistry sources' view, different materials of the same chemistry do not release their oxides into a melt with the same willingness. These differences can be answered on the mineral level.<br />
+<br />
+The concept of distinguishing between generic materials and name-brand materials enables maintaining general information in fewer places. For example, all generic information about kaolin can be found in the generic kaolin record. Other name-brand kaolins are linked to the generic kaolin as their parent and only information specific or unique to them is recorded there. Generic kaolin is, in turn, linked to the mineral kaolinite.<br />
+<br />
+If you have studied or compared data sheets over a period of time then you know how many errors they can have, how unclear they can be, how non-applicable or non-practical their data is for ceramic applications and how drastically numbers can change as companies update them. This underscores the importance of being able to test these materials for yourself to know the behaviour for specific properties that relate to your application.</p>
+<h3>Links</h3><table>
+<table class="table table-bordered"><tbody>
+<tr>
+<td scope="row">Glossary</td>
+<td>
+<a href="../../glossary/ceramic+material.html">Ceramic Material</a>
+<br /><i>Ceramic materials are employed in the ceramic industry to make glazes, bodies, <a  href="../../glossary/engobe.html">engobes</a> and refractories. We study them at the mineral, chemical and physical levels.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Glossary</td>
+<td>
+<a href="../../glossary/theoretical+material.html">Theoretical Material</a>
+<br /><i>In <a  href="../../glossary/glaze+chemistry.html">glaze chemistry</a>, theoretical materials are used to represent what a material would be if it was uncontaminated and perfectly crystallized</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Glossary</td>
+<td>
+<a href="../../glossary/physical+testing.html">Physical Testing</a>
+<br /><i>In <a  href="../../glossary/ceramics.html">ceramics</a>, glazes, <a  href="../../glossary/engobe.html">engobes</a> and bodies have chemistries and <a  href="../../glossary/physical+testing.html">physics</a>. Your formulation and quality control most likely need to focus on the <a  href="../../glossary/physical+testing.html">physical properties</a>.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Articles</td>
+<td>
+<a href="../../article/chemistry+vs.+matrix+blending+to+create+glazes+from+native+materials.html">Chemistry vs. Matrix Blending to Create Glazes from Native Materials</a>
+<br /><i>Is it better to do trial and error line and matrix blending of materials to formulate glazes or is it better to use <a  href="../../glossary/glaze+chemistry.html">glaze chemistry</a> right from the start?</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Articles</td>
+<td>
+<a href="../../article/particle+size+distribution+of+ceramic+powders.html">Particle Size Distribution of Ceramic Powders</a>
+<br /><i>Understanding the theory behind <a  href="../../glossary/sieve.html">sieve</a> selection, how to properly sample a powder and how to carry out a <a  href="../../glossary/particle+size+distribution.html">particle size distribution</a> test can give you valuable information about a material.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Articles</td>
+<td>
+<a href="../../article/how+to+find+and+test+your+own+native+clays.html">How to Find and Test Your Own Native Clays</a>
+<br /><i>Some of the key tests needed to really understand what a clay is and what it can be used for can be done with inexpensive equipment and simple procedures. These practical tests can give you a better picture than a data sheet full of numbers.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Hazards</td>
+<td>
+<a href="../../hazard/overview+of+material+safety+by+gavin+stairs.html">Overview of Material Safety by Gavin Stairs</a>
+<br /><i>Toxicology and ceramic materials is a complex subject, what materials and methods pose the greatest dangers, which are the safest?</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Materials</td>
+<td>
+<a href="../kaolin.html">Kaolin</a>
+<br /><i>The purest of all clays in nature. Kaolins are used in porcelains and stonewares to impart whiteness, in glazes to supply <a  href="../../oxide/al2o3.html">Al2O3</a> and to suspend slurries.</i>
+</td>
+</tr>
+</tbody></table>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">Lab testing a clay for its physical properties</h3>
+<br /><a href="../../picture/1449.html"><img class="flexleft50" loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/haftugomux.jpg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../../picture/1449.html">click here</a> to see it.</p>
+<p>It only takes a few minutes to make these. But you would be amazed at how much information they can give you about a clay! These are <a  href="../../test/shab.html">SHAB test</a> bars, an <a  href="../../test/ldw.html">LDW test</a> for <a  href="../../glossary/water+content.html">water content</a> and a <a  href="../../test/dfac.html">DFAC test</a> disk about to be put into a drier. The SHAB bars shrink during drying and firing, the length is measured at each stage. The LDW sample is weighed wet, dry and fired. The tin can prevents the inner portion of the DFAC disk from drying and this sets up stresses that cause it to crack. The nature of the cracking pattern and its magnitude are recorded as a Drying Factor. The numbers from all of these measurements are recorded in my account at <a  href="../../glossary/digitalfire+insight-live.html">Insight-live</a>. It can present a complete <a  href="../../glossary/physical+testing.html">physical properties</a> report that calculates things like <a  href="../../glossary/drying+shrinkage.html">drying shrinkage</a>, <a  href="../../glossary/firing+shrinkage.html">firing shrinkage</a>, water content and <a  href="../../glossary/loi.html">LOI</a> (from the measured values).</p>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">Refined 200 mesh materials are not guaranteed to be such</h3>
+<br /><a href="../../picture/1560.html"><img class="flexleft50" loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/ratwotucaj.jpg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../../picture/1560.html">click here</a> to see it.</p>
+<p>Each of these eight pallets of <a  href="../925.html">kaolin</a> are being sampled to screen them for <a  href="../../picture/3706.html">oversize particles</a>. The 50 gram samples needed can be taken without having to open the bags, they are filled through a valve at the top and it can be opened easily. Kaolins and ball clays especially are suspect and body manufacturers must be vigilant about this (each can tell you disaster stories about making product with faulty raw materials containing grit, carbon and iron particles). The samples will be washed through 70, 100 and 150 mesh screens to spot any particles that could introduce grit or fired speckle into the bodies.</p>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">Do not rely on material data sheets, do the testing</h3>
+<br /><a href="../../picture/1477.html"><img class="flexleft50" loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/fyckexaxaf.jpg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../../picture/1477.html">click here</a> to see it.</p>
+<p>The <a  href="../../glossary/cone+6.html">cone 6</a> <a  href="../../glossary/porcelain.html">porcelain</a> on the left uses <a  href="../831.html">Grolleg</a> <a  href="../925.html">kaolin</a>, the right uses <a  href="../1641.html">Tile #6 kaolin</a>. The Grolleg body needs 5-10% less <a  href="../310.html">feldspar</a> to vitrify it to zero <a  href="../../glossary/clay+body+porosity.html">porosity</a>. It thus contains more kaolin, yet it fires significantly whiter. Theoretically this seems simple. Tile #6 contains alot more iron than Grolleg. Wrong! According to the data sheets, Grolleg has the more iron of the two. Why does it always fire whiter? I actually do not know. But the point is, do not rely totally on numbers on data sheets, do the testing yourself.</p>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">Lignite contamination in manufactured porcelain body</h3>
+<br /><a href="../../picture/1451.html"><img class="flexleft50" loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/maggolutit.jpg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../../picture/1451.html">click here</a> to see it.</p>
+<p>These contaminating particles are exposed on the rim of a <a  href="../../glossary/bisque.html">bisque-fired</a> mug. The liqnite ones have burned away but the iron particle is still there (and will produce a speck in the glaze). Remnants of the lignite remain inside the matrix and can <a  href="../../glossary/pinholing.html">pinhole</a> glazes. Since ball clays are air floated (a stream of air takes away the lighter particles and the heavier ones recycle for regrinding) it seems that contamination like this would be impossible. But the equipment requires vigilance for correct operation, especially when there is pressure to maximize production. Ores in Tennessee are higher in coal than those in Kentucky. North American <a  href="../../glossary/clay+body.html">clay body</a> manufacturers who confront <a  href="../80.html">ball clay</a> suppliers with this contamination find that ceramic applications have become a very small part of the total ball clay market - complaints are not taken with the same seriousness as in the past.</p>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">When both mineralogy and chemistry are shown on a data sheet</h3>
+<br /><a href="../../picture/1121.html"><img class="flexleft50" loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/muvcahyzyp.jpg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../../picture/1121.html">click here</a> to see it.</p>
+<p>Some material data sheets show both the oxide and mineralogical analyses. <a  href="../273.html">Dolomite</a>, for example, is composed of <a  href="../173.html">calcium carbonate</a> and magnesium carbonate minerals, these can be separated mechanically. Although this material participates in the glaze melt to source the <a  href="../../oxide/mgo.html">MgO</a> and <a  href="../../oxide/cao.html">CaO</a> (which are <a  href="../../glossary/ceramic+oxide.html">oxides</a>), it's <a  href="../../glossary/mineralogy.html">mineralogy</a> (the calcium and magnesium carbonates) specifically accounts for the unique way it decomposes and melts.</p>
+<p style="clear:left"></p><h3>Got a Question?</h3><p style="margin-bottom:30px;"><a name="kofi">Buy me a coffee and we can talk</a> <a target="_blank" href="https://ko-fi.com/tonyhansen"><img style="width:40px" src="../../images/ko-fi.svg"></a></p><p style="margin-bottom:30px;">&nbsp;</p>
+<p></p><p></p><hr>
+<img style="width:250px" src="../../4sight/images/ReferenceLibrary.svg">
+<br />
+<a href="../../index.html">https://digitalfire.com</a>, All Rights Reserved
+<br /><a href="../../w3c/privacypolicy.php.html">Privacy Policy</a>
+</div>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+</body>
+</html>

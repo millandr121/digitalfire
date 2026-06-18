@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="../favicon.svg">
+<link rel="mask-icon" href="../mask-icon.svg" color="#000000">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<title>Ceramic Transfer</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<meta name="author" content="Tony Hansen">
+<style>
+.flexinline { width: 50%; height: auto; clear:left; margin: 10px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexinline { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexright50 { width: 50%; height: auto; float: right; margin: 5px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexright50 { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexright33 { width: 33%; height: auto; float: right; margin: 5px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexright33 { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexright25 { width: 25%; height: auto; float: right; margin: 5px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexright25 { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexleft50 { width: 50%; height: auto; float: left; margin: 5px 15px 10px 0px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexleft50 { width: 100%; height: auto; margin: 5px 10px 10px 0px; border: none; padding: none; } }
+.flexleft33 { width: 33%; height: auto; float: left; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexleft33 { width: 100%; height: auto; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; } }
+.flexleft25 { width: 25%; height: auto; float: left; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexleft25 { width: 100%; height: auto; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; } }
+.pictureseries { overflow:scroll; width:auto; height:200px; float:left; margin: 5px 10px 10px 0px; padding: 5px; font-size:60%; font-style:italic;}
+@media (max-width: 640px) { .pictureseries { overflow:scroll; width:auto; height:200px; float:left; margin: 5px 10px 10px 0px; border: padding: 5px; font-size:60%; font-style:italic;} }
+.L2 { margin-left:0px; }
+.L3 { margin-left:20px; color:#222222; }
+.L4 { margin-left:40px; color:#444444; }
+.L5 { margin-left:60px; color:#666666; }
+.L6 { margin-left:60px; color:#888888; }
+h2 { color:#222222; }
+h3 { color:#444444; }
+h4 { color:#666666; }
+h5 { color:#888888; }
+
+</style>
+
+<meta name="google-site-verification" content="wquYW_n-3QEfIzDfV--8ElUewf7TIt04RGo55GfZySU" />
+<meta name="have-i-been-pwned-verification" value="9223dcee7de5c9622c2a2abcff4adc81">
+<script>
+function validateForm() {
+	var x = document.forms["emailform1"]["name1"].value;
+	var r = true;
+	if (x == "") { // alert("A name is required."); 
+		document.getElementById("name1").textContent="Name Required";
+		document.getElementById("name1").style.color="red";
+		// document.emailform1.name1.focus() ; # does not work, should be getelementbyid
+		r = false; 
+	} else {
+		document.getElementById("name1").textContent="Name";
+		document.getElementById("name1").style.color="black";
+	}
+	if (document.forms["emailform1"]["subject1"].value == "") { 
+		document.getElementById("subject1").textContent="Subject Required";
+		document.getElementById("subject1").style.color="red";
+		r = false; 
+	} else {
+		document.getElementById("subject1").textContent="Subject";
+		document.getElementById("subject1").style.color="black";
+	}			
+	if (document.forms["emailform1"]["msg1"].value == "") { 
+		document.getElementById("msg1").textContent="Message Required";
+		document.getElementById("msg1").style.color="red";
+		// alert("A message is required."); 
+		r = false; 
+	} else {
+		document.getElementById("msg1").textContent="Message";
+		document.getElementById("msg1").style.color="black";
+	}
+	var emailID = document.emailform1.email1.value;
+	atpos = emailID.indexOf("@");
+	dotpos = emailID.lastIndexOf(".");
+	if (atpos < 1 || ( dotpos - atpos < 2 )) {
+		document.getElementById("email1").textContent="Email Address Appears Invalid!";
+		document.getElementById("email1").style.color="red";
+		// alert("Your email address appears invalid.")
+		r = false;
+	} else {
+		document.getElementById("email1").textContent="Email Address";
+		document.getElementById("email1").style.color="black";
+	}
+	// Send the form
+	if (r == false) return false;
+	document.forms["emailform1"].submit();
+}
+</script>
+</head>
+<body>
+<p style="background-color:#ff9933; border-width:1px; padding:3px 10px 3px 10px; margin:0px 0px 3px 0px; font-size:80%; text-align:center;">
+Digitalfire will shut down on June 26. I no longer have the authority to grant exemption to a section in the Terms and Conditions of using material in the Insight-Live account from which I built the source material. While there are ways to comply with the take-down order, they are beyond my means because of how complex and large the site has become in the past 35+ years. It has been a wild ride for a shy prairie boy, thanks to everyone for your support. Insight-live.com is not affected by this.</p>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<a name="pagetop" class="navbar-brand" href="../home.html"><img src="../4sight/images/ReferenceLibrary.svg" height="40" alt=""></a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item"><a class="nav-link" href="../home.html">Home</a></li>
+			<li class="nav-item"><a class="nav-link" href="../oxide/list.html">Oxides</a></li>
+			<li class="nav-item"><a class="nav-link" href="../material/list.html">Materials</a></li>
+			<li class="nav-item"><a class="nav-link" href="../recipe/list.html">Recipes</a></li>
+			<li class="nav-item active"><a class="nav-link" href="list.html">Glossary <span class="sr-only">(current)</span></a></li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="ceramic+transfer.html#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Others</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" href="../article/list.html">Articles</a>
+					<a class="dropdown-item" href="../hazard/list.html">Hazards</a>
+					<a class="dropdown-item" href="../mineral/list.html">Minerals</a>
+					<a class="dropdown-item" href="../property/list.html">Properties</a>
+					<a class="dropdown-item" href="../schedule/list.html">Firing Schedules</a>
+					<a class="dropdown-item" href="../temperature/list.html">Temperatures</a>
+					<a class="dropdown-item" href="../trouble/list.html">Troubles</a>
+					<a class="dropdown-item" href="../test/list.html">Tests</a>
+					<a class="dropdown-item" href="../video/list.html">Media</a>
+					<a class="dropdown-item" href="../picture/list.html">Pictures</a>
+					<a class="dropdown-item" href="../typecode/list.html">Typecodes</a>
+					<a class="dropdown-item" href="../project/list.html">Projects</a>
+					<a class="dropdown-item" href="../consultants/list.html">Consultants</a>
+					<a class="dropdown-item" href="../schools/list.html">Schools</a>
+					<a class="dropdown-item" href="../stores/list.html">Stores</a>
+					<a class="dropdown-item" href="../potterytony/list.html">Don't Buy-A-Mug</a>
+					<div class="dropdown-divider"></div>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="../index.html">https://digitalfire.com</a>
+					<a class="dropdown-item" href="https://insight-live.com">Insight-Live.com</a>
+					<a class="dropdown-item" href="../index.html">Sign-Up</a>
+				</div>
+			</li>
+		</ul>
+		<form class="form-inline my-2 my-lg-0" action="https://digitalfire.com/index.php?searcharea=glossary" accept-charset="UTF-8" method="post">
+		<input name="searchfor" title="Search from home to search in all areas" maxlength="20" class="form-control mr-sm-2" aria-label="Search" placeholder="Search" autocorrect="off" autocapitalize="off" type="search" value=""><button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="searchbutton">Search</button>
+		</form>
+	</div>
+</nav>
+<div class="container"><p>Operation timed out after 2001 milliseconds with 0 bytes received</p>Error: API server returned an invalid response for glossary<p style="clear:left"></p><p style="clear:left"></p><p style="clear:left"></p><h1>Ceramic Transfer</h1>
+<p>A method for applying designs <a  href="underglaze.html">underglaze</a>. Water-based <a  href="colorant.html">colorants</a> are silk-screened onto rice or tissue paper, dried, then the paper is applied, color-side-down, to a <a  href="leather+hard.html">leather hard</a> clay surface. Using a damp sponge and rib the paper is rubbed down and then peeled up to reveal the transfer. Designs can also be transferred to dry or <a  href="bisque.html">bisque</a>. Of course, if ware is going to be glazed the pigment must be designed as an underglaze.<br />
+<br />
+Standard design transfers can be purchased online at many places. They are inexpensive and come with good instructions. Having custom transfers made can be complicated and expensive, the process is easy enough to merit <a  href="silk+screen+printing.html">silk screening</a> your own. Commercial <a  href="underglaze.html">underglazes</a> are not designed for this purpose, they are simply being force-fit to it. Formulating your own will produce a better-quality finished product (see below).<p style="clear:left"></p></p>
+<h2 style="font-style:italic;">Related Information</h2>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">An underglaze tissue transfer with clear overglaze at cone 6</h3>
+<br /><a href="../picture/2949.html"><img class="flexleft50" loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/glossary/xpgsfjmmix.jpg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/2949.html">click here</a> to see it.</p>
+<p>This was applied at <a  href="leather+hard.html">leather hard</a> stage on <a  href="plainsman+clays.html">Plainsman</a> <a  href="https://plainsmanclays.ca/data/index.php?product=12880">M370</a>, <a  href="bisque.html">bisque fired</a> on, dipped in clear <a  href="../recipe/g2926b.html">G2926B</a> glaze, then fired at <a  href="cone+6.html">cone 6</a>. The transfer was purchasing online and is made using the silky screening process. Since the pigment contains cobalt it does feather somewhat at the edges, this would be less of an issue at low temperature.</p>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">Ceramic tissue transfers: Good goat, better pig</h3>
+<br /><a alt="Tissue transfers with transparent glaze" href="../picture/2969.html"><img class="flexleft50" alt="Tissue transfers with transparent glaze"  loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/dj3zihqet9.jpeg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/2969.html">click here</a> to see it.</p>
+<p>These are <a  href="whiteware.html">whiteware</a> mugs (<a  href="plainsman+clays.html">Plainsman</a> <a  href="https://plainsmanclays.ca/data/index.php?product=12880">M370</a>) with <a  href="ceramic+transfer.html">tissue transfer</a> designs that were applied at the <a  href="leather+hard.html">leather hard</a> stage. The pieces were then dried, <a  href="bisque.html">bisque firing</a>, clear glazed and then fired to <a  href="cone+6.html">cone 6</a>. <a  href="ceramic+transfer.html">Tissue transfers</a> are sold online in a wide range of designs (in full color also). They can also be made at home by <a  href="silk+screen+printing.html">silk screening</a> the appropriate type of ink onto the tissue paper (you can make your own ink using ceramic pigments). These <a  href="overglaze.html">overglaze</a> transparent recipes are <a  href="../recipe/g2934.html">G2934</a> matte (left) and <a  href="../recipe/g2926b.html">G2926B</a> glossy (right). The <a  href="matte+glaze.html">matte glaze</a> softens the edges of the design. The pig is a good demonstration of how crisp the edges of lines can be (once the application techniques are mastered). This method of decorating is far less expensive than decals. And does not require an extra firing. While the ink is somewhat powdery, it can be stabilized with spray starch if pieces need to be transported for firing.<br />
+<br />
+Not to be ignored are the two <a  href="transparent+glazes.html">transparent glazes</a>. Control of thickness is important. Too thick and they will go cloudy. Too think and they won't fire smooth. For use as a <a  href="dipping+glaze.html">dipping glaze</a> the <a  href="slurry.html">slurry</a> should be <a  href="thixotropy.html">thixotropic</a>. Using them as a <a  href="brushing+glaze.html">brushing glaze</a>, while taking longer to apply, does enable tighter control of thickness.</p>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">When a DIY black underglaze makes sense</h3>
+<br /><a alt="Black underglazed bowl" href="../picture/3376.html"><img class="flexleft50" alt="Black underglazed bowl"  loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/aivz3xiczh.jpg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/3376.html">click here</a> to see it.</p>
+<p>Black brushwork needs to go on thick enough in one brushstroke. Commercial products we have don't do that - thus my motivation to work on this. Another issue is that they try to cover too wide a firing range (thus they melt too much at the high end and not enough at the low end). I am experimenting on <a  href="cone+6.html">cone 6</a> <a  href="https://plainsmanclays.ca/data/index.php?product=12881">Polar Ice</a> <a  href="porcelain.html">porcelain</a> <a  href="jiggering.html">jiggered</a> bowls using <a  href="../recipe/g2926b.html">G2926B</a> <a  href="dipping+glaze.html">dipping glaze</a>. The base <a  href="underglaze.html">underglaze</a> recipe here is a 90:10 <a  href="https://plainsmanclays.ca/data/index.php?product=12868">MNP</a>:nepheline syenite mix (use a ballclay/feldspar mix as an alternative). To that, I add 15% black stain, 1.5% <a  href="../material/228.html">CMC gum</a> and 5% <a  href="../material/106.html">bentonite</a>. With the CMC gum and bentonite, and <a  href="blender+mixing.html">blender mixing</a>, a brushable consistency that stays put can be achieved at a fairly low <a  href="water+content.html">water content</a> compared to commercial products (enabling it to go on thicker in a single brush stroke). Assuming application at <a  href="leather+hard.html">leather hard</a> state, the drying and <a  href="firing+shrinkage.html">firing shrinkage</a> can be matched to the body by varying the <a  href="plasticity.html">plasticity</a> of the porcelain used (e.g. the percentage of bentonite it contains). And the percentage of stain can be tuned for enough color but no <a  href="../trouble/bleeding+colors.html">bleeding</a>, bubble <a  href="glaze+bubbles.html">clouding</a> or <a  href="crystallization.html">crystallization</a>. And we can adjust the degree of <a  href="maturity.html">maturity</a> by varying the proportions of <a  href="https://plainsmanclays.ca/data/index.php?product=12868">MNP</a> and Nepheline (commercial <a  href="underglaze.html">underglazes</a> often melt too much by cone 6 and fade and diffuse as a result), this one stays opaque black.<br />
+<br />
+Underglazes suitable for making <a  href="silk+screen+printing.html">silk screen</a> transfers are another special case. The ideal one needs to cover well like this one. But it also needs to gel and harden enough to hang onto the paper but not so hard that it does not separate and transfer to the ware. Commercial products for brushing are unlikely to be optimal so it makes sense to mix your own and experiment with different amounts of gum.</p>
+<p style="clear:left"></p>
+<h3>Links</h3><table>
+<table class="table table-bordered"><tbody>
+<tr>
+<td scope="row">Glossary</td>
+<td>
+<a href="ceramic+decals.html">Ceramic Decals</a>
+<br /><i>This process of printing a design (using ceramic inks) onto film-coated paper to create a waterslide transfer. On wetting, the film <a  href="ceramic+decals.html">decal</a> can slide off the backing on to the glazed ware.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Glossary</td>
+<td>
+<a href="silk+screen+printing.html">Silk screen printing</a>
+<br /><i><a  href="silk+screen+printing.html">Silk screen printing</a> is one of the best options for hobbyists and potters to reproduce crisp and detailed decoration. But there are many details to know.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">URLs</td>
+<td>
+<a href="../url/1456.html">https://ceramicartsnetwork.org/shop/ceramic-transfer-printing/</a>
+<br /><i><a  href="ceramic+transfer.html">Ceramic Transfer</a> Printing 144 page book available at CeramicArtsNetwork</i>
+<br /><i style="color:#888888;">Book on how to formulate colors and print on to water slide transfer paper.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">URLs</td>
+<td>
+<a href="../url/3274.html">https://www.ceramicatransfers.com/</a>
+<br /><i>Buy tissue paper <a  href="ceramic+transfer.html">ceramic transfers</a> at CeramicTransfers.com</i>
+<br /><i style="color:#888888;">Pre-printed transfers on various themes, they have a good online store, it is quick and easy adding things to the cart and checkout (Paypal accepted).</i>
+</td>
+</tr>
+<tr>
+<td scope="row">URLs</td>
+<td>
+<a href="../url/3276.html">https://www.chinaclayart.com</a>
+<br /><i>Sanbao Studio - Ceramic transfers</i>
+<br /><i style="color:#888888;">They make custom transfers and a full range of preprinted <a  href="underglaze.html">underglaze</a> transfer and <a  href="overglaze.html">overglaze</a> decals. Very good online store with search.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">URLs</td>
+<td>
+<a href="../url/3468.html">https://www.digitalceramics.com/in-glaze-high-temperature-transfers</a>
+<br /><i>Inglaze High Temperature Transfers</i>
+<br /><i style="color:#888888;">The pigments can be fired at very high temperatures of 1100ºc - 1300ºc to ensure they sink into the glaze, improving <a  href="glaze+durability.html">durability</a> and resistance. Ideal for the more demanding hotelware market.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">URLs</td>
+<td>
+<a href="../url/3521.html">https://elantransfers.com/</a>
+<br /><i>Elan Transfers - Buy <a  href="underglaze.html">underglaze</a> transfers for ceramic artists</i>
+<br /><i style="color:#888888;"></i>
+</td>
+</tr>
+<tr>
+<td scope="row">URLs</td>
+<td>
+<a href="../url/3596.html">https://ceramicartsnetwork.org/daily/article/How-to-Make-Magic-Rice-Paper-Transfers-for-Pottery</a>
+<br /><i>How to Make Magic Rice Paper Transfers for Pottery
+</i>
+<br /><i style="color:#888888;">Print Images with Rice Paper Transfers for <a  href="ceramics.html">Ceramics</a> </i>
+</td>
+</tr>
+<tr>
+<td scope="row">URLs</td>
+<td>
+<a href="../url/3608.html">weckerami@gmail.com</a>
+<br /><i>Isla Transfers - From North Carolina</i>
+<br /><i style="color:#888888;">Printed on newsprint or tissue paper.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">URLs</td>
+<td>
+<a href="../url/3609.html">https://www.plumislandtransfers.com/</a>
+<br /><i>Plum Island ceramic transfers</i>
+<br /><i style="color:#888888;"></i>
+</td>
+</tr>
+</tbody></table><table style="margin:30px 0px 30px 0px;"><tr><td style="vertical-align:middle; text-align:center; font-size:80%;"><img src="../images/PayPalDonate.png" style="height:66px; padding-right:20px;"><br /><a href="https://www.paypal.com/donate/?hosted_button_id=F8L3JX4BCCXJ6">PayPal</a></td><td style="background-color:#ddffdd; padding:10px; border:thin solid grey; font-size:90%;"><b>No</b> tracking, <b>No</b> ads, <b>No</b> paywall, <b>No</b> transient content!<br />Just organized, concise information constantly updated and improved.<br />Was this helpful? Consider supporting me.</td><tr></table><table style="margin-top:30px; padding-top:10px; padding-bottom:20px; border-top:thin solid grey; border-bottom:thin solid grey;"><tr><td style="padding-right:10px">By <i>Tony Hansen</i><br /><span style="font-size:80%; color:#888888;">Follow me on<br /><a title="Threads" href="https://www.threads.net/@tonyatdigitalfire" target="_blank"><img src="../images/threads.jpg" style="width:20px;" border="0"></a> <a title="Facebook Insight-Live" href="https://www.facebook.com/insightlive" target="_blank"><img src="../images/facebook.jpg" style="width:20px;" border="0"></a> <a title="LinkedIn" href="https://www.linkedin.com/in/tonywhansen/" target="_blank"><img src="../images/linkedin.jpg" style="width:20px;" border="0"></a> <a title="Pinterest" href="https://www.pinterest.ca/tonywhansen" target="_blank"><img src="../images/pinterest.jpg" style="width:20px;" border="0"></a> <a title="Instagram" href="https://instagram.com/tonyatdigitalfire" target="_blank"><img src="../images/instagram.jpg" style="width:20px;" border="0"></a> <a title="Ko-Fi" href="https://ko-fi.com/tonyhansen#" target="_blank"><img src="../images/ko-fi.jpg" style="width:20px;" border="0"></a> <a title="Twitter" href="https://x.com/digitalfiretony" target="_blank"><img src="../images/twitter.jpg" style="width:20px;" border="0"></a></td><td><a href="https://tonyhansen.com/about"><img src="../images/SignaturePhotoSmall.jpg" height="80"></a></td></tr></table><h3>Got a Question?</h3><p style="margin-bottom:30px;"><a name="kofi">Buy me a coffee and we can talk</a> <a target="_blank" href="https://ko-fi.com/tonyhansen"><img style="width:40px" src="../images/ko-fi.svg"></a></p><p style="margin-bottom:30px;">&nbsp;</p>
+<p></p><p></p><hr>
+<img style="width:250px" src="../4sight/images/ReferenceLibrary.svg">
+<br />
+<a href="../index.html">https://digitalfire.com</a>, All Rights Reserved
+<br /><a href="../w3c/privacypolicy.php.html">Privacy Policy</a>
+</div>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+</body>
+</html>

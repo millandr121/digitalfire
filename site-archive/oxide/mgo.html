@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="../favicon.svg">
+<link rel="mask-icon" href="../mask-icon.svg" color="#000000">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<title>MgO (Magnesium Oxide, Magnesia)</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<meta name="author" content="Tony Hansen">
+<meta name="description" content="The use of MgO in traditional ceramics, how its chemistry contributes to fired properties of glazes">
+<style>
+.flexinline { width: 50%; height: auto; clear:left; margin: 10px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexinline { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexright50 { width: 50%; height: auto; float: right; margin: 5px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexright50 { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexright33 { width: 33%; height: auto; float: right; margin: 5px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexright33 { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexright25 { width: 25%; height: auto; float: right; margin: 5px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexright25 { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexleft50 { width: 50%; height: auto; float: left; margin: 5px 15px 10px 0px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexleft50 { width: 100%; height: auto; margin: 5px 10px 10px 0px; border: none; padding: none; } }
+.flexleft33 { width: 33%; height: auto; float: left; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexleft33 { width: 100%; height: auto; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; } }
+.flexleft25 { width: 25%; height: auto; float: left; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexleft25 { width: 100%; height: auto; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; } }
+.pictureseries { overflow:scroll; width:auto; height:200px; float:left; margin: 5px 10px 10px 0px; padding: 5px; font-size:60%; font-style:italic;}
+@media (max-width: 640px) { .pictureseries { overflow:scroll; width:auto; height:200px; float:left; margin: 5px 10px 10px 0px; border: padding: 5px; font-size:60%; font-style:italic;} }
+.L2 { margin-left:0px; }
+.L3 { margin-left:20px; color:#222222; }
+.L4 { margin-left:40px; color:#444444; }
+.L5 { margin-left:60px; color:#666666; }
+.L6 { margin-left:60px; color:#888888; }
+h2 { color:#222222; }
+h3 { color:#444444; }
+h4 { color:#666666; }
+h5 { color:#888888; }
+
+</style>
+
+<meta name="google-site-verification" content="wquYW_n-3QEfIzDfV--8ElUewf7TIt04RGo55GfZySU" />
+<meta name="have-i-been-pwned-verification" value="9223dcee7de5c9622c2a2abcff4adc81">
+<script>
+function validateForm() {
+	var x = document.forms["emailform1"]["name1"].value;
+	var r = true;
+	if (x == "") { // alert("A name is required."); 
+		document.getElementById("name1").textContent="Name Required";
+		document.getElementById("name1").style.color="red";
+		// document.emailform1.name1.focus() ; # does not work, should be getelementbyid
+		r = false; 
+	} else {
+		document.getElementById("name1").textContent="Name";
+		document.getElementById("name1").style.color="black";
+	}
+	if (document.forms["emailform1"]["subject1"].value == "") { 
+		document.getElementById("subject1").textContent="Subject Required";
+		document.getElementById("subject1").style.color="red";
+		r = false; 
+	} else {
+		document.getElementById("subject1").textContent="Subject";
+		document.getElementById("subject1").style.color="black";
+	}			
+	if (document.forms["emailform1"]["msg1"].value == "") { 
+		document.getElementById("msg1").textContent="Message Required";
+		document.getElementById("msg1").style.color="red";
+		// alert("A message is required."); 
+		r = false; 
+	} else {
+		document.getElementById("msg1").textContent="Message";
+		document.getElementById("msg1").style.color="black";
+	}
+	var emailID = document.emailform1.email1.value;
+	atpos = emailID.indexOf("@");
+	dotpos = emailID.lastIndexOf(".");
+	if (atpos < 1 || ( dotpos - atpos < 2 )) {
+		document.getElementById("email1").textContent="Email Address Appears Invalid!";
+		document.getElementById("email1").style.color="red";
+		// alert("Your email address appears invalid.")
+		r = false;
+	} else {
+		document.getElementById("email1").textContent="Email Address";
+		document.getElementById("email1").style.color="black";
+	}
+	// Send the form
+	if (r == false) return false;
+	document.forms["emailform1"].submit();
+}
+</script>
+</head>
+<body>
+<p style="background-color:#ff9933; border-width:1px; padding:3px 10px 3px 10px; margin:0px 0px 3px 0px; font-size:80%; text-align:center;">
+Digitalfire will shut down on June 26. I no longer have the authority to grant exemption to a section in the Terms and Conditions of using material in the Insight-Live account from which I built the source material. While there are ways to comply with the take-down order, they are beyond my means because of how complex and large the site has become in the past 35+ years. It has been a wild ride for a shy prairie boy, thanks to everyone for your support. Insight-live.com is not affected by this.</p>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<a name="pagetop" class="navbar-brand" href="../home.html"><img src="../4sight/images/ReferenceLibrary.svg" height="40" alt=""></a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item"><a class="nav-link" href="../home.html">Home</a></li>
+			<li class="nav-item active"><a class="nav-link" href="list.html">Oxides <span class="sr-only">(current)</span></a></li>
+			<li class="nav-item"><a class="nav-link" href="../material/list.html">Materials</a></li>
+			<li class="nav-item"><a class="nav-link" href="../recipe/list.html">Recipes</a></li>
+			<li class="nav-item"><a class="nav-link" href="../glossary/list.html">Glossary</a></li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="mgo.html#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Others</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" href="../article/list.html">Articles</a>
+					<a class="dropdown-item" href="../hazard/list.html">Hazards</a>
+					<a class="dropdown-item" href="../mineral/list.html">Minerals</a>
+					<a class="dropdown-item" href="../property/list.html">Properties</a>
+					<a class="dropdown-item" href="../schedule/list.html">Firing Schedules</a>
+					<a class="dropdown-item" href="../temperature/list.html">Temperatures</a>
+					<a class="dropdown-item" href="../trouble/list.html">Troubles</a>
+					<a class="dropdown-item" href="../test/list.html">Tests</a>
+					<a class="dropdown-item" href="../video/list.html">Media</a>
+					<a class="dropdown-item" href="../picture/list.html">Pictures</a>
+					<a class="dropdown-item" href="../typecode/list.html">Typecodes</a>
+					<a class="dropdown-item" href="../project/list.html">Projects</a>
+					<a class="dropdown-item" href="../consultants/list.html">Consultants</a>
+					<a class="dropdown-item" href="../schools/list.html">Schools</a>
+					<a class="dropdown-item" href="../stores/list.html">Stores</a>
+					<a class="dropdown-item" href="../potterytony/list.html">Don't Buy-A-Mug</a>
+					<div class="dropdown-divider"></div>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="../index.html">https://digitalfire.com</a>
+					<a class="dropdown-item" href="https://insight-live.com">Insight-Live.com</a>
+					<a class="dropdown-item" href="../index.html">Sign-Up</a>
+				</div>
+			</li>
+		</ul>
+		<form class="form-inline my-2 my-lg-0" action="https://digitalfire.com/index.php?searcharea=oxide" accept-charset="UTF-8" method="post">
+		<input name="searchfor" title="Search from home to search in all areas" maxlength="20" class="form-control mr-sm-2" aria-label="Search" placeholder="Search" autocorrect="off" autocapitalize="off" type="search" value=""><button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="searchbutton">Search</button>
+		</form>
+	</div>
+</nav>
+<div class="container">
+<div style="margin:10px 0px 10px 0px;" class="accordion" id="accordionExample">
+ <div class="card">
+  <div class="card-header pl-0 py-0" id="heading1">
+   <h2 class="mb-0">
+    <button class="btn btn-link collapsed btn-lg" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">Common Ceramic Oxides</button>
+   </h2>
+  </div>
+  <div id="collapse1" class="collapse show" aria-labelledby="heading1" data-parent="#accordionExample">
+   <div class="card-body">
+<a title="3" href="al2o3.html">Al<sub>2</sub>O<sub>3</sub></a> | <a title="7" href="b2o3.html">B<sub>2</sub>O<sub>3</sub></a> | <a title="8" href="bao.html">BaO</a> | <a title="11" href="c.html">C</a> | <a title="13" href="cao.html">CaO</a> | <a title="12" href="co2.html">CO<sub>2</sub></a> | <a title="16" href="coo.html">CoO</a> | <a title="17" href="cr2o3.html">Cr<sub>2</sub>O<sub>3</sub></a> | <a title="19" href="cu2o.html">Cu<sub>2</sub>O</a> | <a title="20" href="cuo.html">CuO</a> | <a title="25" href="fe2o3.html">Fe<sub>2</sub>O<sub>3</sub></a> | <a title="26" href="feo.html">FeO</a> | <a title="32" href="h2o.html">H<sub>2</sub>O</a> | <a title="38" href="k2o.html">K<sub>2</sub>O</a> | <a title="42" href="li2o.html">Li<sub>2</sub>O</a> | <a title="40" href="loi.html">LOI</a> | <a title="44" href="44.html"><button type="button" class="btn btn-dark">MgO</button></a> | <a title="46" href="mno.html">MnO</a> | <a title="47" href="mno2.html">MnO<sub>2</sub></a> | <a title="50" href="na2o.html">Na<sub>2</sub>O</a> | <a title="53" href="nio.html">NiO</a> | <a title="54" href="o.html">O</a> | <a title="97" href="organics.html">Organics</a> | <a title="56" href="p2o5.html">P<sub>2</sub>O<sub>5</sub></a> | <a title="59" href="pbo.html">PbO</a> | <a title="75" href="sio2.html">SiO<sub>2</sub></a> | <a title="77" href="sno2.html">SnO<sub>2</sub></a> | <a title="70" href="so3.html">SO<sub>3</sub></a> | <a title="96" href="so4.html">SO<sub>4</sub></a> | <a title="78" href="sro.html">SrO</a> | <a title="83" href="tio2.html">TiO<sub>2</sub></a> | <a title="89" href="v2o5.html">V<sub>2</sub>O<sub>5</sub></a> | <a title="93" href="zno.html">ZnO</a> | <a title="94" href="zro.html">ZrO</a> | <a title="95" href="zro2.html">ZrO<sub>2</sub></a>
+   </div>
+  </div>
+ </div>
+ <div class="card">
+  <div class="card-header pl-0 py-0" id="heading2">
+   <h2 class="mb-0">
+    <button class="btn btn-link collapsed btn-lg" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">Uncommon Ceramic Oxides</button>
+   </h2>
+  </div>
+  <div id="collapse2" class="collapse" aria-labelledby="heading2" data-parent="#accordionExample">
+   <div class="card-body">
+<a title="102" href="ag2o.html">Ag<sub>2</sub>O</a> | <a title="104" href="alf3.html">AlF<sub>3</sub></a> | <a title="4" href="as2o3.html">As<sub>2</sub>O<sub>3</sub></a> | <a title="5" href="as4o6.html">As<sub>4</sub>O6</a> | <a title="6" href="au2o3.html">Au<sub>2</sub>O<sub>3</sub></a> | <a title="108" href="baf2.html">BaF<sub>2</sub></a> | <a title="9" href="beo.html">BeO</a> | <a title="10" href="bi2o3.html">Bi<sub>2</sub>O<sub>3</sub></a> | <a title="109" href="caf2.html">CaF<sub>2</sub></a> | <a title="14" href="cdo.html">CdO</a> | <a title="15" href="ceo2.html">CeO<sub>2</sub></a> | <a title="99" href="cl.html">Cl</a> | <a title="110" href="co.html">CO</a> | <a title="113" href="cro3.html">CrO<sub>3</sub></a> | <a title="18" href="cs2o.html">Cs<sub>2</sub>O</a> | <a title="101" href="cuco3.html">CuCO<sub>3</sub></a> | <a title="21" href="dy2o3.html">Dy<sub>2</sub>O<sub>3</sub></a> | <a title="22" href="er2o3.html">Er<sub>2</sub>O<sub>3</sub></a> | <a title="23" href="eu2o3.html">Eu<sub>2</sub>O<sub>3</sub></a> | <a title="24" href="f.html">F</a> | <a title="27" href="fr2o.html">Fr<sub>2</sub>O</a> | <a title="28" href="free&#32;sio2.html">Free SiO<sub>2</sub></a> | <a title="29" href="ga2o3.html">Ga<sub>2</sub>O<sub>3</sub></a> | <a title="30" href="https://digitalfire.com/oxide/gdo3">GdO<sub>3</sub></a> | <a title="31" href="geo2.html">GeO<sub>2</sub></a> | <a title="33" href="hfo2.html">HfO<sub>2</sub></a> | <a title="34" href="hgo.html">HgO</a> | <a title="35" href="ho2o3.html">Ho<sub>2</sub>O<sub>3</sub></a> | <a title="36" href="in2o3.html">In<sub>2</sub>O<sub>3</sub></a> | <a title="37" href="iro2.html">IrO<sub>2</sub></a> | <a title="107" href="kf.html">KF</a> | <a title="39" href="knao.html">KNaO</a> | <a title="41" href="la2o3.html">La<sub>2</sub>O<sub>3</sub></a> | <a title="43" href="lu2o3.html">Lu<sub>2</sub>O<sub>3</sub></a> | <a title="45" href="mn2o3.html">Mn<sub>2</sub>O<sub>3</sub></a> | <a title="48" href="moo3.html">MoO<sub>3</sub></a> | <a title="49" href="n2o5.html">N<sub>2</sub>O<sub>5</sub></a> | <a title="105" href="naf.html">NaF</a> | <a title="51" href="nb2o5.html">Nb<sub>2</sub>O<sub>5</sub></a> | <a title="52" href="nd2o3.html">Nd<sub>2</sub>O<sub>3</sub></a> | <a title="98" href="ni2o3.html">Ni<sub>2</sub>O<sub>3</sub></a> | <a title="55" href="oso2.html">OsO<sub>2</sub></a> | <a title="58" href="pa2o5.html">Pa<sub>2</sub>O<sub>5</sub></a> | <a title="106" href="pbf2.html">PbF<sub>2</sub></a> | <a title="60" href="pdo.html">PdO</a> | <a title="61" href="pmo3.html">PmO<sub>3</sub></a> | <a title="57" href="po4.html">PO<sub>4</sub></a> | <a title="62" href="pr2o3.html">Pr<sub>2</sub>O<sub>3</sub></a> | <a title="63" href="pro2.html">PrO<sub>2</sub></a> | <a title="64" href="pto2.html">PtO<sub>2</sub></a> | <a title="65" href="rao.html">RaO</a> | <a title="66" href="rb2o.html">Rb<sub>2</sub>O</a> | <a title="67" href="re2o7.html">Re<sub>2</sub>O7</a> | <a title="68" href="rho3.html">RhO<sub>3</sub></a> | <a title="69" href="ruo2.html">RuO<sub>2</sub></a> | <a title="71" href="sb2o3.html">Sb<sub>2</sub>O<sub>3</sub></a> | <a title="72" href="sb2o5.html">Sb<sub>2</sub>O<sub>5</sub></a> | <a title="73" href="sc2o3.html">Sc<sub>2</sub>O<sub>3</sub></a> | <a title="74" href="se.html">Se</a> | <a title="111" href="seo2.html">SeO<sub>2</sub></a> | <a title="76" href="sm2o3.html">Sm<sub>2</sub>O<sub>3</sub></a> | <a title="79" href="ta2o5.html">Ta<sub>2</sub>O<sub>5</sub></a> | <a title="80" href="tb2o3.html">Tb<sub>2</sub>O<sub>3</sub></a> | <a title="81" href="tc2o7.html">Tc<sub>2</sub>O7</a> | <a title="82" href="tho2.html">ThO<sub>2</sub></a> | <a title="84" href="tl2o.html">Tl<sub>2</sub>O</a> | <a title="85" href="tm2o3.html">Tm<sub>2</sub>O<sub>3</sub></a> | <a title="86" href="trace.html">Trace</a> | <a title="87" href="u3o8.html">U<sub>3</sub>O8</a> | <a title="88" href="uo2.html">UO<sub>2</sub></a> | <a title="90" href="wo3.html">WO<sub>3</sub></a> | <a title="91" href="y2o3.html">Y<sub>2</sub>O<sub>3</sub></a> | <a title="92" href="yb2o3.html">Yb<sub>2</sub>O<sub>3</sub></a>
+   </div>
+  </div>
+ </div>
+</div><p style="clear:left"></p><p style="clear:left"></p><p style="clear:left"></p><p style="clear:left"></p><p style="clear:left"></p><p style="clear:left"></p><p style="clear:left"></p><p style="clear:left"></p><p style="clear:left"></p><h1>MgO (Magnesium Oxide, Magnesia)</h1>
+<h3>Data</h3><table>
+<table class="table table-bordered"><tbody>
+<tr>
+<th scope="row"><a href="../glossary/18.html">Co-efficient of Linear Expansion</a></th>
+<td>0.026</td>
+</tr>
+<tr>
+<th scope="row"><a href="../test/14.html">Frit Softening Point</a></th>
+<td>2800C (From The Oxide Handbook)</td>
+</tr>
+</tbody></table>
+<h4>Notes</h4><p>-Together with <a  href="sro.html">SrO</a>, <a  href="bao.html">BaO</a>, and <a  href="cao.html">CaO</a>, it is one of the Alkaline Earth group of <a  href="../glossary/ceramic+oxide.html">oxides</a>. It has a cubic crystal structure. <a  href="../material/1722.html">Zircon</a> and Magnesia melt at 2800C, making them the highest melting oxides. Remarkably, <a  href="mgo.html">MgO</a> readily forms eutectics with other oxides to produce melts at surprisingly low temperatures.<br />
+<br />
+-When employed as a secondary <a  href="../glossary/flux.html">flux</a> in <a  href="../glossary/high+temperature+glaze.html">high-temperature glazes</a>, it melts well (beginning action about 1170C) and can be present in glossy glazes (as long as not over supplied). In <a  href="../glossary/frit.html">frits</a> at medium temperatures, it acts similarly.<br />
+<br />
+-MgO is best known for its ability to matte glazes in larger proportions (e.g. 0.3-0.4 molar). The <a  href="../glossary/mechanism.html">mechanism</a> of this is different at higher temperatures (vs. low). At medium and high temperatures, it is sourced mainly from <a  href="../material/273.html">dolomite</a> and <a  href="../material/1620.html">talc</a>, as the proportion of MgO is increased (against other fluxes) the <a  href="../glossary/viscosity.html">viscosity</a> (and <a  href="../glossary/surface+tension.html">surface tension</a>) of <a  href="../glossary/melt+fluidity.html">the melt</a> increases, and the glaze produced is more matte. As proportions rise even further (e.g. above 0.4 molar) the glaze becomes more opaque (as a product of incomplete glass development). For this reason, MgO is one of the most effective matting agents. For example, glazes having almost no alumina, very slow <a  href="../material/1245.html">silica</a>, and very high <a  href="../glossary/borate.html">boron</a> that would otherwise run right off the ware can be completely stabilized with an MgO content of 0.3-0.4 molar. Unlike a <a  href="../glossary/refractory.html">refractory</a> stabilizer, in many formulations MgO does not significantly impede melting and glass development when it mattes the glaze. At lower temperatures, the matting mechanism of MgO is that it simply stiffens and opacifies the glaze due to its refractory nature. It is common to source it from magnesium carbonate in these ranges. Like CaO, MgO it is very refractory by itself, around 2800C melting point!  <br />
+<br />
+-Since the surface tension of MgO-containing melts does increase with its proportion, this can cause <a  href="../trouble/crawling.html">crawling</a> if the <a  href="../glossary/glaze+laydown.html">glaze laydown</a> has any shrinkage issues. This is less of a problem in reduction and most problematic in <a  href="../glossary/earthenware.html">low fire</a>.<br />
+<br />
+-MgO is very valuable for its lowering effect on glaze <a  href="../glossary/co-efficient+of+thermal+expansion.html">thermal expansion</a> (this is one reason why MgO mattes can be made very resistant to <a  href="../trouble/glaze+crazing.html">crazing</a>). <a  href="../glossary/co-efficient+of+thermal+expansion.html">Low expansion</a> frits are invariably based on MgO. Theoretically, surface character is best maintained when introducing MgO into a glaze to replace calcia, baria, and zinc. Still, replacing the alkalis with MgO is the single most effective strategy to reduce crazing, this works so well because oxide molecules of the highest possible expansion are being replaced with ones of the lowest. But this must be done with caution since having more than about 0.1 molar will begin to affect gloss. Also, you will have to determine if color is detrimentally affected. Yet many liner glazes have plenty of gloss and color where this is not an issue, they are excellent candidates for MgO strategies to deal with crazing issues.<br />
+<br />
+-MgO is a light oxide and generally is a poor choice for glazes to host bright-colored oxides. That being said, our <a  href="../recipe/g2934.html">G2934</a> <a  href="../glossary/base+glaze.html">base recipe</a> works fantastic with bright-colored <a  href="../glossary/ceramic+stain.html">stains</a>. MgO glazes are a natural to host earth-tone and pastel colors, especially in high-temperature <a  href="../glossary/reduction+firing.html">reduction firing</a>. MgO in the <a  href="../glossary/overglaze.html">overglaze</a> may be hostile to some under-glaze colors.<br />
+<br />
+-Since MgO stiffens the melt it can be used simply to check glaze fluidity (in a manner similar to alumina) and to prevent <a  href="../glossary/crystallization.html">devitrification</a> (the tendency to produce <a  href="../glossary/glass+vs.+crystalline.html">crystalline</a> surfaces). When mixed with CaO, it is not as refractory.<br />
+<br />
+-It can act as a catalyst in low-temperature bodies, assisting the conversion of quartz to higher expansion <a  href="../glossary/cristobalite.html">cristobalite</a> (which reduces crazing).<br />
+<br />
+-Does not volatilize.<br />
+<br />
+-MgO helps with cobalt purples, cobalt pinks and nickel greens. Hostile to chrome reds.</p>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">Comparing two glazes having different mechanisms for their matteness</h3>
+<br /><a href="../picture/999.html"><img class="flexleft50" loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/ruvdakafax.jpg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/999.html">click here</a> to see it.</p>
+<p>These are two <a  href="../glossary/cone+6.html">cone 6</a> matte glazes (shown side by side in an account at <a  href="../glossary/digitalfire+insight-live.html">Insight-live</a>). <a  href="https://insight-live.com/insight/share.php?z=ZN33C1ZyqD">G1214Z</a> is high calcium and a high <a  href="../glossary/silica%253Aalumina+ratio.html">silica:alumina ratio</a>. It crystallizes during cooling to make the matte effect and the degree of matteness is adjustable by trimming the <a  href="../material/1245.html">silica</a> content (but notice how much it runs). The <a  href="../recipe/g2928c.html">G2928C</a> has high <a  href="mgo.html">MgO</a> and it produces the classic silky matte by micro-wrinkling the surface, its matteness is adjustable by trimming the <a  href="../glossary/calcination.html">calcined</a> <a  href="../material/925.html">kaolin</a>. <a  href="cao.html">CaO</a> is a standard oxide that is in almost all glazes, 0.4 is not high for it. But you would never normally see more than 0.3 of MgO in a cone 6 glaze (if you do it will likely be unstable). The G2928C also has 5% tin, if that was not there it would be darker than the other one because <a  href="../material/1178.html">Ravenscrag</a> Slip has a little iron. This was made by recalculating the Moore's Matte recipe to use as much <a  href="https://plainsmanclays.ca/data/index.php?product=12911">Ravenscrag Slip</a> as possible yet keep the overall <a  href="../glossary/glaze+chemistry.html">chemistry</a> the same. This glaze actually has texture like a <a  href="../material/273.html">dolomite</a> matte at <a  href="../glossary/reduction+firing.html">cone 10R</a>, it is great. And it has wonderful application properties. And it does not <a  href="../trouble/glaze+crazing.html">craze</a>, on <a  href="../glossary/plainsman+clays.html">Plainsman</a> <a  href="https://plainsmanclays.ca/data/index.php?product=12880">M370</a> (it even survived a 300F-to-ice water <a  href="../test/iwct.html">IWCT test</a>). This looks like it could be a great <a  href="../glossary/liner+glaze.html">liner glaze</a>.</p>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">A magnesia matte that breaks on contours</h3>
+<br /><a href="../picture/784.html"><img class="flexleft50" loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/gigxogyfuh.jpg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/784.html">click here</a> to see it.</p>
+<p><a  href="../recipe/gr10-g.html">GR10-G</a> Silky <a  href="../glossary/magnesia+matte.html">magnesia matte</a> <a  href="../glossary/reduction+firing.html">cone 10R</a> (<a  href="../material/1178.html">Ravenscrag</a> 100, <a  href="../material/1620.html">Talc</a> 10, <a  href="../material/1642.html">Tin Oxide</a> 4). This is a good example silky matte <a  href="../glossary/mechanism.html">mechanism</a> of high <a  href="mgo.html">MgO</a>. The Ravenscrag:Talc mix produces a good silky matte, the added tin appears to break the effect at the edges.</p>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">GR10-B Ravenscrag transparent glaze (with 10 talc)</h3>
+<br /><a href="../picture/856.html"><img class="flexleft50" loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/recipes/pexcavazyp.jpg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/856.html">click here</a> to see it.</p>
+<p>Because this glaze employs 10% <a  href="../material/273.html">dolomite</a> instead of 10% <a  href="../material/173.html">calcium carbonate</a> it has a lower <a  href="../glossary/co-efficient+of+thermal+expansion.html">thermal expansion</a> and is less likely to <a  href="../trouble/glaze+crazing.html">craze</a>. While the dolomite is contributing <a  href="mgo.html">MgO</a>, which normally mattes glazes, there is not enough to do it here.</p>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">The difference between dolomite and calcium carbonate in a glaze</h3>
+<br /><a href="../picture/1008.html"><img class="flexleft50" loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/sassucumam.jpg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/1008.html">click here</a> to see it.</p>
+<p>These glaze cones are fired at <a  href="../glossary/cone+6.html">cone 6</a> (without slow cooling) and have the same recipe: 20 <a  href="../material/351.html">Frit 3134</a>, 21 <a  href="../material/291.html">EP Kaolin</a>, 27 <a  href="../material/173.html">calcium carbonate</a>, 32 <a  href="../material/1245.html">silica</a>. The difference: The one on the left uses <a  href="../material/273.html">dolomite</a> instead of calcium carbonate. Notice how the <a  href="mgo.html">MgO</a> from the dolomite mattes the surface (without slow cooling) whereas the <a  href="cao.html">CaO</a> from the calcium carbonate produces a brilliant gloss (because it needs slow cooling).</p>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">Frits melt so much better than raw materials</h3>
+<br /><a alt="Frits, talc, feldspar melting" href="../picture/1115.html"><img class="flexleft50" alt="Frits, talc, feldspar melting"  loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/fuxrucugaz.jpg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/1115.html">click here</a> to see it.</p>
+<p><a  href="../material/310.html">Feldspar</a> and <a  href="../material/1620.html">talc</a> are both <a  href="../glossary/flux.html">flux</a> sources (glaze melters), they are common in all types of <a  href="../glossary/stoneware.html">stoneware</a> glazes. But their fluxing <a  href="../glossary/ceramic+oxide.html">oxides</a>, <a  href="na2o.html">Na<sub>2</sub>O</a> and <a  href="mgo.html">MgO</a>, are locked in crystal structures that neither melt early or supply other oxides with which they like to interact. The pure feldspar is only beginning to soften at <a  href="../glossary/cone+6.html">cone 6</a>. Yet the soda <a  href="../glossary/frit.html">frit</a> is already very active at <a  href="../glossary/low+temperature+glaze.html">cone 06</a>! As high as cone 6, talc (the best source of MgO) shows no signs of melting activity at all. But a high-MgO frit is melting beautifully at cone 06! The <a  href="../glossary/frit.html">frits</a> progressively soften, starting from low temperatures, both because they have been premelted and have significant <a  href="../glossary/borate.html">boron</a> content. In both, the Na<sub>2</sub>O and MgO are free to impose themselves as fluxes, actively participating in the softening process.</p>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">Ceramic Oxide Periodic Table</h3>
+<a href="../picture/1257.html"><img class="flexleft50" alt="Periodic table of ceramic oxides"  src="../4sight/images/pictures/er5fytcakh.svg" /></a>
+<p>Pretty well all common traditional ceramic <a  href="../glossary/base+glaze.html">base glazes</a> are made from less than a dozen elements (plus oxygen). Go to the full picture of this table and click or tap each of the <a  href="../glossary/ceramic+oxide.html">oxides</a> to learn more (on its page at <a  href="../glossary/digitalfire+reference+library.html">digitalfire</a>.com). When materials melt, they <a  href="../glossary/decomposition.html">decompose</a>, sourcing these elements in oxide form. The kiln builds the glaze from them, it does not care what material sources what oxide (assuming, of course, that all materials do melt or dissolve completely into <a  href="../glossary/melt+fluidity.html">the melt</a> to release those oxides). Each of these oxides contributes specific properties to the glass. So, you can look at a formula and make a good prediction of the properties of the fired glaze. And know what specific oxide to increase or decrease to move a property in a given direction (e.g. melting behavior, hardness, <a  href="../glossary/glaze+durability.html">durability</a>, <a  href="../glossary/co-efficient+of+thermal+expansion.html">thermal expansion</a>, color, gloss, <a  href="../glossary/crystallization.html">crystallization</a>). And know about how they interact (affecting each other). This is powerful. A lot of ceramic materials are available, hundreds - that is complicated when individual materials source multiple oxides. Viewing a glaze as a simple <a  href="../glossary/unity+formula.html">unity formula</a> of ceramic oxides is just simpler.</p>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">Devitrification of a transparent glaze</h3>
+<br /><a href="../picture/1776.html"><img class="flexleft50" loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/wowhepepup.jpg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/1776.html">click here</a> to see it.</p>
+<p>This glaze consists of micro fine <a  href="../material/1245.html">silica</a>, <a  href="../glossary/calcination.html">calcined</a> <a  href="../material/291.html">EP kaolin</a>, Ferro <a  href="../material/369.html">Frit 3249</a> <a  href="mgo.html">MgO</a> <a  href="../glossary/frit.html">frit</a>, and Ferro <a  href="../material/351.html">Frit 3134</a>. It has been <a  href="../glossary/ball+milling.html">ball milled</a> for 1, 3, and 6 hours with these same results. Notice the <a  href="../glossary/crystallization.html">crystallization</a> that is occurring. This is likely a product of the MgO in the Frit 3249. This high <a  href="../glossary/boron+frit.html">boron frit</a> introduces it in a far more mobile and fluid state than would <a  href="../material/1620.html">talc</a> or <a  href="../material/273.html">dolomite</a> and MgO is a matting agent (by virtue of the micro crystallization it can produce). The <a  href="../glossary/fluid+melt+glazes.html">fluid melt</a> and the fine silica further enhance the effect.</p>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">Two stains. 4 colors. Will the guilty oxide please step forward.</h3>
+<br /><a alt="One stain produces clear in one glaze and red in another. Another stain blue and purple. Why?" title="The same stains are producing drastically different colors in different base glazes. Why?" href="../picture/1030.html"><img class="flexleft50" title="The same stains are producing drastically different colors in different base glazes. Why?"  alt="One stain produces clear in one glaze and red in another. Another stain blue and purple. Why?"  loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/suskaledem.jpg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/1030.html">click here</a> to see it.</p>
+<p>These pairs are <a  href="../recipe/g2934.html">G2934</a> matte and <a  href="../recipe/g2916f.html">G2916F</a> glossy <a  href="../glossary/cone+6.html">cone 6</a> <a  href="../typecode/mgr.html">base glaze recipes</a>. The left pair has 5% maroon stain added, the right pair 5% purple stain. Why? The Mason Colorworks reference guide has the same precaution for both <a  href="../glossary/ceramic+stain.html">stains</a>: the host glaze must be zincless and have 6.7-8.4% <a  href="cao.html">CaO</a> (this is a little unclear, it is actually expressing a minimum, the more the CaO the better). The matte recipe calculates to 11% CaO, the glossy to 9%. So there is enough CaO. The problem is <a  href="mgo.html">MgO</a> (it is the <a  href="../glossary/mechanism.html">mechanism</a> of the matteness in the left two), it impedes the development of both colors (although not mentioned on the Mason docs).</p>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">Substituting MgO for BaO in a matte will also make a matte, right? Wrong.</h3>
+<br /><a href="../picture/1155.html"><img class="flexleft50" loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/bophesuhel.jpg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/1155.html">click here</a> to see it.</p>
+<p>Left: <a  href="../recipe/g2934.html">G2934</a> magnesia <a  href="../glossary/cone+6.html">cone 6</a> matte (sold by <a  href="../glossary/plainsman+clays.html">Plainsman</a> Clays). Right (G2934D): The same glaze, but with 0.4 molar of <a  href="bao.html">BaO</a> (from Ferro <a  href="../glossary/frit.html">Frit</a> CC-257) substituted for the 0.4 <a  href="mgo.html">MgO</a> it had. The MgO is the <a  href="../glossary/mechanism.html">mechanism</a> of the matte effect. Barium also creates mattes, but only if the <a  href="../glossary/glaze+chemistry.html">chemistry</a> of the host glaze and the temperature are right. In addition, barium mattes are normally made using the raw carbonate form, not a frit. In <a  href="../glossary/frit.html">fritted</a> form, barium can be a powerful <a  href="../glossary/flux.html">flux</a> when well dissolved in <a  href="../glossary/melt+fluidity.html">the melt</a> and <a  href="../glossary/borate.html">boron</a> is present. This glaze is actually remarkably transparent. However, if this was fired lower it could very well matte.</p>
+<p style="clear:left"></p>
+<h3>Links</h3><table>
+<table class="table table-bordered"><tbody>
+<tr>
+<td scope="row">Articles</td>
+<td>
+<a href="../article/bringing+out+the+big+guns+in+craze+control%253A+mgo+(g1215u).html">Bringing Out the Big Guns in Craze Control: MgO (G1215U)</a>
+<br /><i><a  href="mgo.html">MgO</a> is the secret weapon of <a  href="../trouble/glaze+crazing.html">craze</a> control. If your application can tolerate it you can create a <a  href="../glossary/cone+6.html">cone 6</a> glaze of very low <a  href="../glossary/co-efficient+of+thermal+expansion.html">thermal expansion</a> that is very resistant to <a  href="../trouble/glaze+crazing.html">crazing</a>.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Articles</td>
+<td>
+<a href="../article/the+right+chemistry+for+a+cone+6+magnesia+matte.html">The Right Chemistry for a Cone 6 Magnesia Matte</a>
+<br /><i></i>
+</td>
+</tr>
+<tr>
+<td scope="row">Materials</td>
+<td>
+<a href="../material/dolomite.html">Dolomite</a>
+<br /><i>An inexpensive source of <a  href="mgo.html">MgO</a> and <a  href="cao.html">CaO</a> for ceramic glazes, also a highly <a  href="../glossary/refractory.html">refractory</a> material when fired in the absence of reactant fluxes.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Materials</td>
+<td>
+<a href="../material/talc.html">Talc</a>
+<br /><i>A source of <a  href="mgo.html">MgO</a> for ceramic glazes, a <a  href="../glossary/flux.html">flux</a> or <a  href="../glossary/co-efficient+of+thermal+expansion.html">thermal expansion</a> additive in <a  href="../glossary/clay+body.html">clay bodies</a>, also used in the manufacture of cordierite.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Materials</td>
+<td>
+<a href="../material/light+magnesium+carbonate.html">Light Magnesium Carbonate</a>
+<br /><i>A <a  href="../glossary/refractory.html">refractory</a> feather-light white powder used as a source of <a  href="mgo.html">MgO</a> and matting agent in ceramic glazes</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Materials</td>
+<td>
+<a href="../material/magnesite.html">Magnesite</a>
+<br /><i></i>
+</td>
+</tr>
+<tr>
+<td scope="row">Materials</td>
+<td>
+<a href="../material/frit.html">Frit</a>
+<br /><i><a  href="../glossary/frit.html">Frits</a> are made by melting mixes of raw materials, quenching <a  href="../glossary/melt+fluidity.html">the melt</a> in water, grinding the pebbles into a powder. Frits have chemistries raw materials cannot.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Materials</td>
+<td>
+<a href="../material/magnesium+oxide.html">Magnesium Oxide</a>
+<br /><i></i>
+</td>
+</tr>
+<tr>
+<td scope="row">Glossary</td>
+<td>
+<a href="../glossary/alkaline+earths.html">Alkaline Earths</a>
+<br /><i>Refers to a group of ceramic fluxing <a  href="../glossary/ceramic+oxide.html">oxides</a> that contribute similar properties to fired glazes. They contrast with the alkalis which are stronger fluxes.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Glossary</td>
+<td>
+<a href="../glossary/magnesia+matte.html">Magnesia Matte</a>
+<br /><i><a  href="../glossary/magnesia+matte.html">Magnesia matte</a> ceramic glazes are “microstructure mattes” while <a  href="../glossary/calcia+matte.html">calcia mattes</a> are “crystal mattes”. They have a micro-wrinkle surface that forms from a high <a  href="../glossary/viscosity.html">viscosity</a> melt and microscopic <a  href="../glossary/phase+separation.html">phase separation</a>, both of which prevent levelling on freezi</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Glossary</td>
+<td>
+<a href="../glossary/co-efficient+of+thermal+expansion.html">Co-efficient of Thermal Expansion</a>
+<br /><i>The <a  href="../glossary/co-efficient+of+thermal+expansion.html">co-efficient of thermal expansion</a> of ceramic bodies and glazes determines how well they fit each other and their ability to survive sudden heating and cooling without cracking.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Glossary</td>
+<td>
+<a href="../glossary/calculated+thermal+expansion.html">Calculated Thermal Expansion</a>
+<br /><i>The <a  href="../glossary/co-efficient+of+thermal+expansion.html">thermal expansion</a> of a glaze can be predicted (relatively) and adjusted using simple <a  href="../glossary/glaze+chemistry.html">glaze chemistry</a>. Body expansion cannot be calculated.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Glossary</td>
+<td>
+<a href="../glossary/ceramic+oxide.html">Ceramic Oxide</a>
+<br /><i>In <a  href="../glossary/glaze+chemistry.html">glaze chemistry</a>, the oxide is the basic unit of formulas and analyses. Knowledge of what materials supply an oxide and of how it affects the fired glass or glaze is a key to control.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Glossary</td>
+<td>
+<a href="../glossary/flux.html">Flux</a>
+<br /><i>Fluxes are the reason we can fire <a  href="../glossary/clay+body.html">clay bodies</a> and glazes in common kilns, they make glazes melt and bodies vitrify at lower temperatures.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Properties</td>
+<td>
+<a href="../property/glaze+variegation.html">Glaze Variegation</a>
+</td>
+</tr>
+<tr>
+<td scope="row">Oxides</td>
+<td>
+<a href="cao.html">CaO - Calcium Oxide, Calcia</a>
+</td>
+</tr>
+</tbody></table>
+<h3>Mechanisms</h3><table>
+<table class="table table-bordered"><tbody>
+<tr><th scope="row">Glaze Matteness</th><td>Magnesia is well known for the pleasant vellum 'fatty matte' and 'hares fur' tactile and visual effects that it produces around 1200C, especially in reduction firing (dolomite matte). The mechanism is phase separation of the suddenly melting MgO, but MgO can also produce matte effects at lower temperatures as a refractory melt-stiffening additive.</td></tr>
+</tbody></table><table style="margin:30px 0px 30px 0px;"><tr><td style="vertical-align:middle; text-align:center; font-size:80%;"><img src="../images/PayPalDonate.png" style="height:66px; padding-right:20px;"><br /><a href="https://www.paypal.com/donate/?hosted_button_id=F8L3JX4BCCXJ6">PayPal</a></td><td style="background-color:#ddffdd; padding:10px; border:thin solid grey; font-size:90%;"><b>No</b> tracking, <b>No</b> ads, <b>No</b> paywall, <b>No</b> transient content!<br />Just organized, concise information constantly updated and improved.<br />Was this helpful? Consider supporting me.</td><tr></table><table style="margin-top:30px; padding-top:10px; padding-bottom:20px; border-top:thin solid grey; border-bottom:thin solid grey;"><tr><td style="padding-right:10px">By <i>Tony Hansen</i><br /><span style="font-size:80%; color:#888888;">Follow me on<br /><a title="Threads" href="https://www.threads.net/@tonyatdigitalfire" target="_blank"><img src="../images/threads.jpg" style="width:20px;" border="0"></a> <a title="Facebook Insight-Live" href="https://www.facebook.com/insightlive" target="_blank"><img src="../images/facebook.jpg" style="width:20px;" border="0"></a> <a title="LinkedIn" href="https://www.linkedin.com/in/tonywhansen/" target="_blank"><img src="../images/linkedin.jpg" style="width:20px;" border="0"></a> <a title="Pinterest" href="https://www.pinterest.ca/tonywhansen" target="_blank"><img src="../images/pinterest.jpg" style="width:20px;" border="0"></a> <a title="Instagram" href="https://instagram.com/tonyatdigitalfire" target="_blank"><img src="../images/instagram.jpg" style="width:20px;" border="0"></a> <a title="Ko-Fi" href="https://ko-fi.com/tonyhansen#" target="_blank"><img src="../images/ko-fi.jpg" style="width:20px;" border="0"></a> <a title="Twitter" href="https://x.com/digitalfiretony" target="_blank"><img src="../images/twitter.jpg" style="width:20px;" border="0"></a></td><td><a href="https://tonyhansen.com/about"><img src="../images/SignaturePhotoSmall.jpg" height="80"></a></td></tr></table><h3>Got a Question?</h3><p style="margin-bottom:30px;"><a name="kofi">Buy me a coffee and we can talk</a> <a target="_blank" href="https://ko-fi.com/tonyhansen"><img style="width:40px" src="../images/ko-fi.svg"></a></p><p style="margin-bottom:30px;">&nbsp;</p>
+<p></p><p></p><hr>
+<img style="width:250px" src="../4sight/images/ReferenceLibrary.svg">
+<br />
+<a href="../index.html">https://digitalfire.com</a>, All Rights Reserved
+<br /><a href="../w3c/privacypolicy.php.html">Privacy Policy</a>
+</div>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+</body>
+</html>

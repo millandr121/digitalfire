@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="../favicon.svg">
+<link rel="mask-icon" href="../mask-icon.svg" color="#000000">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<title>Encapsulated Stain</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<meta name="author" content="Tony Hansen">
+<meta name="description" content="This is a type of stain manufacture that enables the use of metal oxides (like cadmium) under temperature conditions in which they would normally fail.">
+<style>
+.flexinline { width: 50%; height: auto; clear:left; margin: 10px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexinline { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexright50 { width: 50%; height: auto; float: right; margin: 5px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexright50 { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexright33 { width: 33%; height: auto; float: right; margin: 5px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexright33 { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexright25 { width: 25%; height: auto; float: right; margin: 5px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexright25 { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexleft50 { width: 50%; height: auto; float: left; margin: 5px 15px 10px 0px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexleft50 { width: 100%; height: auto; margin: 5px 10px 10px 0px; border: none; padding: none; } }
+.flexleft33 { width: 33%; height: auto; float: left; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexleft33 { width: 100%; height: auto; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; } }
+.flexleft25 { width: 25%; height: auto; float: left; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexleft25 { width: 100%; height: auto; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; } }
+.pictureseries { overflow:scroll; width:auto; height:200px; float:left; margin: 5px 10px 10px 0px; padding: 5px; font-size:60%; font-style:italic;}
+@media (max-width: 640px) { .pictureseries { overflow:scroll; width:auto; height:200px; float:left; margin: 5px 10px 10px 0px; border: padding: 5px; font-size:60%; font-style:italic;} }
+.L2 { margin-left:0px; }
+.L3 { margin-left:20px; color:#222222; }
+.L4 { margin-left:40px; color:#444444; }
+.L5 { margin-left:60px; color:#666666; }
+.L6 { margin-left:60px; color:#888888; }
+h2 { color:#222222; }
+h3 { color:#444444; }
+h4 { color:#666666; }
+h5 { color:#888888; }
+
+</style>
+
+<meta name="google-site-verification" content="wquYW_n-3QEfIzDfV--8ElUewf7TIt04RGo55GfZySU" />
+<meta name="have-i-been-pwned-verification" value="9223dcee7de5c9622c2a2abcff4adc81">
+<script>
+function validateForm() {
+	var x = document.forms["emailform1"]["name1"].value;
+	var r = true;
+	if (x == "") { // alert("A name is required."); 
+		document.getElementById("name1").textContent="Name Required";
+		document.getElementById("name1").style.color="red";
+		// document.emailform1.name1.focus() ; # does not work, should be getelementbyid
+		r = false; 
+	} else {
+		document.getElementById("name1").textContent="Name";
+		document.getElementById("name1").style.color="black";
+	}
+	if (document.forms["emailform1"]["subject1"].value == "") { 
+		document.getElementById("subject1").textContent="Subject Required";
+		document.getElementById("subject1").style.color="red";
+		r = false; 
+	} else {
+		document.getElementById("subject1").textContent="Subject";
+		document.getElementById("subject1").style.color="black";
+	}			
+	if (document.forms["emailform1"]["msg1"].value == "") { 
+		document.getElementById("msg1").textContent="Message Required";
+		document.getElementById("msg1").style.color="red";
+		// alert("A message is required."); 
+		r = false; 
+	} else {
+		document.getElementById("msg1").textContent="Message";
+		document.getElementById("msg1").style.color="black";
+	}
+	var emailID = document.emailform1.email1.value;
+	atpos = emailID.indexOf("@");
+	dotpos = emailID.lastIndexOf(".");
+	if (atpos < 1 || ( dotpos - atpos < 2 )) {
+		document.getElementById("email1").textContent="Email Address Appears Invalid!";
+		document.getElementById("email1").style.color="red";
+		// alert("Your email address appears invalid.")
+		r = false;
+	} else {
+		document.getElementById("email1").textContent="Email Address";
+		document.getElementById("email1").style.color="black";
+	}
+	// Send the form
+	if (r == false) return false;
+	document.forms["emailform1"].submit();
+}
+</script>
+</head>
+<body>
+<p style="background-color:#ff9933; border-width:1px; padding:3px 10px 3px 10px; margin:0px 0px 3px 0px; font-size:80%; text-align:center;">
+Digitalfire will shut down on June 26. I no longer have the authority to grant exemption to a section in the Terms and Conditions of using material in the Insight-Live account from which I built the source material. While there are ways to comply with the take-down order, they are beyond my means because of how complex and large the site has become in the past 35+ years. It has been a wild ride for a shy prairie boy, thanks to everyone for your support. Insight-live.com is not affected by this.</p>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<a name="pagetop" class="navbar-brand" href="../home.html"><img src="../4sight/images/ReferenceLibrary.svg" height="40" alt=""></a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item"><a class="nav-link" href="../home.html">Home</a></li>
+			<li class="nav-item"><a class="nav-link" href="../oxide/list.html">Oxides</a></li>
+			<li class="nav-item"><a class="nav-link" href="../material/list.html">Materials</a></li>
+			<li class="nav-item"><a class="nav-link" href="../recipe/list.html">Recipes</a></li>
+			<li class="nav-item active"><a class="nav-link" href="list.html">Glossary <span class="sr-only">(current)</span></a></li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="encapsulated+stain.html#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Others</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" href="../article/list.html">Articles</a>
+					<a class="dropdown-item" href="../hazard/list.html">Hazards</a>
+					<a class="dropdown-item" href="../mineral/list.html">Minerals</a>
+					<a class="dropdown-item" href="../property/list.html">Properties</a>
+					<a class="dropdown-item" href="../schedule/list.html">Firing Schedules</a>
+					<a class="dropdown-item" href="../temperature/list.html">Temperatures</a>
+					<a class="dropdown-item" href="../trouble/list.html">Troubles</a>
+					<a class="dropdown-item" href="../test/list.html">Tests</a>
+					<a class="dropdown-item" href="../video/list.html">Media</a>
+					<a class="dropdown-item" href="../picture/list.html">Pictures</a>
+					<a class="dropdown-item" href="../typecode/list.html">Typecodes</a>
+					<a class="dropdown-item" href="../project/list.html">Projects</a>
+					<a class="dropdown-item" href="../consultants/list.html">Consultants</a>
+					<a class="dropdown-item" href="../schools/list.html">Schools</a>
+					<a class="dropdown-item" href="../stores/list.html">Stores</a>
+					<a class="dropdown-item" href="../potterytony/list.html">Don't Buy-A-Mug</a>
+					<div class="dropdown-divider"></div>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="../index.html">https://digitalfire.com</a>
+					<a class="dropdown-item" href="https://insight-live.com">Insight-Live.com</a>
+					<a class="dropdown-item" href="../index.html">Sign-Up</a>
+				</div>
+			</li>
+		</ul>
+		<form class="form-inline my-2 my-lg-0" action="https://digitalfire.com/index.php?searcharea=glossary" accept-charset="UTF-8" method="post">
+		<input name="searchfor" title="Search from home to search in all areas" maxlength="20" class="form-control mr-sm-2" aria-label="Search" placeholder="Search" autocorrect="off" autocapitalize="off" type="search" value=""><button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="searchbutton">Search</button>
+		</form>
+	</div>
+</nav>
+<div class="container"><p><a class="btn btn-primary" data-toggle="collapse" href="encapsulated+stain.html#collapse1" role="button" aria-expanded="false" aria-controls="collapse1">All Glossary</a></p>
+<div class="collapse" id="collapse1" style="margin-bottom:15px;"><nobr><a title="398" href="0.8mm+thickness.html">0.8mm thickness</a> |</nobr> <nobr><a title="343" href="200+mesh.html">200 mesh</a> |</nobr> <nobr><a title="335" href="325+mesh.html">325 mesh</a> |</nobr> <nobr><a title="309" href="3d+design.html">3D Design</a> |</nobr> <nobr><a title="390" href="3d+modeling.html">3D Modeling</a> |</nobr> <nobr><a title="310" href="3d+printer.html">3D Printer</a> |</nobr> <nobr><a title="314" href="3d+printing+clay.html">3D Printing Clay</a> |</nobr> <nobr><a title="311" href="3d+slicer.html">3D Slicer</a> |</nobr> <nobr><a title="267" href="3d-printing.html">3D-Printing</a> |</nobr> <nobr><a title="410" href="42+mesh.html">42 mesh</a> |</nobr> <nobr><a title="378" href="a.i.+in+ceramics.html">A.I. in Ceramics</a> |</nobr> <nobr><a title="1" href="abrasion+ceramics.html">Abrasion Ceramics</a> |</nobr> <nobr><a title="2" href="acidic+oxides.html">Acidic Oxides</a> |</nobr> <nobr><a title="168" href="agglomeration.html">Agglomeration</a> |</nobr> <nobr><a title="424" href="ai+at+digitalfire.html">AI at Digitalfire</a> |</nobr> <nobr><a title="139" href="alkali.html">Alkali</a> |</nobr> <nobr><a title="140" href="alkaline+earths.html">Alkaline Earths</a> |</nobr> <nobr><a title="397" href="all-in-one+case+mold.html">All-in-one case mold</a> |</nobr> <nobr><a title="3" href="amorphous.html">Amorphous</a> |</nobr> <nobr><a title="4" href="apparent+porosity.html">Apparent porosity</a> |</nobr> <nobr><a title="368" href="artware.html">Artware</a> |</nobr> <nobr><a title="208" href="ball+milling.html">Ball milling</a> |</nobr> <nobr><a title="174" href="bamboo+glaze.html">Bamboo Glaze</a> |</nobr> <nobr><a title="262" href="base+glaze.html">Base Glaze</a> |</nobr> <nobr><a title="303" href="base-coat+dipping+glaze.html">Base-Coat Dipping Glaze</a> |</nobr> <nobr><a title="6" href="basic+oxides.html">Basic Oxides</a> |</nobr> <nobr><a title="133" href="batch+recipe.html">Batch Recipe</a> |</nobr> <nobr><a title="8" href="bisque.html">Bisque</a> |</nobr> <nobr><a title="194" href="bit+image.html">Bit Image</a> |</nobr> <nobr><a title="9" href="black+core.html">Black Core</a> |</nobr> <nobr><a title="228" href="bleeding+of+colors.html">Bleeding of colors</a> |</nobr> <nobr><a title="366" href="blender+mixing.html">Blender Mixing</a> |</nobr> <nobr><a title="10" href="blunging.html">Blunging</a> |</nobr> <nobr><a title="114" href="body+bloating.html">Body Bloating</a> |</nobr> <nobr><a title="261" href="body+glaze+interface.html">Body glaze Interface</a> |</nobr> <nobr><a title="124" href="body+warping.html">Body Warping</a> |</nobr> <nobr><a title="145" href="bone+china.html">Bone China</a> |</nobr> <nobr><a title="129" href="borate.html">Borate</a> |</nobr> <nobr><a title="106" href="boron+blue.html">Boron Blue</a> |</nobr> <nobr><a title="135" href="boron+frit.html">Boron Frit</a> |</nobr> <nobr><a title="103" href="borosilicate.html">Borosilicate</a> |</nobr> <nobr><a title="249" href="breaking+glaze.html">Breaking Glaze</a> |</nobr> <nobr><a title="370" href="brick+making.html">Brick Making</a> |</nobr> <nobr><a title="290" href="brushing+glaze.html">Brushing Glaze</a> |</nobr> <nobr><a title="426" href="calcia+matte.html">Calcia Matte</a> |</nobr> <nobr><a title="137" href="calcination.html">Calcination</a> |</nobr> <nobr><a title="164" href="calculated+thermal+expansion.html">Calculated Thermal Expansion</a> |</nobr> <nobr><a title="13" href="candling.html">Candling</a> |</nobr> <nobr><a title="250" href="carbon+burnout.html">Carbon Burnout</a> |</nobr> <nobr><a title="14" href="carbon+trap+glazes.html">Carbon trap glazes</a> |</nobr> <nobr><a title="153" href="cas+numbers.html">CAS Numbers</a> |</nobr> <nobr><a title="403" href="casting+slip.html">Casting Slip</a> |</nobr> <nobr><a title="313" href="casting-jiggering.html">Casting-Jiggering</a> |</nobr> <nobr><a title="375" href="catch+glaze.html">Catch Glaze</a> |</nobr> <nobr><a title="100" href="celadon+glaze.html">Celadon Glaze</a> |</nobr> <nobr><a title="16" href="ceramic.html">Ceramic</a> |</nobr> <nobr><a title="183" href="ceramic+binder.html">Ceramic Binder</a> |</nobr> <nobr><a title="29" href="ceramic+decals.html">Ceramic Decals</a> |</nobr> <nobr><a title="45" href="ceramic+glaze.html">Ceramic Glaze</a> |</nobr> <nobr><a title="347" href="ceramic+glaze+defects.html">Ceramic Glaze Defects</a> |</nobr> <nobr><a title="245" href="ceramic+ink.html">Ceramic Ink</a> |</nobr> <nobr><a title="121" href="ceramic+material.html">Ceramic Material</a> |</nobr> <nobr><a title="67" href="ceramic+oxide.html">Ceramic Oxide</a> |</nobr> <nobr><a title="217" href="ceramic+slip.html">Ceramic Slip</a> |</nobr> <nobr><a title="182" href="ceramic+stain.html">Ceramic Stain</a> |</nobr> <nobr><a title="307" href="ceramic+tile.html">Ceramic Tile</a> |</nobr> <nobr><a title="394" href="ceramic+transfer.html">Ceramic Transfer</a> |</nobr> <nobr><a title="298" href="ceramics.html">Ceramics</a> |</nobr> <nobr><a title="299" href="characterization.html">Characterization</a> |</nobr> <nobr><a title="5" href="chemical+analysis.html">Chemical Analysis</a> |</nobr> <nobr><a title="176" href="chromaticity.html">Chromaticity</a> |</nobr> <nobr><a title="141" href="clay.html">Clay</a> |</nobr> <nobr><a title="11" href="clay+body.html">Clay body</a> |</nobr> <nobr><a title="72" href="clay+body+porosity.html">Clay Body Porosity</a> |</nobr> <nobr><a title="258" href="clay+stiffness.html">Clay Stiffness</a> |</nobr> <nobr><a title="373" href="clays+for+construction.html">Clays for Construction</a> |</nobr> <nobr><a title="337" href="clays+for+ovens+and+heaters.html">Clays for Ovens and Heaters</a> |</nobr> <nobr><a title="18" href="co-efficient+of+thermal+expansion.html">Co-efficient of Thermal Expansion</a> |</nobr> <nobr><a title="302" href="code+numbering.html">Code Numbering</a> |</nobr> <nobr><a title="19" href="coil+pottery.html">Coil pottery</a> |</nobr> <nobr><a title="20" href="colloid.html">Colloid</a> |</nobr> <nobr><a title="148" href="colorant.html">Colorant</a> |</nobr> <nobr><a title="376" href="commercial+hobby+brushing+glazes.html">Commercial hobby brushing glazes</a> |</nobr> <nobr><a title="333" href="cone+1.html">Cone 1</a> |</nobr> <nobr><a title="348" href="cone+5.html">Cone 5</a> |</nobr> <nobr><a title="340" href="cone+6.html">Cone 6</a> |</nobr> <nobr><a title="22" href="cone+plaque.html">Cone plaque</a> |</nobr> <nobr><a title="425" href="content+management+system.html">Content Management System</a> |</nobr> <nobr><a title="241" href="copper+red.html">Copper Red</a> |</nobr> <nobr><a title="199" href="cordierite+ceramics.html">Cordierite Ceramics</a> |</nobr> <nobr><a title="24" href="crackle+glaze.html">Crackle glaze</a> |</nobr> <nobr><a title="256" href="cristobalite.html">Cristobalite</a> |</nobr> <nobr><a title="115" href="cristobalite+inversion.html">Cristobalite Inversion</a> |</nobr> <nobr><a title="419" href="crm.html">CRM</a> |</nobr> <nobr><a title="255" href="crucible.html">Crucible</a> |</nobr> <nobr><a title="28" href="crystalline+glazes.html">Crystalline glazes</a> |</nobr> <nobr><a title="132" href="crystallization.html">Crystallization</a> |</nobr> <nobr><a title="315" href="cuerda+seca.html">Cuerda Seca</a> |</nobr> <nobr><a title="131" href="cutlery+marking.html">Cutlery Marking</a> |</nobr> <nobr><a title="136" href="decomposition.html">Decomposition</a> |</nobr> <nobr><a title="30" href="deflocculation.html">Deflocculation</a> |</nobr> <nobr><a title="177" href="dehydration.html">Dehydration</a> |</nobr> <nobr><a title="371" href="differential+thermal+analysis.html">Differential thermal analysis</a> |</nobr> <nobr><a title="382" href="digitalfire+api.html">Digitalfire API</a> |</nobr> <nobr><a title="260" href="digitalfire+foresight.html">Digitalfire Foresight</a> |</nobr> <nobr><a title="259" href="digitalfire+insight.html">Digitalfire Insight</a> |</nobr> <nobr><a title="253" href="digitalfire+insight-live.html">Digitalfire Insight-Live</a> |</nobr> <nobr><a title="320" href="digitalfire+reference+library.html">Digitalfire Reference Library</a> |</nobr> <nobr><a title="383" href="digitalfire+taxonomy.html">Digitalfire Taxonomy</a> |</nobr> <nobr><a title="32" href="dimpled+glaze.html">Dimpled glaze</a> |</nobr> <nobr><a title="399" href="dinnerware+safe.html">Dinnerware Safe</a> |</nobr> <nobr><a title="297" href="dip+glazing.html">Dip Glazing</a> |</nobr> <nobr><a title="301" href="dipping+glaze.html">Dipping Glaze</a> |</nobr> <nobr><a title="272" href="dishwasher+safe.html">Dishwasher Safe</a> |</nobr> <nobr><a title="391" href="displacer.html">Displacer</a> |</nobr> <nobr><a title="414" href="do-it-yourself.html">Do-It-Yourself</a> |</nobr> <nobr><a title="289" href="drop-and-soak+firing.html">Drop-and-Soak Firing</a> |</nobr> <nobr><a title="196" href="drying+crack.html">Drying Crack</a> |</nobr> <nobr><a title="170" href="drying+performance.html">Drying Performance</a> |</nobr> <nobr><a title="265" href="drying+shrinkage.html">Drying Shrinkage</a> |</nobr> <nobr><a title="33" href="dunting.html">Dunting</a> |</nobr> <nobr><a title="169" href="dust+pressing.html">Dust Pressing</a> |</nobr> <nobr><a title="34" href="earthenware.html">Earthenware</a> |</nobr> <nobr><a title="142" href="efflorescence.html">Efflorescence</a> |</nobr> <nobr><a title="37" href="37.html"><button type="button" class="btn btn-dark">Encapsulated Stain</button></a> |</nobr> <nobr><a title="35" href="engobe.html">Engobe</a> |</nobr> <nobr><a title="36" href="eutectic.html">Eutectic</a> |</nobr> <nobr><a title="154" href="fast+fire+glazes.html">Fast Fire Glazes</a> |</nobr> <nobr><a title="105" href="fat+glaze.html">Fat Glaze</a> |</nobr> <nobr><a title="401" href="fdm,+sla,+sls,+mex+3d+printing+technologies.html">FDM, SLA, SLS, MEX 3D printing technologies</a> |</nobr> <nobr><a title="155" href="feldspar+glazes.html">Feldspar Glazes</a> |</nobr> <nobr><a title="357" href="filter+press.html">Filter Press</a> |</nobr> <nobr><a title="350" href="fining+agent.html">Fining Agent</a> |</nobr> <nobr><a title="39" href="firebrick.html">Firebrick</a> |</nobr> <nobr><a title="229" href="fireclay.html">Fireclay</a> |</nobr> <nobr><a title="242" href="fired+strength.html">Fired Strength</a> |</nobr> <nobr><a title="226" href="firing+schedule.html">Firing Schedule</a> |</nobr> <nobr><a title="150" href="firing+shrinkage.html">Firing Shrinkage</a> |</nobr> <nobr><a title="98" href="flameware.html">Flameware</a> |</nobr> <nobr><a title="173" href="flashing.html">Flashing</a> |</nobr> <nobr><a title="40" href="flocculation.html">Flocculation</a> |</nobr> <nobr><a title="283" href="fluid+melt+glazes.html">Fluid Melt Glazes</a> |</nobr> <nobr><a title="42" href="flux.html">Flux</a> |</nobr> <nobr><a title="271" href="food+safe.html">Food Safe</a> |</nobr> <nobr><a title="195" href="foot+ring.html">Foot Ring</a> |</nobr> <nobr><a title="159" href="forming+method.html">Forming Method</a> |</nobr> <nobr><a title="202" href="formula+ratios.html">Formula Ratios</a> |</nobr> <nobr><a title="161" href="formula+weight.html">Formula Weight</a> |</nobr> <nobr><a title="43" href="frit.html">Frit</a> |</nobr> <nobr><a title="287" href="fritware.html">Fritware</a> |</nobr> <nobr><a title="210" href="functional.html">Functional</a> |</nobr> <nobr><a title="279" href="ghs+safety+data+sheets.html">GHS Safety Data Sheets</a> |</nobr> <nobr><a title="44" href="glass+vs.+crystalline.html">Glass vs. Crystalline</a> |</nobr> <nobr><a title="191" href="glass-ceramic+glazes.html">Glass-Ceramic Glazes</a> |</nobr> <nobr><a title="264" href="glaze+blisters.html">Glaze Blisters</a> |</nobr> <nobr><a title="184" href="glaze+bubbles.html">Glaze Bubbles</a> |</nobr> <nobr><a title="118" href="glaze+chemistry.html">Glaze Chemistry</a> |</nobr> <nobr><a title="197" href="glaze+compression.html">Glaze Compression</a> |</nobr> <nobr><a title="26" href="glaze+crawling.html">Glaze Crawling</a> |</nobr> <nobr><a title="27" href="glaze+crazing.html">Glaze Crazing</a> |</nobr> <nobr><a title="284" href="glaze+durability.html">Glaze Durability</a> |</nobr> <nobr><a title="46" href="glaze+fit.html">Glaze fit</a> |</nobr> <nobr><a title="244" href="glaze+gelling.html">Glaze Gelling</a> |</nobr> <nobr><a title="365" href="glaze+laydown.html">Glaze laydown</a> |</nobr> <nobr><a title="281" href="glaze+layering.html">Glaze Layering</a> |</nobr> <nobr><a title="294" href="glaze+mixing.html">Glaze Mixing</a> |</nobr> <nobr><a title="276" href="glaze+recipes.html">Glaze Recipes</a> |</nobr> <nobr><a title="79" href="glaze+shivering.html">Glaze shivering</a> |</nobr> <nobr><a title="212" href="glaze+shrinkage.html">Glaze Shrinkage</a> |</nobr> <nobr><a title="257" href="glaze+thickness.html">Glaze thickness</a> |</nobr> <nobr><a title="274" href="globally+harmonized+data+sheets.html">Globally Harmonized Data Sheets</a> |</nobr> <nobr><a title="47" href="glossy+glaze.html">Glossy Glaze</a> |</nobr> <nobr><a title="227" href="green+strength.html">Green Strength</a> |</nobr> <nobr><a title="48" href="grog.html">Grog</a> |</nobr> <nobr><a title="213" href="gunmetal+glaze.html">Gunmetal glaze</a> |</nobr> <nobr><a title="429" href="hand+building+techniques.html">Hand Building Techniques</a> |</nobr> <nobr><a title="116" href="high+temperature+glaze.html">High Temperature Glaze</a> |</nobr> <nobr><a title="158" href="hot+pressing.html">Hot Pressing</a> |</nobr> <nobr><a title="222" href="incised+decoration.html">Incised decoration</a> |</nobr> <nobr><a title="342" href="industrial+clay+body.html">Industrial clay body</a> |</nobr> <nobr><a title="389" href="infill+and+support.html">Infill and Support</a> |</nobr> <nobr><a title="247" href="ink+jet+printing.html">Ink Jet Printing</a> |</nobr> <nobr><a title="305" href="inside-only+glazing.html">Inside-only Glazing</a> |</nobr> <nobr><a title="221" href="iron+red+glaze.html">Iron Red Glaze</a> |</nobr> <nobr><a title="192" href="jasper+ware.html">Jasper Ware</a> |</nobr> <nobr><a title="49" href="jiggering.html">Jiggering</a> |</nobr> <nobr><a title="422" href="json.html">JSON</a> |</nobr> <nobr><a title="50" href="kaki.html">Kaki</a> |</nobr> <nobr><a title="23" href="kiln+controller.html">Kiln Controller</a> |</nobr> <nobr><a title="236" href="kiln+firing.html">Kiln Firing</a> |</nobr> <nobr><a title="51" href="kiln+fumes.html">Kiln fumes</a> |</nobr> <nobr><a title="52" href="kiln+venting+system.html">Kiln venting system</a> |</nobr> <nobr><a title="53" href="kiln+wash.html">Kiln Wash</a> |</nobr> <nobr><a title="374" href="kneading+clay.html">Kneading clay</a> |</nobr> <nobr><a title="323" href="kovar+metal.html">Kovar Metal</a> |</nobr> <nobr><a title="225" href="laminations.html">Laminations</a> |</nobr> <nobr><a title="54" href="leaching.html">Leaching</a> |</nobr> <nobr><a title="55" href="lead+in+ceramic+glazes.html">Lead in Ceramic Glazes</a> |</nobr> <nobr><a title="57" href="leather+hard.html">Leather hard</a> |</nobr> <nobr><a title="123" href="limit+formula.html">Limit Formula</a> |</nobr> <nobr><a title="304" href="limit+recipe.html">Limit Recipe</a> |</nobr> <nobr><a title="193" href="liner+glaze.html">Liner Glaze</a> |</nobr> <nobr><a title="361" href="liner+glazing.html">Liner Glazing</a> |</nobr> <nobr><a title="99" href="liquid+bright+colors.html">Liquid Bright Colors</a> |</nobr> <nobr><a title="56" href="loi.html">LOI</a> |</nobr> <nobr><a title="119" href="low+temperature+glaze.html">Low Temperature Glaze</a> |</nobr> <nobr><a title="146" href="magnesia+matte.html">Magnesia Matte</a> |</nobr> <nobr><a title="59" href="majolica.html">Majolica</a> |</nobr> <nobr><a title="420" href="managed+service+provider.html">Managed Service Provider</a> |</nobr> <nobr><a title="235" href="marbling.html">Marbling</a> |</nobr> <nobr><a title="219" href="material+substitution.html">Material Substitution</a> |</nobr> <nobr><a title="130" href="matte+glaze.html">Matte Glaze</a> |</nobr> <nobr><a title="60" href="maturity.html">Maturity</a> |</nobr> <nobr><a title="331" href="maximum+density.html">Maximum Density</a> |</nobr> <nobr><a title="216" href="mdt.html">MDT</a> |</nobr> <nobr><a title="286" href="mechanism.html">Mechanism</a> |</nobr> <nobr><a title="117" href="medium+temperature.html">Medium Temperature</a> |</nobr> <nobr><a title="112" href="melt+fluidity.html">Melt Fluidity</a> |</nobr> <nobr><a title="165" href="melting+temperature.html">Melting Temperature</a> |</nobr> <nobr><a title="339" href="metal+oxides.html">Metal Oxides</a> |</nobr> <nobr><a title="181" href="metallic+glazes.html">Metallic Glazes</a> |</nobr> <nobr><a title="185" href="micro+organisms.html">Micro Organisms</a> |</nobr> <nobr><a title="205" href="microwave+safe.html">Microwave Safe</a> |</nobr> <nobr><a title="70" href="mineral+phase.html">Mineral phase</a> |</nobr> <nobr><a title="120" href="mineralogy.html">Mineralogy</a> |</nobr> <nobr><a title="61" href="mocha+glazes.html">Mocha glazes</a> |</nobr> <nobr><a title="324" href="mohs+hardness.html">Mohs Hardness</a> |</nobr> <nobr><a title="392" href="mold+natches.html">Mold Natches</a> |</nobr> <nobr><a title="404" href="mold+shell+flange.html">Mold Shell Flange</a> |</nobr> <nobr><a title="204" href="mole%25.html">Mole%</a> |</nobr> <nobr><a title="156" href="monocottura.html">Monocottura</a> |</nobr> <nobr><a title="266" href="mosaic+tile.html">Mosaic Tile</a> |</nobr> <nobr><a title="62" href="mottled.html">Mottled</a> |</nobr> <nobr><a title="321" href="native+clay.html">Native Clay</a> |</nobr> <nobr><a title="104" href="non+oxide+ceramics.html">Non Oxide Ceramics</a> |</nobr> <nobr><a title="240" href="oil-spot+glaze.html">Oil-spot glaze</a> |</nobr> <nobr><a title="63" href="https://digitalfire.com/glossary/once+fire+glazing">Once fire glazing</a> |</nobr> <nobr><a title="64" href="opacifier.html">Opacifier</a> |</nobr> <nobr><a title="200" href="opacity.html">Opacity</a> |</nobr> <nobr><a title="97" href="ovenware.html">Ovenware</a> |</nobr> <nobr><a title="65" href="overglaze.html">Overglaze</a> |</nobr> <nobr><a title="66" href="oxidation+firing.html">Oxidation Firing</a> |</nobr> <nobr><a title="41" href="oxide+formula.html">Oxide Formula</a> |</nobr> <nobr><a title="207" href="oxide+interaction.html">Oxide Interaction</a> |</nobr> <nobr><a title="163" href="oxide+system.html">Oxide System</a> |</nobr> <nobr><a title="408" href="particle+classification.html">Particle classification</a> |</nobr> <nobr><a title="68" href="particle+orientation.html">Particle orientation</a> |</nobr> <nobr><a title="230" href="particle+size+distribution.html">Particle Size Distribution</a> |</nobr> <nobr><a title="407" href="particle+size+reduction.html">Particle size reduction</a> |</nobr> <nobr><a title="338" href="particle+sizes.html">Particle Sizes</a> |</nobr> <nobr><a title="69" href="pce.html">PCE</a> |</nobr> <nobr><a title="291" href="permeability.html">Permeability</a> |</nobr> <nobr><a title="190" href="phase+diagram.html">Phase Diagram</a> |</nobr> <nobr><a title="138" href="phase+separation.html">Phase Separation</a> |</nobr> <nobr><a title="269" href="physical+testing.html">Physical Testing</a> |</nobr> <nobr><a title="198" href="pinholing.html">Pinholing</a> |</nobr> <nobr><a title="325" href="plainsman+clays.html">Plainsman Clays</a> |</nobr> <nobr><a title="7" href="plaster+bat.html">Plaster Bat</a> |</nobr> <nobr><a title="319" href="plaster+table.html">Plaster table</a> |</nobr> <nobr><a title="251" href="plasticine.html">Plasticine</a> |</nobr> <nobr><a title="143" href="plasticity.html">Plasticity</a> |</nobr> <nobr><a title="263" href="plucking.html">Plucking</a> |</nobr> <nobr><a title="71" href="porcelain.html">Porcelain</a> |</nobr> <nobr><a title="428" href="porcelain+insulators.html">Porcelain Insulators</a> |</nobr> <nobr><a title="326" href="porcelaineous+stoneware.html">Porcelaineous Stoneware</a> |</nobr> <nobr><a title="421" href="portable+document+format.html">Portable Document Format</a> |</nobr> <nobr><a title="296" href="pour+glazing.html">Pour Glazing</a> |</nobr> <nobr><a title="381" href="pour+spout.html">Pour Spout</a> |</nobr> <nobr><a title="351" href="powder+processing.html">Powder Processing</a> |</nobr> <nobr><a title="234" href="precipitation.html">Precipitation</a> |</nobr> <nobr><a title="231" href="primary+clay.html">Primary Clay</a> |</nobr> <nobr><a title="73" href="primitive+firing.html">Primitive Firing</a> |</nobr> <nobr><a title="74" href="propane.html">Propane</a> |</nobr> <nobr><a title="175" href="propeller+mixer.html">Propeller Mixer</a> |</nobr> <nobr><a title="239" href="pugmill.html">Pugmill</a> |</nobr> <nobr><a title="128" href="pyroceramics.html">Pyroceramics</a> |</nobr> <nobr><a title="248" href="pyrometric+cone.html">Pyrometric Cone</a> |</nobr> <nobr><a title="162" href="quartz+inversion.html">Quartz Inversion</a> |</nobr> <nobr><a title="75" href="raku.html">Raku</a> |</nobr> <nobr><a title="94" href="reactive+glazes.html">Reactive Glazes</a> |</nobr> <nobr><a title="125" href="reduction+firing.html">Reduction Firing</a> |</nobr> <nobr><a title="186" href="reduction+speckle.html">Reduction Speckle</a> |</nobr> <nobr><a title="330" href="refiring+ceramics.html">Refiring Ceramics</a> |</nobr> <nobr><a title="76" href="refractory.html">Refractory</a> |</nobr> <nobr><a title="17" href="refractory+ceramic+coatings.html">Refractory Ceramic Coatings</a> |</nobr> <nobr><a title="220" href="representative+sample.html">Representative Sample</a> |</nobr> <nobr><a title="336" href="restaurant+ware.html">Restaurant Ware</a> |</nobr> <nobr><a title="127" href="rheology.html">Rheology</a> |</nobr> <nobr><a title="171" href="rutile+blue+glazes.html">Rutile Blue Glazes</a> |</nobr> <nobr><a title="77" href="salt+and+soda+firing.html">Salt and Soda firing</a> |</nobr> <nobr><a title="273" href="sanitary+ware.html">Sanitary ware</a> |</nobr> <nobr><a title="275" href="sculpture.html">Sculpture</a> |</nobr> <nobr><a title="423" href="search+engine+optimization+.html">Search Engine Optimization </a> |</nobr> <nobr><a title="232" href="secondary+clay.html">Secondary Clay</a> |</nobr> <nobr><a title="78" href="shino+glazes.html">Shino Glazes</a> |</nobr> <nobr><a title="380" href="side+rails.html">Side Rails</a> |</nobr> <nobr><a title="80" href="sieve.html">Sieve</a> |</nobr> <nobr><a title="356" href="sieve+shaker.html">Sieve Shaker</a> |</nobr> <nobr><a title="151" href="silica%253Aalumina+ratio.html">Silica:Alumina Ratio</a> |</nobr> <nobr><a title="81" href="silk+screen+printing.html">Silk screen printing</a> |</nobr> <nobr><a title="82" href="sintering.html">Sintering</a> |</nobr> <nobr><a title="160" href="slaking.html">Slaking</a> |</nobr> <nobr><a title="15" href="slip+casting.html">Slip Casting</a> |</nobr> <nobr><a title="147" href="slip+trailing.html">Slip Trailing</a> |</nobr> <nobr><a title="367" href="slipware.html">Slipware</a> |</nobr> <nobr><a title="362" href="slurry.html">Slurry</a> |</nobr> <nobr><a title="329" href="slurry+processing.html">Slurry Processing</a> |</nobr> <nobr><a title="349" href="slurry+up.html">Slurry Up</a> |</nobr> <nobr><a title="84" href="soaking.html">Soaking</a> |</nobr> <nobr><a title="157" href="soluble+colors.html">Soluble colors</a> |</nobr> <nobr><a title="254" href="soluble+salts.html">Soluble Salts</a> |</nobr> <nobr><a title="86" href="specific+gravity.html">Specific gravity</a> |</nobr> <nobr><a title="206" href="splitting.html">Splitting</a> |</nobr> <nobr><a title="277" href="spray+glazing.html">Spray Glazing</a> |</nobr> <nobr><a title="327" href="stain+medium.html">Stain Medium</a> |</nobr> <nobr><a title="85" href="stoneware.html">Stoneware</a> |</nobr> <nobr><a title="189" href="stull+chart.html">Stull Chart</a> |</nobr> <nobr><a title="179" href="sulfate+scum.html">Sulfate Scum</a> |</nobr> <nobr><a title="180" href="sulfates.html">Sulfates</a> |</nobr> <nobr><a title="111" href="surface+area.html">Surface Area</a> |</nobr> <nobr><a title="108" href="surface+tension.html">Surface Tension</a> |</nobr> <nobr><a title="83" href="suspension.html">Suspension</a> |</nobr> <nobr><a title="187" href="tapper+clay.html">Tapper Clay</a> |</nobr> <nobr><a title="87" href="tenmoku.html">Tenmoku</a> |</nobr> <nobr><a title="88" href="terra+cotta.html">Terra Cotta</a> |</nobr> <nobr><a title="238" href="terra+sigilatta.html">Terra Sigilatta</a> |</nobr> <nobr><a title="322" href="test+kiln.html">Test Kiln</a> |</nobr> <nobr><a title="122" href="theoretical+material.html">Theoretical Material</a> |</nobr> <nobr><a title="306" href="thermal+conductivity.html">Thermal Conductivity</a> |</nobr> <nobr><a title="89" href="thermal+shock.html">Thermal shock</a> |</nobr> <nobr><a title="90" href="thermocouple.html">Thermocouple</a> |</nobr> <nobr><a title="91" href="thixotropy.html">Thixotropy</a> |</nobr> <nobr><a title="359" href="throwing.html">Throwing</a> |</nobr> <nobr><a title="396" href="tipping+point.html">Tipping point</a> |</nobr> <nobr><a title="282" href="tony+hansen.html">Tony Hansen</a> |</nobr> <nobr><a title="316" href="toxicity.html">Toxicity</a> |</nobr> <nobr><a title="341" href="trafficking.html">Trafficking</a> |</nobr> <nobr><a title="233" href="translucency.html">Translucency</a> |</nobr> <nobr><a title="149" href="transparent+glazes.html">Transparent Glazes</a> |</nobr> <nobr><a title="280" href="triaxial+glaze+blending.html">Triaxial Glaze Blending</a> |</nobr> <nobr><a title="113" href="ultimate+particles.html">Ultimate Particles</a> |</nobr> <nobr><a title="92" href="underglaze.html">Underglaze</a> |</nobr> <nobr><a title="93" href="unity+formula.html">Unity Formula</a> |</nobr> <nobr><a title="312" href="upwork.html">Upwork</a> |</nobr> <nobr><a title="346" href="variegation.html">Variegation</a> |</nobr> <nobr><a title="109" href="viscosity.html">Viscosity</a> |</nobr> <nobr><a title="332" href="vitreous.html">Vitreous</a> |</nobr> <nobr><a title="95" href="vitrification.html">Vitrification</a> |</nobr> <nobr><a title="110" href="volatiles.html">Volatiles</a> |</nobr> <nobr><a title="379" href="water+content.html">Water Content</a> |</nobr> <nobr><a title="144" href="water+in+ceramics.html">Water in Ceramics</a> |</nobr> <nobr><a title="237" href="water+smoking.html">Water Smoking</a> |</nobr> <nobr><a title="126" href="water+solubility.html">Water Solubility</a> |</nobr> <nobr><a title="96" href="wedging.html">Wedging</a> |</nobr> <nobr><a title="308" href="whiteware.html">Whiteware</a> |</nobr> <nobr><a title="387" href="woocommerce.html">WooCommerce</a> |</nobr> <nobr><a title="101" href="wood+ash+glaze.html">Wood Ash Glaze</a> |</nobr> <nobr><a title="172" href="wood+firing.html">Wood Firing</a> |</nobr> <nobr><a title="386" href="wordpress.html">WordPress</a> |</nobr> <nobr><a title="293" href="zero3.html">Zero3</a> |</nobr> <nobr><a title="355" href="zero4.html">Zero4</a> |</nobr> <nobr><a title="178" href="zeta+potential.html">Zeta Potential</a></nobr></div><p style="clear:left"></p><p style="clear:left"></p><p style="clear:left"></p><p style="clear:left"></p><p style="clear:left"></p><p style="clear:left"></p><p style="clear:left"></p><p style="clear:left"></p><p style="clear:left"></p><p style="clear:left"></p><p style="clear:left"></p><p style="clear:left"></p><p style="clear:left"></p><p style="clear:left"></p><h1>Encapsulated Stain</h1>
+<p class="text-muted" style="margin-left:20px">This is a type of stain manufacture that enables the use of metal oxides (like cadmium) under temperature conditions in which they would normally fail.
+<p class="text-muted" style="margin-left:20px; font-style:italic; font-size:90%;"><b>Key phrases linking here:</b> encapsulated stain, inclusion stain
+ - <a href="../home/linkmaker.html">Learn more</a></p>
+</h4>
+<h2>Details</h2>
+<p>Encapsulated <a  href="ceramic+stain.html">stains</a> (also called inclusion stains) are a special class of man-made pigments that enable bright and difficult-to-achieve colors in ceramic glazes (especially reds and oranges). Like regular stains, they are intended to be incorporated into <a  href="engobe.html">engobe</a> or <a  href="glaze+recipes.html">glaze recipes</a>, not used as a straight powder but in a <a  href="stain+medium.html">stain medium</a>. These are a recent development in glaze technology, and many companies that hesitated to use them in the past now use encapsulated stains in their best-selling products, even on <a  href="functional.html">functional</a> surfaces.<br />
+<br />
+These stains can strongly pigment a glaze in amounts as low as 5% (if everything is right, see below) but up to 20% or more is needed for some colors and glazes. Stain companies showcase products (on their sample boards) using a little <a  href="opacifier.html">opacifier</a> (e.g. 3%) in the glaze (this likely intensifies the color). These stains often work well in zinc glazes without losing color.<br />
+<br />
+Encapsulated stains are not, as the name suggests (and some misunderstand), a <a  href="../material/1722.html">zircon</a> capsule around an otherwise unstable compound. Rather, they are manufactured by <a  href="sintering.html">sintering</a> to form a <a  href="glass+vs.+crystalline.html">crystalline</a> product (in a process called encapsulation). Mason colours, for example, describes a yellow stain they make as the “reaction product of high-temperature <a  href="calcination.html">calcination</a> in which Zirconium (IV) Oxide, Silicon (IV) Oxide, and Praseodymium (III, IV) Oxide (Pr6O11) in varying amounts are homogeneously and ionically interdiffused to form a crystalline matrix of zircon”.<br />
+<br />
+After sintering, they are ground, <a  href="filter+press.html">filter pressed</a> and dried. In cadmium encapsulated stains, for example, the matrix between the zircon and cadmium is stable to 1220C and the selenide/selenium is released during combination. The stain is further rendered safer-to-use by washing with water or weak acid to remove any soluble uncombined compounds (e.g. cadmium or soluble impurities). This washing process does produce toxic byproducts that can only be tolerated in certain countries (e.g. India, China).<br />
+<br />
+Manufacturers have specific recommendations for each stain (for an example, click the link below for the Mason reference guide). These stains must not be <a  href="ball+milling.html">ball milled</a> (mill the rest of the glaze prior to adding the stain). Some suppliers may hesitate to publish specifics that might give away trade secrets of their products, even relating to the <a  href="glaze+chemistry.html">chemistry</a> requirements in host glazes.<br />
+<br />
+Regardless of manufacturers' claims, detailed testing is needed to establish a firing curve and a compatible host glaze to get the best possible color. Encapsulated stains can cause <a  href="glaze+bubbles.html">bubbling</a> in specific glazes, even if the firing temperature is under the stability guideline. <br />
+<br />
+Although testing can discover combinations that perform outside stated boundaries (e.g. above 2300F or in glaze chemistries not recommended) it is best to follow directions. When the crystalline compounds are fired above recommended temperature they can release the toxic compound into the glaze (normally without volatilization unless the maximum temperature is greatly exceeded). Cadmium content and cadmium release are separate issues. The manufacturing process of these stains is designed to create a stable zircon compound from a parent metal that would otherwise be unstable (e.g. leachable <a  href="toxicity.html">toxicity</a>). Metal release tests must be done to monitor metal release.<br />
+<br />
+Other kinds of encapsulated stains besides cadmium are: Zircon Pr Yellow, Zircon Vanadium turquoise, Zircon Iron Coral, Zircon Vanadium Orange, Zircon Pr/Vanadium Green. The color depends on the sintering temperature.<p style="clear:left"></p></p>
+<h2 style="font-style:italic;">Related Information</h2>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">G2931K Transparent cone 03 with 15% inclusion stains</h3>
+<br /><a href="../picture/2046.html"><img class="flexleft50" loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/gwnwfxp8hh.jpg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/2046.html">click here</a> to see it.</p>
+<p>On <a  href="zero3.html">Zero3</a> <a  href="porcelain.html">porcelain</a>. Between 10 and 15% stain with 2-3% Zirocpax (<a  href="../material/1722.html">zircon</a>) added (to prevent <a  href="glaze+bubbles.html">bubbling</a>). The <a  href="firing+schedule.html">firing schedule</a> approached cone 03 (1950F) at 100F/hr for the final 100 degrees, held for 5 minutes, dropped to 1800 and held for 30 minutes.</p>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">When using stains, customize the percentage, host glaze and firing schedule</h3>
+<br /><a alt="Mugs with red and purple glaze stains" href="../picture/2187.html"><img class="flexleft50" alt="Mugs with red and purple glaze stains"  loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/rgaxa5s2cc.jpg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/2187.html">click here</a> to see it.</p>
+<p>These are <a  href="../recipe/g2926b.html">G2926B</a> clear glazes with <a  href="ceramic+stain.html">stains</a> added and fired at <a  href="cone+6.html">cone 6</a>. The one on the left has 11% Mason 6021 encapsulated red. It is pebbling the surface (even with 2% <a  href="../material/1722.html">zircon</a>), it may be at the upper end of its firing range. Possible solutions are faster firing up and down to give the stain less chance to <a  href="decomposition.html">decompose</a>. Or firing at <a  href="cone+5.html">cone 5</a> instead. Or a <a  href="drop-and-soak+firing.html">drop-and-hold</a> <a  href="firing+schedule.html">firing schedule</a>. Or a lower percentage, that could impart a bit of variation where it is thicker and thinner (like the purple one). A different host glaze, perhaps one with less <a  href="borate.html">boron</a>. The purple one has 10% Mason 6304, it is not affecting the <a  href="glossy+glaze.html">glossy glaze</a> surface. But the percentage needs to be higher to prevent the wash-out of color where it is applied thinner.</p>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">Transparent inner glaze over an encapsulated stained engobe</h3>
+<br /><a href="../picture/1838.html"><img class="flexleft50" loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/5or2xg2kcf.jpeg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/1838.html">click here</a> to see it.</p>
+<p>Encapsulated <a  href="ceramic+stain.html">stains</a> can reach their limits in a glaze host at cone six and begin to dissolve and <a  href="decomposition.html">decompose</a>. That is an obvious problem on a food surface. But in a less fluid <a  href="underglaze.html">underglaze</a> they can survive longer. The bright orange color on the left was likely done this way. The transparent over glaze is isolating it from any contact with food or drink. However people are more wary of the risk of glazes <a  href="leaching.html">leaching</a> heavy metals and having bright colours on food surfaces may not send the right message.</p>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">The covering power and opacity of an encapsulated stain</h3>
+<br /><a href="../picture/2050.html"><img class="flexleft50" loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/m6uxxnif47.jpg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/2050.html">click here</a> to see it.</p>
+<p>This <a  href="cone+6.html">cone 6</a> <a  href="porcelain.html">porcelain</a> bowl has a black <a  href="engobe.html">engobe</a> inside and half way down the outside. This inside glaze is a transparent (<a  href="../recipe/g2926b.html">G2926B</a>) but the outside is that same transparent with 11% added encapsulated red stain. Notice that the glaze is so opaque that you cannot see where the black engobe ends and the while porcelain body begins!</p>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">The varying power of different encapsulated stains</h3>
+<br /><a href="../picture/2069.html"><img class="flexleft50" loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/jjhfnnkt7h.jpg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/2069.html">click here</a> to see it.</p>
+<p>These mugs are fired at cone 03. The outside glazes are <a  href="../recipe/g2931k.html">G2931K</a> transparent with added stain plus 3% <a  href="../material/1724.html">Zircopax</a>. The left one contains 10% Mason 6021 red. The right one has 15% Cerdec 297497 red stain. The latter is an older product, obviously not as potent. Encapsulated <a  href="ceramic+stain.html">stains</a> are a revolution in <a  href="ceramics.html">ceramics</a> but test the ones available. You could save money and get better color at the same time.</p>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">The amount of encapsulated stain needed for intense color</h3>
+<br /><a href="../picture/2043.html"><img class="flexleft50" loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/7rysuk6jrf.jpg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/2043.html">click here</a> to see it.</p>
+<p>This is about 1/2 gallon of glaze with 150 grams of yellow stain ready to mix in. That stain retails for about $30 so its cost alone is about $60 for each gallon (in 2017). But the incredible color it produces cannot be done in any other practical way.</p>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">Want bright orange? Use a stain in your own base transparent recipe.</h3>
+<br /><a alt="Fired glaze tiles showing an orange promise, what actually came out and a better way" href="../picture/2343.html"><img class="flexleft50" alt="Fired glaze tiles showing an orange promise, what actually came out and a better way"  loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/7m8p6fq5oy.jpg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/2343.html">click here</a> to see it.</p>
+<p>Orange is a very difficult color in <a  href="ceramics.html">ceramics</a>. Inclusion <a  href="ceramic+stain.html">stains</a> are the only reliable method, they universally used in industry. But you could ignore that and try a bunch of recipes online. When they are  presented on flashy web pages they can look tantalizing. But beware! Are the exotic materials you need to buy worth it. Will it actually fire orange? Will it <a  href="../trouble/glaze+crazing.html">craze</a> or run or <a  href="../trouble/glaze+blisters.html">blister</a> or leach or cutlery mark or <a  href="../trouble/crawling.html">crawl</a> or settle like a rock in the bucket? It is much better to put an orange <a  href="encapsulated+stain.html">encapsulated stain</a> into a transparent glaze you already know works on your clay. Then just experiment with percentage to get the color you want. Or, how about trying a premixed orange at <a  href="earthenware.html">low fire</a>? Ware can be amazingly <a  href="functional.html">functional</a> at low temperatures (e.g. cone 03-02) and bright colours labelled for <a  href="low+temperature+glaze.html">cone 06</a> mostly work fine in that range.</p>
+<p style="clear:left"></p>
+<h3 style="margin-bottom:0px; margin-top:30px;">Industry can never make ware like a potter, right?</h3>
+<h4 style="color:#888888; margin-top:0px;">These souvenir mugs might make you reconsider!</h4>
+<br /><a alt="Alaska souvenir coffee mugs" href="../picture/3543.html"><img class="flexleft50" alt="Alaska souvenir coffee mugs"  loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/yqdesxbcli.jpg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/3543.html">click here</a> to see it.</p>
+<p>These <a  href="porcelain.html">porcelain</a> mugs are sold at many tourist shops on the Alaskan cruise circuit. Made in China, of course. But their quality is astounding. It seems that almost anything a potter can do can now be done in industry. And, these teach them multiple lessons - great skill in the use of decals (even inside), meeting different glazes at the rims, evenness of application, layering, the use of wax resist, etc. They likely have a glossy and matte <a  href="base+glaze.html">base glaze</a> and add <a  href="ceramic+stain.html">stains</a> (to get the black, blue, red, white, green). Notice they have an <a  href="iron+red+glaze.html">iron red</a> (lower right) that is stable enough not to run and host an even more <a  href="fluid+melt+glazes.html">fluid melt</a> second layer. They also have a stony yet <a  href="functional.html">functional</a> matte white (bottom left). And they are using encapsulated stains to get that bright red (even on food surfaces). In the words of a reader: “It seems industry has adopted a parasitic role vis-a-vis the creative types, put up with it, and try to be better at marketing”.<br />
+<br />
+You can make <a  href="dipping+glaze.html">dipping glaze</a> versions of all of these:<br />
+Black glossy: <a  href="https://insight-live.com/insight/share.php?z=bdwzQm6yQF">G3914A</a> and <a  href="https://insight-live.com/insight/share.php?z=bdwzQm6yQF">G2926BL</a><br />
+Black matte: <a  href="https://insight-live.com/insight/share.php?z=bdwzQm6yQF">G2934BL</a><br />
+Iron Red: <a  href="https://insight-live.com/insight/share.php?z=6TesQXNkkA">G3948A</a><br />
+White stoney matte: <a  href="https://insight-live.com/insight/share.php?z=y9rvvqsPy4">G2934Y2</a><br />
+Glossy colors: Add stains to <a  href="../recipe/g2926b.html">G2926B</a><br />
+Matte colors: Add stains to <a  href="../recipe/g2934.html">G2934</a><br />
+</p>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">Glaze with an encapsulated stain is bubbling. It needs Zircopax.</h3>
+<br /><a alt="Glaze orange peel defect" href="../picture/2049.html"><img class="flexleft50" alt="Glaze orange peel defect"  loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/u1ljkuemj8.jpg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/2049.html">click here</a> to see it.</p>
+<p>These two pieces are fired at <a  href="cone+6.html">cone 6</a>. The <a  href="base+glaze.html">base transparent</a> glaze is the same - <a  href="../recipe/g2926b.html">G2926B</a> <a  href="plainsman+clays.html">Plainsman</a> transparent. The amount of encapsulated red stain is the same (11% Mason 6021 Dark Red). But two things are different. Number 1: 2% <a  href="../material/1724.html">Zircopax</a> (<a  href="../material/1722.html">zircon</a>) has been added to the upper glaze. The stain manufacturers recommend this, saying that it makes for a brighter color. However, that is not what we see here. What we do see is the particles of unmelting zircon acting as seeds and collection points for the bubbles (the larger ones produced are escaping). Number 2: The <a  href="firing+schedule.html">firing schedule</a>. The top one has been fired to approach cone 6 and 100F/hr, held for five minutes at <a  href="cone+6.html">2200F</a> (cone 6 as verified in our kiln by cones), dropped quickly to 2100F and held for 30 minutes.</p>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">The glaze with less stain + 2% Zircopax is brighter than the one with more stain!</h3>
+<br /><a href="../picture/2057.html"><img class="flexleft50" loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/lqqfermk8t.jpg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/2057.html">click here</a> to see it.</p>
+<p>These are cone 03 porcelains with <a  href="../recipe/g2931k.html">G2931K</a> clear glaze base plus Mason 6021 <a  href="encapsulated+stain.html">encapsulated stain</a> (which is very expensive). The one on the left has 15% stain added. The one on the right is slightly less dense red but has only 10% stain plus 2% <a  href="../material/1722.html">zircon</a> (<a  href="../material/1724.html">zircopax</a>). Notice the zircon has smoothed the surface also, this is a known benefit of using it with encapsulated <a  href="ceramic+stain.html">stains</a>. The 2% addition is not enough to <a  href="opacifier.html">opacify</a>, the color remains deep and <a  href="translucency.html">translucent</a>. But the surface is still not completely smooth and glassy as is the <a  href="base+glaze.html">base transparent</a> glaze on its own. This can be improved using a <a  href="drop-and-soak+firing.html">drop-and-hold</a> <a  href="firing+schedule.html">firing schedule</a>.</p>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">Red stain in matte and glossy bases. Which looks best?</h3>
+<br /><a href="../picture/2161.html"><img class="flexleft50" loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/1tuxw3rodf.jpg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/2161.html">click here</a> to see it.</p>
+<p>The silky matte. 11% Mason 6021 <a  href="encapsulated+stain.html">encapsulated stain</a> has been added to each. The one on the left is <a  href="../recipe/g2926b.html">G2926B</a> glossy base (it also has 2% <a  href="../material/1724.html">zircopax</a> as a <a  href="../picture/2702.html">fining agent</a> for the <a  href="glaze+bubbles.html">micro-bubbles</a>). But in the matte base on the right, <a  href="../recipe/g2934y.html">G2934Y</a>, no zircopax is necessary. It produces a stunning surface using this and other <a  href="ceramic+stain.html">stains</a> (including orange, yellow, black, purple), very pleasant to touch.</p>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">Zircopax as a fining agent to de-bubble a stained glaze</h3>
+<br /><a href="../picture/2048.html"><img class="flexleft50" loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/tsvmr6kxcr.jpg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/2048.html">click here</a> to see it.</p>
+<p>The cone 03 <a  href="porcelain.html">porcelain</a> cup on the left has 10% Cerdec <a  href="encapsulated+stain.html">encapsulated stain</a> 239416 in the <a  href="../recipe/g2931k.html">G2931K</a> clear base (this is not an <a  href="underglaze.html">underglaze</a> with a transparent over it). The surface is badly orange-peeled because the glass is full of <a  href="glaze+bubbles.html">micro-bubbles</a> that developed during the firing. Notice that the insides of the cups are crystal-clear, no bubbles. So here, they are a direct product of the presence of the stain. The glaze on the right has even more stain, 15%. Why isn't it even worse? It also has a 3% addition of <a  href="../material/1724.html">Zircopax</a> (<a  href="../material/1722.html">zircon</a>), which acts as a <a  href="../picture/2702.html">fining agent</a>. As you can see, this makes a dramatic difference. Suppliers of encapsulated <a  href="ceramic+stain.html">stains</a> even recommend a zircon addition, but are often unclear about why. This is the reason.<br />
+<br />
+The yellow on the right could be improved further with a slow-cool or <a  href="drop-and-soak+firing.html">drop-and-hold</a> firing. And if the glaze was reformulated to use a later melting <a  href="frit.html">frit</a> (so fewer bubbles even get trapped).</p>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">Encapsulated stains are firing with a mass of bubbles and pinholes</h3>
+<br /><a href="../picture/2038.html"><img class="flexleft50" loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/rkftrh65pb.jpg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/2038.html">click here</a> to see it.</p>
+<p>This is happening on five different <a  href="ceramic+stain.html">stains</a> at 8% concentrations. The body: A <a  href="frit.html">fritted</a> <a  href="porcelain.html">porcelain</a>. Temperature: Cone 03. The glaze: 85% <a  href="frit.html">frit</a>. The solution? Documentation for inclusion <a  href="frit.html">frits</a> notes that adding 2-3% <a  href="../material/1722.html">zircon</a> can brighten the color. Although this does not seem intuitive, we added 2% anyway and refired another sample. You can see the dramatic difference on that tile below. The color is brighter because the micro-bubble clouds that were diffusing it are gone! Of course, it is apparent that the percentage of stain also needs to be increased to get more intense color. What happened to the bubbles? It could be that the particles of zircon that float, unmelted in the glaze melt, act as seed-points for bubble <a  href="agglomeration.html">agglomeration</a> and the bigger bubbles then break the surface and it heals behind them. But where do the bubbles come from? I do not know.</p>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">A glaze incompatible with chrome-tin stains (but great with inclusion stains)</h3>
+<br /><a alt="A bright red matte glaze" href="../picture/1023.html"><img class="flexleft50" alt="A bright red matte glaze"  loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/daszihigaw.jpg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/1023.html">click here</a> to see it.</p>
+<p>Left: A <a  href="cone+6.html">cone 6</a> <a  href="matte+glaze.html">matte glaze</a> (<a  href="../recipe/g2934.html">G2934</a> with no <a  href="colorant.html">colorant</a>). Middle: 5% Mason 6006 chrome-tin red stain added. Right: 5% Mason 6021 encapsulated red stain added. Why is there absolutely no color in the center glaze? This host recipe does not have the needed <a  href="glaze+chemistry.html">chemistry</a> to develop the #6006 chrome-tin color (Mason specifies 10% minimum <a  href="../oxide/cao.html">CaO</a>, this almost has enough at 9.8%, but it also has 5% <a  href="../oxide/mgo.html">MgO</a> and that is killing the color). Yet this same glaze produces a good red with #6021 <a  href="encapsulated+stain.html">encapsulated stain</a> at only 5% (using 20% or more encapsulated stain is not unusual - so achieving this color with only 5% is amazing).</p>
+<p style="clear:left"></p>
+<h3>Inbound Photo Links</h3><table><tr>
+<td style="vertical-align:top; font-size:80%;">
+<br /><a href="../picture/1221.html"><img style="margin:0px 10px 10px 0px; height:100px;" loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/xudretikiz-100H.jpg" /></a><br />Pushing the limits of an encapsulated stain
+</td>
+</tr></table><br />
+<h3>Links</h3><table>
+<table class="table table-bordered"><tbody>
+<tr>
+<td scope="row">Glossary</td>
+<td>
+<a href="colorant.html">Colorant</a>
+<br /><i>In <a  href="ceramics.html">ceramics</a> and pottery, <a  href="colorant.html">colorants</a> are added to glazes as <a  href="metal+oxides.html">metal oxides</a>, metal-oxide-containing raw materials or as manufactured <a  href="ceramic+stain.html">stains</a>.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Glossary</td>
+<td>
+<a href="glass-ceramic+glazes.html">Glass-Ceramic Glazes</a>
+<br /><i></i>
+</td>
+</tr>
+<tr>
+<td scope="row">Glossary</td>
+<td>
+<a href="ceramic+stain.html">Ceramic Stain</a>
+<br /><i>Ceramic <a  href="ceramic+stain.html">stains</a> are manufactured powders. They are used as an alternative to employing metal oxide powders and have many advantages.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Glossary</td>
+<td>
+<a href="food+safe.html">Food Safe</a>
+<br /><i>Be skeptical of claims of <a  href="food+safe.html">food safety</a> from potters who cannot explain or demonstrate why. Investigate the basis of manufacturer claims and labelling and the actual use to which their products are put.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Glossary</td>
+<td>
+<a href="stain+medium.html">Stain Medium</a>
+<br /><i>It is a mistake to use pure <a  href="ceramic+stain.html">stains</a> for decorating ware. Stains need to be mixed with a ceramic carrier and a working medium to work and fire well.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Materials</td>
+<td>
+<a href="../material/cadmium+oxide.html">Cadmium Oxide</a>
+<br /><i></i>
+</td>
+</tr>
+<tr>
+<td scope="row">Materials</td>
+<td>
+<a href="../material/red+stains.html">Red Stains</a>
+<br /><i></i>
+</td>
+</tr>
+<tr>
+<td scope="row">Materials</td>
+<td>
+<a href="../material/stain.html">Stain</a>
+<br /><i></i>
+</td>
+</tr>
+<tr>
+<td scope="row">Materials</td>
+<td>
+<a href="../material/mason+6021+red+stain.html">Mason 6021 Red Stain</a>
+<br /><i>An encapsulated red stain, it has proven better than any other red we have ever tried for glazes. And it works in bodies.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Oxides</td>
+<td>
+<a href="../oxide/cdo.html">CdO - Cadmium Oxide</a>
+</td>
+</tr>
+<tr>
+<td scope="row">Articles</td>
+<td>
+<a href="../article/glaze+and+body+pigments+and+stains+in+the+ceramic+tile+industry.html">Glaze and Body Pigments and Stains in the Ceramic Tile Industry</a>
+<br /><i>A complete discussion of how ceramic pigments and <a  href="ceramic+stain.html">stains</a> are manufactured and used in the tile industry. It includes theory, types, colors, <a  href="opacifier.html">opacification</a>, processing, particles size, testing information.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Projects</td>
+<td>
+<a href="../project/stains.html">Stains</a>
+<br /><i></i>
+</td>
+</tr>
+<tr>
+<td scope="row">URLs</td>
+<td>
+<a href="../url/1422.html">https://www.masoncolor.com/reference-guide</a>
+<br /><i>Mason Color Reference Guide</i>
+<br /><i style="color:#888888;">A large chart showing each stain. The rows are grouped according to type and each row has tags that references temperature capability and <a  href="glaze+chemistry.html">chemistry</a> requirement for the host glaze. There are also columns for each element and the rows have check marks for each contained.</i>
+</td>
+</tr>
+</tbody></table><table style="margin:30px 0px 30px 0px;"><tr><td style="vertical-align:middle; text-align:center; font-size:80%;"><img src="../images/PayPalDonate.png" style="height:66px; padding-right:20px;"><br /><a href="https://www.paypal.com/donate/?hosted_button_id=F8L3JX4BCCXJ6">PayPal</a></td><td style="background-color:#ddffdd; padding:10px; border:thin solid grey; font-size:90%;"><b>No</b> tracking, <b>No</b> ads, <b>No</b> paywall, <b>No</b> transient content!<br />Just organized, concise information constantly updated and improved.<br />Was this helpful? Consider supporting me.</td><tr></table><table style="margin-top:30px; padding-top:10px; padding-bottom:20px; border-top:thin solid grey; border-bottom:thin solid grey;"><tr><td style="padding-right:10px">By <i>Tony Hansen</i><br /><span style="font-size:80%; color:#888888;">Follow me on<br /><a title="Threads" href="https://www.threads.net/@tonyatdigitalfire" target="_blank"><img src="../images/threads.jpg" style="width:20px;" border="0"></a> <a title="Facebook Insight-Live" href="https://www.facebook.com/insightlive" target="_blank"><img src="../images/facebook.jpg" style="width:20px;" border="0"></a> <a title="LinkedIn" href="https://www.linkedin.com/in/tonywhansen/" target="_blank"><img src="../images/linkedin.jpg" style="width:20px;" border="0"></a> <a title="Pinterest" href="https://www.pinterest.ca/tonywhansen" target="_blank"><img src="../images/pinterest.jpg" style="width:20px;" border="0"></a> <a title="Instagram" href="https://instagram.com/tonyatdigitalfire" target="_blank"><img src="../images/instagram.jpg" style="width:20px;" border="0"></a> <a title="Ko-Fi" href="https://ko-fi.com/tonyhansen#" target="_blank"><img src="../images/ko-fi.jpg" style="width:20px;" border="0"></a> <a title="Twitter" href="https://x.com/digitalfiretony" target="_blank"><img src="../images/twitter.jpg" style="width:20px;" border="0"></a></td><td><a href="https://tonyhansen.com/about"><img src="../images/SignaturePhotoSmall.jpg" height="80"></a></td></tr></table><h3>Got a Question?</h3><p style="margin-bottom:30px;"><a name="kofi">Buy me a coffee and we can talk</a> <a target="_blank" href="https://ko-fi.com/tonyhansen"><img style="width:40px" src="../images/ko-fi.svg"></a></p><p style="margin-bottom:30px;">&nbsp;</p>
+<p></p><p></p><hr>
+<img style="width:250px" src="../4sight/images/ReferenceLibrary.svg">
+<br />
+<a href="../index.html">https://digitalfire.com</a>, All Rights Reserved
+<br /><a href="../w3c/privacypolicy.php.html">Privacy Policy</a>
+</div>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+</body>
+</html>

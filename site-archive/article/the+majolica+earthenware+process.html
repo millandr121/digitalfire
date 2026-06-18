@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="../favicon.svg">
+<link rel="mask-icon" href="../mask-icon.svg" color="#000000">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<title>The Majolica Earthenware Process</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<meta name="author" content="Tony Hansen">
+<meta name="description" content="How to make strong, durable functional ware from red terra cotta odies based on the traditional of majolica.">
+<style>
+.flexinline { width: 50%; height: auto; clear:left; margin: 10px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexinline { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexright50 { width: 50%; height: auto; float: right; margin: 5px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexright50 { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexright33 { width: 33%; height: auto; float: right; margin: 5px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexright33 { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexright25 { width: 25%; height: auto; float: right; margin: 5px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexright25 { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexleft50 { width: 50%; height: auto; float: left; margin: 5px 15px 10px 0px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexleft50 { width: 100%; height: auto; margin: 5px 10px 10px 0px; border: none; padding: none; } }
+.flexleft33 { width: 33%; height: auto; float: left; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexleft33 { width: 100%; height: auto; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; } }
+.flexleft25 { width: 25%; height: auto; float: left; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexleft25 { width: 100%; height: auto; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; } }
+.pictureseries { overflow:scroll; width:auto; height:200px; float:left; margin: 5px 10px 10px 0px; padding: 5px; font-size:60%; font-style:italic;}
+@media (max-width: 640px) { .pictureseries { overflow:scroll; width:auto; height:200px; float:left; margin: 5px 10px 10px 0px; border: padding: 5px; font-size:60%; font-style:italic;} }
+.L2 { margin-left:0px; }
+.L3 { margin-left:20px; color:#222222; }
+.L4 { margin-left:40px; color:#444444; }
+.L5 { margin-left:60px; color:#666666; }
+.L6 { margin-left:60px; color:#888888; }
+h2 { color:#222222; }
+h3 { color:#444444; }
+h4 { color:#666666; }
+h5 { color:#888888; }
+
+</style>
+
+<meta name="google-site-verification" content="wquYW_n-3QEfIzDfV--8ElUewf7TIt04RGo55GfZySU" />
+<meta name="have-i-been-pwned-verification" value="9223dcee7de5c9622c2a2abcff4adc81">
+<script>
+function validateForm() {
+	var x = document.forms["emailform1"]["name1"].value;
+	var r = true;
+	if (x == "") { // alert("A name is required."); 
+		document.getElementById("name1").textContent="Name Required";
+		document.getElementById("name1").style.color="red";
+		// document.emailform1.name1.focus() ; # does not work, should be getelementbyid
+		r = false; 
+	} else {
+		document.getElementById("name1").textContent="Name";
+		document.getElementById("name1").style.color="black";
+	}
+	if (document.forms["emailform1"]["subject1"].value == "") { 
+		document.getElementById("subject1").textContent="Subject Required";
+		document.getElementById("subject1").style.color="red";
+		r = false; 
+	} else {
+		document.getElementById("subject1").textContent="Subject";
+		document.getElementById("subject1").style.color="black";
+	}			
+	if (document.forms["emailform1"]["msg1"].value == "") { 
+		document.getElementById("msg1").textContent="Message Required";
+		document.getElementById("msg1").style.color="red";
+		// alert("A message is required."); 
+		r = false; 
+	} else {
+		document.getElementById("msg1").textContent="Message";
+		document.getElementById("msg1").style.color="black";
+	}
+	var emailID = document.emailform1.email1.value;
+	atpos = emailID.indexOf("@");
+	dotpos = emailID.lastIndexOf(".");
+	if (atpos < 1 || ( dotpos - atpos < 2 )) {
+		document.getElementById("email1").textContent="Email Address Appears Invalid!";
+		document.getElementById("email1").style.color="red";
+		// alert("Your email address appears invalid.")
+		r = false;
+	} else {
+		document.getElementById("email1").textContent="Email Address";
+		document.getElementById("email1").style.color="black";
+	}
+	// Send the form
+	if (r == false) return false;
+	document.forms["emailform1"].submit();
+}
+</script>
+</head>
+<body>
+<p style="background-color:#ff9933; border-width:1px; padding:3px 10px 3px 10px; margin:0px 0px 3px 0px; font-size:80%; text-align:center;">
+Digitalfire will shut down on June 26. I no longer have the authority to grant exemption to a section in the Terms and Conditions of using material in the Insight-Live account from which I built the source material. While there are ways to comply with the take-down order, they are beyond my means because of how complex and large the site has become in the past 35+ years. It has been a wild ride for a shy prairie boy, thanks to everyone for your support. Insight-live.com is not affected by this.</p>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<a name="pagetop" class="navbar-brand" href="../home.html"><img src="../4sight/images/ReferenceLibrary.svg" height="40" alt=""></a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item"><a class="nav-link" href="../home.html">Home</a></li>
+			<li class="nav-item"><a class="nav-link" href="../oxide/list.html">Oxides</a></li>
+			<li class="nav-item"><a class="nav-link" href="../material/list.html">Materials</a></li>
+			<li class="nav-item"><a class="nav-link" href="../recipe/list.html">Recipes</a></li>
+			<li class="nav-item"><a class="nav-link" href="../glossary/list.html">Glossary</a></li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="the+majolica+earthenware+process.html#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Others</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item active" href="list.html">Articles</a>
+					<a class="dropdown-item" href="../hazard/list.html">Hazards</a>
+					<a class="dropdown-item" href="../mineral/list.html">Minerals</a>
+					<a class="dropdown-item" href="../property/list.html">Properties</a>
+					<a class="dropdown-item" href="../schedule/list.html">Firing Schedules</a>
+					<a class="dropdown-item" href="../temperature/list.html">Temperatures</a>
+					<a class="dropdown-item" href="../trouble/list.html">Troubles</a>
+					<a class="dropdown-item" href="../test/list.html">Tests</a>
+					<a class="dropdown-item" href="../video/list.html">Media</a>
+					<a class="dropdown-item" href="../picture/list.html">Pictures</a>
+					<a class="dropdown-item" href="../typecode/list.html">Typecodes</a>
+					<a class="dropdown-item" href="../project/list.html">Projects</a>
+					<a class="dropdown-item" href="../consultants/list.html">Consultants</a>
+					<a class="dropdown-item" href="../schools/list.html">Schools</a>
+					<a class="dropdown-item" href="../stores/list.html">Stores</a>
+					<a class="dropdown-item" href="../potterytony/list.html">Don't Buy-A-Mug</a>
+					<div class="dropdown-divider"></div>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="../index.html">https://digitalfire.com</a>
+					<a class="dropdown-item" href="https://insight-live.com">Insight-Live.com</a>
+					<a class="dropdown-item" href="../index.html">Sign-Up</a>
+				</div>
+			</li>
+		</ul>
+		<form class="form-inline my-2 my-lg-0" action="https://digitalfire.com/index.php?searcharea=article" accept-charset="UTF-8" method="post">
+		<input name="searchfor" title="Search from home to search in all areas" maxlength="20" class="form-control mr-sm-2" aria-label="Search" placeholder="Search" autocorrect="off" autocapitalize="off" type="search" value=""><button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="searchbutton">Search</button>
+		</form>
+	</div>
+</nav>
+<div class="container"><p><a class="btn btn-primary" data-toggle="collapse" href="the+majolica+earthenware+process.html#collapse1" role="button" aria-expanded="false" aria-controls="collapse1">All Articles</a></p>
+<div class="collapse" id="collapse1" style="margin-bottom:15px;"><a title="388" href="388.html">A ChatBot gives jaw-dropping glaze recipe advice - Jan 2025</a><br /><a title="244" href="244.html">A Low Cost Tester of Glaze Melt Fluidity</a><br /><a title="361" href="https://digitalfire.com/article/361">A One-speed Lab or Studio Slurry Mixer</a><br /><a title="353" href="353.html">A Textbook Cone 6 Matte Glaze With Problems</a><br /><a title="199" href="199.html">Adjusting Glaze Expansion by Calculation to Solve Shivering</a><br /><a title="251" href="251.html">Alberta Slip, 20 Years of Substitution for Albany Slip</a><br /><a title="273" href="273.html">An Overview of Ceramic Stains</a><br /><a title="37" href="37.html">Are You in Control of Your Production Process?</a><br /><a title="12" href="12.html">Are Your Glazes Food Safe or are They Leachable?</a><br /><a title="143" href="143.html">Attack on Glass: Corrosion Attack Mechanisms</a><br /><a title="204" href="204.html">Ball Milling Glazes, Bodies, Engobes</a><br /><a title="345" href="345.html">Binders for Ceramic Bodies</a><br /><a title="4" href="4.html">Bringing Out the Big Guns in Craze Control: MgO (G1215U)</a><br /><a title="381" href="381.html">Can We Help You Fix a Specific Problem?</a><br /><a title="124" href="124.html">Ceramic Glazes Today</a><br /><a title="208" href="208.html">Ceramic Material Nomenclature</a><br /><a title="336" href="336.html">Ceramic Tile Clay Body Formulation</a><br /><a title="217" href="217.html">Changing Our View of Glazes</a><br /><a title="22" href="22.html">Chemistry vs. Matrix Blending to Create Glazes from Native Materials</a><br /><a title="209" href="209.html">Concentrate on One Good Glaze</a><br /><a title="115" href="115.html">Copper Red Glazes</a><br /><a title="271" href="271.html">Crazing and Bacteria: Is There a Hazard?</a><br /><a title="190" href="190.html">Crazing in Stoneware Glazes: Treating the Causes, Not the Symptoms</a><br /><a title="97" href="97.html">Creating a Non-Glaze Ceramic Slip or Engobe</a><br /><a title="195" href="195.html">Creating Your Own Budget Glaze</a><br /><a title="36" href="36.html">Crystal Glazes: Understanding the Process and Materials</a><br /><a title="324" href="324.html">Deflocculants: A Detailed Overview</a><br /><a title="32" href="32.html">Demonstrating Glaze Fit Issues to Students</a><br /><a title="334" href="334.html">Diagnosing a Casting Problem at a Sanitaryware Plant</a><br /><a title="196" href="196.html">Drying Ceramics Without Cracks</a><br /><a title="187" href="187.html">Duplicating Albany Slip</a><br /><a title="45" href="45.html">Duplicating AP Green Fireclay</a><br /><a title="197" href="197.html">Electric Hobby Kilns: What You Need to Know</a><br /><a title="39" href="39.html">Fighting the Glaze Dragon</a><br /><a title="214" href="214.html">Firing Clay Test Bars</a><br /><a title="200" href="200.html">Firing: What Happens to Ceramic Ware in a Firing Kiln</a><br /><a title="113" href="113.html">First You See It Then You Don't: Raku Glaze Stability</a><br /><a title="316" href="316.html">Fixing a glaze that does not stay in suspension</a><br /><a title="338" href="338.html">Formulating a body using clays native to your area</a><br /><a title="191" href="191.html">Formulating a Clear Glaze Compatible with Chrome-Tin Stains</a><br /><a title="282" href="282.html">Formulating a Porcelain</a><br /><a title="188" href="188.html">Formulating Ash and Native-Material Glazes</a><br /><a title="114" href="114.html">G1214M Cone 5-7 20x5 glossy transparent glaze</a><br /><a title="121" href="121.html">G1214W Cone 6 transparent glaze</a><br /><a title="122" href="122.html">G1214Z Cone 6 matte glaze</a><br /><a title="226" href="226.html">G1916M Cone 06-04 transparent glaze</a><br /><a title="203" href="203.html">Getting the Glaze Color You Want: Working With Stains</a><br /><a title="342" href="342.html">Glaze and Body Pigments and Stains in the Ceramic Tile Industry</a><br /><a title="189" href="189.html">Glaze Chemistry Basics - Formula, Analysis, Mole%, Unity </a><br /><a title="358" href="358.html">Glaze chemistry using a frit of approximate analysis</a><br /><a title="123" href="123.html">Glaze Recipes: Formulate and Make Your Own Instead</a><br /><a title="343" href="343.html">Glaze Types, Formulation and Application in the Tile Industry</a><br /><a title="181" href="181.html">Having Your Glaze Tested for Toxic Metal Release</a><br /><a title="364" href="364.html">High Gloss Glazes</a><br /><a title="384" href="384.html">Hire Us for a 3D Printing Project</a><br /><a title="136" href="136.html">How a Material Chemical Analysis is Done</a><br /><a title="235" href="235.html">How desktop INSIGHT Deals With Unity, LOI and Formula Weight</a><br /><a title="331" href="331.html">How to Find and Test Your Own Native Clays</a><br /><a title="26" href="26.html">I have always done it this way!</a><br /><a title="344" href="344.html">Inkjet Decoration of Ceramic Tiles</a><br /><a title="279" href="279.html">Is Your Fired Ware Safe?</a><br /><a title="311" href="311.html">Leaching Cone 6 Glaze Case Study</a><br /><a title="206" href="206.html">Limit Formulas and Target Formulas</a><br /><a title="133" href="133.html">Low Budget Testing of Ceramic Glazes</a><br /><a title="333" href="333.html">Make Your Own Ball Mill Stand</a><br /><a title="347" href="347.html">Making Glaze Testing Cones</a><br /><a title="341" href="341.html">Monoporosa or Single Fired Wall Tiles</a><br /><a title="325" href="325.html">Organic Matter in Clays: Detailed Overview</a><br /><a title="105" href="105.html">Outdoor Weather Resistant Ceramics</a><br /><a title="27" href="27.html">Painting Glazes Rather Than Dipping or Spraying</a><br /><a title="212" href="212.html">Particle Size Distribution of Ceramic Powders</a><br /><a title="339" href="339.html">Porcelain Tile, Vitrified Tile</a><br /><a title="20" href="20.html">Rationalizing Conflicting Opinions About Plasticity</a><br /><a title="332" href="332.html">Ravenscrag Slip is Born</a><br /><a title="247" href="247.html">Recylcing Scrap Clay</a><br /><a title="101" href="101.html">Reducing the Firing Temperature of a Glaze From Cone 10 to 6</a><br /><a title="329" href="329.html">Setting up a Clay Testing Program in Your Company or Studio</a><br /><a title="211" href="211.html">Simple Physical Testing of Clays</a><br /><a title="350" href="350.html">Single Fire Glazing</a><br /><a title="326" href="326.html">Soluble Salts in Minerals: Detailed Overview</a><br /><a title="28" href="28.html">Some Keys to Dealing With Firing Cracks</a><br /><a title="249" href="249.html">Stoneware Casting Body Recipes</a><br /><a title="194" href="194.html">Substituting Cornwall Stone</a><br /><a title="274" href="274.html">Super-Refined Terra Sigillata</a><br /><a title="340" href="340.html">The Chemistry, Physics and Manufacturing of Glaze Frits</a><br /><a title="202" href="202.html">The Effect of Glaze Fit on Fired Ware Strength</a><br /><a title="125" href="125.html">The Four Levels on Which to View Ceramic Glazes</a><br /><a title="207" href="207.html"><button type="button" class="btn btn-dark">The Majolica Earthenware Process</button></a><br /><a title="43" href="43.html">The Potter's Prayer</a><br /><a title="359" href="359.html">The Right Chemistry for a Cone 6 Magnesia Matte</a><br /><a title="33" href="33.html">The Trials of Being the Only Technical Person in the Club</a><br /><a title="107" href="107.html">The Whining Stops Here: A Realistic Look at Clay Bodies</a><br /><a title="134" href="134.html">Those Unlabelled Bags and Buckets</a><br /><a title="16" href="16.html">Tiles and Mosaics for Potters</a><br /><a title="308" href="308.html">Toxicity of Firebricks Used in Ovens</a><br /><a title="379" href="379.html">Trafficking in Glaze Recipes</a><br /><a title="216" href="216.html">Understanding Ceramic Materials</a><br /><a title="210" href="210.html">Understanding Ceramic Oxides</a><br /><a title="130" href="130.html">Understanding Glaze Slurry Properties</a><br /><a title="213" href="213.html">Understanding the Deflocculation Process in Slip Casting</a><br /><a title="132" href="132.html">Understanding the Terra Cotta Slip Casting Recipes In North America</a><br /><a title="198" href="198.html">Understanding Thermal Expansion in Ceramic Glazes</a><br /><a title="313" href="313.html">Unwanted Crystallization in a Cone 6 Glaze</a><br /><a title="389" href="https://digitalfire.com/article/389">Using Dextrin, Glycerine and CMC Gum together</a><br /><a title="135" href="135.html">Volcanic Ash</a><br /><a title="201" href="201.html">What Determines a Glaze's Firing Temperature?</a><br /><a title="111" href="111.html">What is a Mole, Checking Out the Mole</a><br /><a title="38" href="38.html">What is the Glaze Dragon?</a><br /><a title="98" href="98.html">Where do I start in understanding glazes?</a><br /><a title="215" href="215.html">Why Textbook Glazes Are So Difficult</a><br /><a title="239" href="239.html">Working with children</a></div><p style="clear:left"></p><p style="clear:left"></p><p style="clear:left"></p><p style="clear:left"></p><p style="clear:left"></p><p style="clear:left"></p><p style="clear:left"></p><h1>The Majolica Earthenware Process</h1>
+<h4 class="text-muted">Description</h4><p class="text-muted font-italic">How to make strong, durable functional ware from red terra cotta odies based on the traditional of majolica.</p><h4>Article</h4>
+<p>Traditionally, “Majolica” is white-glazed red <a  href="../glossary/earthenware.html">earthenware</a> clay decorated with over-glaze brush work designs. But I am guessing you are not at this page for a history lesson. You want to make ware that looks like <a  href="../glossary/majolica.html">Majolica</a>. Even durable <a  href="../glossary/functional.html">functional</a> ware. Although the formidable challenges took hundreds of years to overcome, with a methodical approach you can have the process working relatively quickly! Notwithstanding that, some aspects of earthenware are more difficult to perfect than with <a  href="../glossary/stoneware.html">stoneware</a>.</p>
+
+<p>I am also guessing that you are open to improving the process and ware quality by taking advantage or modern materials and equipment. Today, there is no compelling reason to use tin to <a  href="../glossary/opacifier.html">opacify</a> your glazes, <a  href="../material/1722.html">zircon</a> is less expensive. You can even dispense with the white glaze and use a white <a  href="../glossary/engobe.html">engobe</a> with a transparent <a  href="../glossary/overglaze.html">overglaze</a>. And certainly not a lead <a  href="../glossary/flux.html">flux</a> to melt glazes. It is also reasonable to fire a little higher for better ware strength (a lot better). Or even flux the body to get better strength. And why not introduce new decoration materials and techniques we have now? </p>
+
+<h3>Common Misconceptions About Low Fire</h3>
+
+<ul>
+<li><i>Higher temperatures must be better, stronger.</i> <br />No. Strength is a function of <a  href="../glossary/vitrification.html">vitrification</a>, bodies can vitrify to very low temperatures if they contain enough fluxes. Consider that many people working with ironware bodies at <a  href="../glossary/reduction+firing.html">cone 10 reduction</a> are producing ware that ranges about 4000 psi in tensile strength. Likewise, working at middle-fire produces stoneware of around 5000 psi. Porcelains, on the other hand can be 10,000 psi. However, a considerable percentage of these producers are using glazes that <a  href="../glossary/glaze+fit.html">do not fit</a> (e.g. high <a  href="../material/310.html">feldspar</a>) and that can easily cut the strength of the ware in half (even without visible <a  href="../trouble/glaze+crazing.html">crazing</a> or <a  href="../glossary/glaze+shivering.html">shivering</a> out of the kiln). This means there are lots of potteries and manufacturers producing high-fire ware at 2000-5000 psi. However, with a properly fitted glaze, it is possible to easily achieve 5000 psi at cone 03! </li>
+
+<li><i>Lower temperatures produce <a  href="../glossary/leaching.html">leaching</a> glazes.</i> <br />So do higher temperatures. It is possible to have unbalanced glazes, that leach heavy metals, at any temperature. However, <a  href="../glossary/earthenware.html">low fire</a> glazes are normally made from <a  href="../glossary/frit.html">fritted</a> materials that the <a  href="../glossary/frit.html">frit</a> manufacturer has blended to be stable (stoichiometric). <a  href="../glossary/borate.html">Boron</a> is the primary flux in these products and it itself is safe. Food surfaces in majolica ware are usually just transparent or white zirconium opacified glazes, will present no danger. However, lots of manufacturers and potters are producing stoneware with metallic surface decoration re-fired in the cone 018 range. That is hundreds of degrees below the cone 03 I like to use, it is obvious which is going to leach less.</li>
+
+<li><i>Bright colores glazes do not work on red burning iron bodies.</i> <br />
+Wrong. Look at the back side of most ceramic tiles. They are red. Why? Manufacturers are taking advantage of the strength of red earthenware clays at low temperatures (to save energy). But they apply a white engobe to the front as a base for the glazes. </li>
+</ul>
+
+<h3>Majolica Characteristics We Could Leave Behind</h3>
+<ul>
+<li><i>Most museum majolica ware is <a  href="../trouble/glaze+crazing.html">crazed</a>.</i> <br />This is also often true of that produced by potters today. Notwithstanding that, it is easy to fine-tune glaze and body <a  href="../glossary/co-efficient+of+thermal+expansion.html">thermal expansions</a> and improve the body-glaze <a  href="../glossary/body+glaze+interface.html">interface</a> to avoid this issue. And we can vitrify the body more to eliminate moisture expansion that produces delaid crazing. </li>
+
+<li><i>Most museum majolica ware is chipped and cracked and does not appear strong.</i> <br />True again. That is because historical ware was fired at very low temperatures. The same is typical today (e.g. <a  href="../glossary/low+temperature+glaze.html">cone 06</a>). However, even the most inexpensive hobby kilns now can easily fire to cone 03, a temperature high enough to produce much stronger and more functional ware. Even stoneware. This works with almost all <a  href="../glossary/terra+cotta.html">terra cotta</a> bodies. Most people are quite surprised to hear the tuning-fork-like ring of <a  href="../glossary/vitreous.html">vitreous</a> low fire ware. </li>
+
+<li><i>Most museum majolica ware is porous.</i> <br />To the point of being a sponge! These would likely absorb up to 15% of their weight in water, making every unglazed spot an entry point for water-logging. As noted above, we can fix this. Terra cotta body colour gets brighter red and much denser as it is fired closer toward and up to cone 03.</li>
+</ul>
+
+<h2>Low Fire Advantages</h2>
+<p>Majolica is techically terra cotta with a white glaze. What are some advantages of terra cotta (especially at a higher-than-normal temperature)?</p>
+
+<ul>
+<li><i>It is inexpensive to fire. </i> Firing a kiln to cone 04-03 is vastly less energy consuming than <a  href="../glossary/cone+6.html">cone 6</a>, for example. Three hour cold-to-cold firing cycles are possible in smaller ordinary potters electric kilns.</li>
+
+<li><i>Ware fired to cone 03 with a good-fitting glaze will ring like a tuning fork (if the body is vitreous).</i>
+
+<li><i>Ware takes on a whole new life</i> when color is applied. Even school children can produce amazingly attractive majolica-like ware. The kinds of bright colours possible at low fire make stoneware potters jealous.</li>
+
+<li><i>Stain-based colors need only be applied in a thin wash for vibrant results</i> and most can be blended to produce intermediates. </li>
+
+<li><i>You can show off. </i>If you have painting or brush-working skills, these will shine on majolica-inspired ware. This is because the heavily opacified glaze produces a stiff melt that is very stable, overglaze colors stay put and there is very little feathering on the edges of brush strokes. The fidelity is so good that a finger print on a brush stroke can be visible on the fired surface. Stain powders can be used like water-color paints and you can blend colors in a similar manner. </li>
+
+<li><i>Low fire glazes are more transparent, even crystal clear.</i> This makes it practical to decorate ware using colored slips and <a  href="../glossary/engobe.html">engobes</a> at <a  href="../glossary/leather+hard.html">leather hard</a> stage, then <a  href="../glossary/bisque.html">bisque</a> and apply a transparent to finish the piece. </li>
+
+<li><i>The modern majolica-inspired process is not fragile.</i> It does not rely on special firing tricks or critical material mixes. It is stable and reproducible and tolerant of variations. </li>
+
+<li><i>Red terra cotta clays can be robust in the kiln.</i> They hold up well during firing making it possible to create very overhung and exaggerated shapes. Mugs do not go oval, handles do not sag, and clay foot-rings do not stick to the kiln shelf at lower tempertures. </li>
+
+<li><i>Our majolica can be <a  href="../glossary/bisque.html">bisque fired</a> at cone 03 and glaze fired at a cooler 04.</i> This means that the glaze does not have to pass bubbles from products of <a  href="../glossary/decomposition.html">decomposition</a> given off from the body during firing. This produces a more defect-free glazed surface. </li>
+
+<li>Terra cottas are normally extremely fine and very plastic. And many dry very well. In India, for example, potters expect their ware to sun dry.</li>
+</ul>
+
+<h3>A few things to be aware of:</h3>
+<ul>
+<li><i>To cover well, white glazes must be applied evenly and much thicker</i> than for <a  href="../glossary/porcelain.html">porcelain</a> or stoneware. While the white glaze is opaque, the red color of the <a  href="../glossary/clay+body.html">clay body</a> underneath will darken areas where the glaze is thin. All edges must be rounded, especially the lips of vessels. Corners, angles, and sharp edges don't cover well. It is important to apply the glaze in an even thickness over the entire cross section. Do whatever it takes to accomplish this, whether it be mixing more so you can immerse ware, adding a gum to the glaze, gelling it so it has <a  href="../glossary/thixotropy.html">thixotropy</a>, spraying it, waxing and glazing different areas in a multiple-stage process, heating the ware before glazing, deflocculating the glaze, sanding away the drips, etc. </li>
+
+<li><i>Ware cannot be too thin and light.</i> If walls of ware are thin, the clay will lack enough absorbency to build an adequately thick, and therefore opaque, layer of glaze. </li>
+
+<li><i>Low fire red clays often contain significant soluble salts</i> that can deposit on the surface during drying, leaving an unsightly whitish scum and affecting the overlying glaze. Make sure your supplier is putting enough <a  href="../material/86.html">barium carbonate</a> in the mix to precipitate these salts. Don't worry about barium leaching, it is under the glaze, it transforms to nontoxic barium sulphate during <a  href="../glossary/precipitation.html">precipitation</a>. And it participates in glass-building during the firing. </li>
+
+<li><i>Crazing and shivering are far more likely at lower temperatures</i> because the less developed interface between clay and glaze is less able to absorb a bad fit. This is actually a blessing in disguise because it forces you to compensate. Crazing is more likely on a body made of clay materials only, shivering on bodies containing <a  href="../material/1620.html">talc</a>. Use an expansion-adjustable glaze recipe (e.g. <a  href="../glossary/zero3.html">Zero3</a> recipe). If possible, get the clay/glaze combination strength-tested to make sure the glaze fits, even if there is no visible problem. One more thing to remember: Low fire body manufacturers do not normally maintain the <a  href="../glossary/co-efficient+of+thermal+expansion.html">thermal expansion</a> of the bodies they make. Further, it can be different depending on the firing temperature. The bottom line: You need an adjustable glaze to adapt to different batches.</li>
+
+<li><i>Cover the ware as completely with glaze as possible.</i> The best way to do this is make sure every item has a <a  href="../glossary/foot+ring.html">foot ring</a>. Glaze the entire piece and only remove a small amount of glaze where the foot right contacts the shelf. This will limit the surfaces where water can be absorbed. </li>
+
+<li><i>Watch out for the temperature at which clay-color transition occurs. </i>Most terra cotta clays change from the classic flower pot orange to dark brown over the range cone 06 to 2. It is not wise to fire near the upper part of this range since accidental over-firing will result in more drastic color differences (accompanied by greater tendency to warp, <a  href="../trouble/glaze+blisters.html">blister</a> and gas-bubble glazes). Typical terra cotta clays transition around cone 01, thus cone 02 is not an ideal range. Keep in mind that if you use a transparent glaze the clay will be much darker under the glaze than it is without glaze. This is because the glaze melt matures the surface so it appears several cones darker. </li>
+
+<li><i>Manufacturers have limitations on how well they can maintain the consistency of terra cotta bodies</i>. The materials used to make them are more variable by nature than the kaolins, <a  href="../material/310.html">feldspars</a>, <a  href="../material/1245.html">silica</a>, etc. used in stonewares and porcelains. If a batch has 14% <a  href="../glossary/clay+body+porosity.html">porosity</a> one time (at cone 06) and 10% the next no one gets upset about it. However they should maintain the <a  href="../glossary/drying+shrinkage.html">drying shrinkage</a> and performance (employing formulations that enable this).</li>
+
+<li><i>White-dotting in colored areas of glaze is a common problem</i>. It is minimized by bisquing higher than glaze and not firing too quickly. </li>
+
+<li><i>If the dried glaze layer is excessively dusty</i>, add some gum to harden it. </li>
+
+<li><i>Get a good banding wheel for decorating your ware.</i></i>
+
+<li><i>In <a  href="../glossary/glaze+recipes.html">glaze recipes</a>, use <a  href="../glossary/frit.html">frits</a> if at all possible, not <a  href="../material/806.html">Gerstley Borate</a> (</i>a raw source of boron). The latter is unreliable and its manufacturer cannot stand behind the product's quality. </li>
+</ul>
+
+<h3>Getting Started</h3>
+<ul>
+<li>Get a terra cotta clay that fires to a nice red at cone 03 with good strength. Try firing it to cone 02 and 1 to verify that it is a true terra cotta. It should be transitioning to dark brown by <a  href="../glossary/cone+1.html">cone 1</a>. Also, make sure the material has a fine particle size, a least 100 mesh and finer. This is important to prevent <a  href="../glossary/pinholing.html">pinholing</a> that occurs in bodies having larger particles (these either generate gases that have to bubble up through the glaze or act as vents through which large volumes of other gases are vented at fewer sites on the body surface). If you want a super cone 03 red body, consider making it yourself. Start with the <a  href="https://plainsmanclays.ca/data/index.php?product=12932">Zero3</a> recipe.</li>
+
+<li>Test <a  href="../glossary/glaze+fit.html">glaze fit</a>. Perform a boil-ice test by immersing a fired glazed tile in ice water for five minutes, then boiling water for five minutes. Repeat this three times and check for crazing or shivering. </li>
+
+<li>Glaze recipe: Don't buy this, mix it. That is right. The clear glaze (and adapting its fit to your body) are so important that you cannot trust it to anyone else. You can make a better one that you can buy. Start with my <a  href="https://plainsmanclays.ca/data/index.php?product=12932">Zero3</a> recipe (actually there are 3, you blend them to fine tune the thermal expansion). Or develop your own clear glazes. Choose a frit that is a complete glaze in itself (like Ferro 3195 or 3124) and just add 15% <a  href="../material/925.html">kaolin</a> (<a  href="../material/291.html">EPK</a> is useful because of its excellent slurry-suspending and gelling properties). Integrate <a  href="../material/349.html">Frit 3110</a> to raise thermal expansion (for shivering) and 3249 to reduce it (for crazing).</li>
+
+<li>Mix the glaze <a  href="../glossary/slurry.html">slurry</a> so it has thixotropy. This will prevent it from <a  href="../glossary/suspension.html">settling</a> and enable you to apply even coverage on bisque that dries quickly. </li>
+
+<li>Make large bisque glaze testing tiles of the body (10 cm). Apply the glaze quite thick and fire to <a  href="../glossary/low+temperature+glaze.html">cone 04</a>, 03, 02 and note the gloss and tendency to run. If it is running too much for cone 03, add a little kaolin (5%) to raise the <a  href="../glossary/melting+temperature.html">melting temperature</a> (if the glaze is crazing add silica instead). If the <a  href="../glossary/melt+fluidity.html">melt fluidity</a> is too high, add a mix of kaolin and silica having the same <a  href="../glossary/silica%253Aalumina+ratio.html">Si:Al</a> ratio as the glaze.</li>
+
+<li>Adjust whiteness. Add 12% zircon <a  href="../glossary/opacifier.html">opacifier</a> (i.e. <a  href="../material/1724.html">Zircopax</a> or Superpax) to a transparent to make it white. Mix the glaze and try it again on a tile. If the color is not white enough, increase the opacifier to 15% or more, but be careful since zircon increases glaze melt <a  href="../glossary/viscosity.html">viscosity</a>, and thus, raises the likelihood of <a  href="../trouble/crawling.html">crawling</a> and pinholing. It also lowers thermal expansion, so test for shivering.</li>
+
+<li>Colors: Hundreds of over and <a  href="../glossary/underglaze.html">underglaze</a> commercial products are available. It is best to use these instead of developing your own. These are made by adding <a  href="../glossary/ceramic+stain.html">stains</a> to a transparent glaze that melts to the desired degree (more for overglaze, less for under). The liquid portion is a gum:water mix to make the product paint smoothly and dry slowly. Try different brands, some will work better than others (much better). If you need to use large amounts of these it might be worthwhile to develop your own.</li>
+
+<li>Engobe: <a  href="../glossary/ceramic+tile.html">Ceramic tile</a> companies apply a layer of white engobe onto the red body before applying the glaze. This white layer is a white clay having a <a  href="../glossary/firing+shrinkage.html">firing shrinkage</a> and thermal expansion the same as the body, an engobe. Because it does not melt, it is opaque. This enables using glazes much lower in zircon (or even zircon free) and they fire with <a  href="../picture/2857.html">bright colors</a> as if on porcelain. But developing an engobe is not for the faint-hearted (our Zero3 engobe development project is well documented here). The engobe-body bond is much more fragile than the glaze-engobe one. As a result, glazes must fit very well to avoid flake-off on wrap-around areas (like rims of mugs). Your clay body supplier should be able to supply an engobe recipe compatible with their fine terra cotta. If they just tell you to use a an internet recipe, do no believe it will work until testing thoroughly. Also, note that colouring engobes is expensive because high stain proportions are required. This changes the drying, firing shrinkage and thermal expansion; it is a new animal requiring thorough fit testing.</li>
+</ul>
+
+<p>Armed with the above working materials, spend the rest of your life investigating the infinite number of combinations, colors, and decorative techniques possible. Enjoy. </p><p style="clear:left"></p>
+<h2 style="font-style:italic;">Related Information</h2>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">Which is stronger: Cone 10R mug or cone 03 mug?</h3>
+<br /><a href="../picture/1863.html"><img class="flexleft50" loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/cqe77xhvfi.jpeg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/1863.html">click here</a> to see it.</p>
+<p>The mug on the left is high temperature <a  href="../glossary/plainsman+clays.html">Plainsman</a> <a  href="https://plainsmanclays.ca/data/index.php?product=12893">P700</a> (<a  href="../material/831.html">Grolleg</a> <a  href="../glossary/porcelain.html">porcelain</a>). The other is Plainsman <a  href="../glossary/zero3.html">Zero3</a> fired at cone 03. <a  href="https://plainsmanclays.ca/data/index.php?product=12932">Zero3</a> has a secret: Added <a  href="../glossary/frit.html">frit</a> which reduces the <a  href="../glossary/clay+body+porosity.html">porosity</a> of the <a  href="../glossary/terra+cotta.html">terra cotta</a> base (therefore increasing the density) dramatically. How? The frit melts easily at cone 03 and fills the interparticle space with glass, that glass bonds everything together securely as the piece cools. Although I do not have strength testing equipment right now, I would say that although the <a  href="https://plainsmanclays.ca/data/index.php?product=12893">P700</a> mug likely has a harder surface, the <a  href="https://plainsmanclays.ca/data/index.php?product=12932">Zero3</a> one is less brittle and more difficult to break.</p>
+<p style="clear:left"></p>
+<h3 style="margin-bottom:0px; margin-top:30px;">Low Temperature Heaven: </h3>
+<h4 style="color:#888888; margin-top:0px;">Commercial underglazes, make your own clear overglaze</h4>
+<br /><a href="../picture/1915.html"><img class="flexleft50" loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/pmohdsx4kc.jpg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/1915.html">click here</a> to see it.</p>
+<p>Decorate ware with the <a  href="../glossary/underglaze.html">underglazes</a> at the <a  href="../glossary/leather+hard.html">leather hard</a> stage, dry and <a  href="../glossary/bisque.html">bisque</a> fire it and then dip-glaze in a transparent that you make yourself (and thus control). These mugs are fired at cone 03. All have the same transparent glaze (<a  href="../recipe/g2931k.html">G2931K</a>), all were decorated with the same underglazes. Notice how bright the colors are compared to middle or high temperature. On the left is a porous talc/stoneware blend (<a  href="../glossary/plainsman+clays.html">Plainsman</a> <a  href="https://plainsmanclays.ca/data/index.php?product=12870">L212</a>), rear is a <a  href="../glossary/frit.html">fritted</a> <a  href="../glossary/zero3.html">Zero3 stoneware</a> and right is <a  href="../glossary/zero3.html">Zero3</a> fritted <a  href="../glossary/porcelain.html">porcelain</a>. When mixed properly you can dip ware in this glaze and it covers evenly, does not drip and dries enough to handle in seconds! Follow the <a  href="https://plainsmanclays.ca/data/index.php?product=12932">Zero3</a> <a  href="../glossary/firing+schedule.html">firing schedule</a> and you will have ware of amazing quality.</p>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">G2931K Zero3 transparent glaze on Zero3 Fritware Porcelain</h3>
+<br /><a href="../picture/1921.html"><img class="flexleft50" loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/kfcxteozt4.jpg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/1921.html">click here</a> to see it.</p>
+<p>This is an all-fritted version of <a  href="https://insight-live.com/insight/share.php?z=C1R5LciBu4">G2931F</a> <a  href="../glossary/zero3.html">Zero3</a> transparent glaze. I formulated this glaze by calculating what mix of <a  href="../glossary/frit.html">frits</a> must be employed to supply the same <a  href="../glossary/glaze+chemistry.html">chemistry</a> of the <a  href="https://insight-live.com/insight/share.php?z=C1R5LciBu4">G2931F</a> recipe. The mug is made from the <a  href="https://plainsmanclays.ca/data/index.php?product=12932">Zero3</a> <a  href="../glossary/porcelain.html">porcelain</a> body (fired at cone 03) with this glaze. This glaze fits both the porcelain and the <a  href="https://plainsmanclays.ca/data/index.php?product=12932">Zero3</a> <a  href="../glossary/terra+cotta.html">terra cotta</a> <a  href="../glossary/stoneware.html">stoneware</a>. The clarity, gloss, fit and <a  href="../glossary/glaze+durability.html">durability</a> of this glaze are outstanding.</p>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">Three low fire bodies need three different clear glazes. Why?</h3>
+<br /><a href="../picture/2085.html"><img class="flexleft50" loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/2bcprhmju1.jpg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/2085.html">click here</a> to see it.</p>
+<p><a  href="../glossary/glaze+fit.html">Glaze fit</a>. The left-most clay mug contains no <a  href="../material/1620.html">talc</a> (<a  href="../glossary/plainsman+clays.html">Plainsman</a> <a  href="https://plainsmanclays.ca/data/index.php?product=12869">Buffstone</a>), the centre one about 25% talc (<a  href="https://plainsmanclays.ca/data/index.php?product=12870">L212</a>) and the right one is about 45% talc (L213). Talc raises <a  href="../glossary/co-efficient+of+thermal+expansion.html">thermal expansion</a>. The centre glaze is <a  href="../recipe/g2931k.html">G2931K</a>, it is middle-of-the-road thermal expansion (<a  href="../glossary/digitalfire+insight-live.html">Insight-live</a> reports it as 7.4) and fits the low-talc bodies (and <a  href="../glossary/zero3.html">Zero3</a> <a  href="../glossary/porcelain.html">porcelain</a> and <a  href="../glossary/stoneware.html">stoneware</a>). But it crazes on <a  href="https://plainsmanclays.ca/data/index.php?product=12869">Buffstone</a> and shivers on L213. The lesson is: Forget about expecting one clear or <a  href="../glossary/base+glaze.html">base glaze</a> to fit all <a  href="../glossary/earthenware.html">low fire</a> bodies. But there is a solution. I adjusted it to reduce its expansion to work on zero-talc porous bodies and raise it to work on high talc bodies. How? By decreasing and increasing the <a  href="../picture/1775.html">KNaO</a> (in relation to other fluxes). The three fire crystal clear and work the best in a <a  href="../glossary/drop-and-soak+firing.html">drop-and-hold</a> firing.</p>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">Soluble salts on cone 04 terra cotta clay bodies</h3>
+<br /><a href="../picture/687.html"><img class="flexleft50" loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/glossary/rixsixosyl.jpg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/687.html">click here</a> to see it.</p>
+<p>Low temperature clays are far more likely to have this issue. And if present, it is more likely to be unsightly. The salt-free specimens have 0.35% added <a  href="../material/86.html">barium carbonate</a>.</p>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">Test bars of different terra cotta clays fired at different temperatures</h3>
+<br /><a href="../picture/464.html"><img class="flexleft50" loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/articles/nuvxicihym.jpg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/464.html">click here</a> to see it.</p>
+<p>Bottom: cone 2, next up: cone 02, next up: <a  href="../glossary/low+temperature+glaze.html">cone 04</a>. You can see varying levels of <a  href="../glossary/maturity.html">maturity</a> (or <a  href="../glossary/vitrification.html">vitrification</a>). It is common for <a  href="../glossary/terra+cotta.html">terra cotta</a> clays to fire like this, from a light red at <a  href="../glossary/low+temperature+glaze.html">cone 06</a> and then darkening progressively as the temperature rises. Typical materials develop deep red color around cone 02 and then turn brown and begin to expand as the temperature continues to rise past that (the bottom bar appears stable but it has expanded alot, this is a precursor to looming rapid melting). The top disk is a <a  href="../glossary/reduction+firing.html">cone 10R</a> clay. It shares an attribute with the cone 02 terra cotta. Its variegated brown and red coloration actually depends on it not being <a  href="../glossary/maturity.html">mature</a>, having a 4-5% <a  href="../glossary/clay+body+porosity.html">porosity</a>. If it were fired higher it would turn solid chocolate brown like the over-fired terra cotta at the bottom.</p>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">Stoneware from your terra cotta body? It is very possible.</h3>
+<br /><a href="../picture/984.html"><img class="flexleft50" loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/pillifonof.jpg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/984.html">click here</a> to see it.</p>
+<p>Some <a  href="../glossary/terra+cotta.html">terra cotta</a> clays can be used to produce <a  href="../glossary/stoneware.html">stoneware</a> by firing them a few cones higher. Terra Cottas are almost always nowhere near <a  href="../glossary/vitrification.html">vitrified</a> at their traditional cone 04-06 temperatures, so they can often stand much higher firing. However, clear glazes do not usually work well in higher firing since products of <a  href="../glossary/decomposition.html">decomposition</a> from the vitrifying body fill them will micro bubbles, <a  href="../glossary/glaze+bubbles.html">clouding</a> the surface. In addition, the body turns dark brown under clear glazes. But with a white glaze, these are not a problem. This is <a  href="../glossary/plainsman+clays.html">Plainsman</a> <a  href="https://plainsmanclays.ca/data/index.php?product=12865">L210</a> fired to cone 2. The glaze is 80% <a  href="../material/356.html">Frit 3195</a>, 20% <a  href="../material/925.html">kaolin</a> and 10-12% <a  href="../material/1724.html">zircopax</a>, it fires to a brilliant flawless surface.</p>
+<p style="clear:left"></p>
+<h3>Links</h3><table>
+<table class="table table-bordered"><tbody>
+<tr>
+<td scope="row">Articles</td>
+<td>
+<a href="g1916m+cone+06-04+transparent+glaze.html">G1916M Cone 06-04 transparent glaze</a>
+<br /><i>This is a <a  href="../glossary/frit.html">frit</a> based <a  href="../glossary/borate.html">boron</a> glaze that is easily adjustable in <a  href="../glossary/co-efficient+of+thermal+expansion.html">thermal expansion</a>, a good base for color and a starting point to go on to more specialized glazes.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Glossary</td>
+<td>
+<a href="../glossary/majolica.html">Majolica</a>
+<br /><i><a  href="../glossary/majolica.html">Majolica</a> is a tradition of Italian Renaissance white opaque glazed red <a  href="../glossary/earthenware.html">earthenware</a> having brightly colored brushwork decoration. Knowing some technical details will help you better succeed with the process.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Recipes</td>
+<td>
+<a href="../recipe/g2931k.html">G2931K - Low Fire Fritted Zero3 Transparent Glaze</a>
+<br /><i>A cone 03-02 clear medium-expansio glaze developed from Worthington Clear.</i>
+</td>
+</tr>
+</tbody></table><table style="margin:30px 0px 30px 0px;"><tr><td style="vertical-align:middle; text-align:center; font-size:80%;"><img src="../images/PayPalDonate.png" style="height:66px; padding-right:20px;"><br /><a href="https://www.paypal.com/donate/?hosted_button_id=F8L3JX4BCCXJ6">PayPal</a></td><td style="background-color:#ddffdd; padding:10px; border:thin solid grey; font-size:90%;"><b>No</b> tracking, <b>No</b> ads, <b>No</b> paywall, <b>No</b> transient content!<br />Just organized, concise information constantly updated and improved.<br />Was this helpful? Consider supporting me.</td><tr></table><table style="margin-top:30px; padding-top:10px; padding-bottom:20px; border-top:thin solid grey; border-bottom:thin solid grey;"><tr><td style="padding-right:10px">By <i>Tony Hansen</i><br /><span style="font-size:80%; color:#888888;">Follow me on<br /><a title="Threads" href="https://www.threads.net/@tonyatdigitalfire" target="_blank"><img src="../images/threads.jpg" style="width:20px;" border="0"></a> <a title="Facebook Insight-Live" href="https://www.facebook.com/insightlive" target="_blank"><img src="../images/facebook.jpg" style="width:20px;" border="0"></a> <a title="LinkedIn" href="https://www.linkedin.com/in/tonywhansen/" target="_blank"><img src="../images/linkedin.jpg" style="width:20px;" border="0"></a> <a title="Pinterest" href="https://www.pinterest.ca/tonywhansen" target="_blank"><img src="../images/pinterest.jpg" style="width:20px;" border="0"></a> <a title="Instagram" href="https://instagram.com/tonyatdigitalfire" target="_blank"><img src="../images/instagram.jpg" style="width:20px;" border="0"></a> <a title="Ko-Fi" href="https://ko-fi.com/tonyhansen#" target="_blank"><img src="../images/ko-fi.jpg" style="width:20px;" border="0"></a> <a title="Twitter" href="https://x.com/digitalfiretony" target="_blank"><img src="../images/twitter.jpg" style="width:20px;" border="0"></a></td><td><a href="https://tonyhansen.com/about"><img src="../images/SignaturePhotoSmall.jpg" height="80"></a></td></tr></table><h3>Got a Question?</h3><p style="margin-bottom:30px;"><a name="kofi">Buy me a coffee and we can talk</a> <a target="_blank" href="https://ko-fi.com/tonyhansen"><img style="width:40px" src="../images/ko-fi.svg"></a></p><p style="margin-bottom:30px;">&nbsp;</p>
+<p></p><p></p><hr>
+<img style="width:250px" src="../4sight/images/ReferenceLibrary.svg">
+<br />
+<a href="../index.html">https://digitalfire.com</a>, All Rights Reserved
+<br /><a href="../w3c/privacypolicy.php.html">Privacy Policy</a>
+</div>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+</body>
+</html>

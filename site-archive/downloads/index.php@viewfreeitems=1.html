@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Downloads</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+}
+.snipcart-add-item {
+  appearance: none;
+  background-color: #2ea44f;
+  border: 1px solid rgba(27, 31, 35, .15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 4px 12px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.snipcart-add-item:focus:not(:focus-visible):not(.focus-visible) {
+  box-shadow: none;
+  outline: none;
+}
+
+.snipcart-add-item:hover {
+  background-color: #2c974b;
+}
+
+.snipcart-add-item:focus {
+  box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
+  outline: none;
+}
+
+.snipcart-add-item:disabled {
+  background-color: #94d3a2;
+  border-color: rgba(27, 31, 35, .1);
+  color: rgba(255, 255, 255, .8);
+  cursor: default;
+}
+
+.snipcart-add-item:active {
+  background-color: #298e46;
+  box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+}
+</style>
+
+<script>
+function checkCookiesEnabled() {
+  if (navigator.cookieEnabled) {
+    return true;
+  } else {
+    // Attempt to set a test cookie, as some browsers may report false negatives.
+    document.cookie = "test_cookie=test; max-age=3600";
+    if (document.cookie.indexOf("test_cookie") !== -1) {
+      // Clean up the test cookie:
+      document.cookie = "test_cookie=; max-age=0";
+      return true;
+    }
+    return false;
+  }
+}
+function handleCookieCheck() {
+  if (checkCookiesEnabled()) {
+    // console.log("Cookies are enabled.");
+    document.getElementById("cookieStatus").innerHTML = '<span style="color:green;">&check; Enabled.</span>';
+  } else {
+    // console.log("Cookies are disabled.");
+    document.getElementById("cookieStatus").innerHTML = '<span style="color:red;">&cross; Disabled.</span>';
+    // Redirect or show a modal explaining how to enable cookies.
+    // window.location.href = "enable_cookies.html";
+  }
+  return;
+}
+// Call the function when the page loads:
+document.addEventListener("DOMContentLoaded", handleCookieCheck);
+</script>
+
+</head>
+<body>
+
+<h2>Free Downloads</h2>
+<h3 style="margin-bottom:2px">OSX 2022-2 App Update</h3>
+<p style="margin-top:0px">Macintosh OSX app-only update. Unpack this and put it in the Insight program folder to replace the DigitalfireInsight.app already there.
+
+If OSX complains that it cannot be opened because it is from an unidentified developer, right-click it (if your mouse does not have a right-button, control-click it) and choose "Open". The warning dialog will reappear, but it will have an "Open button" to override the warning.<br />
+Download File: <a href="index.php@viewfreeitems=1&amp;fz=8xP3GrJZ4N">DigitalfireINSIGHT.app.tar</a>
+ - <i>(37093k, October 8, 2024)</i>
+<h3 style="margin-bottom:2px">Windows Insight 2022-2</h3>
+<p style="margin-top:0px">Desktop Insight no longer uses an installer, just download this zip archive, extract it as a folder, open the folder and double-click the INSIGHT64.EXE file (the manual is also in that folder).
+
+If Windows Smart-Screen presents a dialog complaining about it being from an unidentified developer, click the More Info link and click Run Anyway.
+
+Insight requires the Mirosoft Universal Runtime DLLs, these are built into Windows 10 and kept updated. If you are using an older Windows (e.g. 7, 8) and Insight complains that a dll file is incorrect download and install the Visual Studio runtime at https://www.microsoft.com/en-us/download/details.aspx?id=48145
+
+To uninstall Insight just trash the folder and the one Insight creates for its data (documents/insight).<br />
+Download File: <a href="index.php@viewfreeitems=1&amp;fz=NFF6tfjipn">WindowsInsight.zip</a>
+ - <i>(25109k, August 13, 2023)</i>
+<h3 style="margin-bottom:2px">OSX Insight 2022-1</h3>
+<p style="margin-top:0px">After downloading the zip archive file, extract the folder inside to the desktop. Open that folder and open the Insight app. If OSX complains that it cannot be opened because it is from an unidentified developer, right-click it (if your mouse does not have a right-button, control-click it) and choose "Open". The warning dialog will reappear, but it will have an "Open button" to override the warning.
+
+If you decide to keep Insight you can move its folder to  Applications and make a shortcut to start the app.
+
+To uninstall just trash that folder and the one Insight creates for its data (documents/insight).<br />
+Download File: <a href="index.php@viewfreeitems=1&amp;fz=YgtQcjiniS">OSXInsight.zip</a>
+ - <i>(20593k, August 13, 2023)</i>
+<h3 style="margin-bottom:2px">Linux Insight 2022-2</h3>
+<p style="margin-top:0px">Download the zip archive file, extract the contents to the desktop. Open the folder and right-click the program file. Choose “Properties” and set permission to Execute. Click the icon (in the same properties dialog), a file window should appear enabling selection of an icon file, choose one of the ones provided.
+
+To uninstall just trash the folder and the one Insight creates for its data (documents/insight).
+<br />
+Download File: <a href="index.php@viewfreeitems=1&amp;fz=JA1QkzQ9Wm">LinuxInsight.zip</a>
+ - <i>(25135k, August 13, 2023)</i>
+<h3 style="margin-bottom:2px">Insight5 Spreadsheet</h3>
+<p style="margin-top:0px">The original spreadsheet showing the way Insight does calculations. You can also enter a recipe and amounts and it will calculate the formula, analysis, thermal expansion, etc.<br />
+Download File: <a href="index.php@viewfreeitems=1&amp;fz=qRNJPiMLAR">INSIGHT5.xls</a>
+ - <i>(88k, April 21, 2025)</i>
+<h3 style="margin-bottom:2px">Insight for DOS</h3>
+<p style="margin-top:0px">The original Digitalfire Insight from the 1980s. Unpack these files, put them in a folder and mount that as the A: drive in DOSBox (or other emulator). Then switch to the A: drive and type "insight" and press Enter.
+
+Normally, F1 calls the help but that is not working so just read the Help40.txt file.
+Insight has a similar user interface to Lotus 1-2-3, press the first letter of items on the menu bar along the bottom, press Escape to go back.<br />
+Download File: <a href="index.php@viewfreeitems=1&amp;fz=uki4pTtY4r">DOS-Insight.zip</a>
+ - <i>(169k, August 13, 2023)</i><h3 style="margin-top:20px; border-top:thin solid grey; padding-top:8px; margin-bottom:0px;">Got a Question? Or want to support me?</h3><p style="margin-top:0px;"><a name="kofi">Buy me a coffee</a> <a target="_blank" href="https://ko-fi.com/tonyhansen"><img style="width:40px" src="../images/ko-fi.svg"></a></p>
+</body>
+</html>

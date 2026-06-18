@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="../favicon.svg">
+<link rel="mask-icon" href="../mask-icon.svg" color="#000000">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<title>Epsom salts decompose to lose water (in the ceramic firing process)</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<meta name="author" content="Tony Hansen">
+<meta name="description" content="Digitalfire Reference Library: Learn the milestone temperatures where glaze and body changes happen">
+<style>
+.flexinline { width: 50%; height: auto; clear:left; margin: 10px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexinline { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexright50 { width: 50%; height: auto; float: right; margin: 5px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexright50 { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexright33 { width: 33%; height: auto; float: right; margin: 5px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexright33 { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexright25 { width: 25%; height: auto; float: right; margin: 5px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexright25 { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexleft50 { width: 50%; height: auto; float: left; margin: 5px 15px 10px 0px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexleft50 { width: 100%; height: auto; margin: 5px 10px 10px 0px; border: none; padding: none; } }
+.flexleft33 { width: 33%; height: auto; float: left; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexleft33 { width: 100%; height: auto; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; } }
+.flexleft25 { width: 25%; height: auto; float: left; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexleft25 { width: 100%; height: auto; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; } }
+.pictureseries { overflow:scroll; width:auto; height:200px; float:left; margin: 5px 10px 10px 0px; padding: 5px; font-size:60%; font-style:italic;}
+@media (max-width: 640px) { .pictureseries { overflow:scroll; width:auto; height:200px; float:left; margin: 5px 10px 10px 0px; border: padding: 5px; font-size:60%; font-style:italic;} }
+.L2 { margin-left:0px; }
+.L3 { margin-left:20px; color:#222222; }
+.L4 { margin-left:40px; color:#444444; }
+.L5 { margin-left:60px; color:#666666; }
+.L6 { margin-left:60px; color:#888888; }
+h2 { color:#222222; }
+h3 { color:#444444; }
+h4 { color:#666666; }
+h5 { color:#888888; }
+
+</style>
+
+<meta name="google-site-verification" content="wquYW_n-3QEfIzDfV--8ElUewf7TIt04RGo55GfZySU" />
+<meta name="have-i-been-pwned-verification" value="9223dcee7de5c9622c2a2abcff4adc81">
+<script>
+function validateForm() {
+	var x = document.forms["emailform1"]["name1"].value;
+	var r = true;
+	if (x == "") { // alert("A name is required."); 
+		document.getElementById("name1").textContent="Name Required";
+		document.getElementById("name1").style.color="red";
+		// document.emailform1.name1.focus() ; # does not work, should be getelementbyid
+		r = false; 
+	} else {
+		document.getElementById("name1").textContent="Name";
+		document.getElementById("name1").style.color="black";
+	}
+	if (document.forms["emailform1"]["subject1"].value == "") { 
+		document.getElementById("subject1").textContent="Subject Required";
+		document.getElementById("subject1").style.color="red";
+		r = false; 
+	} else {
+		document.getElementById("subject1").textContent="Subject";
+		document.getElementById("subject1").style.color="black";
+	}			
+	if (document.forms["emailform1"]["msg1"].value == "") { 
+		document.getElementById("msg1").textContent="Message Required";
+		document.getElementById("msg1").style.color="red";
+		// alert("A message is required."); 
+		r = false; 
+	} else {
+		document.getElementById("msg1").textContent="Message";
+		document.getElementById("msg1").style.color="black";
+	}
+	var emailID = document.emailform1.email1.value;
+	atpos = emailID.indexOf("@");
+	dotpos = emailID.lastIndexOf(".");
+	if (atpos < 1 || ( dotpos - atpos < 2 )) {
+		document.getElementById("email1").textContent="Email Address Appears Invalid!";
+		document.getElementById("email1").style.color="red";
+		// alert("Your email address appears invalid.")
+		r = false;
+	} else {
+		document.getElementById("email1").textContent="Email Address";
+		document.getElementById("email1").style.color="black";
+	}
+	// Send the form
+	if (r == false) return false;
+	document.forms["emailform1"].submit();
+}
+</script>
+</head>
+<body>
+<p style="background-color:#ff9933; border-width:1px; padding:3px 10px 3px 10px; margin:0px 0px 3px 0px; font-size:80%; text-align:center;">
+Digitalfire will shut down on June 26. I no longer have the authority to grant exemption to a section in the Terms and Conditions of using material in the Insight-Live account from which I built the source material. While there are ways to comply with the take-down order, they are beyond my means because of how complex and large the site has become in the past 35+ years. It has been a wild ride for a shy prairie boy, thanks to everyone for your support. Insight-live.com is not affected by this.</p>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<a name="pagetop" class="navbar-brand" href="../home.html"><img src="../4sight/images/ReferenceLibrary.svg" height="40" alt=""></a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item"><a class="nav-link" href="../home.html">Home</a></li>
+			<li class="nav-item"><a class="nav-link" href="../oxide/list.html">Oxides</a></li>
+			<li class="nav-item"><a class="nav-link" href="../material/list.html">Materials</a></li>
+			<li class="nav-item"><a class="nav-link" href="../recipe/list.html">Recipes</a></li>
+			<li class="nav-item"><a class="nav-link" href="../glossary/list.html">Glossary</a></li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="31.html#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Others</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" href="../article/list.html">Articles</a>
+					<a class="dropdown-item" href="../hazard/list.html">Hazards</a>
+					<a class="dropdown-item" href="../mineral/list.html">Minerals</a>
+					<a class="dropdown-item" href="../property/list.html">Properties</a>
+					<a class="dropdown-item" href="../schedule/list.html">Firing Schedules</a>
+					<a class="dropdown-item active" href="list.html">Temperatures</a>
+					<a class="dropdown-item" href="../trouble/list.html">Troubles</a>
+					<a class="dropdown-item" href="../test/list.html">Tests</a>
+					<a class="dropdown-item" href="../video/list.html">Media</a>
+					<a class="dropdown-item" href="../picture/list.html">Pictures</a>
+					<a class="dropdown-item" href="../typecode/list.html">Typecodes</a>
+					<a class="dropdown-item" href="../project/list.html">Projects</a>
+					<a class="dropdown-item" href="../consultants/list.html">Consultants</a>
+					<a class="dropdown-item" href="../schools/list.html">Schools</a>
+					<a class="dropdown-item" href="../stores/list.html">Stores</a>
+					<a class="dropdown-item" href="../potterytony/list.html">Don't Buy-A-Mug</a>
+					<div class="dropdown-divider"></div>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="../index.html">https://digitalfire.com</a>
+					<a class="dropdown-item" href="https://insight-live.com">Insight-Live.com</a>
+					<a class="dropdown-item" href="../index.html">Sign-Up</a>
+				</div>
+			</li>
+		</ul>
+		<form class="form-inline my-2 my-lg-0" action="https://digitalfire.com/index.php?searcharea=temperature" accept-charset="UTF-8" method="post">
+		<input name="searchfor" title="Search from home to search in all areas" maxlength="20" class="form-control mr-sm-2" aria-label="Search" placeholder="Search" autocorrect="off" autocapitalize="off" type="search" value=""><button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="searchbutton">Search</button>
+		</form>
+	</div>
+</nav>
+<div class="container"><p><a class="btn btn-primary" data-toggle="collapse" href="31.html#collapse1" role="button" aria-expanded="false" aria-controls="collapse1">All Temperature Numbers</a> <a class="btn btn-primary"href="list.html" role="button" aria-expanded="false">Temperature Listing</a></p>
+<div class="collapse" id="collapse1" style="margin-bottom:15px;"><nobr><a title="63" href="63.html">80-250C</a> <i>(176-482F)</i> |</nobr> <nobr><a title="35" href="35.html">80-250C</a> <i>(176-482F)</i> |</nobr> <nobr><a title="58" href="58.html">120C</a> <i>(248F)</i> |</nobr> <nobr><a title="31" href="31.html"><button type="button" class="btn btn-dark">150C</button></a> |</nobr> <nobr><a title="56" href="56.html">180C</a> <i>(356F)</i> |</nobr> <nobr><a title="32" href="32.html">185C</a> <i>(365F)</i> |</nobr> <nobr><a title="74" href="74.html">200-450C</a> <i>(392-842F)</i> |</nobr> <nobr><a title="72" href="72.html">200-1000C</a> <i>(392-1832F)</i> |</nobr> <nobr><a title="45" href="45.html">200C</a> <i>(392F)</i> |</nobr> <nobr><a title="43" href="43.html">210-280C</a> <i>(410-536F)</i> |</nobr> <nobr><a title="51" href="51.html">260C</a> <i>(500F)</i> |</nobr> <nobr><a title="10" href="10.html">290C</a> <i>(554F)</i> |</nobr> <nobr><a title="36" href="36.html">300C</a> <i>(572F)</i> |</nobr> <nobr><a title="7" href="7.html">300-330C</a> <i>(572-626F)</i> |</nobr> <nobr><a title="57" href="57.html">300C</a> <i>(572F)</i> |</nobr> <nobr><a title="37" href="37.html">370-700C</a> <i>(698-1292F)</i> |</nobr> <nobr><a title="75" href="75.html">370C</a> <i>(698F)</i> |</nobr> <nobr><a title="59" href="59.html">400C</a> <i>(752F)</i> |</nobr> <nobr><a title="42" href="42.html">425-650C</a> <i>(797-1202F)</i> |</nobr> <nobr><a title="38" href="38.html">450-650C</a> <i>(842-1202F)</i> |</nobr> <nobr><a title="5" href="5.html">470-1200C</a> <i>(878-2192F)</i> |</nobr> <nobr><a title="39" href="39.html">500-600C</a> <i>(932-1112F)</i> |</nobr> <nobr><a title="47" href="47.html">512C</a> <i>(953F)</i> |</nobr> <nobr><a title="30" href="30.html">540-600C</a> <i>(1004-1112F)</i> |</nobr> <nobr><a title="61" href="61.html">650-900C</a> <i>(1202-1652F)</i> |</nobr> <nobr><a title="64" href="64.html">750-850C</a> <i>(1382-1562F)</i> |</nobr> <nobr><a title="18" href="18.html">750-1000C</a> <i>(1382-1832F)</i> |</nobr> <nobr><a title="68" href="68.html">760C</a> <i>(1400F)</i> |</nobr> <nobr><a title="67" href="67.html">760C</a> <i>(1400F)</i> |</nobr> <nobr><a title="76" href="76.html">787C</a> <i>(1448F)</i> |</nobr> <nobr><a title="27" href="27.html">800-1100C</a> <i>(1472-2012F)</i> |</nobr> <nobr><a title="77" href="77.html">815C</a> <i>(1499F)</i> |</nobr> <nobr><a title="69" href="69.html">815C</a> <i>(1499F)</i> |</nobr> <nobr><a title="78" href="78.html">843C</a> <i>(1549F)</i> |</nobr> <nobr><a title="55" href="55.html">850C</a> <i>(1562F)</i> |</nobr> <nobr><a title="48" href="48.html">850-950C</a> <i>(1562-1742F)</i> |</nobr> <nobr><a title="41" href="41.html">850C</a> <i>(1562F)</i> |</nobr> <nobr><a title="66" href="66.html">870-900C</a> <i>(1598-1652F)</i> |</nobr> <nobr><a title="79" href="79.html">871C</a> <i>(1599F)</i> |</nobr> <nobr><a title="62" href="62.html">900C</a> <i>(1652F)</i> |</nobr> <nobr><a title="65" href="65.html">900-1000C</a> <i>(1652-1832F)</i> |</nobr> <nobr><a title="70" href="70.html">900C</a> <i>(1652F)</i> |</nobr> <nobr><a title="81" href="81.html">926C</a> <i>(1698F)</i> |</nobr> <nobr><a title="87" href="87.html">932C</a> <i>(1709F)</i> |</nobr> <nobr><a title="85" href="85.html">950-1050C</a> <i>(1742-1922F)</i> |</nobr> <nobr><a title="82" href="82.html">954C</a> <i>(1749F)</i> |</nobr> <nobr><a title="73" href="73.html">980C</a> <i>(1796F)</i> |</nobr> <nobr><a title="83" href="83.html">982C</a> <i>(1799F)</i> |</nobr> <nobr><a title="21" href="21.html">990C</a> <i>(1814F)</i> |</nobr> <nobr><a title="54" href="54.html">1025C</a> <i>(1877F)</i> |</nobr> <nobr><a title="49" href="49.html">1025-1325C</a> <i>(1877-2417F)</i> |</nobr> <nobr><a title="89" href="89.html">1050-1200C</a> <i>(1922-2192F)</i> |</nobr> <nobr><a title="8" href="8.html">1050C</a> <i>(1922F)</i> |</nobr> <nobr><a title="71" href="71.html">1065-1120C</a> <i>(1949-2048F)</i> |</nobr> <nobr><a title="1" href="1.html">1082C</a> <i>(1979F)</i> |</nobr> <nobr><a title="46" href="46.html">1100-1450C</a> <i>(2012-2642F)</i> |</nobr> <nobr><a title="28" href="28.html">1100C</a> <i>(2012F)</i> |</nobr> <nobr><a title="50" href="50.html">1100C</a> <i>(2012F)</i> |</nobr> <nobr><a title="86" href="86.html">1100C</a> <i>(2012F)</i> |</nobr> <nobr><a title="88" href="88.html">1100C</a> <i>(2012F)</i> |</nobr> <nobr><a title="52" href="52.html">1300C</a> <i>(2372F)</i> |</nobr> <nobr><a title="22" href="22.html">1325C</a> <i>(2417F)</i> |</nobr> <nobr><a title="34" href="34.html">1330C</a> <i>(2426F)</i> |</nobr> <nobr><a title="17" href="17.html">1360C</a> <i>(2480F)</i> |</nobr> <nobr><a title="2" href="2.html">1418-1428C</a> <i>(2584-2602F)</i> |</nobr> <nobr><a title="29" href="29.html">1420C</a> <i>(2588F)</i> |</nobr> <nobr><a title="60" href="60.html">1550C</a> <i>(2822F)</i> |</nobr> <nobr><a title="23" href="23.html">1565C</a> <i>(2849F)</i> |</nobr> <nobr><a title="80" href="80.html">1650C</a> <i>(3002F)</i> |</nobr> <nobr><a title="24" href="24.html">1785C</a> <i>(3245F)</i> |</nobr> <nobr><a title="20" href="20.html">1990C</a> <i>(3614F)</i> |</nobr> <nobr><a title="26" href="26.html">2300C</a> <i>(4172F)</i> |</nobr> <nobr><a title="25" href="25.html">2320C</a> <i>(4208F)</i></nobr></div><h1>150C <i>(302F)</i></h1>
+<h4 class="text-muted">Epsom salts decompose to lose water</h4>
+<h2 style="font-style:italic;">Related Information</h2>
+<h3>Links</h3><table>
+<table class="table table-bordered"><tbody>
+<tr>
+<td scope="row">Materials</td>
+<td>
+<a href="https://digitalfire.com/material/epsom+salts">Epsom Salts</a>
+<br /><i></i>
+</td>
+</tr>
+</tbody></table><table style="margin:30px 0px 30px 0px;"><tr><td style="vertical-align:middle; text-align:center; font-size:80%;"><img src="../images/PayPalDonate.png" style="height:66px; padding-right:20px;"><br /><a href="https://www.paypal.com/donate/?hosted_button_id=F8L3JX4BCCXJ6">PayPal</a></td><td style="background-color:#ddffdd; padding:10px; border:thin solid grey; font-size:90%;"><b>No</b> tracking, <b>No</b> ads, <b>No</b> paywall, <b>No</b> transient content!<br />Just organized, concise information constantly updated and improved.<br />Was this helpful? Consider supporting me.</td><tr></table><table style="margin-top:30px; padding-top:10px; padding-bottom:20px; border-top:thin solid grey; border-bottom:thin solid grey;"><tr><td style="padding-right:10px">By <i>Tony Hansen</i><br /><span style="font-size:80%; color:#888888;">Follow me on<br /><a title="Threads" href="https://www.threads.net/@tonyatdigitalfire" target="_blank"><img src="../images/threads.jpg" style="width:20px;" border="0"></a> <a title="Facebook Insight-Live" href="https://www.facebook.com/insightlive" target="_blank"><img src="../images/facebook.jpg" style="width:20px;" border="0"></a> <a title="LinkedIn" href="https://www.linkedin.com/in/tonywhansen/" target="_blank"><img src="../images/linkedin.jpg" style="width:20px;" border="0"></a> <a title="Pinterest" href="https://www.pinterest.ca/tonywhansen" target="_blank"><img src="../images/pinterest.jpg" style="width:20px;" border="0"></a> <a title="Instagram" href="https://instagram.com/tonyatdigitalfire" target="_blank"><img src="../images/instagram.jpg" style="width:20px;" border="0"></a> <a title="Ko-Fi" href="https://ko-fi.com/tonyhansen#" target="_blank"><img src="../images/ko-fi.jpg" style="width:20px;" border="0"></a> <a title="Twitter" href="https://x.com/digitalfiretony" target="_blank"><img src="../images/twitter.jpg" style="width:20px;" border="0"></a></td><td><a href="https://tonyhansen.com/about"><img src="../images/SignaturePhotoSmall.jpg" height="80"></a></td></tr></table><h3>Got a Question?</h3><p style="margin-bottom:30px;"><a name="kofi">Buy me a coffee and we can talk</a> <a target="_blank" href="https://ko-fi.com/tonyhansen"><img style="width:40px" src="../images/ko-fi.svg"></a></p><p style="margin-bottom:30px;">&nbsp;</p>
+<p></p><p></p><hr>
+<img style="width:250px" src="../4sight/images/ReferenceLibrary.svg">
+<br />
+<a href="../index.html">https://digitalfire.com</a>, All Rights Reserved
+<br /><a href="../w3c/privacypolicy.php.html">Privacy Policy</a>
+</div>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+</body>
+</html>

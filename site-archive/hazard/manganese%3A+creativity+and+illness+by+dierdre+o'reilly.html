@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="../favicon.svg">
+<link rel="mask-icon" href="../mask-icon.svg" color="#000000">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<title>Manganese: Creativity and Illness by Dierdre O'Reilly</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<meta name="author" content="Tony Hansen">
+<meta name="description" content="A story of one persons struggle with manganese toxicity">
+<style>
+.flexinline { width: 50%; height: auto; clear:left; margin: 10px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexinline { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexright50 { width: 50%; height: auto; float: right; margin: 5px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexright50 { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexright33 { width: 33%; height: auto; float: right; margin: 5px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexright33 { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexright25 { width: 25%; height: auto; float: right; margin: 5px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexright25 { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexleft50 { width: 50%; height: auto; float: left; margin: 5px 15px 10px 0px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexleft50 { width: 100%; height: auto; margin: 5px 10px 10px 0px; border: none; padding: none; } }
+.flexleft33 { width: 33%; height: auto; float: left; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexleft33 { width: 100%; height: auto; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; } }
+.flexleft25 { width: 25%; height: auto; float: left; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexleft25 { width: 100%; height: auto; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; } }
+.pictureseries { overflow:scroll; width:auto; height:200px; float:left; margin: 5px 10px 10px 0px; padding: 5px; font-size:60%; font-style:italic;}
+@media (max-width: 640px) { .pictureseries { overflow:scroll; width:auto; height:200px; float:left; margin: 5px 10px 10px 0px; border: padding: 5px; font-size:60%; font-style:italic;} }
+.L2 { margin-left:0px; }
+.L3 { margin-left:20px; color:#222222; }
+.L4 { margin-left:40px; color:#444444; }
+.L5 { margin-left:60px; color:#666666; }
+.L6 { margin-left:60px; color:#888888; }
+h2 { color:#222222; }
+h3 { color:#444444; }
+h4 { color:#666666; }
+h5 { color:#888888; }
+
+</style>
+
+<meta name="google-site-verification" content="wquYW_n-3QEfIzDfV--8ElUewf7TIt04RGo55GfZySU" />
+<meta name="have-i-been-pwned-verification" value="9223dcee7de5c9622c2a2abcff4adc81">
+<script>
+function validateForm() {
+	var x = document.forms["emailform1"]["name1"].value;
+	var r = true;
+	if (x == "") { // alert("A name is required."); 
+		document.getElementById("name1").textContent="Name Required";
+		document.getElementById("name1").style.color="red";
+		// document.emailform1.name1.focus() ; # does not work, should be getelementbyid
+		r = false; 
+	} else {
+		document.getElementById("name1").textContent="Name";
+		document.getElementById("name1").style.color="black";
+	}
+	if (document.forms["emailform1"]["subject1"].value == "") { 
+		document.getElementById("subject1").textContent="Subject Required";
+		document.getElementById("subject1").style.color="red";
+		r = false; 
+	} else {
+		document.getElementById("subject1").textContent="Subject";
+		document.getElementById("subject1").style.color="black";
+	}			
+	if (document.forms["emailform1"]["msg1"].value == "") { 
+		document.getElementById("msg1").textContent="Message Required";
+		document.getElementById("msg1").style.color="red";
+		// alert("A message is required."); 
+		r = false; 
+	} else {
+		document.getElementById("msg1").textContent="Message";
+		document.getElementById("msg1").style.color="black";
+	}
+	var emailID = document.emailform1.email1.value;
+	atpos = emailID.indexOf("@");
+	dotpos = emailID.lastIndexOf(".");
+	if (atpos < 1 || ( dotpos - atpos < 2 )) {
+		document.getElementById("email1").textContent="Email Address Appears Invalid!";
+		document.getElementById("email1").style.color="red";
+		// alert("Your email address appears invalid.")
+		r = false;
+	} else {
+		document.getElementById("email1").textContent="Email Address";
+		document.getElementById("email1").style.color="black";
+	}
+	// Send the form
+	if (r == false) return false;
+	document.forms["emailform1"].submit();
+}
+</script>
+</head>
+<body>
+<p style="background-color:#ff9933; border-width:1px; padding:3px 10px 3px 10px; margin:0px 0px 3px 0px; font-size:80%; text-align:center;">
+Digitalfire will shut down on June 26. I no longer have the authority to grant exemption to a section in the Terms and Conditions of using material in the Insight-Live account from which I built the source material. While there are ways to comply with the take-down order, they are beyond my means because of how complex and large the site has become in the past 35+ years. It has been a wild ride for a shy prairie boy, thanks to everyone for your support. Insight-live.com is not affected by this.</p>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<a name="pagetop" class="navbar-brand" href="../home.html"><img src="../4sight/images/ReferenceLibrary.svg" height="40" alt=""></a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item"><a class="nav-link" href="../home.html">Home</a></li>
+			<li class="nav-item"><a class="nav-link" href="../oxide/list.html">Oxides</a></li>
+			<li class="nav-item"><a class="nav-link" href="../material/list.html">Materials</a></li>
+			<li class="nav-item"><a class="nav-link" href="../recipe/list.html">Recipes</a></li>
+			<li class="nav-item"><a class="nav-link" href="../glossary/list.html">Glossary</a></li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="manganese%253A+creativity+and+illness+by+dierdre+o'reilly.html#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Others</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" href="../article/list.html">Articles</a>
+					<a class="dropdown-item active" href="list.html">Hazards</a>
+					<a class="dropdown-item" href="../mineral/list.html">Minerals</a>
+					<a class="dropdown-item" href="../property/list.html">Properties</a>
+					<a class="dropdown-item" href="../schedule/list.html">Firing Schedules</a>
+					<a class="dropdown-item" href="../temperature/list.html">Temperatures</a>
+					<a class="dropdown-item" href="../trouble/list.html">Troubles</a>
+					<a class="dropdown-item" href="../test/list.html">Tests</a>
+					<a class="dropdown-item" href="../video/list.html">Media</a>
+					<a class="dropdown-item" href="../picture/list.html">Pictures</a>
+					<a class="dropdown-item" href="../typecode/list.html">Typecodes</a>
+					<a class="dropdown-item" href="../project/list.html">Projects</a>
+					<a class="dropdown-item" href="../consultants/list.html">Consultants</a>
+					<a class="dropdown-item" href="../schools/list.html">Schools</a>
+					<a class="dropdown-item" href="../stores/list.html">Stores</a>
+					<a class="dropdown-item" href="../potterytony/list.html">Don't Buy-A-Mug</a>
+					<div class="dropdown-divider"></div>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="../index.html">https://digitalfire.com</a>
+					<a class="dropdown-item" href="https://insight-live.com">Insight-Live.com</a>
+					<a class="dropdown-item" href="../index.html">Sign-Up</a>
+				</div>
+			</li>
+		</ul>
+		<form class="form-inline my-2 my-lg-0" action="https://digitalfire.com/index.php?searcharea=hazard" accept-charset="UTF-8" method="post">
+		<input name="searchfor" title="Search from home to search in all areas" maxlength="20" class="form-control mr-sm-2" aria-label="Search" placeholder="Search" autocorrect="off" autocapitalize="off" type="search" value=""><button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="searchbutton">Search</button>
+		</form>
+	</div>
+</nav>
+<div class="container"><p><a class="btn btn-primary" data-toggle="collapse" href="manganese%253A+creativity+and+illness+by+dierdre+o'reilly.html#collapse1" role="button" aria-expanded="false" aria-controls="collapse1">All Hazards</a></p>
+<div class="collapse" id="collapse1" style="margin-bottom:15px;"><nobr><a title="341" href="341.html">Alumina Toxicology</a> |</nobr> <nobr><a title="333" href="333.html">Ammonia and Latex Toxicity</a> |</nobr> <nobr><a title="16" href="16.html">Antimony Oxide</a> |</nobr> <nobr><a title="412" href="412.html">Are colored porcelains hazardous?</a> |</nobr> <nobr><a title="18" href="18.html">Arsenic Oxide</a> |</nobr> <nobr><a title="19" href="19.html">Asbestos Toxicity</a> |</nobr> <nobr><a title="22" href="22.html">Ball Clay</a> |</nobr> <nobr><a title="321" href="321.html">BARIUM and COMPOUNDS Toxicology</a> |</nobr> <nobr><a title="367" href="367.html">Barium Carbonate in Clay Bodies</a> |</nobr> <nobr><a title="26" href="26.html">Barium Carbonate in Glazes</a> |</nobr> <nobr><a title="31" href="31.html">Bentonite Toxicity</a> |</nobr> <nobr><a title="33" href="33.html">Beryllium Monoxide Toxicology</a> |</nobr> <nobr><a title="352" href="352.html">Bismuth Trioxide Toxicology</a> |</nobr> <nobr><a title="326" href="326.html">Boron Compounds and Their Toxicity</a> |</nobr> <nobr><a title="1" href="1.html">Brown Stain</a> |</nobr> <nobr><a title="335" href="335.html">Cadmium Toxicity</a> |</nobr> <nobr><a title="343" href="343.html">Calcium Carbonate Toxicology</a> |</nobr> <nobr><a title="334" href="334.html">Carbon Monoxide Toxicity</a> |</nobr> <nobr><a title="353" href="353.html">Cesium Toxicology</a> |</nobr> <nobr><a title="330" href="330.html">Chromium Compounds Toxicology</a> |</nobr> <nobr><a title="146" href="146.html">Clay Toxicity</a> |</nobr> <nobr><a title="73" href="73.html">Cobalt Oxide and Carbonate</a> |</nobr> <nobr><a title="331" href="331.html">Cobalt Toxicology</a> |</nobr> <nobr><a title="329" href="329.html">Copper Compounds Toxicology</a> |</nobr> <nobr><a title="78" href="78.html">Copper Oxide and Carbonate</a> |</nobr> <nobr><a title="84" href="84.html">Cristobalite Toxicity</a> |</nobr> <nobr><a title="337" href="337.html">Cryolite and Ceramics</a> |</nobr> <nobr><a title="372" href="372.html">Dealing With Dust in Ceramics</a> |</nobr> <nobr><a title="351" href="351.html">Diatomaceous Earth Toxicology</a> |</nobr> <nobr><a title="323" href="323.html">Dioxins in Clays</a> |</nobr> <nobr><a title="95" href="95.html">Epsom Salts</a> |</nobr> <nobr><a title="348" href="348.html">Eye Injuries Due to Radiation</a> |</nobr> <nobr><a title="222" href="222.html">Feldspar</a> |</nobr> <nobr><a title="320" href="320.html">Fighting Micro-Organisms in Ceramics</a> |</nobr> <nobr><a title="108" href="108.html">Fluorine Gas</a> |</nobr> <nobr><a title="413" href="413.html">Fumes from gas kilns</a> |</nobr> <nobr><a title="354" href="354.html">Gallium Oxide Toxicology</a> |</nobr> <nobr><a title="342" href="342.html">Hafnium Oxide Toxicty</a> |</nobr> <nobr><a title="345" href="345.html">Hydrofluoric Acid Toxicity</a> |</nobr> <nobr><a title="350" href="350.html">Iron oxide and Hematite</a> |</nobr> <nobr><a title="169" href="169.html">Lead Chromate</a> |</nobr> <nobr><a title="368" href="368.html">Lead in Ceramic Glazes</a> |</nobr> <nobr><a title="328" href="328.html">Lead Toxicology</a> |</nobr> <nobr><a title="174" href="174.html">Lithium Carbonate Toxicity</a> |</nobr> <nobr><a title="349" href="349.html">Lithium Toxicology</a> |</nobr> <nobr><a title="322" href="322.html">Man-Made Vitreous Fibers (MMVF) Toxicology</a> |</nobr> <nobr><a title="410" href="410.html">Man-Made Vitreous Fibers Safety Update</a> |</nobr> <nobr><a title="406" href="406.html">Manganese and Parkinsons by Jane Watkins</a> |</nobr> <nobr><a title="187" href="187.html">Manganese in Clay Bodies</a> |</nobr> <nobr><a title="317" href="317.html">Manganese Inorganic Compounds Toxicology</a> |</nobr> <nobr><a title="409" href="409.html">Manganese Toxicity by Elke Blodgett</a> |</nobr> <nobr><a title="407" href="407.html">Manganese: Creativity and Illness by Dierdre O'Reilly</a> |</nobr> <nobr><a title="332" href="332.html">Molybdenum Compounds Toxicology</a> |</nobr> <nobr><a title="327" href="327.html">Nickel Compounds Toxicity</a> |</nobr> <nobr><a title="314" href="314.html">Niobium Oxide Toxicity</a> |</nobr> <nobr><a title="318" href="318.html">Occupational Dermatoses</a> |</nobr> <nobr><a title="370" href="370.html">Overview of Material Safety by Gavin Stairs</a> |</nobr> <nobr><a title="364" href="364.html">Paraffin Toxicology</a> |</nobr> <nobr><a title="216" href="216.html">Perlite Toxicity</a> |</nobr> <nobr><a title="238" href="238.html">Plant Ash Toxicity</a> |</nobr> <nobr><a title="346" href="346.html">Potassium Carbonate Toxicity</a> |</nobr> <nobr><a title="365" href="365.html">Pregnancy and Ceramics</a> |</nobr> <nobr><a title="355" href="355.html">Propane Toxicology</a> |</nobr> <nobr><a title="251" href="251.html">Quartz Toxicity</a> |</nobr> <nobr><a title="369" href="369.html">Quartz Toxicity on Clayart</a> |</nobr> <nobr><a title="336" href="336.html">Rare Earth Compounds Toxicity</a> |</nobr> <nobr><a title="366" href="366.html">Rubidium and Cesium Toxicology</a> |</nobr> <nobr><a title="356" href="356.html">Rutile Toxicology</a> |</nobr> <nobr><a title="324" href="324.html">Silicosis and Screening</a> |</nobr> <nobr><a title="357" href="357.html">Silver Compounds Toxicology</a> |</nobr> <nobr><a title="358" href="358.html">Sodium Azide Toxicology</a> |</nobr> <nobr><a title="359" href="359.html">Sodium Carbonate Toxicology</a> |</nobr> <nobr><a title="360" href="360.html">Sodium Silicate Powder Toxicology</a> |</nobr> <nobr><a title="315" href="315.html">Stannous Chloride Toxicity</a> |</nobr> <nobr><a title="316" href="316.html">Strontium Carbonate Toxicity Note</a> |</nobr> <nobr><a title="347" href="347.html">Sulfur Dioxide Toxicity</a> |</nobr> <nobr><a title="3" href="3.html">Talc Hazards Overview</a> |</nobr> <nobr><a title="361" href="361.html">Talc Toxicology</a> |</nobr> <nobr><a title="362" href="362.html">Thallium Oxide Toxicology</a> |</nobr> <nobr><a title="344" href="344.html">Thorium Dioxide Toxicity</a> |</nobr> <nobr><a title="338" href="338.html">Tin Inorganic Compounds</a> |</nobr> <nobr><a title="339" href="339.html">Titanium Dioxide Toxicology</a> |</nobr> <nobr><a title="313" href="313.html">Toxicological Assessment of Zeolites</a> |</nobr> <nobr><a title="363" href="363.html">Tungsten Compounds Toxicology</a> |</nobr> <nobr><a title="371" href="371.html">Understanding Acronyms on MSDS's</a> |</nobr> <nobr><a title="325" href="325.html">Uranium and Ceramics</a> |</nobr> <nobr><a title="319" href="319.html">Vanadium and Compounds Toxicology</a> |</nobr> <nobr><a title="411" href="411.html">Vermiculite</a> |</nobr> <nobr><a title="340" href="340.html">Zinc Compounds Toxicology</a> |</nobr> <nobr><a title="373" href="373.html">Zirconium Compounds Toxicity</a> |</nobr> <nobr><a title="234" href="234.html">Zirconium Encapsulated Stains Toxicity</a></nobr></div><h1>Manganese: Creativity and Illness by Dierdre O'Reilly</h1>
+<P><B><U>ACKNOWLEDGMENTS</U></B></P>
+<P>I would like to thank Jane Lanyon for her constant support throughout this thesis. Also, Yvonne Robinson, Diana Hobson, and my tutor Nicola Gordon Bowe.</P>
+<P>"I see creativity and destruction as opposite sides of the same force. As I have indicated, the dark side - shadow, destruction, illness, etc. needs to be transmitted into the light - creative, flowing, healthy, energy. The secret is, not to see the darkness, illness, etc. as bad, but to see it as necessary to the process. Without darkness you don't see the light." (17)</P>
+<P>-Diana Hobson</P>
+<H2><B><U>INTRODUCTION</U></B></H2>
+<P>Creativity is the desire to work from one's inner self, to translate one's thoughts and feelings into whichever medium one wishes. If I were to ask you to think of an artist you admire, what would your initial thoughts be? Would you get an immediate image of the artist and the works of art that you are familiar with? Or would you think of the artist in the making process - working frantically in his/her studio? Would anyone ever think of the artist or his/her health; that the artist may be suffering, that pain and discomfort had to be confronted in order to produce the work of art? It would be even worse to think that the artist was made seriously ill due to the materials he/she had been using. Personally, I would not have considered the health of the artist when looking at his/her work if it had not been for the fact that I myself became ill due to the effects of the materials I was using in my work.</P>
+<P>A study of the relationship between the suffering and the work or artists who have been severely ill may enhance our understanding or their art. I myself cannot agree with critics who claim that it is only the work itself which is worthy of serious interest and that the personal background of the creators is little more than anecdotal" (1). Since my illness I have become increasingly aware of the hazards involved within the crafts industry, that working with certain materials can threaten your life. Many art materials are dangerous because their <a  href="../glossary/toxicity.html">toxicity</a> is cumulative - "the seeds of ignorance may come to harvest in your body in twenty years or"(2). This essay does not pretend to unearth original scientific theories in possible connections between creativity and illness. What it does, is inform artists about the hazardous materials with which they might be working and their subsequent ill effects. To add to our understanding of the creative process and its possible ill-effects, I shall be discussing some artists who have had their health affected due to the nature of their work. A study of this kind would, I think, be interesting even if one only agreed with George Bernard Shaw that "Disease is not interesting; it is something to be done away with by general consent and that is all about it"(3).</P>
+<P>There is however, more kindness in Goethes view that "our own pain teaches us to share the misery of our fellow creatures: it is through suffering and pain that we can identify with them: happiness may be incomprehensible, pain is readily understood"(4).</P>
+<P>The women, Niki De Saint Phalle, Jane Lanyon and Diana Hobson, whose work will be covered in detail became seriously ill due to the materials that they were using. Saint Phalle and Lanyon were both working in different mediums using different materials before any health problems occurred. It was not until they became ill that they became more aware of how dangerous certain materials could be, materials which they were coming into contact with on an everyday basis. Hobson fell seriously ill due to the nature of her working methods. The work produced by these three women differs enormously, from the medium they have used, to the nature and content of the work. Subsequently, their present illnesses differ. I will describe how they have come to terms with their illnesses and how this affected their work. By using these three different cases, I hope to give an overall view of the potential hazards involved in working in an art and craft environment.</P>
+<P>The toxicity of various materials and the effects of particular dusts and fumes on the human body are being constantly investigated and monitored by medical and safety organizations. This is not good if the artist - the person using these materials is unaware of the consequences. As knowledge of the technology of <a  href="../glossary/ceramics.html">ceramics</a> grows and we become aware of the possible dangers from handling and firing the ceramic materials, there is a tendency to over-react. Clearly, the only way artists can save their health is to close up their studies, throw down their materials and find a less hazardous job. This, of course, is out of the question. If we, as artists, are made more aware of the dangerous substances, then disciplined and taught how to use these substances properly, we will be leaving ourselves less at risk. We must find ways in which they can be minimized or avoided. However, the materials are not alone in causing ill-health. Stress can result in a massive strain on the health of the artist. This can lead to breakdown and loss of energy. Not only must we reassess the materials we use and how we use them, but how we work and burn our energy in a productive manner.</P>
+<P>On the obverse side of this issue, artistic creativity has the power to heal. Many people have been cured of their illness by occupational therapy. Pottery is used widely as an aid to recovery. Many people improve the quality of their lives by taking part in art courses and many hospitals house their own pottery workshops. So, creative art has both good and bad sides to it - it is the latter that few people take notice of. Naturally, many artists seem more interested in the creative process and the end result rather than in the breakdown of the toxicity of various materials. In order to improve the quality of an artists' life, health and safety must be given as much respect as the work being created.</P>
+<P>Iron deficiency is said to leave the person more open to manganese poisoning, as it increases manganese absorption. According to Lanyon:</P>
+<P>"My own long family history of iron deficiency anemia was treated with iron and tonics which I now find have added manganese compounds. Iron deficiency anemia has been advanced as an important factor in work susceptibility to manganism. Since there are atomic similarities between iron and manganese an iron deficient body may absorb manganese more readily than one with and adequate iron supply".(5)</P>
+<P>In the ceramic industry, manganese is used in the mixing up of glazes or coloured slips. Manganese give colours varying from a bright red purple to a dark purplish brown that can almost be black. As discussed earlier, metal fumes can be released during firing from the glazes. If manganese <a  href="../glossary/ceramic+oxide.html">oxides</a> are present in the glaze the fumes emitted can cause metal fume fever and manganese poisoning.</P>
+<P>After a diagnosis on December 24th 1992, Lanyon's future prospects affected her more than the symptoms. Lanyon continued her work as her symptoms were not bad and in February 1993 she held a ceramic exhibition with the Craftsman Potters Association at the David Canter Gallery in London. Three weeks later, her diagnosis was verified and she stopped working with clay. "I decided to steer clear of pottery for a while to see if my symptoms would subside"(6). One of Lanyon's symptoms included the swing in her left arm lessening. The most characteristic symptoms of Parkinson's disease are tremor and rigidity. Parkinson tremor is a fairly rhythmic tremor of resting muscles. Rigidity is more widespread than tremor; and the spine or neck is affected, it causes a stooped posture. If the facial muscles are affected it causes a mask like expression. Associated movements such as swinging the arm while walking may be absent casing the hurried gait. If the rigidity is not treated, the muscles will stiffen and become useless. Because of the weakness on Lanyon's left side, her pots tended to end up slightly off to one side. Getting someone to throw the bases for her helped keep her on track. For Lanyon, this was a difficult time -</P>
+<P>"To be honest, I am not fully at peace with myself and I guess this affects my feeling towards my pots. They just don't ring true at the moment"(7).</P>
+<P>However, Jane Lanyon is still deeply involved in her ceramic work, in her piece <U>Storm Approaching</U>, 1991, (fig. 21), the swelling colours of the clay and the slips emerge as one, creating a dramatic feeling of upheaval and of turbulence. The form itself adds to the intense feeling of the piece. It seems that in one clear swoop it rises up, bellying out to an extent where you wish her pieces. You cannot just look and walk away. It is a matter of becoming part of her landscapes, her emotions, a matter of imagining her landscapes, her storms and rain clouds. This is not a difficult task as Lanyon's work is brilliantly done. The sensitivity and calmness of the landscapes portrayed is overwhelming. But it was through the application of the slips along with other factors mentioned earlier which resulted in this brilliant artist falling ill.</P>
+<P>In 1993 through frustration at her diagnosis, Lanyon took up painting</P>
+<P>"With my father's recognition, and my brothers too, I'd always felt inadequate about my painting. With the shock of my diagnosis and my husband's confidence in me I put all my inhibitions and apprehensive feelings aside"(8).</P>
+<P>Lanyon's paintings are quite similar to the decoration used on her pots. Using a similar method of control she achieves aerial images of the earth. Using a household acrylic paint and gloss, the colours are generally made up suing natural oxides in a clay slip, which acts as a thickener. Through painting Lanyon seems to find a release from her disease. She becomes preoccupied and excited with her new work and she finds her possibilities limitless. In her paintings the <U>Coast</U>, 1993, (fig. 27) and the <U>Beach</U>, 1993, (fig. 28) the colours are delicately used to an extent where you are drawn into the painting. The paintings hold an element of mystery or hidden secrets. As in her ceramic work Lanyon once again captures the true spirit of nature. Although they seem closely related to her pots, they create a different impact, tell a different story. Lanyon's images tend to draw you closer and it is then you begin to see the tiny details, which at first glance, were invisible. Again, in <U>Rocks</U>, 1993, (fig. 29), and <U>SeaSpray</U>, 1993, (fig. 30), the energy of movement which is so evident in her pots, comes through in these paintings. In <U>Bushfire</U>, 1993, (fig. 31) and <U>Floodplains</U>, 1993, (fig. 32) the vibrant colours used in contrast with each other show vividly the conflicts of nature. Although Lanyon has brought her love of western Australia into her paintings, she finds her method of working has changed.</P>
+<P>"My painting technique is not exactly the same as working on a sphere which creates its own obstacles. A flat surface is definitely easier and one can work at areas over and over again until the right image emerges"(9).</P>
+<P>After a 9 month break, Lanyon has returned to her pots, but she cannot work as she previously had done. "I now make smaller pots and my work is much slower"(10) (fig. 33). When asked whether she would produce work - ceramic or otherwise about her illness she says "No I feel the need to be positive and not pulled back by the downside of the disease". Instead, Lanyon has devoted her time and energy into researching her disease and its connections with manganese. She has been in contact with Monona Rossol from the Arts & Crafts & Theatre Society (ARTS) who has been very helpful and who has printed an article for Lanyon on manganese poisoning in the American Arts newsletter.</P>
+<P>"Somehow, we have to get the message across to backyard potters and artists" says Lanyon, "at home we are not only endangering ourselves but our children by exposing them to these materials. This is my main concern"(11).</P>
+<P>Lanyon has talked to many potters who laugh it off as if it'll never happen to them.</P>
+<P>"I want to convince tunnel vision potters that they must look very carefully at how they achieve that end result, a little more thought and time could save years of agony later on"(6).</P>
+<P>After being diagnosed, Lanyon has become aware of four potters in Western Australia, with Parkinson's; one who has packed and bagged manganese; others have cancer and one has M.S. and she spent years mixing manganese into her clay. It is too late at this stage to hear about other people with similar diseases. One must become aware of the dangers of manganese and the dangers of all other materials that are being used. We must make others aware. It's just a matter of reassessing how we work and what we use. By making a few necessary adjustments you may be saving your health from being at risk. The time to start changing is now. Don't wait for something to happen before doing so. If you risk your health for your art, it may result that in years to come you are no longer able to do the one thing that you love.</P>
+<P>
+<HR>
+</P>
+<P>We got this interesting comment in Dec 2002:</P>
+<P>"Many people talk about toxicity of the materials used  in ceramic production, however, there are few references to allergic reactions.  About eight months ago I began to notice a rash on one of my fingers.  Over weeks and months it grew worse and very bothersome, painful and itching.  After doing research on the internet and visiting my doctor, it was determined that I had pompholyx, or dishydrotic dermititis.  This is basically a form of allergic exzema.  Causes for this vary, but with the most common factor being allergies to cobalt, chrome and nickel, primarily in women.  Over the past 6-8 weeks, I have done very little with my ceramic work and have noticed a considerable improvement, near elimination of my symptoms.  Allergies develop over time.  I use beautiful cobalt blue and chrome green glazes.  It took aproximately three years for this to develop.  That's how long ago I began my ceramics business to the tune of 20-40 hours a week."</P>
+<hr><table style="margin-top:30px; padding-top:10px; padding-bottom:20px; border-top:thin solid grey; border-bottom:thin solid grey;"><tr><td style="padding-right:10px">By <i>Tony Hansen</i><br /><span style="font-size:80%; color:#888888;">Follow me on<br /><a title="Threads" href="https://www.threads.net/@tonyatdigitalfire" target="_blank"><img src="../images/threads.jpg" style="width:20px;" border="0"></a> <a title="Facebook Insight-Live" href="https://www.facebook.com/insightlive" target="_blank"><img src="../images/facebook.jpg" style="width:20px;" border="0"></a> <a title="LinkedIn" href="https://www.linkedin.com/in/tonywhansen/" target="_blank"><img src="../images/linkedin.jpg" style="width:20px;" border="0"></a> <a title="Pinterest" href="https://www.pinterest.ca/tonywhansen" target="_blank"><img src="../images/pinterest.jpg" style="width:20px;" border="0"></a> <a title="Instagram" href="https://instagram.com/tonyatdigitalfire" target="_blank"><img src="../images/instagram.jpg" style="width:20px;" border="0"></a> <a title="Ko-Fi" href="https://ko-fi.com/tonyhansen#" target="_blank"><img src="../images/ko-fi.jpg" style="width:20px;" border="0"></a> <a title="Twitter" href="https://x.com/digitalfiretony" target="_blank"><img src="../images/twitter.jpg" style="width:20px;" border="0"></a></td><td><a href="https://tonyhansen.com/about"><img src="../images/SignaturePhotoSmall.jpg" height="80"></a></td></tr></table>
+<h2 style="font-style:italic; margin-top:40px;">Related Information</h2>
+
+<h3>Links</h3><table>
+<table class="table table-bordered"><tbody>
+<tr>
+<td scope="row">Materials</td>
+<td>
+<a href="../material/manganese+oxide.html">Manganese Oxide</a>
+<br /><i></i>
+</td>
+</tr>
+<tr>
+<td scope="row">Materials</td>
+<td>
+<a href="../material/manganese+dioxide.html">Manganese Dioxide</a>
+<br /><i>A source of <a  href="../oxide/mno.html">MnO</a> used in ceramic glazes and the production of ceramic <a  href="../glossary/ceramic+stain.html">stains</a>. Commonly made by grinding pyrolusite rock.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Hazards</td>
+<td>
+<a href="manganese+inorganic+compounds+toxicology.html">Manganese Inorganic Compounds Toxicology</a>
+<br /><i></i>
+</td>
+</tr>
+<tr>
+<td scope="row">Hazards</td>
+<td>
+<a href="manganese+and+parkinsons+by+jane+watkins.html">Manganese and Parkinsons by Jane Watkins</a>
+<br /><i>A story of one person and manganese poisoning.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Temperatures</td>
+<td>
+<a href="../temperature/87.html">Manganese compounds may begin to fume (932-)</a>
+</td>
+</tr>
+</tbody></table><table style="margin:30px 0px 30px 0px;"><tr><td style="vertical-align:middle; text-align:center; font-size:80%;"><img src="../images/PayPalDonate.png" style="height:66px; padding-right:20px;"><br /><a href="https://www.paypal.com/donate/?hosted_button_id=F8L3JX4BCCXJ6">PayPal</a></td><td style="background-color:#ddffdd; padding:10px; border:thin solid grey; font-size:90%;"><b>No</b> tracking, <b>No</b> ads, <b>No</b> paywall, <b>No</b> transient content!<br />Just organized, concise information constantly updated and improved.<br />Was this helpful? Consider supporting me.</td><tr></table><h3>Got a Question?</h3><p style="margin-bottom:30px;"><a name="kofi">Buy me a coffee and we can talk</a> <a target="_blank" href="https://ko-fi.com/tonyhansen"><img style="width:40px" src="../images/ko-fi.svg"></a></p><p style="margin-bottom:30px;">&nbsp;</p>
+<p></p><p></p><hr>
+<img style="width:250px" src="../4sight/images/ReferenceLibrary.svg">
+<br />
+<a href="../index.html">https://digitalfire.com</a>, All Rights Reserved
+<br /><a href="../w3c/privacypolicy.php.html">Privacy Policy</a>
+</div>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+</body>
+</html>

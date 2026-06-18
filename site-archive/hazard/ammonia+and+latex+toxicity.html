@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="../favicon.svg">
+<link rel="mask-icon" href="../mask-icon.svg" color="#000000">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<title>Ammonia and Latex Toxicity</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<meta name="author" content="Tony Hansen">
+<meta name="description" content="Ammonia is a constituent of rubbers, latexes and resist used in decorating ceramics. This is a discussion of its toxicity.">
+<style>
+.flexinline { width: 50%; height: auto; clear:left; margin: 10px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexinline { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexright50 { width: 50%; height: auto; float: right; margin: 5px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexright50 { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexright33 { width: 33%; height: auto; float: right; margin: 5px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexright33 { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexright25 { width: 25%; height: auto; float: right; margin: 5px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexright25 { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexleft50 { width: 50%; height: auto; float: left; margin: 5px 15px 10px 0px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexleft50 { width: 100%; height: auto; margin: 5px 10px 10px 0px; border: none; padding: none; } }
+.flexleft33 { width: 33%; height: auto; float: left; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexleft33 { width: 100%; height: auto; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; } }
+.flexleft25 { width: 25%; height: auto; float: left; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexleft25 { width: 100%; height: auto; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; } }
+.pictureseries { overflow:scroll; width:auto; height:200px; float:left; margin: 5px 10px 10px 0px; padding: 5px; font-size:60%; font-style:italic;}
+@media (max-width: 640px) { .pictureseries { overflow:scroll; width:auto; height:200px; float:left; margin: 5px 10px 10px 0px; border: padding: 5px; font-size:60%; font-style:italic;} }
+.L2 { margin-left:0px; }
+.L3 { margin-left:20px; color:#222222; }
+.L4 { margin-left:40px; color:#444444; }
+.L5 { margin-left:60px; color:#666666; }
+.L6 { margin-left:60px; color:#888888; }
+h2 { color:#222222; }
+h3 { color:#444444; }
+h4 { color:#666666; }
+h5 { color:#888888; }
+
+</style>
+
+<meta name="google-site-verification" content="wquYW_n-3QEfIzDfV--8ElUewf7TIt04RGo55GfZySU" />
+<meta name="have-i-been-pwned-verification" value="9223dcee7de5c9622c2a2abcff4adc81">
+<script>
+function validateForm() {
+	var x = document.forms["emailform1"]["name1"].value;
+	var r = true;
+	if (x == "") { // alert("A name is required."); 
+		document.getElementById("name1").textContent="Name Required";
+		document.getElementById("name1").style.color="red";
+		// document.emailform1.name1.focus() ; # does not work, should be getelementbyid
+		r = false; 
+	} else {
+		document.getElementById("name1").textContent="Name";
+		document.getElementById("name1").style.color="black";
+	}
+	if (document.forms["emailform1"]["subject1"].value == "") { 
+		document.getElementById("subject1").textContent="Subject Required";
+		document.getElementById("subject1").style.color="red";
+		r = false; 
+	} else {
+		document.getElementById("subject1").textContent="Subject";
+		document.getElementById("subject1").style.color="black";
+	}			
+	if (document.forms["emailform1"]["msg1"].value == "") { 
+		document.getElementById("msg1").textContent="Message Required";
+		document.getElementById("msg1").style.color="red";
+		// alert("A message is required."); 
+		r = false; 
+	} else {
+		document.getElementById("msg1").textContent="Message";
+		document.getElementById("msg1").style.color="black";
+	}
+	var emailID = document.emailform1.email1.value;
+	atpos = emailID.indexOf("@");
+	dotpos = emailID.lastIndexOf(".");
+	if (atpos < 1 || ( dotpos - atpos < 2 )) {
+		document.getElementById("email1").textContent="Email Address Appears Invalid!";
+		document.getElementById("email1").style.color="red";
+		// alert("Your email address appears invalid.")
+		r = false;
+	} else {
+		document.getElementById("email1").textContent="Email Address";
+		document.getElementById("email1").style.color="black";
+	}
+	// Send the form
+	if (r == false) return false;
+	document.forms["emailform1"].submit();
+}
+</script>
+</head>
+<body>
+<p style="background-color:#ff9933; border-width:1px; padding:3px 10px 3px 10px; margin:0px 0px 3px 0px; font-size:80%; text-align:center;">
+Digitalfire will shut down on June 26. I no longer have the authority to grant exemption to a section in the Terms and Conditions of using material in the Insight-Live account from which I built the source material. While there are ways to comply with the take-down order, they are beyond my means because of how complex and large the site has become in the past 35+ years. It has been a wild ride for a shy prairie boy, thanks to everyone for your support. Insight-live.com is not affected by this.</p>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<a name="pagetop" class="navbar-brand" href="../home.html"><img src="../4sight/images/ReferenceLibrary.svg" height="40" alt=""></a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item"><a class="nav-link" href="../home.html">Home</a></li>
+			<li class="nav-item"><a class="nav-link" href="../oxide/list.html">Oxides</a></li>
+			<li class="nav-item"><a class="nav-link" href="../material/list.html">Materials</a></li>
+			<li class="nav-item"><a class="nav-link" href="../recipe/list.html">Recipes</a></li>
+			<li class="nav-item"><a class="nav-link" href="../glossary/list.html">Glossary</a></li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="ammonia+and+latex+toxicity.html#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Others</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" href="../article/list.html">Articles</a>
+					<a class="dropdown-item active" href="list.html">Hazards</a>
+					<a class="dropdown-item" href="../mineral/list.html">Minerals</a>
+					<a class="dropdown-item" href="../property/list.html">Properties</a>
+					<a class="dropdown-item" href="../schedule/list.html">Firing Schedules</a>
+					<a class="dropdown-item" href="../temperature/list.html">Temperatures</a>
+					<a class="dropdown-item" href="../trouble/list.html">Troubles</a>
+					<a class="dropdown-item" href="../test/list.html">Tests</a>
+					<a class="dropdown-item" href="../video/list.html">Media</a>
+					<a class="dropdown-item" href="../picture/list.html">Pictures</a>
+					<a class="dropdown-item" href="../typecode/list.html">Typecodes</a>
+					<a class="dropdown-item" href="../project/list.html">Projects</a>
+					<a class="dropdown-item" href="../consultants/list.html">Consultants</a>
+					<a class="dropdown-item" href="../schools/list.html">Schools</a>
+					<a class="dropdown-item" href="../stores/list.html">Stores</a>
+					<a class="dropdown-item" href="../potterytony/list.html">Don't Buy-A-Mug</a>
+					<div class="dropdown-divider"></div>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="../index.html">https://digitalfire.com</a>
+					<a class="dropdown-item" href="https://insight-live.com">Insight-Live.com</a>
+					<a class="dropdown-item" href="../index.html">Sign-Up</a>
+				</div>
+			</li>
+		</ul>
+		<form class="form-inline my-2 my-lg-0" action="https://digitalfire.com/index.php?searcharea=hazard" accept-charset="UTF-8" method="post">
+		<input name="searchfor" title="Search from home to search in all areas" maxlength="20" class="form-control mr-sm-2" aria-label="Search" placeholder="Search" autocorrect="off" autocapitalize="off" type="search" value=""><button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="searchbutton">Search</button>
+		</form>
+	</div>
+</nav>
+<div class="container"><p><a class="btn btn-primary" data-toggle="collapse" href="ammonia+and+latex+toxicity.html#collapse1" role="button" aria-expanded="false" aria-controls="collapse1">All Hazards</a></p>
+<div class="collapse" id="collapse1" style="margin-bottom:15px;"><nobr><a title="341" href="341.html">Alumina Toxicology</a> |</nobr> <nobr><a title="333" href="333.html">Ammonia and Latex Toxicity</a> |</nobr> <nobr><a title="16" href="16.html">Antimony Oxide</a> |</nobr> <nobr><a title="412" href="412.html">Are colored porcelains hazardous?</a> |</nobr> <nobr><a title="18" href="18.html">Arsenic Oxide</a> |</nobr> <nobr><a title="19" href="19.html">Asbestos Toxicity</a> |</nobr> <nobr><a title="22" href="22.html">Ball Clay</a> |</nobr> <nobr><a title="321" href="321.html">BARIUM and COMPOUNDS Toxicology</a> |</nobr> <nobr><a title="367" href="367.html">Barium Carbonate in Clay Bodies</a> |</nobr> <nobr><a title="26" href="26.html">Barium Carbonate in Glazes</a> |</nobr> <nobr><a title="31" href="31.html">Bentonite Toxicity</a> |</nobr> <nobr><a title="33" href="33.html">Beryllium Monoxide Toxicology</a> |</nobr> <nobr><a title="352" href="352.html">Bismuth Trioxide Toxicology</a> |</nobr> <nobr><a title="326" href="326.html">Boron Compounds and Their Toxicity</a> |</nobr> <nobr><a title="1" href="1.html">Brown Stain</a> |</nobr> <nobr><a title="335" href="335.html">Cadmium Toxicity</a> |</nobr> <nobr><a title="343" href="343.html">Calcium Carbonate Toxicology</a> |</nobr> <nobr><a title="334" href="334.html">Carbon Monoxide Toxicity</a> |</nobr> <nobr><a title="353" href="353.html">Cesium Toxicology</a> |</nobr> <nobr><a title="330" href="330.html">Chromium Compounds Toxicology</a> |</nobr> <nobr><a title="146" href="146.html">Clay Toxicity</a> |</nobr> <nobr><a title="73" href="73.html">Cobalt Oxide and Carbonate</a> |</nobr> <nobr><a title="331" href="331.html">Cobalt Toxicology</a> |</nobr> <nobr><a title="329" href="329.html">Copper Compounds Toxicology</a> |</nobr> <nobr><a title="78" href="78.html">Copper Oxide and Carbonate</a> |</nobr> <nobr><a title="84" href="84.html">Cristobalite Toxicity</a> |</nobr> <nobr><a title="337" href="337.html">Cryolite and Ceramics</a> |</nobr> <nobr><a title="372" href="372.html">Dealing With Dust in Ceramics</a> |</nobr> <nobr><a title="351" href="351.html">Diatomaceous Earth Toxicology</a> |</nobr> <nobr><a title="323" href="323.html">Dioxins in Clays</a> |</nobr> <nobr><a title="95" href="95.html">Epsom Salts</a> |</nobr> <nobr><a title="348" href="348.html">Eye Injuries Due to Radiation</a> |</nobr> <nobr><a title="222" href="222.html">Feldspar</a> |</nobr> <nobr><a title="320" href="320.html">Fighting Micro-Organisms in Ceramics</a> |</nobr> <nobr><a title="108" href="108.html">Fluorine Gas</a> |</nobr> <nobr><a title="413" href="413.html">Fumes from gas kilns</a> |</nobr> <nobr><a title="354" href="354.html">Gallium Oxide Toxicology</a> |</nobr> <nobr><a title="342" href="342.html">Hafnium Oxide Toxicty</a> |</nobr> <nobr><a title="345" href="345.html">Hydrofluoric Acid Toxicity</a> |</nobr> <nobr><a title="350" href="350.html">Iron oxide and Hematite</a> |</nobr> <nobr><a title="169" href="169.html">Lead Chromate</a> |</nobr> <nobr><a title="368" href="368.html">Lead in Ceramic Glazes</a> |</nobr> <nobr><a title="328" href="328.html">Lead Toxicology</a> |</nobr> <nobr><a title="174" href="174.html">Lithium Carbonate Toxicity</a> |</nobr> <nobr><a title="349" href="349.html">Lithium Toxicology</a> |</nobr> <nobr><a title="322" href="322.html">Man-Made Vitreous Fibers (MMVF) Toxicology</a> |</nobr> <nobr><a title="410" href="410.html">Man-Made Vitreous Fibers Safety Update</a> |</nobr> <nobr><a title="406" href="406.html">Manganese and Parkinsons by Jane Watkins</a> |</nobr> <nobr><a title="187" href="187.html">Manganese in Clay Bodies</a> |</nobr> <nobr><a title="317" href="317.html">Manganese Inorganic Compounds Toxicology</a> |</nobr> <nobr><a title="409" href="409.html">Manganese Toxicity by Elke Blodgett</a> |</nobr> <nobr><a title="407" href="407.html">Manganese: Creativity and Illness by Dierdre O'Reilly</a> |</nobr> <nobr><a title="332" href="332.html">Molybdenum Compounds Toxicology</a> |</nobr> <nobr><a title="327" href="327.html">Nickel Compounds Toxicity</a> |</nobr> <nobr><a title="314" href="314.html">Niobium Oxide Toxicity</a> |</nobr> <nobr><a title="318" href="318.html">Occupational Dermatoses</a> |</nobr> <nobr><a title="370" href="370.html">Overview of Material Safety by Gavin Stairs</a> |</nobr> <nobr><a title="364" href="364.html">Paraffin Toxicology</a> |</nobr> <nobr><a title="216" href="216.html">Perlite Toxicity</a> |</nobr> <nobr><a title="238" href="238.html">Plant Ash Toxicity</a> |</nobr> <nobr><a title="346" href="346.html">Potassium Carbonate Toxicity</a> |</nobr> <nobr><a title="365" href="365.html">Pregnancy and Ceramics</a> |</nobr> <nobr><a title="355" href="355.html">Propane Toxicology</a> |</nobr> <nobr><a title="251" href="251.html">Quartz Toxicity</a> |</nobr> <nobr><a title="369" href="369.html">Quartz Toxicity on Clayart</a> |</nobr> <nobr><a title="336" href="336.html">Rare Earth Compounds Toxicity</a> |</nobr> <nobr><a title="366" href="366.html">Rubidium and Cesium Toxicology</a> |</nobr> <nobr><a title="356" href="356.html">Rutile Toxicology</a> |</nobr> <nobr><a title="324" href="324.html">Silicosis and Screening</a> |</nobr> <nobr><a title="357" href="357.html">Silver Compounds Toxicology</a> |</nobr> <nobr><a title="358" href="358.html">Sodium Azide Toxicology</a> |</nobr> <nobr><a title="359" href="359.html">Sodium Carbonate Toxicology</a> |</nobr> <nobr><a title="360" href="360.html">Sodium Silicate Powder Toxicology</a> |</nobr> <nobr><a title="315" href="315.html">Stannous Chloride Toxicity</a> |</nobr> <nobr><a title="316" href="316.html">Strontium Carbonate Toxicity Note</a> |</nobr> <nobr><a title="347" href="347.html">Sulfur Dioxide Toxicity</a> |</nobr> <nobr><a title="3" href="3.html">Talc Hazards Overview</a> |</nobr> <nobr><a title="361" href="361.html">Talc Toxicology</a> |</nobr> <nobr><a title="362" href="362.html">Thallium Oxide Toxicology</a> |</nobr> <nobr><a title="344" href="344.html">Thorium Dioxide Toxicity</a> |</nobr> <nobr><a title="338" href="338.html">Tin Inorganic Compounds</a> |</nobr> <nobr><a title="339" href="339.html">Titanium Dioxide Toxicology</a> |</nobr> <nobr><a title="313" href="313.html">Toxicological Assessment of Zeolites</a> |</nobr> <nobr><a title="363" href="363.html">Tungsten Compounds Toxicology</a> |</nobr> <nobr><a title="371" href="371.html">Understanding Acronyms on MSDS's</a> |</nobr> <nobr><a title="325" href="325.html">Uranium and Ceramics</a> |</nobr> <nobr><a title="319" href="319.html">Vanadium and Compounds Toxicology</a> |</nobr> <nobr><a title="411" href="411.html">Vermiculite</a> |</nobr> <nobr><a title="340" href="340.html">Zinc Compounds Toxicology</a> |</nobr> <nobr><a title="373" href="373.html">Zirconium Compounds Toxicity</a> |</nobr> <nobr><a title="234" href="234.html">Zirconium Encapsulated Stains Toxicity</a></nobr></div><h1>Ammonia and Latex Toxicity</h1>
+<p>Ammonia-dissolved pre-vulcanized latex is of everyday usage to make flexible moulds and peelable protections. In this last case, it is mainly used in ceramic decoration, to carry out resists in the application of <a  href="../glossary/engobe.html">engobes</a>, glazes or colourants.</p>
+    
+<p>The liquid latex solution is applied with a brush to the dry area to protect in less than 15 minutes, and then  becomes rubbery. After application and drying of the layer of <a  href="../glossary/engobe.html">engobe</a>, colourant or glaze, one withdraws the solidified latex film  by gently separating it from the ceramic object with a pair of small pliers or a blade.</p> 
+    
+<p>The elasticity of latex facilitates the unsticking and generally the pieces are withdrawn as a whole and in one time.Then the parts protected by latex appear free of engobe, colourant or glaze.</p> 
+    
+<DL> 
+   <DT><FONT COLOR="#004080">This technique is particularly 
+   appreciated when products of very different colours must be 
+   superimposed while being well delimited, or if the colour of the 
+   ceramic object or shard must appear non-coloured in the case of 
+   application by spraying or dipping.</FONT> 
+    
+   <DD><FONT COLOR="#004080">&nbsp;</FONT> 
+    
+   <DT><FONT COLOR="#004080">Attention, if the <a  href="../glossary/clay+body+porosity.html">porosity</a> of the object 
+   is too important the layer of latex will be difficult to withdraw. 
+   Always make a test before launching out in a long work. </FONT> 
+    
+   <DT><FONT COLOR="#004080">It is necessary to proceed in a well 
+   ventilated room to avoid breathing ammonia vapor. In the case of a 
+   daily and long use of this technique, it will be necessary to 
+   consider means of suitable protection and ventilation. </FONT> 
+    
+   <DT><FONT COLOR="#004080">Brushes must be washed between each 
+   application and drying of latex.</FONT> 
+    
+   <DT><FONT COLOR="#004080">&nbsp;</FONT> 
+    
+   <DT><FONT COLOR="#004080">&nbsp;</FONT> 
+    
+   <DD><P ALIGN=RIGHT><FONT FACE="Arial" COLOR="#AF0000">&copy; 
+   </FONT><B><FONT SIZE="+1" COLOR="#AF0000">Article by Smart.Conseil 
+   / July 2003</FONT></B></P> 
+    
+   <P><CENTER>&nbsp;</CENTER></P> 
+    
+   <DT><CENTER>&nbsp;</CENTER> 
+    
+   
+   <DT><B><FONT COLOR="#004080">Molecular Formula : H3N</FONT></B> 
+    
+   <DT><FONT COLOR="#004080">&nbsp;</FONT> 
+    
+   <DT><FONT COLOR="#004080">&nbsp;</FONT> 
+    
+   <DT><B><FONT SIZE="+1" COLOR="#004080">Uses and sources of 
+   emission : </FONT></B><FONT COLOR="#004080"> </FONT> 
+    
+   <DD><FONT COLOR="#004080">&nbsp;</FONT> 
+    
+   <DT><FONT COLOR="#004080">Ammonia is used mainly in the 
+   manufacture of fertilizers and of many other products in a very 
+   large variety of fields. It is used as a cooling gas in the 
+   industry of industrial refrigeration. </FONT> 
+    
+   <DT><FONT COLOR="#004080">One can also find it as a cooling gas in 
+   arenas, and as an air contaminant in breeding settings (examples: 
+   pigsties, henhouses). </FONT> 
+    
+   <DT><FONT COLOR="#004080">Ammonia is also found as liquid ammonia 
+   which is in fact gaseous ammonia dissolved in water (solution of 
+   ammonia at 28% or ammonia at 28%). </FONT> 
+    
+   <DT><FONT COLOR="#004080">&nbsp;</FONT> 
+    
+   <DT><B><FONT SIZE="+1" COLOR="#004080">Hygiene and Safety 
+   :</FONT></B> 
+    
+   <DD><FONT COLOR="#004080">&nbsp;</FONT> 
+    
+   <DT><B><FONT COLOR="#004080">I-Appearance :</FONT></B> 
+    
+   <DD><FONT COLOR="#004080">&nbsp;</FONT> 
+    
+   <DT><FONT COLOR="#004080">Ammonia is a colourless gas with a 
+   characteristic and prickly odor. It is a suffocating gas at high 
+   concentration. </FONT> 
+    
+   <DT><FONT COLOR="#004080">&nbsp;</FONT> 
+    
+   <DT><B><FONT COLOR="#004080">II-Exposure Characteristics 
+   :</FONT></B> 
+    
+   <DT><FONT COLOR="#004080">&nbsp;</FONT> 
+    
+   <DT><FONT COLOR="#004080">Exposure to ammonia in the work 
+   environment occurs mainly as a gas, because of its very low 
+   boiling point and its great volatility. The exposure to liquified 
+   ammonia generates a significant gas concentration because of its 
+   very low boiling point and its high volatility. </FONT> 
+    
+   <DT><FONT COLOR="#004080">The exposure to liquified ammonia is 
+   increasingly frequent because of its use in refrigeration systems. 
+   Moreover, concentrated aqueous ammonia solutions can emit ammonia 
+   vapors at high levels of concentration. </FONT> 
+    
+   <DT><FONT COLOR="#004080">&nbsp;</FONT> 
+    
+   <DT><B><FONT COLOR="#004080">III-Exposure to the gas : </FONT></B> 
+    
+   <DD><FONT COLOR="#004080">&nbsp;</FONT> 
+    
+   <DT><FONT COLOR="#004080">The prickly odor characteristic of 
+   ammonia can be detected at 16,7 ppm, which is in the same order of 
+   magnitude as the VEMP, 25 ppm or 17 mg/m&#179;; at a VECD of 35 
+   ppm or 24 mg/m&#179;; at an IDLH value of 300 ppm or 209 
+   mg/m&#179; and at the lower limit of explosiveness at 13 % or 13 
+   000 ppm; so that it can be a sign of adequate warning before the 
+   exposure becomes dangerous. </FONT> 
+    
+   <DT><FONT COLOR="#004080">An olfactive fatigue occurs following 
+   repeated exposures, therefore the odor cannot be an adequate sign 
+   of warning to an exposure exceeding the VEMP or the VECD. However, 
+   the olfactive threshold is sufficiently low to prevent a situation 
+   of IDLH. </FONT> 
+    
+   <DT><FONT COLOR="#004080">&nbsp;</FONT> 
+    
+   <DT><B><FONT COLOR="#004080">IV-Exposure to the liquid : 
+   </FONT></B> 
+    
+   <DT><FONT COLOR="#004080">&nbsp;</FONT> 
+    
+   <DT><FONT COLOR="#004080">Ammonia is a liquid at -33,35&#176;C. In 
+   the liquid state, it is thus necessary to take into account all 
+   the aspects which comprise the exposure to a liquid at low 
+   temperature. </FONT> 
+    
+   <DT><FONT COLOR="#004080">&nbsp;</FONT> 
+    
+   <DT><FONT COLOR="#004080">Immediately dangerous to life or health 
+   (IDLH) : 300 ppm</FONT> 
+    
+   <DT><FONT COLOR="#004080">&nbsp;</FONT> 
+    
+   <DT><B><FONT COLOR="#004080">V-Inflammability and explosiveness : 
+   </FONT></B> 
+    
+   <DT><FONT COLOR="#004080">&nbsp;</FONT> 
+    
+   <DT><U><FONT COLOR="#004080">A-Inflammability :</FONT></U> 
+    
+   <DT><FONT COLOR="#004080">&nbsp;</FONT> 
+    
+   <DT><FONT COLOR="#004080">The fire hazard caused by ammonia is 
+   relatively low, it must be put in contact with materials or a 
+   surface having a temperature of 651&#176;C before igniting itself 
+   </FONT> 
+    
+   <DT><FONT COLOR="#004080">However the presence of oil or other 
+   combustible materials can increase the fire hazard by lowering 
+   this temperature of autoignition. Ammonia can ignite in contact 
+   with strong oxidants. </FONT> 
+    
+   <DT><FONT COLOR="#004080">&nbsp;</FONT> 
+    
+   <DT><U><FONT COLOR="#004080">B-Explosiveness :</FONT></U> 
+    
+   <DT><FONT COLOR="#004080">&nbsp;</FONT> 
+    
+   <DT><FONT COLOR="#004080">Ammonia requires a concentration of at 
+   least 15% and the presence of a source of ignition to explode. 
+   Ammonia can explode in contact with strong oxidants. </FONT> 
+    
+   <DD><FONT COLOR="#004080">&nbsp;</FONT> 
+    
+   <DT><B><FONT SIZE="+1" COLOR="#004080">Toxicology :</FONT></B> 
+    
+   <DT><FONT COLOR="#004080">&nbsp;</FONT> 
+    
+   <DT><B><FONT COLOR="#004080">I-Toxicokinetics : </FONT></B> 
+    
+   <DD><FONT COLOR="#004080">&nbsp;</FONT> 
+    
+   <DT><U><FONT COLOR="#004080">A-Absorbtion</FONT></U> 
+    
+   <DT><FONT COLOR="#004080">Ammonia is mainly absorbed by the 
+   respiratory tract. Absorption by other routes is 
+   negligeable.During a short-time exposure (up to 2 minutes) at 
+   concentrations varying between 57 and 500 ppm, 83 &agrave; 92 % of 
+   the inhaled dose is retained in the respiratory tract (mouth, 
+   lungs, etc.), among volunteers. Following longer exposures (30 
+   minutes) among seven (7) volunteers exposed at 500 ppm, it has 
+   been reported that the retention of ammonia in the mucous 
+   membranes of the nasopharynx diminishes to 23 % when equilibrium 
+   is achieved (after10 &agrave; 27 minutes).</FONT> 
+    
+   <DD><FONT COLOR="#004080">&nbsp;</FONT> 
+    
+   <DT><U><FONT COLOR="#004080">B-Distribution :</FONT></U> 
+    
+   <DT><FONT COLOR="#004080">The few data available in man suggest 
+   that only small amounts are absorbed into the blood circulation. 
+   Blood ammonia is distributed throughout the body where it plays an 
+   important role the synthesis of proteins and in maintaining the 
+   acid-base equilibrium. </FONT> 
+    
+   <DD><FONT COLOR="#004080">&nbsp;</FONT> 
+    
+   <DT><U><FONT COLOR="#004080">C-Metabolism :</FONT></U> 
+    
+   <DT><FONT COLOR="#004080">Ammonia is an essential constituent of 
+   the human body. It is produced during digestion and rapidly 
+   metabolized into glutamine and urea, mainly by the liver.</FONT> 
+    
+   <DT><FONT COLOR="#004080">&nbsp;</FONT> 
+    
+   <DT><U><FONT COLOR="#004080">D-Excretion :</FONT></U> 
+    
+   <DT><FONT COLOR="#004080">The major part of ammonia (70-80%) 
+   dissolved in the mucous membranes of the upper respiratory tract 
+   was excreted unchanged in the expired air following inhalation at 
+   500 ppm during 10 to 27 minutes by volunteers. Ammomia absorbed by 
+   the body is excreted by the kidneys as urea and ammonia compounds. 
+   Less than 1% of the 4 grams of ammonia produced daily by the 
+   intestinal tract is excreted in the feces. A certain amount may 
+   also be excreted in sweat.</FONT> 
+    
+   <DD><FONT COLOR="#004080">&nbsp;</FONT> 
+    
+   <DT><B><FONT COLOR="#004080">II-Acute Effects :</FONT></B> 
+    
+   <DD><FONT COLOR="#004080">&nbsp;</FONT> 
+    
+   <DT><FONT COLOR="#004080">Irritation and corrosion :Ammonia being 
+   absorbed very little by the body, its effects are limited to its 
+   irritating and corroding capacity to the eyes, the skin and the 
+   respiratory tract. </FONT> 
+    
+   <DT><FONT COLOR="#004080">Ammonia as a gas is irritating and 
+   corrosive to the skin, the eyes and the higher respiratory tract 
+   (nose and throat). The severity of symptoms may vary according to 
+   the conditions of exposure (duration of contact, concentration of 
+   the product, etc). </FONT> 
+    
+   <DT><FONT COLOR="#004080">The first signs of exposure are 
+   discomfort, dry nose, watering and a burning sensation in the 
+   eyes. </FONT> 
+    
+   <DT><FONT COLOR="#004080">Exposure to high concentrations may 
+   cause irritation of the skin, damage to the cornea, cough, pain in 
+   the chest, respiratory problems (dyspnea i.e. shortness of breath) 
+   and suffocation. </FONT> 
+    
+   <DT><FONT COLOR="#004080">In severe cases, one observes laryngeal 
+   oedema which may evolve to pulmonary oedema and death by 
+   asphyxiation. The symptoms of pulmonary oedema (mainly cough and 
+   other respiratory difficulties) often appear after a delay which 
+   may go up to 48 hours. Physical exertion may worsen these 
+   symptoms. </FONT> 
+    
+   <DT><FONT COLOR="#004080">Rest and medical surveillance are 
+   consequently essential. </FONT> 
+    
+   <DT><FONT COLOR="#004080">Accidental exposure to high 
+   concentrations can also cause a bronchial irritation 
+   syndrome</FONT> 
+    
+   <DT><FONT COLOR="#004080">(RADS, Reactive Airways Dysfunction 
+   Syndrome, an asthma-like condition or asthma without a latency 
+   period). </FONT> 
+    
+   <DT><FONT COLOR="#004080">Very high concentrations may lead to 
+   corrosion of the skin, eyes and upper respiratory tract. </FONT> 
+    
+   <DT><FONT COLOR="#004080">Contact with liquified ammonia gas can 
+   cause frostbites as well as corrosion of the eyes and the skin, 
+   following a direct contact. </FONT> 
+    
+   <DT><FONT COLOR="#004080">&nbsp;</FONT> 
+    
+   <DT><B><FONT COLOR="#004080">III-Dose-effects relationship 
+   :</FONT></B><FONT COLOR="#004080"> </FONT> 
+    
+   <DT><FONT COLOR="#004080">&nbsp;</FONT> 
+    
+   <DD><FONT COLOR="#004080">&nbsp;</FONT> 
+    
+   <DT><CENTER><TABLE BORDER=1 CELLSPACING=0 CELLPADDING=5 
+   WIDTH="100%" bgcolor="#ffffff"> 
+      <TR> 
+         <TD> 
+            <P><B><FONT COLOR="#004080">Concentration in 
+            (ppm)</FONT></B> 
+         </TD><TD> 
+            <P><B><FONT COLOR="#004080">Probable effects following 
+            acute exposure</FONT></B> 
+         </TD></TR> 
+      <TR> 
+         <TD> 
+            <P><FONT COLOR="#004080">17</FONT> 
+         </TD><TD> 
+            <P><FONT COLOR="#004080">Olfactory detection 
+            limit.</FONT> 
+         </TD></TR> 
+      <TR> 
+         <TD> 
+            <P><FONT COLOR="#004080">20-25</FONT> 
+         </TD><TD> 
+            <P><FONT COLOR="#004080">Discomfort among non-accustomed 
+            workers.</FONT> 
+         </TD></TR> 
+      <TR> 
+         <TD> 
+            <P><FONT COLOR="#004080">25 (VEMP)</FONT> 
+         </TD><TD> 
+            <P><FONT COLOR="#004080">(Quebec's time weight average 
+            exposure limit.)</FONT> 
+         </TD></TR> 
+      <TR> 
+         <TD> 
+            <P><FONT COLOR="#004080">32-50 (5 mn)</FONT> 
+         </TD><TD> 
+            <P><FONT COLOR="#004080">Nose dryness, slight irritation 
+            of the nose and throat.</FONT> 
+         </TD></TR> 
+      <TR> 
+         <TD> 
+            <P><FONT COLOR="#004080">35 (VECD)</FONT> 
+         </TD><TD> 
+            <P><FONT COLOR="#004080">(Quebec's short term exposure 
+            limit.)</FONT> 
+         </TD></TR> 
+      <TR> 
+         <TD> 
+            <P><FONT COLOR="#004080">135 (5 mn)</FONT> 
+         </TD><TD> 
+            <P><FONT COLOR="#004080">Eye irritation, watering. 
+            Irritation of nose and throat.</FONT> 
+         </TD></TR> 
+      <TR> 
+         <TD> 
+            <P><FONT COLOR="#004080">300 IDLH</FONT> 
+         </TD><TD> 
+            <P><FONT COLOR="#004080">" Immediately dangerous to life 
+            or health "</FONT> 
+         </TD></TR> 
+      <TR> 
+         <TD> 
+            <P><FONT COLOR="#004080">500 (30 mn)</FONT> 
+         </TD><TD> 
+            <P><FONT COLOR="#004080">Severe irritation of the 
+            respiratory tract.</FONT> 
+         </TD></TR> 
+      <TR> 
+         <TD> 
+            <P><FONT COLOR="#004080">2000-3000</FONT> 
+         </TD><TD> 
+            <P><FONT COLOR="#004080">Severe cough.</FONT> 
+         </TD></TR> 
+      <TR> 
+         <TD> 
+            <P><FONT COLOR="#004080">2500-7000 (30 mn)</FONT> 
+         </TD><TD> 
+            <P><FONT COLOR="#004080">Respiratory troubles, 
+            bronchospasm, pulmonary oedema.</FONT> 
+         </TD></TR> 
+      <TR> 
+         <TD> 
+            <P><FONT COLOR="#004080">5000-10.000 (30 mn)</FONT> 
+         </TD><TD> 
+            <P><FONT COLOR="#004080">Rapid death by suffocation or by 
+            accumulation of fluids in the lungs.</FONT> 
+         </TD></TR> 
+   </TABLE><FONT COLOR="#004080">&nbsp;</FONT></CENTER> 
+    
+   <DT><FONT COLOR="#004080">&nbsp;</FONT> 
+    
+   <DT><B><FONT COLOR="#004080">IV-Chronic effects : </FONT></B> 
+    
+   <DD><FONT COLOR="#004080">&nbsp;</FONT> 
+    
+   <DT><FONT COLOR="#004080">Repeated or prolonged exposure can 
+   generate a certain tolerance, i.e. the irritating odor and effects 
+   will be felt at higher concentrations. </FONT> 
+    
+   <DT><FONT COLOR="#004080">&nbsp;</FONT> 
+    
+   <DT><B><FONT COLOR="#004080">V-Sensitization :</FONT></B> 
+    
+   <DT><FONT COLOR="#004080">&nbsp;</FONT> 
+    
+   <DT><FONT COLOR="#004080">Available data do not show that ammonia 
+   can cause cutaneous or respiratory sensitization</FONT> 
+    
+   <DT><FONT COLOR="#004080">&nbsp;</FONT> 
+    
+   <DT><FONT COLOR="#004080">Justification of effects :</FONT> 
+    
+   <DT><FONT COLOR="#004080">Some reports mention cutaneous eruption 
+   (urticaria) following exposure to the vapors of ammonia and 
+   asthma-like reactions following exposure to concentrations between 
+   8 to 15 ppm of ammonia. However, these reports do not make it 
+   possible to link these effects with a <a  href="../glossary/mechanism.html">mechanism</a> of allergic 
+   nature. </FONT> 
+    
+   <DT><FONT COLOR="#004080">&nbsp;</FONT> 
+    
+   <DT><B><FONT COLOR="#004080">VI-Effects on development : 
+   </FONT></B> 
+    
+   <DT><FONT COLOR="#004080">&nbsp;</FONT> 
+    
+   <DT><FONT COLOR="#004080">No data concerning an effect on the 
+   development was found in the consulted documentary sources</FONT> 
+    
+   <DT><FONT COLOR="#004080">&nbsp;</FONT> 
+    
+   <DT><FONT COLOR="#004080">Justification of effects :</FONT> 
+    
+   <DT><FONT COLOR="#004080">Ammonia is produced by the body. It is 
+   also an essential constituent for the normal development of human 
+   beings. An exposure in the work environment is not very likely to 
+   lead to an increase in the blood ammonia level and thus, it does 
+   not represent a hazard to development. </FONT> 
+    
+   <DT><FONT COLOR="#004080">&nbsp;</FONT> 
+    
+   <DT><B><FONT COLOR="#004080">VII-Effects on reproduction 
+   :</FONT></B> 
+    
+   <DD><FONT COLOR="#004080">&nbsp;</FONT> 
+    
+   <DT><FONT COLOR="#004080">No data concerning the effects on 
+   reproduction was found in the consulted documentary sources. 
+   </FONT> 
+    
+   <DT><FONT COLOR="#004080">&nbsp;</FONT> 
+    
+   <DT><FONT COLOR="#004080">Justification of effects :</FONT> 
+    
+   <DT><FONT COLOR="#004080">Ammonia is normally produced by the 
+   body. It is also an essential constituent for the normal 
+   development of human beings. An exposure in the work environment 
+   is not very likely to lead to an increase in the blood ammonia 
+   level and thus, it does not represent a hazard for reproduction. 
+   </FONT> 
+    
+   <DT><FONT COLOR="#004080">&nbsp;</FONT> 
+    
+   <DT><B><FONT COLOR="#004080">VIII-Effects on breast milk : 
+   </FONT></B> 
+    
+   <DD><FONT COLOR="#004080">&nbsp;</FONT> 
+    
+   <DT><FONT COLOR="#004080">It is detected in human mother's milk. 
+   </FONT> 
+    
+   <DT><FONT COLOR="#004080">Justification of effects : Ammonia is a 
+   natural component of this milk. </FONT> 
+    
+   <DT><FONT COLOR="#004080">&nbsp;</FONT> 
+    
+   <DT><B><FONT COLOR="#004080">IX-Cancinogenic effects :</FONT></B> 
+    
+   <DT><FONT COLOR="#004080">&nbsp;</FONT> 
+    
+   <DT><FONT COLOR="#004080">There was no data concerning a 
+   cancerogenic effect found in the consulted documentary sources. 
+   </FONT> 
+    
+   <DT><FONT COLOR="#004080">&nbsp;</FONT> 
+    
+   <DT><B><FONT COLOR="#004080">X-Mutagenic effects :</FONT></B> 
+    
+   <DT><FONT COLOR="#004080">&nbsp;</FONT> 
+    
+   <DT><FONT COLOR="#004080">The data do not make it possible to make 
+   an adequate evaluation of the mutagenic effect. </FONT> 
+    
+   <DT><FONT COLOR="#004080">&nbsp;</FONT> 
+    
+   <DT><FONT COLOR="#004080">Justification of effects :</FONT> 
+    
+   <DT><FONT COLOR="#004080">A study mentions a light increase in 
+   chromosomal aberrations and sister chromatid exchanges in workers 
+   of a manufacture of artificial fertilizers simultaneously exposed 
+   to several chemicals among which ammonia. </FONT> 
+    
+   <DT><FONT COLOR="#004080">&nbsp;</FONT> 
+    
+   <DT><B><FONT SIZE="+1" COLOR="#004080">First Aid : </FONT></B> 
+    
+   <DD><FONT COLOR="#004080">&nbsp;</FONT> 
+    
+   <DT><B><FONT COLOR="#004080">I-Inhalation :</FONT></B> 
+    
+   <DT><FONT COLOR="#004080">&nbsp;</FONT> 
+    
+   <DT><FONT COLOR="#004080">In the event of inhalation of gas, bring 
+   the worker in a ventilated place and place him in semi-seated 
+   position. If he does not breathe, give him artificial respiration. 
+   In the event of respiratory difficulties, give him oxygen. 
+   Transfer immediately him to the nearest medical emergency 
+   department. The symptoms of pulmonary oedema may appear after a 
+   delay of several hours and are worsened by physical exertion. Rest 
+   and medical supervision are consequently essential. </FONT> 
+    
+   <DT><FONT COLOR="#004080">&nbsp;</FONT> 
+    
+   <DT><B><FONT COLOR="#004080">II-Contact with eyes :</FONT></B> 
+    
+   <DT><FONT COLOR="#004080">&nbsp;</FONT> 
+    
+   <DT><FONT COLOR="#004080">Rinse the eyes copiously with water for 
+   at least 20 minutes. See a doctor. </FONT> 
+    
+   <DT><FONT COLOR="#004080">&nbsp;</FONT> 
+    
+   <DT><B><FONT COLOR="#004080">III-Contact with skin :</FONT></B> 
+    
+   <DT><FONT COLOR="#004080">&nbsp;</FONT> 
+    
+   <DT><FONT COLOR="#004080">Quickly withdraw contaminated clothing 
+   by using suitable gloves. Abundantly rinse skin with water. See a 
+   doctor. </FONT> 
+    
+   <DT><FONT COLOR="#004080">In the event of a frostbite, apply 
+   lukewarm water, rinse abundantly and see a doctor</FONT> 
+    
+   <DT><FONT COLOR="#004080">&nbsp;</FONT> 
+    
+   <DT><FONT COLOR="#004080">&nbsp;</FONT> 
+    
+   <DT><B><FONT SIZE="+1" COLOR="#004080">Quebec's exposure limits 
+   :</FONT></B> 
+    
+   <DT><FONT COLOR="#004080">&nbsp;</FONT> 
+    
+   <DD><FONT COLOR="#004080">&nbsp;</FONT> 
+    
+   <DT><TABLE BORDER=1 CELLSPACING=0 CELLPADDING=5 WIDTH="100%" 
+   bgcolor="#ffffff"> 
+      <TR> 
+         <TD> 
+            <P><FONT COLOR="#004080">I-Valeur d'exposition moyenne 
+            pond&eacute;r&eacute;e (VEMP) , (TLV-TWA)</FONT> 
+         </TD><TD> 
+            <P><FONT COLOR="#004080">25 ppm 17 mg/m&#179; </FONT> 
+         </TD></TR> 
+      <TR> 
+         <TD> 
+            <P><FONT COLOR="#004080">II-Valeur d'exposition de courte 
+            dur&eacute;e (VECD) , (TLV-STEL)</FONT> 
+         </TD><TD> 
+            <P><FONT COLOR="#004080">35 ppm 24 mg/m&#179;</FONT> 
+         </TD></TR> 
+   </TABLE> 
+    
+   <DT><FONT COLOR="#004080">&nbsp;</FONT> 
+    
+   <DT><B><FONT SIZE="+1" COLOR="#004080">Prevention :</FONT></B> 
+    
+   <DD><FONT COLOR="#004080">&nbsp;</FONT> 
+    
+   <DT><FONT COLOR="#004080">When engineering measures and 
+   modifications of working methods are not sufficient enough to 
+   reduce the exposure to this chemical, the wearing of individual 
+   protection equipment may be necessary. These protection gears must 
+   be in conformity with regulation. </FONT> 
+    
+   <DT><FONT COLOR="#004080">&nbsp;</FONT> 
+    
+   <DT><U><FONT COLOR="#004080">I-Respiratory tract : </FONT></U> 
+    
+   <DT><FONT COLOR="#004080">Wear a respiratory protection apparatus 
+   if the concentration in the work environment is higher than VEMP 
+   (25 ppm or 17 mg/m&#179;) or than the VECD (35 ppm or 24 
+   mg/m&#179;). </FONT> 
+    
+   <DT><FONT COLOR="#004080">&nbsp;</FONT><U><FONT 
+   COLOR="#004080">II-Skin :</FONT></U> 
+    
+   <DT><FONT COLOR="#004080">Wear skin protection. The selection of 
+   skin protection equipement depends on the nature of the work to be 
+   carried out. </FONT> 
+    
+   <DT><FONT COLOR="#004080">&nbsp;</FONT><U><FONT 
+   COLOR="#004080">III-Eyes :</FONT></U> 
+    
+   <DT><FONT COLOR="#004080">Wear protection for the eyes if there is 
+   a risk of splashes. The selection of ocular protection depends on 
+   the nature of the work to carry out and, if it is necessary, on 
+   the type of apparatus of respiratory protection used.</FONT> 
+    
+   <DD>&nbsp; 
+    
+   <DT><FONT COLOR="#004080">&nbsp;</FONT> 
+    
+   <DT><FONT COLOR="#004080">&nbsp;</FONT> 
+    
+   <DT><I><FONT COLOR="#004080">References :</FONT></I> 
+    
+   <DT><I><FONT COLOR="#004080">1-CSST-Quebec, Repertoire 
+   Toxicologique, 2003</FONT></I> 
+    
+   <DT><I><FONT COLOR="#004080">2-Toxicologie Industrielle et 
+   Intoxications Professionnelles, Lauwerys R. last 
+   edition.</FONT></I> 
+    
+   <DT><I><FONT COLOR="#004080">3-Sax's Dangerous Properties of 
+   Industrial Materials, Lewis C., last edition.</FONT></I> 
+    
+   <DT><I><FONT COLOR="#004080">4-Clinical Environmental Health and 
+   Toxic Exposures, Sullivan J.B and Krieger G.R., last 
+   edition.</FONT></I> 
+    
+
+   </FONT></CENTER> 
+</DL>
+<hr><p>By Edouard Bastarache </p>
+<h2 style="font-style:italic; margin-top:40px;">Related Information</h2>
+
+<h3>Links</h3><table>
+<table class="table table-bordered"><tbody>
+<tr>
+<td scope="row">Typecodes</td>
+<td>
+<a href="../typecode/eba.html">Article by Edouard Bastarache</a>
+<br /><i>Edouard Bastarache is a well known doctor that has written many articles on the subject of <a  href="../glossary/toxicity.html">toxicity</a> of ceramic materials and books on technical aspects of <a  href="../glossary/ceramics.html">ceramics</a>. He writes in both English and French.</i>
+</td>
+</tr>
+</tbody></table><table style="margin:30px 0px 30px 0px;"><tr><td style="vertical-align:middle; text-align:center; font-size:80%;"><img src="../images/PayPalDonate.png" style="height:66px; padding-right:20px;"><br /><a href="https://www.paypal.com/donate/?hosted_button_id=F8L3JX4BCCXJ6">PayPal</a></td><td style="background-color:#ddffdd; padding:10px; border:thin solid grey; font-size:90%;"><b>No</b> tracking, <b>No</b> ads, <b>No</b> paywall, <b>No</b> transient content!<br />Just organized, concise information constantly updated and improved.<br />Was this helpful? Consider supporting me.</td><tr></table><h3>Got a Question?</h3><p style="margin-bottom:30px;"><a name="kofi">Buy me a coffee and we can talk</a> <a target="_blank" href="https://ko-fi.com/tonyhansen"><img style="width:40px" src="../images/ko-fi.svg"></a></p><p style="margin-bottom:30px;">&nbsp;</p>
+<p></p><p></p><hr>
+<img style="width:250px" src="../4sight/images/ReferenceLibrary.svg">
+<br />
+<a href="../index.html">https://digitalfire.com</a>, All Rights Reserved
+<br /><a href="../w3c/privacypolicy.php.html">Privacy Policy</a>
+</div>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+</body>
+</html>

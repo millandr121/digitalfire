@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="../favicon.svg">
+<link rel="mask-icon" href="../mask-icon.svg" color="#000000">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<title>Manganese in Clay Bodies</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<meta name="author" content="Tony Hansen">
+<meta name="description" content="Manganese is used to stain clays (using black) and to impart fired speckling (as a decorative effect). It is dangerous?">
+<style>
+.flexinline { width: 50%; height: auto; clear:left; margin: 10px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexinline { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexright50 { width: 50%; height: auto; float: right; margin: 5px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexright50 { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexright33 { width: 33%; height: auto; float: right; margin: 5px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexright33 { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexright25 { width: 25%; height: auto; float: right; margin: 5px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexright25 { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexleft50 { width: 50%; height: auto; float: left; margin: 5px 15px 10px 0px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexleft50 { width: 100%; height: auto; margin: 5px 10px 10px 0px; border: none; padding: none; } }
+.flexleft33 { width: 33%; height: auto; float: left; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexleft33 { width: 100%; height: auto; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; } }
+.flexleft25 { width: 25%; height: auto; float: left; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexleft25 { width: 100%; height: auto; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; } }
+.pictureseries { overflow:scroll; width:auto; height:200px; float:left; margin: 5px 10px 10px 0px; padding: 5px; font-size:60%; font-style:italic;}
+@media (max-width: 640px) { .pictureseries { overflow:scroll; width:auto; height:200px; float:left; margin: 5px 10px 10px 0px; border: padding: 5px; font-size:60%; font-style:italic;} }
+.L2 { margin-left:0px; }
+.L3 { margin-left:20px; color:#222222; }
+.L4 { margin-left:40px; color:#444444; }
+.L5 { margin-left:60px; color:#666666; }
+.L6 { margin-left:60px; color:#888888; }
+h2 { color:#222222; }
+h3 { color:#444444; }
+h4 { color:#666666; }
+h5 { color:#888888; }
+
+</style>
+
+<meta name="google-site-verification" content="wquYW_n-3QEfIzDfV--8ElUewf7TIt04RGo55GfZySU" />
+<meta name="have-i-been-pwned-verification" value="9223dcee7de5c9622c2a2abcff4adc81">
+<script>
+function validateForm() {
+	var x = document.forms["emailform1"]["name1"].value;
+	var r = true;
+	if (x == "") { // alert("A name is required."); 
+		document.getElementById("name1").textContent="Name Required";
+		document.getElementById("name1").style.color="red";
+		// document.emailform1.name1.focus() ; # does not work, should be getelementbyid
+		r = false; 
+	} else {
+		document.getElementById("name1").textContent="Name";
+		document.getElementById("name1").style.color="black";
+	}
+	if (document.forms["emailform1"]["subject1"].value == "") { 
+		document.getElementById("subject1").textContent="Subject Required";
+		document.getElementById("subject1").style.color="red";
+		r = false; 
+	} else {
+		document.getElementById("subject1").textContent="Subject";
+		document.getElementById("subject1").style.color="black";
+	}			
+	if (document.forms["emailform1"]["msg1"].value == "") { 
+		document.getElementById("msg1").textContent="Message Required";
+		document.getElementById("msg1").style.color="red";
+		// alert("A message is required."); 
+		r = false; 
+	} else {
+		document.getElementById("msg1").textContent="Message";
+		document.getElementById("msg1").style.color="black";
+	}
+	var emailID = document.emailform1.email1.value;
+	atpos = emailID.indexOf("@");
+	dotpos = emailID.lastIndexOf(".");
+	if (atpos < 1 || ( dotpos - atpos < 2 )) {
+		document.getElementById("email1").textContent="Email Address Appears Invalid!";
+		document.getElementById("email1").style.color="red";
+		// alert("Your email address appears invalid.")
+		r = false;
+	} else {
+		document.getElementById("email1").textContent="Email Address";
+		document.getElementById("email1").style.color="black";
+	}
+	// Send the form
+	if (r == false) return false;
+	document.forms["emailform1"].submit();
+}
+</script>
+</head>
+<body>
+<p style="background-color:#ff9933; border-width:1px; padding:3px 10px 3px 10px; margin:0px 0px 3px 0px; font-size:80%; text-align:center;">
+Digitalfire will shut down on June 26. I no longer have the authority to grant exemption to a section in the Terms and Conditions of using material in the Insight-Live account from which I built the source material. While there are ways to comply with the take-down order, they are beyond my means because of how complex and large the site has become in the past 35+ years. It has been a wild ride for a shy prairie boy, thanks to everyone for your support. Insight-live.com is not affected by this.</p>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<a name="pagetop" class="navbar-brand" href="../home.html"><img src="../4sight/images/ReferenceLibrary.svg" height="40" alt=""></a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item"><a class="nav-link" href="../home.html">Home</a></li>
+			<li class="nav-item"><a class="nav-link" href="../oxide/list.html">Oxides</a></li>
+			<li class="nav-item"><a class="nav-link" href="../material/list.html">Materials</a></li>
+			<li class="nav-item"><a class="nav-link" href="../recipe/list.html">Recipes</a></li>
+			<li class="nav-item"><a class="nav-link" href="../glossary/list.html">Glossary</a></li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="manganese+in+clay+bodies.html#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Others</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" href="../article/list.html">Articles</a>
+					<a class="dropdown-item active" href="list.html">Hazards</a>
+					<a class="dropdown-item" href="../mineral/list.html">Minerals</a>
+					<a class="dropdown-item" href="../property/list.html">Properties</a>
+					<a class="dropdown-item" href="../schedule/list.html">Firing Schedules</a>
+					<a class="dropdown-item" href="../temperature/list.html">Temperatures</a>
+					<a class="dropdown-item" href="../trouble/list.html">Troubles</a>
+					<a class="dropdown-item" href="../test/list.html">Tests</a>
+					<a class="dropdown-item" href="../video/list.html">Media</a>
+					<a class="dropdown-item" href="../picture/list.html">Pictures</a>
+					<a class="dropdown-item" href="../typecode/list.html">Typecodes</a>
+					<a class="dropdown-item" href="../project/list.html">Projects</a>
+					<a class="dropdown-item" href="../consultants/list.html">Consultants</a>
+					<a class="dropdown-item" href="../schools/list.html">Schools</a>
+					<a class="dropdown-item" href="../stores/list.html">Stores</a>
+					<a class="dropdown-item" href="../potterytony/list.html">Don't Buy-A-Mug</a>
+					<div class="dropdown-divider"></div>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="../index.html">https://digitalfire.com</a>
+					<a class="dropdown-item" href="https://insight-live.com">Insight-Live.com</a>
+					<a class="dropdown-item" href="../index.html">Sign-Up</a>
+				</div>
+			</li>
+		</ul>
+		<form class="form-inline my-2 my-lg-0" action="https://digitalfire.com/index.php?searcharea=hazard" accept-charset="UTF-8" method="post">
+		<input name="searchfor" title="Search from home to search in all areas" maxlength="20" class="form-control mr-sm-2" aria-label="Search" placeholder="Search" autocorrect="off" autocapitalize="off" type="search" value=""><button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="searchbutton">Search</button>
+		</form>
+	</div>
+</nav>
+<div class="container"><p><a class="btn btn-primary" data-toggle="collapse" href="manganese+in+clay+bodies.html#collapse1" role="button" aria-expanded="false" aria-controls="collapse1">All Hazards</a></p>
+<div class="collapse" id="collapse1" style="margin-bottom:15px;"><nobr><a title="341" href="341.html">Alumina Toxicology</a> |</nobr> <nobr><a title="333" href="333.html">Ammonia and Latex Toxicity</a> |</nobr> <nobr><a title="16" href="16.html">Antimony Oxide</a> |</nobr> <nobr><a title="412" href="412.html">Are colored porcelains hazardous?</a> |</nobr> <nobr><a title="18" href="18.html">Arsenic Oxide</a> |</nobr> <nobr><a title="19" href="19.html">Asbestos Toxicity</a> |</nobr> <nobr><a title="22" href="22.html">Ball Clay</a> |</nobr> <nobr><a title="321" href="321.html">BARIUM and COMPOUNDS Toxicology</a> |</nobr> <nobr><a title="367" href="367.html">Barium Carbonate in Clay Bodies</a> |</nobr> <nobr><a title="26" href="26.html">Barium Carbonate in Glazes</a> |</nobr> <nobr><a title="31" href="31.html">Bentonite Toxicity</a> |</nobr> <nobr><a title="33" href="33.html">Beryllium Monoxide Toxicology</a> |</nobr> <nobr><a title="352" href="352.html">Bismuth Trioxide Toxicology</a> |</nobr> <nobr><a title="326" href="326.html">Boron Compounds and Their Toxicity</a> |</nobr> <nobr><a title="1" href="1.html">Brown Stain</a> |</nobr> <nobr><a title="335" href="335.html">Cadmium Toxicity</a> |</nobr> <nobr><a title="343" href="343.html">Calcium Carbonate Toxicology</a> |</nobr> <nobr><a title="334" href="334.html">Carbon Monoxide Toxicity</a> |</nobr> <nobr><a title="353" href="353.html">Cesium Toxicology</a> |</nobr> <nobr><a title="330" href="330.html">Chromium Compounds Toxicology</a> |</nobr> <nobr><a title="146" href="146.html">Clay Toxicity</a> |</nobr> <nobr><a title="73" href="73.html">Cobalt Oxide and Carbonate</a> |</nobr> <nobr><a title="331" href="331.html">Cobalt Toxicology</a> |</nobr> <nobr><a title="329" href="329.html">Copper Compounds Toxicology</a> |</nobr> <nobr><a title="78" href="78.html">Copper Oxide and Carbonate</a> |</nobr> <nobr><a title="84" href="84.html">Cristobalite Toxicity</a> |</nobr> <nobr><a title="337" href="337.html">Cryolite and Ceramics</a> |</nobr> <nobr><a title="372" href="372.html">Dealing With Dust in Ceramics</a> |</nobr> <nobr><a title="351" href="351.html">Diatomaceous Earth Toxicology</a> |</nobr> <nobr><a title="323" href="323.html">Dioxins in Clays</a> |</nobr> <nobr><a title="95" href="95.html">Epsom Salts</a> |</nobr> <nobr><a title="348" href="348.html">Eye Injuries Due to Radiation</a> |</nobr> <nobr><a title="222" href="222.html">Feldspar</a> |</nobr> <nobr><a title="320" href="320.html">Fighting Micro-Organisms in Ceramics</a> |</nobr> <nobr><a title="108" href="108.html">Fluorine Gas</a> |</nobr> <nobr><a title="413" href="413.html">Fumes from gas kilns</a> |</nobr> <nobr><a title="354" href="354.html">Gallium Oxide Toxicology</a> |</nobr> <nobr><a title="342" href="342.html">Hafnium Oxide Toxicty</a> |</nobr> <nobr><a title="345" href="345.html">Hydrofluoric Acid Toxicity</a> |</nobr> <nobr><a title="350" href="350.html">Iron oxide and Hematite</a> |</nobr> <nobr><a title="169" href="169.html">Lead Chromate</a> |</nobr> <nobr><a title="368" href="368.html">Lead in Ceramic Glazes</a> |</nobr> <nobr><a title="328" href="328.html">Lead Toxicology</a> |</nobr> <nobr><a title="174" href="174.html">Lithium Carbonate Toxicity</a> |</nobr> <nobr><a title="349" href="349.html">Lithium Toxicology</a> |</nobr> <nobr><a title="322" href="322.html">Man-Made Vitreous Fibers (MMVF) Toxicology</a> |</nobr> <nobr><a title="410" href="410.html">Man-Made Vitreous Fibers Safety Update</a> |</nobr> <nobr><a title="406" href="406.html">Manganese and Parkinsons by Jane Watkins</a> |</nobr> <nobr><a title="187" href="187.html">Manganese in Clay Bodies</a> |</nobr> <nobr><a title="317" href="317.html">Manganese Inorganic Compounds Toxicology</a> |</nobr> <nobr><a title="409" href="409.html">Manganese Toxicity by Elke Blodgett</a> |</nobr> <nobr><a title="407" href="407.html">Manganese: Creativity and Illness by Dierdre O'Reilly</a> |</nobr> <nobr><a title="332" href="332.html">Molybdenum Compounds Toxicology</a> |</nobr> <nobr><a title="327" href="327.html">Nickel Compounds Toxicity</a> |</nobr> <nobr><a title="314" href="314.html">Niobium Oxide Toxicity</a> |</nobr> <nobr><a title="318" href="318.html">Occupational Dermatoses</a> |</nobr> <nobr><a title="370" href="370.html">Overview of Material Safety by Gavin Stairs</a> |</nobr> <nobr><a title="364" href="364.html">Paraffin Toxicology</a> |</nobr> <nobr><a title="216" href="216.html">Perlite Toxicity</a> |</nobr> <nobr><a title="238" href="238.html">Plant Ash Toxicity</a> |</nobr> <nobr><a title="346" href="346.html">Potassium Carbonate Toxicity</a> |</nobr> <nobr><a title="365" href="365.html">Pregnancy and Ceramics</a> |</nobr> <nobr><a title="355" href="355.html">Propane Toxicology</a> |</nobr> <nobr><a title="251" href="251.html">Quartz Toxicity</a> |</nobr> <nobr><a title="369" href="369.html">Quartz Toxicity on Clayart</a> |</nobr> <nobr><a title="336" href="336.html">Rare Earth Compounds Toxicity</a> |</nobr> <nobr><a title="366" href="366.html">Rubidium and Cesium Toxicology</a> |</nobr> <nobr><a title="356" href="356.html">Rutile Toxicology</a> |</nobr> <nobr><a title="324" href="324.html">Silicosis and Screening</a> |</nobr> <nobr><a title="357" href="357.html">Silver Compounds Toxicology</a> |</nobr> <nobr><a title="358" href="358.html">Sodium Azide Toxicology</a> |</nobr> <nobr><a title="359" href="359.html">Sodium Carbonate Toxicology</a> |</nobr> <nobr><a title="360" href="360.html">Sodium Silicate Powder Toxicology</a> |</nobr> <nobr><a title="315" href="315.html">Stannous Chloride Toxicity</a> |</nobr> <nobr><a title="316" href="316.html">Strontium Carbonate Toxicity Note</a> |</nobr> <nobr><a title="347" href="347.html">Sulfur Dioxide Toxicity</a> |</nobr> <nobr><a title="3" href="3.html">Talc Hazards Overview</a> |</nobr> <nobr><a title="361" href="361.html">Talc Toxicology</a> |</nobr> <nobr><a title="362" href="362.html">Thallium Oxide Toxicology</a> |</nobr> <nobr><a title="344" href="344.html">Thorium Dioxide Toxicity</a> |</nobr> <nobr><a title="338" href="338.html">Tin Inorganic Compounds</a> |</nobr> <nobr><a title="339" href="339.html">Titanium Dioxide Toxicology</a> |</nobr> <nobr><a title="313" href="313.html">Toxicological Assessment of Zeolites</a> |</nobr> <nobr><a title="363" href="363.html">Tungsten Compounds Toxicology</a> |</nobr> <nobr><a title="371" href="371.html">Understanding Acronyms on MSDS's</a> |</nobr> <nobr><a title="325" href="325.html">Uranium and Ceramics</a> |</nobr> <nobr><a title="319" href="319.html">Vanadium and Compounds Toxicology</a> |</nobr> <nobr><a title="411" href="411.html">Vermiculite</a> |</nobr> <nobr><a title="340" href="340.html">Zinc Compounds Toxicology</a> |</nobr> <nobr><a title="373" href="373.html">Zirconium Compounds Toxicity</a> |</nobr> <nobr><a title="234" href="234.html">Zirconium Encapsulated Stains Toxicity</a></nobr></div><p style="clear:left"></p><p style="clear:left"></p><p style="clear:left"></p><p style="clear:left"></p><p style="clear:left"></p><p style="clear:left"></p><h1>Manganese in Clay Bodies</h1>
+<p>A number of minerals source manganese in very high percentages, these can be used to make pure manganese dioxide, which is used in the manufacture of <a  href="../glossary/ceramic+stain.html">stains</a> and as a raw <a  href="../glossary/colorant.html">colorant</a> in glazes. However, <a  href="../glossary/clay+body.html">clay body</a> manufacturers do not need to use the pure material because the element manganese can be found in the materials umber and ochre. A benefit of these is that both are clay-like. It takes about 10% <a  href="../material/2911.html">raw umber</a> to make a buff burning clay body fire black. The umber does not add any handling hazards beyond those common to clays, the main of which is the presence of quartz.<br />
+<br />
+What about the <a  href="../oxide/mno.html">MnO</a> in black <a  href="../glossary/clay+body.html">clay bodies</a> generating fumes during firing or <a  href="../glossary/leaching.html">leaching</a> into food and drink? Some producers are adding 5-10% pure manganese powder to stain clay bodies, claiming there is no problem if <a  href="../glossary/cone+6.html">cone 6</a> kilns are ventilated. Consider also that pure manganese powder is employed in hundreds of <a  href="../glossary/glaze+recipes.html">glaze recipes</a> in common use, often at levels far above 5%. Additionally, that manganese begins to volatilize just beyond cone 6 (black bodies will start <a  href="../trouble/bloating.html">bloating</a> and then melt making that abundantly clear). If you are firing kilns full of MnO-sourcing materials at cone 6 or below, and have a ventilation system attached, it does not seem wise to focus on issues with this if it takes attention away from the real hazard: quartz.<br />
+<br />
+A way to completely avoid the above-mentioned problem is the use an <a  href="../glossary/engobe.html">engobe</a> that is colored using a black <a  href="../glossary/ceramic+stain.html">ceramic stain</a>. Our <a  href="../recipe/l3954b.html">L3954B</a> is a good base for cone 6 and <a  href="../recipe/l3954n.html">L3954N</a> for high temperatures.<br />
+<br />
+Among potters and hobbyists, another significant use of manganese is in metallic raku-fired glazes (20% or more is common in recipes). Standing downwind or close to outdoor <a  href="../glossary/raku.html">raku</a> kilns laden with manganese-saturated glazes is an obvious hazard. However, adequate temperatures must be reached for the fuming to occur.<br />
+<br />
+What about <a  href="../material/1009.html">granular manganese</a> used to add speckle to bodies? Before classifying these as dangerous the situation must be put into perspective. Such bodies contain only about 0.2% of 60-80 mesh <a  href="../material/1009.html">manganese granular</a>. We have found that at cone 6 oxidation, granular manganese can be tolerated without <a  href="../glossary/body+bloating.html">body bloating</a> in <a  href="../glossary/vitreous.html">vitreous</a> (near-zero <a  href="../glossary/clay+body+porosity.html">porosity</a>) bodies. This indicates that gas-producing <a  href="../glossary/decomposition.html">decomposition</a> is not occurring (otherwise bloating would occur). Also, the vast majority of manganese particles are encapsulated within the clay matrix. Most of the tiny percentage of particles exposed at the body surface are engulfed by the glaze. All of the particles that actually bleed up into the glaze to either near or at the surface have been significantly diluted and stabilized against leaching by <a  href="../glossary/melt+fluidity.html">the melt</a> that surrounds them (they bleed and diffuse into it). Thus, the total area of leachable manganese glass on a <a  href="../glossary/functional.html">functional</a> surface is extremely small.</p>
+<hr><table style="margin-top:30px; padding-top:10px; padding-bottom:20px; border-top:thin solid grey; border-bottom:thin solid grey;"><tr><td style="padding-right:10px">By <i>Tony Hansen</i><br /><span style="font-size:80%; color:#888888;">Follow me on<br /><a title="Threads" href="https://www.threads.net/@tonyatdigitalfire" target="_blank"><img src="../images/threads.jpg" style="width:20px;" border="0"></a> <a title="Facebook Insight-Live" href="https://www.facebook.com/insightlive" target="_blank"><img src="../images/facebook.jpg" style="width:20px;" border="0"></a> <a title="LinkedIn" href="https://www.linkedin.com/in/tonywhansen/" target="_blank"><img src="../images/linkedin.jpg" style="width:20px;" border="0"></a> <a title="Pinterest" href="https://www.pinterest.ca/tonywhansen" target="_blank"><img src="../images/pinterest.jpg" style="width:20px;" border="0"></a> <a title="Instagram" href="https://instagram.com/tonyatdigitalfire" target="_blank"><img src="../images/instagram.jpg" style="width:20px;" border="0"></a> <a title="Ko-Fi" href="https://ko-fi.com/tonyhansen#" target="_blank"><img src="../images/ko-fi.jpg" style="width:20px;" border="0"></a> <a title="Twitter" href="https://x.com/digitalfiretony" target="_blank"><img src="../images/twitter.jpg" style="width:20px;" border="0"></a></td><td><a href="https://tonyhansen.com/about"><img src="../images/SignaturePhotoSmall.jpg" height="80"></a></td></tr></table>
+<h2 style="font-style:italic; margin-top:40px;">Related Information</h2>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">Decomposing manganese granular particles are causing this stoneware to bloat</h3>
+<br /><a href="../picture/924.html"><img class="flexleft50" loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/materials/cysvuzivow.jpg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/924.html">click here</a> to see it.</p>
+<p>This is a <a  href="../glossary/cone+6.html">cone 6</a> <a  href="../glossary/stoneware.html">stoneware</a> with 0.3% 60/80 mesh <a  href="../material/1009.html">manganese granular</a> (<a  href="../glossary/plainsman+clays.html">Plainsman</a> <a  href="https://plainsmanclays.ca/data/index.php?product=12875">M340</a>). Fired from cone 4 (bottom) to cone 8 (top). This body is normally stable to cone 8, but with the manganese it begins to <a  href="../trouble/bloating.html">bloat</a> at cone 7! This is evidence that particles of manganese are generating gases as they <a  href="../glossary/decomposition.html">decompose</a> and melt at the same time as the body is vitrifying, these produce volumes and pressures sufficiently suddenly that closing channels within the maturing body are unable to vent them out.</p>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">A body containing manganese bubbles the glaze</h3>
+<br /><a href="../picture/1329.html"><img class="flexleft50" loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/materials/zytkovawer.jpg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/1329.html">click here</a> to see it.</p>
+<p>Laguna Barnard Slip substitute fired at cone 03 with a Ferro <a  href="../material/356.html">Frit 3195</a> clear glaze. The very high bubble content is likely because they are adding manganese dioxide to match the <a  href="../oxide/mno.html">MnO</a> in the <a  href="../glossary/glaze+chemistry.html">chemistry</a> of Barnard (it gases alot during firing).</p>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;"> An original container of manganese dioxide</h3>
+<br /><a href="../picture/1662.html"><img class="flexleft50" loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/materials/fejsuxokuh.jpg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/1662.html">click here</a> to see it.</p>
+<p> This bag will give you a clue as to what manganese dioxide, <a  href="../oxide/mno2.html">MnO2</a>, is mainly used for. Staining bricks.</p>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">A cone 6 black-burning stoneware with a porcelain surface. How?</h3>
+<br /><a alt="A black stoneware mug" href="../picture/2059.html"><img class="flexleft50" alt="A black stoneware mug"  loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/gy4hscvune.jpg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/2059.html">click here</a> to see it.</p>
+<p>Black-burning bodies are popular with many potters. This one is stained by adding 10% <a  href="../material/2911.html">raw umber</a> to a buff-burning <a  href="../glossary/stoneware.html">stoneware</a>. Umbers are powerful natural clay <a  href="../glossary/colorant.html">colorants</a>, they have high iron and also contain some manganese oxide. Could a white <a  href="../glossary/engobe.html">engobe</a> produce a porcelain-like surface on such a <a  href="../glossary/clay+body.html">clay body</a>? Yes. <a  href="../recipe/l3954b.html">L3954B</a> engobe was applied during <a  href="../glossary/leather+hard.html">leather-hard</a> stage to this <a  href="../glossary/plainsman+clays.html">Plainsman</a> <a  href="https://plainsmanclays.ca/data/index.php?product=12943">Coffee Clay</a> mug (on the inside and partway down the outside). After <a  href="../glossary/bisque.html">bisque</a>, transparent <a  href="../recipe/g2926b.html">G2926B</a> glaze was applied inside and <a  href="../recipe/ga6-b.html">GA6-B</a> outside. Notice the <a  href="https://plainsmanclays.ca/data/index.php?product=12944">GA6-B</a> over the engobe fires amber but over the black it produces a deep glossy brown. The engobe was mixed into a <a  href="../glossary/thixotropy.html">thixotropic</a> <a  href="../glossary/slurry.html">slurry</a>, as explained on the page at <a  href="../url/221.html">PlainsmanClays.com</a> (see link below), and applied in a relatively thin layer. This porcelain-like result is a testament to the covering power of a true engobe. It is no wonder they are so popular in the <a  href="../glossary/ceramic+tile.html">ceramic tile</a> industry - a red-burning body can be turned white as a <a  href="../glossary/porcelain.html">porcelain</a>, which enables all the marvellous glazing and decorating they can do.</p>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">High-manganese black-burning body at cone 6. Practical and safe to use?</h3>
+<br /><a href="../picture/2114.html"><img class="flexleft50" loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/ccytngtnwm.jpg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/2114.html">click here</a> to see it.</p>
+<p>This type of clay is made by a number of North American manufacturers. In this case, raw or <a  href="../material/151.html">burnt umber</a> are used as the stain (10% or more). The umber is a clay that matures at low temperatures, so it acts as a <a  href="../glossary/flux.html">flux</a> in the body. However, some manufacturers make the mistake of adding it to a <a  href="../glossary/cone+6.html">cone 6</a> body and the result is shown here: <a  href="../glossary/glaze+bubbles.html">bubbling</a> of the glaze (in this case it is a transparent) and <a  href="../trouble/bloating.html">bloating</a> and warping of the body. The umber is decomposing and potentially gassing metal fumes. However, if the umber is added to a cone 10 clay the resultant body matures at around cone 6 and these gassing problems do not occur.</p>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">Wedging manganese speckle into a cone 6 buff stoneware</h3>
+<br /><a alt="Wet clay + manganese = speckled mug" href="../picture/2827.html"><img class="flexleft50" alt="Wet clay + manganese = speckled mug"  loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/aaaqcythza.jpg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/2827.html">click here</a> to see it.</p>
+<p>Just need to make a few pieces? This is actually quite easy to do: Just wedge the clay over the <a  href="../material/1009.html">granular manganese</a> spread out on the board, when the board is clean turn the slug sideways and cut and layer about 20 times (to get 1 million layers). Then wedge normally. Only 0.2% manganese is needed (as a percentage of the dry clay). Since pugged clay contains 20% water it is easy to calculate the dry weight of this piece. For example, suppose this weighs 2 kg: 80% of that is 1.6 kg or 1600g. 0.2% of 1600 is 3.2 grams. Shown is the kind of mug I get. The outside glaze is <a  href="../recipe/g2934y.html">G2934Y</a> silky matte (opacified with tin and <a  href="../material/1724.html">Zircopax</a>) and the inside glaze is G2926BW glossy white. It was fired at <a  href="../glossary/cone+6.html">cone 6</a> using the <a  href="../schedule/plc6ds.html">PLC6DS</a> schedule.</p>
+<p style="clear:left"></p>
+<h3>Links</h3><table>
+<table class="table table-bordered"><tbody>
+<tr>
+<td scope="row">Materials</td>
+<td>
+<a href="../material/manganese+granular.html">Manganese Granular</a>
+<br /><i>In <a  href="../glossary/ceramics.html">ceramics</a>, it is used primarily in clays and glazes to achieve fired speckle (including the brick industry).</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Materials</td>
+<td>
+<a href="../material/manganese+oxide.html">Manganese Oxide</a>
+<br /><i></i>
+</td>
+</tr>
+<tr>
+<td scope="row">Materials</td>
+<td>
+<a href="../material/manganese+dioxide.html">Manganese Dioxide</a>
+<br /><i>A source of <a  href="../oxide/mno.html">MnO</a> used in ceramic glazes and the production of ceramic <a  href="../glossary/ceramic+stain.html">stains</a>. Commonly made by grinding pyrolusite rock.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Materials</td>
+<td>
+<a href="../material/manganese+carbonate.html">Manganese Carbonate</a>
+<br /><i></i>
+</td>
+</tr>
+<tr>
+<td scope="row">Hazards</td>
+<td>
+<a href="manganese+inorganic+compounds+toxicology.html">Manganese Inorganic Compounds Toxicology</a>
+<br /><i></i>
+</td>
+</tr>
+<tr>
+<td scope="row">Hazards</td>
+<td>
+<a href="manganese+and+parkinsons+by+jane+watkins.html">Manganese and Parkinsons by Jane Watkins</a>
+<br /><i>A story of one person and manganese poisoning.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Hazards</td>
+<td>
+<a href="manganese+toxicity+by+elke+blodgett.html">Manganese Toxicity by Elke Blodgett</a>
+<br /><i>A story of the struggle of one person to identify and deal with manganese toxicity</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Glossary</td>
+<td>
+<a href="../glossary/toxicity.html">Toxicity</a>
+<br /><i>Common sense can be applied to the safe use of ceramic materials. The obvious dangers are breathing the dust and inhaling the fumes they produce during firing. Here is a round-up of various materials and their obvious hazards.
+</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Glossary</td>
+<td>
+<a href="../glossary/engobe.html">Engobe</a>
+<br /><i><a  href="../glossary/engobe.html">Engobes</a> are high-clay slurries that are applied to <a  href="../glossary/leather+hard.html">leather hard</a> or dry <a  href="../glossary/ceramics.html">ceramics</a>. They fire opaque and are used for <a  href="../glossary/functional.html">functional</a> or decorative purposes. They are formulated to match the <a  href="../glossary/firing+shrinkage.html">firing shrinkage</a> and <a  href="../glossary/co-efficient+of+thermal+expansion.html">thermal expansion</a> of the body.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Temperatures</td>
+<td>
+<a href="../temperature/87.html">Manganese compounds may begin to fume (932-)</a>
+</td>
+</tr>
+</tbody></table><table style="margin:30px 0px 30px 0px;"><tr><td style="vertical-align:middle; text-align:center; font-size:80%;"><img src="../images/PayPalDonate.png" style="height:66px; padding-right:20px;"><br /><a href="https://www.paypal.com/donate/?hosted_button_id=F8L3JX4BCCXJ6">PayPal</a></td><td style="background-color:#ddffdd; padding:10px; border:thin solid grey; font-size:90%;"><b>No</b> tracking, <b>No</b> ads, <b>No</b> paywall, <b>No</b> transient content!<br />Just organized, concise information constantly updated and improved.<br />Was this helpful? Consider supporting me.</td><tr></table><h3>Got a Question?</h3><p style="margin-bottom:30px;"><a name="kofi">Buy me a coffee and we can talk</a> <a target="_blank" href="https://ko-fi.com/tonyhansen"><img style="width:40px" src="../images/ko-fi.svg"></a></p><p style="margin-bottom:30px;">&nbsp;</p>
+<p></p><p></p><hr>
+<img style="width:250px" src="../4sight/images/ReferenceLibrary.svg">
+<br />
+<a href="../index.html">https://digitalfire.com</a>, All Rights Reserved
+<br /><a href="../w3c/privacypolicy.php.html">Privacy Policy</a>
+</div>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+</body>
+</html>

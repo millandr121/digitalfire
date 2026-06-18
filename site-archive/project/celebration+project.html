@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="../favicon.svg">
+<link rel="mask-icon" href="../mask-icon.svg" color="#000000">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<title>Project: Celebration Project</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<meta name="author" content="Tony Hansen">
+<meta name="description" content="">
+<style>
+.flexinline { width: 50%; height: auto; clear:left; margin: 10px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexinline { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexright50 { width: 50%; height: auto; float: right; margin: 5px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexright50 { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexright33 { width: 33%; height: auto; float: right; margin: 5px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexright33 { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexright25 { width: 25%; height: auto; float: right; margin: 5px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexright25 { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexleft50 { width: 50%; height: auto; float: left; margin: 5px 15px 10px 0px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexleft50 { width: 100%; height: auto; margin: 5px 10px 10px 0px; border: none; padding: none; } }
+.flexleft33 { width: 33%; height: auto; float: left; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexleft33 { width: 100%; height: auto; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; } }
+.flexleft25 { width: 25%; height: auto; float: left; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexleft25 { width: 100%; height: auto; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; } }
+.pictureseries { overflow:scroll; width:auto; height:200px; float:left; margin: 5px 10px 10px 0px; padding: 5px; font-size:60%; font-style:italic;}
+@media (max-width: 640px) { .pictureseries { overflow:scroll; width:auto; height:200px; float:left; margin: 5px 10px 10px 0px; border: padding: 5px; font-size:60%; font-style:italic;} }
+.L2 { margin-left:0px; }
+.L3 { margin-left:20px; color:#222222; }
+.L4 { margin-left:40px; color:#444444; }
+.L5 { margin-left:60px; color:#666666; }
+.L6 { margin-left:60px; color:#888888; }
+h2 { color:#222222; }
+h3 { color:#444444; }
+h4 { color:#666666; }
+h5 { color:#888888; }
+
+</style>
+
+<meta name="google-site-verification" content="wquYW_n-3QEfIzDfV--8ElUewf7TIt04RGo55GfZySU" />
+<meta name="have-i-been-pwned-verification" value="9223dcee7de5c9622c2a2abcff4adc81">
+<script>
+function validateForm() {
+	var x = document.forms["emailform1"]["name1"].value;
+	var r = true;
+	if (x == "") { // alert("A name is required."); 
+		document.getElementById("name1").textContent="Name Required";
+		document.getElementById("name1").style.color="red";
+		// document.emailform1.name1.focus() ; # does not work, should be getelementbyid
+		r = false; 
+	} else {
+		document.getElementById("name1").textContent="Name";
+		document.getElementById("name1").style.color="black";
+	}
+	if (document.forms["emailform1"]["subject1"].value == "") { 
+		document.getElementById("subject1").textContent="Subject Required";
+		document.getElementById("subject1").style.color="red";
+		r = false; 
+	} else {
+		document.getElementById("subject1").textContent="Subject";
+		document.getElementById("subject1").style.color="black";
+	}			
+	if (document.forms["emailform1"]["msg1"].value == "") { 
+		document.getElementById("msg1").textContent="Message Required";
+		document.getElementById("msg1").style.color="red";
+		// alert("A message is required."); 
+		r = false; 
+	} else {
+		document.getElementById("msg1").textContent="Message";
+		document.getElementById("msg1").style.color="black";
+	}
+	var emailID = document.emailform1.email1.value;
+	atpos = emailID.indexOf("@");
+	dotpos = emailID.lastIndexOf(".");
+	if (atpos < 1 || ( dotpos - atpos < 2 )) {
+		document.getElementById("email1").textContent="Email Address Appears Invalid!";
+		document.getElementById("email1").style.color="red";
+		// alert("Your email address appears invalid.")
+		r = false;
+	} else {
+		document.getElementById("email1").textContent="Email Address";
+		document.getElementById("email1").style.color="black";
+	}
+	// Send the form
+	if (r == false) return false;
+	document.forms["emailform1"].submit();
+}
+</script>
+</head>
+<body>
+<p style="background-color:#ff9933; border-width:1px; padding:3px 10px 3px 10px; margin:0px 0px 3px 0px; font-size:80%; text-align:center;">
+Digitalfire will shut down on June 26. I no longer have the authority to grant exemption to a section in the Terms and Conditions of using material in the Insight-Live account from which I built the source material. While there are ways to comply with the take-down order, they are beyond my means because of how complex and large the site has become in the past 35+ years. It has been a wild ride for a shy prairie boy, thanks to everyone for your support. Insight-live.com is not affected by this.</p>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<a name="pagetop" class="navbar-brand" href="../home.html"><img src="../4sight/images/ReferenceLibrary.svg" height="40" alt=""></a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item"><a class="nav-link" href="../home.html">Home</a></li>
+			<li class="nav-item"><a class="nav-link" href="../oxide/list.html">Oxides</a></li>
+			<li class="nav-item"><a class="nav-link" href="../material/list.html">Materials</a></li>
+			<li class="nav-item"><a class="nav-link" href="../recipe/list.html">Recipes</a></li>
+			<li class="nav-item"><a class="nav-link" href="../glossary/list.html">Glossary</a></li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="celebration+project.html#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Others</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" href="../article/list.html">Articles</a>
+					<a class="dropdown-item" href="../hazard/list.html">Hazards</a>
+					<a class="dropdown-item" href="../mineral/list.html">Minerals</a>
+					<a class="dropdown-item" href="../property/list.html">Properties</a>
+					<a class="dropdown-item" href="../schedule/list.html">Firing Schedules</a>
+					<a class="dropdown-item" href="../temperature/list.html">Temperatures</a>
+					<a class="dropdown-item" href="../trouble/list.html">Troubles</a>
+					<a class="dropdown-item" href="../test/list.html">Tests</a>
+					<a class="dropdown-item" href="../video/list.html">Media</a>
+					<a class="dropdown-item" href="../picture/list.html">Pictures</a>
+					<a class="dropdown-item" href="../typecode/list.html">Typecodes</a>
+					<a class="dropdown-item active" href="list.html">Projects</a>
+					<a class="dropdown-item" href="../consultants/list.html">Consultants</a>
+					<a class="dropdown-item" href="../schools/list.html">Schools</a>
+					<a class="dropdown-item" href="../stores/list.html">Stores</a>
+					<a class="dropdown-item" href="../potterytony/list.html">Don't Buy-A-Mug</a>
+					<div class="dropdown-divider"></div>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="../index.html">https://digitalfire.com</a>
+					<a class="dropdown-item" href="https://insight-live.com">Insight-Live.com</a>
+					<a class="dropdown-item" href="../index.html">Sign-Up</a>
+				</div>
+			</li>
+		</ul>
+		<form class="form-inline my-2 my-lg-0" action="https://digitalfire.com/index.php?searcharea=project" accept-charset="UTF-8" method="post">
+		<input name="searchfor" title="Search from home to search in all areas" maxlength="20" class="form-control mr-sm-2" aria-label="Search" placeholder="Search" autocorrect="off" autocapitalize="off" type="search" value=""><button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="searchbutton">Search</button>
+		</form>
+	</div>
+</nav>
+<div class="container"><p><a class="btn btn-primary" data-toggle="collapse" href="celebration+project.html#collapse1" role="button" aria-expanded="false" aria-controls="collapse1">All Projects</a></p>
+<div class="collapse" id="collapse1" style="margin-bottom:15px;"><a title="15" href="15.html">2019 Jiggering-Casting Project of Medalta 66 Mug</a><br /><a title="54" href="54.html">A cereal bowl jigger mold made using 3D printing</a><br /><a title="33" href="33.html">Beer Bottle Master Mold via 3D Printing</a><br /><a title="61" href="61.html">Better porosity for Brown Sugar Savers</a><br /><a title="48" href="48.html">Build a kiln monitoring device</a><br /><a title="69" href="69.html">Celebration Project</a><br /><a title="60" href="60.html">Coffee Mug Slip Casting Mold via 3D Printing</a><br /><a title="29" href="29.html">Comparing the Melt Fluidity of 16 Frits</a><br /><a title="52" href="52.html">Cookie Cutting clay with 3D printed cutters</a><br /><a title="41" href="41.html">Evaluating a clay's suitability for use in pottery</a><br /><a title="55" href="55.html">Make a mold for 4-gallon stackable calciners</a><br /><a title="49" href="49.html">Make Your Own Pyrometric Cones</a><br /><a title="47" href="47.html">Make your own sieve shaker to process ceramic slurries</a><br /><a title="40" href="40.html">Making a high quality ceramic tile</a><br /><a title="46" href="46.html">Making a Plaster Table</a><br /><a title="37" href="37.html">Making Bricks</a><br /><a title="50" href="50.html">Making our own kiln posts using a hand extruder</a><br /><a title="59" href="59.html">Medalta Ball Pitcher Slip Casting Mold via 3D Printing</a><br /><a title="34" href="34.html">Medalta Jug Master Mold Development</a><br /><a title="63" href="63.html">Mold Natches</a><br /><a title="32" href="32.html">Mother Nature's Porcelain - Plainsman 3B</a><br /><a title="66" href="66.html">Mug Handle Casting</a><br /><a title="39" href="39.html">Nursery plant pot mold via 3D printing</a><br /><a title="30" href="30.html">Pie-Crust Mug-Making Method</a><br /><a title="35" href="35.html">Plainsman 3D, Mother Nature's Porcelain/Stoneware</a><br /><a title="38" href="38.html">Project to Document a Shimpo Jiggering Attachment</a><br /><a title="36" href="36.html">Roll, Cut, Pull, Attach Handle-making Method</a><br /><a title="23" href="23.html">Slurry Mixing and Dewatering Your Own Clay Body</a><br /><a title="24" href="24.html">Testing a New Load of EP Kaolin</a><br /><a title="44" href="44.html">Using milk as a glaze</a></div><p style="clear:left"></p><h1>Celebration Project</h1>
+<p>In the face of the monetization of hobby pottery in recent times (by thousands of prepared products, special-purpose tools and services), veteran potters who know materials and processes and how to be self-sufficient can feel a little like relics. Schools are increasingly onboarding people into the glaze-jar hobby pottery culture rather than teaching the basics of traditional <a  href="../glossary/ceramics.html">ceramics</a>. This is OK for right-brained people but doesn't scale well into production for the left-brained. This project was first about remembering and celebrating "the pros", many of whom have laboured for decades, often in relative obscurity, producing large volumes of ware. Pottery is among the world's oldest and most valuable professions, one that has combined art, craft, mechanical, construction, prospecting, material processing, etc. The veterans of the craft are a cultural heritage to be preserved and passed on in a search-engine findable form. Their knowledge, techniques and styles need remembering in a ceramics world losing its way in many places.<br />
+<br />
+Second, this project is also about celebrating younger potters displaying the same kind of talent, dedication and determination that will make them the veterans of the future.<br />
+<br />
+Third, it celebrates art centers and teaching institutions, many of whom are contributing in a big way to the preservation and growth of quality ceramics and pottery. Not just that, they are teaching the value of craft and art to a society heading in directions of increased anxiety and depression - pottery can be very therapeutic.<br />
+<br />
+This project started with customers of <a  href="../glossary/plainsman+clays.html">Plainsman</a> Clays but it soon became evident that this could and should be much bigger. <br />
+<br />
+Here are some of the people that we have done so far. If you are a supplier would you like to start creating a database to celebrate your customers? We are working on a web service to provide this functionality. Please contact us.<br />
+<br />
+<div><img style="height:50px; float:left; padding-right:10px;" src="https://plainsmanclays.ca/artists/6uW331RmXo-thumbnail.jpg">Ginette Brinkman<br />https://plainsmanclays.ca/artists/6uW331RmXo.pdf <a href="https://plainsmanclays.ca/artists/6uW331RmXo.pdf" target="_blank">Go</a><p style="clear:left"></p><br /><img style="height:50px; float:left; padding-right:10px;" src="https://plainsmanclays.ca/artists/bwviKdtykX-thumbnail.jpg">Stephen Girard<br />https://plainsmanclays.ca/artists/bwviKdtykX.pdf <a href="https://plainsmanclays.ca/artists/bwviKdtykX.pdf" target="_blank">Go</a><p style="clear:left"></p><br /><img style="height:50px; float:left; padding-right:10px;" src="https://plainsmanclays.ca/artists/bKfczi6ELY-thumbnail.jpg">Cathi Jefferson<br />https://plainsmanclays.ca/artists/bKfczi6ELY.pdf <a href="https://plainsmanclays.ca/artists/bKfczi6ELY.pdf" target="_blank">Go</a><p style="clear:left"></p><br /><img style="height:50px; float:left; padding-right:10px;" src="https://plainsmanclays.ca/artists/c7SL8SJShe-thumbnail.jpg">Alan Lacovetsky<br />https://plainsmanclays.ca/artists/c7SL8SJShe.pdf <a href="https://plainsmanclays.ca/artists/c7SL8SJShe.pdf" target="_blank">Go</a><p style="clear:left"></p><br /><img style="height:50px; float:left; padding-right:10px;" src="https://plainsmanclays.ca/artists/MhnkJm8NCN-thumbnail.jpg">Luke Lindoe<br />https://plainsmanclays.ca/artists/MhnkJm8NCN.pdf <a href="https://plainsmanclays.ca/artists/MhnkJm8NCN.pdf" target="_blank">Go</a><p style="clear:left"></p><br /><img style="height:50px; float:left; padding-right:10px;" src="https://plainsmanclays.ca/artists/WZenM78qaA-thumbnail.jpg">Sarah Pike<br />https://plainsmanclays.ca/artists/WZenM78qaA.pdf <a href="https://plainsmanclays.ca/artists/WZenM78qaA.pdf" target="_blank">Go</a><p style="clear:left"></p><br /><img style="height:50px; float:left; padding-right:10px;" src="https://plainsmanclays.ca/artists/YsKcNwvr2y-thumbnail.jpg">Pamela Rodger<br />https://plainsmanclays.ca/artists/YsKcNwvr2y.pdf <a href="https://plainsmanclays.ca/artists/YsKcNwvr2y.pdf" target="_blank">Go</a><p style="clear:left"></p><br /><img style="height:50px; float:left; padding-right:10px;" src="https://plainsmanclays.ca/artists/a1noFiXxSB-thumbnail.jpg">Nick Saville<br />https://plainsmanclays.ca/artists/a1noFiXxSB.pdf <a href="https://plainsmanclays.ca/artists/a1noFiXxSB.pdf" target="_blank">Go</a><p style="clear:left"></p><br /><img style="height:50px; float:left; padding-right:10px;" src="https://plainsmanclays.ca/artists/hDWqKZ7zvC-thumbnail.jpg">Rod & Denise Simair<br />https://plainsmanclays.ca/artists/hDWqKZ7zvC.pdf <a href="https://plainsmanclays.ca/artists/hDWqKZ7zvC.pdf" target="_blank">Go</a><p style="clear:left"></p><br /><img style="height:50px; float:left; padding-right:10px;" src="https://plainsmanclays.ca/artists/t8jr4KeJKT-thumbnail.jpg">Kim Undseth<br />https://plainsmanclays.ca/artists/t8jr4KeJKT.pdf <a href="https://plainsmanclays.ca/artists/t8jr4KeJKT.pdf" target="_blank">Go</a><p style="clear:left"></p><br /><img style="height:50px; float:left; padding-right:10px;" src="https://plainsmanclays.ca/artists/XNZ1Ny1ucn-thumbnail.jpg">Brian Wiebe<br />https://plainsmanclays.ca/artists/XNZ1Ny1ucn.pdf <a href="https://plainsmanclays.ca/artists/XNZ1Ny1ucn.pdf" target="_blank">Go</a><p style="clear:left"></p><br /><img style="height:50px; float:left; padding-right:10px;" src="https://plainsmanclays.ca/artists/PB7j6gGnBt-thumbnail.jpg">Basiclai.com<br />(Marianne Robilotta)<br />https://plainsmanclays.ca/artists/PB7j6gGnBt.pdf <a href="https://plainsmanclays.ca/artists/PB7j6gGnBt.pdf" target="_blank">Go</a><p style="clear:left"></p><br /><img style="height:50px; float:left; padding-right:10px;" src="https://plainsmanclays.ca/artists/uWycihDAhR-thumbnail.jpg">Brenda Parks Pottery<br />(Brenda Parks)<br />https://plainsmanclays.ca/artists/uWycihDAhR.pdf <a href="https://plainsmanclays.ca/artists/uWycihDAhR.pdf" target="_blank">Go</a><p style="clear:left"></p><br /><img style="height:50px; float:left; padding-right:10px;" src="https://plainsmanclays.ca/artists/vt5s8gpPf7-thumbnail.jpg">Burnt Earth Services<br />(Roxanne Neu)<br />https://plainsmanclays.ca/artists/vt5s8gpPf7.pdf <a href="https://plainsmanclays.ca/artists/vt5s8gpPf7.pdf" target="_blank">Go</a><p style="clear:left"></p><br /><img style="height:50px; float:left; padding-right:10px;" src="https://plainsmanclays.ca/artists/4v4sjMhE9w-thumbnail.jpg">Clay Studio Three<br />(Paula Cooley)<br />https://plainsmanclays.ca/artists/4v4sjMhE9w.pdf <a href="https://plainsmanclays.ca/artists/4v4sjMhE9w.pdf" target="_blank">Go</a><p style="clear:left"></p><br /><img style="height:50px; float:left; padding-right:10px;" src="https://plainsmanclays.ca/artists/fitfehogok-thumbnail.jpg">Grassroots Studio Ltd.<br />(James Marshall)<br />https://plainsmanclays.ca/artists/fitfehogok.pdf <a href="https://plainsmanclays.ca/artists/fitfehogok.pdf" target="_blank">Go</a><p style="clear:left"></p><br /><img style="height:50px; float:left; padding-right:10px;" src="https://plainsmanclays.ca/artists/J2kQgciya2-thumbnail.jpg">Kwantlen Polytechnic<br />(Ying-Yueh Chuang)<br />https://plainsmanclays.ca/artists/J2kQgciya2.pdf <a href="https://plainsmanclays.ca/artists/J2kQgciya2.pdf" target="_blank">Go</a><p style="clear:left"></p><br /><img style="height:50px; float:left; padding-right:10px;" src="https://plainsmanclays.ca/artists/njk9TtTway-thumbnail.jpg">Mary Fox Pottery<br />(Mary Fox)<br />https://plainsmanclays.ca/artists/njk9TtTway.pdf <a href="https://plainsmanclays.ca/artists/njk9TtTway.pdf" target="_blank">Go</a><p style="clear:left"></p><br />Monashee Pottery<br />(Gabrielle Labbe)<br />https://plainsmanclays.ca/artists/4myNM8p7aY.pdf <a href="https://plainsmanclays.ca/artists/4myNM8p7aY.pdf" target="_blank">Go</a><p style="clear:left"></p><br /><img style="height:50px; float:left; padding-right:10px;" src="https://plainsmanclays.ca/artists/J1yHWjYkgF-thumbnail.jpg">MyLilShopCanada<br />(Lillie Turner)<br />https://plainsmanclays.ca/artists/J1yHWjYkgF.pdf <a href="https://plainsmanclays.ca/artists/J1yHWjYkgF.pdf" target="_blank">Go</a><p style="clear:left"></p><br /><img style="height:50px; float:left; padding-right:10px;" src="https://plainsmanclays.ca/artists/tyxnuzekur-thumbnail.jpg">Nestel Pottery<br />(Marie Nestel)<br />https://plainsmanclays.ca/artists/tyxnuzekur.pdf <a href="https://plainsmanclays.ca/artists/tyxnuzekur.pdf" target="_blank">Go</a><p style="clear:left"></p><br />of Cabbages & Kings Pottery Studio<br />(John & Katie  Borrowman)<br />https://plainsmanclays.ca/artists/cpswnqWwNG.pdf <a href="https://plainsmanclays.ca/artists/cpswnqWwNG.pdf" target="_blank">Go</a><p style="clear:left"></p><br />Okanagan Pottery<br />(Peter & Daphne Flanagan)<br />https://plainsmanclays.ca/artists/uDpD2EhjM1.pdf <a href="https://plainsmanclays.ca/artists/uDpD2EhjM1.pdf" target="_blank">Go</a><p style="clear:left"></p><br /><img style="height:50px; float:left; padding-right:10px;" src="https://plainsmanclays.ca/artists/K77Wyaudzu-thumbnail.jpg">Parsons Dietrich Pottery<br />(Zach, Devon Dietrich)<br />https://plainsmanclays.ca/artists/K77Wyaudzu.pdf <a href="https://plainsmanclays.ca/artists/K77Wyaudzu.pdf" target="_blank">Go</a><p style="clear:left"></p><br /><img style="height:50px; float:left; padding-right:10px;" src="https://plainsmanclays.ca/artists/zT8t6A37mZ-thumbnail.jpg">Pike Studios<br />(Connie and Bob Pike)<br />https://plainsmanclays.ca/artists/zT8t6A37mZ.pdf <a href="https://plainsmanclays.ca/artists/zT8t6A37mZ.pdf" target="_blank">Go</a><p style="clear:left"></p><br /><img style="height:50px; float:left; padding-right:10px;" src="https://plainsmanclays.ca/artists/qpqGMxojrT-thumbnail.jpg">Plainsman Clays<br />(Tony Hansen)<br />https://plainsmanclays.ca/artists/qpqGMxojrT.pdf <a href="https://plainsmanclays.ca/artists/qpqGMxojrT.pdf" target="_blank">Go</a><p style="clear:left"></p><br /><img style="height:50px; float:left; padding-right:10px;" src="https://plainsmanclays.ca/artists/KZF7xgyyMi-thumbnail.jpg">Pridham Studio<br />(Micah & Jeremiah Wassink)<br />https://plainsmanclays.ca/artists/KZF7xgyyMi.pdf <a href="https://plainsmanclays.ca/artists/KZF7xgyyMi.pdf" target="_blank">Go</a><p style="clear:left"></p><br /><img style="height:50px; float:left; padding-right:10px;" src="https://plainsmanclays.ca/artists/cacxagosif-thumbnail.jpg">Stillpoint Pottery<br />(Lance Hall, Maureen McEwen)<br />https://plainsmanclays.ca/artists/cacxagosif.pdf <a href="https://plainsmanclays.ca/artists/cacxagosif.pdf" target="_blank">Go</a><p style="clear:left"></p><br /><img style="height:50px; float:left; padding-right:10px;" src="https://plainsmanclays.ca/artists/w8Se8TcYQW-thumbnail.jpg">Voyager Tile<br />(Brian McArthur)<br />https://plainsmanclays.ca/artists/w8Se8TcYQW.pdf <a href="https://plainsmanclays.ca/artists/w8Se8TcYQW.pdf" target="_blank">Go</a><p style="clear:left"></p><br /><img style="height:50px; float:left; padding-right:10px;" src="https://plainsmanclays.ca/artists/CAC79ypy3y-thumbnail.jpg">Wildflower Arts Centre, APA<br />(Gillian Boon)<br />https://plainsmanclays.ca/artists/CAC79ypy3y.pdf <a href="https://plainsmanclays.ca/artists/CAC79ypy3y.pdf" target="_blank">Go</a><p style="clear:left"></p><br /><img style="height:50px; float:left; padding-right:10px;" src="https://plainsmanclays.ca/artists/umE9s5enaZ-thumbnail.jpg">Workshop Studios<br />(Becky, Andrew )<br />https://plainsmanclays.ca/artists/umE9s5enaZ.pdf <a href="https://plainsmanclays.ca/artists/umE9s5enaZ.pdf" target="_blank">Go</a><p style="clear:left"></p></div><p style="clear:left"></p></p>
+<h2 style="font-style:italic;">Related Information</h2>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">Celebration Posters Project</h3>
+<br /><a alt="Celebration library posters" href="../picture/3525.html"><img class="flexleft50" alt="Celebration library posters"  loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/63c3be2qc4.jpg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/3525.html">click here</a> to see it.</p>
+<p>Do you know a potter or sculptor, especially a veteran, whose work and dedication need to be appreciated, celebrated and remembered in more ways? Especially ones who are techno timid. In 2020 we added the ability for account-holder customers at <a  href="../url/221.html">plainsmanclays.com</a> to submit their story and other information and upload and organize up to seven photos. With that data, the site can generate <a  href="../glossary/portable+document+format.html">PDF</a> posters like this. However, our intervention was required to make most of these - the artists are one of the very things we celebrate them for - really busy! So - there are many hundreds more to do. Please contact the coach, tony@digitalfire.com, if you or someone you know really should be a part of this collection.</p>
+<p style="clear:left"></p>
+<h3>Links</h3><table>
+<table class="table table-bordered"><tbody>
+<tr>
+<td scope="row">URLs</td>
+<td>
+<a href="../url/3588.html">https://digitalfire.com/schools/list</a>
+<br /><i><a  href="../glossary/digitalfire+reference+library.html">Digitalfire</a> Schools Database</i>
+<br /><i style="color:#888888;">An extensive list of schools teaching skills in ceramic art, craft and science</i>
+</td>
+</tr>
+</tbody></table><table style="margin:30px 0px 30px 0px;"><tr><td style="vertical-align:middle; text-align:center; font-size:80%;"><img src="../images/PayPalDonate.png" style="height:66px; padding-right:20px;"><br /><a href="https://www.paypal.com/donate/?hosted_button_id=F8L3JX4BCCXJ6">PayPal</a></td><td style="background-color:#ddffdd; padding:10px; border:thin solid grey; font-size:90%;"><b>No</b> tracking, <b>No</b> ads, <b>No</b> paywall, <b>No</b> transient content!<br />Just organized, concise information constantly updated and improved.<br />Was this helpful? Consider supporting me.</td><tr></table><table style="margin-top:30px; padding-top:10px; padding-bottom:20px; border-top:thin solid grey; border-bottom:thin solid grey;"><tr><td style="padding-right:10px">By <i>Tony Hansen</i><br /><span style="font-size:80%; color:#888888;">Follow me on<br /><a title="Threads" href="https://www.threads.net/@tonyatdigitalfire" target="_blank"><img src="../images/threads.jpg" style="width:20px;" border="0"></a> <a title="Facebook Insight-Live" href="https://www.facebook.com/insightlive" target="_blank"><img src="../images/facebook.jpg" style="width:20px;" border="0"></a> <a title="LinkedIn" href="https://www.linkedin.com/in/tonywhansen/" target="_blank"><img src="../images/linkedin.jpg" style="width:20px;" border="0"></a> <a title="Pinterest" href="https://www.pinterest.ca/tonywhansen" target="_blank"><img src="../images/pinterest.jpg" style="width:20px;" border="0"></a> <a title="Instagram" href="https://instagram.com/tonyatdigitalfire" target="_blank"><img src="../images/instagram.jpg" style="width:20px;" border="0"></a> <a title="Ko-Fi" href="https://ko-fi.com/tonyhansen#" target="_blank"><img src="../images/ko-fi.jpg" style="width:20px;" border="0"></a> <a title="Twitter" href="https://x.com/digitalfiretony" target="_blank"><img src="../images/twitter.jpg" style="width:20px;" border="0"></a></td><td><a href="https://tonyhansen.com/about"><img src="../images/SignaturePhotoSmall.jpg" height="80"></a></td></tr></table><h3>Got a Question?</h3><p style="margin-bottom:30px;"><a name="kofi">Buy me a coffee and we can talk</a> <a target="_blank" href="https://ko-fi.com/tonyhansen"><img style="width:40px" src="../images/ko-fi.svg"></a></p><p style="margin-bottom:30px;">&nbsp;</p>
+<p></p><p></p><hr>
+<img style="width:250px" src="../4sight/images/ReferenceLibrary.svg">
+<br />
+<a href="../index.html">https://digitalfire.com</a>, All Rights Reserved
+<br /><a href="../w3c/privacypolicy.php.html">Privacy Policy</a>
+</div>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+</body>
+</html>

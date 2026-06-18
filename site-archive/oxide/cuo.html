@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="../favicon.svg">
+<link rel="mask-icon" href="../mask-icon.svg" color="#000000">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<title>CuO (Cupric Oxide)</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<meta name="author" content="Tony Hansen">
+<meta name="description" content="The use of CuO in traditional ceramics, how its chemistry contributes to fired properties of glazes">
+<style>
+.flexinline { width: 50%; height: auto; clear:left; margin: 10px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexinline { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexright50 { width: 50%; height: auto; float: right; margin: 5px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexright50 { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexright33 { width: 33%; height: auto; float: right; margin: 5px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexright33 { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexright25 { width: 25%; height: auto; float: right; margin: 5px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexright25 { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexleft50 { width: 50%; height: auto; float: left; margin: 5px 15px 10px 0px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexleft50 { width: 100%; height: auto; margin: 5px 10px 10px 0px; border: none; padding: none; } }
+.flexleft33 { width: 33%; height: auto; float: left; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexleft33 { width: 100%; height: auto; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; } }
+.flexleft25 { width: 25%; height: auto; float: left; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexleft25 { width: 100%; height: auto; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; } }
+.pictureseries { overflow:scroll; width:auto; height:200px; float:left; margin: 5px 10px 10px 0px; padding: 5px; font-size:60%; font-style:italic;}
+@media (max-width: 640px) { .pictureseries { overflow:scroll; width:auto; height:200px; float:left; margin: 5px 10px 10px 0px; border: padding: 5px; font-size:60%; font-style:italic;} }
+.L2 { margin-left:0px; }
+.L3 { margin-left:20px; color:#222222; }
+.L4 { margin-left:40px; color:#444444; }
+.L5 { margin-left:60px; color:#666666; }
+.L6 { margin-left:60px; color:#888888; }
+h2 { color:#222222; }
+h3 { color:#444444; }
+h4 { color:#666666; }
+h5 { color:#888888; }
+
+</style>
+
+<meta name="google-site-verification" content="wquYW_n-3QEfIzDfV--8ElUewf7TIt04RGo55GfZySU" />
+<meta name="have-i-been-pwned-verification" value="9223dcee7de5c9622c2a2abcff4adc81">
+<script>
+function validateForm() {
+	var x = document.forms["emailform1"]["name1"].value;
+	var r = true;
+	if (x == "") { // alert("A name is required."); 
+		document.getElementById("name1").textContent="Name Required";
+		document.getElementById("name1").style.color="red";
+		// document.emailform1.name1.focus() ; # does not work, should be getelementbyid
+		r = false; 
+	} else {
+		document.getElementById("name1").textContent="Name";
+		document.getElementById("name1").style.color="black";
+	}
+	if (document.forms["emailform1"]["subject1"].value == "") { 
+		document.getElementById("subject1").textContent="Subject Required";
+		document.getElementById("subject1").style.color="red";
+		r = false; 
+	} else {
+		document.getElementById("subject1").textContent="Subject";
+		document.getElementById("subject1").style.color="black";
+	}			
+	if (document.forms["emailform1"]["msg1"].value == "") { 
+		document.getElementById("msg1").textContent="Message Required";
+		document.getElementById("msg1").style.color="red";
+		// alert("A message is required."); 
+		r = false; 
+	} else {
+		document.getElementById("msg1").textContent="Message";
+		document.getElementById("msg1").style.color="black";
+	}
+	var emailID = document.emailform1.email1.value;
+	atpos = emailID.indexOf("@");
+	dotpos = emailID.lastIndexOf(".");
+	if (atpos < 1 || ( dotpos - atpos < 2 )) {
+		document.getElementById("email1").textContent="Email Address Appears Invalid!";
+		document.getElementById("email1").style.color="red";
+		// alert("Your email address appears invalid.")
+		r = false;
+	} else {
+		document.getElementById("email1").textContent="Email Address";
+		document.getElementById("email1").style.color="black";
+	}
+	// Send the form
+	if (r == false) return false;
+	document.forms["emailform1"].submit();
+}
+</script>
+</head>
+<body>
+<p style="background-color:#ff9933; border-width:1px; padding:3px 10px 3px 10px; margin:0px 0px 3px 0px; font-size:80%; text-align:center;">
+Digitalfire will shut down on June 26. I no longer have the authority to grant exemption to a section in the Terms and Conditions of using material in the Insight-Live account from which I built the source material. While there are ways to comply with the take-down order, they are beyond my means because of how complex and large the site has become in the past 35+ years. It has been a wild ride for a shy prairie boy, thanks to everyone for your support. Insight-live.com is not affected by this.</p>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<a name="pagetop" class="navbar-brand" href="../home.html"><img src="../4sight/images/ReferenceLibrary.svg" height="40" alt=""></a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item"><a class="nav-link" href="../home.html">Home</a></li>
+			<li class="nav-item active"><a class="nav-link" href="list.html">Oxides <span class="sr-only">(current)</span></a></li>
+			<li class="nav-item"><a class="nav-link" href="../material/list.html">Materials</a></li>
+			<li class="nav-item"><a class="nav-link" href="../recipe/list.html">Recipes</a></li>
+			<li class="nav-item"><a class="nav-link" href="../glossary/list.html">Glossary</a></li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="cuo.html#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Others</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" href="../article/list.html">Articles</a>
+					<a class="dropdown-item" href="../hazard/list.html">Hazards</a>
+					<a class="dropdown-item" href="../mineral/list.html">Minerals</a>
+					<a class="dropdown-item" href="../property/list.html">Properties</a>
+					<a class="dropdown-item" href="../schedule/list.html">Firing Schedules</a>
+					<a class="dropdown-item" href="../temperature/list.html">Temperatures</a>
+					<a class="dropdown-item" href="../trouble/list.html">Troubles</a>
+					<a class="dropdown-item" href="../test/list.html">Tests</a>
+					<a class="dropdown-item" href="../video/list.html">Media</a>
+					<a class="dropdown-item" href="../picture/list.html">Pictures</a>
+					<a class="dropdown-item" href="../typecode/list.html">Typecodes</a>
+					<a class="dropdown-item" href="../project/list.html">Projects</a>
+					<a class="dropdown-item" href="../consultants/list.html">Consultants</a>
+					<a class="dropdown-item" href="../schools/list.html">Schools</a>
+					<a class="dropdown-item" href="../stores/list.html">Stores</a>
+					<a class="dropdown-item" href="../potterytony/list.html">Don't Buy-A-Mug</a>
+					<div class="dropdown-divider"></div>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="../index.html">https://digitalfire.com</a>
+					<a class="dropdown-item" href="https://insight-live.com">Insight-Live.com</a>
+					<a class="dropdown-item" href="../index.html">Sign-Up</a>
+				</div>
+			</li>
+		</ul>
+		<form class="form-inline my-2 my-lg-0" action="https://digitalfire.com/index.php?searcharea=oxide" accept-charset="UTF-8" method="post">
+		<input name="searchfor" title="Search from home to search in all areas" maxlength="20" class="form-control mr-sm-2" aria-label="Search" placeholder="Search" autocorrect="off" autocapitalize="off" type="search" value=""><button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="searchbutton">Search</button>
+		</form>
+	</div>
+</nav>
+<div class="container">
+<div style="margin:10px 0px 10px 0px;" class="accordion" id="accordionExample">
+ <div class="card">
+  <div class="card-header pl-0 py-0" id="heading1">
+   <h2 class="mb-0">
+    <button class="btn btn-link collapsed btn-lg" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">Common Ceramic Oxides</button>
+   </h2>
+  </div>
+  <div id="collapse1" class="collapse show" aria-labelledby="heading1" data-parent="#accordionExample">
+   <div class="card-body">
+<a title="3" href="al2o3.html">Al<sub>2</sub>O<sub>3</sub></a> | <a title="7" href="b2o3.html">B<sub>2</sub>O<sub>3</sub></a> | <a title="8" href="bao.html">BaO</a> | <a title="11" href="c.html">C</a> | <a title="13" href="cao.html">CaO</a> | <a title="12" href="co2.html">CO<sub>2</sub></a> | <a title="16" href="coo.html">CoO</a> | <a title="17" href="cr2o3.html">Cr<sub>2</sub>O<sub>3</sub></a> | <a title="19" href="cu2o.html">Cu<sub>2</sub>O</a> | <a title="20" href="20.html"><button type="button" class="btn btn-dark">CuO</button></a> | <a title="25" href="fe2o3.html">Fe<sub>2</sub>O<sub>3</sub></a> | <a title="26" href="feo.html">FeO</a> | <a title="32" href="h2o.html">H<sub>2</sub>O</a> | <a title="38" href="k2o.html">K<sub>2</sub>O</a> | <a title="42" href="li2o.html">Li<sub>2</sub>O</a> | <a title="40" href="loi.html">LOI</a> | <a title="44" href="mgo.html">MgO</a> | <a title="46" href="mno.html">MnO</a> | <a title="47" href="mno2.html">MnO<sub>2</sub></a> | <a title="50" href="na2o.html">Na<sub>2</sub>O</a> | <a title="53" href="nio.html">NiO</a> | <a title="54" href="o.html">O</a> | <a title="97" href="organics.html">Organics</a> | <a title="56" href="p2o5.html">P<sub>2</sub>O<sub>5</sub></a> | <a title="59" href="pbo.html">PbO</a> | <a title="75" href="sio2.html">SiO<sub>2</sub></a> | <a title="77" href="sno2.html">SnO<sub>2</sub></a> | <a title="70" href="so3.html">SO<sub>3</sub></a> | <a title="96" href="so4.html">SO<sub>4</sub></a> | <a title="78" href="sro.html">SrO</a> | <a title="83" href="tio2.html">TiO<sub>2</sub></a> | <a title="89" href="v2o5.html">V<sub>2</sub>O<sub>5</sub></a> | <a title="93" href="zno.html">ZnO</a> | <a title="94" href="zro.html">ZrO</a> | <a title="95" href="zro2.html">ZrO<sub>2</sub></a>
+   </div>
+  </div>
+ </div>
+ <div class="card">
+  <div class="card-header pl-0 py-0" id="heading2">
+   <h2 class="mb-0">
+    <button class="btn btn-link collapsed btn-lg" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">Uncommon Ceramic Oxides</button>
+   </h2>
+  </div>
+  <div id="collapse2" class="collapse" aria-labelledby="heading2" data-parent="#accordionExample">
+   <div class="card-body">
+<a title="102" href="ag2o.html">Ag<sub>2</sub>O</a> | <a title="104" href="alf3.html">AlF<sub>3</sub></a> | <a title="4" href="as2o3.html">As<sub>2</sub>O<sub>3</sub></a> | <a title="5" href="as4o6.html">As<sub>4</sub>O6</a> | <a title="6" href="au2o3.html">Au<sub>2</sub>O<sub>3</sub></a> | <a title="108" href="baf2.html">BaF<sub>2</sub></a> | <a title="9" href="beo.html">BeO</a> | <a title="10" href="bi2o3.html">Bi<sub>2</sub>O<sub>3</sub></a> | <a title="109" href="caf2.html">CaF<sub>2</sub></a> | <a title="14" href="cdo.html">CdO</a> | <a title="15" href="ceo2.html">CeO<sub>2</sub></a> | <a title="99" href="cl.html">Cl</a> | <a title="110" href="co.html">CO</a> | <a title="113" href="cro3.html">CrO<sub>3</sub></a> | <a title="18" href="cs2o.html">Cs<sub>2</sub>O</a> | <a title="101" href="cuco3.html">CuCO<sub>3</sub></a> | <a title="21" href="dy2o3.html">Dy<sub>2</sub>O<sub>3</sub></a> | <a title="22" href="er2o3.html">Er<sub>2</sub>O<sub>3</sub></a> | <a title="23" href="eu2o3.html">Eu<sub>2</sub>O<sub>3</sub></a> | <a title="24" href="f.html">F</a> | <a title="27" href="fr2o.html">Fr<sub>2</sub>O</a> | <a title="28" href="free&#32;sio2.html">Free SiO<sub>2</sub></a> | <a title="29" href="ga2o3.html">Ga<sub>2</sub>O<sub>3</sub></a> | <a title="30" href="https://digitalfire.com/oxide/gdo3">GdO<sub>3</sub></a> | <a title="31" href="geo2.html">GeO<sub>2</sub></a> | <a title="33" href="hfo2.html">HfO<sub>2</sub></a> | <a title="34" href="hgo.html">HgO</a> | <a title="35" href="ho2o3.html">Ho<sub>2</sub>O<sub>3</sub></a> | <a title="36" href="in2o3.html">In<sub>2</sub>O<sub>3</sub></a> | <a title="37" href="iro2.html">IrO<sub>2</sub></a> | <a title="107" href="kf.html">KF</a> | <a title="39" href="knao.html">KNaO</a> | <a title="41" href="la2o3.html">La<sub>2</sub>O<sub>3</sub></a> | <a title="43" href="lu2o3.html">Lu<sub>2</sub>O<sub>3</sub></a> | <a title="45" href="mn2o3.html">Mn<sub>2</sub>O<sub>3</sub></a> | <a title="48" href="moo3.html">MoO<sub>3</sub></a> | <a title="49" href="n2o5.html">N<sub>2</sub>O<sub>5</sub></a> | <a title="105" href="naf.html">NaF</a> | <a title="51" href="nb2o5.html">Nb<sub>2</sub>O<sub>5</sub></a> | <a title="52" href="nd2o3.html">Nd<sub>2</sub>O<sub>3</sub></a> | <a title="98" href="ni2o3.html">Ni<sub>2</sub>O<sub>3</sub></a> | <a title="55" href="oso2.html">OsO<sub>2</sub></a> | <a title="58" href="pa2o5.html">Pa<sub>2</sub>O<sub>5</sub></a> | <a title="106" href="pbf2.html">PbF<sub>2</sub></a> | <a title="60" href="pdo.html">PdO</a> | <a title="61" href="pmo3.html">PmO<sub>3</sub></a> | <a title="57" href="po4.html">PO<sub>4</sub></a> | <a title="62" href="pr2o3.html">Pr<sub>2</sub>O<sub>3</sub></a> | <a title="63" href="pro2.html">PrO<sub>2</sub></a> | <a title="64" href="pto2.html">PtO<sub>2</sub></a> | <a title="65" href="rao.html">RaO</a> | <a title="66" href="rb2o.html">Rb<sub>2</sub>O</a> | <a title="67" href="re2o7.html">Re<sub>2</sub>O7</a> | <a title="68" href="rho3.html">RhO<sub>3</sub></a> | <a title="69" href="ruo2.html">RuO<sub>2</sub></a> | <a title="71" href="sb2o3.html">Sb<sub>2</sub>O<sub>3</sub></a> | <a title="72" href="sb2o5.html">Sb<sub>2</sub>O<sub>5</sub></a> | <a title="73" href="sc2o3.html">Sc<sub>2</sub>O<sub>3</sub></a> | <a title="74" href="se.html">Se</a> | <a title="111" href="seo2.html">SeO<sub>2</sub></a> | <a title="76" href="sm2o3.html">Sm<sub>2</sub>O<sub>3</sub></a> | <a title="79" href="ta2o5.html">Ta<sub>2</sub>O<sub>5</sub></a> | <a title="80" href="tb2o3.html">Tb<sub>2</sub>O<sub>3</sub></a> | <a title="81" href="tc2o7.html">Tc<sub>2</sub>O7</a> | <a title="82" href="tho2.html">ThO<sub>2</sub></a> | <a title="84" href="tl2o.html">Tl<sub>2</sub>O</a> | <a title="85" href="tm2o3.html">Tm<sub>2</sub>O<sub>3</sub></a> | <a title="86" href="trace.html">Trace</a> | <a title="87" href="u3o8.html">U<sub>3</sub>O8</a> | <a title="88" href="uo2.html">UO<sub>2</sub></a> | <a title="90" href="wo3.html">WO<sub>3</sub></a> | <a title="91" href="y2o3.html">Y<sub>2</sub>O<sub>3</sub></a> | <a title="92" href="yb2o3.html">Yb<sub>2</sub>O<sub>3</sub></a>
+   </div>
+  </div>
+ </div>
+</div><p style="clear:left"></p><p style="clear:left"></p><p style="clear:left"></p><p style="clear:left"></p><p style="clear:left"></p><p style="clear:left"></p><p style="clear:left"></p><p style="clear:left"></p><h1>CuO (Cupric Oxide)</h1>
+<h3>Data</h3><table>
+<table class="table table-bordered"><tbody>
+<tr>
+<th scope="row"><a href="../test/14.html">Frit Softening Point</a></th>
+<td>1336C (From The Oxide Handbook)</td>
+</tr>
+</tbody></table>
+<h4>Notes</h4><p>-Copper can be produced from many different raw materials, the main being black tenorite (<a  href="cuo.html">CuO</a>), deep red cuprite (<a  href="cu2o.html">Cu<sub>2</sub>O</a>), bright green malachite (CuCO<sub>3</sub>.Cu(OH)2), and bright blue azurite (2CuCO<sub>3</sub>.Cu(OH)2).<br />
+<br />
+-Under normal oxidizing conditions the CuO molecule remains unchanged and produces clear green colors in oxidation glazes. The shade of copper greens can vary with firing rate and soaking changes. The best colors are generally obtained with fast firing and little soaking. <a  href="cao.html">CaO</a> is unlikely to affect the color of copper in a glaze.<br />
+<br />
+-Copper is well-known for its ability to produce blood-red and <a  href="../material/315.html">fire-red</a> colors in reduction atmosphere firings where it is altered to Cu<sub>2</sub>O (see Cu<sub>2</sub>O). Purple copper reduction glazes are the result of a mixture of copper in its green oxidized and red reduced forms. This effect appears most frequently in high lime glazes or where early stages of firing are oxidizing or latter stages are light or neutral.<br />
+<br />
+-Copper is a strong <a  href="../glossary/flux.html">flux</a> and even 2% can considerably increase the <a  href="../glossary/melt+fluidity.html">melt fluidity</a> of a glaze.<br />
+<br />
+-Generally additions of copper to a glaze will reduce its <a  href="../glossary/co-efficient+of+thermal+expansion.html">thermal expansion</a>. That means that the base clear might <a  href="../trouble/glaze+crazing.html">craze</a>, yet the version with significant copper added will not.<br />
+<br />
+-Crystalline glazes can be attractive when done with copper.<br />
+<br />
+-Copper and <a  href="../material/1644.html">titanium</a> can produce beautiful blotching and specking effects.<br />
+<br />
+-Pure copper metal filings can make an extremely potent specking material (and contaminant, depending on your viewpoint) in <a  href="../glossary/reduction+firing.html">reduction firing</a> for both bodies and glazes.<br />
+<br />
+-Leaching: When added to low lead solubility glazes copper can cause the solubility of the lead to be greatly increased. Copper is well known for this effect in glazes at other temperatures also. Do a <a  href="../glossary/leaching.html">leaching</a> test to be sure.<br />
+<br />
+-In the enameling industry, copper is used in combination with small quantities of cobalt, manganese, or nickel in making black where the black is produced in the smelter.</p>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">The same copper red glaze on the inside and outside of a vase</h3>
+<br /><a href="../picture/634.html"><img class="flexleft50" loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/guvvukanyj.jpg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/634.html">click here</a> to see it.</p>
+<p>The <a  href="../glossary/copper+red.html">Copper Red</a> effect shows the importance of correct firing to achieve a specific effect with certain <a  href="../glossary/glaze+recipes.html">glaze recipes</a>. The inside of this vase was more heavily and consistently reduced, simply because it was isolated somewhat from the outside kiln atmosphere. The outside of the vase, by contrast, is grey (a product of periods of oxidation during the firing).</p>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">Copper oxide (2%) in an otherwise stable cone 6 oxidation glaze fluxes it</h3>
+<br /><a href="../picture/649.html"><img class="flexleft50" loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/tevsihehok.jpg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/649.html">click here</a> to see it.</p>
+<p></p>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">How do metal oxides compare in their degrees of melting?</h3>
+<br /><a alt="Metal oxides melting" href="../picture/790.html"><img class="flexleft50" alt="Metal oxides melting"  loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/kilnezojat.jpg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/790.html">click here</a> to see it.</p>
+<p>These <a  href="../glossary/metal+oxides.html">metal oxides</a> have been mixed with 50% Ferro <a  href="../material/351.html">frit 3134</a> and fired to <a  href="../glossary/cone+6.html">cone 6</a> oxidation. Chrome and <a  href="../material/1204.html">rutile</a> have not melted, copper and cobalt are extremely active melters, frothing and boiling. Cobalt and copper have crystallized during cooling. Manganese has formed an iridescent glass.</p>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">Copper can destabilize a glaze and make it soluble</h3>
+<br /><a href="../picture/885.html"><img class="flexleft50" loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/lokfawenuv.jpg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/885.html">click here</a> to see it.</p>
+<p>A closeup of a glossy <a  href="../glossary/cone+6.html">Cone 6</a> glaze having 4% added <a  href="../material/236.html">copper carbonate</a>. The bottom section has <a  href="../glossary/leaching.html">leached</a> in lemon juice after 24 hours. This photo has been adjusted to spread the color gamut to highlight the difference. The leached section is now matte.</p>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">Copper carbonate powder</h3>
+<br /><a href="../picture/1106.html"><img class="flexleft50" loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/oxides/ciptocytan.jpg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/1106.html">click here</a> to see it.</p>
+<p></p>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">Ceramic Oxide Periodic Table</h3>
+<a href="../picture/1257.html"><img class="flexleft50" alt="Periodic table of ceramic oxides"  src="../4sight/images/pictures/er5fytcakh.svg" /></a>
+<p>Pretty well all common traditional ceramic <a  href="../glossary/base+glaze.html">base glazes</a> are made from less than a dozen elements (plus oxygen). Go to the full picture of this table and click or tap each of the <a  href="../glossary/ceramic+oxide.html">oxides</a> to learn more (on its page at <a  href="../glossary/digitalfire+reference+library.html">digitalfire</a>.com). When materials melt, they <a  href="../glossary/decomposition.html">decompose</a>, sourcing these elements in oxide form. The kiln builds the glaze from them, it does not care what material sources what oxide (assuming, of course, that all materials do melt or dissolve completely into <a  href="../glossary/melt+fluidity.html">the melt</a> to release those oxides). Each of these oxides contributes specific properties to the glass. So, you can look at a formula and make a good prediction of the properties of the fired glaze. And know what specific oxide to increase or decrease to move a property in a given direction (e.g. melting behavior, hardness, <a  href="../glossary/glaze+durability.html">durability</a>, <a  href="../glossary/co-efficient+of+thermal+expansion.html">thermal expansion</a>, color, gloss, <a  href="../glossary/crystallization.html">crystallization</a>). And know about how they interact (affecting each other). This is powerful. A lot of ceramic materials are available, hundreds - that is complicated when individual materials source multiple oxides. Viewing a glaze as a simple <a  href="../glossary/unity+formula.html">unity formula</a> of ceramic oxides is just simpler.</p>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">Copper does not necessarily cause glazes to leach if used in moderate amounts</h3>
+<br /><a href="../picture/1671.html"><img class="flexleft50" loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/birsusumyh.jpg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/1671.html">click here</a> to see it.</p>
+<p>These are four <a  href="../glossary/cone+6.html">cone 6</a> glazes of diverse <a  href="../glossary/glaze+chemistry.html">chemistry</a>. They have varying melt fluidities. They are soaked (halfway up) in lemon juice overnight. None show any evidence of surface changes. All contain 2% <a  href="../material/236.html">copper carbonate</a>. If the copper was increased, especially to the point of going metallic or crystallizing, the <a  href="../glossary/leaching.html">leaching</a> test would produce different results (especially on the ones that are running, they lack <a  href="sio2.html">SiO<sub>2</sub></a> and <a  href="al2o3.html">Al<sub>2</sub>O<sub>3</sub></a>). So, if you use copper sensibly (in moderate amounts), there is a good chance of making a glaze that resists leaching.</p>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">Copper fluxes a matte glaze at cone 6</h3>
+<br /><a href="../picture/2372.html"><img class="flexleft50" loading="lazy" src="https://s3-us-west-2.amazonaws.com/reference/images/pictures/ylqtgtppvs.jpeg" /></a><p style="margin-top:0px; padding-top:0px; font-style:italic; color:#888888; font-size:90%;">This picture has its own page with more detail, <a href="../picture/2372.html">click here</a> to see it.</p>
+<p>4% <a  href="../material/236.html">copper carbonate</a> and 6% <a  href="../material/1204.html">rutile</a> have been added to <a  href="../recipe/g2934.html">G2934</a> <a  href="../glossary/cone+6.html">cone 6</a> matte base. Using a green stain should prevent this. Or some <a  href="b2o3.html">B<sub>2</sub>O<sub>3</sub></a> could be substituted with <a  href="sio2.html">SiO<sub>2</sub></a> (via <a  href="../glossary/glaze+chemistry.html">glaze chemistry</a>).<br />
+</p>
+<p style="clear:left"></p>
+<h3>Links</h3><table>
+<table class="table table-bordered"><tbody>
+<tr>
+<td scope="row">Materials</td>
+<td>
+<a href="../material/copper+oxide+black.html">Copper Oxide Black</a>
+<br /><i>The purest source of <a  href="cuo.html">CuO</a> <a  href="../material/237.html">copper oxide</a> pigment used in ceramic glazes.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Materials</td>
+<td>
+<a href="../material/copper+oxide+red.html">Copper Oxide Red</a>
+<br /><i></i>
+</td>
+</tr>
+<tr>
+<td scope="row">Materials</td>
+<td>
+<a href="../material/stain.html">Stain</a>
+<br /><i></i>
+</td>
+</tr>
+<tr>
+<td scope="row">Materials</td>
+<td>
+<a href="../material/copper+carbonate.html">Copper Carbonate</a>
+<br /><i>A source of <a  href="cuo.html">CuO</a> <a  href="../material/237.html">copper oxide</a> used in ceramic glazes to produce a variety of colors (used only or with other <a  href="../glossary/colorant.html">colorants</a>).</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Materials</td>
+<td>
+<a href="../material/copper+carbonate+basic.html">Copper Carbonate Basic</a>
+<br /><i>This form of <a  href="../material/236.html">copper carbonate</a> is the article of commerce, a mixture of theoretical copper carbonate and copper hydroxide.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Oxides</td>
+<td>
+<a href="cu2o.html">Cu2O - Cuprous Oxide</a>
+</td>
+</tr>
+<tr>
+<td scope="row">Tests</td>
+<td>
+<a href="../test/glle.html">Glaze Leaching Test</a>
+<br /><i>Simple tests to evaluate the stability of a ceramic or pottery glaze against <a  href="../glossary/leaching.html">leaching</a> metals in food or drink.</i>
+</td>
+</tr>
+</tbody></table>
+<h3>Mechanisms</h3><table>
+<table class="table table-bordered"><tbody>
+<tr><th scope="row">Glaze Color</th><td>7% copper in glossy oxidation glazes can produce striking metallic green colors.</td></tr>
+<tr><th scope="row">Glaze Color</th><td>Under normal oxidizing conditions CuO produces clear green colors in most glazes. The shade of green depends not only on the amount but also on other oxides present (i.e. lead in larger amounts will enhance and darken the green, the presence of alkalies or high boron will shift it toward blue).
+Copper in calcium/magnesium glazes gives a green very different from that produced with lead.</td></tr>
+<tr><th scope="row">Glaze Color</th><td>Combinations of CuO with tin or zircon will give turquoise or blue-greens when the glaze is alkaline (KNaO) and low alumina. Look for a frit with this profile for best results. Glazes of this type often craze.</td></tr>
+<tr><th scope="row">Glaze Color</th><td>K2O can turn a copper glaze yellowish. If Na2O or PbO are present, K2O should not exceed 0.15 equivalent.</td></tr>
+<tr><th scope="row">Glaze Color</th><td>Copper in a barium/zinc/sodium glaze gives a blue. Color can also be enhanced by
+lithia.
+Tin and copper can produce turquoise to robin's egg blue.</td></tr>
+</tbody></table><table style="margin:30px 0px 30px 0px;"><tr><td style="vertical-align:middle; text-align:center; font-size:80%;"><img src="../images/PayPalDonate.png" style="height:66px; padding-right:20px;"><br /><a href="https://www.paypal.com/donate/?hosted_button_id=F8L3JX4BCCXJ6">PayPal</a></td><td style="background-color:#ddffdd; padding:10px; border:thin solid grey; font-size:90%;"><b>No</b> tracking, <b>No</b> ads, <b>No</b> paywall, <b>No</b> transient content!<br />Just organized, concise information constantly updated and improved.<br />Was this helpful? Consider supporting me.</td><tr></table><table style="margin-top:30px; padding-top:10px; padding-bottom:20px; border-top:thin solid grey; border-bottom:thin solid grey;"><tr><td style="padding-right:10px">By <i>Tony Hansen</i><br /><span style="font-size:80%; color:#888888;">Follow me on<br /><a title="Threads" href="https://www.threads.net/@tonyatdigitalfire" target="_blank"><img src="../images/threads.jpg" style="width:20px;" border="0"></a> <a title="Facebook Insight-Live" href="https://www.facebook.com/insightlive" target="_blank"><img src="../images/facebook.jpg" style="width:20px;" border="0"></a> <a title="LinkedIn" href="https://www.linkedin.com/in/tonywhansen/" target="_blank"><img src="../images/linkedin.jpg" style="width:20px;" border="0"></a> <a title="Pinterest" href="https://www.pinterest.ca/tonywhansen" target="_blank"><img src="../images/pinterest.jpg" style="width:20px;" border="0"></a> <a title="Instagram" href="https://instagram.com/tonyatdigitalfire" target="_blank"><img src="../images/instagram.jpg" style="width:20px;" border="0"></a> <a title="Ko-Fi" href="https://ko-fi.com/tonyhansen#" target="_blank"><img src="../images/ko-fi.jpg" style="width:20px;" border="0"></a> <a title="Twitter" href="https://x.com/digitalfiretony" target="_blank"><img src="../images/twitter.jpg" style="width:20px;" border="0"></a></td><td><a href="https://tonyhansen.com/about"><img src="../images/SignaturePhotoSmall.jpg" height="80"></a></td></tr></table><h3>Got a Question?</h3><p style="margin-bottom:30px;"><a name="kofi">Buy me a coffee and we can talk</a> <a target="_blank" href="https://ko-fi.com/tonyhansen"><img style="width:40px" src="../images/ko-fi.svg"></a></p><p style="margin-bottom:30px;">&nbsp;</p>
+<p></p><p></p><hr>
+<img style="width:250px" src="../4sight/images/ReferenceLibrary.svg">
+<br />
+<a href="../index.html">https://digitalfire.com</a>, All Rights Reserved
+<br /><a href="../w3c/privacypolicy.php.html">Privacy Policy</a>
+</div>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+</body>
+</html>

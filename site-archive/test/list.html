@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="../favicon.svg">
+<link rel="mask-icon" href="../mask-icon.svg" color="#000000">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<title>Lab tests for traditional ceramic bodies, glazes, processes</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<meta name="author" content="Tony Hansen">
+<meta name="description" content="Having a set of practical tests and specifications at hand and a way to execute them consistently is a key to controlling your ceramic process">
+<style>
+.flexinline { width: 50%; height: auto; clear:left; margin: 10px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexinline { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexright50 { width: 50%; height: auto; float: right; margin: 5px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexright50 { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexright33 { width: 33%; height: auto; float: right; margin: 5px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexright33 { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexright25 { width: 25%; height: auto; float: right; margin: 5px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexright25 { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexleft50 { width: 50%; height: auto; float: left; margin: 5px 15px 10px 0px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexleft50 { width: 100%; height: auto; margin: 5px 10px 10px 0px; border: none; padding: none; } }
+.flexleft33 { width: 33%; height: auto; float: left; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexleft33 { width: 100%; height: auto; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; } }
+.flexleft25 { width: 25%; height: auto; float: left; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexleft25 { width: 100%; height: auto; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; } }
+.pictureseries { overflow:scroll; width:auto; height:200px; float:left; margin: 5px 10px 10px 0px; padding: 5px; font-size:60%; font-style:italic;}
+@media (max-width: 640px) { .pictureseries { overflow:scroll; width:auto; height:200px; float:left; margin: 5px 10px 10px 0px; border: padding: 5px; font-size:60%; font-style:italic;} }
+.L2 { margin-left:0px; }
+.L3 { margin-left:20px; color:#222222; }
+.L4 { margin-left:40px; color:#444444; }
+.L5 { margin-left:60px; color:#666666; }
+.L6 { margin-left:60px; color:#888888; }
+h2 { color:#222222; }
+h3 { color:#444444; }
+h4 { color:#666666; }
+h5 { color:#888888; }
+
+</style>
+
+<meta name="google-site-verification" content="wquYW_n-3QEfIzDfV--8ElUewf7TIt04RGo55GfZySU" />
+<meta name="have-i-been-pwned-verification" value="9223dcee7de5c9622c2a2abcff4adc81">
+<script>
+function validateForm() {
+	var x = document.forms["emailform1"]["name1"].value;
+	var r = true;
+	if (x == "") { // alert("A name is required."); 
+		document.getElementById("name1").textContent="Name Required";
+		document.getElementById("name1").style.color="red";
+		// document.emailform1.name1.focus() ; # does not work, should be getelementbyid
+		r = false; 
+	} else {
+		document.getElementById("name1").textContent="Name";
+		document.getElementById("name1").style.color="black";
+	}
+	if (document.forms["emailform1"]["subject1"].value == "") { 
+		document.getElementById("subject1").textContent="Subject Required";
+		document.getElementById("subject1").style.color="red";
+		r = false; 
+	} else {
+		document.getElementById("subject1").textContent="Subject";
+		document.getElementById("subject1").style.color="black";
+	}			
+	if (document.forms["emailform1"]["msg1"].value == "") { 
+		document.getElementById("msg1").textContent="Message Required";
+		document.getElementById("msg1").style.color="red";
+		// alert("A message is required."); 
+		r = false; 
+	} else {
+		document.getElementById("msg1").textContent="Message";
+		document.getElementById("msg1").style.color="black";
+	}
+	var emailID = document.emailform1.email1.value;
+	atpos = emailID.indexOf("@");
+	dotpos = emailID.lastIndexOf(".");
+	if (atpos < 1 || ( dotpos - atpos < 2 )) {
+		document.getElementById("email1").textContent="Email Address Appears Invalid!";
+		document.getElementById("email1").style.color="red";
+		// alert("Your email address appears invalid.")
+		r = false;
+	} else {
+		document.getElementById("email1").textContent="Email Address";
+		document.getElementById("email1").style.color="black";
+	}
+	// Send the form
+	if (r == false) return false;
+	document.forms["emailform1"].submit();
+}
+</script>
+</head>
+<body>
+<p style="background-color:#ff9933; border-width:1px; padding:3px 10px 3px 10px; margin:0px 0px 3px 0px; font-size:80%; text-align:center;">
+Digitalfire will shut down on June 26. I no longer have the authority to grant exemption to a section in the Terms and Conditions of using material in the Insight-Live account from which I built the source material. While there are ways to comply with the take-down order, they are beyond my means because of how complex and large the site has become in the past 35+ years. It has been a wild ride for a shy prairie boy, thanks to everyone for your support. Insight-live.com is not affected by this.</p>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<a name="pagetop" class="navbar-brand" href="../home.html"><img src="../4sight/images/ReferenceLibrary.svg" height="40" alt=""></a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item"><a class="nav-link" href="../home.html">Home</a></li>
+			<li class="nav-item"><a class="nav-link" href="../oxide/list.html">Oxides</a></li>
+			<li class="nav-item"><a class="nav-link" href="../material/list.html">Materials</a></li>
+			<li class="nav-item"><a class="nav-link" href="../recipe/list.html">Recipes</a></li>
+			<li class="nav-item"><a class="nav-link" href="../glossary/list.html">Glossary</a></li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="list.html#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Others</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" href="../article/list.html">Articles</a>
+					<a class="dropdown-item" href="../hazard/list.html">Hazards</a>
+					<a class="dropdown-item" href="../mineral/list.html">Minerals</a>
+					<a class="dropdown-item" href="../property/list.html">Properties</a>
+					<a class="dropdown-item" href="../schedule/list.html">Firing Schedules</a>
+					<a class="dropdown-item" href="../temperature/list.html">Temperatures</a>
+					<a class="dropdown-item" href="../trouble/list.html">Troubles</a>
+					<a class="dropdown-item active" href="list.html">Tests</a>
+					<a class="dropdown-item" href="../video/list.html">Media</a>
+					<a class="dropdown-item" href="../picture/list.html">Pictures</a>
+					<a class="dropdown-item" href="../typecode/list.html">Typecodes</a>
+					<a class="dropdown-item" href="../project/list.html">Projects</a>
+					<a class="dropdown-item" href="../consultants/list.html">Consultants</a>
+					<a class="dropdown-item" href="../schools/list.html">Schools</a>
+					<a class="dropdown-item" href="../stores/list.html">Stores</a>
+					<a class="dropdown-item" href="../potterytony/list.html">Don't Buy-A-Mug</a>
+					<div class="dropdown-divider"></div>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="../index.html">https://digitalfire.com</a>
+					<a class="dropdown-item" href="https://insight-live.com">Insight-Live.com</a>
+					<a class="dropdown-item" href="../index.html">Sign-Up</a>
+				</div>
+			</li>
+		</ul>
+		<form class="form-inline my-2 my-lg-0" action="https://digitalfire.com/index.php?searcharea=test" accept-charset="UTF-8" method="post">
+		<input name="searchfor" title="Search from home to search in all areas" maxlength="20" class="form-control mr-sm-2" aria-label="Search" placeholder="Search" autocorrect="off" autocapitalize="off" type="search" value=""><button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="searchbutton">Search</button>
+		</form>
+	</div>
+</nav>
+<div class="container"><h1>Test Procedures for Traditional Ceramics</h1>
+<p><a title="94 - +44 and +63 Micron Residue" href="44mr.html">44MR</a> - +44 and +63 Micron Residue<br /><a title="38 - Apparent Porosity" href="appo.html">APPO</a> - Apparent Porosity<br /><a title="85 - Average Particle Size (Microns)" href="avps.html">AVPS</a> - Average Particle Size (Microns)<br /><a title="42 - Apparent Viscosity (cps)" href="avsc.html">AVSC</a> - Apparent Viscosity (cps)<br /><a title="36 - Bulk Density g/cc (Packed)" href="bdgc.html">BDGC</a> - Bulk Density g/cc (Packed)<br /><a title="23 - Bulk Density lbs/cu. ft. (Packed)" href="bdlb.html">BDLB</a> - Bulk Density lbs/cu. ft. (Packed)<br /><a title="73 - Borate LOI" href="bloi.html">BLOI</a> - Borate LOI<br /><a title="89 - Boiling Water:Ice Water Glaze Fit Test" href="bwiw.html">BWIW</a> - Boiling Water:Ice Water Glaze Fit Test<br /><a title="90 - Carbon content" href="ccon.html">CCON</a> - Carbon content<br /><a title="62 - Drying Factor/Water Content/Solubles" href="cdry.html">CDRY</a> - Drying Factor/Water Content/Solubles<br /><a title="25 - CEC (meq/100g)" href="cec.html">CEC</a> - CEC (meq/100g)<br /><a title="47 - Clay Water Content - Powder, Plastic" href="clwc.html">CLWC</a> - Clay Water Content - Powder, Plastic<br /><a title="99 - Compressive Strength" href="cmst.html">CMST</a> - Compressive Strength<br /><a title="10 - Co-efficient of Linear Expansion" href="cole.html">COLE</a> - Co-efficient of Linear Expansion<br /><a title="64 - Cold Over Boiled Porosity" href="covb.html">COVB</a> - Cold Over Boiled Porosity<br /><a title="63 - Clay, Silt, Sand Sedimentation Test" href="csss.html">CSSS</a> - Clay, Silt, Sand Sedimentation Test<br /><a title="1 - Density (Specific Gravity)" href="dens.html">DENS</a> - Density (Specific Gravity)<br /><a title="46 - Drying Factor" href="dfac.html">DFAC</a> - Drying Factor<br /><a title="77 - Deflocculation Demand" href="dfdm.html">DFDM</a> - Deflocculation Demand<br /><a title="105 - Dielectric Strength" href="diel.html">DIEL</a> - Dielectric Strength<br /><a title="8 - Density, loose packed (lbs/cu fut)" href="dnlp.html">DNLP</a> - Density, loose packed (lbs/cu fut)<br /><a title="19 - Dry Strength (kgf/cm2)" href="ds.html">DS</a> - Dry Strength (kgf/cm2)<br /><a title="51 - Drying Shrinkage" href="dshr.html">DSHR</a> - Drying Shrinkage<br /><a title="59 - Dry Strenth (Round Bars)" href="dsrn.html">DSRN</a> - Dry Strenth (Round Bars)<br /><a title="60 - Dry Strength (Square Bars)" href="dstr.html">DSTR</a> - Dry Strength (Square Bars)<br /><a title="13 - Decomposition Temperature" href="dtmp.html">DTMP</a> - Decomposition Temperature<br /><a title="112 - Engobe Body Compatibility Test" href="ebct.html">EBCT</a> - Engobe Body Compatibility Test<br /><a title="97 - Elastic Modulus, 20 degrees C" href="em20.html">EM20</a> - Elastic Modulus, 20 degrees C<br /><a title="96 - Frit Fusibility Test" href="frfu.html">FRFU</a> - Frit Fusibility Test<br /><a title="65 - Fired Strength Round Bars" href="frrd.html">FRRD</a> - Fired Strength Round Bars<br /><a title="102 - Fracture Toughness" href="https://digitalfire.com/test/frtg">FRTG</a> - Fracture Toughness<br /><a title="21 - Firing Shrinkage" href="fshr.html">FSHR</a> - Firing Shrinkage<br /><a title="66 - Fired Strength Square Bars" href="fstr.html">FSTR</a> - Fired Strength Square Bars<br /><a title="113 - Glaze Body Bond Test" href="gbbt.html">GBBT</a> - Glaze Body Bond Test<br /><a title="110 - Glaze Melt Fluidity - Ball Test" href="gbmf.html">GBMF</a> - Glaze Melt Fluidity - Ball Test<br /><a title="27 - GE Brightness" href="gebr.html">GEBR</a> - GE Brightness<br /><a title="68 - Glaze Observations" href="glaz.html">GLAZ</a> - Glaze Observations<br /><a title="58 - Glaze Melt Flow - Runway Test" href="glfl.html">GLFL</a> - Glaze Melt Flow - Runway Test<br /><a title="69 - Glaze Hardness" href="glhd.html">GLHD</a> - Glaze Hardness<br /><a title="70 - Glaze Leaching Test" href="glle.html">GLLE</a> - Glaze Leaching Test<br /><a title="14 - Frit Softening Point" href="gspt.html">GSPT</a> - Frit Softening Point<br /><a title="92 - Glass Transition Temperature" href="gttm.html">GTTM</a> - Glass Transition Temperature<br /><a title="100 - Hardness (Microindentation) Test" href="hdmi.html">HDMI</a> - Hardness (Microindentation) Test<br /><a title="28 - Hegman Fineness" href="hegf.html">HEGF</a> - Hegman Fineness<br /><a title="91 - Heating Microscope Analysis for Frits" href="hma.html">HMA</a> - Heating Microscope Analysis for Frits<br /><a title="95 - Heating Microscope Analysis" href="hman.html">HMAN</a> - Heating Microscope Analysis<br /><a title="7 - Hardness (Moh)" href="hmoh.html">HMOH</a> - Hardness (Moh)<br /><a title="88 - I.F.P. (celsius)" href="ifp.html">IFP</a> - I.F.P. (celsius)<br /><a title="108 - 300F:Ice Water Crazing Test" href="iwct.html">IWCT</a> - 300F:Ice Water Crazing Test<br /><a title="79 - % < 10 microns" href="l10m.html">L10M</a> - % < 10 microns<br /><a title="81 - % < 1 micron" href="l1m.html">L1M</a> - % < 1 micron<br /><a title="78 - % < 20 microns" href="l20m.html">L20M</a> - % < 20 microns<br /><a title="80 - % < 2 microns" href="l2m.html">L2M</a> - % < 2 microns<br /><a title="93 - % < 30 microns" href="l30m.html">L30M</a> - % < 30 microns<br /><a title="17 - % < 5 microns" href="l5.html">L5</a> - % < 5 microns<br /><a title="18 - % < 0.5 microns" href="l5m.html">L5M</a> - % < 0.5 microns<br /><a title="49 - LOI/Density/Water Content" href="ldw.html">LDW</a> - LOI/Density/Water Content<br /><a title="15 - LOI (100-1000C)" href="loi.html">LOI</a> - LOI (100-1000C)<br /><a title="30 - Liquid Limit" href="lqlm.html">LQLM</a> - Liquid Limit<br /><a title="76 - Median Particle Size (Microns)" href="mdps.html">MDPS</a> - Median Particle Size (Microns)<br /><a title="57 - Frit Melting Range (C)" href="mlrg.html">MLRG</a> - Frit Melting Range (C)<br /><a title="75 - Moisture Content - Powder" href="moip.html">MOIP</a> - Moisture Content - Powder<br /><a title="61 - Modulus of Rupture - Fired" href="mor.html">MOR</a> - Modulus of Rupture - Fired<br /><a title="74 - Dry M.O.R. (50% Silica)" href="mor5.html">MOR5</a> - Dry M.O.R. (50% Silica)<br /><a title="12 - Modulus of Rupture - Dry" href="mord.html">MORD</a> - Modulus of Rupture - Dry<br /><a title="5 - Oil Adsorption (Spatula)" href="olad.html">OLAD</a> - Oil Adsorption (Spatula)<br /><a title="107 - % Passing 200 Mesh Wet" href="p200.html">P200</a> - % Passing 200 Mesh Wet<br /><a title="32 - % Passing 325 Mesh Wet" href="p325.html">P325</a> - % Passing 325 Mesh Wet<br /><a title="71 - Pugged Body Properties Overview" href="pbpo.html">PBPO</a> - Pugged Body Properties Overview<br /><a title="11 - Pyrometric Cone Equivalent" href="pce.html">PCE</a> - Pyrometric Cone Equivalent<br /><a title="4 - pH (pugged clay)" href="phpg.html">pHPG</a> - pH (pugged clay)<br /><a title="87 - pH for dry powder" href="phpw.html">pHPW</a> - pH for dry powder<br /><a title="72 - Pyroplastic Deformation" href="ppd.html">PPD</a> - Pyroplastic Deformation<br /><a title="98 - Poisson's Ratio" href="prsm.html">PRSM</a> - Poisson's Ratio<br /><a title="6 - Particle Shape (1-7 microns)" href="pshp.html">PSHP</a> - Particle Shape (1-7 microns)<br /><a title="37 - Reheat Change" href="rc.html">RC</a> - Reheat Change<br /><a title="34 - Rheology of a Ceramic Slurry" href="rheo.html">RHEO</a> - Rheology of a Ceramic Slurry<br /><a title="9 - Sieve Analysis Dry" href="sadr.html">SADR</a> - Sieve Analysis Dry<br /><a title="16 - Surface Area (m2/gm)" href="samg.html">SAMG</a> - Surface Area (m2/gm)<br /><a title="84 - Simple Clay Evaluation" href="scle.html">SCLE</a> - Simple Clay Evaluation<br /><a title="41 - Shrinkage/Absorption Test" href="shab.html">SHAB</a> - Shrinkage/Absorption Test<br /><a title="48 - Sieve Analysis 35-325 Wet" href="siev.html">SIEV</a> - Sieve Analysis 35-325 Wet<br /><a title="35 - Solubility" href="slby.html">SLBY</a> - Solubility<br /><a title="45 - Soluble Salts" href="solu.html">SOLU</a> - Soluble Salts<br /><a title="104 - Specific Heat Capacity" href="sphc.html">SPHC</a> - Specific Heat Capacity<br /><a title="83 - Simple Shrinkage/Absorption" href="ssab.html">SSAB</a> - Simple Shrinkage/Absorption<br /><a title="24 - Sieve Analysis Wet" href="svwt.html">SVWT</a> - Sieve Analysis Wet<br /><a title="82 - TGA" href="tga.html">TGA</a> - TGA<br /><a title="103 - Thermal Conductivity, 20 degrees C" href="thco.html">THCO</a> - Thermal Conductivity, 20 degrees C<br /><a title="101 - Tensile Strength, 25 degrees C" href="tnst.html">TNST</a> - Tensile Strength, 25 degrees C<br /><a title="26 - Trace Elements (ppm)" href="trel.html">TREL</a> - Trace Elements (ppm)<br /><a title="33 - Trace Minerals" href="trmn.html">TRMN</a> - Trace Minerals<br /><a title="111 - Thermal Shock Failure" href="tsfl.html">TSFL</a> - Thermal Shock Failure<br /><a title="40 - Ultimate Particle Size Distribution" href="upsd.html">UPSD</a> - Ultimate Particle Size Distribution<br /><a title="20 - Water absorption" href="wabs.html">WABS</a> - Water absorption<br /><a title="43 - Water of Plasticity" href="wopl.html">WOPL</a> - Water of Plasticity<br /><a title="50 - Whole Rock Analysis" href="wra.html">WRA</a> - Whole Rock Analysis<br /><a title="86 - Wet Sieve Residue" href="wsr.html">WSR</a> - Wet Sieve Residue<br /><a title="3 - Index of Refraction" href="xref.html">XREF</a> - Index of Refraction</p><h3>Got a Question?</h3><p style="margin-bottom:30px;"><a name="kofi">Buy me a coffee and we can talk</a> <a target="_blank" href="https://ko-fi.com/tonyhansen"><img style="width:40px" src="../images/ko-fi.svg"></a></p><p style="margin-bottom:30px;">&nbsp;</p>
+<p></p><p></p><hr>
+<img style="width:250px" src="../4sight/images/ReferenceLibrary.svg">
+<br />
+<a href="../index.html">https://digitalfire.com</a>, All Rights Reserved
+<br /><a href="../w3c/privacypolicy.php.html">Privacy Policy</a>
+</div>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+</body>
+</html>

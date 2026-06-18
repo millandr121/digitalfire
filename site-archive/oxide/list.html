@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="../favicon.svg">
+<link rel="mask-icon" href="../mask-icon.svg" color="#000000">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<title>Ceramic Oxides</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<meta name="author" content="Tony Hansen">
+<meta name="description" content="Digitalfire Reference Library, Oxides section: Understanding the connection between oxides and the fired properties of ceramic glazes is the first step to effective use of ceramic chemistry.">
+<style>
+.flexinline { width: 50%; height: auto; clear:left; margin: 10px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexinline { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexright50 { width: 50%; height: auto; float: right; margin: 5px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexright50 { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexright33 { width: 33%; height: auto; float: right; margin: 5px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexright33 { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexright25 { width: 25%; height: auto; float: right; margin: 5px 0px 10px 10px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexright25 { width: 100%; height: auto; margin: 10px 10px 10px 10px; border: thin solid #dddddd; padding: 5px; } }
+.flexleft50 { width: 50%; height: auto; float: left; margin: 5px 15px 10px 0px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexleft50 { width: 100%; height: auto; margin: 5px 10px 10px 0px; border: none; padding: none; } }
+.flexleft33 { width: 33%; height: auto; float: left; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexleft33 { width: 100%; height: auto; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; } }
+.flexleft25 { width: 25%; height: auto; float: left; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; }
+@media (max-width: 640px) { .flexleft25 { width: 100%; height: auto; margin: 5px 10px 10px 0px; border: thin solid #dddddd; padding: 5px; } }
+.pictureseries { overflow:scroll; width:auto; height:200px; float:left; margin: 5px 10px 10px 0px; padding: 5px; font-size:60%; font-style:italic;}
+@media (max-width: 640px) { .pictureseries { overflow:scroll; width:auto; height:200px; float:left; margin: 5px 10px 10px 0px; border: padding: 5px; font-size:60%; font-style:italic;} }
+.L2 { margin-left:0px; }
+.L3 { margin-left:20px; color:#222222; }
+.L4 { margin-left:40px; color:#444444; }
+.L5 { margin-left:60px; color:#666666; }
+.L6 { margin-left:60px; color:#888888; }
+h2 { color:#222222; }
+h3 { color:#444444; }
+h4 { color:#666666; }
+h5 { color:#888888; }
+
+</style>
+
+<meta name="google-site-verification" content="wquYW_n-3QEfIzDfV--8ElUewf7TIt04RGo55GfZySU" />
+<meta name="have-i-been-pwned-verification" value="9223dcee7de5c9622c2a2abcff4adc81">
+<script>
+function validateForm() {
+	var x = document.forms["emailform1"]["name1"].value;
+	var r = true;
+	if (x == "") { // alert("A name is required."); 
+		document.getElementById("name1").textContent="Name Required";
+		document.getElementById("name1").style.color="red";
+		// document.emailform1.name1.focus() ; # does not work, should be getelementbyid
+		r = false; 
+	} else {
+		document.getElementById("name1").textContent="Name";
+		document.getElementById("name1").style.color="black";
+	}
+	if (document.forms["emailform1"]["subject1"].value == "") { 
+		document.getElementById("subject1").textContent="Subject Required";
+		document.getElementById("subject1").style.color="red";
+		r = false; 
+	} else {
+		document.getElementById("subject1").textContent="Subject";
+		document.getElementById("subject1").style.color="black";
+	}			
+	if (document.forms["emailform1"]["msg1"].value == "") { 
+		document.getElementById("msg1").textContent="Message Required";
+		document.getElementById("msg1").style.color="red";
+		// alert("A message is required."); 
+		r = false; 
+	} else {
+		document.getElementById("msg1").textContent="Message";
+		document.getElementById("msg1").style.color="black";
+	}
+	var emailID = document.emailform1.email1.value;
+	atpos = emailID.indexOf("@");
+	dotpos = emailID.lastIndexOf(".");
+	if (atpos < 1 || ( dotpos - atpos < 2 )) {
+		document.getElementById("email1").textContent="Email Address Appears Invalid!";
+		document.getElementById("email1").style.color="red";
+		// alert("Your email address appears invalid.")
+		r = false;
+	} else {
+		document.getElementById("email1").textContent="Email Address";
+		document.getElementById("email1").style.color="black";
+	}
+	// Send the form
+	if (r == false) return false;
+	document.forms["emailform1"].submit();
+}
+</script>
+</head>
+<body>
+<p style="background-color:#ff9933; border-width:1px; padding:3px 10px 3px 10px; margin:0px 0px 3px 0px; font-size:80%; text-align:center;">
+Digitalfire will shut down on June 26. I no longer have the authority to grant exemption to a section in the Terms and Conditions of using material in the Insight-Live account from which I built the source material. While there are ways to comply with the take-down order, they are beyond my means because of how complex and large the site has become in the past 35+ years. It has been a wild ride for a shy prairie boy, thanks to everyone for your support. Insight-live.com is not affected by this.</p>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<a name="pagetop" class="navbar-brand" href="../home.html"><img src="../4sight/images/ReferenceLibrary.svg" height="40" alt=""></a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item"><a class="nav-link" href="../home.html">Home</a></li>
+			<li class="nav-item active"><a class="nav-link" href="list.html">Oxides <span class="sr-only">(current)</span></a></li>
+			<li class="nav-item"><a class="nav-link" href="../material/list.html">Materials</a></li>
+			<li class="nav-item"><a class="nav-link" href="../recipe/list.html">Recipes</a></li>
+			<li class="nav-item"><a class="nav-link" href="../glossary/list.html">Glossary</a></li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="list.html#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Others</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" href="../article/list.html">Articles</a>
+					<a class="dropdown-item" href="../hazard/list.html">Hazards</a>
+					<a class="dropdown-item" href="../mineral/list.html">Minerals</a>
+					<a class="dropdown-item" href="../property/list.html">Properties</a>
+					<a class="dropdown-item" href="../schedule/list.html">Firing Schedules</a>
+					<a class="dropdown-item" href="../temperature/list.html">Temperatures</a>
+					<a class="dropdown-item" href="../trouble/list.html">Troubles</a>
+					<a class="dropdown-item" href="../test/list.html">Tests</a>
+					<a class="dropdown-item" href="../video/list.html">Media</a>
+					<a class="dropdown-item" href="../picture/list.html">Pictures</a>
+					<a class="dropdown-item" href="../typecode/list.html">Typecodes</a>
+					<a class="dropdown-item" href="../project/list.html">Projects</a>
+					<a class="dropdown-item" href="../consultants/list.html">Consultants</a>
+					<a class="dropdown-item" href="../schools/list.html">Schools</a>
+					<a class="dropdown-item" href="../stores/list.html">Stores</a>
+					<a class="dropdown-item" href="../potterytony/list.html">Don't Buy-A-Mug</a>
+					<div class="dropdown-divider"></div>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="../index.html">https://digitalfire.com</a>
+					<a class="dropdown-item" href="https://insight-live.com">Insight-Live.com</a>
+					<a class="dropdown-item" href="../index.html">Sign-Up</a>
+				</div>
+			</li>
+		</ul>
+		<form class="form-inline my-2 my-lg-0" action="https://digitalfire.com/index.php?searcharea=oxide" accept-charset="UTF-8" method="post">
+		<input name="searchfor" title="Search from home to search in all areas" maxlength="20" class="form-control mr-sm-2" aria-label="Search" placeholder="Search" autocorrect="off" autocapitalize="off" type="search" value=""><button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="searchbutton">Search</button>
+		</form>
+	</div>
+</nav>
+<div class="container">
+<div style="margin:10px 0px 10px 0px;" class="accordion" id="accordionExample">
+ <div class="card">
+  <div class="card-header pl-0 py-0" id="heading1">
+   <h2 class="mb-0">
+    <button class="btn btn-link collapsed btn-lg" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">Common Ceramic Oxides</button>
+   </h2>
+  </div>
+  <div id="collapse1" class="collapse show" aria-labelledby="heading1" data-parent="#accordionExample">
+   <div class="card-body">
+<a title="3" href="al2o3.html">Al<sub>2</sub>O<sub>3</sub></a> | <a title="7" href="b2o3.html">B<sub>2</sub>O<sub>3</sub></a> | <a title="8" href="bao.html">BaO</a> | <a title="11" href="c.html">C</a> | <a title="13" href="cao.html">CaO</a> | <a title="12" href="co2.html">CO<sub>2</sub></a> | <a title="16" href="coo.html">CoO</a> | <a title="17" href="cr2o3.html">Cr<sub>2</sub>O<sub>3</sub></a> | <a title="19" href="cu2o.html">Cu<sub>2</sub>O</a> | <a title="20" href="cuo.html">CuO</a> | <a title="25" href="fe2o3.html">Fe<sub>2</sub>O<sub>3</sub></a> | <a title="26" href="feo.html">FeO</a> | <a title="32" href="h2o.html">H<sub>2</sub>O</a> | <a title="38" href="k2o.html">K<sub>2</sub>O</a> | <a title="42" href="li2o.html">Li<sub>2</sub>O</a> | <a title="40" href="loi.html">LOI</a> | <a title="44" href="mgo.html">MgO</a> | <a title="46" href="mno.html">MnO</a> | <a title="47" href="mno2.html">MnO<sub>2</sub></a> | <a title="50" href="na2o.html">Na<sub>2</sub>O</a> | <a title="53" href="nio.html">NiO</a> | <a title="54" href="o.html">O</a> | <a title="97" href="organics.html">Organics</a> | <a title="56" href="p2o5.html">P<sub>2</sub>O<sub>5</sub></a> | <a title="59" href="pbo.html">PbO</a> | <a title="75" href="sio2.html">SiO<sub>2</sub></a> | <a title="77" href="sno2.html">SnO<sub>2</sub></a> | <a title="70" href="so3.html">SO<sub>3</sub></a> | <a title="96" href="so4.html">SO<sub>4</sub></a> | <a title="78" href="sro.html">SrO</a> | <a title="83" href="tio2.html">TiO<sub>2</sub></a> | <a title="89" href="v2o5.html">V<sub>2</sub>O<sub>5</sub></a> | <a title="93" href="zno.html">ZnO</a> | <a title="94" href="zro.html">ZrO</a> | <a title="95" href="zro2.html">ZrO<sub>2</sub></a>
+   </div>
+  </div>
+ </div>
+ <div class="card">
+  <div class="card-header pl-0 py-0" id="heading2">
+   <h2 class="mb-0">
+    <button class="btn btn-link collapsed btn-lg" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">Uncommon Ceramic Oxides</button>
+   </h2>
+  </div>
+  <div id="collapse2" class="collapse" aria-labelledby="heading2" data-parent="#accordionExample">
+   <div class="card-body">
+<a title="102" href="ag2o.html">Ag<sub>2</sub>O</a> | <a title="104" href="alf3.html">AlF<sub>3</sub></a> | <a title="4" href="as2o3.html">As<sub>2</sub>O<sub>3</sub></a> | <a title="5" href="as4o6.html">As<sub>4</sub>O6</a> | <a title="6" href="au2o3.html">Au<sub>2</sub>O<sub>3</sub></a> | <a title="108" href="baf2.html">BaF<sub>2</sub></a> | <a title="9" href="beo.html">BeO</a> | <a title="10" href="bi2o3.html">Bi<sub>2</sub>O<sub>3</sub></a> | <a title="109" href="caf2.html">CaF<sub>2</sub></a> | <a title="14" href="cdo.html">CdO</a> | <a title="15" href="ceo2.html">CeO<sub>2</sub></a> | <a title="99" href="cl.html">Cl</a> | <a title="110" href="co.html">CO</a> | <a title="113" href="cro3.html">CrO<sub>3</sub></a> | <a title="18" href="cs2o.html">Cs<sub>2</sub>O</a> | <a title="101" href="cuco3.html">CuCO<sub>3</sub></a> | <a title="21" href="dy2o3.html">Dy<sub>2</sub>O<sub>3</sub></a> | <a title="22" href="er2o3.html">Er<sub>2</sub>O<sub>3</sub></a> | <a title="23" href="eu2o3.html">Eu<sub>2</sub>O<sub>3</sub></a> | <a title="24" href="f.html">F</a> | <a title="27" href="fr2o.html">Fr<sub>2</sub>O</a> | <a title="28" href="free&#32;sio2.html">Free SiO<sub>2</sub></a> | <a title="29" href="ga2o3.html">Ga<sub>2</sub>O<sub>3</sub></a> | <a title="30" href="https://digitalfire.com/oxide/gdo3">GdO<sub>3</sub></a> | <a title="31" href="geo2.html">GeO<sub>2</sub></a> | <a title="33" href="hfo2.html">HfO<sub>2</sub></a> | <a title="34" href="hgo.html">HgO</a> | <a title="35" href="ho2o3.html">Ho<sub>2</sub>O<sub>3</sub></a> | <a title="36" href="in2o3.html">In<sub>2</sub>O<sub>3</sub></a> | <a title="37" href="iro2.html">IrO<sub>2</sub></a> | <a title="107" href="kf.html">KF</a> | <a title="39" href="knao.html">KNaO</a> | <a title="41" href="la2o3.html">La<sub>2</sub>O<sub>3</sub></a> | <a title="43" href="lu2o3.html">Lu<sub>2</sub>O<sub>3</sub></a> | <a title="45" href="mn2o3.html">Mn<sub>2</sub>O<sub>3</sub></a> | <a title="48" href="moo3.html">MoO<sub>3</sub></a> | <a title="49" href="n2o5.html">N<sub>2</sub>O<sub>5</sub></a> | <a title="105" href="naf.html">NaF</a> | <a title="51" href="nb2o5.html">Nb<sub>2</sub>O<sub>5</sub></a> | <a title="52" href="nd2o3.html">Nd<sub>2</sub>O<sub>3</sub></a> | <a title="98" href="ni2o3.html">Ni<sub>2</sub>O<sub>3</sub></a> | <a title="55" href="oso2.html">OsO<sub>2</sub></a> | <a title="58" href="pa2o5.html">Pa<sub>2</sub>O<sub>5</sub></a> | <a title="106" href="pbf2.html">PbF<sub>2</sub></a> | <a title="60" href="pdo.html">PdO</a> | <a title="61" href="pmo3.html">PmO<sub>3</sub></a> | <a title="57" href="po4.html">PO<sub>4</sub></a> | <a title="62" href="pr2o3.html">Pr<sub>2</sub>O<sub>3</sub></a> | <a title="63" href="pro2.html">PrO<sub>2</sub></a> | <a title="64" href="pto2.html">PtO<sub>2</sub></a> | <a title="65" href="rao.html">RaO</a> | <a title="66" href="rb2o.html">Rb<sub>2</sub>O</a> | <a title="67" href="re2o7.html">Re<sub>2</sub>O7</a> | <a title="68" href="rho3.html">RhO<sub>3</sub></a> | <a title="69" href="ruo2.html">RuO<sub>2</sub></a> | <a title="71" href="sb2o3.html">Sb<sub>2</sub>O<sub>3</sub></a> | <a title="72" href="sb2o5.html">Sb<sub>2</sub>O<sub>5</sub></a> | <a title="73" href="sc2o3.html">Sc<sub>2</sub>O<sub>3</sub></a> | <a title="74" href="se.html">Se</a> | <a title="111" href="seo2.html">SeO<sub>2</sub></a> | <a title="76" href="sm2o3.html">Sm<sub>2</sub>O<sub>3</sub></a> | <a title="79" href="ta2o5.html">Ta<sub>2</sub>O<sub>5</sub></a> | <a title="80" href="tb2o3.html">Tb<sub>2</sub>O<sub>3</sub></a> | <a title="81" href="tc2o7.html">Tc<sub>2</sub>O7</a> | <a title="82" href="tho2.html">ThO<sub>2</sub></a> | <a title="84" href="tl2o.html">Tl<sub>2</sub>O</a> | <a title="85" href="tm2o3.html">Tm<sub>2</sub>O<sub>3</sub></a> | <a title="86" href="trace.html">Trace</a> | <a title="87" href="u3o8.html">U<sub>3</sub>O8</a> | <a title="88" href="uo2.html">UO<sub>2</sub></a> | <a title="90" href="wo3.html">WO<sub>3</sub></a> | <a title="91" href="y2o3.html">Y<sub>2</sub>O<sub>3</sub></a> | <a title="92" href="yb2o3.html">Yb<sub>2</sub>O<sub>3</sub></a>
+   </div>
+  </div>
+ </div>
+</div><p style="clear:left"></p>
+<h2>Introduction</h2>
+<p>Formulating and adjusting ceramic glazes can be approached on different levels: The pure oxide, the oxide in the presence of others with which to interact, the mineral, the material, the recipe and the process. To understand what you are doing you first separate the problem into aspects that relate to each of these levels. Working on the right level, or mix of levels, is the the key to understanding and solving many problems.<br />
+<br />
+Some <a  href="../glossary/ceramic+oxide.html">oxides</a> exist as physical powders we can add to a recipe, but oxides in the context of <a  href="../glossary/glaze+chemistry.html">glaze chemistry</a> is more of a theoretical concept. In this model a fired glaze matrix is viewed as a construct of interacting oxides and the properties it displays are rationalized in terms of the oxide proportions and what we know about what each contributes and how they interact. Materials are viewed as warehouses that supply these oxides to the glaze melt. Oxides within this model are not the same as those outside of it. For example, pure <a  href="cao.html">CaO</a> powder is among the most <a  href="../glossary/refractory.html">refractory</a> of all physical oxides. Yet within a glaze melt, in the presence of other oxides with which to interact, it really knows how to party: it is a very strong <a  href="../glossary/flux.html">flux</a>! Sometimes textbooks will provide data on the properties of individual oxides. For example, melting behaviour might be quoted as a reason for firing in a certain way. However, it is important to realize that oxides are "packaged" within materials that we use in <a  href="../glossary/ceramics.html">ceramics</a>, those materials are normally sourcing other oxides along with them. While an individual oxide might melt at a certain temperature, the individual particles of that material may not release the oxide to participate in the <a  href="../glossary/glaze+chemistry.html">chemistry</a> until a much higher temperature. Or, they might release it even lower. Additionally, interactions between it and particles of other materials will affect the manner of melting and dissolution.<br />
+<br />
+Oxide chemistry is not normally factored into understanding what bodies do when fired, it is difficult to draw relationships between the chemistry of <a  href="../glossary/vitreous.html">vitreous</a> bodies and their physical fired properties. This is because bodies are not melted during firing as are glazes, normally firing creates conditions of crystal growth in the body. Thus bodies of similar chemistry can develop completely different <a  href="../glossary/glass+vs.+crystalline.html">crystalline</a> matrixes and therefore different <a  href="../glossary/physical+testing.html">physical properties</a> (depending on firing and <a  href="../glossary/mineralogy.html">mineralogy</a> of ingredients).<br />
+<br />
+At the oxide level we study the relationships between the fired properties of glazes and their chemistry (assuming all oxides have gone into solution in <a  href="../glossary/melt+fluidity.html">the melt</a>). Understanding what each of the oxides is bringing to the chemistry is one of the most important aspects to controlling the fired properties of glazes (on this level there are complicating factors of <a  href="../glossary/oxide+interaction.html">oxide interaction</a>, issues relating to the sourcing of the same oxide from different materials, non-linear property changes with changes in proportion). <br />
+<br />
+Chemistry needs to be put in context with the other levels. For example, consider a glaze that is <a  href="../trouble/glaze+crazing.html">crazing</a>: If it contains a lot of <a  href="na2o.html">Na<sub>2</sub>O</a>, then it has a high <a  href="../glossary/co-efficient+of+thermal+expansion.html">thermal expansion</a>, that is almost certainly the cause. Glaze chemistry is needed to reduce the amount of sodium and substitute another flux of lower thermal expansion (which of course is also sympathetic to the glaze color, surface character, <a  href="../glossary/melting+temperature.html">melting temperature</a>, etc.). <a  href="../material/1070.html">Nepheline syenite</a>, for example, contributes Na<sub>2</sub>O. Glaze chemistry software can be employed to reduce the amount of nepheline (therefore the Na<sub>2</sub>O) and source the other oxides it was contributing from other materials. Doing this actually helps alleviate a mineral level issue also: the mineral nepheline is slightly soluble over time and excessive amounts can flocculate glazes if they are stored (thus they require more water and then begin to settle out in the bucket).<br />
+<br />
+Many ceramic oxides have mineral and even material equivalents, others do not. Some have forms we can buy and touch (like <a  href="../material/1245.html">silica</a>), others are available but in an impractical form (expensive, soluble, unstable, difficult-to-get). The mineral quartz, for example, is almost pure <a  href="sio2.html">SiO<sub>2</sub></a>. We usually just refer to the oxide SiO<sub>2</sub> as silica (although it is more correctly termed silicon dioxide). The powdered material is the silica that we use in glaze and body recipes is ground quartz, thus it is also SiO<sub>2</sub>. If the silica powder is being put into a glaze and completely dissolves and reacts then it will impose a lowering effect of the thermal expansion. Documentation about this belongs at the oxide area of this website because it is the SiO<sub>2</sub> molecules of which the material is composed that are effecting the change. However, discussion about the use of silica in bodies belongs in the materials area since it is seen, not as an addition of chemistry, but as an aggregate, a filler and a source of glass. Theoretical information about the mineral quartz (e.g. its thermal expansion, hardness) belongs on the mineral level (since there are other pure mineral sources of SiO<sub>2</sub>). Then, of course, there are issues related to particle size (which determines how well the quartz grains can dissolve in a glaze melt), cost and supply, these belong on the material level. This site has a flexible linking system between all areas and records (which we regard as the most value aspect of the database) and we are constantly working on improving the links.</p>
+<h3>Links</h3><table>
+<table class="table table-bordered"><tbody>
+<tr>
+<td scope="row">Articles</td>
+<td>
+<a href="../article/the+four+levels+on+which+to+view+ceramic+glazes.html">The Four Levels on Which to View Ceramic Glazes</a>
+<br /><i>By knowing which level to view a glaze from you are much better equipped to understand and control it. The levels are process, recipe, material, oxide.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Articles</td>
+<td>
+<a href="../article/glaze+chemistry+basics+-+formula,+analysis,+mole%25,+unity+.html">Glaze Chemistry Basics - Formula, Analysis, Mole%, Unity </a>
+<br /><i>Part of changing your viewpoint of glazes, from a collection of materials to a collection of <a  href="../glossary/ceramic+oxide.html">oxides</a>, is learning what a formula and analysis are, how conversion between the two is done and how unity and <a  href="../glossary/loi.html">LOI</a> impact this.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Articles</td>
+<td>
+<a href="../article/understanding+ceramic+oxides.html">Understanding Ceramic Oxides</a>
+<br /><i>Fired glazes are composed of oxide building blocks. Each of the <a  href="../glossary/ceramic+oxide.html">oxides</a> contributes different properties to the fired glaze and interacts with others in different ways. Understanding these gives you control.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Articles</td>
+<td>
+<a href="../article/changing+our+view+of+glazes.html">Changing Our View of Glazes</a>
+<br /><i>A big secret to getting control of glazes is to begin looking at them as formulas of <a  href="../glossary/ceramic+oxide.html">oxides</a> rather than recipes of materials.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Articles</td>
+<td>
+<a href="../article/chemistry+vs.+matrix+blending+to+create+glazes+from+native+materials.html">Chemistry vs. Matrix Blending to Create Glazes from Native Materials</a>
+<br /><i>Is it better to do trial and error line and matrix blending of materials to formulate glazes or is it better to use <a  href="../glossary/glaze+chemistry.html">glaze chemistry</a> right from the start?</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Articles</td>
+<td>
+<a href="../article/where+do+i+start+in+understanding+glazes%253F.html">Where do I start in understanding glazes?</a>
+<br /><i>Break your addiction to online recipes that don't work or bottled expensive glazes that you could <a  href="../glossary/do-it-yourself.html">DIY</a>. Learn why glazes fire as they do. Why each material is used. How to create perfect dipping and brushing properties. Even some <a  href="../glossary/glaze+chemistry.html">chemistry</a>.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Glossary</td>
+<td>
+<a href="../glossary/ceramic+oxide.html">Ceramic Oxide</a>
+<br /><i>In <a  href="../glossary/glaze+chemistry.html">glaze chemistry</a>, the oxide is the basic unit of formulas and analyses. Knowledge of what materials supply an oxide and of how it affects the fired glass or glaze is a key to control.</i>
+</td>
+</tr>
+<tr>
+<td scope="row">Glossary</td>
+<td>
+<a href="../glossary/glaze+chemistry.html">Glaze Chemistry</a>
+<br /><i><a  href="../glossary/glaze+chemistry.html">Glaze chemistry</a> is the study of how the oxide <a  href="../glossary/glaze+chemistry.html">chemistry</a> of glazes relate to the way they fire. It accounts for color, surface, hardness, texture, <a  href="../glossary/melting+temperature.html">melting temperature</a>, <a  href="../glossary/co-efficient+of+thermal+expansion.html">thermal expansion</a>, etc.</i>
+</td>
+</tr>
+</tbody></table>
+<p style="clear:left"></p>
+
+<h3 style="margin-top:30px;">Ceramic Oxide Periodic Table</h3>
+<a href="../picture/1257.html"><img class="flexleft50" alt="Periodic table of ceramic oxides"  src="../4sight/images/pictures/er5fytcakh.svg" /></a>
+<p>Pretty well all common traditional ceramic <a  href="../glossary/base+glaze.html">base glazes</a> are made from less than a dozen elements (plus oxygen). Go to the full picture of this table and click or tap each of the <a  href="../glossary/ceramic+oxide.html">oxides</a> to learn more (on its page at <a  href="../glossary/digitalfire+reference+library.html">digitalfire</a>.com). When materials melt, they <a  href="../glossary/decomposition.html">decompose</a>, sourcing these elements in oxide form. The kiln builds the glaze from them, it does not care what material sources what oxide (assuming, of course, that all materials do melt or dissolve completely into <a  href="../glossary/melt+fluidity.html">the melt</a> to release those oxides). Each of these oxides contributes specific properties to the glass. So, you can look at a formula and make a good prediction of the properties of the fired glaze. And know what specific oxide to increase or decrease to move a property in a given direction (e.g. melting behavior, hardness, <a  href="../glossary/glaze+durability.html">durability</a>, <a  href="../glossary/co-efficient+of+thermal+expansion.html">thermal expansion</a>, color, gloss, <a  href="../glossary/crystallization.html">crystallization</a>). And know about how they interact (affecting each other). This is powerful. A lot of ceramic materials are available, hundreds - that is complicated when individual materials source multiple oxides. Viewing a glaze as a simple <a  href="../glossary/unity+formula.html">unity formula</a> of ceramic oxides is just simpler.</p>
+<p style="clear:left"></p><h3>Got a Question?</h3><p style="margin-bottom:30px;"><a name="kofi">Buy me a coffee and we can talk</a> <a target="_blank" href="https://ko-fi.com/tonyhansen"><img style="width:40px" src="../images/ko-fi.svg"></a></p><p style="margin-bottom:30px;">&nbsp;</p>
+<p></p><p></p><hr>
+<img style="width:250px" src="../4sight/images/ReferenceLibrary.svg">
+<br />
+<a href="../index.html">https://digitalfire.com</a>, All Rights Reserved
+<br /><a href="../w3c/privacypolicy.php.html">Privacy Policy</a>
+</div>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+</body>
+</html>

@@ -8,6 +8,7 @@ import { UnityFormulaViz } from './components/UnityFormulaViz'
 import { FiringTimeline, parseTempEvents } from './components/FiringTimeline'
 import { GlazeCalc } from './GlazeCalc'
 import { ThermalCalc } from './ThermalCalc'
+import { ShelfMatch } from './ShelfMatch'
 import { Admin } from './Admin'
 import { analysisToFormula, FLUX_OXIDES } from './chem'
 import { NotebookPanel } from './components/NotebookPanel'
@@ -119,6 +120,7 @@ function Header({
     ['temperatures', 'Temperatures'],
     ['calc', 'Glaze Calc'],
     ['thermal', 'Thermal Exp'],
+    ['shelf', 'Recipe Matcher'],
   ]
   return (
     <header className="sticky top-0 z-10 border-b border-neutral-200 bg-white/90 backdrop-blur">
@@ -257,6 +259,8 @@ function Routed({
       return <GlazeCalc materials={ds.materials} oxides={ds.oxides} recipes={ds.recipes} />
     case 'thermal':
       return <ThermalCalc oxides={ds.oxides} />
+    case 'shelf':
+      return <ShelfMatch materials={ds.materials} recipes={ds.recipes} />
     case 'minerals':
       return <MineralList items={ds.minerals} />
     case 'mineral':

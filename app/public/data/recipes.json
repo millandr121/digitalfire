@@ -3906,8 +3906,7 @@
         "percent": null
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/77c04e"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-j3WyJxoKLQ",
@@ -4025,8 +4024,7 @@
         "percent": null
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/77e05b"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-qLSWgSz3FX",
@@ -4139,8 +4137,7 @@
         "percent": null
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/77e06b"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-pZQroM9Jsy",
@@ -4198,8 +4195,7 @@
         "percent": 20.19
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/77e14a"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-JZY4Qd3MhE",
@@ -4225,10 +4221,24 @@
         "material": "Silica",
         "amount": 14.98,
         "percent": null
+      },
+      {
+        "material": "11",
+        "amount": 94.64,
+        "percent": 87.94
+      },
+      {
+        "material": "10",
+        "amount": 94.66,
+        "percent": 88.03
+      },
+      {
+        "material": "12",
+        "amount": 94.71,
+        "percent": 87.92
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/g1129"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-aDQRXRFRPs",
@@ -4321,8 +4331,7 @@
         "percent": 10.31
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/g1847"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-jDCvHWKF6P",
@@ -4385,8 +4394,7 @@
         "percent": null
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/g1916m"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-7LuGR4KXJn",
@@ -4489,8 +4497,7 @@
         "percent": 4.72
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/zero4"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-XcGBeaC995",
@@ -4593,8 +4600,7 @@
         "percent": 4.39
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/g1916ql"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-P8uThTnFoY",
@@ -4622,6 +4628,11 @@
         "percent": null
       },
       {
+        "material": "10",
+        "amount": 93.83,
+        "percent": 93.54
+      },
+      {
         "material": "KT #1-4 Ball Clay",
         "amount": 50.0,
         "percent": null
@@ -4635,6 +4646,16 @@
         "material": "Nepheline Syenite",
         "amount": 10.0,
         "percent": null
+      },
+      {
+        "material": "12",
+        "amount": 94.57,
+        "percent": null
+      },
+      {
+        "material": "10",
+        "amount": 94.69,
+        "percent": 94.85
       },
       {
         "material": "Ferro Frit 3195",
@@ -4677,8 +4698,7 @@
         "percent": 4.39
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/g1916ql1"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-EgMrBcHj4v",
@@ -4731,8 +4751,7 @@
         "percent": 15.6
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/cone04mgomatte"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-1RstCPvD3W",
@@ -4790,8 +4809,7 @@
         "percent": null
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/g1916v"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-gzHKA1kiaE",
@@ -4879,8 +4897,7 @@
         "percent": 1.41
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/g2415e"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-FN6zjemnNK",
@@ -4900,6 +4917,16 @@
       {
         "material": "Custer Feldspar",
         "amount": 10.0,
+        "percent": null
+      },
+      {
+        "material": "12",
+        "amount": 92.86,
+        "percent": 88.99
+      },
+      {
+        "material": "10",
+        "amount": 92.59,
         "percent": null
       },
       {
@@ -4923,8 +4950,7 @@
         "percent": null
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/g2571bb"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-erKwjtZ9tq",
@@ -5067,8 +5093,7 @@
         "percent": null
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/g2571d"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-d7ue6XiZjJ",
@@ -5126,8 +5151,7 @@
         "percent": 7.02
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/g2571d1"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-N4T62yo1Kh",
@@ -5195,8 +5219,7 @@
         "percent": 4.55
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/g2576b"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-tdJdteaSxz",
@@ -5274,8 +5297,7 @@
         "percent": null
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/g2826b"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-L4d72dgnkF",
@@ -5373,16 +5395,14 @@
         "percent": null
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/g2826g"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-oLZXQTy9TR",
     "code": "Floating Blue",
     "name": "Substituting Gerstley Borate",
     "materials": [],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/floatingblue"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-vJ4ugfAXA8",
@@ -5615,8 +5635,7 @@
         "percent": null
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/g2850c"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-6TesQXNkkA",
@@ -5659,8 +5678,7 @@
         "percent": 21.48
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/g2890b"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-cFeH6hcDuv",
@@ -5688,8 +5706,7 @@
         "percent": null
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/g2908a"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-Zq1w2TE6SL",
@@ -5812,8 +5829,7 @@
         "percent": null
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/g2926"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-jxpSEPKSku",
@@ -5856,8 +5872,7 @@
         "percent": null
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/g2926bl"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-C1R5LciBu4",
@@ -5920,8 +5935,7 @@
         "percent": 4.9
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/g2931f"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-j8MDK8vgKM",
@@ -5994,8 +6008,7 @@
         "percent": null
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/g2931g"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-td5N6ka2kx",
@@ -6053,8 +6066,7 @@
         "percent": null
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/g2933"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-bdwzQm6yQF",
@@ -6122,8 +6134,7 @@
         "percent": null
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/g2934bl"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-qnvAM3fag6",
@@ -6216,8 +6227,7 @@
         "percent": null
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/g2934j"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-y9rvvqsPy4",
@@ -6430,8 +6440,7 @@
         "percent": null
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/g2934y1"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-5HiD7L5HCy",
@@ -6479,8 +6488,7 @@
         "percent": null
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/ravenscragslipcone6basepotteryglaze"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-1e5PZvzZ2H",
@@ -6673,8 +6681,7 @@
         "percent": null
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/cone6fluidmeltglazeproject2015"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-CEavKR6Gye",
@@ -6787,8 +6794,7 @@
         "percent": 12.87
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/fixingcone6leachesclear"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-uxrGP5yY8P",
@@ -6931,8 +6937,7 @@
         "percent": null
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/g3806cone6fluidmeltclearglazeproject2015"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-gbcM8HXmX2",
@@ -6980,8 +6985,7 @@
         "percent": null
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/g3806cone6fluidmeltbaseglazeproject2019"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-DEdcwWAZ6K",
@@ -7049,8 +7053,7 @@
         "percent": 21.48
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/g3806d"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-PuHS3ht7ZA",
@@ -7098,8 +7101,7 @@
         "percent": null
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/g3806k"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-kM4EdoTzp1",
@@ -7182,8 +7184,7 @@
         "percent": 22.04
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/g3813b"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-w5KQLhY6gz",
@@ -7221,8 +7222,7 @@
         "percent": 4.39
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/g3822"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-Wo3nayZQjk",
@@ -7250,8 +7250,7 @@
         "percent": null
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/g3834"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-Lt1ZK6wGyE",
@@ -7272,6 +7271,16 @@
         "material": "Nepheline Syenite",
         "amount": 15.0,
         "percent": null
+      },
+      {
+        "material": "12",
+        "amount": 93.14,
+        "percent": 84.58
+      },
+      {
+        "material": "10",
+        "amount": 92.1,
+        "percent": 84.77
       },
       {
         "material": "Nepheline Syenite",
@@ -7299,8 +7308,7 @@
         "percent": null
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/g3840"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-mSCCo1mh3r",
@@ -7423,8 +7431,7 @@
         "percent": 2.01
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/g3868"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-QotYP3Y8oE",
@@ -7502,8 +7509,7 @@
         "percent": 0.98
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/g3875"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-nAaBeYB2Xf",
@@ -7571,8 +7577,7 @@
         "percent": null
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/g3879c"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-1A562Lu2c7",
@@ -7700,8 +7705,7 @@
         "percent": 0.99
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/g3892"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-TteCJMaqat",
@@ -7789,8 +7793,7 @@
         "percent": null
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/g3903"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-682QPmFGJ3",
@@ -7833,8 +7836,7 @@
         "percent": 21.43
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/g3904"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-EQ5zdv49S1",
@@ -7902,8 +7904,7 @@
         "percent": null
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/g3925"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-YSLwGXSJbB",
@@ -7991,16 +7992,14 @@
         "percent": 2.09
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/g3925b"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-xoZBarAsJC",
     "code": "G3926B",
     "name": "Cone 6 white matte and glossy that do not crawl",
     "materials": [],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/g3926b"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-E9ACSyFEct",
@@ -8028,8 +8027,7 @@
         "percent": null
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/g3933"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-FReSoT7JcA",
@@ -8112,8 +8110,7 @@
         "percent": null
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/g3933a"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-XxaFobJPcH",
@@ -8176,8 +8173,7 @@
         "percent": null
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/g3933e"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-jp6vKEHWqu",
@@ -8210,8 +8206,7 @@
         "percent": null
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/g3973"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-vo3ooYq9Hh",
@@ -8259,8 +8254,7 @@
         "percent": null
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/g4594"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-HpTGYP9bFi",
@@ -8298,8 +8292,7 @@
         "percent": 49.85
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/l2553b"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-37ghgohbJX",
@@ -8327,6 +8320,16 @@
         "percent": 24.75
       },
       {
+        "material": "12",
+        "amount": 95.27,
+        "percent": 88.41
+      },
+      {
+        "material": "10",
+        "amount": 95.26,
+        "percent": 88.74
+      },
+      {
         "material": "M-23 Ball Clay",
         "amount": 25.0,
         "percent": 24.81
@@ -8345,6 +8348,16 @@
         "material": "Pioneer Kaolin",
         "amount": 23.0,
         "percent": 22.83
+      },
+      {
+        "material": "12",
+        "amount": 95.7,
+        "percent": 88.03
+      },
+      {
+        "material": "10",
+        "amount": 95.35,
+        "percent": 88.82
       },
       {
         "material": "KT #1-4 Ball Clay",
@@ -8390,10 +8403,19 @@
         "material": "C-Red Clay",
         "amount": 2.0,
         "percent": 1.96
+      },
+      {
+        "material": "12",
+        "amount": 96.84,
+        "percent": 89.12
+      },
+      {
+        "material": "10",
+        "amount": 96.47,
+        "percent": 89.09
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/l2596e"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-evAa1jTXCe",
@@ -8416,8 +8438,7 @@
         "percent": null
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/l2626"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-eeukDwSTt4",
@@ -8540,8 +8561,7 @@
         "percent": null
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/l3127e"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-v5njS4np2g",
@@ -8552,6 +8572,16 @@
         "material": "New Foundry Hill Creme",
         "amount": 100.0,
         "percent": null
+      },
+      {
+        "material": "12",
+        "amount": 93.9,
+        "percent": 86.48
+      },
+      {
+        "material": "10",
+        "amount": 93.17,
+        "percent": 86.61
       },
       {
         "material": "New Foundry Hill Creme",
@@ -8579,6 +8609,11 @@
         "percent": 13.04
       },
       {
+        "material": "10",
+        "amount": 94.32,
+        "percent": 87.82
+      },
+      {
         "material": "Foundry Hill Creme",
         "amount": 65.0,
         "percent": 56.52
@@ -8592,10 +8627,14 @@
         "material": "Kyanite",
         "amount": 15.0,
         "percent": 13.04
+      },
+      {
+        "material": "10",
+        "amount": 94.83,
+        "percent": 89.32
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/l3146a"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-G4JjT32XL2",
@@ -8641,6 +8680,16 @@
         "material": "*Mulcoa Grog",
         "amount": 10.0,
         "percent": 8.77
+      },
+      {
+        "material": "10",
+        "amount": 93.8,
+        "percent": 88.34
+      },
+      {
+        "material": "12",
+        "amount": 93.91,
+        "percent": 88.62
       },
       {
         "material": "Pyrax",
@@ -8748,8 +8797,7 @@
         "percent": null
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/l3164a"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-8zkWHxoQzs",
@@ -8772,8 +8820,7 @@
         "percent": null
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/l3523"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-YHvXeRzheb",
@@ -8811,8 +8858,7 @@
         "percent": null
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/l3617"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-9dWx2n4iAL",
@@ -8848,10 +8894,14 @@
         "material": "Dolomite",
         "amount": 2.5,
         "percent": null
+      },
+      {
+        "material": "10",
+        "amount": 95.81,
+        "percent": 94.1
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/l3664a"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-5R9GFgEEYF",
@@ -8959,8 +9009,7 @@
         "percent": 7.37
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/l3685u1"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-M2WnSWNEry",
@@ -8993,8 +9042,7 @@
         "percent": null
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/l3685y"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-DWJbEStb1w",
@@ -9020,6 +9068,11 @@
         "material": "Zircopax",
         "amount": 20.0,
         "percent": null
+      },
+      {
+        "material": "10",
+        "amount": 95.79,
+        "percent": 93.78
       },
       {
         "material": "Nepheline Syenite",
@@ -9070,10 +9123,29 @@
         "material": "Zircopax",
         "amount": 20.0,
         "percent": 19.05
+      },
+      {
+        "material": "10",
+        "amount": 93.36,
+        "percent": 88.21
+      },
+      {
+        "material": "11",
+        "amount": 93.4,
+        "percent": 89.07
+      },
+      {
+        "material": "12",
+        "amount": 93.32,
+        "percent": 89.67
+      },
+      {
+        "material": "13",
+        "amount": 93.57,
+        "percent": 90.81
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/l3685z2"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-7LZpwM5ZvS",
@@ -9149,10 +9221,19 @@
         "material": "Nepheline Syenite",
         "amount": 10.0,
         "percent": null
+      },
+      {
+        "material": "12",
+        "amount": 94.57,
+        "percent": null
+      },
+      {
+        "material": "10",
+        "amount": 94.69,
+        "percent": 94.85
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/l3685z6"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-RQjxZty9eS",
@@ -9175,6 +9256,11 @@
         "percent": 21.09
       },
       {
+        "material": "Water",
+        "amount": 41.58,
+        "percent": 29.24
+      },
+      {
         "material": "Calcined Alumina",
         "amount": 200.0,
         "percent": 96.15
@@ -9185,8 +9271,7 @@
         "percent": 3.85
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/l3693e"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-F4s4cgzKBe",
@@ -9212,6 +9297,16 @@
         "material": "Kyanite",
         "amount": 25.0,
         "percent": 20.16
+      },
+      {
+        "material": "10",
+        "amount": 94.75,
+        "percent": 90.3
+      },
+      {
+        "material": "12",
+        "amount": 95.05,
+        "percent": 91.35
       },
       {
         "material": "Kaopaque Kaolin",
@@ -9262,10 +9357,14 @@
         "material": "Silica",
         "amount": 30.0,
         "percent": 21.09
+      },
+      {
+        "material": "Water",
+        "amount": 41.58,
+        "percent": 29.24
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/l3693e1"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-DDBJSBWmiM",
@@ -9308,6 +9407,11 @@
         "percent": 22.6
       },
       {
+        "material": "Water",
+        "amount": 200.0,
+        "percent": 40.0
+      },
+      {
         "material": "Dettol",
         "amount": 1.0,
         "percent": 0.2
@@ -9333,6 +9437,16 @@
         "percent": 16.81
       },
       {
+        "material": "12",
+        "amount": 94.02,
+        "percent": 89.13
+      },
+      {
+        "material": "10",
+        "amount": 94.04,
+        "percent": 89.29
+      },
+      {
         "material": "Pioneer Kaolin",
         "amount": 35.0,
         "percent": 24.61
@@ -9348,6 +9462,11 @@
         "percent": 21.09
       },
       {
+        "material": "Water",
+        "amount": 41.58,
+        "percent": 29.24
+      },
+      {
         "material": "Calcined Alumina",
         "amount": 50.0,
         "percent": null
@@ -9356,10 +9475,19 @@
         "material": "EPK",
         "amount": 50.0,
         "percent": null
+      },
+      {
+        "material": "10",
+        "amount": 94.91,
+        "percent": 91.95
+      },
+      {
+        "material": "12",
+        "amount": 94.83,
+        "percent": 91.06
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/l3693h1"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-r3yaRuv1YT",
@@ -9457,8 +9585,7 @@
         "percent": null
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/l3724m1"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-rEgF5sd2dk",
@@ -9506,8 +9633,7 @@
         "percent": null
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/l3778d"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-rgfk1WcNKY",
@@ -9575,8 +9701,7 @@
         "percent": 5.92
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/stainedporcelainsforcone6"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-tgsPMxNsAP",
@@ -9669,8 +9794,7 @@
         "percent": null
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/l3778g"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-SuDY2ZRrTt",
@@ -9768,8 +9892,7 @@
         "percent": null
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/l3798c"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-RQqsks3hDe",
@@ -9867,8 +9990,7 @@
         "percent": null
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/l3798g"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-Mukw7GYfGA",
@@ -9896,22 +10018,40 @@
         "percent": 3.38
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/l3802e"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-KGjS6PX6Y4",
     "code": "L3840",
     "name": "Seed Pelleting Recipe development",
     "materials": [],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/l3840"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-4aqzZ8vTRS",
     "code": "L3868",
     "name": "What is the Secret Behind the Magic Performance of Craft Crank Sculpture Body",
     "materials": [
+      {
+        "material": "10",
+        "amount": 94.81,
+        "percent": 91.61
+      },
+      {
+        "material": "12",
+        "amount": 95.05,
+        "percent": 92.09
+      },
+      {
+        "material": "10",
+        "amount": 95.01,
+        "percent": 91.89
+      },
+      {
+        "material": "12",
+        "amount": 95.12,
+        "percent": 92.49
+      },
       {
         "material": "OM4 Ball Clay",
         "amount": 42.0,
@@ -9931,10 +10071,14 @@
         "material": "*F-65 Silica Sand",
         "amount": 20.0,
         "percent": null
+      },
+      {
+        "material": "10",
+        "amount": 94.77,
+        "percent": 90.78
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/l3868"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-4ZExgoraeS",
@@ -9972,6 +10116,16 @@
         "percent": null
       },
       {
+        "material": "10",
+        "amount": 93.23,
+        "percent": 85.7
+      },
+      {
+        "material": "12",
+        "amount": 93.29,
+        "percent": 85.3
+      },
+      {
         "material": "Nepheline Syenite",
         "amount": 15.0,
         "percent": 16.76
@@ -9997,6 +10151,16 @@
         "percent": 11.17
       },
       {
+        "material": "10",
+        "amount": 94.16,
+        "percent": 87.71
+      },
+      {
+        "material": "12",
+        "amount": 94.18,
+        "percent": 86.36
+      },
+      {
         "material": "Nepheline Syenite",
         "amount": 10.0,
         "percent": null
@@ -10020,10 +10184,14 @@
         "material": "Mason 6600",
         "amount": 10.0,
         "percent": null
+      },
+      {
+        "material": "12",
+        "amount": 92.77,
+        "percent": 85.43
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/l3954j"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-ZN126sxXTz",
@@ -10034,6 +10202,21 @@
         "material": "M2 ST Code # P6385 Batch # -2 Notes M2 is a mid temperature moderate plasticity smooth clay mined in Montana. It is used pure by a number of customers. Fired bars show it from cone 04 to 6 (bottom upward). Produced March 14/16 240 boxes pugged PRA stiffness for J.B.K. in Calgary, plus 250 boxes pugged ST stiffness for a customer of Ceramics Canada. Production has recorded a moisture content of 18.10% for the PRA portion of this run. Bar specimen #6 (fired to cone 6.0), has tiny bubbles beginning to form on surface of bar, beginning signs of bloating. Pictures M2 6385 vs M350 6396 M2 cylinder at cone 6 with AlbertaSlip base Overfired, on the edge of bloating. But still firing very red. Alternate Code Number:4056 Testdata SHAB - Shrinkage/Absorption DLEN FLEN FWT BWT CONE TEMP DSHR FSHR ABS 693.3588.9041.5442.446.0bloat6.7%4.8%2.2% 493.4088.4342.6043.294.06.6%5.3%1.6% 293.4189.0842.3843.721.96.6%4.6%3.2% 993.2790.341.544.14-2.06.7%3.2%6.4% 893.2990.7342.0645.17-4.06.7%2.7%7.4% SOLU - Soluble Salts FIRE 1vlight DFAC - Drying Factor DFAC SOLD 1D531-Nil CLWC - Clay Water Content - Powder, Plastic WPOW WPUG POW% PUG% 11.219.68 SIEV - Sieve Analysis 35-325 Wet TOT 48M 65M 100M 1100.626.487.7 LDW - LOI/Density/Water Content WWGT DWGT H2O LOI DENS 120.4716.4019.9% XML (to paste into Insight) Born: 2016-03-24, Modified: 2017-10-16 12:06:23",
         "amount": 6385.0,
         "percent": -2.0
+      },
+      {
+        "material": "11",
+        "amount": 93.5,
+        "percent": 90.18
+      },
+      {
+        "material": "10",
+        "amount": 93.42,
+        "percent": 90.69
+      },
+      {
+        "material": "12",
+        "amount": 93.36,
+        "percent": null
       },
       {
         "material": "*BGP",
@@ -10051,8 +10234,7 @@
         "percent": null
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/l3972"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-K5hHzDs2Kr",
@@ -10070,14 +10252,23 @@
         "percent": 20.0
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/l4001"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-WnNoP37N2X",
     "code": "L4023F",
     "name": "H440 body development",
     "materials": [
+      {
+        "material": "11",
+        "amount": 93.09,
+        "percent": 88.76
+      },
+      {
+        "material": "10",
+        "amount": 93.16,
+        "percent": 88.82
+      },
       {
         "material": "Saint Rose Red",
         "amount": 2.0,
@@ -10097,6 +10288,16 @@
         "material": "Bentonite",
         "amount": 2.0,
         "percent": 50.0
+      },
+      {
+        "material": "12",
+        "amount": 92.77,
+        "percent": 89.08
+      },
+      {
+        "material": "10",
+        "amount": 92.67,
+        "percent": 88.25
       },
       {
         "material": "C-Red Clay",
@@ -10119,8 +10320,7 @@
         "percent": 29.93
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/l4023f"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-35Tb8CCEe7",
@@ -10243,8 +10443,7 @@
         "percent": null
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/cone6blackburningcastingbody"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-j74SkCgLGn",
@@ -10342,13 +10541,22 @@
         "percent": null
       },
       {
+        "material": "12",
+        "amount": 93.09,
+        "percent": 86.73
+      },
+      {
+        "material": "10",
+        "amount": 93.65,
+        "percent": 87.42
+      },
+      {
         "material": "*3D 325",
         "amount": 100.0,
         "percent": null
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/l4115j3"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-2XEuAi85jp",
@@ -10396,8 +10604,7 @@
         "percent": 50.0
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/l4158"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-cMFTR9f3mn",
@@ -10420,8 +10627,7 @@
         "percent": 1.96
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/l4163"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-No2m98AEhJ",
@@ -10439,6 +10645,11 @@
         "percent": null
       },
       {
+        "material": "Water",
+        "amount": 44.0,
+        "percent": null
+      },
+      {
         "material": "Redart",
         "amount": 90.0,
         "percent": null
@@ -10447,6 +10658,31 @@
         "material": "KT #1-4 Ball Clay",
         "amount": 10.0,
         "percent": null
+      },
+      {
+        "material": "Water",
+        "amount": 44.0,
+        "percent": null
+      },
+      {
+        "material": "12",
+        "amount": 94.33,
+        "percent": 88.51
+      },
+      {
+        "material": "10",
+        "amount": 94.23,
+        "percent": 87.97
+      },
+      {
+        "material": "11",
+        "amount": 94.15,
+        "percent": 90.72
+      },
+      {
+        "material": "13",
+        "amount": 94.42,
+        "percent": 93.89
       },
       {
         "material": "Redart",
@@ -10504,24 +10740,72 @@
         "percent": null
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/l4170"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-RNXr3diRJt",
     "code": "L4208D",
     "name": "Comparison of various Plainsman clay materials with +200mesh contaminants removed",
-    "materials": [],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/l4208d"
+    "materials": [
+      {
+        "material": "12",
+        "amount": 93.77,
+        "percent": 87.83
+      },
+      {
+        "material": "10",
+        "amount": 93.65,
+        "percent": 87.95
+      },
+      {
+        "material": "12",
+        "amount": 93.44,
+        "percent": 87.39
+      },
+      {
+        "material": "10",
+        "amount": 93.26,
+        "percent": 87.31
+      },
+      {
+        "material": "10",
+        "amount": 94.53,
+        "percent": 88.81
+      },
+      {
+        "material": "12",
+        "amount": 94.33,
+        "percent": 89.12
+      },
+      {
+        "material": "12",
+        "amount": 91.74,
+        "percent": 87.58
+      },
+      {
+        "material": "10",
+        "amount": 91.63,
+        "percent": 86.32
+      },
+      {
+        "material": "12",
+        "amount": 93.71,
+        "percent": 84.83
+      },
+      {
+        "material": "10",
+        "amount": 93.66,
+        "percent": 84.96
+      }
+    ],
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-pdEwu3ss5v",
     "code": "L4227",
     "name": "Self Hardening Clays",
     "materials": [],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/l4227"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-yFF1rboncj",
@@ -10564,8 +10848,7 @@
         "percent": null
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/l4244"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-X46j58FwzD",
@@ -10638,16 +10921,14 @@
         "percent": 5.56
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/l4264"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-RBvM4pixdA",
     "code": "L4287",
     "name": "Yukon Clay Testing Project",
     "materials": [],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/l4287"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-KWLbFamnA4",
@@ -10670,8 +10951,7 @@
         "percent": null
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/l4398"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-r6BRZe2A42",
@@ -10689,8 +10969,7 @@
         "percent": 59.82
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/l4453c"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-mRD2WidsSu",
@@ -10723,6 +11002,16 @@
         "percent": null
       },
       {
+        "material": "55",
+        "amount": 94.25,
+        "percent": 91.33
+      },
+      {
+        "material": "44",
+        "amount": 94.35,
+        "percent": 91.15
+      },
+      {
         "material": "New Zealand Kaolin",
         "amount": 40.0,
         "percent": null
@@ -10748,8 +11037,7 @@
         "percent": null
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/l4498"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-ZhRPJJH2Bg",
@@ -10852,8 +11140,7 @@
         "percent": 20.67
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/l4532a"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-A36k5twKaz",
@@ -10876,6 +11163,16 @@
         "percent": 1.96
       },
       {
+        "material": "10",
+        "amount": 95.4,
+        "percent": 87.7
+      },
+      {
+        "material": "12",
+        "amount": 95.3,
+        "percent": 87.9
+      },
+      {
         "material": "Pioneer kaolin",
         "amount": 72.0,
         "percent": 72.36
@@ -10889,6 +11186,16 @@
         "material": "Bentonite",
         "amount": 3.5,
         "percent": 3.52
+      },
+      {
+        "material": "10",
+        "amount": 95.5,
+        "percent": 88.64
+      },
+      {
+        "material": "11",
+        "amount": 95.5,
+        "percent": 88.64
       },
       {
         "material": "Pioneer kaolin",
@@ -10909,26 +11216,33 @@
         "material": "Dolomite",
         "amount": 20.0,
         "percent": 19.42
+      },
+      {
+        "material": "10",
+        "amount": 94.65,
+        "percent": 92.2
+      },
+      {
+        "material": "12",
+        "amount": 94.9,
+        "percent": 93.0
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/l4543"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-dWF8xgfMk1",
     "code": "L4557",
     "name": "Volumetric MnO Feeder Pilot Project",
     "materials": [],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/l4557"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-CCvpcno9ZK",
     "code": "Cat Litter",
     "name": "What is it made of?",
     "materials": [],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/catlitter"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-AfpNEP4d2x",
@@ -10951,8 +11265,7 @@
         "percent": 0.99
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/l4575"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-43EmYqNLYb",
@@ -10980,16 +11293,14 @@
         "percent": null
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/l4599"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-JdjAyvS3yp",
     "code": "Titanium Floating Blue",
     "name": "A fragile mechanism",
     "materials": [],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/titaniumfloatingblue"
+    "source": "insight-live.com (public share) via digitalfire.com"
   },
   {
     "id": "il-avvM6wnfLZ",
@@ -11020,9 +11331,4106 @@
         "material": "OM4 BALL CLAY (OM #4 Ball Clay)",
         "amount": 8.0,
         "percent": 50.0
+      },
+      {
+        "material": "11",
+        "amount": 93.89,
+        "percent": 88.82
+      },
+      {
+        "material": "12",
+        "amount": 93.93,
+        "percent": 88.9
+      },
+      {
+        "material": "10",
+        "amount": 93.88,
+        "percent": 88.85
+      },
+      {
+        "material": "88",
+        "amount": 93.81,
+        "percent": 92.6
       }
     ],
-    "source": "insight-live.com (public share) via digitalfire.com",
-    "source_url": "https://digitalfire.com/recipe/mhscul"
+    "source": "insight-live.com (public share) via digitalfire.com"
+  },
+  {
+    "id": "1",
+    "source": "digitalfire.com (wayback)",
+    "code": "GR6-B",
+    "name": "Ravenscrag Cone 6 Variegated Light Glossy Blue",
+    "source_url": "https://digitalfire.com/recipe/1",
+    "materials": [
+      {
+        "material": "Ravenscrag Slip",
+        "amount": 80.0,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3134",
+        "amount": 20.0,
+        "percent": null
+      },
+      {
+        "material": "Cobalt Oxide",
+        "amount": 3.0,
+        "percent": null
+      },
+      {
+        "material": "Rutile",
+        "amount": 3.0,
+        "percent": null
+      },
+      {
+        "material": "Titanium Dioxide",
+        "amount": 3.0,
+        "percent": null
+      }
+    ]
+  },
+  {
+    "id": "101",
+    "source": "digitalfire.com (wayback)",
+    "code": "GR10-K1",
+    "name": "Ravenscrag Cone 10R Tenmoku",
+    "source_url": "https://digitalfire.com/recipe/101",
+    "materials": [
+      {
+        "material": "Ravenscrag Slip",
+        "amount": 95.0,
+        "percent": null
+      },
+      {
+        "material": "Calcium Carbonate",
+        "amount": 5.0,
+        "percent": null
+      },
+      {
+        "material": "Red Iron Oxide",
+        "amount": 10.0,
+        "percent": null
+      }
+    ]
+  },
+  {
+    "id": "102",
+    "source": "digitalfire.com (wayback)",
+    "code": "G2896",
+    "name": "Ravenscrag Plum Red Cone 6",
+    "source_url": "https://digitalfire.com/recipe/102",
+    "materials": [
+      {
+        "material": "Silica",
+        "amount": 12.3,
+        "percent": 14.5
+      },
+      {
+        "material": "Ravenscrag Slip",
+        "amount": 34.9,
+        "percent": 41.1
+      },
+      {
+        "material": "Ferro Frit 3134",
+        "amount": 14.1,
+        "percent": 16.6
+      },
+      {
+        "material": "Talc",
+        "amount": 13.5,
+        "percent": 15.9
+      },
+      {
+        "material": "Ulexite",
+        "amount": 10.2,
+        "percent": 12.0
+      },
+      {
+        "material": "Red Iron Oxide",
+        "amount": 15.0,
+        "percent": 17.65
+      }
+    ]
+  },
+  {
+    "id": "104",
+    "source": "digitalfire.com (wayback)",
+    "code": "G2902B",
+    "name": "Cone 6 Crystal Glaze",
+    "source_url": "https://digitalfire.com/recipe/104",
+    "materials": [
+      {
+        "material": "Zinc Oxide",
+        "amount": 25.0,
+        "percent": 24.3
+      },
+      {
+        "material": "Dolomite",
+        "amount": 5.0,
+        "percent": 4.9
+      },
+      {
+        "material": "Ferro Frit 3110",
+        "amount": 51.0,
+        "percent": 49.5
+      },
+      {
+        "material": "Silica",
+        "amount": 19.0,
+        "percent": 18.4
+      },
+      {
+        "material": "Lithium Carbonate",
+        "amount": 3.0,
+        "percent": 2.9
+      }
+    ]
+  },
+  {
+    "id": "105",
+    "source": "digitalfire.com (wayback)",
+    "code": "G2902D",
+    "name": "Cone 6 Crystalline Development Project",
+    "source_url": "https://digitalfire.com/recipe/105",
+    "materials": [
+      {
+        "material": "Ferro Frit 3110",
+        "amount": 50.0,
+        "percent": null
+      },
+      {
+        "material": "Zinc Oxide",
+        "amount": 22.0,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 25.0,
+        "percent": null
+      },
+      {
+        "material": "Lithium Carbonate",
+        "amount": 3.0,
+        "percent": null
+      },
+      {
+        "material": "Titanium",
+        "amount": 2.0,
+        "percent": null
+      }
+    ]
+  },
+  {
+    "id": "106",
+    "source": "digitalfire.com (wayback)",
+    "code": "G1216M",
+    "name": "Cone 6 Ultraclear Glaze for Porcelains",
+    "source_url": "https://digitalfire.com/recipe/106",
+    "materials": [
+      {
+        "material": "Minspar 200",
+        "amount": 8.6,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3134",
+        "amount": 23.2,
+        "percent": null
+      },
+      {
+        "material": "Wollastonite",
+        "amount": 15.2,
+        "percent": null
+      },
+      {
+        "material": "EPK",
+        "amount": 24.8,
+        "percent": null
+      },
+      {
+        "material": "Talc",
+        "amount": 4.3,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 23.8,
+        "percent": null
+      }
+    ]
+  },
+  {
+    "id": "107",
+    "source": "digitalfire.com (wayback)",
+    "code": "GA6-G1",
+    "name": "Alberta Slip Lithium Brown Cone 6 Low Expansion",
+    "source_url": "https://digitalfire.com/recipe/107",
+    "materials": [
+      {
+        "material": "Alberta Slip",
+        "amount": 40.0,
+        "percent": 41.7
+      },
+      {
+        "material": "Alberta Slip 1000F Roasted",
+        "amount": 35.0,
+        "percent": 36.5
+      },
+      {
+        "material": "Ferro Frit 3249",
+        "amount": 17.0,
+        "percent": 17.7
+      },
+      {
+        "material": "Silica",
+        "amount": 4.0,
+        "percent": 4.2
+      },
+      {
+        "material": "Lithium Carbonate",
+        "amount": 5.0,
+        "percent": 5.21
+      },
+      {
+        "material": "Tin Oxide",
+        "amount": 4.0,
+        "percent": 4.17
+      }
+    ]
+  },
+  {
+    "id": "108",
+    "source": "digitalfire.com (wayback)",
+    "code": "GR10-J1",
+    "name": "Ravenscrag Cone 10R Bamboo Matte",
+    "source_url": "https://digitalfire.com/recipe/108",
+    "materials": [
+      {
+        "material": "Ravenscrag Slip",
+        "amount": 51.6,
+        "percent": null
+      },
+      {
+        "material": "Dolomite",
+        "amount": 12.1,
+        "percent": null
+      },
+      {
+        "material": "Talc",
+        "amount": 2.6,
+        "percent": null
+      },
+      {
+        "material": "Gerstley Borate",
+        "amount": 4.0,
+        "percent": null
+      },
+      {
+        "material": "Calcined Kaolin",
+        "amount": 13.5,
+        "percent": null
+      },
+      {
+        "material": "Custer Feldspar",
+        "amount": 16.2,
+        "percent": null
+      },
+      {
+        "material": "Red Iron Oxide",
+        "amount": 1.0,
+        "percent": null
+      }
+    ]
+  },
+  {
+    "id": "109",
+    "source": "digitalfire.com (wayback)",
+    "code": "L3685U",
+    "name": "Cone 03 White Engobe Recipe",
+    "source_url": "https://digitalfire.com/recipe/109",
+    "materials": [
+      {
+        "material": "Nepheline Syenite",
+        "amount": 10.0,
+        "percent": 9.8
+      },
+      {
+        "material": "Tile #6 Kaolin",
+        "amount": 42.0,
+        "percent": 41.2
+      },
+      {
+        "material": "Ferro Frit 3110",
+        "amount": 25.0,
+        "percent": 24.5
+      },
+      {
+        "material": "Silica",
+        "amount": 20.0,
+        "percent": 19.6
+      },
+      {
+        "material": "National Standard Bentonite",
+        "amount": 5.0,
+        "percent": 4.9
+      }
+    ]
+  },
+  {
+    "id": "110",
+    "source": "digitalfire.com (wayback)",
+    "code": "GR10-L",
+    "name": "Ravenscrag Iron Crystal",
+    "source_url": "https://digitalfire.com/recipe/110",
+    "materials": [
+      {
+        "material": "Ravenscrag Slip 1000F Roast",
+        "amount": 0.0,
+        "percent": null
+      },
+      {
+        "material": "Ravenscrag Slip",
+        "amount": 100.0,
+        "percent": null
+      },
+      {
+        "material": "Red Iron Oxide",
+        "amount": 10.0,
+        "percent": null
+      }
+    ]
+  },
+  {
+    "id": "113",
+    "source": "digitalfire.com (wayback)",
+    "code": "GR6-L",
+    "name": "Ravenscrag Cone 6 Transparent Burgundy",
+    "source_url": "https://digitalfire.com/recipe/113",
+    "materials": [
+      {
+        "material": "Ravenscrag Slip",
+        "amount": 40.0,
+        "percent": null
+      },
+      {
+        "material": "Ravenscrag Slip 1000F Roast",
+        "amount": 40.0,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3134",
+        "amount": 20.0,
+        "percent": null
+      },
+      {
+        "material": "Mason 6006 Stain",
+        "amount": 10.0,
+        "percent": null
+      }
+    ]
+  },
+  {
+    "id": "114",
+    "source": "digitalfire.com (wayback)",
+    "code": "GR6-M",
+    "name": "Ravenscrag Cone 6 Floating Blue",
+    "source_url": "https://digitalfire.com/recipe/114",
+    "materials": [
+      {
+        "material": "Ravenscrag Slip",
+        "amount": 40.0,
+        "percent": null
+      },
+      {
+        "material": "Ravenscrag Slip 1000F Roast",
+        "amount": 39.0,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3134",
+        "amount": 20.0,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3124",
+        "amount": 10.0,
+        "percent": null
+      },
+      {
+        "material": "Red Iron Oxide",
+        "amount": 2.0,
+        "percent": null
+      },
+      {
+        "material": "Cobalt Oxide",
+        "amount": 1.0,
+        "percent": null
+      },
+      {
+        "material": "Rutile",
+        "amount": 4.0,
+        "percent": null
+      }
+    ]
+  },
+  {
+    "id": "115",
+    "source": "digitalfire.com (wayback)",
+    "code": "G2916F",
+    "name": "Cone 6 Stoneware/Whiteware Glossy Base Glaze",
+    "source_url": "https://digitalfire.com/recipe/115",
+    "materials": [
+      {
+        "material": "Fusion Frit F-524",
+        "amount": 17.8,
+        "percent": null
+      },
+      {
+        "material": "Talc",
+        "amount": 2.9,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 28.4,
+        "percent": null
+      },
+      {
+        "material": "Old Hickory #5 Ball Clay",
+        "amount": 7.7,
+        "percent": null
+      },
+      {
+        "material": "Wollastonite",
+        "amount": 15.4,
+        "percent": null
+      },
+      {
+        "material": "Nepheline Syenite",
+        "amount": 25.7,
+        "percent": null
+      },
+      {
+        "material": "Bentonite",
+        "amount": 1.9,
+        "percent": null
+      }
+    ]
+  },
+  {
+    "id": "117",
+    "source": "digitalfire.com (wayback)",
+    "code": "G1216L",
+    "name": "Transparent for Cone 6 Porcelains",
+    "source_url": "https://digitalfire.com/recipe/117",
+    "materials": [
+      {
+        "material": "Minspar",
+        "amount": 8.2,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3134",
+        "amount": 10.3,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3124",
+        "amount": 22.7,
+        "percent": null
+      },
+      {
+        "material": "Wollastonite",
+        "amount": 14.4,
+        "percent": null
+      },
+      {
+        "material": "EPK",
+        "amount": 18.6,
+        "percent": null
+      },
+      {
+        "material": "Talc",
+        "amount": 4.1,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 21.6,
+        "percent": null
+      }
+    ]
+  },
+  {
+    "id": "118",
+    "source": "digitalfire.com (wayback)",
+    "code": "G2926B",
+    "name": "Cone 6 Whiteware/Porcelain Transparent Base Glaze",
+    "source_url": "https://digitalfire.com/recipe/118",
+    "materials": [
+      {
+        "material": "Nepheline Syenite",
+        "amount": 18.3,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3134",
+        "amount": 25.4,
+        "percent": null
+      },
+      {
+        "material": "EPK",
+        "amount": 19.6,
+        "percent": null
+      },
+      {
+        "material": "Wollastonite",
+        "amount": 6.9,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 37.6,
+        "percent": null
+      },
+      {
+        "material": "Talc",
+        "amount": 2.3,
+        "percent": null
+      }
+    ]
+  },
+  {
+    "id": "119",
+    "source": "digitalfire.com (wayback)",
+    "code": "G2928C",
+    "name": "Ravenscrag Silky Matte for Cone 6",
+    "source_url": "https://digitalfire.com/recipe/119",
+    "materials": [
+      {
+        "material": "Ferro Frit 3134",
+        "amount": 11.0,
+        "percent": 10.4
+      },
+      {
+        "material": "Talc",
+        "amount": 8.0,
+        "percent": 7.6
+      },
+      {
+        "material": "Ravenscrag Slip",
+        "amount": 60.0,
+        "percent": 56.9
+      },
+      {
+        "material": "Nepheline Syenite",
+        "amount": 13.0,
+        "percent": 12.3
+      },
+      {
+        "material": "Wollastonite",
+        "amount": 1.5,
+        "percent": 1.4
+      },
+      {
+        "material": "Calcined Kaolin",
+        "amount": 12.0,
+        "percent": 11.4
+      },
+      {
+        "material": "Tin Oxide",
+        "amount": 5.0,
+        "percent": 4.74
+      }
+    ]
+  },
+  {
+    "id": "120",
+    "source": "digitalfire.com (wayback)",
+    "code": "G2000",
+    "name": "LA Matte Cone 6 Matte White",
+    "source_url": "https://digitalfire.com/recipe/120",
+    "materials": [
+      {
+        "material": "Custer Feldspar",
+        "amount": 51.7,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 5.6,
+        "percent": null
+      },
+      {
+        "material": "Calcium Carbonate",
+        "amount": 18.8,
+        "percent": null
+      },
+      {
+        "material": "Zinc Oxide",
+        "amount": 8.6,
+        "percent": null
+      },
+      {
+        "material": "EPK",
+        "amount": 15.4,
+        "percent": null
+      }
+    ]
+  },
+  {
+    "id": "121",
+    "source": "digitalfire.com (wayback)",
+    "code": "G2934",
+    "name": "Matte Glaze Base for Cone 6",
+    "source_url": "https://digitalfire.com/recipe/121",
+    "materials": [
+      {
+        "material": "Ferro Frit 3124",
+        "amount": 17.4,
+        "percent": null
+      },
+      {
+        "material": "Dolomite",
+        "amount": 23.5,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 26.9,
+        "percent": null
+      },
+      {
+        "material": "EP Kaolin",
+        "amount": 18.3,
+        "percent": null
+      },
+      {
+        "material": "Calcined Kaolin",
+        "amount": 13.9,
+        "percent": null
+      }
+    ]
+  },
+  {
+    "id": "122",
+    "source": "digitalfire.com (wayback)",
+    "code": "G1916Q",
+    "name": "Low Fire Highly-Expansion-Adjustable Transparent",
+    "source_url": "https://digitalfire.com/recipe/122",
+    "materials": [
+      {
+        "material": "Ferro Frit 3195",
+        "amount": 65.0,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3110",
+        "amount": 10.0,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3249",
+        "amount": 10.0,
+        "percent": null
+      },
+      {
+        "material": "No. 5 Ball Clay",
+        "amount": 15.0,
+        "percent": null
+      }
+    ]
+  },
+  {
+    "id": "123",
+    "source": "digitalfire.com (wayback)",
+    "code": "L3724F",
+    "name": "Cone 03 Terra Cotta Stoneware",
+    "source_url": "https://digitalfire.com/recipe/123",
+    "materials": [
+      {
+        "material": "Plainsman 3D",
+        "amount": 45.0,
+        "percent": 40.4
+      },
+      {
+        "material": "Redart",
+        "amount": 50.0,
+        "percent": 44.9
+      },
+      {
+        "material": "National Standard Bentonite",
+        "amount": 5.0,
+        "percent": 4.5
+      },
+      {
+        "material": "Ferro Frit 3110",
+        "amount": 10.0,
+        "percent": 9.0
+      },
+      {
+        "material": "Yellow Iron Oxide",
+        "amount": 1.0,
+        "percent": 0.9
+      },
+      {
+        "material": "Barium Carbonate",
+        "amount": 0.25,
+        "percent": 0.2
+      }
+    ]
+  },
+  {
+    "id": "124",
+    "source": "digitalfire.com (wayback)",
+    "code": "GR6-N",
+    "name": "Ravenscrag Alberta Brilliant Cone 6 Celadon",
+    "source_url": "https://digitalfire.com/recipe/124",
+    "materials": [
+      {
+        "material": "Ravenscrag Slip",
+        "amount": 38.0,
+        "percent": null
+      },
+      {
+        "material": "Alberta Slip 1000F Roasted",
+        "amount": 38.0,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3134",
+        "amount": 19.0,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3124",
+        "amount": 5.0,
+        "percent": null
+      },
+      {
+        "material": "Iron Oxide Red",
+        "amount": 1.0,
+        "percent": null
+      },
+      {
+        "material": "Cobalt Oxide",
+        "amount": 0.5,
+        "percent": null
+      },
+      {
+        "material": "Rutile",
+        "amount": 2.5,
+        "percent": null
+      },
+      {
+        "material": "Tin Oxide",
+        "amount": 0.5,
+        "percent": null
+      },
+      {
+        "material": "Copper Oxide Black",
+        "amount": 0.5,
+        "percent": null
+      }
+    ]
+  },
+  {
+    "id": "125",
+    "source": "digitalfire.com (wayback)",
+    "code": "G3806C",
+    "name": "Panama Cone 6 Adjustment 2015",
+    "source_url": "https://digitalfire.com/recipe/125",
+    "materials": [
+      {
+        "material": "Silica",
+        "amount": 26.3,
+        "percent": null
+      },
+      {
+        "material": "Kaolin",
+        "amount": 19.7,
+        "percent": null
+      },
+      {
+        "material": "Dolomite",
+        "amount": 8.7,
+        "percent": null
+      },
+      {
+        "material": "Strontium Carbonate",
+        "amount": 4.4,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3110",
+        "amount": 31.1,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3134",
+        "amount": 6.6,
+        "percent": null
+      },
+      {
+        "material": "Zinc Oxide",
+        "amount": 3.3,
+        "percent": null
+      },
+      {
+        "material": "Copper Oxide",
+        "amount": 2.0,
+        "percent": null
+      },
+      {
+        "material": "Tin Oxide",
+        "amount": 2.5,
+        "percent": null
+      }
+    ]
+  },
+  {
+    "id": "126",
+    "source": "digitalfire.com (wayback)",
+    "code": "G2926J",
+    "name": "G2926B Reduced COE (Li2O)",
+    "source_url": "https://digitalfire.com/recipe/126",
+    "materials": [
+      {
+        "material": "Spodumene",
+        "amount": 11.0,
+        "percent": null
+      },
+      {
+        "material": "Fusion Frit F-524",
+        "amount": 15.0,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3134",
+        "amount": 15.0,
+        "percent": null
+      },
+      {
+        "material": "EPK",
+        "amount": 18.0,
+        "percent": null
+      },
+      {
+        "material": "Wollastonite",
+        "amount": 6.0,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 32.0,
+        "percent": null
+      },
+      {
+        "material": "Silverline Talc",
+        "amount": 3.0,
+        "percent": null
+      }
+    ]
+  },
+  {
+    "id": "127",
+    "source": "digitalfire.com (wayback)",
+    "code": "G2931L",
+    "name": "Zero3 L Low Expansion Variant",
+    "source_url": "https://digitalfire.com/recipe/127",
+    "materials": [
+      {
+        "material": "Ferro Frit 3195",
+        "amount": 19.0,
+        "percent": null
+      },
+      {
+        "material": "EPK",
+        "amount": 10.0,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3249",
+        "amount": 19.0,
+        "percent": null
+      },
+      {
+        "material": "Fusion Frit F-524",
+        "amount": 49.0,
+        "percent": null
+      },
+      {
+        "material": "Zinc Oxide",
+        "amount": 2.5,
+        "percent": null
+      }
+    ]
+  },
+  {
+    "id": "130",
+    "source": "digitalfire.com (wayback)",
+    "code": "G3838A",
+    "name": "Low Expansion Transparent for P300 Porcelain",
+    "source_url": "https://digitalfire.com/recipe/130",
+    "materials": [
+      {
+        "material": "Ferro Frit 3134",
+        "amount": 37.0,
+        "percent": null
+      },
+      {
+        "material": "EPK",
+        "amount": 20.0,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 38.0,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3249",
+        "amount": 5.0,
+        "percent": null
+      }
+    ]
+  },
+  {
+    "id": "131",
+    "source": "digitalfire.com (wayback)",
+    "code": "G2931H",
+    "name": "Zero3 H High Expansion Variant",
+    "source_url": "https://digitalfire.com/recipe/131",
+    "materials": [
+      {
+        "material": "Ferro Frit 3195",
+        "amount": 30.0,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3134",
+        "amount": 33.0,
+        "percent": null
+      },
+      {
+        "material": "EPK",
+        "amount": 20.0,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3110",
+        "amount": 17.0,
+        "percent": null
+      }
+    ]
+  },
+  {
+    "id": "132",
+    "source": "digitalfire.com (wayback)",
+    "code": "G2931K",
+    "name": "Zero3 K Cone 03 Transparent Glaze",
+    "source_url": "https://digitalfire.com/recipe/132",
+    "materials": [
+      {
+        "material": "Ferro Frit 3195",
+        "amount": 25.0,
+        "percent": 26.3
+      },
+      {
+        "material": "Ferro Frit 3134",
+        "amount": 33.0,
+        "percent": 34.7
+      },
+      {
+        "material": "EPK",
+        "amount": 20.0,
+        "percent": 21.1
+      },
+      {
+        "material": "Ferro Frit 3249",
+        "amount": 10.0,
+        "percent": 10.5
+      },
+      {
+        "material": "Ferro Frit 3110",
+        "amount": 7.0,
+        "percent": 7.4
+      }
+    ]
+  },
+  {
+    "id": "133",
+    "source": "digitalfire.com (wayback)",
+    "code": "L3924C",
+    "name": "Zero3 Porcelain - Experimental",
+    "source_url": "https://digitalfire.com/recipe/133",
+    "materials": [
+      {
+        "material": "New Zealand Kaolin",
+        "amount": 227.0,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3110",
+        "amount": 300.0,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 200.0,
+        "percent": null
+      },
+      {
+        "material": "VeeGum T",
+        "amount": 30.0,
+        "percent": null
+      },
+      {
+        "material": "Mason 6336 Blue Stain",
+        "amount": 250.0,
+        "percent": null
+      }
+    ]
+  },
+  {
+    "id": "134",
+    "source": "digitalfire.com (wayback)",
+    "code": "L3954B",
+    "name": "Cone 6 White Engobe Recipe",
+    "source_url": "https://digitalfire.com/recipe/134",
+    "materials": [
+      {
+        "material": "Nepheline Syenite",
+        "amount": 18.0,
+        "percent": 20.7
+      },
+      {
+        "material": "Silica",
+        "amount": 15.0,
+        "percent": 17.2
+      },
+      {
+        "material": "OM #4 Ball Clay",
+        "amount": 54.0,
+        "percent": 62.1
+      },
+      {
+        "material": "Zircopax",
+        "amount": 10.0,
+        "percent": 11.49
+      },
+      {
+        "material": "Bentonite",
+        "amount": 3.0,
+        "percent": 3.45
+      }
+    ]
+  },
+  {
+    "id": "135",
+    "source": "digitalfire.com (wayback)",
+    "code": "G2934Y",
+    "name": "G2934 (lower-LOI)",
+    "source_url": "https://digitalfire.com/recipe/135",
+    "materials": [
+      {
+        "material": "Ferro Frit 3249",
+        "amount": 10.0,
+        "percent": null
+      },
+      {
+        "material": "Nepheline Syenite",
+        "amount": 10.5,
+        "percent": null
+      },
+      {
+        "material": "Wollastonite",
+        "amount": 21.5,
+        "percent": null
+      },
+      {
+        "material": "Talc",
+        "amount": 14.0,
+        "percent": null
+      },
+      {
+        "material": "EPK",
+        "amount": 20.5,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 13.0,
+        "percent": null
+      },
+      {
+        "material": "Calcined Kaolin",
+        "amount": 10.5,
+        "percent": null
+      }
+    ]
+  },
+  {
+    "id": "136",
+    "source": "digitalfire.com (wayback)",
+    "code": "L3954N",
+    "name": "White/Black Cone 10 Engobe Recipe",
+    "source_url": "https://digitalfire.com/recipe/136",
+    "materials": [
+      {
+        "material": "Nepheline Syenite",
+        "amount": 10.0,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 20.0,
+        "percent": null
+      },
+      {
+        "material": "Ball Clay",
+        "amount": 60.0,
+        "percent": null
+      },
+      {
+        "material": "Zircopax",
+        "amount": 10.0,
+        "percent": null
+      },
+      {
+        "material": "Bentonite",
+        "amount": 2.0,
+        "percent": null
+      }
+    ]
+  },
+  {
+    "id": "137",
+    "source": "digitalfire.com (wayback)",
+    "code": "G2926S",
+    "name": "G2926B Reduced COE (MgO)",
+    "source_url": "https://digitalfire.com/recipe/137",
+    "materials": [
+      {
+        "material": "Nepheline Syenite",
+        "amount": 20.13,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3134",
+        "amount": 10.48,
+        "percent": null
+      },
+      {
+        "material": "Fusion Frit F-69",
+        "amount": 10.31,
+        "percent": null
+      },
+      {
+        "material": "EPK",
+        "amount": 12.44,
+        "percent": null
+      },
+      {
+        "material": "Wollastonite",
+        "amount": 11.29,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 35.35,
+        "percent": null
+      }
+    ]
+  },
+  {
+    "id": "138",
+    "source": "digitalfire.com (wayback)",
+    "code": "L2000",
+    "name": "25 Porcelain",
+    "source_url": "https://digitalfire.com/recipe/138",
+    "materials": [
+      {
+        "material": "Kaolin",
+        "amount": 25.0,
+        "percent": null
+      },
+      {
+        "material": "Ball Clay",
+        "amount": 25.0,
+        "percent": null
+      },
+      {
+        "material": "Feldspar",
+        "amount": 25.0,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 25.0,
+        "percent": null
+      },
+      {
+        "material": "Bentonite",
+        "amount": 3.0,
+        "percent": null
+      }
+    ]
+  },
+  {
+    "id": "141",
+    "source": "digitalfire.com (wayback)",
+    "code": "G3879",
+    "name": "Cone 04+ UltraClear Glossy Base",
+    "source_url": "https://digitalfire.com/recipe/141",
+    "materials": [
+      {
+        "material": "Fusion Frit F-524",
+        "amount": 850.0,
+        "percent": 82.9
+      },
+      {
+        "material": "Fusion Frit F-69",
+        "amount": 40.0,
+        "percent": 3.9
+      },
+      {
+        "material": "EPK",
+        "amount": 90.0,
+        "percent": 8.8
+      },
+      {
+        "material": "Silica",
+        "amount": 45.0,
+        "percent": 4.4
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "source": "digitalfire.com (wayback)",
+    "code": "G1214Z",
+    "name": "Cone 6 Silky Matte",
+    "source_url": "https://digitalfire.com/recipe/3",
+    "materials": [
+      {
+        "material": "Wollastonite",
+        "amount": 27.0,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3124",
+        "amount": 36.0,
+        "percent": null
+      },
+      {
+        "material": "EPK",
+        "amount": 20.0,
+        "percent": null
+      },
+      {
+        "material": "Calcined Kaolin",
+        "amount": 14.0,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 5.0,
+        "percent": null
+      }
+    ]
+  },
+  {
+    "id": "30",
+    "source": "digitalfire.com (wayback)",
+    "code": "GA6-A",
+    "name": "Oringal Alberta Slip Amber/Honey base",
+    "source_url": "https://digitalfire.com/recipe/30",
+    "materials": [
+      {
+        "material": "Alberta Slip 1000F Roasted",
+        "amount": 40.0,
+        "percent": null
+      },
+      {
+        "material": "Alberta Slip",
+        "amount": 40.0,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3134",
+        "amount": 20.0,
+        "percent": null
+      }
+    ]
+  },
+  {
+    "id": "31",
+    "source": "digitalfire.com (wayback)",
+    "code": "GA6-C",
+    "name": "Alberta Slip Floating Blue Cone 6",
+    "source_url": "https://digitalfire.com/recipe/31",
+    "materials": [
+      {
+        "material": "Alberta Slip 1000F Roasted",
+        "amount": 40.0,
+        "percent": null
+      },
+      {
+        "material": "Alberta Slip",
+        "amount": 40.0,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3134",
+        "amount": 20.0,
+        "percent": null
+      },
+      {
+        "material": "Rutile",
+        "amount": 4.0,
+        "percent": null
+      }
+    ]
+  },
+  {
+    "id": "32",
+    "source": "digitalfire.com (wayback)",
+    "code": "GA10-B",
+    "name": "Alberta Slip Tenmoku Cone 10R",
+    "source_url": "https://digitalfire.com/recipe/32",
+    "materials": [
+      {
+        "material": "Alberta Slip 1000F Roasted",
+        "amount": 50.0,
+        "percent": null
+      },
+      {
+        "material": "Alberta Slip",
+        "amount": 50.0,
+        "percent": null
+      },
+      {
+        "material": "Calcium Carbonate",
+        "amount": 5.0,
+        "percent": null
+      },
+      {
+        "material": "Red Iron Oxide",
+        "amount": 2.0,
+        "percent": null
+      }
+    ]
+  },
+  {
+    "id": "33",
+    "source": "digitalfire.com (wayback)",
+    "code": "GA10-D",
+    "name": "Alberta Slip Black Cone 10R",
+    "source_url": "https://digitalfire.com/recipe/33",
+    "materials": [
+      {
+        "material": "Alberta Slip",
+        "amount": 50.0,
+        "percent": null
+      },
+      {
+        "material": "Alberta Slip 1000F Roasted",
+        "amount": 50.0,
+        "percent": null
+      },
+      {
+        "material": "Mason 6666 or 6600",
+        "amount": 1.0,
+        "percent": null
+      }
+    ]
+  },
+  {
+    "id": "36",
+    "source": "digitalfire.com (wayback)",
+    "code": "GA6-H",
+    "name": "Alberta Slip Cone 6 Black",
+    "source_url": "https://digitalfire.com/recipe/36",
+    "materials": [
+      {
+        "material": "Alberta Slip 1000F Roasted",
+        "amount": 33.0,
+        "percent": 35.5
+      },
+      {
+        "material": "Alberta Slip",
+        "amount": 40.0,
+        "percent": 43.0
+      },
+      {
+        "material": "Ferro Frit 3134",
+        "amount": 20.0,
+        "percent": 21.5
+      },
+      {
+        "material": "Zircopax",
+        "amount": 4.0,
+        "percent": 4.3
+      },
+      {
+        "material": "Mason 6666 Black Stain",
+        "amount": 3.0,
+        "percent": 3.23
+      }
+    ]
+  },
+  {
+    "id": "37",
+    "source": "digitalfire.com (wayback)",
+    "code": "G1214M",
+    "name": "Original Cone 6 Base Glossy Glaze",
+    "source_url": "https://digitalfire.com/recipe/37",
+    "materials": [
+      {
+        "material": "Wollastonite",
+        "amount": 20.0,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3134",
+        "amount": 20.0,
+        "percent": null
+      },
+      {
+        "material": "Custer Feldspar",
+        "amount": 20.0,
+        "percent": null
+      },
+      {
+        "material": "EPK",
+        "amount": 20.0,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 20.0,
+        "percent": null
+      }
+    ]
+  },
+  {
+    "id": "39",
+    "source": "digitalfire.com (wayback)",
+    "code": "G2571A",
+    "name": "Cone 10 Silky Dolomite Matte Base Glaze",
+    "source_url": "https://digitalfire.com/recipe/39",
+    "materials": [
+      {
+        "material": "Wollastonite",
+        "amount": 5.5,
+        "percent": null
+      },
+      {
+        "material": "Custer Feldspar",
+        "amount": 28.5,
+        "percent": null
+      },
+      {
+        "material": "EPK",
+        "amount": 28.0,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 15.0,
+        "percent": null
+      },
+      {
+        "material": "Dolomite",
+        "amount": 19.0,
+        "percent": null
+      },
+      {
+        "material": "Gerstley Borate",
+        "amount": 4.0,
+        "percent": null
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "source": "digitalfire.com (wayback)",
+    "code": "G1214W",
+    "name": "Cone 6 Transparent Base",
+    "source_url": "https://digitalfire.com/recipe/4",
+    "materials": [
+      {
+        "material": "Wollastonite",
+        "amount": 10.0,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3134",
+        "amount": 25.0,
+        "percent": null
+      },
+      {
+        "material": "EP Kaolin",
+        "amount": 25.0,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 25.0,
+        "percent": null
+      },
+      {
+        "material": "F-4 Feldspar",
+        "amount": 15.0,
+        "percent": null
+      }
+    ]
+  },
+  {
+    "id": "40",
+    "source": "digitalfire.com (wayback)",
+    "code": "G1947U",
+    "name": "Cone 10 Glossy Transparent Base Glaze",
+    "source_url": "https://digitalfire.com/recipe/40",
+    "materials": [
+      {
+        "material": "Custer Feldspar",
+        "amount": 27.0,
+        "percent": null
+      },
+      {
+        "material": "EPK",
+        "amount": 20.5,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 26.5,
+        "percent": null
+      },
+      {
+        "material": "Wollastonite",
+        "amount": 23.5,
+        "percent": null
+      },
+      {
+        "material": "Zinc Oxide",
+        "amount": 2.5,
+        "percent": null
+      }
+    ]
+  },
+  {
+    "id": "45",
+    "source": "digitalfire.com (wayback)",
+    "code": "G1215U",
+    "name": "Low Expansion Glossy Clear Cone 6",
+    "source_url": "https://digitalfire.com/recipe/45",
+    "materials": [
+      {
+        "material": "EPK",
+        "amount": 14.0,
+        "percent": 14.2
+      },
+      {
+        "material": "Silica",
+        "amount": 26.0,
+        "percent": 26.4
+      },
+      {
+        "material": "Wollastonite",
+        "amount": 14.5,
+        "percent": 14.7
+      },
+      {
+        "material": "F-4 Feldspar",
+        "amount": 24.0,
+        "percent": 24.4
+      },
+      {
+        "material": "Ferro Frit 3249",
+        "amount": 20.0,
+        "percent": 20.3
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "source": "digitalfire.com (wayback)",
+    "code": "GR6-A",
+    "name": "Ravenscrag Cone 6 Clear Glossy Base",
+    "source_url": "https://digitalfire.com/recipe/5",
+    "materials": [
+      {
+        "material": "Ravenscrag Slip",
+        "amount": 50.0,
+        "percent": null
+      },
+      {
+        "material": "Ravenscrag Slip 1000F Roast",
+        "amount": 30.0,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3134",
+        "amount": 20.0,
+        "percent": null
+      }
+    ]
+  },
+  {
+    "id": "55",
+    "source": "digitalfire.com (wayback)",
+    "code": "g2851H",
+    "name": "Ravenscrag Cone 6 High Calcium Matte Blue",
+    "source_url": "https://digitalfire.com/recipe/55",
+    "materials": [
+      {
+        "material": "Ravenscrag Slip",
+        "amount": 55.0,
+        "percent": null
+      },
+      {
+        "material": "Whiting",
+        "amount": 10.0,
+        "percent": null
+      },
+      {
+        "material": "Dolomite",
+        "amount": 15.0,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3134",
+        "amount": 10.0,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 10.0,
+        "percent": null
+      },
+      {
+        "material": "Cobalt Carbonate",
+        "amount": 2.0,
+        "percent": null
+      },
+      {
+        "material": "Rutile Ceramic",
+        "amount": 5.0,
+        "percent": null
+      }
+    ]
+  },
+  {
+    "id": "57",
+    "source": "digitalfire.com (wayback)",
+    "code": "L3341B",
+    "name": "Alberta Slip Iron Crystal Cone 10R",
+    "source_url": "https://digitalfire.com/recipe/57",
+    "materials": [
+      {
+        "material": "Alberta Slip 1000F Roasted",
+        "amount": 50.0,
+        "percent": null
+      },
+      {
+        "material": "Alberta Slip",
+        "amount": 50.0,
+        "percent": null
+      },
+      {
+        "material": "Red Iron Oxide",
+        "amount": 3.0,
+        "percent": null
+      }
+    ]
+  },
+  {
+    "id": "58",
+    "source": "digitalfire.com (wayback)",
+    "code": "GR10-A",
+    "name": "Pure Ravenscrag Slip",
+    "source_url": "https://digitalfire.com/recipe/58",
+    "materials": [
+      {
+        "material": "Ravenscrag Slip 1000F Roast",
+        "amount": 50.0,
+        "percent": null
+      },
+      {
+        "material": "Ravenscrag Slip",
+        "amount": 50.0,
+        "percent": null
+      }
+    ]
+  },
+  {
+    "id": "59",
+    "source": "digitalfire.com (wayback)",
+    "code": "G2853B",
+    "name": "Cone 04 Clear Ravenscrag School Glaze",
+    "source_url": "https://digitalfire.com/recipe/59",
+    "materials": [
+      {
+        "material": "Ferro Frit 3195",
+        "amount": 50.0,
+        "percent": 25.0
+      },
+      {
+        "material": "Ravenscrag Slip",
+        "amount": 50.0,
+        "percent": 25.0
+      },
+      {
+        "material": "Water",
+        "amount": 100.0,
+        "percent": 50.0
+      }
+    ]
+  },
+  {
+    "id": "61",
+    "source": "digitalfire.com (wayback)",
+    "code": "G2240",
+    "name": "Cone 10R Classic Spodumene Matte",
+    "source_url": "https://digitalfire.com/recipe/61",
+    "materials": [
+      {
+        "material": "Dolomite",
+        "amount": 25.0,
+        "percent": null
+      },
+      {
+        "material": "Custer Feldspar",
+        "amount": 27.5,
+        "percent": null
+      },
+      {
+        "material": "Ball Clay",
+        "amount": 10.0,
+        "percent": null
+      },
+      {
+        "material": "Spodumene",
+        "amount": 8.5,
+        "percent": null
+      },
+      {
+        "material": "Kaolin",
+        "amount": 17.5,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 7.5,
+        "percent": null
+      },
+      {
+        "material": "Zircopax",
+        "amount": 4.0,
+        "percent": null
+      }
+    ]
+  },
+  {
+    "id": "62",
+    "source": "digitalfire.com (wayback)",
+    "code": "G2826R",
+    "name": "Floating Blue Cone 5-6 Original Glaze Recipe",
+    "source_url": "https://digitalfire.com/recipe/62",
+    "materials": [
+      {
+        "material": "Nepheline Syenite",
+        "amount": 47.9,
+        "percent": null
+      },
+      {
+        "material": "Gerstley Borate",
+        "amount": 27.0,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 20.3,
+        "percent": null
+      },
+      {
+        "material": "EPK",
+        "amount": 5.5,
+        "percent": null
+      },
+      {
+        "material": "Iron Oxide Red",
+        "amount": 2.0,
+        "percent": null
+      },
+      {
+        "material": "Cobalt Oxide",
+        "amount": 1.0,
+        "percent": null
+      },
+      {
+        "material": "Rutile",
+        "amount": 4.0,
+        "percent": null
+      }
+    ]
+  },
+  {
+    "id": "63",
+    "source": "digitalfire.com (wayback)",
+    "code": "G2826X",
+    "name": "Randy's Red Cone 5",
+    "source_url": "https://digitalfire.com/recipe/63",
+    "materials": [
+      {
+        "material": "Silica",
+        "amount": 29.7,
+        "percent": null
+      },
+      {
+        "material": "Kaolin",
+        "amount": 5.0,
+        "percent": null
+      },
+      {
+        "material": "F-4 Feldspar",
+        "amount": 19.8,
+        "percent": null
+      },
+      {
+        "material": "Talc",
+        "amount": 13.9,
+        "percent": null
+      },
+      {
+        "material": "Gerstley Borate",
+        "amount": 31.7,
+        "percent": null
+      },
+      {
+        "material": "Red Iron Oxide",
+        "amount": 15.0,
+        "percent": null
+      },
+      {
+        "material": "Bentonite",
+        "amount": 2.0,
+        "percent": null
+      }
+    ]
+  },
+  {
+    "id": "64",
+    "source": "digitalfire.com (wayback)",
+    "code": "CELECG",
+    "name": "Celestite Crystalline Glaze",
+    "source_url": "https://digitalfire.com/recipe/64",
+    "materials": [
+      {
+        "material": "Ferro Frit 3110",
+        "amount": 50.0,
+        "percent": null
+      },
+      {
+        "material": "Zinc Oxide",
+        "amount": 25.0,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 15.0,
+        "percent": null
+      },
+      {
+        "material": "Spodumene",
+        "amount": 5.0,
+        "percent": null
+      },
+      {
+        "material": "Talc",
+        "amount": 4.0,
+        "percent": null
+      },
+      {
+        "material": "Titanium Dioxide",
+        "amount": 1.0,
+        "percent": null
+      }
+    ]
+  },
+  {
+    "id": "65",
+    "source": "digitalfire.com (wayback)",
+    "code": "GRNTCG",
+    "name": "GRANITE Crystalline Glaze",
+    "source_url": "https://digitalfire.com/recipe/65",
+    "materials": [
+      {
+        "material": "Ferro Frit 3110",
+        "amount": 48.0,
+        "percent": null
+      },
+      {
+        "material": "Zinc Oxide",
+        "amount": 22.0,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 20.0,
+        "percent": null
+      },
+      {
+        "material": "Titanium Dioxide",
+        "amount": 10.0,
+        "percent": null
+      }
+    ]
+  },
+  {
+    "id": "66",
+    "source": "digitalfire.com (wayback)",
+    "code": "FAC5",
+    "name": "Crystal Number Five Glaze",
+    "source_url": "https://digitalfire.com/recipe/66",
+    "materials": [
+      {
+        "material": "Ferro Frit 3110",
+        "amount": 50.0,
+        "percent": null
+      },
+      {
+        "material": "Zinc Oxide",
+        "amount": 27.0,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 14.0,
+        "percent": null
+      },
+      {
+        "material": "Spodumene",
+        "amount": 4.0,
+        "percent": null
+      },
+      {
+        "material": "Talc",
+        "amount": 4.0,
+        "percent": null
+      },
+      {
+        "material": "Titanium Dioxide",
+        "amount": 1.0,
+        "percent": null
+      }
+    ]
+  },
+  {
+    "id": "67",
+    "source": "digitalfire.com (wayback)",
+    "code": "FO",
+    "name": "Octal Crystalline Glaze",
+    "source_url": "https://digitalfire.com/recipe/67",
+    "materials": [
+      {
+        "material": "Ferro Frit 3110",
+        "amount": 51.0,
+        "percent": null
+      },
+      {
+        "material": "Zinc Oxide",
+        "amount": 24.0,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 15.4,
+        "percent": null
+      },
+      {
+        "material": "Spodumene",
+        "amount": 1.9,
+        "percent": null
+      },
+      {
+        "material": "Titanium Dioxide",
+        "amount": 2.9,
+        "percent": null
+      },
+      {
+        "material": "Dolomite",
+        "amount": 4.8,
+        "percent": null
+      }
+    ]
+  },
+  {
+    "id": "68",
+    "source": "digitalfire.com (wayback)",
+    "code": "VESUCG",
+    "name": "Vesuvius Crystalline Glaze",
+    "source_url": "https://digitalfire.com/recipe/68",
+    "materials": [
+      {
+        "material": "Ferro Frit 3110",
+        "amount": 50.0,
+        "percent": null
+      },
+      {
+        "material": "Zinc Oxide",
+        "amount": 25.0,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 18.0,
+        "percent": null
+      },
+      {
+        "material": "Whiting",
+        "amount": 5.0,
+        "percent": null
+      },
+      {
+        "material": "Magnesium Carbonate",
+        "amount": 2.0,
+        "percent": null
+      }
+    ]
+  },
+  {
+    "id": "69",
+    "source": "digitalfire.com (wayback)",
+    "code": "FAAO",
+    "name": "Fa's All-Opaque Crystalline Glaze",
+    "source_url": "https://digitalfire.com/recipe/69",
+    "materials": [
+      {
+        "material": "Ferro Frit 3110",
+        "amount": 46.0,
+        "percent": null
+      },
+      {
+        "material": "Zinc Oxide",
+        "amount": 18.0,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 20.0,
+        "percent": null
+      },
+      {
+        "material": "Dolomite",
+        "amount": 9.0,
+        "percent": null
+      },
+      {
+        "material": "Titanium Dioxide",
+        "amount": 6.0,
+        "percent": null
+      },
+      {
+        "material": "Talc",
+        "amount": 1.0,
+        "percent": null
+      }
+    ]
+  },
+  {
+    "id": "72",
+    "source": "digitalfire.com (wayback)",
+    "code": "B1",
+    "name": "Bory 1 Fara Shimbo Crystalline Glaze",
+    "source_url": "https://digitalfire.com/recipe/72",
+    "materials": [
+      {
+        "material": "Ferro Frit 3110",
+        "amount": 50.0,
+        "percent": null
+      },
+      {
+        "material": "Zinc Oxide",
+        "amount": 27.0,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 16.0,
+        "percent": null
+      },
+      {
+        "material": "Titanium Dioxide",
+        "amount": 4.0,
+        "percent": null
+      },
+      {
+        "material": "Gerstley Borate",
+        "amount": 3.0,
+        "percent": null
+      }
+    ]
+  },
+  {
+    "id": "74",
+    "source": "digitalfire.com (wayback)",
+    "code": "TNF2CG",
+    "name": "Tin Foil II Crystalline Glaze",
+    "source_url": "https://digitalfire.com/recipe/74",
+    "materials": [
+      {
+        "material": "Ferro Frit 3110",
+        "amount": 50.0,
+        "percent": null
+      },
+      {
+        "material": "Zinc Oxide",
+        "amount": 25.0,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 16.0,
+        "percent": null
+      },
+      {
+        "material": "Dolomite",
+        "amount": 5.0,
+        "percent": null
+      },
+      {
+        "material": "Tin Oxide",
+        "amount": 2.0,
+        "percent": null
+      },
+      {
+        "material": "Titanium Dioxide",
+        "amount": 2.0,
+        "percent": null
+      }
+    ]
+  },
+  {
+    "id": "75",
+    "source": "digitalfire.com (wayback)",
+    "code": "GC",
+    "name": "GC106 Base Fara Shimbo Crystalline Glaze",
+    "source_url": "https://digitalfire.com/recipe/75",
+    "materials": [
+      {
+        "material": "Frit GF 106",
+        "amount": 70.0,
+        "percent": null
+      },
+      {
+        "material": "Zinc Oxide",
+        "amount": 25.0,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 3.0,
+        "percent": null
+      },
+      {
+        "material": "Titanium Dioxide",
+        "amount": 2.0,
+        "percent": null
+      }
+    ]
+  },
+  {
+    "id": "76",
+    "source": "digitalfire.com (wayback)",
+    "code": "GR6-C",
+    "name": "Ravenscrag Cone 6 White Glossy",
+    "source_url": "https://digitalfire.com/recipe/76",
+    "materials": [
+      {
+        "material": "Ravenscrag Slip",
+        "amount": 40.0,
+        "percent": null
+      },
+      {
+        "material": "Ravenscrag Slip 1000F Roast",
+        "amount": 40.0,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3134",
+        "amount": 20.0,
+        "percent": null
+      },
+      {
+        "material": "Zircopax",
+        "amount": 10.0,
+        "percent": null
+      }
+    ]
+  },
+  {
+    "id": "77",
+    "source": "digitalfire.com (wayback)",
+    "code": "GR6-D",
+    "name": "Ravenscrag Cone 6 Glossy Black",
+    "source_url": "https://digitalfire.com/recipe/77",
+    "materials": [
+      {
+        "material": "Ravenscrag Slip",
+        "amount": 40.0,
+        "percent": null
+      },
+      {
+        "material": "Ravenscrag Slip Roast",
+        "amount": 40.0,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3134",
+        "amount": 20.0,
+        "percent": null
+      },
+      {
+        "material": "Iron Oxide Red",
+        "amount": 13.0,
+        "percent": null
+      },
+      {
+        "material": "Cobalt Oxide",
+        "amount": 0.5,
+        "percent": null
+      },
+      {
+        "material": "Chrome Oxide",
+        "amount": 0.5,
+        "percent": null
+      }
+    ]
+  },
+  {
+    "id": "78",
+    "source": "digitalfire.com (wayback)",
+    "code": "GR6-E",
+    "name": "Ravenscrag Cone 6 Raspberry Glossy",
+    "source_url": "https://digitalfire.com/recipe/78",
+    "materials": [
+      {
+        "material": "Ravenscrag Slip",
+        "amount": 40.0,
+        "percent": null
+      },
+      {
+        "material": "Ravenscrag Slip 1000F Roast",
+        "amount": 30.0,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3134",
+        "amount": 20.0,
+        "percent": null
+      },
+      {
+        "material": "Whiting",
+        "amount": 10.0,
+        "percent": null
+      },
+      {
+        "material": "Tin Oxide",
+        "amount": 7.5,
+        "percent": null
+      },
+      {
+        "material": "Chrome Oxide",
+        "amount": 0.5,
+        "percent": null
+      }
+    ]
+  },
+  {
+    "id": "8",
+    "source": "digitalfire.com (wayback)",
+    "code": "GR6-H",
+    "name": "Ravenscrag Cone 6 Oatmeal Matte",
+    "source_url": "https://digitalfire.com/recipe/8",
+    "materials": [
+      {
+        "material": "Ravenscrag Slip",
+        "amount": 60.0,
+        "percent": null
+      },
+      {
+        "material": "Calcined Alumina",
+        "amount": 10.0,
+        "percent": null
+      },
+      {
+        "material": "Dolomite",
+        "amount": 10.0,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3134",
+        "amount": 20.0,
+        "percent": null
+      },
+      {
+        "material": "Manganese Dioxide",
+        "amount": 4.0,
+        "percent": null
+      },
+      {
+        "material": "Rutile",
+        "amount": 5.0,
+        "percent": null
+      },
+      {
+        "material": "Illmenite Granular",
+        "amount": 0.3,
+        "percent": null
+      }
+    ]
+  },
+  {
+    "id": "80",
+    "source": "digitalfire.com (wayback)",
+    "code": "GR10-B",
+    "name": "Ravenscrag Cone 10R Gloss Base",
+    "source_url": "https://digitalfire.com/recipe/80",
+    "materials": [
+      {
+        "material": "Dolomite",
+        "amount": 10.0,
+        "percent": null
+      },
+      {
+        "material": "Ravenscrag Slip",
+        "amount": 90.0,
+        "percent": null
+      }
+    ]
+  },
+  {
+    "id": "83",
+    "source": "digitalfire.com (wayback)",
+    "code": "GBCG1",
+    "name": "Frit 3110 Generic Base Crystalline Glaze",
+    "source_url": "https://digitalfire.com/recipe/83",
+    "materials": [
+      {
+        "material": "Zinc Oxide",
+        "amount": 25.0,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 25.0,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3110",
+        "amount": 50.0,
+        "percent": null
+      }
+    ]
+  },
+  {
+    "id": "88",
+    "source": "digitalfire.com (wayback)",
+    "code": "GA6-D",
+    "name": "Alberta Slip Glossy Brown Cone 6",
+    "source_url": "https://digitalfire.com/recipe/88",
+    "materials": [
+      {
+        "material": "Alberta Slip 1000F Roasted",
+        "amount": 40.0,
+        "percent": null
+      },
+      {
+        "material": "Alberta Slip",
+        "amount": 40.0,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3134",
+        "amount": 20.0,
+        "percent": null
+      },
+      {
+        "material": "Tin Oxide",
+        "amount": 4.0,
+        "percent": null
+      },
+      {
+        "material": "Rutile",
+        "amount": 4.0,
+        "percent": null
+      }
+    ]
+  },
+  {
+    "id": "91",
+    "source": "digitalfire.com (wayback)",
+    "code": "GR10-J",
+    "name": "Ravenscrag Cone 10R Dolomite Matte",
+    "source_url": "https://digitalfire.com/recipe/91",
+    "materials": [
+      {
+        "material": "Ravenscrag Slip",
+        "amount": 51.6,
+        "percent": null
+      },
+      {
+        "material": "Dolomite",
+        "amount": 12.1,
+        "percent": null
+      },
+      {
+        "material": "Talc",
+        "amount": 2.6,
+        "percent": null
+      },
+      {
+        "material": "Gerstley Borate",
+        "amount": 4.0,
+        "percent": null
+      },
+      {
+        "material": "Calcined Kaolin",
+        "amount": 13.5,
+        "percent": null
+      },
+      {
+        "material": "Custer Feldspar",
+        "amount": 16.2,
+        "percent": null
+      }
+    ]
+  },
+  {
+    "id": "92",
+    "source": "digitalfire.com (wayback)",
+    "code": "GR10-E",
+    "name": "Alberta Slip:Ravenscrag Cone 10R Celadon",
+    "source_url": "https://digitalfire.com/recipe/92",
+    "materials": [
+      {
+        "material": "Alberta Slip 1000F Roast",
+        "amount": 47.5,
+        "percent": null
+      },
+      {
+        "material": "Ravenscrag Slip",
+        "amount": 47.5,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3134",
+        "amount": 5.0,
+        "percent": null
+      }
+    ]
+  },
+  {
+    "id": "93",
+    "source": "digitalfire.com (wayback)",
+    "code": "GA10-A",
+    "name": "Alberta Slip Base Cone 10R",
+    "source_url": "https://digitalfire.com/recipe/93",
+    "materials": [
+      {
+        "material": "Alberta Slip 1000F Roasted",
+        "amount": 60.0,
+        "percent": null
+      },
+      {
+        "material": "Alberta Slip",
+        "amount": 40.0,
+        "percent": null
+      }
+    ]
+  },
+  {
+    "id": "94",
+    "source": "digitalfire.com (wayback)",
+    "code": "GA10x-A",
+    "name": "Alberta Slip Base for cone 10 oxidation",
+    "source_url": "https://digitalfire.com/recipe/94",
+    "materials": [
+      {
+        "material": "Alberta Slip 1000F Roasted",
+        "amount": 45.0,
+        "percent": null
+      },
+      {
+        "material": "Alberta Slip",
+        "amount": 45.0,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3134",
+        "amount": 10.0,
+        "percent": null
+      }
+    ]
+  },
+  {
+    "id": "95",
+    "source": "digitalfire.com (wayback)",
+    "code": "GR10-C",
+    "name": "Ravenscrag Talc Matte",
+    "source_url": "https://digitalfire.com/recipe/95",
+    "materials": [
+      {
+        "material": "Ravenscrag Slip",
+        "amount": 45.0,
+        "percent": null
+      },
+      {
+        "material": "Ravenscrag Slip 1000F Roast",
+        "amount": 45.0,
+        "percent": null
+      },
+      {
+        "material": "Silverline 303 Talc",
+        "amount": 10.0,
+        "percent": null
+      }
+    ]
+  },
+  {
+    "id": "96",
+    "source": "digitalfire.com (wayback)",
+    "code": "GR10-G",
+    "name": "Ravenscrag Cone 10 Oxidation Variegated White",
+    "source_url": "https://digitalfire.com/recipe/96",
+    "materials": [
+      {
+        "material": "Ravenscrag Slip",
+        "amount": 100.0,
+        "percent": null
+      },
+      {
+        "material": "Talc",
+        "amount": 10.0,
+        "percent": null
+      },
+      {
+        "material": "Tin Oxide",
+        "amount": 4.0,
+        "percent": null
+      }
+    ]
+  },
+  {
+    "id": "97",
+    "source": "digitalfire.com (wayback)",
+    "code": "GA6-F",
+    "name": "Alberta Slip Cone 6 Oatmeal",
+    "source_url": "https://digitalfire.com/recipe/97",
+    "materials": [
+      {
+        "material": "Alberta Slip 1000F Roasted",
+        "amount": 40.0,
+        "percent": null
+      },
+      {
+        "material": "Alberta Slip",
+        "amount": 40.0,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3134",
+        "amount": 20.0,
+        "percent": null
+      },
+      {
+        "material": "Rutile",
+        "amount": 5.0,
+        "percent": null
+      },
+      {
+        "material": "Titanium Dioxide",
+        "amount": 3.0,
+        "percent": null
+      }
+    ]
+  },
+  {
+    "id": "g2931K",
+    "source": "digitalfire.com (wayback)",
+    "code": "G2931K",
+    "name": "Zero3 K Cone 03 Transparent Glaze",
+    "source_url": "https://digitalfire.com/recipe/g2931K",
+    "materials": [
+      {
+        "material": "Ferro Frit 3195",
+        "amount": 25.0,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3134",
+        "amount": 33.0,
+        "percent": null
+      },
+      {
+        "material": "EPK",
+        "amount": 20.0,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3249",
+        "amount": 10.0,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3110",
+        "amount": 7.0,
+        "percent": null
+      }
+    ]
+  },
+  {
+    "id": "il-Wu5nR8pftt",
+    "code": "G1214M",
+    "name": "The 20x5 Recipe Has Been Improved",
+    "materials": [
+      {
+        "material": "Gerstley Borate",
+        "amount": 50.0,
+        "percent": null
+      },
+      {
+        "material": "EPK",
+        "amount": 20.0,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 30.0,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3134",
+        "amount": 50.0,
+        "percent": 47.62
+      },
+      {
+        "material": "EPK",
+        "amount": 30.0,
+        "percent": 28.57
+      },
+      {
+        "material": "Silica",
+        "amount": 25.0,
+        "percent": 23.81
+      },
+      {
+        "material": "Wollastonite",
+        "amount": 20.0,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3134",
+        "amount": 20.0,
+        "percent": null
+      },
+      {
+        "material": "EPK",
+        "amount": 20.0,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 20.0,
+        "percent": null
+      },
+      {
+        "material": "Custer Feldspar",
+        "amount": 20.0,
+        "percent": null
+      },
+      {
+        "material": "Nepheline Syenite",
+        "amount": 18.3,
+        "percent": 16.62
+      },
+      {
+        "material": "Ferro Frit 3134",
+        "amount": 25.4,
+        "percent": 23.07
+      },
+      {
+        "material": "EPK",
+        "amount": 19.6,
+        "percent": 17.8
+      },
+      {
+        "material": "Vansil W-30 Wollastonite",
+        "amount": 6.9,
+        "percent": 6.27
+      },
+      {
+        "material": "Silica 325 mesh (Silica)",
+        "amount": 37.6,
+        "percent": 34.15
+      },
+      {
+        "material": "Silverline 303 Talc",
+        "amount": 2.3,
+        "percent": 2.09
+      }
+    ],
+    "source": "insight-live.com (public share) via digitalfire.com"
+  },
+  {
+    "id": "il-ZN33C1ZyqD",
+    "code": "G1214Z",
+    "name": "Comparing matte and glossy cone 6 glaze chemistry",
+    "materials": [
+      {
+        "material": "Ferro Frit 3124",
+        "amount": 19.4,
+        "percent": 19.01
+      },
+      {
+        "material": "EP Kaolin",
+        "amount": 18.3,
+        "percent": 17.93
+      },
+      {
+        "material": "Dolomite",
+        "amount": 23.5,
+        "percent": 23.03
+      },
+      {
+        "material": "Silica",
+        "amount": 26.96,
+        "percent": 26.42
+      },
+      {
+        "material": "Calcined Kaolin",
+        "amount": 13.9,
+        "percent": 13.62
+      },
+      {
+        "material": "Wollastonite",
+        "amount": 27.0,
+        "percent": 25.71
+      },
+      {
+        "material": "Ferro Frit 3124",
+        "amount": 36.0,
+        "percent": 34.29
+      },
+      {
+        "material": "EPK",
+        "amount": 37.0,
+        "percent": 35.24
+      },
+      {
+        "material": "Silica",
+        "amount": 5.0,
+        "percent": 4.76
+      },
+      {
+        "material": "Nepheline Syenite",
+        "amount": 18.3,
+        "percent": 16.62
+      },
+      {
+        "material": "Ferro Frit 3134",
+        "amount": 25.4,
+        "percent": 23.07
+      },
+      {
+        "material": "EPK",
+        "amount": 19.6,
+        "percent": 17.8
+      },
+      {
+        "material": "Vansil W-30 Wollastonite",
+        "amount": 6.9,
+        "percent": 6.27
+      },
+      {
+        "material": "Silica 325 mesh (Silica)",
+        "amount": 37.6,
+        "percent": 34.15
+      },
+      {
+        "material": "Silverline 303 Talc",
+        "amount": 2.3,
+        "percent": 2.09
+      }
+    ],
+    "source": "insight-live.com (public share) via digitalfire.com"
+  },
+  {
+    "id": "il-7WnpT9vC3b",
+    "code": "G1214Z1",
+    "name": "G1214Z Calcium Matte Cone 6 base glaze recipe",
+    "materials": [
+      {
+        "material": "Wollastonite",
+        "amount": 27.0,
+        "percent": 25.71
+      },
+      {
+        "material": "Ferro Frit 3124",
+        "amount": 36.0,
+        "percent": 34.29
+      },
+      {
+        "material": "EPK",
+        "amount": 37.0,
+        "percent": 35.24
+      },
+      {
+        "material": "Silica",
+        "amount": 5.0,
+        "percent": 4.76
+      },
+      {
+        "material": "Wollastonite",
+        "amount": 27.0,
+        "percent": 26.73
+      },
+      {
+        "material": "Ferro Frit 3124",
+        "amount": 36.0,
+        "percent": 35.64
+      },
+      {
+        "material": "EPK",
+        "amount": 20.0,
+        "percent": 19.8
+      },
+      {
+        "material": "Silica",
+        "amount": 5.0,
+        "percent": 4.95
+      },
+      {
+        "material": "Calcined Kaolin",
+        "amount": 13.0,
+        "percent": 12.87
+      },
+      {
+        "material": "Wollastonite",
+        "amount": 27.0,
+        "percent": 26.73
+      },
+      {
+        "material": "Ferro Frit 3124",
+        "amount": 36.0,
+        "percent": 35.64
+      },
+      {
+        "material": "EPK",
+        "amount": 20.0,
+        "percent": 19.8
+      },
+      {
+        "material": "Silica",
+        "amount": 5.0,
+        "percent": 4.95
+      },
+      {
+        "material": "Calcined Kaolin",
+        "amount": 13.0,
+        "percent": 12.87
+      }
+    ],
+    "source": "insight-live.com (public share) via digitalfire.com"
+  },
+  {
+    "id": "il-wK2ZW14yNo",
+    "code": "G1916Q",
+    "name": "Five Low Fire Base Clear Glazes: What is the Best Strategy?",
+    "materials": [
+      {
+        "material": "Ferro Frit 3134",
+        "amount": 30.0,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3195",
+        "amount": 45.0,
+        "percent": null
+      },
+      {
+        "material": "EP Kaolin",
+        "amount": 25.0,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3134",
+        "amount": 29.0,
+        "percent": 24.79
+      },
+      {
+        "material": "Ferro Frit 3195",
+        "amount": 44.0,
+        "percent": 37.61
+      },
+      {
+        "material": "EPK",
+        "amount": 24.0,
+        "percent": 20.51
+      },
+      {
+        "material": "Silica",
+        "amount": 20.0,
+        "percent": 17.09
+      },
+      {
+        "material": "Veegum T",
+        "amount": 1.55,
+        "percent": 1.32
+      },
+      {
+        "material": "Gerstley Borate",
+        "amount": 55.0,
+        "percent": null
+      },
+      {
+        "material": "EPK",
+        "amount": 30.0,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 15.0,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3195",
+        "amount": 65.0,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3110",
+        "amount": 10.0,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3249",
+        "amount": 10.0,
+        "percent": null
+      },
+      {
+        "material": "No. 5 Ball Clay",
+        "amount": 15.0,
+        "percent": null
+      },
+      {
+        "material": "Fusion Frit F-524",
+        "amount": 850.0,
+        "percent": 82.93
+      },
+      {
+        "material": "Fusion Frit F-69",
+        "amount": 40.0,
+        "percent": 3.9
+      },
+      {
+        "material": "EPK",
+        "amount": 90.0,
+        "percent": 8.78
+      },
+      {
+        "material": "Silica",
+        "amount": 45.0,
+        "percent": 4.39
+      }
+    ],
+    "source": "insight-live.com (public share) via digitalfire.com"
+  },
+  {
+    "id": "il-knqPkMSqCf",
+    "code": "G1947U",
+    "name": "Enhance the G1947U Cone 10R Transparent Base Glaze",
+    "materials": [
+      {
+        "material": "Custer Feldspar",
+        "amount": 27.0,
+        "percent": null
+      },
+      {
+        "material": "EP Kaolin",
+        "amount": 20.5,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 26.5,
+        "percent": null
+      },
+      {
+        "material": "Wollastonite",
+        "amount": 23.5,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3110",
+        "amount": 28.5,
+        "percent": 23.75
+      },
+      {
+        "material": "Calcined Kaolin",
+        "amount": 12.5,
+        "percent": 10.42
+      },
+      {
+        "material": "Ferro Frit 3249",
+        "amount": 4.5,
+        "percent": 3.75
+      },
+      {
+        "material": "EP Kaolin",
+        "amount": 18.5,
+        "percent": 15.42
+      },
+      {
+        "material": "Silica",
+        "amount": 35.5,
+        "percent": 29.58
+      },
+      {
+        "material": "Wollastonite",
+        "amount": 20.5,
+        "percent": 17.08
+      },
+      {
+        "material": "Ferro Frit 3110",
+        "amount": 21.8,
+        "percent": null
+      },
+      {
+        "material": "Fusion Frit F-69",
+        "amount": 3.6,
+        "percent": null
+      },
+      {
+        "material": "Grolleg Kaolin",
+        "amount": 25.9,
+        "percent": null
+      },
+      {
+        "material": "Silica 400 mesh (Silica)",
+        "amount": 32.1,
+        "percent": null
+      },
+      {
+        "material": "Wollastonite",
+        "amount": 16.6,
+        "percent": null
+      }
+    ],
+    "source": "insight-live.com (public share) via digitalfire.com"
+  },
+  {
+    "id": "il-2GHe1LpXzK",
+    "code": "G2571A",
+    "name": "Original G2571A cone 10R silky matte improved",
+    "materials": [
+      {
+        "material": "Wollastonite",
+        "amount": 5.5,
+        "percent": null
+      },
+      {
+        "material": "Custer Feldspar",
+        "amount": 28.5,
+        "percent": null
+      },
+      {
+        "material": "EP Kaolin",
+        "amount": 28.0,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 15.0,
+        "percent": null
+      },
+      {
+        "material": "Dolomite",
+        "amount": 19.0,
+        "percent": null
+      },
+      {
+        "material": "Gerstley Borate",
+        "amount": 4.0,
+        "percent": null
+      },
+      {
+        "material": "Wollastonite",
+        "amount": 19.0,
+        "percent": 19.19
+      },
+      {
+        "material": "Custer Feldspar",
+        "amount": 32.0,
+        "percent": 32.32
+      },
+      {
+        "material": "EPK",
+        "amount": 20.0,
+        "percent": 20.2
+      },
+      {
+        "material": "Calcined Kaolin",
+        "amount": 9.0,
+        "percent": 9.09
+      },
+      {
+        "material": "Talc",
+        "amount": 14.0,
+        "percent": 14.14
+      },
+      {
+        "material": "Gillespie Borate",
+        "amount": 5.0,
+        "percent": 5.05
+      }
+    ],
+    "source": "insight-live.com (public share) via digitalfire.com"
+  },
+  {
+    "id": "il-FuGkW4GNms",
+    "code": "G2926J",
+    "name": "Lowering the Thermal Expansion of G2926B",
+    "materials": [
+      {
+        "material": "Nepheline Syenite",
+        "amount": 18.3,
+        "percent": 16.62
+      },
+      {
+        "material": "Ferro Frit 3134",
+        "amount": 25.4,
+        "percent": 23.07
+      },
+      {
+        "material": "EPK",
+        "amount": 19.6,
+        "percent": 17.8
+      },
+      {
+        "material": "Vansil W-30 Wollastonite",
+        "amount": 6.9,
+        "percent": 6.27
+      },
+      {
+        "material": "Silica 325 mesh (Silica)",
+        "amount": 37.6,
+        "percent": 34.15
+      },
+      {
+        "material": "Silverline 303 Talc",
+        "amount": 2.3,
+        "percent": 2.09
+      },
+      {
+        "material": "Nepheline Syenite",
+        "amount": 20.131,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3134",
+        "amount": 10.475,
+        "percent": null
+      },
+      {
+        "material": "Fusion Frit F-69",
+        "amount": 10.311,
+        "percent": null
+      },
+      {
+        "material": "EPK",
+        "amount": 12.439,
+        "percent": null
+      },
+      {
+        "material": "Wollastonite",
+        "amount": 11.293,
+        "percent": null
+      },
+      {
+        "material": "Silica 325 mesh (Silica)",
+        "amount": 35.352,
+        "percent": null
+      },
+      {
+        "material": "Spodumene",
+        "amount": 11.0,
+        "percent": null
+      },
+      {
+        "material": "Fusion Frit F-524",
+        "amount": 15.0,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3134",
+        "amount": 15.0,
+        "percent": null
+      },
+      {
+        "material": "EPK",
+        "amount": 18.0,
+        "percent": null
+      },
+      {
+        "material": "Wollastonite",
+        "amount": 6.0,
+        "percent": null
+      },
+      {
+        "material": "Silica 325 mesh (Silica)",
+        "amount": 32.0,
+        "percent": null
+      },
+      {
+        "material": "Silverline 303 Talc",
+        "amount": 3.0,
+        "percent": null
+      }
+    ],
+    "source": "insight-live.com (public share) via digitalfire.com"
+  },
+  {
+    "id": "il-8JFvDgDc3X",
+    "code": "G2931H",
+    "name": "Zero3 Clear Glazes With Firing Schedule",
+    "materials": [
+      {
+        "material": "Ferro Frit 3195",
+        "amount": 19.0,
+        "percent": null
+      },
+      {
+        "material": "EPK",
+        "amount": 10.0,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3249",
+        "amount": 19.0,
+        "percent": null
+      },
+      {
+        "material": "Fusion Frit F-524",
+        "amount": 49.0,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3195",
+        "amount": 25.0,
+        "percent": 26.32
+      },
+      {
+        "material": "Ferro Frit 3134",
+        "amount": 33.0,
+        "percent": 34.74
+      },
+      {
+        "material": "EPK",
+        "amount": 20.0,
+        "percent": 21.05
+      },
+      {
+        "material": "Ferro Frit 3249",
+        "amount": 10.0,
+        "percent": 10.53
+      },
+      {
+        "material": "Ferro Frit 3110",
+        "amount": 7.0,
+        "percent": 7.37
+      },
+      {
+        "material": "Ferro Frit 3195",
+        "amount": 30.0,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3134",
+        "amount": 33.0,
+        "percent": null
+      },
+      {
+        "material": "EPK",
+        "amount": 20.0,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3110",
+        "amount": 17.0,
+        "percent": null
+      }
+    ],
+    "source": "insight-live.com (public share) via digitalfire.com"
+  },
+  {
+    "id": "il-gq8Lg6sJoD",
+    "code": "G2931L",
+    "name": "G2931L Equivalent Using Fusion F-69 instead of Ferro 3249",
+    "materials": [
+      {
+        "material": "Ferro Frit 3195",
+        "amount": 19.0,
+        "percent": null
+      },
+      {
+        "material": "EPK",
+        "amount": 10.0,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3249",
+        "amount": 19.0,
+        "percent": null
+      },
+      {
+        "material": "Fusion Frit F-524",
+        "amount": 49.0,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3195",
+        "amount": 21.5,
+        "percent": null
+      },
+      {
+        "material": "EPK",
+        "amount": 10.0,
+        "percent": null
+      },
+      {
+        "material": "Fusion Frit f-69",
+        "amount": 18.0,
+        "percent": null
+      },
+      {
+        "material": "Fusion Frit F-524",
+        "amount": 48.0,
+        "percent": null
+      }
+    ],
+    "source": "insight-live.com (public share) via digitalfire.com"
+  },
+  {
+    "id": "il-bKPFpa67YX",
+    "code": "G2934",
+    "name": "G2934 was born from a recipe we used for testing dolomite",
+    "materials": [
+      {
+        "material": "Ferro Frit 3124",
+        "amount": 20.0,
+        "percent": null
+      },
+      {
+        "material": "EP Kaolin",
+        "amount": 21.0,
+        "percent": null
+      },
+      {
+        "material": "Dolomite",
+        "amount": 27.0,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 32.0,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3124",
+        "amount": 17.54,
+        "percent": 17.56
+      },
+      {
+        "material": "EPK",
+        "amount": 14.4,
+        "percent": 14.42
+      },
+      {
+        "material": "Dolomite",
+        "amount": 23.6,
+        "percent": 23.63
+      },
+      {
+        "material": "Silica",
+        "amount": 44.35,
+        "percent": 44.4
+      },
+      {
+        "material": "Ferro Frit 3124",
+        "amount": 19.4,
+        "percent": 19.01
+      },
+      {
+        "material": "EP Kaolin",
+        "amount": 18.3,
+        "percent": 17.93
+      },
+      {
+        "material": "Dolomite",
+        "amount": 23.5,
+        "percent": 23.03
+      },
+      {
+        "material": "Silica",
+        "amount": 26.96,
+        "percent": 26.42
+      },
+      {
+        "material": "Calcined Kaolin",
+        "amount": 13.9,
+        "percent": 13.62
+      }
+    ],
+    "source": "insight-live.com (public share) via digitalfire.com"
+  },
+  {
+    "id": "il-CMv4xKF3on",
+    "code": "G2934Y",
+    "name": "G2934Y Cone 6 Matte with Fusion Frit F-69",
+    "materials": [
+      {
+        "material": "Ferro Frit 3249",
+        "amount": 10.0,
+        "percent": null
+      },
+      {
+        "material": "EPK",
+        "amount": 20.5,
+        "percent": null
+      },
+      {
+        "material": "Wollastonite",
+        "amount": 21.5,
+        "percent": null
+      },
+      {
+        "material": "Talc",
+        "amount": 14.0,
+        "percent": null
+      },
+      {
+        "material": "Nepheline Syenite",
+        "amount": 10.5,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 13.0,
+        "percent": null
+      },
+      {
+        "material": "Calcined Kaolin",
+        "amount": 10.5,
+        "percent": null
+      },
+      {
+        "material": "Fusion Frit F-69",
+        "amount": 10.0,
+        "percent": null
+      },
+      {
+        "material": "Nepheline Syenite",
+        "amount": 10.5,
+        "percent": null
+      },
+      {
+        "material": "Wollastonite",
+        "amount": 21.5,
+        "percent": null
+      },
+      {
+        "material": "Talc",
+        "amount": 14.0,
+        "percent": null
+      },
+      {
+        "material": "EPK",
+        "amount": 20.5,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 13.0,
+        "percent": null
+      },
+      {
+        "material": "Calcined Kaolin",
+        "amount": 10.5,
+        "percent": null
+      },
+      {
+        "material": "*Mason 6021 Red Stain",
+        "amount": 11.0,
+        "percent": null
+      }
+    ],
+    "source": "insight-live.com (public share) via digitalfire.com"
+  },
+  {
+    "id": "il-nB3JEnMhBi",
+    "code": "Cone 6 Fluid Melt Glaze Project 2015",
+    "name": "Stage 1 - Compare Popular Recipes",
+    "materials": [
+      {
+        "material": "Custer Feldspar",
+        "amount": 53.0,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 17.0,
+        "percent": null
+      },
+      {
+        "material": "Whiting",
+        "amount": 15.0,
+        "percent": null
+      },
+      {
+        "material": "EP Kaolin",
+        "amount": 6.0,
+        "percent": null
+      },
+      {
+        "material": "Talc",
+        "amount": 4.0,
+        "percent": null
+      },
+      {
+        "material": "Copper Carbonate",
+        "amount": 1.0,
+        "percent": null
+      },
+      {
+        "material": "Lithium Carbonate",
+        "amount": 3.0,
+        "percent": null
+      },
+      {
+        "material": "Strontium Carbonate",
+        "amount": 9.0,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3110",
+        "amount": 59.0,
+        "percent": null
+      },
+      {
+        "material": "EP Kaolin",
+        "amount": 12.0,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 17.0,
+        "percent": null
+      },
+      {
+        "material": "Bentonite",
+        "amount": 2.0,
+        "percent": null
+      },
+      {
+        "material": "Copper Carbonate",
+        "amount": 5.0,
+        "percent": null
+      },
+      {
+        "material": "Minspar 200",
+        "amount": 40.0,
+        "percent": null
+      },
+      {
+        "material": "OM4 Ball Clay",
+        "amount": 15.0,
+        "percent": null
+      },
+      {
+        "material": "Gerstley Borate",
+        "amount": 35.0,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 10.0,
+        "percent": null
+      },
+      {
+        "material": "Minspar 200",
+        "amount": 27.984,
+        "percent": null
+      },
+      {
+        "material": "EP Kaolin",
+        "amount": 14.873,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3134",
+        "amount": 31.746,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 11.111,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3249",
+        "amount": 11.111,
+        "percent": null
+      },
+      {
+        "material": "Wollastonite",
+        "amount": 3.175,
+        "percent": null
+      },
+      {
+        "material": "Spodumene",
+        "amount": 11.0,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3134",
+        "amount": 21.0,
+        "percent": null
+      },
+      {
+        "material": "EP Kaolin",
+        "amount": 20.0,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 20.0,
+        "percent": null
+      },
+      {
+        "material": "Wollastonite",
+        "amount": 20.0,
+        "percent": null
+      },
+      {
+        "material": "Custer Feldspar",
+        "amount": 11.5,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 20.0,
+        "percent": null
+      },
+      {
+        "material": "Whiting",
+        "amount": 1.0,
+        "percent": null
+      },
+      {
+        "material": "Kaolin",
+        "amount": 15.0,
+        "percent": null
+      },
+      {
+        "material": "Dolomite",
+        "amount": 8.0,
+        "percent": null
+      },
+      {
+        "material": "Strontium Carbonate",
+        "amount": 4.0,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3110",
+        "amount": 29.5,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3134",
+        "amount": 7.5,
+        "percent": null
+      },
+      {
+        "material": "Copper Carbonate",
+        "amount": 2.0,
+        "percent": null
+      }
+    ],
+    "source": "insight-live.com (public share) via digitalfire.com"
+  },
+  {
+    "id": "il-KoGbaNQqyp",
+    "code": "Cone 6 Fluid Melt Glaze Project 2015",
+    "name": "Stage 1 - Compare Popular Recipes",
+    "materials": [
+      {
+        "material": "Custer Feldspar",
+        "amount": 53.0,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 17.0,
+        "percent": null
+      },
+      {
+        "material": "Whiting",
+        "amount": 15.0,
+        "percent": null
+      },
+      {
+        "material": "EP Kaolin",
+        "amount": 6.0,
+        "percent": null
+      },
+      {
+        "material": "Talc",
+        "amount": 4.0,
+        "percent": null
+      },
+      {
+        "material": "Copper Carbonate",
+        "amount": 1.0,
+        "percent": null
+      },
+      {
+        "material": "Lithium Carbonate",
+        "amount": 3.0,
+        "percent": null
+      },
+      {
+        "material": "Strontium Carbonate",
+        "amount": 9.0,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3110",
+        "amount": 59.0,
+        "percent": null
+      },
+      {
+        "material": "EP Kaolin",
+        "amount": 12.0,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 17.0,
+        "percent": null
+      },
+      {
+        "material": "Bentonite",
+        "amount": 2.0,
+        "percent": null
+      },
+      {
+        "material": "Copper Carbonate",
+        "amount": 5.0,
+        "percent": null
+      },
+      {
+        "material": "Minspar 200",
+        "amount": 40.0,
+        "percent": null
+      },
+      {
+        "material": "OM4 Ball Clay",
+        "amount": 15.0,
+        "percent": null
+      },
+      {
+        "material": "Gerstley Borate",
+        "amount": 35.0,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 10.0,
+        "percent": null
+      },
+      {
+        "material": "Minspar 200",
+        "amount": 27.984,
+        "percent": null
+      },
+      {
+        "material": "EP Kaolin",
+        "amount": 14.873,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3134",
+        "amount": 31.746,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 11.111,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3249",
+        "amount": 11.111,
+        "percent": null
+      },
+      {
+        "material": "Wollastonite",
+        "amount": 3.175,
+        "percent": null
+      },
+      {
+        "material": "Spodumene",
+        "amount": 11.0,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3134",
+        "amount": 21.0,
+        "percent": null
+      },
+      {
+        "material": "EP Kaolin",
+        "amount": 20.0,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 20.0,
+        "percent": null
+      },
+      {
+        "material": "Wollastonite",
+        "amount": 20.0,
+        "percent": null
+      },
+      {
+        "material": "Custer Feldspar",
+        "amount": 11.5,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 20.0,
+        "percent": null
+      },
+      {
+        "material": "Whiting",
+        "amount": 1.0,
+        "percent": null
+      },
+      {
+        "material": "Kaolin",
+        "amount": 15.0,
+        "percent": null
+      },
+      {
+        "material": "Dolomite",
+        "amount": 8.0,
+        "percent": null
+      },
+      {
+        "material": "Strontium Carbonate",
+        "amount": 4.0,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3110",
+        "amount": 29.5,
+        "percent": null
+      },
+      {
+        "material": "Ferro Frit 3134",
+        "amount": 7.5,
+        "percent": null
+      },
+      {
+        "material": "Copper Carbonate",
+        "amount": 2.0,
+        "percent": null
+      }
+    ],
+    "source": "insight-live.com (public share) via digitalfire.com"
+  },
+  {
+    "id": "il-7MF5sjibG8",
+    "code": "GR10-A",
+    "name": "Ravenscrag base glossy and matte glazes",
+    "materials": [
+      {
+        "material": "Ravenscrag Slip",
+        "amount": 50.0,
+        "percent": null
+      },
+      {
+        "material": "Ravenscrag Slip 1000F Roast",
+        "amount": 50.0,
+        "percent": null
+      },
+      {
+        "material": "Ravenscrag Slip",
+        "amount": 45.0,
+        "percent": null
+      },
+      {
+        "material": "Ravenscrag Slip 1000F Roast",
+        "amount": 45.0,
+        "percent": null
+      },
+      {
+        "material": "Silverline 303 Talc",
+        "amount": 10.0,
+        "percent": null
+      },
+      {
+        "material": "Ravenscrag Slip",
+        "amount": 35.0,
+        "percent": null
+      },
+      {
+        "material": "Ravenscrag Slip 1000F Roast",
+        "amount": 52.0,
+        "percent": null
+      },
+      {
+        "material": "Silverline 303 Talc",
+        "amount": 10.0,
+        "percent": null
+      },
+      {
+        "material": "Zircopax",
+        "amount": 6.0,
+        "percent": null
+      }
+    ],
+    "source": "insight-live.com (public share) via digitalfire.com"
+  },
+  {
+    "id": "il-uiqNgtxwws",
+    "code": "L3954B",
+    "name": "L3954F Cone 6 Engobe for Plainsman M340, M390, Coffee Clay",
+    "materials": [
+      {
+        "material": "Nepheline Syenite",
+        "amount": 18.0,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 15.0,
+        "percent": null
+      },
+      {
+        "material": "OM #4 Ball Clay",
+        "amount": 54.0,
+        "percent": null
+      },
+      {
+        "material": "Zircopax",
+        "amount": 10.0,
+        "percent": null
+      },
+      {
+        "material": "Bentonite",
+        "amount": 3.0,
+        "percent": null
+      },
+      {
+        "material": "Nepheline Syenite",
+        "amount": 18.0,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 15.0,
+        "percent": null
+      },
+      {
+        "material": "M23 Ball Clay",
+        "amount": 54.0,
+        "percent": null
+      },
+      {
+        "material": "Bentonite",
+        "amount": 3.0,
+        "percent": null
+      },
+      {
+        "material": "Mason 6600 Stain",
+        "amount": 15.0,
+        "percent": null
+      },
+      {
+        "material": "Nepheline Syenite",
+        "amount": 15.0,
+        "percent": null
+      },
+      {
+        "material": "New Zealand Kaolin",
+        "amount": 60.0,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 25.0,
+        "percent": null
+      },
+      {
+        "material": "Veegum T",
+        "amount": 3.0,
+        "percent": null
+      },
+      {
+        "material": "Zircopax",
+        "amount": 20.0,
+        "percent": null
+      },
+      {
+        "material": "Nepheline Syenite",
+        "amount": 10.0,
+        "percent": null
+      },
+      {
+        "material": "New Zealand Kaolin",
+        "amount": 55.0,
+        "percent": null
+      },
+      {
+        "material": "Silica",
+        "amount": 25.0,
+        "percent": null
+      },
+      {
+        "material": "Wollastonite",
+        "amount": 10.0,
+        "percent": null
+      },
+      {
+        "material": "Veegum T",
+        "amount": 3.0,
+        "percent": null
+      },
+      {
+        "material": "Zircopax",
+        "amount": 20.0,
+        "percent": null
+      }
+    ],
+    "source": "insight-live.com (public share) via digitalfire.com"
   }
 ]

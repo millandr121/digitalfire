@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react'
 import type { Oxide } from './types'
+import { addToNotebook } from './notebook'
 
 // Coefficient of thermal expansion (×10⁻⁶/°C) per oxide
 // Values from digitalfire.com oxide data + standard ceramic references
@@ -146,6 +147,7 @@ export function ThermalCalc(_props: { oxides: Oxide[] }) {
     Object.keys(COE_DATA).slice(0, 8).map((o) => ({ oxide: o, pct: '' }))
   )
   const [customClay, setCustomClay] = useState('')
+  const [label, setLabel] = useState('')
 
   const analysisRows: AnalysisRow[] = rows
     .map((r) => ({ oxide: r.oxide, analysisPct: parseFloat(r.pct) || 0 }))
@@ -158,6 +160,24 @@ export function ThermalCalc(_props: { oxides: Oxide[] }) {
   }
 
   const allOxides = Object.keys(COE_DATA)
+
+  function clearCalc() {
+    setRows(Object.keys(COE_DATA).slice(0, 8).map((o) => ({ oxide: o, pct: '' })))
+    setCustomClay('')
+    setLabel('')
+  }
+
+  function saveToNotebook() {
+    if (glazeCOE == null) return
+    addToNotebook({
+      id: `thermal-${Date.now()}`,
+      type: 'calc',
+      label: label || `COE ${glazeCOE.toFixed(3)}`,
+      note: '',
+      data: { coe: glazeCOE, analysisRows, customClay },
+    })
+    clearCalc()
+  }
 
   return (
     <div className="space-y-6">
@@ -211,6 +231,23 @@ export function ThermalCalc(_props: { oxides: Oxide[] }) {
       {/* Result */}
       {glazeCOE != null && (
         <div className="space-y-4">
+          <div className="flex items-center justify-between">
+            <input
+              value={label}
+              onChange={(e) => setLabel(e.target.value)}
+              placeholder="Label this calculation (optional)…"
+              className="w-64 rounded border border-neutral-300 bg-neutral-50 px-2 py-1.5 text-sm text-neutral-900 placeholder-neutral-400 focus:border-neutral-500 focus:outline-none"
+            />
+            <div className="flex items-center gap-3">
+              <button onClick={clearCalc} className="text-xs text-neutral-400 hover:text-neutral-600">Clear</button>
+              <button
+                onClick={saveToNotebook}
+                className="rounded bg-neutral-900 px-3 py-1.5 text-xs font-medium text-white hover:bg-neutral-700"
+              >
+                + Save to notebook
+              </button>
+            </div>
+          </div>
           <div className="rounded border border-neutral-300 bg-neutral-50 px-4 py-3">
             <div className="text-xs text-neutral-500">Estimated glaze COE</div>
             <div className="text-3xl font-mono font-semibold text-neutral-900">

@@ -6,6 +6,7 @@ import { AnalysisChart } from './components/AnalysisChart'
 import { MaterialForm } from './MaterialForm'
 import { GlazeCalc } from './GlazeCalc'
 import { ThermalCalc } from './ThermalCalc'
+import { analysisToFormula, FLUX_OXIDES } from './chem'
 
 function useHash() {
   const [hash, setHash] = useState(() => window.location.hash || '#/')
@@ -441,9 +442,48 @@ function OxideDetail({ o }: { o: Oxide | undefined }) {
   )
 }
 
+function blendRecipe(r: Recipe, materials: Material[]) {
+  const oxideTotals: Record<string, number> = {}
+  let totalWeight = 0
+  for (const line of r.materials) {
+    const amt = line.amount ?? line.percent
+    if (!amt || amt <= 0) continue
+    const mat = materials.find((m) => m.name.toLowerCase() === line.material.toLowerCase())
+    if (!mat) continue
+    totalWeight += amt
+    for (const row of mat.analysis) {
+      if (row.analysis_pct == null) continue
+      oxideTotals[row.oxide] = (oxideTotals[row.oxide] || 0) + (row.analysis_pct / 100) * amt
+    }
+  }
+  if (totalWeight === 0) return null
+  const analysisRows = Object.entries(oxideTotals).map(([oxide, total]) => ({
+    oxide,
+    analysis_pct: (total / totalWeight) * 100,
+  }))
+  const { formula, formulaWeight: fw } = analysisToFormula(analysisRows)
+  const formulaMap = new Map(formula.map((r) => [r.oxide, r.amount]))
+  const fluxOrder = [...FLUX_OXIDES, 'Al2O3', 'B2O3', 'SiO2', 'TiO2', 'Fe2O3', 'ZrO2', 'SnO2', 'P2O5']
+  const rows = analysisRows
+    .filter((r) => r.analysis_pct > 0.01)
+    .sort((a, b) => {
+      const ai = fluxOrder.indexOf(a.oxide), bi = fluxOrder.indexOf(b.oxide)
+      if (ai === -1 && bi === -1) return a.oxide.localeCompare(b.oxide)
+      if (ai === -1) return 1; if (bi === -1) return -1
+      return ai - bi
+    })
+    .map(({ oxide, analysis_pct }) => ({
+      oxide,
+      pct: Math.round(analysis_pct * 10) / 10,
+      unity: formulaMap.get(oxide) ?? null,
+    }))
+  return { rows, formulaWeight: fw }
+}
+
 function RecipeDetail({ r, ds }: { r: Recipe | undefined; ds: Dataset }) {
   if (!r) return <NotFound what="Recipe" />
   const findMat = (name: string) => ds.materials.find((m) => m.name.toLowerCase() === name.toLowerCase())
+  const blend = useMemo(() => blendRecipe(r, ds.materials), [r, ds.materials])
   return (
     <article className="space-y-4">
       <div>
@@ -488,6 +528,38 @@ function RecipeDetail({ r, ds }: { r: Recipe | undefined; ds: Dataset }) {
           </tbody>
         </table>
       </Card>
+
+      {blend && (
+        <Card>
+          <div className="mb-2 flex items-baseline justify-between">
+            <h2 className="text-sm uppercase tracking-wide text-neutral-500">Computed Unity Formula</h2>
+            {blend.formulaWeight != null && (
+              <span className="text-xs text-neutral-400">formula wt {blend.formulaWeight.toFixed(1)}</span>
+            )}
+          </div>
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="text-left text-xs text-neutral-400">
+                <th className="py-0.5 font-normal">Oxide</th>
+                <th className="py-0.5 text-right font-normal">Unity</th>
+                <th className="py-0.5 text-right font-normal">Wt %</th>
+              </tr>
+            </thead>
+            <tbody>
+              {blend.rows.map(({ oxide, pct, unity }) => (
+                <tr key={oxide} className="border-t border-neutral-100">
+                  <td className="py-0.5 font-mono text-neutral-700">{oxide}</td>
+                  <td className="py-0.5 text-right font-mono text-neutral-900">
+                    {unity != null ? unity.toFixed(3) : '—'}
+                  </td>
+                  <td className="py-0.5 text-right font-mono text-neutral-500">{pct}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </Card>
+      )}
+
       <p className="text-xs text-neutral-400">Source: {r.source}</p>
     </article>
   )

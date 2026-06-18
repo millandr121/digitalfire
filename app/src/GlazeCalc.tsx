@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useMemo, useRef, useState } from 'react'
 import type { Material, Oxide } from './types'
 import { analysisToFormula, FLUX_OXIDES, molecularWeight } from './chem'
 
@@ -18,6 +18,76 @@ const CONE6_LIMITS: Record<string, [number, number]> = {
   'TiO2':  [0.0, 0.15],
   'Fe2O3': [0.0, 0.35],
   'MnO':   [0.0, 0.2],
+}
+
+function MaterialPicker({
+  value,
+  onChange,
+  materials,
+}: {
+  value: string
+  onChange: (id: string) => void
+  materials: Material[]
+}) {
+  const [query, setQuery] = useState(() => {
+    const m = materials.find((x) => x.id === value)
+    return m ? m.name : ''
+  })
+  const [open, setOpen] = useState(false)
+  const ref = useRef<HTMLDivElement>(null)
+
+  const q = query.trim().toLowerCase()
+  const hits = q.length >= 1
+    ? materials.filter((m) => m.name.toLowerCase().includes(q)).slice(0, 12)
+    : []
+
+  function select(m: Material) {
+    setQuery(m.name)
+    onChange(m.id)
+    setOpen(false)
+  }
+
+  function handleBlur() {
+    setTimeout(() => {
+      if (!ref.current?.contains(document.activeElement)) {
+        setOpen(false)
+        // If no valid match, clear
+        if (!materials.find((m) => m.id === value)) {
+          setQuery('')
+          onChange('')
+        }
+      }
+    }, 150)
+  }
+
+  return (
+    <div ref={ref} className="relative">
+      <input
+        type="text"
+        value={query}
+        onChange={(e) => { setQuery(e.target.value); setOpen(true); onChange('') }}
+        onFocus={() => setOpen(true)}
+        onBlur={handleBlur}
+        placeholder="Search material…"
+        className="w-full rounded border border-neutral-300 bg-neutral-50 px-2 py-1.5 text-sm text-neutral-900 placeholder-neutral-400 focus:border-neutral-500 focus:outline-none"
+      />
+      {open && hits.length > 0 && (
+        <ul className="absolute left-0 right-0 top-full z-20 mt-0.5 max-h-48 overflow-y-auto rounded border border-neutral-200 bg-white shadow-lg">
+          {hits.map((m) => (
+            <li key={m.id}>
+              <button
+                type="button"
+                onMouseDown={() => select(m)}
+                className="w-full px-3 py-1.5 text-left text-sm text-neutral-800 hover:bg-neutral-50"
+              >
+                {m.name}
+              </button>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  )
 }
 
 interface Line {
@@ -141,16 +211,11 @@ export function GlazeCalc({ materials }: { materials: Material[]; oxides: Oxide[
         </div>
         {lines.map((line, i) => (
           <div key={i} className="grid grid-cols-[1fr_100px_32px] gap-2 items-center">
-            <select
+            <MaterialPicker
               value={line.materialId}
-              onChange={(e) => setLine(i, 'materialId', e.target.value)}
-              className="rounded border border-neutral-300 bg-neutral-50 px-2 py-1.5 text-sm text-neutral-900 focus:border-neutral-500 focus:outline-none"
-            >
-              <option value="">— select material —</option>
-              {validMaterials.map((m) => (
-                <option key={m.id} value={m.id}>{m.name}</option>
-              ))}
-            </select>
+              onChange={(id) => setLine(i, 'materialId', id)}
+              materials={validMaterials}
+            />
             <input
               type="number"
               min="0"

@@ -1,0 +1,60 @@
+name: Fill missing data from Wayback Machine
+
+on:
+  workflow_dispatch:
+    inputs:
+      section:
+        description: 'Section to fill (mineral, temperature, recipe, material, oxide, or all)'
+        required: false
+        default: 'mineral,temperature'
+
+jobs:
+  fill:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - run: pip install requests beautifulsoup4 lxml
+
+      - name: Audit missing pages
+        run: python digitalfire_wayback.py --audit
+
+      - name: Show audit results
+        run: cat missing_pages.json | python3 -c "
+import json, sys
+d = json.load(sys.stdin)
+total = sum(len(v) for v in d.values())
+for k, v in d.items():
+    print(f'{k:12}: {len(v)} missing')
+print(f'Total: {total}')
+"
+
+      - name: Fill missing pages
+        run: |
+          IFS=',' read -ra SECTIONS <<< "${{ github.event.inputs.section }}"
+          for section in "${SECTIONS[@]}"; do
+            echo "Filling $section..."
+            python digitalfire_wayback.py --fill --section "$section"
+          done
+
+      - name: Show results
+        run: |
+          for f in app/public/data/*.json; do
+            count=$(python3 -c "import json; print(len(json.load(open('$f'))))")
+            echo "$f: $count records"
+          done
+
+      - name: Commit updated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add app/public/data/
+          git diff --staged --quiet || git commit -m "Fill missing data from Wayback Machine [$(date -u +%Y-%m-%d)]"
+          git push

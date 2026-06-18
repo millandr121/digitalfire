@@ -66,4 +66,5 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add app/public/data/
           git diff --staged --quiet || git commit -m "Fill missing data from Wayback Machine [$(date -u +%Y-%m-%d)]"
-          git push
+          git pull --rebase origin ${{ github.ref_name }}
+          git push -u origin ${{ github.ref_name }}

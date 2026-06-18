@@ -520,6 +520,56 @@ function MaterialDetail({ m, ds }: { m: Material | undefined; ds: Dataset }) {
   )
 }
 
+// COE data for all oxides with published Appen coefficients (×10⁻⁶/°C)
+// Source: digitalfire.com oxide data (Tony Hansen), same scale as ThermalCalc
+const OXIDE_COE: Record<string, number> = {
+  ZrO2: 0.020, SnO2: 0.020, MgO: 0.026, B2O3: 0.031, SiO2: 0.035,
+  MnO: 0.050, Al2O3: 0.063, Li2O: 0.068, PbO: 0.083, ZnO: 0.094,
+  Fe2O3: 0.125, BaO: 0.129, SrO: 0.130, TiO2: 0.144, CaO: 0.148,
+  K2O: 0.331, KNaO: 0.359, Na2O: 0.387,
+}
+
+function OxideCOEChart({ symbol }: { symbol: string }) {
+  const entries = Object.entries(OXIDE_COE).sort((a, b) => a[1] - b[1])
+  const max = Math.max(...entries.map(([, v]) => v))
+  const current = OXIDE_COE[symbol]
+  if (!current) return null
+
+  return (
+    <Card>
+      <h2 className="mb-3 text-sm uppercase tracking-wide text-neutral-500">
+        Thermal Expansion (COE ×10⁻⁶/°C) — relative to other oxides
+      </h2>
+      <div className="space-y-1">
+        {entries.map(([sym, coe]) => {
+          const isThis = sym === symbol
+          return (
+            <div key={sym} className="flex items-center gap-2 text-xs">
+              <div className={`w-14 shrink-0 text-right font-mono ${isThis ? 'font-bold text-blue-700' : 'text-neutral-500'}`}>
+                {sym}
+              </div>
+              <div className="flex-1 rounded bg-neutral-100">
+                <div
+                  className={`h-3.5 rounded ${isThis ? 'bg-blue-500' : 'bg-neutral-300'}`}
+                  style={{ width: `${(coe / max) * 100}%` }}
+                />
+              </div>
+              <div className={`w-10 shrink-0 font-mono ${isThis ? 'font-bold text-blue-700' : 'text-neutral-400'}`}>
+                {coe}
+              </div>
+            </div>
+          )
+        })}
+      </div>
+      <p className="mt-2 text-[10px] text-neutral-400">
+        Higher COE = more thermal expansion. Fluxes (Na₂O, K₂O) expand the most;
+        glass formers (SiO₂, B₂O₃) and stabilizers (Al₂O₃) expand the least.
+        Values are Appen additive method coefficients.
+      </p>
+    </Card>
+  )
+}
+
 function OxideDetail({ o }: { o: Oxide | undefined }) {
   if (!o) return <NotFound what="Oxide" />
   return (
@@ -544,6 +594,7 @@ function OxideDetail({ o }: { o: Oxide | undefined }) {
       ) : (
         <p className="text-sm text-neutral-500">No tabulated data for this oxide.</p>
       )}
+      <OxideCOEChart symbol={o.symbol} />
       <p className="text-xs text-neutral-400">Source: {o.source}</p>
     </article>
   )

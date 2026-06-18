@@ -89,7 +89,7 @@ export function downloadJSON(ds: Dataset): void {
   URL.revokeObjectURL(url)
 }
 
-export type SearchType = 'material' | 'oxide' | 'recipe'
+export type SearchType = 'material' | 'oxide' | 'recipe' | 'mineral' | 'temperature'
 
 export interface SearchDoc {
   id: string
@@ -121,6 +121,20 @@ export function buildSearch(ds: Dataset): MiniSearch<SearchDoc> {
       type: 'recipe' as const,
       title: `${r.code} — ${r.name}`,
       subtitle: r.description || '',
+    })),
+    ...ds.minerals.map((m) => ({
+      id: `mineral:${m.id}`,
+      ref: m.id,
+      type: 'mineral' as const,
+      title: m.name,
+      subtitle: m.formula || '',
+    })),
+    ...ds.temperatures.map((t) => ({
+      id: `temperature:${t.id}`,
+      ref: t.id,
+      type: 'temperature' as const,
+      title: t.value,
+      subtitle: t.event || '',
     })),
   ]
   const mini = new MiniSearch<SearchDoc>({

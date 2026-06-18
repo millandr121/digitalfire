@@ -25,7 +25,7 @@ from urllib.parse import quote
 import requests
 from bs4 import BeautifulSoup
 
-CDX_API = "http://web.archive.org/cdx/search/cdx"
+CDX_API = "https://web.archive.org/cdx/search/cdx"
 WB_BASE = "https://web.archive.org/web"
 OUT = Path("app/public/data")
 MISSING_LOG = Path("missing_pages.json")

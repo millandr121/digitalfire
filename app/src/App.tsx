@@ -149,7 +149,7 @@ function SearchView({
   const results = search.search(query).slice(0, 50)
   if (!results.length) return <p className="text-neutral-500">No matches for “{query}”.</p>
   return (
-    <ul className="divide-y divide-neutral-800 overflow-hidden rounded border border-neutral-200">
+    <ul className="divide-y divide-neutral-100 overflow-hidden rounded border border-neutral-200">
       {results.map((r: any) => (
         <li key={r.id}>
           <button
@@ -197,6 +197,8 @@ function Routed({
       return <MineralDetail m={ds.minerals.find((x) => x.id === a)} />
     case 'temperatures':
       return <TemperatureList items={ds.temperatures} />
+    case 'temperature':
+      return <TemperatureDetail t={ds.temperatures.find((x) => x.id === a)} />
     case 'new':
       if (a === 'material')
         return <MaterialForm oxides={ds.oxides} onSave={onSaveMaterial} onCancel={() => go('#/materials')} />
@@ -273,7 +275,7 @@ function MaterialList({ items }: { items: Material[] }) {
         setFilter={setFilter}
         onNew={() => go('#/new/material')}
       />
-      <ul className="divide-y divide-neutral-800 overflow-hidden rounded border border-neutral-200">
+      <ul className="divide-y divide-neutral-100 overflow-hidden rounded border border-neutral-200">
         {filtered.slice(0, 400).map((m) => (
           <li key={m.id}>
             <button
@@ -323,7 +325,7 @@ function RecipeList({ items }: { items: Recipe[] }) {
   return (
     <div>
       <ListHeader title="Recipes" count={filtered.length} total={items.length} filter={filter} setFilter={setFilter} />
-      <ul className="divide-y divide-neutral-800 overflow-hidden rounded border border-neutral-200">
+      <ul className="divide-y divide-neutral-100 overflow-hidden rounded border border-neutral-200">
         {filtered.map((r) => (
           <li key={r.id}>
             <button
@@ -498,7 +500,7 @@ function MineralList({ items }: { items: Mineral[] }) {
   return (
     <div>
       <ListHeader title="Minerals" count={filtered.length} total={items.length} filter={filter} setFilter={setFilter} />
-      <ul className="divide-y divide-neutral-800 overflow-hidden rounded border border-neutral-200">
+      <ul className="divide-y divide-neutral-100 overflow-hidden rounded border border-neutral-200">
         {filtered.map((m) => (
           <li key={m.id}>
             <button
@@ -555,11 +557,16 @@ function TemperatureList({ items }: { items: Temperature[] }) {
   return (
     <div>
       <ListHeader title="Temperatures" count={filtered.length} total={items.length} filter={filter} setFilter={setFilter} />
-      <ul className="divide-y divide-neutral-800 overflow-hidden rounded border border-neutral-200">
+      <ul className="divide-y divide-neutral-100 overflow-hidden rounded border border-neutral-200">
         {filtered.map((t) => (
-          <li key={t.id} className="flex gap-4 px-3 py-2">
-            <span className="w-36 shrink-0 font-mono text-sm text-amber-400">{t.value}</span>
-            <span className="text-sm text-neutral-700">{t.event}</span>
+          <li key={t.id}>
+            <button
+              onClick={() => go(`#/temperature/${encodeURIComponent(t.id)}`)}
+              className="flex w-full gap-4 px-3 py-2 text-left hover:bg-neutral-50"
+            >
+              <span className="w-36 shrink-0 font-mono text-sm text-amber-700">{t.value}</span>
+              <span className="text-sm text-neutral-700">{t.event}</span>
+            </button>
           </li>
         ))}
       </ul>
@@ -567,5 +574,19 @@ function TemperatureList({ items }: { items: Temperature[] }) {
         <p className="mt-4 text-sm text-neutral-500">No temperature events found.</p>
       )}
     </div>
+  )
+}
+
+function TemperatureDetail({ t }: { t: Temperature | undefined }) {
+  if (!t) return <NotFound what="Temperature" />
+  return (
+    <article className="space-y-4">
+      <div>
+        <BackLink to="#/temperatures" label="Temperatures" />
+        <h1 className="mt-1 font-mono text-3xl font-semibold text-amber-700">{t.value}</h1>
+        {t.event && <p className="mt-1 text-lg text-neutral-700">{t.event}</p>}
+      </div>
+      <p className="text-xs text-neutral-400">Source: {t.source}</p>
+    </article>
   )
 }

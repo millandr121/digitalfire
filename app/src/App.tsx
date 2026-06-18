@@ -233,7 +233,7 @@ function Routed({
     case 'recipes':
       return <RecipeList items={ds.recipes} ds={ds} />
     case 'calc':
-      return <GlazeCalc materials={ds.materials} oxides={ds.oxides} />
+      return <GlazeCalc materials={ds.materials} oxides={ds.oxides} recipes={ds.recipes} />
     case 'thermal':
       return <ThermalCalc oxides={ds.oxides} />
     case 'minerals':
@@ -451,7 +451,7 @@ function MaterialDetail({ m, ds }: { m: Material | undefined; ds: Dataset }) {
   if (!m) return <NotFound what="Material" />
   const sum = m.analysis.reduce((a, r) => a + (r.analysis_pct || 0), 0)
   const usedIn = ds.recipes.filter((r) =>
-    r.materials.some((x) => x.material.toLowerCase() === m.name.toLowerCase())
+    r.materials.some((x) => findMaterial(x.material, ds.materials)?.id === m.id)
   )
   return (
     <article className="space-y-4">

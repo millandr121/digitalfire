@@ -1,5 +1,5 @@
 import { useMemo, useRef, useState } from 'react'
-import type { Material, Oxide } from './types'
+import type { Material, Oxide, Recipe } from './types'
 import { analysisToFormula, FLUX_OXIDES, molecularWeight } from './chem'
 import { StullChart } from './components/StullChart'
 import { UnityFormulaViz } from './components/UnityFormulaViz'
@@ -152,7 +152,25 @@ function blendMaterials(lines: Line[], materials: Material[]): BlendRow[] {
     }))
 }
 
-export function GlazeCalc({ materials }: { materials: Material[]; oxides: Oxide[] }) {
+function findMat(name: string, materials: Material[]): Material | undefined {
+  const q = name.replace(/^\*/, '').trim().toLowerCase()
+  let m = materials.find((x) => x.name.toLowerCase() === q)
+  if (m) return m
+  m = materials.find((x) => (x.alternate_names || '').toLowerCase().split(/[;,]+/).map((s) => s.trim()).includes(q))
+  if (m) return m
+  const paren = q.match(/\(([^)]+)\)/)
+  if (paren) {
+    const inner = paren[1].trim()
+    m = materials.find((x) => x.name.toLowerCase() === inner)
+    if (m) return m
+  }
+  return materials.find((x) => {
+    const n = x.name.toLowerCase()
+    return n.length >= 4 && (q.startsWith(n) || n.startsWith(q))
+  })
+}
+
+export function GlazeCalc({ materials, recipes }: { materials: Material[]; oxides: Oxide[]; recipes: Recipe[] }) {
   const [lines, setLines] = useState<Line[]>([
     { materialId: '', amount: '' },
     { materialId: '', amount: '' },
@@ -163,6 +181,34 @@ export function GlazeCalc({ materials }: { materials: Material[]; oxides: Oxide[
   const validMaterials = materials.filter((m) => m.analysis.length > 0)
 
   const blend = useMemo(() => blendMaterials(lines, materials), [lines, materials])
+
+  const contextPoints = useMemo(() => {
+    return recipes.flatMap((r) => {
+      const oxideTotals: Record<string, number> = {}
+      let totalWeight = 0
+      for (const line of r.materials) {
+        const amt = line.amount ?? line.percent
+        if (!amt || amt <= 0) continue
+        const mat = findMat(line.material, materials)
+        if (!mat) continue
+        totalWeight += amt
+        for (const row of mat.analysis) {
+          if (row.analysis_pct == null) continue
+          oxideTotals[row.oxide] = (oxideTotals[row.oxide] || 0) + (row.analysis_pct / 100) * amt
+        }
+      }
+      if (totalWeight === 0) return []
+      const analysisRows = Object.entries(oxideTotals).map(([oxide, total]) => ({
+        oxide, analysis_pct: (total / totalWeight) * 100,
+      }))
+      const { formula } = analysisToFormula(analysisRows)
+      const fmap = new Map(formula.map((x) => [x.oxide, x.amount]))
+      const sio2 = fmap.get('SiO2')
+      const al2o3 = fmap.get('Al2O3')
+      if (sio2 == null || al2o3 == null) return []
+      return [{ id: r.id, label: r.code || r.name, sio2, al2o3 }]
+    })
+  }, [recipes, materials])
 
   const fluxSum = blend
     .filter((r) => FLUX_OXIDES.has(r.oxide))
@@ -324,7 +370,10 @@ export function GlazeCalc({ materials }: { materials: Material[]; oxides: Oxide[
                   SiO₂ {sio2.toFixed(3)} · Al₂O₃ {al2o3.toFixed(3)}
                 </p>
                 <StullChart
-                  points={[{ id: 'calc', label: name || 'Recipe', sio2, al2o3, highlighted: true }]}
+                  points={[
+                    ...contextPoints.map((p) => ({ ...p, highlighted: false })),
+                    { id: 'calc', label: name || 'Recipe', sio2, al2o3, highlighted: true },
+                  ]}
                   width={480}
                   height={320}
                 />

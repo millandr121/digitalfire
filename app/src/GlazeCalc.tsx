@@ -1,6 +1,8 @@
 import { useMemo, useRef, useState } from 'react'
 import type { Material, Oxide } from './types'
 import { analysisToFormula, FLUX_OXIDES, molecularWeight } from './chem'
+import { StullChart } from './components/StullChart'
+import { UnityFormulaViz } from './components/UnityFormulaViz'
 
 // Typical Cone 6 limit ranges for reference (Digitalfire-style guidance)
 const CONE6_LIMITS: Record<string, [number, number]> = {
@@ -296,6 +298,39 @@ export function GlazeCalc({ materials }: { materials: Material[]; oxides: Oxide[
               </tbody>
             </table>
           </div>
+
+          {/* Unity formula visualization */}
+          {(() => {
+            const unityRows = blend
+              .filter((r) => r.unity != null && r.unity > 0)
+              .map((r) => ({ oxide: r.oxide, amount: r.unity as number }))
+            return unityRows.length > 0 ? (
+              <div>
+                <div className="mb-2 text-xs font-medium uppercase tracking-wide text-neutral-500">Seger Groups</div>
+                <UnityFormulaViz formula={unityRows} />
+              </div>
+            ) : null
+          })()}
+
+          {/* Stull chart position */}
+          {(() => {
+            const sio2 = blend.find((r) => r.oxide === 'SiO2')?.unity
+            const al2o3 = blend.find((r) => r.oxide === 'Al2O3')?.unity
+            if (!sio2 || !al2o3) return null
+            return (
+              <div>
+                <div className="mb-1 text-xs font-medium uppercase tracking-wide text-neutral-500">Stull Chart Position</div>
+                <p className="mb-2 text-xs text-neutral-400">
+                  SiO₂ {sio2.toFixed(3)} · Al₂O₃ {al2o3.toFixed(3)}
+                </p>
+                <StullChart
+                  points={[{ id: 'calc', label: name || 'Recipe', sio2, al2o3, highlighted: true }]}
+                  width={480}
+                  height={320}
+                />
+              </div>
+            )
+          })()}
 
           {/* Flux normalization note */}
           {Math.abs(fluxSum - 1.0) > 0.01 && (

@@ -179,7 +179,7 @@ function Routed({
   const [view, a, b] = parseHash(hash)
   switch (view || 'materials') {
     case 'material':
-      return <MaterialDetail m={ds.materials.find((x) => x.id === a)} />
+      return <MaterialDetail m={ds.materials.find((x) => x.id === a)} ds={ds} />
     case 'oxide':
       return <OxideDetail o={ds.oxides.find((x) => x.id === a)} />
     case 'recipe':
@@ -362,9 +362,12 @@ function BackLink({ to, label }: { to: string; label: string }) {
   )
 }
 
-function MaterialDetail({ m }: { m: Material | undefined }) {
+function MaterialDetail({ m, ds }: { m: Material | undefined; ds: Dataset }) {
   if (!m) return <NotFound what="Material" />
   const sum = m.analysis.reduce((a, r) => a + (r.analysis_pct || 0), 0)
+  const usedIn = ds.recipes.filter((r) =>
+    r.materials.some((x) => x.material.toLowerCase() === m.name.toLowerCase())
+  )
   return (
     <article className="space-y-4">
       <div>
@@ -405,6 +408,25 @@ function MaterialDetail({ m }: { m: Material | undefined }) {
               </div>
             ))}
           </dl>
+        </Card>
+      )}
+
+      {usedIn.length > 0 && (
+        <Card>
+          <h2 className="mb-2 text-sm uppercase tracking-wide text-neutral-500">Used in Recipes</h2>
+          <ul className="divide-y divide-neutral-100 text-sm">
+            {usedIn.map((r) => (
+              <li key={r.id}>
+                <button
+                  onClick={() => go(`#/recipe/${encodeURIComponent(r.id)}`)}
+                  className="w-full py-1.5 text-left hover:text-neutral-600"
+                >
+                  <span className="font-mono text-neutral-500">{r.code}</span>{' '}
+                  <span className="text-neutral-800">{r.name}</span>
+                </button>
+              </li>
+            ))}
+          </ul>
         </Card>
       )}
 

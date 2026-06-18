@@ -3,6 +3,8 @@ import type MiniSearch from 'minisearch'
 import { buildSearch, downloadJSON, loadDataset, saveMaterial, type Dataset, type SearchDoc } from './store'
 import type { Material, Mineral, Oxide, Recipe, Temperature } from './types'
 import { AnalysisChart } from './components/AnalysisChart'
+import { StullChart, type StullPoint } from './components/StullChart'
+import { UnityFormulaViz } from './components/UnityFormulaViz'
 import { MaterialForm } from './MaterialForm'
 import { GlazeCalc } from './GlazeCalc'
 import { ThermalCalc } from './ThermalCalc'
@@ -228,7 +230,7 @@ function Routed({
     case 'oxides':
       return <OxideList items={ds.oxides} />
     case 'recipes':
-      return <RecipeList items={ds.recipes} />
+      return <RecipeList items={ds.recipes} ds={ds} />
     case 'calc':
       return <GlazeCalc materials={ds.materials} oxides={ds.oxides} />
     case 'thermal':
@@ -360,26 +362,67 @@ function OxideList({ items }: { items: Oxide[] }) {
   )
 }
 
-function RecipeList({ items }: { items: Recipe[] }) {
+function RecipeList({ items, ds }: { items: Recipe[]; ds: Dataset }) {
   const [filter, setFilter] = useState('')
+  const [view, setView] = useState<'list' | 'stull'>('list')
   const q = filter.trim().toLowerCase()
   const filtered = q ? items.filter((r) => `${r.code} ${r.name}`.toLowerCase().includes(q)) : items
+
+  const stullPoints = useMemo(() => {
+    if (view !== 'stull') return []
+    return items
+      .map((r) => recipeToStullPoint(r, ds.materials))
+      .filter((p): p is StullPoint => p !== null)
+  }, [view, items, ds.materials])
+
   return (
-    <div>
-      <ListHeader title="Recipes" count={filtered.length} total={items.length} filter={filter} setFilter={setFilter} />
-      <ul className="divide-y divide-neutral-100 overflow-hidden rounded border border-neutral-200">
-        {filtered.map((r) => (
-          <li key={r.id}>
-            <button
-              onClick={() => go(`#/recipe/${encodeURIComponent(r.id)}`)}
-              className="w-full px-3 py-2 text-left hover:bg-neutral-50"
-            >
-              <span className="font-mono text-neutral-700">{r.code}</span>{' '}
-              <span className="text-neutral-900">{r.name}</span>
-            </button>
-          </li>
-        ))}
-      </ul>
+    <div className="space-y-3">
+      <div className="flex items-center gap-3">
+        <ListHeader title="Recipes" count={filtered.length} total={items.length} filter={filter} setFilter={setFilter} />
+        <div className="ml-auto flex rounded border border-neutral-200 overflow-hidden text-xs">
+          <button
+            onClick={() => setView('list')}
+            className={`px-3 py-1.5 ${view === 'list' ? 'bg-neutral-800 text-white' : 'text-neutral-600 hover:bg-neutral-50'}`}
+          >
+            List
+          </button>
+          <button
+            onClick={() => setView('stull')}
+            className={`px-3 py-1.5 ${view === 'stull' ? 'bg-neutral-800 text-white' : 'text-neutral-600 hover:bg-neutral-50'}`}
+          >
+            Stull Chart
+          </button>
+        </div>
+      </div>
+
+      {view === 'list' ? (
+        <ul className="divide-y divide-neutral-100 overflow-hidden rounded border border-neutral-200">
+          {filtered.map((r) => (
+            <li key={r.id}>
+              <button
+                onClick={() => go(`#/recipe/${encodeURIComponent(r.id)}`)}
+                className="w-full px-3 py-2 text-left hover:bg-neutral-50"
+              >
+                <span className="font-mono text-neutral-700">{r.code}</span>{' '}
+                <span className="text-neutral-900">{r.name}</span>
+              </button>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <div className="rounded border border-neutral-200 p-4">
+          <p className="mb-3 text-xs text-neutral-500">
+            {stullPoints.length} of {items.length} recipes plotted (requires material oxide data to compute unity formula).
+            Hover a dot for recipe name and SiO₂/Al₂O₃ values. Click to open recipe.
+          </p>
+          <StullChart
+            points={stullPoints}
+            width={620}
+            height={420}
+            onPointClick={(p) => go(`#/recipe/${encodeURIComponent(p.id)}`)}
+          />
+        </div>
+      )}
     </div>
   )
 }
@@ -543,10 +586,36 @@ function blendRecipe(r: Recipe, materials: Material[]) {
   return { rows, formulaWeight: fw }
 }
 
+function recipeToStullPoint(r: Recipe, materials: Material[]): StullPoint | null {
+  const blend = blendRecipe(r, materials)
+  if (!blend) return null
+  const sio2 = blend.rows.find((x) => x.oxide === 'SiO2')?.unity
+  const al2o3 = blend.rows.find((x) => x.oxide === 'Al2O3')?.unity
+  if (sio2 == null || al2o3 == null) return null
+  return { id: r.id, label: r.code || r.name, sio2, al2o3 }
+}
+
 function RecipeDetail({ r, ds }: { r: Recipe | undefined; ds: Dataset }) {
   if (!r) return <NotFound what="Recipe" />
   const findMat = (name: string) => ds.materials.find((m) => m.name.toLowerCase() === name.toLowerCase())
   const blend = useMemo(() => blendRecipe(r, ds.materials), [r, ds.materials])
+
+  // All recipe Stull points for context (computed lazily, only when blend is available)
+  const allStullPoints = useMemo(() => {
+    if (!blend) return []
+    return ds.recipes
+      .map((rec) => recipeToStullPoint(rec, ds.materials))
+      .filter((p): p is StullPoint => p !== null)
+      .map((p) => ({ ...p, highlighted: p.id === r.id }))
+  }, [blend, ds.recipes, ds.materials, r.id])
+
+  const unityRows = useMemo(() => {
+    if (!blend) return []
+    return blend.rows
+      .filter((x) => x.unity != null && x.unity > 0)
+      .map((x) => ({ oxide: x.oxide, amount: x.unity as number }))
+  }, [blend])
+
   return (
     <article className="space-y-4">
       <div>
@@ -629,6 +698,23 @@ function RecipeDetail({ r, ds }: { r: Recipe | undefined; ds: Dataset }) {
               ))}
             </tbody>
           </table>
+        </Card>
+      )}
+
+      {blend && unityRows.length > 0 && (
+        <Card>
+          <h2 className="mb-3 text-sm uppercase tracking-wide text-neutral-500">Unity Formula — Seger Groups</h2>
+          <UnityFormulaViz formula={unityRows} />
+        </Card>
+      )}
+
+      {allStullPoints.length > 0 && (
+        <Card>
+          <h2 className="mb-1 text-sm uppercase tracking-wide text-neutral-500">Stull Chart Position</h2>
+          <p className="mb-3 text-xs text-neutral-400">
+            Blue dot = this recipe. Grey dots = all other recipes with computable unity formula.
+          </p>
+          <StullChart points={allStullPoints} />
         </Card>
       )}
 

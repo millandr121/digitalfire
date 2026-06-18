@@ -5,6 +5,7 @@ import type { Material, Mineral, Oxide, Recipe, Temperature } from './types'
 import { AnalysisChart } from './components/AnalysisChart'
 import { StullChart, type StullPoint } from './components/StullChart'
 import { UnityFormulaViz } from './components/UnityFormulaViz'
+import { FiringTimeline, parseTempEvents } from './components/FiringTimeline'
 import { MaterialForm } from './MaterialForm'
 import { GlazeCalc } from './GlazeCalc'
 import { ThermalCalc } from './ThermalCalc'
@@ -807,25 +808,47 @@ function TemperatureList({ items }: { items: Temperature[] }) {
   const [filter, setFilter] = useState('')
   const q = filter.trim().toLowerCase()
   const filtered = q ? items.filter((t) => `${t.value} ${t.event}`.toLowerCase().includes(q)) : items
+  const events = useMemo(() => parseTempEvents(items), [items])
+
   return (
-    <div>
-      <ListHeader title="Temperatures" count={filtered.length} total={items.length} filter={filter} setFilter={setFilter} />
-      <ul className="divide-y divide-neutral-100 overflow-hidden rounded border border-neutral-200">
-        {filtered.map((t) => (
-          <li key={t.id}>
-            <button
-              onClick={() => go(`#/temperature/${encodeURIComponent(t.id)}`)}
-              className="flex w-full gap-4 px-3 py-2 text-left hover:bg-neutral-50"
-            >
+    <div className="space-y-6">
+      <div>
+        <h1 className="mb-1 text-lg font-semibold text-neutral-900">Firing Temperature Events</h1>
+        <p className="text-sm text-neutral-500">
+          {items.length} temperature events — hover a marker to see what happens at each stage of a firing.
+        </p>
+      </div>
+
+      <Card>
+        <h2 className="mb-3 text-sm uppercase tracking-wide text-neutral-500">Timeline (0–1400°C)</h2>
+        <FiringTimeline events={events} />
+      </Card>
+
+      <div>
+        <div className="mb-2 flex items-center gap-3">
+          <span className="text-sm font-medium text-neutral-700">All events</span>
+          <span className="text-sm text-neutral-500">{filtered.length === items.length ? items.length : `${filtered.length} of ${items.length}`}</span>
+          <div className="flex-1" />
+          <input
+            value={filter}
+            onChange={(e) => setFilter(e.target.value)}
+            placeholder="Filter events…"
+            className="w-48 rounded border border-neutral-300 bg-neutral-50 px-3 py-1.5 text-sm focus:border-neutral-500 focus:outline-none"
+          />
+        </div>
+        <ul className="divide-y divide-neutral-100 overflow-hidden rounded border border-neutral-200">
+          {filtered.sort((a, b) => {
+            const na = parseInt(a.value) || 0
+            const nb = parseInt(b.value) || 0
+            return na - nb
+          }).map((t) => (
+            <li key={t.id} className="flex gap-4 px-3 py-2">
               <span className="w-36 shrink-0 font-mono text-sm text-amber-700">{t.value}</span>
               <span className="text-sm text-neutral-700">{t.event}</span>
-            </button>
-          </li>
-        ))}
-      </ul>
-      {filtered.length === 0 && (
-        <p className="mt-4 text-sm text-neutral-500">No temperature events found.</p>
-      )}
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   )
 }

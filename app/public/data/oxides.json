@@ -1,39 +1,20 @@
 [
   {
-    "symbol": "Bi2O3",
-    "name": "Bismuth Oxide",
+    "symbol": "Pr2O3",
+    "name": "",
     "data": {
-      "Frit Softening Point": "817C (From The Oxide Handbook)"
+      "Frit Softening Point": "2130C (From The Oxide Handbook)"
     },
-    "id": "bi2o3",
+    "id": "pr2o3",
     "source": "digitalfire.com"
   },
   {
-    "symbol": "CuCO3",
-    "name": "Copper Carbonate",
-    "data": {},
-    "id": "cuco3",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "Ag2O",
-    "name": "Silver Oxide",
-    "data": {},
-    "id": "ag2o",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "AlF3",
-    "name": "",
-    "data": {},
-    "id": "alf3",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "NaF",
-    "name": "",
-    "data": {},
-    "id": "naf",
+    "symbol": "ZrO",
+    "name": "Zirconium Oxide, Zirconia",
+    "data": {
+      "Co-efficient of Linear Expansion": "0.020"
+    },
+    "id": "zro",
     "source": "digitalfire.com"
   },
   {
@@ -44,165 +25,10 @@
     "source": "digitalfire.com"
   },
   {
-    "symbol": "KF",
-    "name": "Potassium Fluoride",
-    "data": {},
-    "id": "kf",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "BaF2",
-    "name": "",
-    "data": {},
-    "id": "baf2",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "CaF2",
-    "name": "",
-    "data": {},
-    "id": "caf2",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "C",
-    "name": "Carbon",
-    "data": {},
-    "id": "c",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "CO",
-    "name": "Carbon Monoxide",
-    "data": {},
-    "id": "co",
-    "source": "digitalfire.com"
-  },
-  {
     "symbol": "SeO2",
     "name": "Selenium Dioxide",
     "data": {},
     "id": "seo2",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "CrO3",
-    "name": "Chromium Trioxide",
-    "data": {},
-    "id": "cro3",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "CO2",
-    "name": "Carbon Dioxide",
-    "data": {},
-    "id": "co2",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "CaO",
-    "name": "Calcium Oxide, Calcia",
-    "data": {
-      "Co-efficient of Linear Expansion": "0.148",
-      "Frit Softening Point": "2910C (From The Oxide Handbook We also have a figure of 2572?)"
-    },
-    "id": "cao",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "CdO",
-    "name": "Cadmium Oxide",
-    "data": {
-      "Frit Softening Point": "> 1500C (From The Oxide Handbook)"
-    },
-    "id": "cdo",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "CeO2",
-    "name": "Cerium Oxide",
-    "data": {
-      "Frit Softening Point": "2600C (From The Oxide Handbook)"
-    },
-    "id": "ceo2",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "CoO",
-    "name": "Cobalt Oxide",
-    "data": {
-      "Frit Softening Point": "1810C (From The Oxide Handbook)"
-    },
-    "id": "coo",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "Cr2O3",
-    "name": "Chrome Oxide",
-    "data": {
-      "Frit Softening Point": "2257-2427C (From The Oxide Handbook)"
-    },
-    "id": "cr2o3",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "Cs2O",
-    "name": "",
-    "data": {
-      "Frit Softening Point": "490C (From The Oxide Handbook)"
-    },
-    "id": "cs2o",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "Cu2O",
-    "name": "Cuprous Oxide",
-    "data": {},
-    "id": "cu2o",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "CuO",
-    "name": "Cupric Oxide",
-    "data": {
-      "Frit Softening Point": "1336C (From The Oxide Handbook)"
-    },
-    "id": "cuo",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "Dy2O3",
-    "name": "",
-    "data": {
-      "Frit Softening Point": "2385C (From The Oxide Handbook)"
-    },
-    "id": "dy2o3",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "Er2O3",
-    "name": "Erbium Oxide",
-    "data": {
-      "Frit Softening Point": "2400C (From The Oxide Handbook)"
-    },
-    "id": "er2o3",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "F",
-    "name": "Fluorine",
-    "data": {},
-    "id": "f",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "Fe2O3",
-    "name": "Iron Oxide, Ferric Oxide",
-    "data": {
-      "Co-efficient of Linear Expansion": "0.125",
-      "Frit Softening Point": "1350C (From The Oxide Handbook)"
-    },
-    "id": "fe2o3",
     "source": "digitalfire.com"
   },
   {
@@ -213,296 +39,10 @@
     "source": "digitalfire.com"
   },
   {
-    "symbol": "Fr2O",
-    "name": "",
-    "data": {},
-    "id": "fr2o",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "Free SiO2",
-    "name": "",
-    "data": {
-      "Co-efficient of Linear Expansion": "0.035"
-    },
-    "id": "free sio2",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "Ga2O3",
-    "name": "",
-    "data": {},
-    "id": "ga2o3",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "Al2O3",
-    "name": "Aluminum Oxide, Alumina",
-    "data": {
-      "Co-efficient of Linear Expansion": "0.063"
-    },
-    "id": "al2o3",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "GeO2",
-    "name": "",
-    "data": {},
-    "id": "geo2",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "H2O",
-    "name": "Water",
-    "data": {},
-    "id": "h2o",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "HfO2",
-    "name": "",
-    "data": {
-      "Frit Softening Point": "2780 (From The Oxide Handbook)"
-    },
-    "id": "hfo2",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "HgO",
-    "name": "",
-    "data": {
-      "Frit Softening Point": "Decomposes 400C (From The Oxide Handbook)"
-    },
-    "id": "hgo",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "Ho2O3",
-    "name": "",
-    "data": {
-      "Frit Softening Point": "2395C (From The Oxide Handbook)"
-    },
-    "id": "ho2o3",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "In2O3",
-    "name": "Indium Oxide",
-    "data": {
-      "Frit Softening Point": "2000C (From The Oxide Handbook)"
-    },
-    "id": "in2o3",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "IrO2",
-    "name": "",
-    "data": {
-      "Frit Softening Point": "dec 1100C (From The Oxide Handbook)"
-    },
-    "id": "iro2",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "K2O",
-    "name": "Potassium Oxide",
-    "data": {
-      "Co-efficient of Linear Expansion": "0.331",
-      "Frit Softening Point": "707C (From The Oxide Handbook)"
-    },
-    "id": "k2o",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "KNaO",
-    "name": "Potassium/Sodium Oxides",
-    "data": {
-      "Co-efficient of Linear Expansion": "0.359"
-    },
-    "id": "knao",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "As2O3",
-    "name": "Arsenic Oxide",
-    "data": {},
-    "id": "as2o3",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "LOI",
-    "name": "Loss on Ignition",
-    "data": {},
-    "id": "loi",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "La2O3",
-    "name": "",
-    "data": {
-      "Frit Softening Point": "2217C (From The Oxide Handbook)"
-    },
-    "id": "la2o3",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "Li2O",
-    "name": "Lithium Oxide, Lithia",
-    "data": {
-      "Co-efficient of Linear Expansion": "0.068",
-      "Frit Softening Point": "723C"
-    },
-    "id": "li2o",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "Lu2O3",
-    "name": "",
-    "data": {
-      "Frit Softening Point": "2470C"
-    },
-    "id": "lu2o3",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "MgO",
-    "name": "Magnesium Oxide, Magnesia",
-    "data": {
-      "Co-efficient of Linear Expansion": "0.026",
-      "Frit Softening Point": "2800C (From The Oxide Handbook)"
-    },
-    "id": "mgo",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "Mn2O3",
-    "name": "",
-    "data": {
-      "Frit Softening Point": "1347C (From The Oxide Handbook)"
-    },
-    "id": "mn2o3",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "MnO",
-    "name": "Manganous Oxide",
-    "data": {
-      "Co-efficient of Linear Expansion": "0.050"
-    },
-    "id": "mno",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "MnO2",
-    "name": "Manganese Dioxide",
-    "data": {
-      "Co-efficient of Linear Expansion": "0.050"
-    },
-    "id": "mno2",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "MoO3",
-    "name": "Molybdic Oxide",
-    "data": {
-      "Co-efficient of Linear Expansion": "0.094",
-      "Frit Softening Point": "801C (From The Oxide Handbook)"
-    },
-    "id": "moo3",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "N2O5",
-    "name": "",
-    "data": {},
-    "id": "n2o5",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "As4O6",
-    "name": "",
-    "data": {
-      "Frit Softening Point": "Sublimates 193C (From The Oxide Handbook)"
-    },
-    "id": "as4o6",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "Na2O",
-    "name": "Sodium Oxide, Soda",
-    "data": {
-      "Co-efficient of Linear Expansion": "0.387",
-      "Frit Softening Point": "920C (From The Oxide Handbook. We also have a figure of 800C?)"
-    },
-    "id": "na2o",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "Nb2O5",
-    "name": "",
-    "data": {
-      "Frit Softening Point": "1490C (From The Oxide Handbook)"
-    },
-    "id": "nb2o5",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "Nd2O3",
-    "name": "",
-    "data": {
-      "Frit Softening Point": "2220C"
-    },
-    "id": "nd2o3",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "NiO",
-    "name": "Nickel Oxide",
-    "data": {
-      "Frit Softening Point": "1957C (From The Oxide Handbook)"
-    },
-    "id": "nio",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "O",
-    "name": "Oxygen",
-    "data": {},
-    "id": "o",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "OsO2",
-    "name": "",
-    "data": {
-      "Frit Softening Point": "dec 650C (From The Oxide Handbook)"
-    },
-    "id": "oso2",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "P2O5",
-    "name": "Phosphorus Pentoxide",
-    "data": {
-      "Frit Softening Point": "Sublimates at 300C (From The Oxide Handbook)"
-    },
-    "id": "p2o5",
-    "source": "digitalfire.com"
-  },
-  {
     "symbol": "PO4",
     "name": "Phosphorus Oxide",
     "data": {},
     "id": "po4",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "Pa2O5",
-    "name": "",
-    "data": {
-      "Frit Softening Point": "1777C (From The Oxide Handbook)"
-    },
-    "id": "pa2o5",
     "source": "digitalfire.com"
   },
   {
@@ -516,212 +56,86 @@
     "source": "digitalfire.com"
   },
   {
-    "symbol": "Au2O3",
-    "name": "Gold Oxide",
-    "data": {
-      "Frit Softening Point": "Decomposes 160C (From The Oxide Handbook)"
-    },
-    "id": "au2o3",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "PdO",
+    "symbol": "OsO2",
     "name": "",
     "data": {
-      "Frit Softening Point": "dec 877C (From The Oxide Handbook)"
+      "Frit Softening Point": "dec 650C (From The Oxide Handbook)"
     },
-    "id": "pdo",
+    "id": "oso2",
     "source": "digitalfire.com"
   },
   {
-    "symbol": "PmO3",
+    "symbol": "NiO",
+    "name": "Nickel Oxide",
+    "data": {
+      "Frit Softening Point": "1957C (From The Oxide Handbook)"
+    },
+    "id": "53",
+    "source": "digitalfire.com"
+  },
+  {
+    "symbol": "Nb2O5",
     "name": "",
     "data": {
-      "Frit Softening Point": "2320C (From The Oxide Handbook)"
+      "Frit Softening Point": "1490C (From The Oxide Handbook)"
     },
-    "id": "pmo3",
+    "id": "nb2o5",
     "source": "digitalfire.com"
   },
   {
-    "symbol": "Pr2O3",
-    "name": "",
-    "data": {
-      "Frit Softening Point": "2130C (From The Oxide Handbook)"
-    },
-    "id": "pr2o3",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "PrO2",
-    "name": "Praseodymium Oxide",
+    "symbol": "LOI",
+    "name": "Loss on Ignition",
     "data": {},
-    "id": "pro2",
+    "id": "loi",
     "source": "digitalfire.com"
   },
   {
-    "symbol": "PtO2",
-    "name": "",
+    "symbol": "MoO3",
+    "name": "Molybdic Oxide",
     "data": {
-      "Frit Softening Point": "dec 450C (From The Oxide Handbook)"
+      "Co-efficient of Linear Expansion": "0.094",
+      "Frit Softening Point": "801C (From The Oxide Handbook)"
     },
-    "id": "pto2",
+    "id": "moo3",
     "source": "digitalfire.com"
   },
   {
-    "symbol": "RaO",
-    "name": "",
+    "symbol": "MnO",
+    "name": "Manganous Oxide",
     "data": {
-      "Frit Softening Point": ">2200C (From The Oxide Handbook)"
+      "Co-efficient of Linear Expansion": "0.050"
     },
-    "id": "rao",
+    "id": "mno",
     "source": "digitalfire.com"
   },
   {
-    "symbol": "Rb2O",
-    "name": "",
+    "symbol": "MgO",
+    "name": "Magnesium Oxide, Magnesia",
     "data": {
-      "Frit Softening Point": "657C (From The Oxide Handbook)"
+      "Co-efficient of Linear Expansion": "0.026",
+      "Frit Softening Point": "2800C (From The Oxide Handbook)"
     },
-    "id": "rb2o",
+    "id": "44",
     "source": "digitalfire.com"
   },
   {
-    "symbol": "Re2O7",
-    "name": "",
+    "symbol": "Fe2O3",
+    "name": "Iron Oxide, Ferric Oxide",
     "data": {
-      "Frit Softening Point": "301C (From The Oxide Handbook)"
+      "Co-efficient of Linear Expansion": "0.125",
+      "Frit Softening Point": "1350C (From The Oxide Handbook)"
     },
-    "id": "re2o7",
+    "id": "fe2o3",
     "source": "digitalfire.com"
   },
   {
-    "symbol": "RhO3",
-    "name": "",
+    "symbol": "Li2O",
+    "name": "Lithium Oxide, Lithia",
     "data": {
-      "Frit Softening Point": "1115C (From The Oxide Handbook)"
+      "Co-efficient of Linear Expansion": "0.068",
+      "Frit Softening Point": "723C"
     },
-    "id": "rho3",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "RuO2",
-    "name": "",
-    "data": {},
-    "id": "ruo2",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "B2O3",
-    "name": "Boric Oxide",
-    "data": {
-      "Co-efficient of Linear Expansion": "0.031"
-    },
-    "id": "b2o3",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "SO3",
-    "name": "Sulfur Trioxide",
-    "data": {},
-    "id": "so3",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "Sb2O3",
-    "name": "Antimony Oxide",
-    "data": {},
-    "id": "sb2o3",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "Sb2O5",
-    "name": "",
-    "data": {
-      "Frit Softening Point": "380C (From The Oxide Handbook)"
-    },
-    "id": "sb2o5",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "Sc2O3",
-    "name": "",
-    "data": {},
-    "id": "sc2o3",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "Se",
-    "name": "Selenium",
-    "data": {},
-    "id": "se",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "SiO2",
-    "name": "Silicon Dioxide, Silica",
-    "data": {
-      "Co-efficient of Linear Expansion": "0.035",
-      "Frit Softening Point": "1720C (From The Oxide Handbook)"
-    },
-    "id": "sio2",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "Sm2O3",
-    "name": "",
-    "data": {
-      "Frit Softening Point": "2320C (From The Oxide Handbook)"
-    },
-    "id": "sm2o3",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "SnO2",
-    "name": "Tin Oxide, Stannic Oxide",
-    "data": {
-      "Co-efficient of Linear Expansion": "0.020",
-      "Frit Softening Point": "1625C (From The Oxide Handbook)"
-    },
-    "id": "sno2",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "SrO",
-    "name": "Strontium Oxide, Strontia",
-    "data": {
-      "Co-efficient of Linear Expansion": "0.130",
-      "Frit Softening Point": "2430C (From The Oxide Handbook)"
-    },
-    "id": "sro",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "BaO",
-    "name": "Barium Oxide, Baria",
-    "data": {
-      "Co-efficient of Linear Expansion": "0.129",
-      "Frit Softening Point": "1923C"
-    },
-    "id": "bao",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "TiO2",
-    "name": "Titanium Dioxide, Titania",
-    "data": {
-      "Co-efficient of Linear Expansion": "0.144",
-      "Frit Softening Point": "1870C"
-    },
-    "id": "tio2",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "V2O5",
-    "name": "Vanadium Pentoxide",
-    "data": {
-      "Frit Softening Point": "670-685C"
-    },
-    "id": "v2o5",
+    "id": "li2o",
     "source": "digitalfire.com"
   },
   {
@@ -734,22 +148,140 @@
     "source": "digitalfire.com"
   },
   {
-    "symbol": "ZnO",
-    "name": "Zinc Oxide",
+    "symbol": "B2O3",
+    "name": "Boric Oxide",
     "data": {
-      "Co-efficient of Linear Expansion": "0.094",
-      "Frit Softening Point": "1800C (From The Oxide Handbook)"
+      "Co-efficient of Linear Expansion": "0.031"
     },
-    "id": "zno",
+    "id": "b2o3",
     "source": "digitalfire.com"
   },
   {
-    "symbol": "ZrO",
-    "name": "Zirconium Oxide, Zirconia",
+    "symbol": "As4O6",
+    "name": "",
     "data": {
-      "Co-efficient of Linear Expansion": "0.020"
+      "Frit Softening Point": "Sublimates 193C (From The Oxide Handbook)"
     },
-    "id": "zro",
+    "id": "5",
+    "source": "digitalfire.com"
+  },
+  {
+    "symbol": "Al2O3",
+    "name": "Aluminum Oxide, Alumina",
+    "data": {
+      "Co-efficient of Linear Expansion": "0.063"
+    },
+    "id": "3",
+    "source": "digitalfire.com"
+  },
+  {
+    "symbol": "IrO2",
+    "name": "",
+    "data": {
+      "Frit Softening Point": "dec 1100C (From The Oxide Handbook)"
+    },
+    "id": "iro2",
+    "source": "digitalfire.com"
+  },
+  {
+    "symbol": "KNaO",
+    "name": "Potassium/Sodium Oxides",
+    "data": {
+      "Co-efficient of Linear Expansion": "0.359"
+    },
+    "id": "knao",
+    "source": "digitalfire.com"
+  },
+  {
+    "symbol": "Ho2O3",
+    "name": "",
+    "data": {
+      "Frit Softening Point": "2395C (From The Oxide Handbook)"
+    },
+    "id": "ho2o3",
+    "source": "digitalfire.com"
+  },
+  {
+    "symbol": "HfO2",
+    "name": "",
+    "data": {
+      "Frit Softening Point": "2780 (From The Oxide Handbook)"
+    },
+    "id": "33",
+    "source": "digitalfire.com"
+  },
+  {
+    "symbol": "CaO",
+    "name": "Calcium Oxide, Calcia",
+    "data": {
+      "Co-efficient of Linear Expansion": "0.148",
+      "Frit Softening Point": "2910C (From The Oxide Handbook We also have a figure of 2572?)"
+    },
+    "id": "cao",
+    "source": "digitalfire.com"
+  },
+  {
+    "symbol": "GeO2",
+    "name": "",
+    "data": {},
+    "id": "geo2",
+    "source": "digitalfire.com"
+  },
+  {
+    "symbol": "Free SiO2",
+    "name": "",
+    "data": {
+      "Co-efficient of Linear Expansion": "0.035"
+    },
+    "id": "free sio2",
+    "source": "digitalfire.com"
+  },
+  {
+    "symbol": "F",
+    "name": "Fluorine",
+    "data": {},
+    "id": "24",
+    "source": "digitalfire.com"
+  },
+  {
+    "symbol": "Er2O3",
+    "name": "Erbium Oxide",
+    "data": {
+      "Frit Softening Point": "2400C (From The Oxide Handbook)"
+    },
+    "id": "er2o3",
+    "source": "digitalfire.com"
+  },
+  {
+    "symbol": "CuO",
+    "name": "Cupric Oxide",
+    "data": {
+      "Frit Softening Point": "1336C (From The Oxide Handbook)"
+    },
+    "id": "cuo",
+    "source": "digitalfire.com"
+  },
+  {
+    "symbol": "UO2",
+    "name": "",
+    "data": {
+      "Frit Softening Point": "2840C (From The Oxide Handbook)"
+    },
+    "id": "uo2",
+    "source": "digitalfire.com"
+  },
+  {
+    "symbol": "Cl",
+    "name": "Chlorine Gas",
+    "data": {},
+    "id": "cl",
+    "source": "digitalfire.com"
+  },
+  {
+    "symbol": "Sc2O3",
+    "name": "",
+    "data": {},
+    "id": "sc2o3",
     "source": "digitalfire.com"
   },
   {
@@ -763,13 +295,6 @@
     "source": "digitalfire.com"
   },
   {
-    "symbol": "SO4",
-    "name": "Sulfate",
-    "data": {},
-    "id": "so4",
-    "source": "digitalfire.com"
-  },
-  {
     "symbol": "Organics",
     "name": "",
     "data": {},
@@ -777,106 +302,276 @@
     "source": "digitalfire.com"
   },
   {
-    "symbol": "Ni2O3",
-    "name": "",
-    "data": {},
-    "id": "ni2o3",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "Cl",
-    "name": "Chlorine Gas",
-    "data": {},
-    "id": "cl",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "Eu2O3",
-    "name": "Europium Oxide",
+    "symbol": "ZnO",
+    "name": "Zinc Oxide",
     "data": {
-      "Frit Softening Point": "2050C (From The Oxide Handbook)"
+      "Co-efficient of Linear Expansion": "0.094",
+      "Frit Softening Point": "1800C (From The Oxide Handbook)"
     },
-    "id": "eu2o3",
+    "id": "93",
     "source": "digitalfire.com"
   },
   {
-    "symbol": "Ta2O5",
-    "name": "",
-    "data": {
-      "Frit Softening Point": "1882C (From The Oxide Handbook)"
-    },
-    "id": "ta2o5",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "Tb2O3",
-    "name": "",
-    "data": {
-      "Frit Softening Point": "2292C (From The Oxide Handbook)"
-    },
-    "id": "tb2o3",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "Tc2O7",
-    "name": "",
+    "symbol": "Cu2O",
+    "name": "Cuprous Oxide",
     "data": {},
-    "id": "tc2o7",
+    "id": "cu2o",
     "source": "digitalfire.com"
   },
   {
-    "symbol": "ThO2",
-    "name": "",
+    "symbol": "Cr2O3",
+    "name": "Chrome Oxide",
     "data": {
-      "Frit Softening Point": "3050C (From The Oxide Handbook)"
+      "Frit Softening Point": "2257-2427C (From The Oxide Handbook)"
     },
-    "id": "tho2",
+    "id": "cr2o3",
     "source": "digitalfire.com"
   },
   {
-    "symbol": "Tl2O",
-    "name": "",
-    "data": {},
-    "id": "tl2o",
-    "source": "digitalfire.com"
-  },
-  {
-    "symbol": "Tm2O3",
-    "name": "",
+    "symbol": "CeO2",
+    "name": "Cerium Oxide",
     "data": {
-      "Frit Softening Point": "2346C (From The Oxide Handbook)"
+      "Frit Softening Point": "2600C (From The Oxide Handbook)"
     },
-    "id": "tm2o3",
+    "id": "15",
     "source": "digitalfire.com"
   },
   {
-    "symbol": "Trace",
-    "name": "Trace Elements",
+    "symbol": "C",
+    "name": "Carbon",
     "data": {},
-    "id": "trace",
+    "id": "c",
     "source": "digitalfire.com"
   },
   {
-    "symbol": "U3O8",
-    "name": "Uranium Oxide",
+    "symbol": "Na2O",
+    "name": "Sodium Oxide, Soda",
+    "data": {
+      "Co-efficient of Linear Expansion": "0.387",
+      "Frit Softening Point": "920C (From The Oxide Handbook. We also have a figure of 800C?)"
+    },
+    "id": "na2o",
+    "source": "digitalfire.com"
+  },
+  {
+    "symbol": "Au2O3",
+    "name": "Gold Oxide",
+    "data": {
+      "Frit Softening Point": "Decomposes 160C (From The Oxide Handbook)"
+    },
+    "id": "au2o3",
+    "source": "digitalfire.com"
+  },
+  {
+    "symbol": "Se",
+    "name": "Selenium",
     "data": {},
-    "id": "u3o8",
+    "id": "se",
     "source": "digitalfire.com"
   },
   {
-    "symbol": "UO2",
+    "symbol": "PdO",
     "name": "",
     "data": {
-      "Frit Softening Point": "2840C (From The Oxide Handbook)"
+      "Frit Softening Point": "dec 877C (From The Oxide Handbook)"
     },
-    "id": "uo2",
+    "id": "pdo",
     "source": "digitalfire.com"
   },
   {
-    "symbol": "WO3",
+    "symbol": "SO4",
+    "name": "Sulfate",
+    "data": {},
+    "id": "so4",
+    "source": "digitalfire.com"
+  },
+  {
+    "symbol": "CuCO3",
+    "name": "Copper Carbonate",
+    "data": {},
+    "id": "cuco3",
+    "source": "digitalfire.com"
+  },
+  {
+    "symbol": "SnO2",
+    "name": "Tin Oxide, Stannic Oxide",
+    "data": {
+      "Co-efficient of Linear Expansion": "0.020",
+      "Frit Softening Point": "1625C (From The Oxide Handbook)"
+    },
+    "id": "sno2",
+    "source": "digitalfire.com"
+  },
+  {
+    "symbol": "SiO2",
+    "name": "Silicon Dioxide, Silica",
+    "data": {
+      "Co-efficient of Linear Expansion": "0.035",
+      "Frit Softening Point": "1720C (From The Oxide Handbook)"
+    },
+    "id": "75",
+    "source": "digitalfire.com"
+  },
+  {
+    "symbol": "Sb2O3",
+    "name": "Antimony Oxide",
+    "data": {},
+    "id": "sb2o3",
+    "source": "digitalfire.com"
+  },
+  {
+    "symbol": "Sm2O3",
+    "name": "",
+    "data": {
+      "Frit Softening Point": "2320C (From The Oxide Handbook)"
+    },
+    "id": "sm2o3",
+    "source": "digitalfire.com"
+  },
+  {
+    "symbol": "BaF2",
     "name": "",
     "data": {},
-    "id": "wo3",
+    "id": "baf2",
+    "source": "digitalfire.com"
+  },
+  {
+    "symbol": "Ag2O",
+    "name": "Silver Oxide",
+    "data": {},
+    "id": "ag2o",
+    "source": "digitalfire.com"
+  },
+  {
+    "symbol": "AlF3",
+    "name": "",
+    "data": {},
+    "id": "104",
+    "source": "digitalfire.com"
+  },
+  {
+    "symbol": "RhO3",
+    "name": "",
+    "data": {
+      "Frit Softening Point": "1115C (From The Oxide Handbook)"
+    },
+    "id": "rho3",
+    "source": "digitalfire.com"
+  },
+  {
+    "symbol": "PtO2",
+    "name": "",
+    "data": {
+      "Frit Softening Point": "dec 450C (From The Oxide Handbook)"
+    },
+    "id": "64",
+    "source": "digitalfire.com"
+  },
+  {
+    "symbol": "Rb2O",
+    "name": "",
+    "data": {
+      "Frit Softening Point": "657C (From The Oxide Handbook)"
+    },
+    "id": "rb2o",
+    "source": "digitalfire.com"
+  },
+  {
+    "symbol": "Pa2O5",
+    "name": "",
+    "data": {
+      "Frit Softening Point": "1777C (From The Oxide Handbook)"
+    },
+    "id": "pa2o5",
+    "source": "digitalfire.com"
+  },
+  {
+    "symbol": "BaO",
+    "name": "Barium Oxide, Baria",
+    "data": {
+      "Co-efficient of Linear Expansion": "0.129",
+      "Frit Softening Point": "1923C"
+    },
+    "id": "bao",
+    "source": "digitalfire.com"
+  },
+  {
+    "symbol": "O",
+    "name": "Oxygen",
+    "data": {},
+    "id": "o",
+    "source": "digitalfire.com"
+  },
+  {
+    "symbol": "Sb2O5",
+    "name": "",
+    "data": {
+      "Frit Softening Point": "380C (From The Oxide Handbook)"
+    },
+    "id": "sb2o5",
+    "source": "digitalfire.com"
+  },
+  {
+    "symbol": "SrO",
+    "name": "Strontium Oxide, Strontia",
+    "data": {
+      "Co-efficient of Linear Expansion": "0.130",
+      "Frit Softening Point": "2430C (From The Oxide Handbook)"
+    },
+    "id": "sro",
+    "source": "digitalfire.com"
+  },
+  {
+    "symbol": "NaF",
+    "name": "",
+    "data": {},
+    "id": "naf",
+    "source": "digitalfire.com"
+  },
+  {
+    "symbol": "Ga2O3",
+    "name": "",
+    "data": {},
+    "id": "ga2o3",
+    "source": "digitalfire.com"
+  },
+  {
+    "symbol": "N2O5",
+    "name": "",
+    "data": {},
+    "id": "n2o5",
+    "source": "digitalfire.com"
+  },
+  {
+    "symbol": "Re2O7",
+    "name": "",
+    "data": {
+      "Frit Softening Point": "301C (From The Oxide Handbook)"
+    },
+    "id": "re2o7",
+    "source": "digitalfire.com"
+  },
+  {
+    "symbol": "CoO",
+    "name": "Cobalt Oxide",
+    "data": {
+      "Frit Softening Point": "1810C (From The Oxide Handbook)"
+    },
+    "id": "coo",
+    "source": "digitalfire.com"
+  },
+  {
+    "symbol": "CrO3",
+    "name": "Chromium Trioxide",
+    "data": {},
+    "id": "113",
+    "source": "digitalfire.com"
+  },
+  {
+    "symbol": "CaF2",
+    "name": "",
+    "data": {},
+    "id": "caf2",
     "source": "digitalfire.com"
   },
   {
@@ -889,12 +584,152 @@
     "source": "digitalfire.com"
   },
   {
-    "symbol": "Yb2O3",
+    "symbol": "Cs2O",
     "name": "",
     "data": {
-      "Frit Softening Point": "2420C (From The Oxide Handbook)"
+      "Frit Softening Point": "490C (From The Oxide Handbook)"
     },
-    "id": "yb2o3",
+    "id": "cs2o",
+    "source": "digitalfire.com"
+  },
+  {
+    "symbol": "Mn2O3",
+    "name": "",
+    "data": {
+      "Frit Softening Point": "1347C (From The Oxide Handbook)"
+    },
+    "id": "mn2o3",
+    "source": "digitalfire.com"
+  },
+  {
+    "symbol": "La2O3",
+    "name": "",
+    "data": {
+      "Frit Softening Point": "2217C (From The Oxide Handbook)"
+    },
+    "id": "la2o3",
+    "source": "digitalfire.com"
+  },
+  {
+    "symbol": "KF",
+    "name": "Potassium Fluoride",
+    "data": {},
+    "id": "kf",
+    "source": "digitalfire.com"
+  },
+  {
+    "symbol": "RaO",
+    "name": "",
+    "data": {
+      "Frit Softening Point": ">2200C (From The Oxide Handbook)"
+    },
+    "id": "rao",
+    "source": "digitalfire.com"
+  },
+  {
+    "symbol": "As2O3",
+    "name": "Arsenic Oxide",
+    "data": {},
+    "id": "as2o3",
+    "source": "digitalfire.com"
+  },
+  {
+    "symbol": "P2O5",
+    "name": "Phosphorus Pentoxide",
+    "data": {
+      "Frit Softening Point": "Sublimates at 300C (From The Oxide Handbook)"
+    },
+    "id": "56",
+    "source": "digitalfire.com"
+  },
+  {
+    "symbol": "Nd2O3",
+    "name": "",
+    "data": {
+      "Frit Softening Point": "2220C"
+    },
+    "id": "52",
+    "source": "digitalfire.com"
+  },
+  {
+    "symbol": "MnO2",
+    "name": "Manganese Dioxide",
+    "data": {
+      "Co-efficient of Linear Expansion": "0.050"
+    },
+    "id": "47",
+    "source": "digitalfire.com"
+  },
+  {
+    "symbol": "Lu2O3",
+    "name": "",
+    "data": {
+      "Frit Softening Point": "2470C"
+    },
+    "id": "43",
+    "source": "digitalfire.com"
+  },
+  {
+    "symbol": "Tc2O7",
+    "name": "",
+    "data": {},
+    "id": "tc2o7",
+    "source": "digitalfire.com"
+  },
+  {
+    "symbol": "WO3",
+    "name": "",
+    "data": {},
+    "id": "wo3",
+    "source": "digitalfire.com"
+  },
+  {
+    "symbol": "In2O3",
+    "name": "Indium Oxide",
+    "data": {
+      "Frit Softening Point": "2000C (From The Oxide Handbook)"
+    },
+    "id": "36",
+    "source": "digitalfire.com"
+  },
+  {
+    "symbol": "K2O",
+    "name": "Potassium Oxide",
+    "data": {
+      "Co-efficient of Linear Expansion": "0.331",
+      "Frit Softening Point": "707C (From The Oxide Handbook)"
+    },
+    "id": "38",
+    "source": "digitalfire.com"
+  },
+  {
+    "symbol": "U3O8",
+    "name": "Uranium Oxide",
+    "data": {},
+    "id": "u3o8",
+    "source": "digitalfire.com"
+  },
+  {
+    "symbol": "HgO",
+    "name": "",
+    "data": {
+      "Frit Softening Point": "Decomposes 400C (From The Oxide Handbook)"
+    },
+    "id": "34",
+    "source": "digitalfire.com"
+  },
+  {
+    "symbol": "H2O",
+    "name": "Water",
+    "data": {},
+    "id": "32",
+    "source": "digitalfire.com"
+  },
+  {
+    "symbol": "Fr2O",
+    "name": "",
+    "data": {},
+    "id": "27",
     "source": "digitalfire.com"
   }
 ]

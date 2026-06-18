@@ -4,9 +4,13 @@ on:
   workflow_dispatch:
     inputs:
       section:
-        description: 'Section to fill (mineral, temperature, recipe, material, oxide, or all)'
+        description: 'Wayback sections to fill (mineral, temperature, recipe, material, oxide, or all)'
         required: false
         default: 'mineral,temperature'
+      scrape_insight:
+        description: 'Also scrape Insight-Live public shares from recipe list?'
+        required: false
+        default: 'true'
 
 jobs:
   fill:
@@ -43,6 +47,10 @@ jobs:
             echo "Filling $section..."
             python digitalfire_wayback.py --fill --section "$section"
           done
+
+      - name: Scrape Insight-Live public shares
+        if: ${{ github.event.inputs.scrape_insight == 'true' }}
+        run: python digitalfire_scrape_insight.py
 
       - name: Show results
         run: |
